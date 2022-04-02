@@ -1,0 +1,9 @@
+extends:
+  - re-taro
+  - re-taro/next
+  - re-taro/typescript
+  - re-taro/prettier
+rules:
+  no-duplicate-imports: 0
+parserOptions:
+  project: ./tsconfig.json

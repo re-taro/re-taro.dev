@@ -1,0 +1,63 @@
+{
+  "name": "next-typescript-template",
+  "version": "1.0.0",
+  "description": "Template for personal Next projects",
+  "keywords": [
+    "next",
+    "typescript",
+    "template"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/re-taro/next-typescript-template"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Rintaro Itokawa",
+    "email": "me@re-taro.dev",
+    "url": "https://re-taro.dev"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:fix": "eslint ./**/**/**/**/*.{js,jsx,ts,tsx,json,yaml,yml,toml} --fix && npm run fmt",
+    "fmt": "prettier -w -u .",
+    "type": "tsc --noEmit",
+    "lint-staged": "lint-staged",
+    "prepare": "husky install",
+    "postinstall": "husky install"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.8.2",
+    "@emotion/styled": "^11.8.1",
+    "next": "^12.1.0",
+    "preact": "^10.6.6",
+    "react": "npm:@preact/compat@17.0.3",
+    "react-dom": "npm:@preact/compat@17.0.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/preset-react": "^7.16.7",
+    "@emotion/babel-plugin": "^11.7.2",
+    "@emotion/babel-plugin-jsx-pragmatic": "^0.1.5",
+    "@emotion/serialize": "^1.0.2",
+    "@types/node": "17.0.21",
+    "@types/react": "17.0.40",
+    "@types/tailwindcss": "^3.0.10",
+    "autoprefixer": "^10.4.4",
+    "babel-plugin-macros": "^3.1.0",
+    "cross-env": "7.0.3",
+    "eslint": "8.11.0",
+    "eslint-config-re-taro": "1.1.0",
+    "husky": "7.0.4",
+    "lint-staged": "12.3.5",
+    "postcss": "^8.4.12",
+    "preact-render-to-string": "^5.1.20",
+    "prettier": "2.5.1",
+    "tailwindcss": "^3.0.23",
+    "twin.macro": "^2.8.2",
+    "typescript": "4.6.2"
+  }
+}

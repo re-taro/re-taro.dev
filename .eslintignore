@@ -1,0 +1,7 @@
+package.json
+tsconfig.json]
+.next
+pnpm-lock.yaml
+next-env.d.ts
+*.config.ts
+*.config.js
