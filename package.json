@@ -20,6 +20,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
     "analyze": "cross-env ANALYZE=true yarn build",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
     "start": "next start",
