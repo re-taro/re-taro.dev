@@ -25,17 +25,17 @@ jobs:
           version: latest
           run_install: true
       - name: production build
-        run: pnpm run build
+        run: pnpm run build && next export
       - name: install Lighthouse cli
         run: |
           pnpm add @lhci/cli@0.8.x
       - name: run Lighthouse cli
         id: lhci
         run: |
-          mkdir out
-          touch out/autorun.txt
-          pnpx lhci autorun | grep 'storage.googleapis.com' > ./out/autorun.txt
-          report_url=$(cat ./out/autorun.txt)
+          mkdir dist
+          touch dist/autorun.txt
+          pnpx lhci autorun | grep 'storage.googleapis.com' > ./dist/autorun.txt
+          report_url=$(cat ./dist/autorun.txt)
           echo $report_url
           echo "::set-output name=report_url::$report_url"
         continue-on-error: true
