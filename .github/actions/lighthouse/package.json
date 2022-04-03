@@ -1,0 +1,18 @@
+{
+  "name": "lighthouse-formatter",
+  "version": "1.0.0",
+  "description": "format error status",
+  "main": "./dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "ncc build ./src/main.ts -o dist --minify"
+  },
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^5.0.0"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@vercel/ncc": "^0.33.3"
+  }
+}
