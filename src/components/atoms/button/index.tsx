@@ -1,5 +1,6 @@
 import type { CSSInterpolation } from '@emotion/serialize'
-import { InlineIcon, type IconProps, type IconifyIcon } from '@iconify/react'
+import { InlineIcon } from '@iconify/react'
+import type { IconProps, IconifyIcon } from '@iconify/react'
 import React from 'react'
 import tw from 'twin.macro'
 import { Text } from '../text'
