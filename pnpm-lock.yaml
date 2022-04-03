@@ -23,6 +23,7 @@ specifiers:
   next: 12.1.0
   next-seo: ^5.3.0
   next-sitemap: ^2.5.17
+  next-themes: ^0.1.1
   postcss: 8.4.12
   preact: 10.6.6
   preact-render-to-string: 5.1.20
@@ -39,6 +40,7 @@ dependencies:
   '@iconify/react': 3.2.1
   next: 12.1.0_87ebb4277ed79048b63952d0a2fb532e
   next-seo: 5.3.0_f4964ea3813de40a061a990acca0ee87
+  next-themes: 0.1.1_f4964ea3813de40a061a990acca0ee87
   preact: 10.6.6
   react: /@preact/compat/17.0.3_preact@10.6.6
   react-dom: /@preact/compat/17.0.3_preact@10.6.6
@@ -4544,6 +4546,18 @@ packages:
       minimist: 1.2.6
       next: 12.1.0_87ebb4277ed79048b63952d0a2fb532e
     dev: true
+
+  /next-themes/0.1.1_f4964ea3813de40a061a990acca0ee87:
+    resolution: {integrity: sha512-Iqxt6rhS/KfK/iHJ0tfFjTcdLEAI0AgwFuAFrMwLOPK5e+MI3I+fzyvBoS+VaOS+NldUiazurhgwYhrfV0VXsQ==}
+    peerDependencies:
+      next: '>=11.1.1'
+      react: '*'
+      react-dom: '*'
+    dependencies:
+      next: 12.1.0_87ebb4277ed79048b63952d0a2fb532e
+      react: /@preact/compat/17.0.3_preact@10.6.6
+      react-dom: /@preact/compat/17.0.3_preact@10.6.6
+    dev: false
 
   /next/12.1.0_87ebb4277ed79048b63952d0a2fb532e:
     resolution: {integrity: sha512-s885kWvnIlxsUFHq9UGyIyLiuD0G3BUC/xrH0CEnH5lHEWkwQcHOORgbDF0hbrW9vr/7am4ETfX4A7M6DjrE7Q==}
