@@ -21,6 +21,7 @@ specifiers:
   husky: 7.0.4
   lint-staged: 12.3.5
   next: 12.1.0
+  next-seo: ^5.3.0
   next-sitemap: ^2.5.17
   postcss: 8.4.12
   preact: 10.6.6
@@ -37,6 +38,7 @@ dependencies:
   '@emotion/styled': 11.8.1_0cab58302623de9aba5d2ad375ce0ceb
   '@iconify/react': 3.2.1
   next: 12.1.0_87ebb4277ed79048b63952d0a2fb532e
+  next-seo: 5.3.0_f4964ea3813de40a061a990acca0ee87
   preact: 10.6.6
   react: /@preact/compat/17.0.3_preact@10.6.6
   react-dom: /@preact/compat/17.0.3_preact@10.6.6
@@ -4518,6 +4520,18 @@ packages:
   /natural-compare/1.4.0:
     resolution: {integrity: sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=}
     dev: true
+
+  /next-seo/5.3.0_f4964ea3813de40a061a990acca0ee87:
+    resolution: {integrity: sha512-ofXUGGZ4l6j4oCxu6aecTWTkNbN/g+zbYUOvLRBKl96bJrt+WWyo4riRxQqqczvk1niGH4ibN7cCEwVjlYZs2g==}
+    peerDependencies:
+      next: ^8.1.1-canary.54 || >=9.0.0
+      react: '>=16.0.0'
+      react-dom: '>=16.0.0'
+    dependencies:
+      next: 12.1.0_87ebb4277ed79048b63952d0a2fb532e
+      react: /@preact/compat/17.0.3_preact@10.6.6
+      react-dom: /@preact/compat/17.0.3_preact@10.6.6
+    dev: false
 
   /next-sitemap/2.5.17_next@12.1.0:
     resolution: {integrity: sha512-L0zwaqt5WBm8FL/mraA08YbsJD+dnc2gYO1FeawBVUDvFKDXhYXQBTAT2AbkXwCnKinM94/VvBQvw3n8LC9TpA==}
