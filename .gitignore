@@ -512,3 +512,7 @@ doc/api/
 
 .flutter-plugins
 .flutter-plugins-dependencies
+
+# auto gen
+sitemap.xml
+sitemap-0.xml
