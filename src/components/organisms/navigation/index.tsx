@@ -1,4 +1,5 @@
 import type { IconifyIcon } from '@iconify/react'
+import Link from 'next/link'
 import React, { useState } from 'react'
 import tw from 'twin.macro'
 import { Button } from '../../atoms/button'
@@ -23,7 +24,7 @@ const NavigationItem: Array<NavigationItemProperties> = [
     label: 'Works'
   },
   {
-    href: 'https://blog.retaro.dev/',
+    href: '/blog',
     icon: 'fa6-solid:feather-pointed',
     label: 'Blog'
   },
@@ -56,7 +57,7 @@ const Hamburger: React.VFC = () => {
       >
         {NavigationItem.map(({ href, icon, label }) => (
           <li key={label}>
-            <a href={href}>
+            <Link href={href} passHref>
               <Button
                 as={'a'}
                 variant={'icon'}
@@ -67,7 +68,7 @@ const Hamburger: React.VFC = () => {
               >
                 {label}
               </Button>
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

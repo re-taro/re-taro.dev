@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 import tw from 'twin.macro'
 import { Container } from '../../atoms/container'
@@ -15,11 +16,11 @@ const Header: React.VFC<HeaderProperties> = ({ ...rest }) => (
   <HeaderBox {...rest}>
     <Container css={tw`flex mx-auto w-full max-w-[100vh] md:max-w-[85vh] lg:max-w-[800px] py-4 px-6 md:px-2 lg:px-0`}>
       <Flex css={tw`items-center`}>
-        <a href={'/'} rel={'noopener noreferrer'}>
-          <Heading as={'h1'} css={tw`text-xl tracking-tighter`}>
+        <Link href={'/'} passHref>
+          <Heading as={'h1'} css={tw`text-xl tracking-tighter cursor-pointer`}>
             re-taro.dev
           </Heading>
-        </a>
+        </Link>
       </Flex>
       <Spacer />
       <Flex>
