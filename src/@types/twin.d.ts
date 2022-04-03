@@ -1,3 +1,5 @@
+/* eslint-disable init-declarations */
+
 import 'twin.macro'
 import { css as cssImport } from '@emotion/react'
 import { CSSInterpolation } from '@emotion/serialize'
@@ -35,3 +37,5 @@ declare module 'react' {
     as?: string | React.ElementType
   }
 }
+
+/* eslint-enable */
