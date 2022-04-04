@@ -21,21 +21,25 @@ specifiers:
   cross-env: 7.0.3
   eslint: 8.11.0
   eslint-config-re-taro: 1.1.0
+  graphql: ^16.3.0
   husky: 7.0.4
   lint-staged: 12.3.5
   next: 12.1.0
   next-seo: ^5.3.0
   next-sitemap: ^2.5.17
   next-themes: ^0.1.1
+  next-urql: ^3.3.2
   postcss: 8.4.12
   preact: 10.6.6
   preact-render-to-string: 5.1.20
   prettier: 2.5.1
   react: npm:@preact/compat@17.0.3
   react-dom: npm:@preact/compat@17.0.3
+  react-is: ^18.0.0
   tailwindcss: 3.0.23
   twin.macro: 2.8.2
   typescript: 4.6.2
+  urql: ^2.2.0
 
 dependencies:
   '@emotion/react': 11.8.2_a22856886506a94469f58db593c739eb
@@ -44,6 +48,7 @@ dependencies:
   next: 12.1.0_87ebb4277ed79048b63952d0a2fb532e
   next-seo: 5.3.0_f4964ea3813de40a061a990acca0ee87
   next-themes: 0.1.1_f4964ea3813de40a061a990acca0ee87
+  next-urql: 3.3.2_@preact+compat@17.0.3+urql@2.2.0
   preact: 10.6.6
   react: /@preact/compat/17.0.3_preact@10.6.6
   react-dom: /@preact/compat/17.0.3_preact@10.6.6
@@ -66,15 +71,18 @@ devDependencies:
   cross-env: 7.0.3
   eslint: 8.11.0
   eslint-config-re-taro: 1.1.0_eslint@8.11.0
+  graphql: 16.3.0
   husky: 7.0.4
   lint-staged: 12.3.5
   next-sitemap: 2.5.17_next@12.1.0
   postcss: 8.4.12
   preact-render-to-string: 5.1.20_preact@10.6.6
   prettier: 2.5.1
+  react-is: 18.0.0
   tailwindcss: 3.0.23_autoprefixer@10.4.4
   twin.macro: 2.8.2
   typescript: 4.6.2
+  urql: 2.2.0_1c3722919da8165839472f3fc3388727
 
 packages:
 
@@ -708,6 +716,14 @@ packages:
       strip-json-comments: 3.1.1
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@graphql-typed-document-node/core/3.1.1_graphql@16.3.0:
+    resolution: {integrity: sha512-NQ17ii0rK1b34VZonlmT2QMJFI70m0TRwbknO/ihlbatXyaktDhN/98vBiUU6kNBPljqGqyIrl2T4nY2RpFANg==}
+    peerDependencies:
+      graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
+    dependencies:
+      graphql: 16.3.0
     dev: true
 
   /@humanwhocodes/config-array/0.9.5:
@@ -1416,6 +1432,16 @@ packages:
     dependencies:
       '@typescript-eslint/types': 5.17.0
       eslint-visitor-keys: 3.3.0
+    dev: true
+
+  /@urql/core/2.4.3_graphql@16.3.0:
+    resolution: {integrity: sha512-FpapxUKF0nLdzRLoB1QsudDjeLXJhBwzkzl8bSOJ6Cnj7LRRKJ+dYdqHfqGykswB/ILrkZks2Isp4a4BhqyUow==}
+    peerDependencies:
+      graphql: ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
+    dependencies:
+      '@graphql-typed-document-node/core': 3.1.1_graphql@16.3.0
+      graphql: 16.3.0
+      wonka: 4.0.15
     dev: true
 
   /abab/2.0.5:
@@ -3233,6 +3259,11 @@ packages:
     resolution: {integrity: sha512-bzh50DW9kTPM00T8y4o8vQg89Di9oLJVLW/KaOGIXJWP/iqCN6WKYkbNOF04vFLJhwcpYUh9ydh/+5vpOqV4YQ==}
     dev: true
 
+  /graphql/16.3.0:
+    resolution: {integrity: sha512-xm+ANmA16BzCT5pLjuXySbQVFwH3oJctUVdy81w1sV0vBU0KgDdBGtxQOUd5zqOBk/JayAFeG8Dlmeq74rjm/A==}
+    engines: {node: ^12.22.0 || ^14.16.0 || >=16.0.0}
+    dev: true
+
   /gzip-size/6.0.0:
     resolution: {integrity: sha512-ax7ZYomf6jqPTQ4+XCpUGyXKHk5WweS+e05MBO4/y3WJ5RkmPXNKvX+bx1behVILVwr6JSQvZAku021CHPXG3Q==}
     engines: {node: '>=10'}
@@ -4600,6 +4631,17 @@ packages:
       react-dom: /@preact/compat/17.0.3_preact@10.6.6
     dev: false
 
+  /next-urql/3.3.2_@preact+compat@17.0.3+urql@2.2.0:
+    resolution: {integrity: sha512-oXQHCFU0R3pIwXWtDqZDYOjKcD7SlNP7aove9YuukgKuItdtIR9CRUgo3qMOD5dSQ3wBBGfQ8zR6XtzqV5WiGg==}
+    peerDependencies:
+      react: '>=16.8.0'
+      urql: ^2.0.0
+    dependencies:
+      react: /@preact/compat/17.0.3_preact@10.6.6
+      react-ssr-prepass: 1.5.0_@preact+compat@17.0.3
+      urql: 2.2.0_1c3722919da8165839472f3fc3388727
+    dev: false
+
   /next/12.1.0_87ebb4277ed79048b63952d0a2fb532e:
     resolution: {integrity: sha512-s885kWvnIlxsUFHq9UGyIyLiuD0G3BUC/xrH0CEnH5lHEWkwQcHOORgbDF0hbrW9vr/7am4ETfX4A7M6DjrE7Q==}
     engines: {node: '>=12.22.0'}
@@ -5113,6 +5155,18 @@ packages:
   /react-is/17.0.2:
     resolution: {integrity: sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==}
     dev: true
+
+  /react-is/18.0.0:
+    resolution: {integrity: sha512-yUcBYdBBbo3QiPsgYDcfQcIkGZHfxOaoE6HLSnr1sPzMhdyxusbfKOSUbSd/ocGi32dxcj366PsTj+5oggeKKw==}
+    dev: true
+
+  /react-ssr-prepass/1.5.0_@preact+compat@17.0.3:
+    resolution: {integrity: sha512-yFNHrlVEReVYKsLI5lF05tZoHveA5pGzjFbFJY/3pOqqjGOmMmqx83N4hIjN2n6E1AOa+eQEUxs3CgRnPmT0RQ==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: /@preact/compat/17.0.3_preact@10.6.6
+    dev: false
 
   /read-pkg-up/7.0.1:
     resolution: {integrity: sha512-zK0TB7Xd6JpCLmlLmufqykGE+/TlOePD6qKClNW7hHDKFh/J7/7gCWGR7joEQEW1bKq3a3yUZSObOoWLFQ4ohg==}
@@ -6088,6 +6142,18 @@ packages:
       punycode: 2.1.1
     dev: true
 
+  /urql/2.2.0_1c3722919da8165839472f3fc3388727:
+    resolution: {integrity: sha512-36wnWqDrpXqhwT5r2/qRSZXhb7Y4sXA0nLlYEd3uLgvfIdOA8kUaPdfTujzfrvfCcfiVVFxhzqVAhc8r17NMwQ==}
+    peerDependencies:
+      graphql: ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
+      react: '>= 16.8.0'
+    dependencies:
+      '@urql/core': 2.4.3_graphql@16.3.0
+      graphql: 16.3.0
+      react: /@preact/compat/17.0.3_preact@10.6.6
+      wonka: 4.0.15
+    dev: true
+
   /use-subscription/1.5.1_@preact+compat@17.0.3:
     resolution: {integrity: sha512-Xv2a1P/yReAjAbhylMfFplFKj9GssgTwN7RlcTxBujFQcloStWNDQdc4g4NRWH9xS4i/FDk04vQBptAXoF3VcA==}
     peerDependencies:
@@ -6229,6 +6295,10 @@ packages:
     hasBin: true
     dependencies:
       isexe: 2.0.0
+    dev: true
+
+  /wonka/4.0.15:
+    resolution: {integrity: sha512-U0IUQHKXXn6PFo9nqsHphVCE5m3IntqZNB9Jjn7EB1lrR7YTDY3YWgFvEvwniTzXSvOH/XMzAZaIfJF/LvHYXg==}
     dev: true
 
   /word-wrap/1.2.3:
