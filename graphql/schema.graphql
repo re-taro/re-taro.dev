@@ -1,0 +1,69 @@
+type Affiliation {
+  assign: String!
+  location: String!
+}
+
+type Basic {
+  affiliation: Affiliation!
+  introduction: String!
+  name: Name!
+}
+
+type Bio {
+  title: String!
+  when: Int!
+}
+
+type BlogPost {
+  title: String!
+  url: String!
+}
+
+type Meta {
+  blog_post: BlogPost
+  platform: String!
+  presentation: Presentation
+  source: String
+  stack: String!
+  website: String
+}
+
+type Name {
+  position: String!
+  primary: String!
+}
+
+type Post {
+  emoji: String!
+  id: String!
+  title: String!
+}
+
+type Presentation {
+  title: String!
+  url: String!
+}
+
+type Query {
+  fetchBasic: Basic!
+  fetchBio: [Bio!]!
+  fetchPost(id: String!): Post!
+  fetchPosts: [Post!]!
+  fetchWork(id: String!): Work!
+  fetchWorks: [Work!]!
+}
+
+type Work {
+  id: String!
+  image_url: String!
+  title: String!
+  work_page: WorkPage!
+}
+
+type WorkPage {
+  detail: String!
+  images: [String!]
+  implementation: Int!
+  meta: Meta!
+  title: String!
+}
