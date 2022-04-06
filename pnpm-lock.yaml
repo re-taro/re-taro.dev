@@ -24,9 +24,9 @@ specifiers:
   husky: 7.0.4
   lint-staged: 12.3.5
   next: 12.1.0
-  next-seo: ^5.3.0
+  next-seo: 5.4.0
   next-sitemap: ^2.5.17
-  next-themes: ^0.1.1
+  next-themes: 0.1.1
   postcss: 8.4.12
   preact: 10.6.6
   preact-render-to-string: 5.1.20
@@ -42,7 +42,7 @@ dependencies:
   '@emotion/styled': 11.8.1_0cab58302623de9aba5d2ad375ce0ceb
   '@iconify/react': 3.2.1
   next: 12.1.0_87ebb4277ed79048b63952d0a2fb532e
-  next-seo: 5.3.0_f4964ea3813de40a061a990acca0ee87
+  next-seo: 5.4.0_f4964ea3813de40a061a990acca0ee87
   next-themes: 0.1.1_f4964ea3813de40a061a990acca0ee87
   preact: 10.6.6
   react: /@preact/compat/17.0.3_preact@10.6.6
@@ -4564,8 +4564,8 @@ packages:
     resolution: {integrity: sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=}
     dev: true
 
-  /next-seo/5.3.0_f4964ea3813de40a061a990acca0ee87:
-    resolution: {integrity: sha512-ofXUGGZ4l6j4oCxu6aecTWTkNbN/g+zbYUOvLRBKl96bJrt+WWyo4riRxQqqczvk1niGH4ibN7cCEwVjlYZs2g==}
+  /next-seo/5.4.0_f4964ea3813de40a061a990acca0ee87:
+    resolution: {integrity: sha512-R9DhajPwJnR/lsF2hZ8cN8uqr5CVITsRrCG1AF5+ufcaybKYOvnH8sH9MaH4/hpkps3PQ9H71S7J7SPYixAYzQ==}
     peerDependencies:
       next: ^8.1.1-canary.54 || >=9.0.0
       react: '>=16.0.0'
