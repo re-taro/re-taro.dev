@@ -11,7 +11,7 @@ const ToggleButton: React.VFC = () => {
     <Button
       as={'button'}
       variant={'icon'}
-      icon={mounted && theme === 'dark' ? 'ri:moon-fill' : 'ri:sun-fill'}
+      leftIcon={mounted && theme === 'dark' ? 'ri:moon-fill' : 'ri:sun-fill'}
       iconStyles={tw`bg-snow-100 dark:bg-night-200 text-2xl hover:bg-snow-200 dark:hover:bg-night-300`}
       boxStyles={tw`p-1 hover:outline-none hover:ring-2 hover:ring-frost-100 w-8 h-8 mx-1`}
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
