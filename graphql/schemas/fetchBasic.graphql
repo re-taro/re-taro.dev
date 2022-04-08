@@ -1,0 +1,13 @@
+query fetchBasic {
+  fetchBasic {
+    name {
+      primary
+      position
+    }
+    introduction
+    affiliation {
+      assign
+      location
+    }
+  }
+}

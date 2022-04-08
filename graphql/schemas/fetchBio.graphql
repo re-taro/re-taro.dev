@@ -1,0 +1,6 @@
+query fetchBio {
+  fetchBio {
+    when
+    title
+  }
+}
