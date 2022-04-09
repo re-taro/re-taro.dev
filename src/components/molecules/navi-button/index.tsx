@@ -13,6 +13,7 @@ type NaviButtonProperties = {
 const NaviButton: React.VFC<NaviButtonProperties> = ({ href, label, icon }) => (
   <Link href={href} passHref>
     <Button
+      aria-label={label}
       as={'a'}
       variant={'icon'}
       leftIcon={icon}

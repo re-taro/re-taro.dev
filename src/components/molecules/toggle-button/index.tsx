@@ -10,6 +10,7 @@ const ToggleButton: React.VFC = () => {
   return (
     <Button
       as={'button'}
+      aria-label={'Toggle theme'}
       variant={'icon'}
       leftIcon={mounted && theme === 'dark' ? 'ri:moon-fill' : 'ri:sun-fill'}
       iconStyles={tw`bg-snow-100 dark:bg-night-200 text-2xl hover:bg-snow-200 dark:hover:bg-night-300`}
