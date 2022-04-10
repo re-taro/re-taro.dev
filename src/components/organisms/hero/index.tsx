@@ -7,7 +7,7 @@ const HeroWrapper = tw.div`h-[90vh] items-center grid`
 
 const HeroBox = tw.div`align-middle w-full sm:w-[80%] md:w-[60%] mt-8 sm:mt-0 sm:self-center`
 
-type Hero = {
+export type Hero = {
   primary: string
   position: string
 }

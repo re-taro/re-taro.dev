@@ -10,8 +10,10 @@ import type { ProjectProperties } from '../../molecules/card'
 
 const ProjectsBox = tw.section`mb-16 space-y-4`
 
-export type ProjectsSectionProperties = React.ComponentProps<React.ReactHTML['section']> & {
-  data: Array<ProjectProperties>
+export type Projects = Array<ProjectProperties>
+
+type ProjectsSectionProperties = React.ComponentProps<React.ReactHTML['section']> & {
+  data: Projects
 }
 
 const ProjectsSection: React.VFC<ProjectsSectionProperties> = ({ data, ...rest }) => {
