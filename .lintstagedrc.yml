@@ -1,2 +1,0 @@
-'*.{js,jsx,ts,tsx}': npm run lint:fix
-'*.{json,yml,yaml,toml}': npm run fmt

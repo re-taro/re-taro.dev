@@ -1327,15 +1327,18 @@ var n = {}
   var r = __nccwpck_require__(31)
   var n = __nccwpck_require__.n(r)
   const generateLevelColumn = e => (e === 'error' ? `:x: ${e}` : `:warning: ${e}`)
-  const generateTable = t => {
+  const generatePRComment = t => {
     const n = (0, e.createWriteStream)('result-markdown.md')
-    const o = (0, r.getInput)('report-url')
-    n.write(`${o}\n`)
-    if (t === []) {
-      n.write('success!')
+    if (t.length === 0) {
+      n.write('## :tada: success!\n')
+      const e = (0, r.getInput)('report-url')
+      n.write(`${e}\n`)
       n.end('\n')
       return
     }
+    n.write('## :x: failed...\n')
+    const o = (0, r.getInput)('report-url')
+    n.write(`${o}\n`)
     n.write('|auditProperty|actual|expected|level|\n')
     n.write('|---|---|---|---|\n')
     for (const e of t) {
@@ -1346,7 +1349,7 @@ var n = {}
   try {
     const t = (0, r.getInput)('json-file-path')
     const n = (0, e.readFileSync)(t)
-    generateTable(JSON.parse(n.toString()))
+    generatePRComment(JSON.parse(n.toString()))
     ;(0, r.setOutput)('success!', '')
   } catch (e) {
     console.log(e)

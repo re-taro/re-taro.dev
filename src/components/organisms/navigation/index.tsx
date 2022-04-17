@@ -47,7 +47,12 @@ const Hamburger: React.VFC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
   return (
     <React.Fragment>
-      <Button variant={'icon'} icon={'fa-solid:hamburger'} onClick={() => setIsOpen(!isOpen)} />
+      <Button
+        aria-label={'Hamburger'}
+        variant={'icon'}
+        leftIcon={'fa-solid:hamburger'}
+        onClick={() => setIsOpen(!isOpen)}
+      />
       <ul
         css={
           isOpen
@@ -60,8 +65,9 @@ const Hamburger: React.VFC = () => {
             <Link href={href} passHref>
               <Button
                 as={'a'}
+                aria-label={label}
                 variant={'icon'}
-                icon={icon}
+                leftIcon={icon}
                 iconStyles={tw`bg-snow-100 dark:bg-night-200 text-2xl hover:bg-snow-200 dark:hover:bg-night-300`}
                 boxStyles={tw`p-1 hover:outline-none hover:ring-2 hover:ring-frost-100 mx-1`}
                 key={label}

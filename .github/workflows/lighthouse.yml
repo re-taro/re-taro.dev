@@ -1,4 +1,5 @@
 name: Lighthouse CI
+
 on:
   pull_request:
 
@@ -25,7 +26,7 @@ jobs:
           version: latest
           run_install: true
       - name: production build
-        run: pnpm run build && pnpm run export
+        run: pnpm run build
       - name: install Lighthouse cli
         run: |
           pnpm add @lhci/cli@0.8.x

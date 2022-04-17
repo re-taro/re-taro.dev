@@ -1,10 +1,33 @@
-import type { NextPage } from 'next'
-import tw from 'twin.macro'
+import type { NextPage, InferGetStaticPropsType, GetStaticProps } from 'next'
+import { withUrqlClient } from 'next-urql'
+import React from 'react'
+import { useQuery } from 'urql'
+import { Home } from '../components/templates/home'
+import { HomeDocument } from '../graphql'
+import type { HomeQuery } from '../graphql'
+import { urqlClient, ssrCache, END_POINT } from '../utils/client'
 
-const Home: NextPage = () => (
-  <div>
-    <p tw={'text-center text-xl'}>Hello World</p>
-  </div>
-)
+type Properties = InferGetStaticPropsType<typeof getStaticProps>
 
-export default Home
+// eslint-disable-next-line unicorn/prevent-abbreviations
+export const getStaticProps: GetStaticProps = async () => {
+  const client = await urqlClient()
+  await client.query(HomeDocument).toPromise()
+  return {
+    props: {
+      urqlState: ssrCache.extractData()
+    }
+  }
+}
+
+const HomePage: NextPage<Properties> = () => {
+  const [response] = useQuery<HomeQuery>({ query: HomeDocument })
+  return <Home data={response.data} />
+}
+
+export default withUrqlClient(
+  () => ({
+    url: END_POINT
+  }),
+  { ssr: false }
+)(HomePage)

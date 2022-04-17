@@ -12,6 +12,9 @@ module.exports = {
       center: true
     },
     extend: {
+      boxShadow: {
+        card: '0px 0px 32px 2px rgba(38, 46, 51, 0.1)'
+      },
       colors: {
         aurora: {
           green: '#A3BE8C',

@@ -20,19 +20,29 @@ const ButtonIcon: React.VFC<ButtonIconProperties> = ({ icon, css, ...rest }) => 
 type ButtonVariantProperties =
   | {
       variant: 'normal'
-      icon?: never
+      leftIcon?: never
+      rightIcon?: never
       onClose?: never
       iconStyles?: never
     }
   | {
       variant: 'icon'
-      icon: string | IconifyIcon
+      leftIcon: string | IconifyIcon
+      rightIcon?: never
+      onClose?: never
+      iconStyles?: CSSInterpolation
+    }
+  | {
+      variant: 'icon'
+      leftIcon?: never
+      rightIcon: IconifyIcon | string
       onClose?: never
       iconStyles?: CSSInterpolation
     }
   | {
       variant: 'close'
-      icon?: never
+      leftIcon?: never
+      rightIcon?: never
       onClose?: React.MouseEventHandler
       iconStyles?: never
     }
@@ -50,7 +60,8 @@ type ButtonProperties<T extends AnyComponent> = React.PropsWithChildren<
 const Button = <T extends AnyComponent>({
   children,
   variant = 'normal',
-  icon,
+  leftIcon,
+  rightIcon,
   onClose,
   iconStyles,
   boxStyles,
@@ -58,8 +69,9 @@ const Button = <T extends AnyComponent>({
   ...rest
 }: ButtonProperties<T>): JSX.Element => (
   <ButtonBox css={boxStyles} {...rest}>
-    {icon && <ButtonIcon icon={icon} css={iconStyles} />}
+    {leftIcon && <ButtonIcon icon={leftIcon} css={iconStyles} />}
     {children && <Text css={[tw`text-sm font-bold whitespace-nowrap`, textStyles]}>{children}</Text>}
+    {rightIcon && <ButtonIcon icon={rightIcon} css={iconStyles} />}
     {variant === 'close' && <ButtonIcon icon={'mdi:close'} css={iconStyles} onClick={onClose} />}
   </ButtonBox>
 )

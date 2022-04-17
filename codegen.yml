@@ -1,0 +1,13 @@
+overwrite: true
+schema: 'https://api.re-taro.dev/graphql'
+documents: 'graphql/documents/*.graphql'
+generates:
+  src/graphql/index.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-urql
+      - urql-introspection
+  graphql/graphql.schema.json:
+    plugins:
+      - introspection
