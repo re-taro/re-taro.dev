@@ -1,7 +1,0 @@
-query fetchPosts {
-  fetchPosts {
-    title
-    id
-    emoji
-  }
-}

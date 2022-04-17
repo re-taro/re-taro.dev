@@ -1,0 +1,18 @@
+query home {
+  basic {
+    name {
+      position
+      primary
+    }
+  }
+  posts {
+    emoji
+    id
+    title
+  }
+  works {
+    id
+    imageUrl
+    title
+  }
+}
