@@ -3,14 +3,14 @@ lockfileVersion: 5.3
 specifiers:
   '@actions/core': ^1.6.0
   '@actions/github': ^5.0.0
-  '@vercel/ncc': 0.33.3
+  '@vercel/ncc': 0.33.4
 
 dependencies:
   '@actions/core': 1.6.0
   '@actions/github': 5.0.1
 
 devDependencies:
-  '@vercel/ncc': 0.33.3
+  '@vercel/ncc': 0.33.4
 
 packages:
 
@@ -125,8 +125,8 @@ packages:
       '@octokit/openapi-types': 11.2.0
     dev: false
 
-  /@vercel/ncc/0.33.3:
-    resolution: {integrity: sha512-JGZ11QV+/ZcfudW2Cz2JVp54/pJNXbsuWRgSh2ZmmZdQBKXqBtIGrwI1Wyx8nlbzAiEFe7FHi4K1zX4//jxTnQ==}
+  /@vercel/ncc/0.33.4:
+    resolution: {integrity: sha512-ln18hs7dMffelP47tpkaR+V5Tj6coykNyxJrlcmCormPqRQjB/Gv4cu2FfBG+PMzIfdZp2CLDsrrB1NPU22Qhg==}
     hasBin: true
     dev: true
 
