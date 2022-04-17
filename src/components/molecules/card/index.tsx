@@ -15,9 +15,6 @@ type CardProperties = React.ComponentProps<React.ReactHTML['div']> & {
   projectData: HomeQuery['works'] | undefined
 }
 
-const customLoader: ImageLoader = ({ src, width, quality }) =>
-  `https://res.cloudinary.com/re-taro/image/upload/c_scale,q_${quality || 60},w_${width}/${src}`
-
 const Card: React.VFC<CardProperties> = ({ projectData, ...rest }) => (
   <React.Fragment>
     {projectData?.map(project => (
@@ -25,7 +22,6 @@ const Card: React.VFC<CardProperties> = ({ projectData, ...rest }) => (
         <CardBox key={project.id} {...rest}>
           <div css={tw`h-[200] sm:h-[250] md:h-[200]`}>
             <Image
-              loader={customLoader}
               src={project.imageUrl}
               height={200}
               width={200}
