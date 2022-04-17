@@ -10,7 +10,7 @@ module.exports = {
       }
     },
     collect: {
-      staticDistDir: './out/'
+      staticDistDir: './.next/'
     },
     upload: {
       target: 'temporary-public-storage'

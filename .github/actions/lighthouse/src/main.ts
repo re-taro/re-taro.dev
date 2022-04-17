@@ -5,15 +5,18 @@ const generateLevelColumn = (level: string) => {
   return level === 'error' ? `:x: ${level}` : `:warning: ${level}`
 }
 
-const generateTable = (obj: any) => {
+const generatePRComment = (obj: any) => {
   const stream = createWriteStream('result-markdown.md')
-  const reportUrl = getInput('report-url')
-  stream.write(`${reportUrl}\n`)
-  if (obj === []) {
-    stream.write('success!')
+  if (obj.length === 0) {
+    stream.write('## :tada: success!\n')
+    const reportUrl = getInput('report-url')
+    stream.write(`${reportUrl}\n`)
     stream.end('\n')
     return
   }
+  stream.write('## :x: failed...\n')
+  const reportUrl = getInput('report-url')
+  stream.write(`${reportUrl}\n`)
   stream.write('|auditProperty|actual|expected|level|\n')
   stream.write('|---|---|---|---|\n')
   for (const o of obj) {
@@ -25,7 +28,7 @@ const generateTable = (obj: any) => {
 try {
   const filePath = getInput('json-file-path')
   const file = readFileSync(filePath)
-  generateTable(JSON.parse(file.toString()))
+  generatePRComment(JSON.parse(file.toString()))
   setOutput('success!', '')
 } catch (err: any) {
   console.log(err)
