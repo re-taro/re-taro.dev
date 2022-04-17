@@ -28,10 +28,7 @@
     "lint:fix": "eslint ./**/**/**/**/*.{js,jsx,ts,tsx,json,yaml,yml,toml} --fix && npm run fmt",
     "fmt": "prettier -w -u .",
     "type": "tsc --noEmit",
-    "codegen": "graphql-codegen --config codegen.yml",
-    "lint-staged": "lint-staged",
-    "prepare": "husky install",
-    "postinstall": "husky install"
+    "codegen": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
     "@emotion/react": "11.8.2",
@@ -72,8 +69,6 @@
     "eslint-config-re-taro": "1.1.0",
     "graphql": "16.3.0",
     "graphql-tag": "2.12.6",
-    "husky": "7.0.4",
-    "lint-staged": "12.3.7",
     "next-sitemap": "2.5.19",
     "postcss": "8.4.12",
     "preact-render-to-string": "5.1.20",
