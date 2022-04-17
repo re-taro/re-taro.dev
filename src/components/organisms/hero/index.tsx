@@ -1,5 +1,6 @@
 import React from 'react'
 import tw from 'twin.macro'
+import type { HomeQuery } from '../../../graphql'
 import { Heading } from '../../atoms/heading'
 import { Text } from '../../atoms/text'
 
@@ -13,16 +14,16 @@ export type Hero = {
 }
 
 type HeroSectionProperties = React.ComponentProps<React.ReactHTML['div']> & {
-  data: Hero
+  data: HomeQuery['basic'] | undefined
 }
 
 const HeroSection: React.VFC<HeroSectionProperties> = ({ data, ...rest }) => (
   <HeroWrapper {...rest}>
     <HeroBox>
       <Heading as={'h1'} css={tw`text-xl pb-11`}>
-        {data.primary}
+        {data?.name.primary}
       </Heading>
-      <Text css={tw`text-base sm:text-xl`}>{data.position}</Text>
+      <Text css={tw`text-base sm:text-xl`}>{data?.name.position}</Text>
     </HeroBox>
   </HeroWrapper>
 )

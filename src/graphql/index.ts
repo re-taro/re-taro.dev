@@ -1,8 +1,11 @@
+import gql from 'graphql-tag'
+import * as Urql from 'urql'
 export type Maybe<T> = T | null
 export type InputMaybe<T> = Maybe<T>
 export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] }
 export type MakeOptional<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]?: Maybe<T[SubKey]> }
 export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]: Maybe<T[SubKey]> }
+export type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
   ID: string
@@ -28,7 +31,7 @@ export type Basic = {
 export type Bio = {
   __typename?: 'Bio'
   title: Scalars['String']
-  when: Scalars['Int']
+  when: Scalars['String']
 }
 
 export type BlogPost = {
@@ -39,7 +42,7 @@ export type BlogPost = {
 
 export type Meta = {
   __typename?: 'Meta'
-  blog_post?: Maybe<BlogPost>
+  blogPost?: Maybe<BlogPost>
   platform: Scalars['String']
   presentation?: Maybe<Presentation>
   source?: Maybe<Scalars['String']>
@@ -68,132 +71,72 @@ export type Presentation = {
 
 export type Query = {
   __typename?: 'Query'
-  fetchBasic: Basic
-  fetchBio: Array<Bio>
-  fetchPost: Post
-  fetchPosts: Array<Post>
-  fetchWork: Work
-  fetchWorks: Array<Work>
+  basic: Basic
+  bio: Array<Bio>
+  post: Post
+  posts: Array<Post>
+  work: Work
+  works: Array<Work>
 }
 
-export type QueryFetchPostArgs = {
+export type QueryPostArgs = {
   id: Scalars['String']
 }
 
-export type QueryFetchWorkArgs = {
+export type QueryWorkArgs = {
   id: Scalars['String']
 }
 
 export type Work = {
   __typename?: 'Work'
   id: Scalars['String']
-  image_url: Scalars['String']
+  imageUrl: Scalars['String']
   title: Scalars['String']
-  work_page: WorkPage
+  workPage: WorkPage
 }
 
 export type WorkPage = {
   __typename?: 'WorkPage'
   detail: Scalars['String']
   images?: Maybe<Array<Scalars['String']>>
-  implementation: Scalars['Int']
+  implementation: Scalars['String']
   meta: Meta
   title: Scalars['String']
 }
 
-export type FetchBasicQueryVariables = Exact<{ [key: string]: never }>
+export type HomeQueryVariables = Exact<{ [key: string]: never }>
 
-export type FetchBasicQuery = {
+export type HomeQuery = {
   __typename?: 'Query'
-  fetchBasic: {
-    __typename?: 'Basic'
-    introduction: string
-    name: { __typename?: 'Name'; primary: string; position: string }
-    affiliation: { __typename?: 'Affiliation'; assign: string; location: string }
-  }
+  basic: { __typename?: 'Basic'; name: { __typename?: 'Name'; position: string; primary: string } }
+  posts: Array<{ __typename?: 'Post'; emoji: string; id: string; title: string }>
+  works: Array<{ __typename?: 'Work'; id: string; imageUrl: string; title: string }>
 }
 
-export type FetchBioQueryVariables = Exact<{ [key: string]: never }>
-
-export type FetchBioQuery = {
-  __typename?: 'Query'
-  fetchBio: Array<{ __typename?: 'Bio'; when: number; title: string }>
-}
-
-export type FetchPostQueryVariables = Exact<{
-  id: Scalars['String']
-}>
-
-export type FetchPostQuery = {
-  __typename?: 'Query'
-  fetchPost: { __typename?: 'Post'; title: string; id: string; emoji: string }
-}
-
-export type FetchPostsQueryVariables = Exact<{ [key: string]: never }>
-
-export type FetchPostsQuery = {
-  __typename?: 'Query'
-  fetchPosts: Array<{ __typename?: 'Post'; title: string; id: string; emoji: string }>
-}
-
-export type FetchWorkQueryVariables = Exact<{
-  id: Scalars['String']
-}>
-
-export type FetchWorkQuery = {
-  __typename?: 'Query'
-  fetchWork: {
-    __typename?: 'Work'
-    title: string
-    id: string
-    image_url: string
-    work_page: {
-      __typename?: 'WorkPage'
-      title: string
-      detail: string
-      implementation: number
-      images?: Array<string> | null
-      meta: {
-        __typename?: 'Meta'
-        platform: string
-        stack: string
-        website?: string | null
-        source?: string | null
-        blog_post?: { __typename?: 'BlogPost'; title: string; url: string } | null
-        presentation?: { __typename?: 'Presentation'; title: string; url: string } | null
+export const HomeDocument = gql`
+  query home {
+    basic {
+      name {
+        position
+        primary
       }
     }
-  }
-}
-
-export type FetchWorksQueryVariables = Exact<{ [key: string]: never }>
-
-export type FetchWorksQuery = {
-  __typename?: 'Query'
-  fetchWorks: Array<{
-    __typename?: 'Work'
-    title: string
-    id: string
-    image_url: string
-    work_page: {
-      __typename?: 'WorkPage'
-      title: string
-      detail: string
-      implementation: number
-      images?: Array<string> | null
-      meta: {
-        __typename?: 'Meta'
-        platform: string
-        stack: string
-        website?: string | null
-        source?: string | null
-        blog_post?: { __typename?: 'BlogPost'; title: string; url: string } | null
-        presentation?: { __typename?: 'Presentation'; title: string; url: string } | null
-      }
+    posts {
+      emoji
+      id
+      title
     }
-  }>
-}
+    works {
+      id
+      imageUrl
+      title
+    }
+  }
+`
 
+export function useHomeQuery(options?: Omit<Urql.UseQueryArgs<HomeQueryVariables>, 'query'>) {
+  return Urql.useQuery<HomeQuery>({ query: HomeDocument, ...options })
+}
 import { IntrospectionQuery } from 'graphql'
 export default {
   __schema: {
@@ -337,7 +280,7 @@ export default {
         name: 'Meta',
         fields: [
           {
-            name: 'blog_post',
+            name: 'blogPost',
             type: {
               kind: 'OBJECT',
               name: 'BlogPost',
@@ -498,7 +441,7 @@ export default {
         name: 'Query',
         fields: [
           {
-            name: 'fetchBasic',
+            name: 'basic',
             type: {
               kind: 'NON_NULL',
               ofType: {
@@ -510,7 +453,7 @@ export default {
             args: []
           },
           {
-            name: 'fetchBio',
+            name: 'bio',
             type: {
               kind: 'NON_NULL',
               ofType: {
@@ -528,7 +471,7 @@ export default {
             args: []
           },
           {
-            name: 'fetchPost',
+            name: 'post',
             type: {
               kind: 'NON_NULL',
               ofType: {
@@ -551,7 +494,7 @@ export default {
             ]
           },
           {
-            name: 'fetchPosts',
+            name: 'posts',
             type: {
               kind: 'NON_NULL',
               ofType: {
@@ -569,7 +512,7 @@ export default {
             args: []
           },
           {
-            name: 'fetchWork',
+            name: 'work',
             type: {
               kind: 'NON_NULL',
               ofType: {
@@ -592,7 +535,7 @@ export default {
             ]
           },
           {
-            name: 'fetchWorks',
+            name: 'works',
             type: {
               kind: 'NON_NULL',
               ofType: {
@@ -628,7 +571,7 @@ export default {
             args: []
           },
           {
-            name: 'image_url',
+            name: 'imageUrl',
             type: {
               kind: 'NON_NULL',
               ofType: {
@@ -650,7 +593,7 @@ export default {
             args: []
           },
           {
-            name: 'work_page',
+            name: 'workPage',
             type: {
               kind: 'NON_NULL',
               ofType: {

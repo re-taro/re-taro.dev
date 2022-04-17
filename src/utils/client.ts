@@ -2,11 +2,12 @@ import { initUrqlClient } from 'next-urql'
 import { ssrExchange, dedupExchange, cacheExchange, fetchExchange } from 'urql'
 import type { Client } from 'urql'
 
-const END_POINT = process.env.END_POINT || 'http://localhost:3003/graphql'
+const END_POINT = process.env.END_POINT || 'http://localhost:8000/graphql'
 
-const urqlClient = (): Promise<Client> => {
-  const ssrCache = ssrExchange({ isClient: false })
-  return new Promise((resolve, reject) => {
+const ssrCache = ssrExchange({ isClient: false })
+
+const urqlClient = (): Promise<Client> =>
+  new Promise((resolve, reject) => {
     const client = initUrqlClient(
       {
         exchanges: [dedupExchange, cacheExchange, ssrCache, fetchExchange],
@@ -21,6 +22,5 @@ const urqlClient = (): Promise<Client> => {
       resolve(client)
     }
   })
-}
 
-export { urqlClient }
+export { urqlClient, ssrCache, END_POINT }

@@ -2,27 +2,22 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React, { useEffect } from 'react'
 import tw from 'twin.macro'
+import type { HomeQuery } from '../../../graphql'
 import { Button } from '../../atoms/button'
 import { Grid } from '../../atoms/grid'
 import { Heading } from '../../atoms/heading'
 import { Card } from '../../molecules/card'
-import type { ProjectProperties } from '../../molecules/card'
 
 const ProjectsBox = tw.section`mb-16 space-y-4`
 
-export type Projects = Array<ProjectProperties>
-
 type ProjectsSectionProperties = React.ComponentProps<React.ReactHTML['section']> & {
-  data: Projects
+  data: HomeQuery['works'] | undefined
 }
 
 const ProjectsSection: React.VFC<ProjectsSectionProperties> = ({ data, ...rest }) => {
   const router = useRouter()
   useEffect(() => {
-    for (const project of data) {
-      // eslint-disable-next-line @typescript-eslint/no-floating-promises
-      router.prefetch('/works/[id]', `/works/${project.id}`)
-    }
+    data?.map(project => router.prefetch('/works/[id]', `/works/${project.id}`))
   }, [data])
   return (
     <ProjectsBox {...rest}>
@@ -31,10 +26,8 @@ const ProjectsSection: React.VFC<ProjectsSectionProperties> = ({ data, ...rest }
           Works
         </Heading>
       </Link>
-      <Grid css={tw`gap-8 grid-cols-1 sm:grid-cols-1 md:gird-cols-2 my-8`}>
-        {data.map(project => (
-          <Card key={project.id} projectData={project} />
-        ))}
+      <Grid css={tw`gap-8 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 my-8`}>
+        <Card projectData={data} />
       </Grid>
       <Link href={'/works'} passHref>
         <Button
