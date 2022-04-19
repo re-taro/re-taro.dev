@@ -56,8 +56,8 @@ const Hamburger: React.VFC = () => {
       <ul
         css={
           isOpen
-            ? tw`p-2 bg-snow-100 dark:bg-night-200 rounded-md visible`
-            : tw`p-2 bg-snow-100 dark:bg-night-200 rounded-md invisible`
+            ? tw`p-2 bg-snow-300 dark:bg-night-300 rounded-md visible`
+            : tw`p-2 bg-snow-300 dark:bg-night-300 rounded-md invisible`
         }
       >
         {NavigationItem.map(({ href, icon, label }) => (
@@ -68,7 +68,7 @@ const Hamburger: React.VFC = () => {
                 aria-label={label}
                 variant={'icon'}
                 leftIcon={icon}
-                iconStyles={tw`bg-snow-100 dark:bg-night-200 text-2xl hover:bg-snow-200 dark:hover:bg-night-300`}
+                iconStyles={tw`bg-snow-300 dark:bg-night-300 text-2xl hover:bg-snow-200 dark:hover:bg-night-200`}
                 boxStyles={tw`p-1 hover:outline-none hover:ring-2 hover:ring-frost-100 mx-1`}
                 key={label}
               >
