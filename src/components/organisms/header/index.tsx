@@ -1,40 +1,32 @@
 import Link from 'next/link'
 import React from 'react'
 import tw from 'twin.macro'
-import { Container } from '../../atoms/container'
 import { Flex } from '../../atoms/flex'
 import { Heading } from '../../atoms/heading'
 import { Spacer } from '../../atoms/spacer'
 import { ToggleButton } from '../../molecules/toggle-button'
-import { Navigation, Hamburger } from '../../organisms/navigation'
+import { Navigation } from '../../organisms/navigation'
 
-const HeaderBox = tw.header`fixed w-full bg-snow-100 dark:bg-night-200 top-0 backdrop-filter backdrop-blur-xl z-10`
+const HeaderBox = tw.header`fixed w-full bg-snow-300/80 dark:bg-night-300/80 top-0 backdrop-filter backdrop-blur-[6px] z-30`
 
 type HeaderProperties = React.ComponentProps<React.ReactHTML['header']>
 
 const Header: React.VFC<HeaderProperties> = ({ ...rest }) => (
   <HeaderBox {...rest}>
-    <Container css={tw`flex mx-auto w-full max-w-[100vh] md:max-w-[85vh] lg:max-w-[800px] py-4 px-6 md:px-2 lg:px-0`}>
-      <Flex css={tw`items-center`}>
-        <Link href={'/'} passHref>
-          <Heading as={'h1'} css={tw`text-xl tracking-tighter cursor-pointer`}>
-            re-taro.dev
-          </Heading>
-        </Link>
-      </Flex>
+    <Flex css={tw`mx-auto w-full max-w-[100vw] md:max-w-[85vw] lg:max-w-[800px] py-4 px-6 md:px-2 lg:px-0`}>
+      <Link href={'/'} passHref>
+        <Heading as={'h1'} css={tw`text-xl tracking-tighter cursor-pointer`}>
+          re-taro.dev
+        </Heading>
+      </Link>
       <Spacer />
-      <Flex>
-        <Flex css={tw`hidden md:flex w-full md:w-auto items-center flex-grow mt-4 md:mt-0`}>
+      <Flex css={tw`items-center grid gap-4`}>
+        <Flex css={tw`hidden sm:flex`}>
           <Navigation />
         </Flex>
-        <div>
-          <ToggleButton />
-          <div css={tw`ml-2 inline-block md:hidden`}>
-            <Hamburger />
-          </div>
-        </div>
       </Flex>
-    </Container>
+      <ToggleButton />
+    </Flex>
   </HeaderBox>
 )
 
