@@ -1,5 +1,7 @@
-import type { NextPage, InferGetStaticPropsType, GetStaticProps } from 'next'
+import type { ParsedUrlQuery } from 'node:querystring'
+import type { NextPage, InferGetStaticPropsType, GetStaticProps, PreviewData } from 'next'
 import { withUrqlClient } from 'next-urql'
+import type { SSRData } from 'next-urql'
 import React from 'react'
 import { useQuery } from 'urql'
 import { Home } from '../components/templates/home'
@@ -10,7 +12,7 @@ import { urqlClient, ssrCache, END_POINT } from '../utils/client'
 type Properties = InferGetStaticPropsType<typeof getStaticProps>
 
 // eslint-disable-next-line unicorn/prevent-abbreviations
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps<{ [key: string]: SSRData }, ParsedUrlQuery, PreviewData> = async () => {
   const client = await urqlClient()
   await client.query(HomeDocument).toPromise()
   return {
