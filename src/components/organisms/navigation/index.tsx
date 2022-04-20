@@ -1,8 +1,5 @@
 import type { IconifyIcon } from '@iconify/react'
-import Link from 'next/link'
-import React, { useState } from 'react'
-import tw from 'twin.macro'
-import { Button } from '../../atoms/button'
+import React from 'react'
 import { Flex } from '../../atoms/flex'
 import { NaviButton } from '../../molecules/navi-button'
 
@@ -43,43 +40,4 @@ const Navigation: React.VFC = () => (
   </Flex>
 )
 
-const Hamburger: React.VFC = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false)
-  return (
-    <React.Fragment>
-      <Button
-        aria-label={'Hamburger'}
-        variant={'icon'}
-        leftIcon={'fa-solid:hamburger'}
-        onClick={() => setIsOpen(!isOpen)}
-      />
-      <ul
-        css={
-          isOpen
-            ? tw`p-2 bg-snow-300 dark:bg-night-300 rounded-md visible`
-            : tw`p-2 bg-snow-300 dark:bg-night-300 rounded-md invisible`
-        }
-      >
-        {NavigationItem.map(({ href, icon, label }) => (
-          <li key={label}>
-            <Link href={href} passHref>
-              <Button
-                as={'a'}
-                aria-label={label}
-                variant={'icon'}
-                leftIcon={icon}
-                iconStyles={tw`bg-snow-300 dark:bg-night-300 text-2xl hover:bg-snow-200 dark:hover:bg-night-200`}
-                boxStyles={tw`p-1 hover:outline-none hover:ring-2 hover:ring-frost-100 mx-1`}
-                key={label}
-              >
-                {label}
-              </Button>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </React.Fragment>
-  )
-}
-
-export { Navigation, Hamburger }
+export { Navigation, NavigationItem }

@@ -1,3 +1,4 @@
+import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import React from 'react'
 import tw from 'twin.macro'
@@ -5,7 +6,8 @@ import { Flex } from '../../atoms/flex'
 import { Heading } from '../../atoms/heading'
 import { Spacer } from '../../atoms/spacer'
 import { ToggleButton } from '../../molecules/toggle-button'
-import { Navigation } from '../../organisms/navigation'
+import { Navigation } from '../navigation'
+const Hamburger = dynamic(() => import('../hamburger'))
 
 const HeaderBox = tw.header`fixed w-full bg-snow-300/80 dark:bg-night-300/80 top-0 backdrop-filter backdrop-blur-[6px] z-30`
 
@@ -26,6 +28,9 @@ const Header: React.VFC<HeaderProperties> = ({ ...rest }) => (
         </Flex>
       </Flex>
       <ToggleButton />
+      <div css={tw`inline-block sm:hidden`}>
+        <Hamburger />
+      </div>
     </Flex>
   </HeaderBox>
 )
