@@ -5,7 +5,7 @@ import React from 'react'
 import tw from 'twin.macro'
 import { Text } from '../text'
 
-const ButtonBox = tw.button`min-w-min min-h-full px-3 py-4 flex justify-center items-center rounded-md bg-snow-100 dark:bg-night-200 hover:bg-snow-200 dark:hover:bg-night-300 focus:outline-none focus:ring-2 focus:ring-frost-100 appearance-none select-none`
+const ButtonBox = tw.button`min-w-min min-h-full px-3 py-4 flex justify-center items-center rounded-md bg-snow-300 dark:bg-night-300 hover:bg-snow-200 dark:hover:bg-night-300 focus:outline-none focus:ring-2 focus:ring-frost-100 appearance-none select-none`
 
 type ButtonIconProperties = IconProps & {
   ref?: never
