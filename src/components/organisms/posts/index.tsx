@@ -21,7 +21,7 @@ const PostsSection: React.VFC<PostsSectionProperties> = ({ data, ...rest }) => {
   }, [data])
   return (
     <PostsBox {...rest}>
-      <Heading css={tw`text-lg mb-2`}>Recent Posts</Heading>
+      <Heading css={tw`text-xl mb-2`}>Recent Posts</Heading>
       <Grid css={tw`gap-8`}>
         <PostCard postData={data} />
       </Grid>
