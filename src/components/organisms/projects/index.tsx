@@ -22,7 +22,7 @@ const ProjectsSection: React.VFC<ProjectsSectionProperties> = ({ data, ...rest }
   return (
     <ProjectsBox {...rest}>
       <Link href={'/works'} passHref>
-        <Heading as={'h1'} css={tw`text-xl cursor-pointer`}>
+        <Heading as={'h5'} css={tw`cursor-pointer`}>
           Works
         </Heading>
       </Link>

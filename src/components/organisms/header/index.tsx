@@ -17,7 +17,7 @@ const Header: React.VFC<HeaderProperties> = ({ ...rest }) => (
   <HeaderBox {...rest}>
     <Flex css={tw`mx-auto w-full max-w-[100vw] md:max-w-[85vw] lg:max-w-[800px] py-4 px-6 md:px-2 lg:px-0`}>
       <Link href={'/'} passHref>
-        <Heading as={'h1'} css={tw`text-xl tracking-tighter cursor-pointer`}>
+        <Heading as={'h5'} css={tw`tracking-tighter cursor-pointer`}>
           re-taro.dev
         </Heading>
       </Link>

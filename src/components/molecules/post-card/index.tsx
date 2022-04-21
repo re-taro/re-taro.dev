@@ -24,7 +24,7 @@ const PostCard: React.VFC<PostCardProperties> = ({ postData, ...rest }) => (
               </div>
             </Flex>
             <div css={tw`flex-[9 9 0] pl-[11] sm:pl-[22]`}>
-              <Heading css={tw`text-lg`}>{post.title}</Heading>
+              <Heading as={'h5'}>{post.title}</Heading>
             </div>
           </Flex>
         </Link>
