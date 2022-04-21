@@ -17,8 +17,8 @@ const NaviButton: React.VFC<NaviButtonProperties> = ({ href, label, icon }) => (
       as={'a'}
       variant={'icon'}
       leftIcon={icon}
-      iconStyles={tw`bg-snow-300 dark:bg-night-300 text-2xl hover:bg-snow-200 dark:hover:bg-night-300`}
-      boxStyles={tw`p-1 hover:outline-none hover:ring-2 hover:ring-frost-100 w-8 h-8 mx-1`}
+      iconStyles={tw`text-2xl`}
+      boxStyles={tw`transition ease-in-out delay-100 p-1 hover:outline-none hover:ring-2 hover:ring-frost-100 hover:-translate-y-1 w-8 h-8 mx-1`}
       key={label}
     />
   </Link>

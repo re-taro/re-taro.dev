@@ -16,7 +16,7 @@ const Hamburger: React.VFC = () => {
         aria-label={'Hamburger'}
         variant={'icon'}
         leftIcon={isOpen ? 'eva:close-fill' : 'fa-solid:hamburger'}
-        iconStyles={tw`bg-snow-300 dark:bg-night-300 text-2xl hover:bg-snow-200 dark:hover:bg-night-200`}
+        iconStyles={tw`text-2xl`}
         boxStyles={tw`p-1 hover:outline-none hover:ring-2 hover:ring-frost-100 w-8 h-8 mx-1`}
         onClick={() => setIsOpen(!isOpen)}
       />
