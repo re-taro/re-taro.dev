@@ -9,7 +9,7 @@ import { ToggleButton } from '../../molecules/toggle-button'
 import { Navigation } from '../navigation'
 const Hamburger = dynamic(() => import('../hamburger'))
 
-const HeaderBox = tw.header`fixed w-full bg-snow-300/80 dark:bg-night-300/80 top-0 backdrop-filter backdrop-blur-[6px] z-30`
+const HeaderBox = tw.header`fixed w-full bg-snow-300/80 dark:bg-night-300/80 top-0 backdrop-filter backdrop-blur-[6px] z-30 transition delay-150 ease-in-out`
 
 type HeaderProperties = React.ComponentProps<React.ReactHTML['header']>
 
@@ -17,7 +17,7 @@ const Header: React.VFC<HeaderProperties> = ({ ...rest }) => (
   <HeaderBox {...rest}>
     <Flex css={tw`mx-auto w-full max-w-[100vw] md:max-w-[85vw] lg:max-w-[800px] py-4 px-6 md:px-2 lg:px-0`}>
       <Link href={'/'} passHref>
-        <Heading as={'h1'} css={tw`text-xl tracking-tighter cursor-pointer`}>
+        <Heading as={'h5'} css={tw`tracking-tighter cursor-pointer`}>
           re-taro.dev
         </Heading>
       </Link>

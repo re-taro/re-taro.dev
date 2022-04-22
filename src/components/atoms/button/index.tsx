@@ -5,7 +5,7 @@ import React from 'react'
 import tw from 'twin.macro'
 import { Text } from '../text'
 
-const ButtonBox = tw.button`min-w-min min-h-full px-3 py-4 flex justify-center items-center rounded-md bg-snow-300 dark:bg-night-300 hover:bg-snow-200 dark:hover:bg-night-300 focus:outline-none focus:ring-2 focus:ring-frost-100 appearance-none select-none`
+const ButtonBox = tw.button`min-w-min min-h-full px-3 py-4 flex justify-center items-center rounded-md bg-snow-300 dark:bg-night-300 hover:bg-snow-200 dark:hover:bg-night-300 focus:outline-none focus:ring-2 focus:ring-frost-100 appearance-none select-none transition delay-150 ease-in-out`
 
 type ButtonIconProperties = IconProps & {
   ref?: never
@@ -13,7 +13,11 @@ type ButtonIconProperties = IconProps & {
 
 const ButtonIcon: React.VFC<ButtonIconProperties> = ({ icon, css, ...rest }) => (
   <div css={[tw`flex items-center justify-center flex-shrink-0 w-4 h-4 min-h-full`, css]}>
-    <InlineIcon icon={icon} css={tw`w-full h-full text-night-400 dark:text-snow-300`} {...rest} />
+    <InlineIcon
+      icon={icon}
+      css={tw`w-full h-full text-night-400 dark:text-snow-300 transition delay-150 ease-in-out`}
+      {...rest}
+    />
   </div>
 )
 

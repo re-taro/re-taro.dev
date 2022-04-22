@@ -6,9 +6,9 @@ import type { HomeQuery } from '../../../graphql'
 import { Flex } from '../../atoms/flex'
 import { Text } from '../../atoms/text'
 
-const CardBox = tw.div`border-2 border-night-100 dark:border-night-400 shadow-card rounded-[5rem] cursor-pointer items-center overflow-hidden justify-center relative transition duration-200 ease-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-xl`
+const CardBox = tw.div`border-2 border-night-100 dark:border-night-400 shadow-card rounded-[5rem] cursor-pointer items-center overflow-hidden justify-center relative transition delay-150 ease-in-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-xl`
 
-const Layer = tw.div`absolute justify-center bottom-0 p-0 h-full w-full z-20 bg-gradient-to-t from-[rgba(45, 55, 72, 0.6)] via-[rgba(203, 213, 224, 0.4)] to-[rgba(237, 242, 247, 0)] dark:from-[rgba(0, 0, 0, 0.5)] dark:to-[rgba(237, 242, 247, 0)]`
+const Layer = tw.div`absolute justify-center bottom-0 p-0 h-full w-full z-20 bg-gradient-to-t from-[rgba(45, 55, 72, 0.6)] via-[rgba(203, 213, 224, 0.4)] to-[rgba(237, 242, 247, 0)] dark:from-[rgba(0, 0, 0, 0.5)] dark:to-[rgba(237, 242, 247, 0)] transition delay-150 ease-in-out`
 
 type CardProperties = React.ComponentProps<React.ReactHTML['div']> & {
   projectData: HomeQuery['works'] | undefined

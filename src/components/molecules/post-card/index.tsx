@@ -6,7 +6,7 @@ import { Flex } from '../../atoms/flex'
 import { Heading } from '../../atoms/heading'
 import Twemoji from '../../atoms/twemojii'
 
-const PostBox = tw.div`w-full transition duration-200 ease-out hover:scale-[1.03]`
+const PostBox = tw.div`w-full transition delay-150 ease-in-out hover:scale-[1.03]`
 
 type PostCardProperties = React.ComponentProps<React.ReactHTML['div']> & {
   postData: HomeQuery['posts'] | undefined
@@ -24,7 +24,7 @@ const PostCard: React.VFC<PostCardProperties> = ({ postData, ...rest }) => (
               </div>
             </Flex>
             <div css={tw`flex-[9 9 0] pl-[11] sm:pl-[22]`}>
-              <Heading css={tw`text-lg`}>{post.title}</Heading>
+              <Heading as={'h5'}>{post.title}</Heading>
             </div>
           </Flex>
         </Link>

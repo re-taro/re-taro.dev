@@ -41,6 +41,7 @@
     "preact": "10.7.1",
     "react": "npm:@preact/compat@17.0.3",
     "react-dom": "npm:@preact/compat@17.0.3",
+    "twemoji": "^14.0.2",
     "urql": "2.2.0"
   },
   "devDependencies": {

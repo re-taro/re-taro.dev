@@ -16,7 +16,7 @@ const Hamburger: React.VFC = () => {
         aria-label={'Hamburger'}
         variant={'icon'}
         leftIcon={isOpen ? 'eva:close-fill' : 'fa-solid:hamburger'}
-        iconStyles={tw`bg-snow-300 dark:bg-night-300 text-2xl hover:bg-snow-200 dark:hover:bg-night-200`}
+        iconStyles={tw`text-2xl`}
         boxStyles={tw`p-1 hover:outline-none hover:ring-2 hover:ring-frost-100 w-8 h-8 mx-1`}
         onClick={() => setIsOpen(!isOpen)}
       />
@@ -32,7 +32,10 @@ const Hamburger: React.VFC = () => {
             <Link href={href} passHref>
               <a css={tw`flex items-center`}>
                 <div css={tw`flex items-center justify-center flex-shrink-0 w-4 h-4 min-h-full mr-2`}>
-                  <InlineIcon icon={icon} css={tw`w-full h-full text-night-400 dark:text-snow-300`} />
+                  <InlineIcon
+                    icon={icon}
+                    css={tw`w-full h-full text-night-400 dark:text-snow-300 transition delay-150 ease-in-out`}
+                  />
                 </div>
                 <Text>{label}</Text>
               </a>
