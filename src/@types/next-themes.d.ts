@@ -41,6 +41,7 @@ declare module 'next-themes' {
     value?: ValueObject
     /** Nonce string to pass to the inline script for CSP headers */
     nonce?: string
+    children: React.ReactNode
   }
 
   // eslint-disable-next-line init-declarations
