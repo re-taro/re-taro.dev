@@ -13,7 +13,11 @@ type ButtonIconProperties = IconProps & {
 
 const ButtonIcon: React.VFC<ButtonIconProperties> = ({ icon, css, ...rest }) => (
   <div css={[tw`flex items-center justify-center flex-shrink-0 w-4 h-4 min-h-full`, css]}>
-    <InlineIcon icon={icon} css={tw`w-full h-full text-night-400 dark:text-snow-300 transition delay-150 ease-in-out`} {...rest} />
+    <InlineIcon
+      icon={icon}
+      css={tw`w-full h-full text-night-400 dark:text-snow-300 transition delay-150 ease-in-out`}
+      {...rest}
+    />
   </div>
 )
 
