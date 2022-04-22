@@ -35,7 +35,9 @@ const NotFound: NextPage = () => {
         <div css={tw`text-center`}>
           <Link href={'/'} passHref>
             <Button variant={'normal'} as={'a'}>
-              Let&apos;s Head Back
+              <Text as={'p'} css={tw`text-lg`}>
+                Let&apos;s Head Back
+              </Text>
             </Button>
           </Link>
         </div>
