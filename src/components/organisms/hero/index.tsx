@@ -20,7 +20,7 @@ type HeroSectionProperties = React.ComponentProps<React.ReactHTML['div']> & {
 const HeroSection: React.VFC<HeroSectionProperties> = ({ data, ...rest }) => (
   <HeroWrapper {...rest}>
     <HeroBox>
-      <Heading as={'h1'} css={tw`pb-11`}>
+      <Heading as={'h2'} css={tw`pb-11`}>
         {data?.name.primary}
       </Heading>
       <Text css={tw`text-base sm:text-xl`}>{data?.name.position}</Text>
