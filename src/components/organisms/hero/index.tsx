@@ -6,7 +6,7 @@ import { Text } from '../../atoms/text'
 
 const HeroWrapper = tw.div`h-[90vh] items-center grid`
 
-const HeroBox = tw.div`align-middle w-full sm:w-[80%] md:w-[60%] mt-8 sm:mt-0 sm:self-center`
+const HeroBox = tw.div`align-middle w-full sm:w-[80%] md:w-[60%] sm:mt-0 sm:self-center`
 
 export type Hero = {
   primary: string

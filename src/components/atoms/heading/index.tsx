@@ -3,7 +3,7 @@ import tw from 'twin.macro'
 
 type HeadingVariant = `h${1 | 2 | 3 | 4 | 5}`
 
-const HeadingBase = tw.h1`text-night-400 dark:text-snow-300 font-bold select-none`
+const HeadingBase = tw.h1`text-night-400 dark:text-snow-300 font-bold select-none transition delay-150 ease-in-out`
 
 // eslint-disable-next-line consistent-return
 const getHeadingStyles = (as: HeadingVariant) => {

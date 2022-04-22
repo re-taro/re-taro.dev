@@ -32,7 +32,7 @@ const Hamburger: React.VFC = () => {
             <Link href={href} passHref>
               <a css={tw`flex items-center`}>
                 <div css={tw`flex items-center justify-center flex-shrink-0 w-4 h-4 min-h-full mr-2`}>
-                  <InlineIcon icon={icon} css={tw`w-full h-full text-night-400 dark:text-snow-300`} />
+                  <InlineIcon icon={icon} css={tw`w-full h-full text-night-400 dark:text-snow-300 transition delay-150 ease-in-out`} />
                 </div>
                 <Text>{label}</Text>
               </a>
