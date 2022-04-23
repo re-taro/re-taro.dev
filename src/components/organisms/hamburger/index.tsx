@@ -2,13 +2,13 @@ import { InlineIcon } from '@iconify/react'
 import Link from 'next/link'
 import React, { useState } from 'react'
 import tw from 'twin.macro'
-import { Button } from '../../atoms/button'
-import { Text } from '../../atoms/text'
 import { NavigationItem } from '../navigation'
+import { Button } from '~/components/atoms/button'
+import { Text } from '~/components/atoms/text'
 
 const HamburgerBox = tw.div`relative inline-block`
 
-const Hamburger: React.VFC = () => {
+const Hamburger: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
   return (
     <HamburgerBox>

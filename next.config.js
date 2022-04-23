@@ -8,6 +8,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
  * - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
  */
 const ContentSecurityPolicy = `
+  default-src 'self';
   style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/;
   media-src 'none';
   connect-src *;

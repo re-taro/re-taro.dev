@@ -2,7 +2,7 @@ import type { IconifyIcon } from '@iconify/react'
 import Link from 'next/link'
 import React from 'react'
 import tw from 'twin.macro'
-import { Button } from '../../atoms/button'
+import { Button } from '~/components/atoms/button'
 
 type NaviButtonProperties = {
   href: string
@@ -10,7 +10,7 @@ type NaviButtonProperties = {
   icon: string | IconifyIcon
 }
 
-const NaviButton: React.VFC<NaviButtonProperties> = ({ href, label, icon }) => (
+const NaviButton: React.FC<NaviButtonProperties> = ({ href, label, icon }) => (
   <Link href={href} passHref>
     <Button
       aria-label={label}

@@ -26,7 +26,7 @@ type HeadingProperties = React.ComponentProps<React.ReactHTML['h1']> & {
   as?: HeadingVariant
 }
 
-const Heading: React.VFC<HeadingProperties> = ({ as = 'h1', children, ...rest }) => (
+const Heading: React.FC<HeadingProperties> = ({ as = 'h1', children, ...rest }) => (
   <HeadingBase as={as} css={getHeadingStyles(as)} {...rest}>
     {children}
   </HeadingBase>

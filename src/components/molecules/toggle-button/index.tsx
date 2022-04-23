@@ -1,9 +1,9 @@
 import { useTheme } from 'next-themes'
 import React, { useEffect, useState } from 'react'
 import tw from 'twin.macro'
-import { Button } from '../../atoms/button'
+import { Button } from '~/components/atoms/button'
 
-const ToggleButton: React.VFC = () => {
+const ToggleButton: React.FC = () => {
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState<boolean>(false)
   useEffect(() => setMounted(true), [])

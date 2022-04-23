@@ -1,8 +1,8 @@
 import React from 'react'
 import tw from 'twin.macro'
-import type { HomeQuery } from '../../../graphql'
-import { Heading } from '../../atoms/heading'
-import { Text } from '../../atoms/text'
+import { Heading } from '~/components/atoms/heading'
+import { Text } from '~/components/atoms/text'
+import type { HomeQuery } from '~/graphql'
 
 const HeroWrapper = tw.div`h-[90vh] items-center grid`
 
@@ -17,7 +17,7 @@ type HeroSectionProperties = React.ComponentProps<React.ReactHTML['div']> & {
   data: HomeQuery['basic'] | undefined
 }
 
-const HeroSection: React.VFC<HeroSectionProperties> = ({ data, ...rest }) => (
+const HeroSection: React.FC<HeroSectionProperties> = ({ data, ...rest }) => (
   <HeroWrapper {...rest}>
     <HeroBox>
       <Heading as={'h2'} css={tw`pb-11`}>
