@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import React from 'react'
 import tw from 'twin.macro'
-import type { HomeQuery } from '../../../graphql'
-import { Flex } from '../../atoms/flex'
-import { Heading } from '../../atoms/heading'
-import Twemoji from '../../atoms/twemojii'
+import { Flex } from '~/components/atoms/flex'
+import { Heading } from '~/components/atoms/heading'
+import Twemoji from '~/components/atoms/twemojii'
+import type { HomeQuery } from '~/graphql'
 
 const PostBox = tw.div`w-full transition delay-150 ease-in-out hover:scale-[1.03]`
 
@@ -12,7 +12,7 @@ type PostCardProperties = React.ComponentProps<React.ReactHTML['div']> & {
   postData: HomeQuery['posts'] | undefined
 }
 
-const PostCard: React.VFC<PostCardProperties> = ({ postData, ...rest }) => (
+const PostCard: React.FC<PostCardProperties> = ({ postData, ...rest }) => (
   <React.Fragment>
     {postData?.map(post => (
       <PostBox key={post.id} {...rest}>

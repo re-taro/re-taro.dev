@@ -2,12 +2,12 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React, { useEffect } from 'react'
 import tw from 'twin.macro'
-import { HomeQuery } from '../../../graphql'
-import { Button } from '../../atoms/button'
-import { Grid } from '../../atoms/grid'
-import { Heading } from '../../atoms/heading'
-import { Text } from '../../atoms/text'
-import { PostCard } from '../../molecules/post-card'
+import { Button } from '~/components/atoms/button'
+import { Grid } from '~/components/atoms/grid'
+import { Heading } from '~/components/atoms/heading'
+import { Text } from '~/components/atoms/text'
+import { PostCard } from '~/components/molecules/post-card'
+import { HomeQuery } from '~/graphql'
 
 const PostsBox = tw.section`space-y-4`
 
@@ -15,7 +15,7 @@ type PostsSectionProperties = React.ComponentProps<React.ReactHTML['section']> &
   data: HomeQuery['posts'] | undefined
 }
 
-const PostsSection: React.VFC<PostsSectionProperties> = ({ data, ...rest }) => {
+const PostsSection: React.FC<PostsSectionProperties> = ({ data, ...rest }) => {
   const router = useRouter()
   useEffect(() => {
     data?.map(post => router.prefetch('/posts/[id]', `/posts/${post.id}`))

@@ -5,7 +5,7 @@ type TwemojiProperties = {
   emoji: string
 }
 
-const Twemoji: React.VFC<TwemojiProperties> = ({ emoji }) => (
+const Twemoji: React.FC<TwemojiProperties> = ({ emoji }) => (
   <span
     dangerouslySetInnerHTML={{
       __html: twemoji.parse(emoji, {

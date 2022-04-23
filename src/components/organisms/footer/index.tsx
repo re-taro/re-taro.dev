@@ -5,7 +5,7 @@ const FooterBox = tw.footer`opacity-40 text-center text-base`
 
 type FooterProperties = React.ComponentProps<React.ReactHTML['footer']>
 
-const Footer: React.VFC<FooterProperties> = ({ ...rest }) => (
+const Footer: React.FC<FooterProperties> = ({ ...rest }) => (
   <FooterBox {...rest}>
     &copy; 2021 - {new Date().getFullYear()}{' '}
     <a

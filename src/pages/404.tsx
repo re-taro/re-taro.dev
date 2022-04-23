@@ -3,9 +3,9 @@ import { useTheme } from 'next-themes'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import tw from 'twin.macro'
-import { Button } from '../components/atoms/button'
-import { Heading } from '../components/atoms/heading'
-import { Text } from '../components/atoms/text'
+import { Button } from '~/components/atoms/button'
+import { Heading } from '~/components/atoms/heading'
+import { Text } from '~/components/atoms/text'
 
 const ImageBox = tw.div`w-full sm:w-[70%] md:w-[60%] lg:w-[60%] my-0 mx-auto`
 

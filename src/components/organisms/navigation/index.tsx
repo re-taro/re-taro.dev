@@ -1,7 +1,7 @@
 import type { IconifyIcon } from '@iconify/react'
 import React from 'react'
-import { Flex } from '../../atoms/flex'
-import { NaviButton } from '../../molecules/navi-button'
+import { Flex } from '~/components/atoms/flex'
+import { NaviButton } from '~/components/molecules/navi-button'
 
 type NavigationItemProperties = {
   href: string
@@ -32,7 +32,7 @@ const NavigationItem: Array<NavigationItemProperties> = [
   }
 ]
 
-const Navigation: React.VFC = () => (
+const Navigation: React.FC = () => (
   <Flex>
     {NavigationItem.map(({ href, icon, label }) => (
       <NaviButton href={href} label={label} icon={icon} key={label} />

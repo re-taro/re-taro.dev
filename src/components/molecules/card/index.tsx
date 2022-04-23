@@ -2,8 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import tw from 'twin.macro'
-import type { HomeQuery } from '../../../graphql'
-import { Text } from '../../atoms/text'
+import { Text } from '~/components/atoms/text'
+import type { HomeQuery } from '~/graphql'
 
 const CardBox = tw.div`border-2 border-night-100 dark:border-night-400 shadow-card rounded-[20px] cursor-pointer items-center overflow-hidden justify-center relative transition delay-150 ease-in-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-xl`
 
@@ -13,7 +13,7 @@ type CardProperties = React.ComponentProps<React.ReactHTML['div']> & {
   projectData: HomeQuery['works'] | undefined
 }
 
-const Card: React.VFC<CardProperties> = ({ projectData, ...rest }) => (
+const Card: React.FC<CardProperties> = ({ projectData, ...rest }) => (
   <React.Fragment>
     {projectData?.map(project => (
       <Link href={`/works/${project.id}`} passHref>

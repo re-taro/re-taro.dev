@@ -4,10 +4,10 @@ import { withUrqlClient } from 'next-urql'
 import type { SSRData } from 'next-urql'
 import React from 'react'
 import { useQuery } from 'urql'
-import { Home } from '../components/templates/home'
-import { HomeDocument } from '../graphql'
-import type { HomeQuery } from '../graphql'
-import { urqlClient, ssrCache, END_POINT } from '../utils/client'
+import { Home } from '~/components/templates/home'
+import { HomeDocument } from '~/graphql'
+import type { HomeQuery } from '~/graphql'
+import { urqlClient, ssrCache, END_POINT } from '~/utils/client'
 
 type Properties = InferGetStaticPropsType<typeof getStaticProps>
 
