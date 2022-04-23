@@ -1,7 +1,7 @@
 import type { IconifyIcon } from '@iconify/react'
 import React from 'react'
+import { NaviButton } from '../navi-button'
 import { Flex } from '~/components/atoms/flex'
-import { NaviButton } from '~/components/molecules/navi-button'
 
 type NavigationItemProperties = {
   href: string
