@@ -6,6 +6,7 @@ import { HomeQuery } from '../../../graphql'
 import { Button } from '../../atoms/button'
 import { Grid } from '../../atoms/grid'
 import { Heading } from '../../atoms/heading'
+import { Text } from '../../atoms/text'
 import { PostCard } from '../../molecules/post-card'
 
 const PostsBox = tw.section`space-y-4`
@@ -35,7 +36,9 @@ const PostsSection: React.VFC<PostsSectionProperties> = ({ data, ...rest }) => {
           rightIcon={'fa6-solid:arrow-right'}
           boxStyles={tw`px-0`}
         >
-          view all posts
+          <Text as={'p'} css={tw`text-lg`}>
+            view all posts
+          </Text>
         </Button>
       </Link>
     </PostsBox>

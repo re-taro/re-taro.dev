@@ -6,6 +6,7 @@ import type { HomeQuery } from '../../../graphql'
 import { Button } from '../../atoms/button'
 import { Grid } from '../../atoms/grid'
 import { Heading } from '../../atoms/heading'
+import { Text } from '../../atoms/text'
 import { Card } from '../../molecules/card'
 
 const ProjectsBox = tw.section`mb-16 space-y-4`
@@ -37,7 +38,9 @@ const ProjectsSection: React.VFC<ProjectsSectionProperties> = ({ data, ...rest }
           rightIcon={'fa6-solid:arrow-right'}
           boxStyles={tw`px-0`}
         >
-          view all works
+          <Text as={'p'} css={tw`text-lg`}>
+            view all works
+          </Text>
         </Button>
       </Link>
     </ProjectsBox>
