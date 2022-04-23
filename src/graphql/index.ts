@@ -104,6 +104,17 @@ export type WorkPage = {
   title: Scalars['String']
 }
 
+export type AboutQueryVariables = Exact<{ [key: string]: never }>
+
+export type AboutQuery = {
+  __typename?: 'Query'
+  basic: {
+    __typename?: 'Basic'
+    introduction: string
+    affiliation: { __typename?: 'Affiliation'; location: string; assign: string }
+  }
+}
+
 export type HomeQueryVariables = Exact<{ [key: string]: never }>
 
 export type HomeQuery = {
@@ -113,6 +124,21 @@ export type HomeQuery = {
   works: Array<{ __typename?: 'Work'; id: string; imageUrl: string; title: string }>
 }
 
+export const AboutDocument = gql`
+  query about {
+    basic {
+      introduction
+      affiliation {
+        location
+        assign
+      }
+    }
+  }
+`
+
+export function useAboutQuery(options?: Omit<Urql.UseQueryArgs<AboutQueryVariables>, 'query'>) {
+  return Urql.useQuery<AboutQuery>({ query: AboutDocument, ...options })
+}
 export const HomeDocument = gql`
   query home {
     basic {
