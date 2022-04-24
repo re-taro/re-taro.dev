@@ -41,9 +41,10 @@ specifiers:
   react: npm:@preact/compat@17.0.3
   react-dom: npm:@preact/compat@17.0.3
   react-is: 18.0.0
-  sharp: ^0.30.4
+  sharp: 0.30.4
+  swr: 1.3.0
   tailwindcss: 3.0.24
-  twemoji: ^14.0.2
+  twemoji: 14.0.2
   twin.macro: 2.8.2
   typescript: 4.6.3
   urql: 2.2.0
@@ -60,6 +61,7 @@ dependencies:
   react: /@preact/compat/17.0.3_preact@10.7.1
   react-dom: /@preact/compat/17.0.3_preact@10.7.1
   sharp: 0.30.4
+  swr: 1.3.0_@preact+compat@17.0.3
   twemoji: 14.0.2
   urql: 2.2.0_1c3722919da8165839472f3fc3388727
 
@@ -7968,6 +7970,14 @@ packages:
     dependencies:
       tslib: 2.3.1
     dev: true
+
+  /swr/1.3.0_@preact+compat@17.0.3:
+    resolution: {integrity: sha512-dkghQrOl2ORX9HYrMDtPa7LTVHJjCTeZoB1dqTbnnEDlSvN8JEKpYIYurDfvbQFUUS8Cg8PceFVZNkW0KNNYPw==}
+    peerDependencies:
+      react: ^16.11.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: /@preact/compat/17.0.3_preact@10.7.1
+    dev: false
 
   /symbol-observable/1.2.0:
     resolution: {integrity: sha512-e900nM8RRtGhlV36KGEU9k65K3mPb1WV70OdjfxlG2EAuM1noi/E/BaW/uMhL7bPEssK8QV57vN3esixjUvcXQ==}
