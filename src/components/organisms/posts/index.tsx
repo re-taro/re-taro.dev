@@ -33,7 +33,7 @@ const PostsSection: React.FC<PostsSectionProperties> = ({ data, ...rest }) => {
           aria-label={'view all posts'}
           as={'a'}
           variant={'icon'}
-          rightIcon={'fa6-solid:arrow-right'}
+          rightIcon={'fa-solid:arrow-right'}
           boxStyles={tw`px-0`}
         >
           <Text as={'p'} css={tw`text-lg`}>

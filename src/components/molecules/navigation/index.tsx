@@ -12,22 +12,22 @@ type NavigationItemProperties = {
 const NavigationItem: Array<NavigationItemProperties> = [
   {
     href: '/',
-    icon: 'fa6-solid:house-chimney',
+    icon: 'fa-solid:home',
     label: 'Home'
   },
   {
     href: '/works',
-    icon: 'fa6-solid:rocket',
+    icon: 'fa-solid:rocket',
     label: 'Works'
   },
   {
     href: '/blog',
-    icon: 'fa6-solid:feather-pointed',
+    icon: 'fa-solid:feather-alt',
     label: 'Blog'
   },
   {
     href: '/about',
-    icon: 'fa6-solid:user',
+    icon: 'fa-solid:user-alt',
     label: 'About'
   }
 ]
