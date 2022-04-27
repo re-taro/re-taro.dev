@@ -35,7 +35,7 @@ const ProjectsSection: React.FC<ProjectsSectionProperties> = ({ data, ...rest })
           aria-label={'view all works'}
           as={'a'}
           variant={'icon'}
-          rightIcon={'fa6-solid:arrow-right'}
+          rightIcon={'fa-solid:arrow-right'}
           boxStyles={tw`px-0`}
         >
           <Text as={'p'} css={tw`text-lg`}>

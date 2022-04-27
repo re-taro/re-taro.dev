@@ -3,9 +3,9 @@ import { withUrqlClient } from 'next-urql'
 import type { SSRData } from 'next-urql'
 import React from 'react'
 import { useQuery } from 'urql'
-import { Home } from '~/components/templates/home'
-import { HomeDocument } from '~/graphql'
-import type { HomeQuery } from '~/graphql'
+import { About } from '~/components/templates/about'
+import { AboutDocument } from '~/graphql'
+import type { AboutQuery } from '~/graphql'
 import { urqlClient, ssrCache, END_POINT } from '~/utils/client'
 
 type Properties = InferGetStaticPropsType<typeof getStaticProps>
@@ -13,7 +13,7 @@ type Properties = InferGetStaticPropsType<typeof getStaticProps>
 // eslint-disable-next-line unicorn/prevent-abbreviations
 export const getStaticProps: GetStaticProps<{ [key: string]: SSRData }> = async () => {
   const client = await urqlClient()
-  await client.query(HomeDocument).toPromise()
+  await client.query(AboutDocument).toPromise()
   return {
     props: {
       urqlState: ssrCache.extractData()
@@ -21,9 +21,9 @@ export const getStaticProps: GetStaticProps<{ [key: string]: SSRData }> = async 
   }
 }
 
-const HomePage: NextPage<Properties> = () => {
-  const [response] = useQuery<HomeQuery>({ query: HomeDocument })
-  return <Home data={response.data} />
+const AboutPage: NextPage<Properties> = () => {
+  const [response] = useQuery<AboutQuery>({ query: AboutDocument })
+  return <About data={response.data} />
 }
 
 export default withUrqlClient(
@@ -31,4 +31,4 @@ export default withUrqlClient(
     url: END_POINT
   }),
   { ssr: false }
-)(HomePage)
+)(AboutPage)
