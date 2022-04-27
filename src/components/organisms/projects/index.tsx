@@ -18,7 +18,7 @@ type ProjectsSectionProperties = React.ComponentProps<React.ReactHTML['section']
 const ProjectsSection: React.FC<ProjectsSectionProperties> = ({ data, ...rest }) => {
   const router = useRouter()
   useEffect(() => {
-    data?.map(project => router.prefetch('/works/[id]', `/works/${project.id}`))
+    data?.slice(0, 4).map(project => router.prefetch('/works/[id]', `/works/${project.id}`))
   }, [data])
   return (
     <ProjectsBox {...rest}>

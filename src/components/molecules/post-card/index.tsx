@@ -14,7 +14,7 @@ type PostCardProperties = React.ComponentProps<React.ReactHTML['div']> & {
 
 const PostCard: React.FC<PostCardProperties> = ({ postData, ...rest }) => (
   <React.Fragment>
-    {postData?.map(post => (
+    {postData?.slice(0, 4).map(post => (
       <PostBox key={post.id} {...rest}>
         <Link href={`/posts/${post.id}`} passHref>
           <Flex as={'a'} css={tw`flex-wrap items-center w-full`}>

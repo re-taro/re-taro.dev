@@ -15,7 +15,7 @@ type CardProperties = React.ComponentProps<React.ReactHTML['div']> & {
 
 const Card: React.FC<CardProperties> = ({ projectData, ...rest }) => (
   <React.Fragment>
-    {projectData?.map(project => (
+    {projectData?.slice(0, 4).map(project => (
       <Link href={`/works/${project.id}`} passHref>
         <CardBox key={project.id} {...rest}>
           <div css={tw`h-[200] sm:h-[250] md:h-[200]`}>

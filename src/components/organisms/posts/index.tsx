@@ -18,7 +18,7 @@ type PostsSectionProperties = React.ComponentProps<React.ReactHTML['section']> &
 const PostsSection: React.FC<PostsSectionProperties> = ({ data, ...rest }) => {
   const router = useRouter()
   useEffect(() => {
-    data?.map(post => router.prefetch('/posts/[id]', `/posts/${post.id}`))
+    data?.slice(0, 4).map(post => router.prefetch('/posts/[id]', `/posts/${post.id}`))
   }, [data])
   return (
     <PostsBox {...rest}>
