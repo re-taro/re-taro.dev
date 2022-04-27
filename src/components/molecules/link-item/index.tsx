@@ -13,7 +13,7 @@ export type LinkItems = {
 type LinkItemProperties = React.ComponentProps<React.ReactHTML['a']> & IconProps & LinkItems
 
 const LinkItem: React.FC<LinkItemProperties> = ({ url, css, icon, ...rest }) => (
-  <LinkBox href={url} target={'_blank'} css={css} {...rest}>
+  <LinkBox rel={'noopener noreferrer'} href={url} target={'_blank'} css={css} {...rest}>
     <InlineIcon
       icon={icon}
       css={tw`w-full h-full text-night-400 dark:text-snow-300 transition delay-150 ease-in-out`}
