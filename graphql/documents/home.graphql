@@ -5,6 +5,11 @@ query home {
       primary
     }
   }
+  bio {
+    date
+    title
+    action
+  }
   posts {
     emoji
     id

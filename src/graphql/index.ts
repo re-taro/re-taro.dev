@@ -30,8 +30,9 @@ export type Basic = {
 
 export type Bio = {
   __typename?: 'Bio'
+  action: Scalars['String']
+  date: Scalars['String']
   title: Scalars['String']
-  when: Scalars['String']
 }
 
 export type BlogPost = {
@@ -120,6 +121,7 @@ export type HomeQueryVariables = Exact<{ [key: string]: never }>
 export type HomeQuery = {
   __typename?: 'Query'
   basic: { __typename?: 'Basic'; name: { __typename?: 'Name'; position: string; primary: string } }
+  bio: Array<{ __typename?: 'Bio'; date: string; title: string; action: string }>
   posts: Array<{ __typename?: 'Post'; emoji: string; id: string; title: string }>
   works: Array<{ __typename?: 'Work'; id: string; imageUrl: string; title: string }>
 }
@@ -146,6 +148,11 @@ export const HomeDocument = gql`
         position
         primary
       }
+    }
+    bio {
+      date
+      title
+      action
     }
     posts {
       emoji
@@ -248,7 +255,7 @@ export default {
         name: 'Bio',
         fields: [
           {
-            name: 'title',
+            name: 'action',
             type: {
               kind: 'NON_NULL',
               ofType: {
@@ -259,7 +266,18 @@ export default {
             args: []
           },
           {
-            name: 'when',
+            name: 'date',
+            type: {
+              kind: 'NON_NULL',
+              ofType: {
+                kind: 'SCALAR',
+                name: 'Any'
+              }
+            },
+            args: []
+          },
+          {
+            name: 'title',
             type: {
               kind: 'NON_NULL',
               ofType: {
