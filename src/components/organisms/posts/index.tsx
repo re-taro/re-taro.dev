@@ -7,12 +7,12 @@ import { Grid } from '~/components/atoms/grid'
 import { Heading } from '~/components/atoms/heading'
 import { Text } from '~/components/atoms/text'
 import { PostCard } from '~/components/molecules/post-card'
-import { HomeQuery } from '~/graphql'
+import { Post } from '~/graphql'
 
 const PostsBox = tw.section`space-y-4`
 
 type PostsSectionProperties = React.ComponentProps<React.ReactHTML['section']> & {
-  data: HomeQuery['posts'] | undefined
+  data: Array<Post> | undefined
 }
 
 const PostsSection: React.FC<PostsSectionProperties> = ({ data, ...rest }) => {

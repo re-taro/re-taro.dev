@@ -4,12 +4,12 @@ import tw from 'twin.macro'
 import { Flex } from '~/components/atoms/flex'
 import { Heading } from '~/components/atoms/heading'
 import Twemoji from '~/components/atoms/twemojii'
-import type { HomeQuery } from '~/graphql'
+import type { Post } from '~/graphql'
 
 const PostBox = tw.div`w-full transition delay-150 ease-in-out hover:scale-[1.03]`
 
 type PostCardProperties = React.ComponentProps<React.ReactHTML['div']> & {
-  postData: HomeQuery['posts'] | undefined
+  postData: Array<Post> | undefined
 }
 
 const PostCard: React.FC<PostCardProperties> = ({ postData, ...rest }) => (

@@ -14,7 +14,7 @@ const Footer: React.FC<FooterProperties> = ({ ...rest }) => (
       &copy; 2021 - {new Date().getFullYear()}{' '}
       <a
         css={tw`cursor-pointer hover:underline`}
-        href={'https://github./com/re-taro/'}
+        href={'https://github.com/re-taro/'}
         target={'_blank'}
         rel={'noopener noreferrer'}
       >

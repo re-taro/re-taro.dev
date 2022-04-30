@@ -9,8 +9,12 @@ type ContentSectionProperties = React.ComponentProps<React.ReactHTML['section']>
 
 const ContentSection: React.FC<ContentSectionProperties> = ({ data, ...rest }) => (
   <section {...rest}>
-    <Heading css={tw`mb-4`} as={'h3'}>👋 Hi, how are you?</Heading>
-    <Text as={'p'} css={tw`text-lg`}>{data}</Text>
+    <Heading css={tw`mb-4`} as={'h3'}>
+      👋 Hi, how are you?
+    </Heading>
+    <Text as={'p'} css={tw`text-lg`}>
+      {data}
+    </Text>
   </section>
 )
 

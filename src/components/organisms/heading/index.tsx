@@ -15,7 +15,9 @@ const HeadingSection: React.FC<HeadingSectionProperties> = ({ data, ...rest }) =
   <HeadingBox {...rest}>
     <Heading as={'h2'}>Rintaro</Heading>
     <Flex>
-      <Text as={'p'} css={tw`text-xl`}>{data?.location} | {data?.assign}</Text>
+      <Text as={'p'} css={tw`text-xl`}>
+        {data?.location} | {data?.assign}
+      </Text>
     </Flex>
   </HeadingBox>
 )
