@@ -59,6 +59,7 @@ export type Name = {
 
 export type Post = {
   __typename?: 'Post'
+  date: Scalars['String']
   emoji: Scalars['String']
   id: Scalars['String']
   title: Scalars['String']
@@ -90,6 +91,7 @@ export type QueryWorkArgs = {
 
 export type Work = {
   __typename?: 'Work'
+  date: Scalars['String']
   id: Scalars['String']
   imageUrl: Scalars['String']
   title: Scalars['String']
@@ -100,7 +102,6 @@ export type WorkPage = {
   __typename?: 'WorkPage'
   detail: Scalars['String']
   images?: Maybe<Array<Scalars['String']>>
-  implementation: Scalars['String']
   meta: Meta
   title: Scalars['String']
 }
@@ -122,8 +123,22 @@ export type HomeQuery = {
   __typename?: 'Query'
   basic: { __typename?: 'Basic'; name: { __typename?: 'Name'; position: string; primary: string } }
   bio: Array<{ __typename?: 'Bio'; date: string; title: string; action: string }>
-  posts: Array<{ __typename?: 'Post'; emoji: string; id: string; title: string }>
+  posts: Array<{ __typename?: 'Post'; emoji: string; id: string; title: string; date: string }>
   works: Array<{ __typename?: 'Work'; id: string; imageUrl: string; title: string }>
+}
+
+export type WorksQueryVariables = Exact<{ [key: string]: never }>
+
+export type WorksQuery = {
+  __typename?: 'Query'
+  works: Array<{
+    __typename?: 'Work'
+    title: string
+    id: string
+    imageUrl: string
+    date: string
+    workPage: { __typename?: 'WorkPage'; detail: string }
+  }>
 }
 
 export const AboutDocument = gql`
@@ -158,6 +173,7 @@ export const HomeDocument = gql`
       emoji
       id
       title
+      date
     }
     works {
       id
@@ -169,6 +185,23 @@ export const HomeDocument = gql`
 
 export function useHomeQuery(options?: Omit<Urql.UseQueryArgs<HomeQueryVariables>, 'query'>) {
   return Urql.useQuery<HomeQuery>({ query: HomeDocument, ...options })
+}
+export const WorksDocument = gql`
+  query works {
+    works {
+      title
+      id
+      imageUrl
+      date
+      workPage {
+        detail
+      }
+    }
+  }
+`
+
+export function useWorksQuery(options?: Omit<Urql.UseQueryArgs<WorksQueryVariables>, 'query'>) {
+  return Urql.useQuery<WorksQuery>({ query: WorksDocument, ...options })
 }
 import { IntrospectionQuery } from 'graphql'
 export default {
@@ -416,6 +449,17 @@ export default {
         name: 'Post',
         fields: [
           {
+            name: 'date',
+            type: {
+              kind: 'NON_NULL',
+              ofType: {
+                kind: 'SCALAR',
+                name: 'Any'
+              }
+            },
+            args: []
+          },
+          {
             name: 'emoji',
             type: {
               kind: 'NON_NULL',
@@ -604,6 +648,17 @@ export default {
         name: 'Work',
         fields: [
           {
+            name: 'date',
+            type: {
+              kind: 'NON_NULL',
+              ofType: {
+                kind: 'SCALAR',
+                name: 'Any'
+              }
+            },
+            args: []
+          },
+          {
             name: 'id',
             type: {
               kind: 'NON_NULL',
@@ -676,17 +731,6 @@ export default {
                   kind: 'SCALAR',
                   name: 'Any'
                 }
-              }
-            },
-            args: []
-          },
-          {
-            name: 'implementation',
-            type: {
-              kind: 'NON_NULL',
-              ofType: {
-                kind: 'SCALAR',
-                name: 'Any'
               }
             },
             args: []

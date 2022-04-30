@@ -3,8 +3,10 @@ import React from 'react'
 import tw from 'twin.macro'
 import { Flex } from '~/components/atoms/flex'
 import { Heading } from '~/components/atoms/heading'
+import { Text } from '~/components/atoms/text'
 import Twemoji from '~/components/atoms/twemojii'
 import type { Post } from '~/graphql'
+import { formatDate } from '~/utils/date'
 
 const PostBox = tw.div`w-full transition delay-150 ease-in-out hover:scale-[1.03]`
 
@@ -25,6 +27,7 @@ const PostCard: React.FC<PostCardProperties> = ({ postData, ...rest }) => (
             </Flex>
             <div css={tw`flex-[9 9 0] pl-[11] sm:pl-[22]`}>
               <Heading as={'h5'}>{post.title}</Heading>
+              <Text as={'p'}>{formatDate(post.date, 'MMM D, YYYY')}</Text>
             </div>
           </Flex>
         </Link>
