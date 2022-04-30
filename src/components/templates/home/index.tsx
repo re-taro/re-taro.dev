@@ -3,6 +3,7 @@ import tw from 'twin.macro'
 import { HeroSection } from '~/components/organisms/hero'
 import { PostsSection } from '~/components/organisms/posts'
 import { ProjectsSection } from '~/components/organisms/projects'
+import { TimeLineSection } from "~/components/organisms/timeline";
 import type { HomeQuery } from '~/graphql'
 
 const HomeBox = tw.div`mt-[-24]`
@@ -14,6 +15,7 @@ type HomeProperties = React.ComponentProps<React.ReactHTML['div']> & {
 const Home: React.FC<HomeProperties> = ({ data, ...rest }) => (
   <HomeBox {...rest}>
     <HeroSection data={data?.basic} />
+    <TimeLineSection data={data?.bio} />
     <ProjectsSection data={data?.works} />
     <PostsSection data={data?.posts} />
   </HomeBox>

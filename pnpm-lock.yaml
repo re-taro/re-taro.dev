@@ -25,8 +25,10 @@ specifiers:
   autoprefixer: 10.4.5
   babel-plugin-macros: 3.1.0
   cross-env: 7.0.3
+  dayjs: ^1.11.1
   eslint: 8.14.0
   eslint-config-re-taro: 1.1.0
+  globby: ^13.1.1
   graphql: 16.4.0
   graphql-tag: 2.12.6
   next: 12.1.5
@@ -53,6 +55,7 @@ dependencies:
   '@emotion/react': 11.9.0_077f79c06dbb65b25fb7cfe0da9a5897
   '@emotion/styled': 11.8.1_64e228c27f6c8fb000a3cc6aefc5bc09
   '@iconify/react': 3.2.1
+  dayjs: 1.11.1
   next: 12.1.5_5b58b9810ec732c3c58988a77a508127
   next-seo: 5.4.0_2785bad64bd10b16e49d669cbad9cbe4
   next-themes: 0.1.1_2785bad64bd10b16e49d669cbad9cbe4
@@ -89,6 +92,7 @@ devDependencies:
   cross-env: 7.0.3
   eslint: 8.14.0
   eslint-config-re-taro: 1.1.0_eslint@8.14.0
+  globby: 13.1.1
   graphql: 16.4.0
   graphql-tag: 2.12.6_graphql@16.4.0
   next-sitemap: 2.5.20_next@12.1.5
@@ -3286,6 +3290,10 @@ packages:
     resolution: {integrity: sha512-hBSVCvSmWC+QypYObzwGOd9wqdDpOt+0wl0KbU+R+uuZBS1jN8VsD1ss3irQDknRj5NvxiTF6oj/nDRnN/UQNw==}
     dev: true
 
+  /dayjs/1.11.1:
+    resolution: {integrity: sha512-ER7EjqVAMkRRsxNCC5YqJ9d9VQYuWdGt7aiH2qA5R5wt8ZmWaP2dLUSIK6y/kVzLMlmh1Tvu5xUf4M/wdGJ5KA==}
+    dev: false
+
   /debounce/1.2.1:
     resolution: {integrity: sha512-XRRe6Glud4rd/ZGQfiV1ruXSfbvfJedlV9Y6zOlP+2K04vBYiJEte6stfFkCP03aMnY5tsipamumUjL14fofug==}
     dev: true
@@ -4585,6 +4593,17 @@ packages:
       ignore: 5.2.0
       merge2: 1.4.1
       slash: 3.0.0
+    dev: true
+
+  /globby/13.1.1:
+    resolution: {integrity: sha512-XMzoDZbGZ37tufiv7g0N4F/zp3zkwdFtVbV3EHsVl1KQr4RPLfNoT068/97RPshz2J5xYNEjLKKBKaGHifBd3Q==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dependencies:
+      dir-glob: 3.0.1
+      fast-glob: 3.2.11
+      ignore: 5.2.0
+      merge2: 1.4.1
+      slash: 4.0.0
     dev: true
 
   /got/9.6.0:
@@ -7661,6 +7680,11 @@ packages:
   /slash/3.0.0:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
     engines: {node: '>=8'}
+    dev: true
+
+  /slash/4.0.0:
+    resolution: {integrity: sha512-3dOsAHXXUkQTpOYcoAxLIorMTp4gIQr5IW3iVb7A7lFIp0VHhnynm9izx6TssdrIcVIESAlVjtnO2K8bg+Coew==}
+    engines: {node: '>=12'}
     dev: true
 
   /slice-ansi/0.0.4:
