@@ -1,0 +1,11 @@
+query works {
+  works {
+    title
+    id
+    imageUrl
+    date
+    workPage {
+      detail
+    }
+  }
+}
