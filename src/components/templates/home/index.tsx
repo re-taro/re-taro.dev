@@ -3,7 +3,7 @@ import tw from 'twin.macro'
 import { HeroSection } from '~/components/organisms/hero'
 import { PostsSection } from '~/components/organisms/posts'
 import { ProjectsSection } from '~/components/organisms/projects'
-import { TimeLineSection } from "~/components/organisms/timeline";
+import { TimeLineSection } from '~/components/organisms/timeline'
 import type { HomeQuery } from '~/graphql'
 
 const HomeBox = tw.div`mt-[-24]`
