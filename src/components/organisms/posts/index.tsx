@@ -18,7 +18,10 @@ type PostsSectionProperties = React.ComponentProps<React.ReactHTML['section']> &
 const PostsSection: React.FC<PostsSectionProperties> = ({ data, ...rest }) => {
   const router = useRouter()
   useEffect(() => {
-    data?.reverse().slice(0, 4).map(post => router.prefetch('/posts/[id]', `/posts/${post.id}`))
+    data
+      ?.reverse()
+      .slice(0, 4)
+      .map(post => router.prefetch('/posts/[id]', `/posts/${post.id}`))
   }, [data])
   return (
     <PostsBox {...rest}>
@@ -26,7 +29,7 @@ const PostsSection: React.FC<PostsSectionProperties> = ({ data, ...rest }) => {
         Recent Posts
       </Heading>
       <Grid css={tw`gap-8`}>
-        <PostCard postData={data} />
+        <PostCard posts={data} />
       </Grid>
       <Link href={'/posts'} passHref>
         <Button

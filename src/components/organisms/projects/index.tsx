@@ -18,7 +18,10 @@ type ProjectsSectionProperties = React.ComponentProps<React.ReactHTML['section']
 const ProjectsSection: React.FC<ProjectsSectionProperties> = ({ data, ...rest }) => {
   const router = useRouter()
   useEffect(() => {
-    data?.reverse().slice(0, 4).map(project => router.prefetch('/works/[id]', `/works/${project.id}`))
+    data
+      ?.reverse()
+      .slice(0, 4)
+      .map(project => router.prefetch('/works/[id]', `/works/${project.id}`))
   }, [data])
   return (
     <ProjectsBox {...rest}>
@@ -28,7 +31,7 @@ const ProjectsSection: React.FC<ProjectsSectionProperties> = ({ data, ...rest })
         </Heading>
       </Link>
       <Grid css={tw`gap-8 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 my-8`}>
-        <Card projectData={data} />
+        <Card projects={data} />
       </Grid>
       <Link href={'/works'} passHref>
         <Button
