@@ -92,6 +92,7 @@ export type QueryWorkArgs = {
 export type Work = {
   __typename?: 'Work'
   date: Scalars['String']
+  description: Scalars['String']
   id: Scalars['String']
   imageUrl: Scalars['String']
   title: Scalars['String']
@@ -136,6 +137,7 @@ export type WorksQuery = {
     title: string
     id: string
     imageUrl: string
+    description: string
     date: string
     workPage: { __typename?: 'WorkPage'; detail: string }
   }>
@@ -192,6 +194,7 @@ export const WorksDocument = gql`
       title
       id
       imageUrl
+      description
       date
       workPage {
         detail
@@ -649,6 +652,17 @@ export default {
         fields: [
           {
             name: 'date',
+            type: {
+              kind: 'NON_NULL',
+              ofType: {
+                kind: 'SCALAR',
+                name: 'Any'
+              }
+            },
+            args: []
+          },
+          {
+            name: 'description',
             type: {
               kind: 'NON_NULL',
               ofType: {

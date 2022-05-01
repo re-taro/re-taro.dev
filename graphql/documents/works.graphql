@@ -3,6 +3,7 @@ query works {
     title
     id
     imageUrl
+    description
     date
     workPage {
       detail
