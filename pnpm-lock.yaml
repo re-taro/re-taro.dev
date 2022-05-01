@@ -2,6 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@babel/core': 7.17.10
+  '@babel/plugin-transform-react-jsx': ^7.17.3
   '@babel/preset-react': 7.16.7
   '@emotion/babel-plugin': 11.9.2
   '@emotion/babel-plugin-jsx-pragmatic': 0.1.5
@@ -70,6 +71,7 @@ dependencies:
 
 devDependencies:
   '@babel/core': 7.17.10
+  '@babel/plugin-transform-react-jsx': 7.17.3_@babel+core@7.17.10
   '@babel/preset-react': 7.16.7_@babel+core@7.17.10
   '@emotion/babel-plugin': 11.9.2_@babel+core@7.17.10
   '@emotion/babel-plugin-jsx-pragmatic': 0.1.5_@babel+core@7.17.10
