@@ -35,7 +35,7 @@ jobs:
         run: |
           mkdir dist
           touch dist/autorun.txt
-          pnpx lhci autorun | grep 'storage.googleapis.com' > ./dist/autorun.txt
+          pnpm lhci autorun | grep 'storage.googleapis.com' > ./dist/autorun.txt
           report_url=$(cat ./dist/autorun.txt)
           echo $report_url
           echo "::set-output name=report_url::$report_url"
