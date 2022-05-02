@@ -3,7 +3,6 @@ import { useRouter } from 'next/router'
 import React, { useEffect } from 'react'
 import tw from 'twin.macro'
 import { Button } from '~/components/atoms/button'
-import { Grid } from '~/components/atoms/grid'
 import { Heading } from '~/components/atoms/heading'
 import { Text } from '~/components/atoms/text'
 import { Card } from '~/components/molecules/card'
@@ -30,9 +29,7 @@ const ProjectsSection: React.FC<ProjectsSectionProperties> = ({ data, ...rest })
           Works
         </Heading>
       </Link>
-      <Grid css={tw`gap-8 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 my-8`}>
-        <Card projects={data} />
-      </Grid>
+      <Card projects={data} />
       <Link href={'/works'} passHref>
         <Button
           aria-label={'view all works'}

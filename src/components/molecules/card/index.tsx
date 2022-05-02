@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import tw from 'twin.macro'
+import { Grid } from '~/components/atoms/grid'
 import { Text } from '~/components/atoms/text'
 import type { HomeQuery } from '~/graphql'
 
@@ -14,7 +15,7 @@ type CardProperties = React.ComponentProps<React.ReactHTML['div']> & {
 }
 
 const Card: React.FC<CardProperties> = ({ projects, ...rest }) => (
-  <React.Fragment>
+  <Grid css={tw`gap-8 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 my-8`}>
     {projects
       ?.reverse()
       .slice(0, 4)
@@ -42,7 +43,7 @@ const Card: React.FC<CardProperties> = ({ projects, ...rest }) => (
           </CardBox>
         </Link>
       ))}
-  </React.Fragment>
+  </Grid>
 )
 
 export { Card }
