@@ -5,8 +5,5 @@ query works {
     imageUrl
     description
     date
-    workPage {
-      detail
-    }
   }
 }

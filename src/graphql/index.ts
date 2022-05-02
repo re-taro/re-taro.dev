@@ -132,15 +132,7 @@ export type WorksQueryVariables = Exact<{ [key: string]: never }>
 
 export type WorksQuery = {
   __typename?: 'Query'
-  works: Array<{
-    __typename?: 'Work'
-    title: string
-    id: string
-    imageUrl: string
-    description: string
-    date: string
-    workPage: { __typename?: 'WorkPage'; detail: string }
-  }>
+  works: Array<{ __typename?: 'Work'; title: string; id: string; imageUrl: string; description: string; date: string }>
 }
 
 export const AboutDocument = gql`
@@ -196,9 +188,6 @@ export const WorksDocument = gql`
       imageUrl
       description
       date
-      workPage {
-        detail
-      }
     }
   }
 `
