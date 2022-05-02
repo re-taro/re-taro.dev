@@ -19,7 +19,7 @@ const Works: React.FC<WorksProperties> = ({ data }) => (
         images: [
           {
             alt: 'Works | re-taro.dev ogp',
-            url: GenOgp('Works')
+            url: GenOgp('Works | re-taro')
           }
         ],
         title: 'Works | re-taro'
