@@ -21,9 +21,9 @@ const NavigationItem: Array<NavigationItemProperties> = [
     label: 'Works'
   },
   {
-    href: '/blog',
+    href: '/posts',
     icon: 'fa-solid:feather-alt',
-    label: 'Blog'
+    label: 'Posts'
   },
   {
     href: '/about',
