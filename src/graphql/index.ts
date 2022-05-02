@@ -128,6 +128,13 @@ export type HomeQuery = {
   works: Array<{ __typename?: 'Work'; id: string; imageUrl: string; title: string }>
 }
 
+export type PostsQueryVariables = Exact<{ [key: string]: never }>
+
+export type PostsQuery = {
+  __typename?: 'Query'
+  posts: Array<{ __typename?: 'Post'; emoji: string; id: string; title: string; date: string }>
+}
+
 export type WorksQueryVariables = Exact<{ [key: string]: never }>
 
 export type WorksQuery = {
@@ -179,6 +186,20 @@ export const HomeDocument = gql`
 
 export function useHomeQuery(options?: Omit<Urql.UseQueryArgs<HomeQueryVariables>, 'query'>) {
   return Urql.useQuery<HomeQuery>({ query: HomeDocument, ...options })
+}
+export const PostsDocument = gql`
+  query posts {
+    posts {
+      emoji
+      id
+      title
+      date
+    }
+  }
+`
+
+export function usePostsQuery(options?: Omit<Urql.UseQueryArgs<PostsQueryVariables>, 'query'>) {
+  return Urql.useQuery<PostsQuery>({ query: PostsDocument, ...options })
 }
 export const WorksDocument = gql`
   query works {
