@@ -1,5 +1,6 @@
 import { NextSeo } from 'next-seo'
-import React from 'react'
+import { useRouter } from "next/router";
+import React, { useEffect } from 'react'
 import tw from 'twin.macro'
 import { Heading } from '~/components/atoms/heading'
 import { ProjectCard } from '~/components/molecules/project-card'
@@ -10,28 +11,34 @@ type WorksProperties = {
   data: WorksQuery | undefined
 }
 
-const Works: React.FC<WorksProperties> = ({ data }) => (
-  <React.Fragment>
-    <NextSeo
-      title={'My Works'}
-      canonical={'https://re-taro.dev/works/'}
-      openGraph={{
-        images: [
-          {
-            alt: 'Works | re-taro.dev ogp',
-            url: GenOgp('Works')
-          }
-        ],
-        title: 'Works | re-taro'
-      }}
-    />
-    <div css={tw`mb-8`}>
-      <Heading as={'h3'} css={tw`mb-2`}>
-        Works
-      </Heading>
-    </div>
-    <ProjectCard projects={data?.works} />
-  </React.Fragment>
-)
+const Works: React.FC<WorksProperties> = ({ data }) => {
+  const router = useRouter()
+  useEffect(()=> {
+    data?.works.reverse().map(project => router.prefetch('/works/[id]', `/works/${project.id}`))
+  }, [data])
+  return (
+    <React.Fragment>
+      <NextSeo
+        title={'My Works'}
+        canonical={'https://re-taro.dev/works/'}
+        openGraph={{
+          images: [
+            {
+              alt: 'Works | re-taro.dev ogp',
+              url: GenOgp('Works | re-taro')
+            }
+          ],
+          title: 'Works | re-taro'
+        }}
+      />
+      <div css={tw`mb-8`}>
+        <Heading as={'h3'} css={tw`mb-2`}>
+          Works
+        </Heading>
+      </div>
+      <ProjectCard projects={data?.works} />
+    </React.Fragment>
+  )
+}
 
 export { Works }

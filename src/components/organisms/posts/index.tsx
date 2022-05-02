@@ -29,7 +29,12 @@ const PostsSection: React.FC<PostsSectionProperties> = ({ data, ...rest }) => {
         Recent Posts
       </Heading>
       <Grid css={tw`gap-8`}>
-        <PostCard posts={data} />
+        {data
+          ?.reverse()
+          .slice(0, 4)
+          .map((post, key) => (
+            <PostCard post={post} key={key} />
+          ))}
       </Grid>
       <Link href={'/posts'} passHref>
         <Button
