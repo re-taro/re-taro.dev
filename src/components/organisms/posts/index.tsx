@@ -7,12 +7,12 @@ import { Grid } from '~/components/atoms/grid'
 import { Heading } from '~/components/atoms/heading'
 import { Text } from '~/components/atoms/text'
 import { PostCard } from '~/components/molecules/post-card'
-import { Post } from '~/graphql'
+import { PostHeader } from '~/graphql'
 
 const PostsBox = tw.section`space-y-4`
 
 type PostsSectionProperties = React.ComponentProps<React.ReactHTML['section']> & {
-  data: Array<Post> | undefined
+  data: Array<PostHeader> | undefined
 }
 
 const PostsSection: React.FC<PostsSectionProperties> = ({ data, ...rest }) => {
@@ -44,9 +44,7 @@ const PostsSection: React.FC<PostsSectionProperties> = ({ data, ...rest }) => {
           rightIcon={'fa-solid:arrow-right'}
           boxStyles={tw`px-0`}
         >
-          <Text as={'p'} css={tw`text-lg`}>
-            view all posts
-          </Text>
+          <Text css={tw`text-lg`}>view all posts</Text>
         </Button>
       </Link>
     </PostsBox>

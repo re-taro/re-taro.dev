@@ -35,9 +35,7 @@ const Card: React.FC<CardProperties> = ({ projects, ...rest }) => (
             </div>
             <Layer>
               <div css={tw`flex flex-row items-center`}>
-                <Text as={'p'} css={tw`font-bold text-lg text-white`}>
-                  {project.title}
-                </Text>
+                <Text css={tw`font-bold text-lg text-white`}>{project.title}</Text>
               </div>
             </Layer>
           </CardBox>

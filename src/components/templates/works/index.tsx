@@ -1,5 +1,5 @@
 import { NextSeo } from 'next-seo'
-import { useRouter } from "next/router";
+import { useRouter } from 'next/router'
 import React, { useEffect } from 'react'
 import tw from 'twin.macro'
 import { Heading } from '~/components/atoms/heading'
@@ -13,7 +13,7 @@ type WorksProperties = {
 
 const Works: React.FC<WorksProperties> = ({ data }) => {
   const router = useRouter()
-  useEffect(()=> {
+  useEffect(() => {
     data?.works.reverse().map(project => router.prefetch('/works/[id]', `/works/${project.id}`))
   }, [data])
   return (

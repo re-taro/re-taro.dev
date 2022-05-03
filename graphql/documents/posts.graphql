@@ -4,5 +4,6 @@ query posts {
     id
     title
     date
+    tags
   }
 }

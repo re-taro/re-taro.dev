@@ -1,0 +1,11 @@
+query post($id: String!) {
+  post(id: $id) {
+    header {
+      emoji
+      id
+      title
+      date
+    }
+    content
+  }
+}
