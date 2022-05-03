@@ -59,9 +59,16 @@ export type Name = {
 
 export type Post = {
   __typename?: 'Post'
+  content: Scalars['String']
+  header: PostHeader
+}
+
+export type PostHeader = {
+  __typename?: 'PostHeader'
   date: Scalars['String']
   emoji: Scalars['String']
   id: Scalars['String']
+  tags: Array<Scalars['String']>
   title: Scalars['String']
 }
 
@@ -76,7 +83,7 @@ export type Query = {
   basic: Basic
   bio: Array<Bio>
   post: Post
-  posts: Array<Post>
+  posts: Array<PostHeader>
   work: Work
   works: Array<Work>
 }
@@ -124,15 +131,42 @@ export type HomeQuery = {
   __typename?: 'Query'
   basic: { __typename?: 'Basic'; name: { __typename?: 'Name'; position: string; primary: string } }
   bio: Array<{ __typename?: 'Bio'; date: string; title: string; action: string }>
-  posts: Array<{ __typename?: 'Post'; emoji: string; id: string; title: string; date: string }>
+  posts: Array<{
+    __typename?: 'PostHeader'
+    emoji: string
+    id: string
+    title: string
+    date: string
+    tags: Array<string>
+  }>
   works: Array<{ __typename?: 'Work'; id: string; imageUrl: string; title: string }>
+}
+
+export type PostQueryVariables = Exact<{
+  id: Scalars['String']
+}>
+
+export type PostQuery = {
+  __typename?: 'Query'
+  post: {
+    __typename?: 'Post'
+    content: string
+    header: { __typename?: 'PostHeader'; emoji: string; id: string; title: string; date: string }
+  }
 }
 
 export type PostsQueryVariables = Exact<{ [key: string]: never }>
 
 export type PostsQuery = {
   __typename?: 'Query'
-  posts: Array<{ __typename?: 'Post'; emoji: string; id: string; title: string; date: string }>
+  posts: Array<{
+    __typename?: 'PostHeader'
+    emoji: string
+    id: string
+    title: string
+    date: string
+    tags: Array<string>
+  }>
 }
 
 export type WorksQueryVariables = Exact<{ [key: string]: never }>
@@ -175,6 +209,7 @@ export const HomeDocument = gql`
       id
       title
       date
+      tags
     }
     works {
       id
@@ -187,6 +222,23 @@ export const HomeDocument = gql`
 export function useHomeQuery(options?: Omit<Urql.UseQueryArgs<HomeQueryVariables>, 'query'>) {
   return Urql.useQuery<HomeQuery>({ query: HomeDocument, ...options })
 }
+export const PostDocument = gql`
+  query post($id: String!) {
+    post(id: $id) {
+      header {
+        emoji
+        id
+        title
+        date
+      }
+      content
+    }
+  }
+`
+
+export function usePostQuery(options: Omit<Urql.UseQueryArgs<PostQueryVariables>, 'query'>) {
+  return Urql.useQuery<PostQuery>({ query: PostDocument, ...options })
+}
 export const PostsDocument = gql`
   query posts {
     posts {
@@ -194,6 +246,7 @@ export const PostsDocument = gql`
       id
       title
       date
+      tags
     }
   }
 `
@@ -462,6 +515,36 @@ export default {
         name: 'Post',
         fields: [
           {
+            name: 'content',
+            type: {
+              kind: 'NON_NULL',
+              ofType: {
+                kind: 'SCALAR',
+                name: 'Any'
+              }
+            },
+            args: []
+          },
+          {
+            name: 'header',
+            type: {
+              kind: 'NON_NULL',
+              ofType: {
+                kind: 'OBJECT',
+                name: 'PostHeader',
+                ofType: null
+              }
+            },
+            args: []
+          }
+        ],
+        interfaces: []
+      },
+      {
+        kind: 'OBJECT',
+        name: 'PostHeader',
+        fields: [
+          {
             name: 'date',
             type: {
               kind: 'NON_NULL',
@@ -490,6 +573,23 @@ export default {
               ofType: {
                 kind: 'SCALAR',
                 name: 'Any'
+              }
+            },
+            args: []
+          },
+          {
+            name: 'tags',
+            type: {
+              kind: 'NON_NULL',
+              ofType: {
+                kind: 'LIST',
+                ofType: {
+                  kind: 'NON_NULL',
+                  ofType: {
+                    kind: 'SCALAR',
+                    name: 'Any'
+                  }
+                }
               }
             },
             args: []
@@ -604,7 +704,7 @@ export default {
                   kind: 'NON_NULL',
                   ofType: {
                     kind: 'OBJECT',
-                    name: 'Post',
+                    name: 'PostHeader',
                     ofType: null
                   }
                 }
