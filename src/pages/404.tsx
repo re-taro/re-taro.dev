@@ -22,7 +22,7 @@ const NotFound: NextPage = () => {
           alt={'404 Not found'}
         />
       </ImageBox>
-      <Text as={'p'} css={tw`text-center text-sm cursor-pointer hover:underline`}>
+      <Text css={tw`text-center text-sm cursor-pointer hover:underline`}>
         <a href={'https://undraw.co/illustrations'} target={'_blank'} rel={'noopener noreferrer'}>
           Illustrations by undraw
         </a>
@@ -34,9 +34,7 @@ const NotFound: NextPage = () => {
         <div css={tw`text-center`}>
           <Link href={'/'} passHref>
             <Button variant={'normal'} as={'a'}>
-              <Text as={'p'} css={tw`text-lg`}>
-                Let&apos;s Head Back
-              </Text>
+              <Text css={tw`text-lg`}>Let&apos;s Head Back</Text>
             </Button>
           </Link>
         </div>

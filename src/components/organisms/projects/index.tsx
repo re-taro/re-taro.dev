@@ -38,9 +38,7 @@ const ProjectsSection: React.FC<ProjectsSectionProperties> = ({ data, ...rest })
           rightIcon={'fa-solid:arrow-right'}
           boxStyles={tw`px-0`}
         >
-          <Text as={'p'} css={tw`text-lg`}>
-            view all works
-          </Text>
+          <Text css={tw`text-lg`}>view all works</Text>
         </Button>
       </Link>
     </ProjectsBox>

@@ -12,9 +12,7 @@ const ContentSection: React.FC<ContentSectionProperties> = ({ data, ...rest }) =
     <Heading css={tw`mb-4`} as={'h3'}>
       👋 Hi, how are you?
     </Heading>
-    <Text as={'p'} css={tw`text-lg`}>
-      {data}
-    </Text>
+    <Text css={tw`text-lg`}>{data}</Text>
   </section>
 )
 

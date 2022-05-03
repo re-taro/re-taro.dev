@@ -40,7 +40,7 @@ const ProjectCard: React.FC<ProjectCardProperties> = ({ projects, ...rest }) => 
                 <Text css={tw`text-base`}>{project.description}</Text>
               </div>
               <Flex css={tw`mt-8 items-center`}>
-                <Text as={'p'}>{formatDate(project.date, 'MMM D, YYYY')}</Text>
+                <Text as={'time'}>{formatDate(project.date, 'MMM D, YYYY')}</Text>
               </Flex>
             </Flex>
             <div

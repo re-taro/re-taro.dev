@@ -36,12 +36,10 @@ const Posts: React.FC<PostsPropeties> = ({ data }) => {
         }}
       />
       <PostsHead>
-        <Heading as={'h5'} css={tw`mb-2`}>
+        <Heading as={'h3'} css={tw`mb-2`}>
           Blog Posts
         </Heading>
-        <Text as={'p'} css={tw`text-lg`}>
-          Just some writings
-        </Text>
+        <Text css={tw`text-center text-xl`}>All posts</Text>
       </PostsHead>
       <Grid css={tw`gap-16 my-12`}>
         {data?.posts.reverse().map((post, key) => (
