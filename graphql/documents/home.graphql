@@ -15,6 +15,7 @@ query home {
     id
     title
     date
+    tags
   }
   works {
     id
