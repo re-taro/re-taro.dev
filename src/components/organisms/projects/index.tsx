@@ -18,7 +18,7 @@ const ProjectsSection: React.FC<ProjectsSectionProperties> = ({ data, ...rest })
   const router = useRouter()
   useEffect(() => {
     data
-      ?.reverse()
+      ?.sort((workA, workB) => (workA.date < workB.date ? 1 : -1))
       .slice(0, 4)
       .map(project => router.prefetch('/works/[id]', `/works/${project.id}`))
   }, [data])

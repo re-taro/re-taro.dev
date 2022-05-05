@@ -1,0 +1,9 @@
+query Tag($tag: String!) {
+  postsByTag(tag: $tag) {
+    emoji
+    id
+    title
+    date
+    tags
+  }
+}

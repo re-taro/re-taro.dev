@@ -12,7 +12,9 @@ type TagProperties = React.ComponentProps<React.ReactHTML['div']> & {
 const Tag: React.FC<TagProperties> = ({ tag, ...rest }) => (
   <TagBox {...rest}>
     <Link href={`/tags/${tag}`} passHref>
-      <Text as={'a'} css={tw`hover:underline`}>#{tag}</Text>
+      <Text as={'a'} css={tw`hover:underline`}>
+        #{tag}
+      </Text>
     </Link>
   </TagBox>
 )

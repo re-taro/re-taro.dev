@@ -30,5 +30,5 @@ export default withUrqlClient(
   () => ({
     url: END_POINT
   }),
-  { ssr: false }
+  { neverSuspend: true, ssr: false }
 )(HomePage)

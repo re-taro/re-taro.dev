@@ -82,14 +82,19 @@ export type Query = {
   __typename?: 'Query'
   basic: Basic
   bio: Array<Bio>
-  post: Post
+  postById: Post
   posts: Array<PostHeader>
+  postsByTag: Array<PostHeader>
   work: Work
   works: Array<Work>
 }
 
-export type QueryPostArgs = {
+export type QueryPostByIdArgs = {
   id: Scalars['String']
+}
+
+export type QueryPostsByTagArgs = {
+  tag: Scalars['String']
 }
 
 export type QueryWorkArgs = {
@@ -139,7 +144,7 @@ export type HomeQuery = {
     date: string
     tags: Array<string>
   }>
-  works: Array<{ __typename?: 'Work'; id: string; imageUrl: string; title: string }>
+  works: Array<{ __typename?: 'Work'; id: string; imageUrl: string; title: string; date: string }>
 }
 
 export type PostQueryVariables = Exact<{
@@ -148,10 +153,10 @@ export type PostQueryVariables = Exact<{
 
 export type PostQuery = {
   __typename?: 'Query'
-  post: {
+  postById: {
     __typename?: 'Post'
     content: string
-    header: { __typename?: 'PostHeader'; emoji: string; id: string; title: string; date: string }
+    header: { __typename?: 'PostHeader'; emoji: string; id: string; title: string; date: string; tags: Array<string> }
   }
 }
 
@@ -168,6 +173,26 @@ export type PostsQuery = {
     tags: Array<string>
   }>
 }
+
+export type TagQueryVariables = Exact<{
+  tag: Scalars['String']
+}>
+
+export type TagQuery = {
+  __typename?: 'Query'
+  postsByTag: Array<{
+    __typename?: 'PostHeader'
+    emoji: string
+    id: string
+    title: string
+    date: string
+    tags: Array<string>
+  }>
+}
+
+export type TagsQueryVariables = Exact<{ [key: string]: never }>
+
+export type TagsQuery = { __typename?: 'Query'; posts: Array<{ __typename?: 'PostHeader'; tags: Array<string> }> }
 
 export type WorksQueryVariables = Exact<{ [key: string]: never }>
 
@@ -215,6 +240,7 @@ export const HomeDocument = gql`
       id
       imageUrl
       title
+      date
     }
   }
 `
@@ -224,12 +250,13 @@ export function useHomeQuery(options?: Omit<Urql.UseQueryArgs<HomeQueryVariables
 }
 export const PostDocument = gql`
   query post($id: String!) {
-    post(id: $id) {
+    postById(id: $id) {
       header {
         emoji
         id
         title
         date
+        tags
       }
       content
     }
@@ -253,6 +280,32 @@ export const PostsDocument = gql`
 
 export function usePostsQuery(options?: Omit<Urql.UseQueryArgs<PostsQueryVariables>, 'query'>) {
   return Urql.useQuery<PostsQuery>({ query: PostsDocument, ...options })
+}
+export const TagDocument = gql`
+  query Tag($tag: String!) {
+    postsByTag(tag: $tag) {
+      emoji
+      id
+      title
+      date
+      tags
+    }
+  }
+`
+
+export function useTagQuery(options: Omit<Urql.UseQueryArgs<TagQueryVariables>, 'query'>) {
+  return Urql.useQuery<TagQuery>({ query: TagDocument, ...options })
+}
+export const TagsDocument = gql`
+  query Tags {
+    posts {
+      tags
+    }
+  }
+`
+
+export function useTagsQuery(options?: Omit<Urql.UseQueryArgs<TagsQueryVariables>, 'query'>) {
+  return Urql.useQuery<TagsQuery>({ query: TagsDocument, ...options })
 }
 export const WorksDocument = gql`
   query works {
@@ -672,7 +725,7 @@ export default {
             args: []
           },
           {
-            name: 'post',
+            name: 'postById',
             type: {
               kind: 'NON_NULL',
               ofType: {
@@ -711,6 +764,35 @@ export default {
               }
             },
             args: []
+          },
+          {
+            name: 'postsByTag',
+            type: {
+              kind: 'NON_NULL',
+              ofType: {
+                kind: 'LIST',
+                ofType: {
+                  kind: 'NON_NULL',
+                  ofType: {
+                    kind: 'OBJECT',
+                    name: 'PostHeader',
+                    ofType: null
+                  }
+                }
+              }
+            },
+            args: [
+              {
+                name: 'tag',
+                type: {
+                  kind: 'NON_NULL',
+                  ofType: {
+                    kind: 'SCALAR',
+                    name: 'Any'
+                  }
+                }
+              }
+            ]
           },
           {
             name: 'work',

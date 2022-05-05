@@ -3,9 +3,9 @@ import { withUrqlClient } from 'next-urql'
 import type { SSRData } from 'next-urql'
 import React from 'react'
 import { useQuery } from 'urql'
-import { Works } from '~/components/templates/works'
-import { WorksDocument } from '~/graphql'
-import type { WorksQuery } from '~/graphql'
+import { Tags } from '~/components/templates/tags'
+import { TagsDocument } from '~/graphql'
+import type { TagsQuery } from '~/graphql'
 import { urqlClient, ssrCache, END_POINT } from '~/utils/client'
 
 type Properties = InferGetStaticPropsType<typeof getStaticProps>
@@ -13,7 +13,7 @@ type Properties = InferGetStaticPropsType<typeof getStaticProps>
 // eslint-disable-next-line unicorn/prevent-abbreviations
 export const getStaticProps: GetStaticProps<{ [key: string]: SSRData }> = async () => {
   const client = await urqlClient()
-  await client.query(WorksDocument).toPromise()
+  await client.query(TagsDocument).toPromise()
   return {
     props: {
       urqlState: ssrCache.extractData()
@@ -21,9 +21,9 @@ export const getStaticProps: GetStaticProps<{ [key: string]: SSRData }> = async 
   }
 }
 
-const WorksPage: NextPage<Properties> = () => {
-  const [response] = useQuery<WorksQuery>({ query: WorksDocument })
-  return <Works data={response.data} />
+const TagsPage: NextPage<Properties> = () => {
+  const [response] = useQuery<TagsQuery>({ query: TagsDocument })
+  return <Tags data={response.data} />
 }
 
 export default withUrqlClient(
@@ -31,4 +31,4 @@ export default withUrqlClient(
     url: END_POINT
   }),
   { neverSuspend: true, ssr: false }
-)(WorksPage)
+)(TagsPage)

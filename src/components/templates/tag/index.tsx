@@ -6,45 +6,46 @@ import { Grid } from '~/components/atoms/grid'
 import { Heading } from '~/components/atoms/heading'
 import { Text } from '~/components/atoms/text'
 import { PostCard } from '~/components/molecules/post-card'
-import type { PostsQuery } from '~/graphql'
+import type { TagQuery } from '~/graphql'
 import { GenOgp } from '~/utils/gen-ogp'
 
-const PostsHead = tw.div`mb-[22px]`
+const TagHead = tw.div`mb-[22px]`
 
-type PostsProperties = {
-  data: PostsQuery | undefined
+type TagProperties = {
+  data: TagQuery | undefined
+  tag: string
 }
 
-const Posts: React.FC<PostsProperties> = ({ data }) => {
+const Tag: React.FC<TagProperties> = ({ data, tag }) => {
   const router = useRouter()
   useEffect(() => {
-    data?.posts
+    data?.postsByTag
       .sort((postA, postB) => (postA.date < postB.date ? 1 : -1))
       .map(post => router.prefetch('/posts/[id]', `/posts/${post.id}`))
   }, [data])
   return (
     <React.Fragment>
       <NextSeo
-        title={'Blog Posts'}
-        canonical={'https://re-taro.dev/posts'}
+        title={`${tag} posts`}
+        canonical={`https://re-taro.dev/tags/${tag}`}
         openGraph={{
           images: [
             {
-              alt: 'Posts | re-taro.dev ogp',
-              url: GenOgp('Posts | re-taro')
+              alt: `${tag} posts | re-taro.dev ogp`,
+              url: GenOgp(`${tag} posts | re-taro`)
             }
           ],
-          title: 'Blog Posts | re-taro'
+          title: `${tag} posts | re-taro`
         }}
       />
-      <PostsHead>
+      <TagHead>
         <Heading as={'h3'} css={tw`mb-2`}>
           Blog Posts
         </Heading>
-        <Text css={tw`text-center text-xl`}>All posts</Text>
-      </PostsHead>
+        <Text css={tw`text-center text-xl`}>#{tag}'s posts</Text>
+      </TagHead>
       <Grid css={tw`gap-16 my-12`}>
-        {data?.posts
+        {data?.postsByTag
           .sort((postA, postB) => (postA.date < postB.date ? 1 : -1))
           .map((post, key) => (
             <PostCard post={post} key={key} />
@@ -54,4 +55,4 @@ const Posts: React.FC<PostsProperties> = ({ data }) => {
   )
 }
 
-export { Posts }
+export { Tag }

@@ -21,7 +21,7 @@ export const getStaticProps: GetStaticProps<{ [key: string]: SSRData }> = async 
   }
 }
 
-const WorksPage: NextPage<Properties> = () => {
+const PostsPage: NextPage<Properties> = () => {
   const [response] = useQuery<PostsQuery>({ query: PostsDocument })
   return <Posts data={response.data} />
 }
@@ -31,4 +31,4 @@ export default withUrqlClient(
     url: END_POINT
   }),
   { ssr: false }
-)(WorksPage)
+)(PostsPage)
