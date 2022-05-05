@@ -14,7 +14,9 @@ type WorksProperties = {
 const Works: React.FC<WorksProperties> = ({ data }) => {
   const router = useRouter()
   useEffect(() => {
-    data?.works.reverse().map(project => router.prefetch('/works/[id]', `/works/${project.id}`))
+    data?.works
+      .sort((workA, workB) => (workA.date < workB.date ? 1 : -1))
+      .map(project => router.prefetch('/works/[id]', `/works/${project.id}`))
   }, [data])
   return (
     <React.Fragment>

@@ -19,7 +19,7 @@ const PostsSection: React.FC<PostsSectionProperties> = ({ data, ...rest }) => {
   const router = useRouter()
   useEffect(() => {
     data
-      ?.reverse()
+      ?.sort((postA, postB) => (postA.date < postB.date ? 1 : -1))
       .slice(0, 4)
       .map(post => router.prefetch('/posts/[id]', `/posts/${post.id}`))
   }, [data])
@@ -30,7 +30,7 @@ const PostsSection: React.FC<PostsSectionProperties> = ({ data, ...rest }) => {
       </Heading>
       <Grid css={tw`gap-8`}>
         {data
-          ?.reverse()
+          ?.sort((postA, postB) => (postA.date < postB.date ? 1 : -1))
           .slice(0, 4)
           .map((post, key) => (
             <PostCard post={post} key={key} />

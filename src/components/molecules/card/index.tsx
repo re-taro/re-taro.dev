@@ -17,7 +17,7 @@ type CardProperties = React.ComponentProps<React.ReactHTML['div']> & {
 const Card: React.FC<CardProperties> = ({ projects, ...rest }) => (
   <Grid css={tw`gap-8 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 my-8`}>
     {projects
-      ?.reverse()
+      ?.sort((workA, workB) => (workA.date < workB.date ? 1 : -1))
       .slice(0, 4)
       .map(project => (
         <Link href={`/works/${project.id}`} passHref>

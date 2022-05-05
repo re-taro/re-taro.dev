@@ -18,7 +18,9 @@ type PostsPropeties = {
 const Posts: React.FC<PostsPropeties> = ({ data }) => {
   const router = useRouter()
   useEffect(() => {
-    data?.posts.reverse().map(post => router.prefetch('/posts/[id]', `/posts/${post.id}`))
+    data?.posts
+      .sort((postA, postB) => (postA.date < postB.date ? 1 : -1))
+      .map(post => router.prefetch('/posts/[id]', `/posts/${post.id}`))
   }, [data])
   return (
     <React.Fragment>
@@ -42,7 +44,7 @@ const Posts: React.FC<PostsPropeties> = ({ data }) => {
         <Text css={tw`text-center text-xl`}>All posts</Text>
       </PostsHead>
       <Grid css={tw`gap-16 my-12`}>
-        {data?.posts.reverse().map((post, key) => (
+        {data?.posts.map((post, key) => (
           <PostCard post={post} key={key} />
         ))}
       </Grid>
