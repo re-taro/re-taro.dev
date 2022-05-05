@@ -1,10 +1,11 @@
 query post($id: String!) {
-  post(id: $id) {
+  postById(id: $id) {
     header {
       emoji
       id
       title
       date
+      tags
     }
     content
   }

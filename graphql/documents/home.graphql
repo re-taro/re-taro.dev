@@ -21,5 +21,6 @@ query home {
     id
     imageUrl
     title
+    date
   }
 }
