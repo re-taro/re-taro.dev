@@ -11,11 +11,11 @@ import { GenOgp } from '~/utils/gen-ogp'
 
 const PostsHead = tw.div`mb-[22px]`
 
-type PostsPropeties = {
+type PostsProperties = {
   data: PostsQuery | undefined
 }
 
-const Posts: React.FC<PostsPropeties> = ({ data }) => {
+const Posts: React.FC<PostsProperties> = ({ data }) => {
   const router = useRouter()
   useEffect(() => {
     data?.posts
@@ -44,9 +44,11 @@ const Posts: React.FC<PostsPropeties> = ({ data }) => {
         <Text css={tw`text-center text-xl`}>All posts</Text>
       </PostsHead>
       <Grid css={tw`gap-16 my-12`}>
-        {data?.posts.map((post, key) => (
-          <PostCard post={post} key={key} />
-        ))}
+        {data?.posts
+          .sort((postA, postB) => (postA.date < postB.date ? 1 : -1))
+          .map((post, key) => (
+            <PostCard post={post} key={key} />
+          ))}
       </Grid>
     </React.Fragment>
   )
