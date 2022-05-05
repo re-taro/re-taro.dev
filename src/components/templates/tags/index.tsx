@@ -19,8 +19,10 @@ const Tags: React.FC<TagsProperties> = ({ data }) => {
   const result = data?.posts.flatMap(post => post.tags)
   const tags = [...new Set(result)]
   useEffect(() => {
-    // eslint-disable-next-line sonarjs/no-ignored-return
-    tags.map(tag => router.prefetch('/tags/[tag]', `/tags/${tag}`))
+    for (const tag of tags) {
+      // eslint-disable-next-line no-void
+      void router.prefetch('/tags/[tag]', `/tags/${tag}`)
+    }
   }, [tags])
   return (
     <React.Fragment>
