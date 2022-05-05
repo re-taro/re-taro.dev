@@ -3,7 +3,7 @@ import type { NextPage, InferGetStaticPropsType, GetStaticProps, GetStaticPaths 
 import { withUrqlClient } from 'next-urql'
 import type { SSRData } from 'next-urql'
 import React from 'react'
-import { useQuery , createClient, fetchExchange } from 'urql'
+import { useQuery, createClient, fetchExchange } from 'urql'
 import { Tag } from '~/components/templates/tag'
 import { TagDocument, TagsDocument } from '~/graphql'
 import type { TagQuery, TagsQuery } from '~/graphql'
@@ -15,8 +15,8 @@ type Parameters = ParsedUrlQuery & {
   tag: string
 }
 
-export const getStaticPaths: GetStaticPaths<Parameters> = async() => {
-  const client = createClient({ exchanges: [fetchExchange], url: END_POINT})
+export const getStaticPaths: GetStaticPaths<Parameters> = async () => {
+  const client = createClient({ exchanges: [fetchExchange], url: END_POINT })
   const response = await client.query<TagsQuery>(TagsDocument).toPromise()
   const result = response.data?.posts.flatMap(post => post.tags)
   const tags = [...new Set(result)]
