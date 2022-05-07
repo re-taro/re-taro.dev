@@ -3,19 +3,18 @@
   overflow-wrap: break-word;
   word-wrap: break-word;
   p {
+    @apply my-8 mx-0;
     a {
       color: var(--text);
       @apply underline;
     }
   }
   li {
+    @apply m-4;
     a {
       color: var(--text);
       @apply underline;
     }
-  }
-  p {
-    @apply my-8 mx-0;
   }
   table {
     table-layout: fixed;
@@ -56,9 +55,6 @@
     p {
       @apply m-0;
     }
-  }
-  li {
-    @apply m-4;
   }
   h1 {
     border-color: var(--underline);
