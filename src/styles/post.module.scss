@@ -1,0 +1,101 @@
+.content {
+  width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  p {
+    a {
+      color: var(--text);
+      @apply underline;
+    }
+  }
+  li {
+    a {
+      color: var(--text);
+      @apply underline;
+    }
+  }
+  p {
+    @apply my-8 mx-0;
+  }
+  table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    color: var(--text);
+    @apply text-center;
+    th,
+    td {
+      color: var(--border);
+      @apply border border-solid py-1 px-2;
+    }
+    th {
+      background: var(--background);
+    }
+  }
+  code {
+    background: var(--code);
+    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace;
+    @apply p-[0.2rem] rounded-[0.2rem];
+  }
+  pre {
+    @apply w-full text-base flex my-8 mx-0;
+    code {
+      @apply bg-transparent w-full p-4 overflow-auto m-1;
+      font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace;
+      @media (max-width: 700px) {
+        font-size: .7rem;
+      }
+    }
+  }
+  blockquote {
+    color: #81A1C1;
+    @apply py-0 px-6 relative flex items-center;
+    &::before {
+      content: "";
+      @apply absolute h-full w-[.3rem] left-0 bg-frost-300/50;
+    }
+    p {
+      @apply m-0;
+    }
+  }
+  li {
+    @apply m-4;
+  }
+  h1 {
+    border-color: var(--underline);
+    color: var(--text);
+    @apply mt-8 mr-0 mb-4 ml-0 border-b border-solid text-[2.5rem];
+    @media (max-width: 700px) {
+      @apply text-5xl;
+    }
+  }
+  h2 {
+    border-color: var(--underline);
+    color: var(--text);
+    @apply mt-8 mr-0 mb-4 ml-0 border-b border-solid text-[2rem];
+  }
+  h3 {
+    border-color: var(--underline);
+    color: var(--text);
+    @apply mt-4 mr-0 mb-2 ml-0 border-b border-solid text-2xl;
+  }
+  h4 {
+    color: var(--text);
+    @apply mt-8 mr-0 mb-2 ml-0 text-xl;
+  }
+  h5 {
+    color: var(--text);
+  }
+  h6 {
+    color: var(--text);
+  }
+  [class="math-display"] {
+    color: var(--text);
+  }
+  [class="footnotes"] {
+    @apply mt-[2em] border-t border-solid border-frost-300/50;
+    li {
+      font-size: .9rem;
+      list-style-position: outside;
+    }
+  }
+}

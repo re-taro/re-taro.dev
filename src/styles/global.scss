@@ -1,0 +1,14 @@
+:root {
+  --text: '#2E3440';
+  --border: '#3B4252';
+  --background: '#ECEFF4';
+  --code: '#ECEFF4';
+  --underline: '#2E344055';
+}
+[class="dark"] {
+  --text: '#D8DEE9';
+  --border: '#D8DEE9';
+  --background: '#4C566A';
+  --code: '#D8DEE9';
+  --underline: '#D8DEE955';
+}
