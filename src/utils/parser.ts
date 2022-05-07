@@ -1,6 +1,6 @@
 // Markdown parser on "Server" side. Never include frontend code (including rehype-react).
 
-import rehypeShiki from '@leafac/rehype-shiki'
+import rehypeShiki from '@re-taro/rehype-shiki'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeKatex from 'rehype-katex'
 import rehypeSlug from 'rehype-slug'
