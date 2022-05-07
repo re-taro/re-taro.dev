@@ -1,14 +1,40 @@
 :root {
-  --text: '#2E3440';
-  --border: '#3B4252';
-  --background: '#ECEFF4';
-  --code: '#ECEFF4';
-  --underline: '#2E344055';
+  --text: #2E3440;
+  --border: #3B4252;
+  --background: #ECEFF4;
+  --code: #ECEFF4;
+  --underline: #2E344055;
+  --scroll-bar: #CBD5E0;
+  --scrollbar-thumb: #A0AEC0;
+  --scrollbar-thumb-hover: #718096;
+  --scrollbar-color-one: #A0AEC0;
+  --scrollbar-color-two: #CBD5E0;
 }
 [class="dark"] {
-  --text: '#D8DEE9';
-  --border: '#D8DEE9';
-  --background: '#4C566A';
-  --code: '#D8DEE9';
-  --underline: '#D8DEE955';
+  --text: #D8DEE9;
+  --border: #D8DEE9;
+  --background: #4C566A;
+  --code: #D8DEE9;
+  --underline: #D8DEE955;
+  --scroll-bar: #000000;
+  --scrollbar-thumb: #2D3748;
+  --scrollbar-thumb-hover: #4A5568;
+  --scrollbar-color-one: #2D3748;
+  --scrollbar-color-two: #000000;
+}
+::-webkit-scrollbar {
+  width: .75rem;
+  height: .75rem;
+  background-color: var(--scroll-bar);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 9999px;
+  background-color: var(--scrollbar-thumb);
+  &:hover {
+    background-color: var(--scrollbar-thumb-hover);
+  }
+}
+html {
+  scrollbar-width: 'thin';
+  scrollbar-color: var(--scrollbar-color-one) var(--scrollbar-color-two);
 }
