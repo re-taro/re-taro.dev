@@ -27,7 +27,7 @@ specifiers:
   autoprefixer: 10.4.7
   babel-plugin-macros: 3.1.0
   cross-env: 7.0.3
-  dayjs: 1.11.1
+  dayjs: 1.11.2
   eslint: 8.15.0
   eslint-config-re-taro: 1.1.3
   globby: 13.1.1
@@ -36,10 +36,10 @@ specifiers:
   next: 12.1.5
   next-seo: 5.4.0
   next-sitemap: 2.5.20
-  next-themes: 0.1.1
+  next-themes: 0.2.0
   next-urql: 3.3.2
   postcss: 8.4.13
-  preact: 10.7.1
+  preact: 10.7.2
   preact-render-to-string: 5.2.0
   prettier: 2.6.2
   react: npm:@preact/compat@17.0.3
@@ -75,14 +75,14 @@ dependencies:
   '@emotion/styled': 11.8.1_zxovjg7fgfrcmy356iihalwqbu
   '@iconify/react': 3.2.1
   '@re-taro/rehype-shiki': 1.1.0_shiki@0.10.1
-  dayjs: 1.11.1
+  dayjs: 1.11.2
   next: 12.1.5_swhhqbn4kh7ryzy2ky5hsul4v4
   next-seo: 5.4.0_e6c3vvsl2efrnze5m2olvwol4q
-  next-themes: 0.1.1_e6c3vvsl2efrnze5m2olvwol4q
+  next-themes: 0.2.0_e6c3vvsl2efrnze5m2olvwol4q
   next-urql: 3.3.2_rroyr7ewndbc2iphv5uaw7lgpa
-  preact: 10.7.1
-  react: /@preact/compat/17.0.3_preact@10.7.1
-  react-dom: /@preact/compat/17.0.3_preact@10.7.1
+  preact: 10.7.2
+  react: /@preact/compat/17.0.3_preact@10.7.2
+  react-dom: /@preact/compat/17.0.3_preact@10.7.2
   rehype-autolink-headings: 6.1.1
   rehype-katex: 6.0.2
   rehype-parse: 8.0.4
@@ -134,7 +134,7 @@ devDependencies:
   graphql-tag: 2.12.6_graphql@15.8.0
   next-sitemap: 2.5.20_next@12.1.5
   postcss: 8.4.13
-  preact-render-to-string: 5.2.0_preact@10.7.1
+  preact-render-to-string: 5.2.0_preact@10.7.2
   prettier: 2.6.2
   react-is: 18.1.0
   sass: 1.51.0
@@ -994,7 +994,7 @@ packages:
       '@emotion/weak-memoize': 0.2.5
       '@types/react': 18.0.9
       hoist-non-react-statics: 3.3.2
-      react: /@preact/compat/17.0.3_preact@10.7.1
+      react: /@preact/compat/17.0.3_preact@10.7.2
     dev: false
 
   /@emotion/serialize/1.0.3:
@@ -1031,7 +1031,7 @@ packages:
       '@emotion/serialize': 1.0.3
       '@emotion/utils': 1.1.0
       '@types/react': 18.0.9
-      react: /@preact/compat/17.0.3_preact@10.7.1
+      react: /@preact/compat/17.0.3_preact@10.7.2
     dev: false
 
   /@emotion/unitless/0.7.5:
@@ -1131,7 +1131,6 @@ packages:
       - typescript
       - utf-8-validate
       - zen-observable
-      - zenObservable
     dev: true
 
   /@graphql-codegen/core/2.5.1_graphql@15.8.0:
@@ -2010,12 +2009,12 @@ packages:
     resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
     dev: true
 
-  /@preact/compat/17.0.3_preact@10.7.1:
+  /@preact/compat/17.0.3_preact@10.7.2:
     resolution: {integrity: sha512-lzkui97aQ00hxzUwfRfZm7jUXE1bjWyOXiqm8DeWYhkD+G9ZaY1wso/itqyg60wGnP9DRlM4PDn2blIOnh1yeg==}
     peerDependencies:
       preact: '*'
     dependencies:
-      preact: 10.7.1
+      preact: 10.7.2
     dev: false
 
   /@re-taro/html/1.1.0:
@@ -2054,10 +2053,8 @@ packages:
       zen-observable:
         optional: true
     dependencies:
-      any-observable: 0.3.0_rxjs@6.6.7
+      any-observable: 0.3.0
       rxjs: 6.6.7
-    transitivePeerDependencies:
-      - zenObservable
     dev: true
 
   /@sinclair/typebox/0.23.5:
@@ -2578,19 +2575,9 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /any-observable/0.3.0_rxjs@6.6.7:
+  /any-observable/0.3.0:
     resolution: {integrity: sha512-/FQM1EDkTsf63Ub2C6O7GuYFDsSXUwsaZDurV0np41ocwq0jthUAYCmhBX9f+KwlaCgIuWyr/4WlUQUBfKfZog==}
     engines: {node: '>=6'}
-    peerDependencies:
-      rxjs: '*'
-      zenObservable: '*'
-    peerDependenciesMeta:
-      rxjs:
-        optional: true
-      zenObservable:
-        optional: true
-    dependencies:
-      rxjs: 6.6.7
     dev: true
 
   /anymatch/3.1.2:
@@ -3433,8 +3420,8 @@ packages:
     resolution: {integrity: sha512-hBSVCvSmWC+QypYObzwGOd9wqdDpOt+0wl0KbU+R+uuZBS1jN8VsD1ss3irQDknRj5NvxiTF6oj/nDRnN/UQNw==}
     dev: true
 
-  /dayjs/1.11.1:
-    resolution: {integrity: sha512-ER7EjqVAMkRRsxNCC5YqJ9d9VQYuWdGt7aiH2qA5R5wt8ZmWaP2dLUSIK6y/kVzLMlmh1Tvu5xUf4M/wdGJ5KA==}
+  /dayjs/1.11.2:
+    resolution: {integrity: sha512-F4LXf1OeU9hrSYRPTTj/6FbO4HTjPKXvEIC1P2kcnFurViINCVk3ZV0xAS3XVx9MkMsXbbqlK6hjseaYbgKEHw==}
     dev: false
 
   /debounce/1.2.1:
@@ -3443,22 +3430,12 @@ packages:
 
   /debug/2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
-    peerDependencies:
-      supports-color: '*'
-    peerDependenciesMeta:
-      supports-color:
-        optional: true
     dependencies:
       ms: 2.0.0
     dev: true
 
   /debug/3.2.7:
     resolution: {integrity: sha512-CFjzYYAi4ThfiQvizrFQevTTXHtnCqWfe7x1AhgEscTz6ZbLbfoLRLPugTQyBth6f8ZERVUSyWHFD/7Wu4t1XQ==}
-    peerDependencies:
-      supports-color: '*'
-    peerDependenciesMeta:
-      supports-color:
-        optional: true
     dependencies:
       ms: 2.1.3
     dev: true
@@ -3784,7 +3761,7 @@ packages:
       eslint-import-resolver-typescript: 2.7.1_gwd37gqv3vjv3xlpl7ju3ag2qu
       eslint-plugin-compat: 4.0.2_eslint@8.15.0
       eslint-plugin-eslint-comments: 3.2.0_eslint@8.15.0
-      eslint-plugin-import: 2.26.0_5v5qjrtguv7otneb3mumlvzpgm
+      eslint-plugin-import: 2.26.0_eslint@8.15.0
       eslint-plugin-jest: 26.1.5_roucey4agur4lmjcm6lzpkty5m
       eslint-plugin-json-format: 2.0.1_eslint@8.15.0
       eslint-plugin-jsonc: 2.2.1_eslint@8.15.0
@@ -3809,7 +3786,6 @@ packages:
     transitivePeerDependencies:
       - '@types/node'
       - eslint
-      - eslint-import-resolver-webpack
       - node-notifier
       - supports-color
       - ts-node
@@ -3824,7 +3800,7 @@ packages:
       eslint-plugin-promise: ^6.0.0
     dependencies:
       eslint: 8.15.0
-      eslint-plugin-import: 2.26.0_5v5qjrtguv7otneb3mumlvzpgm
+      eslint-plugin-import: 2.26.0_eslint@8.15.0
       eslint-plugin-n: 15.2.0_eslint@8.15.0
       eslint-plugin-promise: 6.0.0_eslint@8.15.0
     dev: true
@@ -3834,8 +3810,6 @@ packages:
     dependencies:
       debug: 3.2.7
       resolve: 1.22.0
-    transitivePeerDependencies:
-      - supports-color
     dev: true
 
   /eslint-import-resolver-typescript/2.7.1_gwd37gqv3vjv3xlpl7ju3ag2qu:
@@ -3847,7 +3821,7 @@ packages:
     dependencies:
       debug: 4.3.4
       eslint: 8.15.0
-      eslint-plugin-import: 2.26.0_5v5qjrtguv7otneb3mumlvzpgm
+      eslint-plugin-import: 2.26.0_eslint@8.15.0
       glob: 7.2.0
       is-glob: 4.0.3
       resolve: 1.22.0
@@ -3873,31 +3847,12 @@ packages:
       - supports-color
     dev: true
 
-  /eslint-module-utils/2.7.3_kvyt4kvbdmj4ueyk2ybejan4d4:
+  /eslint-module-utils/2.7.3:
     resolution: {integrity: sha512-088JEC7O3lDZM9xGe0RerkOMd0EjFl+Yvd1jPWIkMT5u3H9+HC34mWWPnqPrN13gieT9pBOO+Qt07Nb/6TresQ==}
     engines: {node: '>=4'}
-    peerDependencies:
-      '@typescript-eslint/parser': '*'
-      eslint-import-resolver-node: '*'
-      eslint-import-resolver-typescript: '*'
-      eslint-import-resolver-webpack: '*'
-    peerDependenciesMeta:
-      '@typescript-eslint/parser':
-        optional: true
-      eslint-import-resolver-node:
-        optional: true
-      eslint-import-resolver-typescript:
-        optional: true
-      eslint-import-resolver-webpack:
-        optional: true
     dependencies:
-      '@typescript-eslint/parser': 5.22.0_hcfsmds2fshutdssjqluwm76uu
       debug: 3.2.7
-      eslint-import-resolver-node: 0.3.6
-      eslint-import-resolver-typescript: 2.7.1_gwd37gqv3vjv3xlpl7ju3ag2qu
       find-up: 2.1.0
-    transitivePeerDependencies:
-      - supports-color
     dev: true
 
   /eslint-plugin-compat/4.0.2_eslint@8.15.0:
@@ -3950,24 +3905,19 @@ packages:
       ignore: 5.2.0
     dev: true
 
-  /eslint-plugin-import/2.26.0_5v5qjrtguv7otneb3mumlvzpgm:
+  /eslint-plugin-import/2.26.0_eslint@8.15.0:
     resolution: {integrity: sha512-hYfi3FXaM8WPLf4S1cikh/r4IxnO6zrhZbEGz2b660EJRbuxgpDS5gkCuYgGWg2xxh2rBuIr4Pvhve/7c31koA==}
     engines: {node: '>=4'}
     peerDependencies:
-      '@typescript-eslint/parser': '*'
       eslint: ^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0 || ^8
-    peerDependenciesMeta:
-      '@typescript-eslint/parser':
-        optional: true
     dependencies:
-      '@typescript-eslint/parser': 5.22.0_hcfsmds2fshutdssjqluwm76uu
       array-includes: 3.1.5
       array.prototype.flat: 1.3.0
       debug: 2.6.9
       doctrine: 2.1.0
       eslint: 8.15.0
       eslint-import-resolver-node: 0.3.6
-      eslint-module-utils: 2.7.3_kvyt4kvbdmj4ueyk2ybejan4d4
+      eslint-module-utils: 2.7.3
       has: 1.0.3
       is-core-module: 2.9.0
       is-glob: 4.0.3
@@ -3975,10 +3925,6 @@ packages:
       object.values: 1.1.5
       resolve: 1.22.0
       tsconfig-paths: 3.14.1
-    transitivePeerDependencies:
-      - eslint-import-resolver-typescript
-      - eslint-import-resolver-webpack
-      - supports-color
     dev: true
 
   /eslint-plugin-jest/26.1.5_roucey4agur4lmjcm6lzpkty5m:
@@ -6287,7 +6233,6 @@ packages:
       rxjs: 6.6.7
     transitivePeerDependencies:
       - zen-observable
-      - zenObservable
     dev: true
 
   /locate-path/2.0.0:
@@ -7075,8 +7020,8 @@ packages:
       react-dom: '>=16.0.0'
     dependencies:
       next: 12.1.5_swhhqbn4kh7ryzy2ky5hsul4v4
-      react: /@preact/compat/17.0.3_preact@10.7.1
-      react-dom: /@preact/compat/17.0.3_preact@10.7.1
+      react: /@preact/compat/17.0.3_preact@10.7.2
+      react-dom: /@preact/compat/17.0.3_preact@10.7.2
     dev: false
 
   /next-sitemap/2.5.20_next@12.1.5:
@@ -7091,16 +7036,16 @@ packages:
       next: 12.1.5_swhhqbn4kh7ryzy2ky5hsul4v4
     dev: true
 
-  /next-themes/0.1.1_e6c3vvsl2efrnze5m2olvwol4q:
-    resolution: {integrity: sha512-Iqxt6rhS/KfK/iHJ0tfFjTcdLEAI0AgwFuAFrMwLOPK5e+MI3I+fzyvBoS+VaOS+NldUiazurhgwYhrfV0VXsQ==}
+  /next-themes/0.2.0_e6c3vvsl2efrnze5m2olvwol4q:
+    resolution: {integrity: sha512-myhpDL4vadBD9YDSHiewqvzorGzB03N84e+3LxCwHRlM/hiBOaW+UsKsQojQAzC7fdcJA0l2ppveXcYaVV+hxQ==}
     peerDependencies:
-      next: '>=11.1.1'
+      next: '*'
       react: '*'
       react-dom: '*'
     dependencies:
       next: 12.1.5_swhhqbn4kh7ryzy2ky5hsul4v4
-      react: /@preact/compat/17.0.3_preact@10.7.1
-      react-dom: /@preact/compat/17.0.3_preact@10.7.1
+      react: /@preact/compat/17.0.3_preact@10.7.2
+      react-dom: /@preact/compat/17.0.3_preact@10.7.2
     dev: false
 
   /next-urql/3.3.2_rroyr7ewndbc2iphv5uaw7lgpa:
@@ -7109,7 +7054,7 @@ packages:
       react: '>=16.8.0'
       urql: ^2.0.0
     dependencies:
-      react: /@preact/compat/17.0.3_preact@10.7.1
+      react: /@preact/compat/17.0.3_preact@10.7.2
       react-ssr-prepass: 1.5.0_@preact+compat@17.0.3
       urql: 2.2.0_ulxyon4f3zyvg66yt5rsvhta6e
     dev: false
@@ -7135,8 +7080,8 @@ packages:
       '@next/env': 12.1.5
       caniuse-lite: 1.0.30001336
       postcss: 8.4.5
-      react: /@preact/compat/17.0.3_preact@10.7.1
-      react-dom: /@preact/compat/17.0.3_preact@10.7.1
+      react: /@preact/compat/17.0.3_preact@10.7.2
+      react-dom: /@preact/compat/17.0.3_preact@10.7.2
       sass: 1.51.0
       styled-jsx: 5.0.1_c3qrd4auetdgsbc2id73nukzky
     optionalDependencies:
@@ -7665,17 +7610,17 @@ packages:
       source-map-js: 1.0.2
     dev: false
 
-  /preact-render-to-string/5.2.0_preact@10.7.1:
+  /preact-render-to-string/5.2.0_preact@10.7.2:
     resolution: {integrity: sha512-+RGwSW78Cl+NsZRUbFW1MGB++didsfqRk+IyRVTaqy+3OjtpKK/6HgBtfszUX0YXMfo41k2iaQSseAHGKEwrbg==}
     peerDependencies:
       preact: '>=10'
     dependencies:
-      preact: 10.7.1
+      preact: 10.7.2
       pretty-format: 3.8.0
     dev: true
 
-  /preact/10.7.1:
-    resolution: {integrity: sha512-MufnRFz39aIhs9AMFisonjzTud1PK1bY+jcJLo6m2T9Uh8AqjD77w11eAAawmjUogoGOnipECq7e/1RClIKsxg==}
+  /preact/10.7.2:
+    resolution: {integrity: sha512-GLjn0I3r6ka+NvxJUppsVFqb4V0qDTEHT/QxHlidPuClGaxF/4AI2Qti4a0cv3XMh5n1+D3hLScW10LRIm5msQ==}
     dev: false
 
   /prebuild-install/7.1.0:
@@ -7814,7 +7759,7 @@ packages:
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
-      react: /@preact/compat/17.0.3_preact@10.7.1
+      react: /@preact/compat/17.0.3_preact@10.7.2
     dev: false
 
   /read-pkg-up/7.0.1:
@@ -8754,7 +8699,7 @@ packages:
     dependencies:
       '@babel/core': 7.17.10
       babel-plugin-macros: 3.1.0
-      react: /@preact/compat/17.0.3_preact@10.7.1
+      react: /@preact/compat/17.0.3_preact@10.7.2
     dev: false
 
   /stylis/4.0.13:
@@ -8808,7 +8753,7 @@ packages:
     peerDependencies:
       react: ^16.11.0 || ^17.0.0 || ^18.0.0
     dependencies:
-      react: /@preact/compat/17.0.3_preact@10.7.1
+      react: /@preact/compat/17.0.3_preact@10.7.2
     dev: false
 
   /symbol-observable/1.2.0:
@@ -9416,7 +9361,7 @@ packages:
     dependencies:
       '@urql/core': 2.4.4_graphql@15.8.0
       graphql: 15.8.0
-      react: /@preact/compat/17.0.3_preact@10.7.1
+      react: /@preact/compat/17.0.3_preact@10.7.2
       wonka: 4.0.15
     dev: false
 
