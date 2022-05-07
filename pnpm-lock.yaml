@@ -59,6 +59,7 @@ specifiers:
   remark-rehype: ^10.1.0
   remark-toc: ^8.0.1
   remark-unwrap-images: ^3.0.1
+  sass: ^1.51.0
   sharp: 0.30.4
   shiki: ^0.10.1
   swr: 1.3.0
@@ -75,7 +76,7 @@ dependencies:
   '@iconify/react': 3.2.1
   '@leafac/rehype-shiki': 2.1.2_shiki@0.10.1
   dayjs: 1.11.1
-  next: 12.1.5_zwmmydydufosz5vzokqy32t5tm
+  next: 12.1.5_swhhqbn4kh7ryzy2ky5hsul4v4
   next-seo: 5.4.0_e6c3vvsl2efrnze5m2olvwol4q
   next-themes: 0.1.1_e6c3vvsl2efrnze5m2olvwol4q
   next-urql: 3.3.2_rroyr7ewndbc2iphv5uaw7lgpa
@@ -136,6 +137,7 @@ devDependencies:
   preact-render-to-string: 5.2.0_preact@10.7.1
   prettier: 2.6.2
   react-is: 18.1.0
+  sass: 1.51.0
   tailwindcss: 3.0.24
   twin.macro: 2.8.2
   typescript: 4.6.4
@@ -5124,6 +5126,10 @@ packages:
     engines: {node: '>=0.8.0'}
     dev: true
 
+  /immutable/4.0.0:
+    resolution: {integrity: sha512-zIE9hX70qew5qTUjSS7wi1iwj/l7+m54KWU247nhM3v806UdGj1yDndXj+IOYxxtW9zyLI+xqFNZjTuDaLUqFw==}
+    dev: true
+
   /import-fresh/3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
     engines: {node: '>=6'}
@@ -7143,7 +7149,7 @@ packages:
       react: '>=16.0.0'
       react-dom: '>=16.0.0'
     dependencies:
-      next: 12.1.5_zwmmydydufosz5vzokqy32t5tm
+      next: 12.1.5_swhhqbn4kh7ryzy2ky5hsul4v4
       react: /@preact/compat/17.0.3_preact@10.7.1
       react-dom: /@preact/compat/17.0.3_preact@10.7.1
     dev: false
@@ -7157,7 +7163,7 @@ packages:
     dependencies:
       '@corex/deepmerge': 2.6.148
       minimist: 1.2.6
-      next: 12.1.5_zwmmydydufosz5vzokqy32t5tm
+      next: 12.1.5_swhhqbn4kh7ryzy2ky5hsul4v4
     dev: true
 
   /next-themes/0.1.1_e6c3vvsl2efrnze5m2olvwol4q:
@@ -7167,7 +7173,7 @@ packages:
       react: '*'
       react-dom: '*'
     dependencies:
-      next: 12.1.5_zwmmydydufosz5vzokqy32t5tm
+      next: 12.1.5_swhhqbn4kh7ryzy2ky5hsul4v4
       react: /@preact/compat/17.0.3_preact@10.7.1
       react-dom: /@preact/compat/17.0.3_preact@10.7.1
     dev: false
@@ -7183,7 +7189,7 @@ packages:
       urql: 2.2.0_zeqifhlmhhx3y3s3rq2s3xawvm
     dev: false
 
-  /next/12.1.5_zwmmydydufosz5vzokqy32t5tm:
+  /next/12.1.5_swhhqbn4kh7ryzy2ky5hsul4v4:
     resolution: {integrity: sha512-YGHDpyfgCfnT5GZObsKepmRnne7Kzp7nGrac07dikhutWQug7hHg85/+sPJ4ZW5Q2pDkb+n0FnmLkmd44htIJQ==}
     engines: {node: '>=12.22.0'}
     hasBin: true
@@ -7206,6 +7212,7 @@ packages:
       postcss: 8.4.5
       react: /@preact/compat/17.0.3_preact@10.7.1
       react-dom: /@preact/compat/17.0.3_preact@10.7.1
+      sass: 1.51.0
       styled-jsx: 5.0.1_c3qrd4auetdgsbc2id73nukzky
     optionalDependencies:
       '@next/swc-android-arm-eabi': 12.1.5
@@ -8423,6 +8430,16 @@ packages:
     resolution: {integrity: sha512-RzX25K64YtZm9FvdZr/Ac7Eeq0va1YX0xmpOkjWoREhgKXXldrJRVJhBel83nS8omIcaKcNTdLY8XzOIK920HA==}
     engines: {node: '>=7.0.0'}
     dev: false
+
+  /sass/1.51.0:
+    resolution: {integrity: sha512-haGdpTgywJTvHC2b91GSq+clTKGbtkkZmVAb82jZQN/wTy6qs8DdFm2lhEQbEwrY0QDRgSQ3xDurqM977C3noA==}
+    engines: {node: '>=12.0.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.5.3
+      immutable: 4.0.0
+      source-map-js: 1.0.2
+    dev: true
 
   /saxes/5.0.1:
     resolution: {integrity: sha512-5LBh1Tls8c9xgGjw3QrMwETmTMVk0oFgvrFSvWx62llR2hcEInrKNZ2GZCCuuy2lvWrdl5jhbpeqc5hRYKFOcw==}
