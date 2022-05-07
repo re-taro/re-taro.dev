@@ -5,6 +5,7 @@ import type { AppProps } from 'next/app'
 import { GlobalStyles } from 'twin.macro'
 import { Layout } from '~/components/templates/layout'
 import { defaultSeoConfig } from '~/utils/next-seo'
+import '~/styles/global.scss'
 
 const App: NextPage<AppProps> = ({ Component, pageProps }) => (
   <ThemeProvider attribute={'class'} defaultTheme="system">
