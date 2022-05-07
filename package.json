@@ -17,6 +17,7 @@
     "email": "me@re-taro.dev",
     "url": "https://re-taro.dev"
   },
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
