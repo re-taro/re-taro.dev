@@ -10,6 +10,7 @@ import remarkGfm from 'remark-gfm'
 import remarkJaruby from 'remark-jaruby'
 import remarkMath from 'remark-math'
 import remarkParse from 'remark-parse'
+import remarkRehype from "remark-rehype";
 import remarkToc from 'remark-toc'
 import remarkUnwrapImages from 'remark-unwrap-images'
 import * as shiki from 'shiki'
@@ -27,6 +28,7 @@ const MdToHtml = async (md: string) => {
       heading: '目次',
       tight: true
     })
+    .use(remarkRehype)
     .use(rehypeKatex)
     .use(rehypeShiki, {
       highlighter: await shiki.getHighlighter({ theme: 'nord' })

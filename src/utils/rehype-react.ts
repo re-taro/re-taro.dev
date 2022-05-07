@@ -10,7 +10,8 @@ import type { ImageProperties } from "~/components/molecules/image";
 import {Link} from "~/components/molecules/link";
 import type { LinkProperties } from "~/components/molecules/link";
 
-const RehypeReact = (html: string) => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const RehypeReact = (html: string): React.ReactElement<unknown, string | React.JSXElementConstructor<any>> => {
   const result = unified()
     .use(rehypeParse, {
       fragment: true,
