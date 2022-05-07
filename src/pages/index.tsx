@@ -11,7 +11,7 @@ import { urqlClient, ssrCache, END_POINT } from '~/utils/client'
 type Properties = InferGetStaticPropsType<typeof getStaticProps>
 
 // eslint-disable-next-line unicorn/prevent-abbreviations
-export const getStaticProps: GetStaticProps<{ [key: string]: SSRData }> = async () => {
+export const getStaticProps: GetStaticProps<{ urqlState: SSRData }> = async () => {
   const client = await urqlClient()
   await client.query(HomeDocument).toPromise()
   return {
