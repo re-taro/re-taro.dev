@@ -5,6 +5,7 @@ import tw from 'twin.macro'
 import { NavigationItem } from '../navigation'
 import { Button } from '~/components/atoms/button'
 import { Text } from '~/components/atoms/text'
+import { trackEventToUmami } from '~/utils/umami'
 
 const HamburgerBox = tw.div`relative inline-block`
 
@@ -30,7 +31,10 @@ const Hamburger: React.FC = () => {
         {NavigationItem.map(({ href, icon, label }) => (
           <li key={label} css={tw`my-1`}>
             <Link href={href} passHref>
-              <a css={tw`flex items-center`}>
+              <a
+                css={tw`flex items-center`}
+                onClick={() => trackEventToUmami({ eventType: 'navigate', eventValue: `Nav Link: ${label}` })}
+              >
                 <div css={tw`flex items-center justify-center flex-shrink-0 w-4 h-4 min-h-full mr-2`}>
                   <InlineIcon
                     icon={icon}

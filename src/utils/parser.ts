@@ -10,7 +10,7 @@ import remarkGfm from 'remark-gfm'
 import remarkJaruby from 'remark-jaruby'
 import remarkMath from 'remark-math'
 import remarkParse from 'remark-parse'
-import remarkRehype from "remark-rehype";
+import remarkRehype from 'remark-rehype'
 import remarkToc from 'remark-toc'
 import remarkUnwrapImages from 'remark-unwrap-images'
 import * as shiki from 'shiki'

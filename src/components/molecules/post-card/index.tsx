@@ -8,6 +8,7 @@ import { Text } from '~/components/atoms/text'
 import Twemoji from '~/components/atoms/twemojii'
 import type { PostHeader } from '~/graphql'
 import { formatDate } from '~/utils/date'
+import { trackEventToUmami } from '~/utils/umami'
 
 const PostBox = tw.div`w-full transition delay-150 ease-in-out hover:scale-[1.03]`
 
@@ -18,7 +19,11 @@ type PostCardProperties = React.ComponentProps<React.ReactHTML['div']> & {
 const PostCard: React.FC<PostCardProperties> = ({ post, ...rest }) => (
   <PostBox key={post.id} {...rest}>
     <Link href={`/posts/${post.id}`} passHref>
-      <Flex as={'a'} css={tw`flex-wrap items-center w-full`}>
+      <Flex
+        as={'a'}
+        onClick={() => trackEventToUmami({ eventType: 'navigate', eventValue: `Blog post: ${post.title}` })}
+        css={tw`flex-wrap items-center w-full`}
+      >
         <Flex css={tw`justify-center items-center flex-1`}>
           <div css={tw`w-[70%] h-[70%]`}>
             <Twemoji emoji={post.emoji} />

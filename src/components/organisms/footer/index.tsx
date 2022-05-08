@@ -25,5 +25,3 @@ const Footer: React.FC<FooterProperties> = ({ ...rest }) => (
 )
 
 export { Footer }
-
-// TODO: Spotifyの実装

@@ -7,6 +7,7 @@ import { Heading } from '~/components/atoms/heading'
 import { Text } from '~/components/atoms/text'
 import { Card } from '~/components/molecules/card'
 import type { HomeQuery } from '~/graphql'
+import { trackEventToUmami } from '~/utils/umami'
 
 const ProjectsBox = tw.section`mb-16 space-y-4`
 
@@ -37,6 +38,7 @@ const ProjectsSection: React.FC<ProjectsSectionProperties> = ({ data, ...rest })
           variant={'icon'}
           rightIcon={'fa-solid:arrow-right'}
           boxStyles={tw`px-0`}
+          onClick={() => trackEventToUmami({ eventType: 'navigate', eventValue: 'Home: View All Projects' })}
         >
           <Text css={tw`text-lg`}>view all works</Text>
         </Button>
