@@ -8,7 +8,7 @@ import { Post } from '~/components/templates/post'
 import { PostDocument, PostsDocument } from '~/graphql'
 import type { PostQuery, PostsQuery } from '~/graphql'
 import { urqlClient, ssrCache, END_POINT } from '~/utils/client'
-import { MdToHtml } from "~/utils/parser";
+import { MdToHtml } from '~/utils/parser'
 
 type Properties = InferGetStaticPropsType<typeof getStaticProps>
 
@@ -16,7 +16,7 @@ type Parameters = ParsedUrlQuery & {
   id: string
 }
 
-export const getStaticPaths: GetStaticPaths<Parameters> = async() => {
+export const getStaticPaths: GetStaticPaths<Parameters> = async () => {
   const client = createClient({ exchanges: [fetchExchange], url: END_POINT })
   const response = await client.query<PostsQuery>(PostsDocument).toPromise()
   const result = response.data?.posts.map(post => post.id)
@@ -32,7 +32,10 @@ export const getStaticPaths: GetStaticPaths<Parameters> = async() => {
 }
 
 // eslint-disable-next-line unicorn/prevent-abbreviations
-export const getStaticProps: GetStaticProps<{ urqlState: SSRData, id: string | undefined, content: string }, Parameters> = async({ params }) => {
+export const getStaticProps: GetStaticProps<
+  { urqlState: SSRData; id: string | undefined; content: string },
+  Parameters
+> = async ({ params }) => {
   const client = await urqlClient()
   const fetcher = createClient({ exchanges: [fetchExchange], url: END_POINT })
   await client.query(PostDocument, { id: params?.id }).toPromise()
@@ -56,5 +59,5 @@ export default withUrqlClient(
   () => ({
     url: END_POINT
   }),
-  { neverSuspend: true, ssr: false}
+  { neverSuspend: true, ssr: false }
 )(PostPage)

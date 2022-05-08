@@ -3,7 +3,7 @@ import React from 'react'
 import tw, { css } from 'twin.macro'
 import { Flex } from '~/components/atoms/flex'
 import { Heading } from '~/components/atoms/heading'
-import { Tag } from "~/components/atoms/tag";
+import { Tag } from '~/components/atoms/tag'
 import { Text } from '~/components/atoms/text'
 import Twemoji from '~/components/atoms/twemojii'
 import type { PostQuery } from '~/graphql'

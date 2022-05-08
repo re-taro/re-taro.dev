@@ -41,15 +41,15 @@
       @apply bg-transparent w-full p-4 overflow-auto m-1;
       font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace;
       @media (max-width: 700px) {
-        font-size: .7rem;
+        font-size: 0.7rem;
       }
     }
   }
   blockquote {
-    color: #81A1C1;
+    color: #81a1c1;
     @apply py-0 px-6 relative flex items-center;
     &::before {
-      content: "";
+      content: '';
       @apply absolute h-full w-[.3rem] left-0 bg-frost-300/50;
     }
     p {
@@ -84,13 +84,13 @@
   h6 {
     color: var(--text);
   }
-  [class="math-display"] {
+  [class='math-display'] {
     color: var(--text);
   }
-  [class="footnotes"] {
+  [class='footnotes'] {
     @apply mt-[2em] border-t border-solid border-frost-300/50;
     li {
-      font-size: .9rem;
+      font-size: 0.9rem;
       list-style-position: outside;
     }
   }
