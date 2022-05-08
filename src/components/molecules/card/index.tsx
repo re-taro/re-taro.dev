@@ -5,6 +5,7 @@ import tw from 'twin.macro'
 import { Grid } from '~/components/atoms/grid'
 import { Text } from '~/components/atoms/text'
 import type { HomeQuery } from '~/graphql'
+import { trackEventToUmami } from "~/utils/umami";
 
 const CardBox = tw.div`border-2 border-night-100 dark:border-night-400 shadow-card rounded-[20px] cursor-pointer items-center overflow-hidden justify-center relative transition delay-150 ease-in-out hover:-translate-y-2 hover:scale-[1.02] hover:shadow-xl`
 
@@ -21,7 +22,7 @@ const Card: React.FC<CardProperties> = ({ projects, ...rest }) => (
       .slice(0, 4)
       .map(project => (
         <Link href={`/works/${project.id}`} passHref>
-          <CardBox key={project.id} {...rest}>
+          <CardBox key={project.id} onClick={() => trackEventToUmami({eventType: 'navigate', eventValue: `Project Card: ${project.title}`})} {...rest}>
             <div css={tw`h-[200] sm:h-[250] md:h-[200]`}>
               <Image
                 src={project.imageUrl}

@@ -24,6 +24,7 @@ specifiers:
   '@types/node': 17.0.21
   '@types/react': 18.0.9
   '@types/tailwindcss': 3.0.10
+  '@types/umami': ^0.1.0
   autoprefixer: 10.4.7
   babel-plugin-macros: 3.1.0
   cross-env: 7.0.3
@@ -124,6 +125,7 @@ devDependencies:
   '@types/node': 17.0.21
   '@types/react': 18.0.9
   '@types/tailwindcss': 3.0.10
+  '@types/umami': 0.1.0
   autoprefixer: 10.4.7_postcss@8.4.13
   babel-plugin-macros: 3.1.0
   cross-env: 7.0.3
@@ -2294,6 +2296,10 @@ packages:
 
   /@types/tailwindcss/3.0.10:
     resolution: {integrity: sha512-1UnZIHO0NOPyPlPFV0HuMjki2SHkvG9uBA1ZehWj/OQMSROk503nuNyyfmJSIT289yewxTbKoPG+KLxYRvfIIg==}
+    dev: true
+
+  /@types/umami/0.1.0:
+    resolution: {integrity: sha512-nsrcnBdKXTP/koCwL3c+ywQG0lk+uqNo74oIe0FHC109aO4vZoXL0eSQqkUdWa9Hwc3ssFgJINBBCe0MZVYUwg==}
     dev: true
 
   /@types/unist/2.0.6:

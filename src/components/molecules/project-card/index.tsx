@@ -8,6 +8,7 @@ import { Heading } from '~/components/atoms/heading'
 import { Text } from '~/components/atoms/text'
 import type { WorksQuery } from '~/graphql'
 import { formatDate } from '~/utils/date'
+import { trackEventToUmami } from '~/utils/umami'
 
 const ProjectCardBox = tw.div`w-full h-full p-8 rounded-3xl border-2 border-night-300 dark:border-snow-300 transition delay-150 ease-in-out hover:scale-[1.03] hover:drop-shadow-lg`
 
@@ -20,9 +21,14 @@ const ProjectCard: React.FC<ProjectCardProperties> = ({ projects, ...rest }) => 
   <Grid css={tw`gap-6`}>
     {projects
       ?.sort((workA, workB) => (workA.date < workB.date ? 1 : -1))
+      // eslint-disable-next-line max-lines-per-function
       .map(project => (
         <Link href={`/works/${project.id}`} passHref>
-          <ProjectCardBox as={'a'} {...rest}>
+          <ProjectCardBox
+            as={'a'}
+            onClick={() => trackEventToUmami({ eventType: 'navigate', eventValue: `Project: ${project.title}` })}
+            {...rest}
+          >
             <Flex css={tw`items-center w-full h-full gap-8`}>
               <Flex
                 css={[
