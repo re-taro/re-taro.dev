@@ -3,7 +3,7 @@ import tw from 'twin.macro'
 import { Footer } from '~/components/organisms/footer'
 import { Header } from '~/components/organisms/header'
 
-const LayoutBox = tw.div`min-h-screen pb-[160px] sm:pb-[16px] pt-16 transition delay-150 ease-in-out bg-snow-300 dark:bg-night-300`
+const LayoutBox = tw.div`min-h-screen sm:pb-[16px] pt-16 transition delay-150 ease-in-out bg-snow-300 dark:bg-night-300`
 
 const MainBox = tw.div`flex flex-col items-center relative z-10 space-y-8`
 

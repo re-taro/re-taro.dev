@@ -1,0 +1,29 @@
+query work($id: String!) {
+  work(id: $id) {
+    id
+    imageUrl
+    date
+    workPage {
+      title
+      detail
+      meta {
+        website
+        platform
+        stack {
+          icon
+          name
+        }
+        blogPost {
+          title
+          url
+        }
+        presentation {
+          title
+          url
+        }
+        source
+      }
+      images
+    }
+  }
+}

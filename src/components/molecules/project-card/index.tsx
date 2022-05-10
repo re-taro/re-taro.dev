@@ -68,6 +68,7 @@ const ProjectCard: React.FC<ProjectCardProperties> = ({ projects, ...rest }) => 
                     objectPosition={'50% 0'}
                     src={project.imageUrl}
                     alt={project.title}
+                    css={tw`rounded-lg`}
                   />
                 </div>
               </div>

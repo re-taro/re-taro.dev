@@ -4,7 +4,7 @@ import 'twin.macro'
 import { css as cssImport } from '@emotion/react'
 import { CSSInterpolation } from '@emotion/serialize'
 import styledImport from '@emotion/styled'
-import { DOMAttributes } from 'react'
+import React, { DOMAttributes } from 'react'
 
 declare global {
   namespace JSX {

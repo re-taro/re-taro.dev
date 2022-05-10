@@ -44,10 +44,10 @@ export type BlogPost = {
 export type Meta = {
   __typename?: 'Meta'
   blogPost?: Maybe<BlogPost>
-  platform: Scalars['String']
+  platform: Array<Scalars['String']>
   presentation?: Maybe<Presentation>
   source?: Maybe<Scalars['String']>
-  stack: Scalars['String']
+  stack: Array<Stack>
   website?: Maybe<Scalars['String']>
 }
 
@@ -99,6 +99,12 @@ export type QueryPostsByTagArgs = {
 
 export type QueryWorkArgs = {
   id: Scalars['String']
+}
+
+export type Stack = {
+  __typename?: 'Stack'
+  icon?: Maybe<Scalars['String']>
+  name: Scalars['String']
 }
 
 export type Work = {
@@ -193,6 +199,35 @@ export type TagQuery = {
 export type TagsQueryVariables = Exact<{ [key: string]: never }>
 
 export type TagsQuery = { __typename?: 'Query'; posts: Array<{ __typename?: 'PostHeader'; tags: Array<string> }> }
+
+export type WorkQueryVariables = Exact<{
+  id: Scalars['String']
+}>
+
+export type WorkQuery = {
+  __typename?: 'Query'
+  work: {
+    __typename?: 'Work'
+    id: string
+    imageUrl: string
+    date: string
+    workPage: {
+      __typename?: 'WorkPage'
+      title: string
+      detail: string
+      images?: Array<string> | null
+      meta: {
+        __typename?: 'Meta'
+        website?: string | null
+        platform: Array<string>
+        source?: string | null
+        stack: Array<{ __typename?: 'Stack'; icon?: string | null; name: string }>
+        blogPost?: { __typename?: 'BlogPost'; title: string; url: string } | null
+        presentation?: { __typename?: 'Presentation'; title: string; url: string } | null
+      }
+    }
+  }
+}
 
 export type WorksQueryVariables = Exact<{ [key: string]: never }>
 
@@ -306,6 +341,41 @@ export const TagsDocument = gql`
 
 export function useTagsQuery(options?: Omit<Urql.UseQueryArgs<TagsQueryVariables>, 'query'>) {
   return Urql.useQuery<TagsQuery>({ query: TagsDocument, ...options })
+}
+export const WorkDocument = gql`
+  query work($id: String!) {
+    work(id: $id) {
+      id
+      imageUrl
+      date
+      workPage {
+        title
+        detail
+        meta {
+          website
+          platform
+          stack {
+            icon
+            name
+          }
+          blogPost {
+            title
+            url
+          }
+          presentation {
+            title
+            url
+          }
+          source
+        }
+        images
+      }
+    }
+  }
+`
+
+export function useWorkQuery(options: Omit<Urql.UseQueryArgs<WorkQueryVariables>, 'query'>) {
+  return Urql.useQuery<WorkQuery>({ query: WorkDocument, ...options })
 }
 export const WorksDocument = gql`
   query works {
@@ -489,8 +559,14 @@ export default {
             type: {
               kind: 'NON_NULL',
               ofType: {
-                kind: 'SCALAR',
-                name: 'Any'
+                kind: 'LIST',
+                ofType: {
+                  kind: 'NON_NULL',
+                  ofType: {
+                    kind: 'SCALAR',
+                    name: 'Any'
+                  }
+                }
               }
             },
             args: []
@@ -517,8 +593,15 @@ export default {
             type: {
               kind: 'NON_NULL',
               ofType: {
-                kind: 'SCALAR',
-                name: 'Any'
+                kind: 'LIST',
+                ofType: {
+                  kind: 'NON_NULL',
+                  ofType: {
+                    kind: 'OBJECT',
+                    name: 'Stack',
+                    ofType: null
+                  }
+                }
               }
             },
             args: []
@@ -831,6 +914,32 @@ export default {
                     ofType: null
                   }
                 }
+              }
+            },
+            args: []
+          }
+        ],
+        interfaces: []
+      },
+      {
+        kind: 'OBJECT',
+        name: 'Stack',
+        fields: [
+          {
+            name: 'icon',
+            type: {
+              kind: 'SCALAR',
+              name: 'Any'
+            },
+            args: []
+          },
+          {
+            name: 'name',
+            type: {
+              kind: 'NON_NULL',
+              ofType: {
+                kind: 'SCALAR',
+                name: 'Any'
               }
             },
             args: []
