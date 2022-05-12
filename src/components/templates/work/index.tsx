@@ -1,21 +1,23 @@
-import Image from "next/image";
+import Image from 'next/image'
 import React from 'react'
 import tw, { css } from 'twin.macro'
 import { Chip } from '~/components/atoms/chip'
 import { Flex } from '~/components/atoms/flex'
 import { Text } from '~/components/atoms/text'
+import type { SeoProperties } from '~/components/organisms/seo'
 import { WorkHead } from '~/components/organisms/work-head'
 import { WorkMeta } from '~/components/organisms/work-meta'
 import type { WorkQuery } from '~/graphql'
 
 type WorkProperties = {
   data: WorkQuery | undefined
+  meta: SeoProperties
 }
 
 // eslint-disable-next-line max-lines-per-function
-const Work: React.FC<WorkProperties> = ({ data }) => (
+const Work: React.FC<WorkProperties> = ({ data, meta }) => (
   <article>
-    <WorkMeta data={data?.work} />
+    <WorkMeta meta={meta} />
     <WorkHead data={data?.work} />
     <article>
       <Text css={tw`text-lg`}>{data?.work.workPage.detail}</Text>
@@ -106,7 +108,13 @@ const Work: React.FC<WorkProperties> = ({ data }) => (
       </ul>
       {data?.work.workPage.images?.map((source, key) => (
         <div css={tw`my-2 flex relative min-h-[20em] w-full`} key={key}>
-          <Image css={tw`rounded-lg`} src={source} alt={`${data.work.workPage.title}`} layout="fill" objectFit="contain" />
+          <Image
+            css={tw`rounded-lg`}
+            src={source}
+            alt={`${data.work.workPage.title}`}
+            layout="fill"
+            objectFit="contain"
+          />
         </div>
       ))}
     </article>

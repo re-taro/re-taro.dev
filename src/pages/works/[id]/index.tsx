@@ -4,6 +4,8 @@ import { withUrqlClient } from 'next-urql'
 import type { SSRData } from 'next-urql'
 import React from 'react'
 import { useQuery, createClient, fetchExchange } from 'urql'
+import { OGP_HOST } from '~/components/organisms/seo'
+import type { SeoProperties } from '~/components/organisms/seo'
 import { Work } from '~/components/templates/work'
 import { WorkDocument, WorksDocument } from '~/graphql'
 import type { WorkQuery, WorksQuery } from '~/graphql'
@@ -31,22 +33,35 @@ export const getStaticPaths: GetStaticPaths<Parameters> = async () => {
 }
 
 // eslint-disable-next-line unicorn/prevent-abbreviations
-export const getStaticProps: GetStaticProps<{ urqlState: SSRData; id: string | undefined }, Parameters> = async ({
-  params
-}) => {
+export const getStaticProps: GetStaticProps<
+  { urqlState: SSRData; id: string | undefined; meta: SeoProperties },
+  Parameters
+> = async ({ params }) => {
   const client = await urqlClient()
+  const fetcher = createClient({ exchanges: [fetchExchange], url: END_POINT })
   await client.query(WorkDocument, { id: params?.id }).toPromise()
+  const response = await fetcher.query<WorkQuery>(WorkDocument, { id: params?.id }).toPromise()
+  const meta: SeoProperties = {
+    description: response.data?.work.workPage.title as string,
+    ogImageUrl: encodeURI(`${OGP_HOST}/api/ogp?title=${response.data?.work.workPage.title as string} | re-taro`),
+    pageRelPath: `works/${params?.id as string}`,
+    pagetype: 'article',
+    sitename: 're-taro.dev',
+    title: `${response.data?.work.workPage.title as string} | re-taro`,
+    twcardtype: 'summary_large_image'
+  }
   return {
     props: {
       id: params?.id,
+      meta,
       urqlState: ssrCache.extractData()
     }
   }
 }
 
-const WorkPage: NextPage<Properties> = ({ id }) => {
+const WorkPage: NextPage<Properties> = ({ id, meta }) => {
   const [response] = useQuery<WorkQuery>({ query: WorkDocument, variables: { id } })
-  return <Work data={response.data} />
+  return <Work data={response.data} meta={meta} />
 }
 
 export default withUrqlClient(

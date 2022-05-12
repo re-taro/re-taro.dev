@@ -1,14 +1,24 @@
-import { NextSeo } from 'next-seo'
 import { useRouter } from 'next/router'
 import React, { useEffect } from 'react'
 import tw from 'twin.macro'
 import { Heading } from '~/components/atoms/heading'
 import { Tag } from '~/components/atoms/tag'
 import { Text } from '~/components/atoms/text'
+import { Seo, OGP_HOST } from '~/components/organisms/seo'
+import type { SeoProperties } from '~/components/organisms/seo'
 import type { TagsQuery } from '~/graphql'
-import { GenOgp } from '~/utils/gen-ogp'
 
 const TagsHead = tw.div`mb-[22px]`
+
+const meta: SeoProperties = {
+  description: 'タグ一覧',
+  ogImageUrl: encodeURI(`${OGP_HOST}/api/ogp?title=Tags | re-taro`),
+  pageRelPath: '',
+  pagetype: 'website',
+  sitename: 're-taro.dev',
+  title: 'Tags | re-taro',
+  twcardtype: 'summary_large_image'
+}
 
 type TagsProperties = {
   data: TagsQuery | undefined
@@ -26,19 +36,7 @@ const Tags: React.FC<TagsProperties> = ({ data }) => {
   }, [tags])
   return (
     <React.Fragment>
-      <NextSeo
-        title={'Posts tags'}
-        canonical={'https://re-taro.dev/tags'}
-        openGraph={{
-          images: [
-            {
-              alt: 'Tags | re-taro.dev ogp',
-              url: GenOgp('Tags | re-taro')
-            }
-          ],
-          title: 'Posts tags | re-taro'
-        }}
-      />
+      <Seo {...meta} />
       <TagsHead>
         <Heading as={'h3'} css={tw`mb-2`}>
           Blog Posts

@@ -11,7 +11,7 @@ class Document extends NextDocument {
   // eslint-disable-next-line class-methods-use-this
   render(): ReactElement {
     return (
-      <Html lang="en">
+      <Html lang="ja">
         <Head>
           <script async defer data-website-id={UMAMI_WEBSITE_ID} src={UMAMI_SRC} />
         </Head>
