@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://re-taro.dev
-
-# Sitemaps
-Sitemap: https://re-taro.dev/sitemap.xml
