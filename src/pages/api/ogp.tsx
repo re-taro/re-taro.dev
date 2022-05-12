@@ -8,10 +8,8 @@ import type { OgpInfo } from '~/components/templates/ogp'
 
 const baseFullPath = path.resolve('./')
 const iconPath = path.join(baseFullPath, 'public/rintaro.webp')
-// eslint-disable-next-line security/detect-non-literal-fs-filename
 const icon: string = fs.readFileSync(iconPath, 'base64')
 const notopath = path.join(baseFullPath, 'public/fonts/NotoSansCJKjp-Bold.woff2')
-// eslint-disable-next-line security/detect-non-literal-fs-filename
 const noto = fs.readFileSync(notopath).toString('base64')
 const style = `
 @font-face {
@@ -114,9 +112,7 @@ const Ogp = async (request: NextApiRequest, response: NextApiResponse) => {
     response.setHeader('Cache-Control', 's-maxage=5256000, stale-while-revalidate')
     response.setHeader('Content-Type', 'image/png')
     response.end(image)
-  } catch (error) {
-    // eslint-disable-next-line no-console
-    console.log('[Error]:', error)
+  } catch {
     response.status(500).send('Internal Server Error')
   }
 }
