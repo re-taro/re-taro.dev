@@ -3,11 +3,10 @@ import path from 'node:path'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import * as chromium from 'playwright-aws-lambda'
 
-const baseFullPath = path.resolve('./')
-const iconPath = path.join(baseFullPath, 'public/rintaro.webp')
+const iconPath = path.join(process.cwd(), 'public/rintaro.webp')
 // eslint-disable-next-line security/detect-non-literal-fs-filename
 const icon: string = fs.readFileSync(iconPath, 'base64')
-const notopath = path.join(baseFullPath, 'public/fonts/NotoSansCJKJp-Bold.woff2')
+const notopath = path.join(process.cwd(), 'public/fonts/NotoSansCJKJp-Bold.woff2')
 // eslint-disable-next-line security/detect-non-literal-fs-filename
 const noto = fs.readFileSync(notopath).toString('base64')
 const style = `
