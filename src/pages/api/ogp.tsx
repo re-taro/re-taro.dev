@@ -2,18 +2,18 @@ import fs from 'node:fs'
 import path from 'node:path'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import * as chromium from 'playwright-aws-lambda'
+import React from 'react'
 import ReactDomServer from 'react-dom/server'
-import { OgpImage } from '~/components/templates/ogp'
-import type { OgpInfo } from '~/components/templates/ogp'
+import { OgpImage, OgpInfo } from '~/components/templates/ogp'
 
 const baseFullPath = path.resolve('./')
 const iconPath = path.join(baseFullPath, 'public/rintaro.webp')
 const icon: string = fs.readFileSync(iconPath, 'base64')
-const notopath = path.join(baseFullPath, 'public/fonts/NotoSansCJKjp-Bold.woff2')
+const notopath = path.join(baseFullPath, 'public/fonts/NotoSansCJKJp-Bold.woff2')
 const noto = fs.readFileSync(notopath).toString('base64')
 const style = `
 @font-face {
-  font-family: "Noto Sans CJK JP";
+  font-family: "Noto Sans JP";
   font-style: normal;
   font-weight: bold;
   src: url(data:font/woff2;charset=utf-8;base64,${noto}) format("woff2");
@@ -23,12 +23,11 @@ const style = `
   margin: 0;
   padding: 0;
 }
-html,
-body {
+html, body {
   width: 100%;
   height: 100%;
   background: #2e3440;
-  font-family: "Noto Sans CJK JP", sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 125%;
   color: #d8dee9;
 }
@@ -44,8 +43,7 @@ body {
   grid-gap: 30px;
   border-radius: 30px;
   background: #2e3440;
-  box-shadow: 10px 10px 20px rgba(28, 25, 33, 0.4),
-    -10px -10px 20px rgba(28, 25, 33, 0.4);
+  box-shadow: 10px 10px 20px #1c192166, -10px -10px 20px #1c192166;
   padding: 50px;
   display: grid;
   grid-template-rows: 280px 100px;
@@ -106,7 +104,7 @@ const Ogp = async (request: NextApiRequest, response: NextApiResponse) => {
     }
     const markup = ReactDomServer.renderToStaticMarkup(<OgpImage {...ogpinfo} />)
     const html = `<!doctype html>${markup}`
-    await page.setContent(html)
+    await page.setContent(html, { waitUntil: 'networkidle' })
     const image = await page.screenshot({ type: 'png' })
     await browser.close()
     response.setHeader('Cache-Control', 's-maxage=5256000, stale-while-revalidate')
