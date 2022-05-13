@@ -14,7 +14,8 @@ const nextConfig = {
     if (!dev && !isServer) {
       Object.assign(config.resolve.alias, {
         react: 'preact/compat',
-        'react-dom': 'preact/compat'
+        'react-dom': 'preact/compat',
+        'react/jsx-runtime': 'preact/jsx-runtime'
       })
     }
     return config

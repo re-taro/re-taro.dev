@@ -2,14 +2,13 @@ import fs from 'node:fs'
 import path from 'node:path'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import * as chromium from 'playwright-aws-lambda'
-import React from 'react'
-import ReactDomServer from 'react-dom/server'
-import { OgpImage, OgpInfo } from '~/components/templates/ogp'
 
 const baseFullPath = path.resolve('./')
 const iconPath = path.join(baseFullPath, 'public/rintaro.webp')
+// eslint-disable-next-line security/detect-non-literal-fs-filename
 const icon: string = fs.readFileSync(iconPath, 'base64')
 const notopath = path.join(baseFullPath, 'public/fonts/NotoSansCJKJp-Bold.woff2')
+// eslint-disable-next-line security/detect-non-literal-fs-filename
 const noto = fs.readFileSync(notopath).toString('base64')
 const style = `
 @font-face {
@@ -43,7 +42,8 @@ body {
   grid-gap: 30px;
   border-radius: 30px;
   background: #2e3440;
-  box-shadow: 10px 10px 20px #1c192166, -10px -10px 20px #1c192166;
+  box-shadow: 10px 10px 20px rgba(28, 25, 33, 0.4),
+    -10px -10px 20px rgba(28, 25, 33, 0.4);
   padding: 50px;
   display: grid;
   grid-template-rows: 280px 100px;
@@ -75,7 +75,7 @@ body {
 }
 `
 
-// eslint-disable-next-line max-statements
+// eslint-disable-next-line max-statements,max-lines-per-function
 const Ogp = async (request: NextApiRequest, response: NextApiResponse) => {
   try {
     const playwrightArguments = {
@@ -97,13 +97,28 @@ const Ogp = async (request: NextApiRequest, response: NextApiResponse) => {
       'Accept-Language': 'ja-JP'
     })
     const title = request.query.title ?? ''
-    const ogpinfo: OgpInfo = {
-      icon,
-      style,
-      title: title.toString()
-    }
-    const markup = ReactDomServer.renderToStaticMarkup(<OgpImage {...ogpinfo} />)
-    const html = `<!doctype html>${markup}`
+    const html = `
+    <!doctype html>
+    <html lang="ja">
+      <head>
+        <style dangerouslySetInnerHTML={{ __html: ${style} }} />
+        <title></title>
+      </head>
+      <body>
+        <div id="Wrapper">
+          <h1 id="Title">
+            <p>${title.toString()}</p>
+          </h1>
+          <div id="Name">
+            <img src={data:image/webp;base64,${icon}} alt="icon" width={100} height={100} />
+            <h2 id="Host">
+              <p>re-taro.dev</p>
+            </h2>
+          </div>
+        </div>
+      </body>
+    </html>
+    `
     await page.setContent(html, { waitUntil: 'networkidle' })
     const image = await page.screenshot({ type: 'png' })
     await browser.close()
