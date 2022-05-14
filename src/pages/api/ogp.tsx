@@ -8,7 +8,7 @@ import * as chromium from 'playwright-aws-lambda'
 const iconPath = path.join(process.cwd(), 'public/rintaro.webp')
 // eslint-disable-next-line security/detect-non-literal-fs-filename
 const icon: string = fs.readFileSync(iconPath, 'base64')
-const notopath = path.join(process.cwd(), 'public/fonts/NotoSansCJKJp-Bold.woff2')
+const notopath = path.join(process.cwd(), 'public/fonts/NotoSansJp-Bold.woff2')
 // eslint-disable-next-line security/detect-non-literal-fs-filename
 const noto = fs.readFileSync(notopath).toString('base64')
 const style = `
