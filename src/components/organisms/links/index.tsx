@@ -28,7 +28,7 @@ const socialLinks: Array<LinkItems> = [
   {
     icon: 'fa-solid:envelope',
     platformName: 'e-mail',
-    url: 'mailto:me@re-taro.dev?cc=aminokacho@gmail.com'
+    url: '/mail'
   }
 ]
 
