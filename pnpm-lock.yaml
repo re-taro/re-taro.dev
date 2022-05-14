@@ -36,7 +36,6 @@ specifiers:
   graphql: 16.5.0
   graphql-tag: 2.12.6
   next: 12.1.5
-  next-sitemap: 2.5.20
   next-themes: 0.2.0
   next-urql: 3.3.2
   playwright: 1.21.1
@@ -140,7 +139,6 @@ devDependencies:
   globby: 13.1.1
   graphql: 16.5.0
   graphql-tag: 2.12.6_graphql@16.5.0
-  next-sitemap: 2.5.20_next@12.1.5
   postcss: 8.4.13
   preact-render-to-string: 5.2.0_preact@10.7.2
   prettier: 2.6.2
@@ -916,10 +914,6 @@ packages:
 
   /@bcoe/v8-coverage/0.2.3:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
-    dev: true
-
-  /@corex/deepmerge/2.6.148:
-    resolution: {integrity: sha512-6QMz0/2h5C3ua51iAnXMPWFbb1QOU1UvSM4bKBw5mzdT+WtLgjbETBBIQZ+Sh9WvEcGwlAt/DEdRpIC3XlDBMA==}
     dev: true
 
   /@emotion/babel-plugin-jsx-pragmatic/0.1.5_@babel+core@7.17.10:
@@ -7170,18 +7164,6 @@ packages:
 
   /natural-compare/1.4.0:
     resolution: {integrity: sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=}
-    dev: true
-
-  /next-sitemap/2.5.20_next@12.1.5:
-    resolution: {integrity: sha512-Qbm4N2WGA6VHemFN0C9PNWQav9RKwMEbVrNgVvDQhG0sDBmNBgKii54WklOjCvVJVHgQPgtXLBhlNaJGS+RVQA==}
-    engines: {node: '>=14.18'}
-    hasBin: true
-    peerDependencies:
-      next: '*'
-    dependencies:
-      '@corex/deepmerge': 2.6.148
-      minimist: 1.2.6
-      next: 12.1.5_swhhqbn4kh7ryzy2ky5hsul4v4
     dev: true
 
   /next-themes/0.2.0_e6c3vvsl2efrnze5m2olvwol4q:
