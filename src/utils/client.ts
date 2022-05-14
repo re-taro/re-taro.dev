@@ -1,26 +1,26 @@
-import { initUrqlClient } from 'next-urql'
-import { ssrExchange, dedupExchange, cacheExchange, fetchExchange } from 'urql'
-import type { Client } from 'urql'
+import { initUrqlClient } from "next-urql";
+import { ssrExchange, dedupExchange, cacheExchange, fetchExchange } from "urql";
+import type { Client } from "urql";
 
-const END_POINT = process.env.END_POINT || 'http://localhost:8000/graphql'
+const END_POINT = process.env.END_POINT || "http://localhost:8000/graphql";
 
-const ssrCache = ssrExchange({ isClient: false })
+const ssrCache = ssrExchange({ isClient: false });
 
 const urqlClient = (): Promise<Client> =>
   new Promise((resolve, reject) => {
     const client = initUrqlClient(
       {
         exchanges: [dedupExchange, cacheExchange, ssrCache, fetchExchange],
-        url: END_POINT
+        url: END_POINT,
       },
-      false
-    )
+      false,
+    );
     // eslint-disable-next-line no-negated-condition
     if (!client) {
-      reject(new Error('Failed to init initUrqlClient.'))
+      reject(new Error("Failed to init initUrqlClient."));
     } else {
-      resolve(client)
+      resolve(client);
     }
-  })
+  });
 
-export { urqlClient, ssrCache, END_POINT }
+export { urqlClient, ssrCache, END_POINT };

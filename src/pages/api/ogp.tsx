@@ -1,14 +1,14 @@
-import fs from 'node:fs'
-import path from 'node:path'
-import type { NextApiRequest, NextApiResponse } from 'next'
-import * as chromium from 'playwright-aws-lambda'
+import fs from "node:fs";
+import path from "node:path";
+import type { NextApiRequest, NextApiResponse } from "next";
+import * as chromium from "playwright-aws-lambda";
 
-const iconPath = path.join(process.cwd(), 'public/rintaro.webp')
+const iconPath = path.join(process.cwd(), "public/rintaro.webp");
 // eslint-disable-next-line security/detect-non-literal-fs-filename
-const icon: string = fs.readFileSync(iconPath, 'base64')
-const notopath = path.join(process.cwd(), 'public/fonts/NotoSansJp-Bold.woff2')
+const icon: string = fs.readFileSync(iconPath, "base64");
+const notopath = path.join(process.cwd(), "public/fonts/NotoSansJp-Bold.woff2");
 // eslint-disable-next-line security/detect-non-literal-fs-filename
-const noto = fs.readFileSync(notopath).toString('base64')
+const noto = fs.readFileSync(notopath).toString("base64");
 const style = `
 @font-face {
   font-family: "Noto Sans JP";
@@ -72,7 +72,7 @@ body {
   margin-right: 20px;
   border-radius: 50%;
 }
-`
+`;
 
 // eslint-disable-next-line max-statements,max-lines-per-function
 const Ogp = async (request: NextApiRequest, response: NextApiResponse) => {
@@ -80,22 +80,22 @@ const Ogp = async (request: NextApiRequest, response: NextApiResponse) => {
     const playwrightArguments = {
       development: {
         args: chromium.getChromiumArgs(false),
-        executablePath: '/opt/google/chrome/google-chrome',
-        headless: true
+        executablePath: "/opt/google/chrome/google-chrome",
+        headless: true,
       },
       production: {
-        args: chromium.getChromiumArgs(true)
+        args: chromium.getChromiumArgs(true),
       },
-      test: {}
-    }[process.env.NODE_ENV]
-    const viewport = { height: 630, width: 1200 }
-    const browser = await chromium.launchChromium(playwrightArguments)
-    const context = await browser.newContext({ viewport })
-    const page = await context.newPage()
+      test: {},
+    }[process.env.NODE_ENV];
+    const viewport = { height: 630, width: 1200 };
+    const browser = await chromium.launchChromium(playwrightArguments);
+    const context = await browser.newContext({ viewport });
+    const page = await context.newPage();
     await page.setExtraHTTPHeaders({
-      'Accept-Language': 'ja-JP'
-    })
-    const title = request.query.title ?? ''
+      "Accept-Language": "ja-JP",
+    });
+    const title = request.query.title ?? "";
     const html = `
     <!doctype html>
     <html lang="ja">
@@ -117,16 +117,16 @@ const Ogp = async (request: NextApiRequest, response: NextApiResponse) => {
         </div>
       </body>
     </html>
-    `
-    await page.setContent(html, { waitUntil: 'networkidle' })
-    const image = await page.screenshot({ type: 'png' })
-    await browser.close()
-    response.setHeader('Cache-Control', 's-maxage=5256000, stale-while-revalidate')
-    response.setHeader('Content-Type', 'image/png')
-    response.end(image)
+    `;
+    await page.setContent(html, { waitUntil: "networkidle" });
+    const image = await page.screenshot({ type: "png" });
+    await browser.close();
+    response.setHeader("Cache-Control", "s-maxage=5256000, stale-while-revalidate");
+    response.setHeader("Content-Type", "image/png");
+    response.end(image);
   } catch {
-    response.status(500).send('Internal Server Error')
+    response.status(500).send("Internal Server Error");
   }
-}
+};
 
-export default Ogp
+export default Ogp;

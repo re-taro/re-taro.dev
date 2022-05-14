@@ -1,22 +1,22 @@
-import { InlineIcon } from '@iconify/react'
-import Link from 'next/link'
-import React, { useState } from 'react'
-import tw from 'twin.macro'
-import { NavigationItem } from '../navigation'
-import { Button } from '~/components/atoms/button'
-import { Text } from '~/components/atoms/text'
-import { trackEventToUmami } from '~/utils/umami'
+import { InlineIcon } from "@iconify/react";
+import Link from "next/link";
+import React, { useState } from "react";
+import tw from "twin.macro";
+import { NavigationItem } from "../navigation";
+import { Button } from "~/components/atoms/button";
+import { Text } from "~/components/atoms/text";
+import { trackEventToUmami } from "~/utils/umami";
 
-const HamburgerBox = tw.div`relative inline-block`
+const HamburgerBox = tw.div`relative inline-block`;
 
 const Hamburger: React.FC = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false)
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
     <HamburgerBox>
       <Button
-        aria-label={'Hamburger'}
-        variant={'icon'}
-        leftIcon={isOpen ? 'eva:close-fill' : 'fa-solid:hamburger'}
+        aria-label={"Hamburger"}
+        variant={"icon"}
+        leftIcon={isOpen ? "eva:close-fill" : "fa-solid:hamburger"}
         iconStyles={tw`text-2xl`}
         boxStyles={tw`p-1 hover:outline-none hover:ring-2 hover:ring-frost-100 w-8 h-8 mx-1`}
         onClick={() => setIsOpen(!isOpen)}
@@ -33,7 +33,7 @@ const Hamburger: React.FC = () => {
             <Link href={href} passHref>
               <a
                 css={tw`flex items-center`}
-                onClick={() => trackEventToUmami({ eventType: 'navigate', eventValue: `Nav Link: ${label}` })}
+                onClick={() => trackEventToUmami({ eventType: "navigate", eventValue: `Nav Link: ${label}` })}
               >
                 <div css={tw`flex items-center justify-center flex-shrink-0 w-4 h-4 min-h-full mr-2`}>
                   <InlineIcon
@@ -48,7 +48,7 @@ const Hamburger: React.FC = () => {
         ))}
       </ul>
     </HamburgerBox>
-  )
-}
+  );
+};
 
-export default Hamburger
+export default Hamburger;

@@ -1,18 +1,18 @@
-import Image from 'next/image'
-import React from 'react'
-import tw, { css } from 'twin.macro'
-import { Chip } from '~/components/atoms/chip'
-import { Flex } from '~/components/atoms/flex'
-import { Text } from '~/components/atoms/text'
-import type { SeoProperties } from '~/components/organisms/seo'
-import { WorkHead } from '~/components/organisms/work-head'
-import { WorkMeta } from '~/components/organisms/work-meta'
-import type { WorkQuery } from '~/graphql'
+import Image from "next/image";
+import React from "react";
+import tw, { css } from "twin.macro";
+import { Chip } from "~/components/atoms/chip";
+import { Flex } from "~/components/atoms/flex";
+import { Text } from "~/components/atoms/text";
+import type { SeoProperties } from "~/components/organisms/seo";
+import { WorkHead } from "~/components/organisms/work-head";
+import { WorkMeta } from "~/components/organisms/work-meta";
+import type { WorkQuery } from "~/graphql";
 
 type WorkProperties = {
-  data: WorkQuery | undefined
-  meta: SeoProperties
-}
+  data: WorkQuery | undefined;
+  meta: SeoProperties;
+};
 
 // eslint-disable-next-line max-lines-per-function
 const Work: React.FC<WorkProperties> = ({ data, meta }) => (
@@ -41,7 +41,7 @@ const Work: React.FC<WorkProperties> = ({ data, meta }) => (
                   css={css`
                     :not(:first-child) {
                       :before {
-                        content: ', ';
+                        content: ", ";
                       }
                     }
                   `}
@@ -119,6 +119,6 @@ const Work: React.FC<WorkProperties> = ({ data, meta }) => (
       ))}
     </article>
   </article>
-)
+);
 
-export { Work }
+export { Work };

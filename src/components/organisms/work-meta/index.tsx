@@ -1,11 +1,11 @@
-import React from 'react'
-import { Seo } from '../seo'
-import type { SeoProperties } from '../seo'
+import React from "react";
+import { Seo } from "../seo";
+import type { SeoProperties } from "../seo";
 
 type WorkMetaPropeties = {
-  meta: SeoProperties
-}
+  meta: SeoProperties;
+};
 
-const WorkMeta: React.FC<WorkMetaPropeties> = ({ meta }) => <Seo {...meta} />
+const WorkMeta: React.FC<WorkMetaPropeties> = ({ meta }) => <Seo {...meta} />;
 
-export { WorkMeta }
+export { WorkMeta };

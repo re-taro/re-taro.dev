@@ -1,5 +1,5 @@
-import tw from 'twin.macro'
+import tw from "twin.macro";
 
-const Grid = tw.div`grid`
+const Grid = tw.div`grid`;
 
-export { Grid }
+export { Grid };

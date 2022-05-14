@@ -1,240 +1,240 @@
-import gql from 'graphql-tag'
-import * as Urql from 'urql'
-export type Maybe<T> = T | null
-export type InputMaybe<T> = Maybe<T>
-export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] }
-export type MakeOptional<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]?: Maybe<T[SubKey]> }
-export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]: Maybe<T[SubKey]> }
-export type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
+import gql from "graphql-tag";
+import * as Urql from "urql";
+export type Maybe<T> = T | null;
+export type InputMaybe<T> = Maybe<T>;
+export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
+export type MakeOptional<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]?: Maybe<T[SubKey]> };
+export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]: Maybe<T[SubKey]> };
+export type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
-  ID: string
-  String: string
-  Boolean: boolean
-  Int: number
-  Float: number
-}
+  ID: string;
+  String: string;
+  Boolean: boolean;
+  Int: number;
+  Float: number;
+};
 
 export type Affiliation = {
-  __typename?: 'Affiliation'
-  assign: Scalars['String']
-  location: Scalars['String']
-}
+  __typename?: "Affiliation";
+  assign: Scalars["String"];
+  location: Scalars["String"];
+};
 
 export type Basic = {
-  __typename?: 'Basic'
-  affiliation: Affiliation
-  introduction: Scalars['String']
-  name: Name
-}
+  __typename?: "Basic";
+  affiliation: Affiliation;
+  introduction: Scalars["String"];
+  name: Name;
+};
 
 export type Bio = {
-  __typename?: 'Bio'
-  action: Scalars['String']
-  date: Scalars['String']
-  title: Scalars['String']
-}
+  __typename?: "Bio";
+  action: Scalars["String"];
+  date: Scalars["String"];
+  title: Scalars["String"];
+};
 
 export type BlogPost = {
-  __typename?: 'BlogPost'
-  title: Scalars['String']
-  url: Scalars['String']
-}
+  __typename?: "BlogPost";
+  title: Scalars["String"];
+  url: Scalars["String"];
+};
 
 export type Meta = {
-  __typename?: 'Meta'
-  blogPost?: Maybe<BlogPost>
-  platform: Array<Scalars['String']>
-  presentation?: Maybe<Presentation>
-  source?: Maybe<Scalars['String']>
-  stack: Array<Stack>
-  website?: Maybe<Scalars['String']>
-}
+  __typename?: "Meta";
+  blogPost?: Maybe<BlogPost>;
+  platform: Array<Scalars["String"]>;
+  presentation?: Maybe<Presentation>;
+  source?: Maybe<Scalars["String"]>;
+  stack: Array<Stack>;
+  website?: Maybe<Scalars["String"]>;
+};
 
 export type Name = {
-  __typename?: 'Name'
-  position: Scalars['String']
-  primary: Scalars['String']
-}
+  __typename?: "Name";
+  position: Scalars["String"];
+  primary: Scalars["String"];
+};
 
 export type Post = {
-  __typename?: 'Post'
-  content: Scalars['String']
-  header: PostHeader
-}
+  __typename?: "Post";
+  content: Scalars["String"];
+  header: PostHeader;
+};
 
 export type PostHeader = {
-  __typename?: 'PostHeader'
-  date: Scalars['String']
-  emoji: Scalars['String']
-  id: Scalars['String']
-  tags: Array<Scalars['String']>
-  title: Scalars['String']
-}
+  __typename?: "PostHeader";
+  date: Scalars["String"];
+  emoji: Scalars["String"];
+  id: Scalars["String"];
+  tags: Array<Scalars["String"]>;
+  title: Scalars["String"];
+};
 
 export type Presentation = {
-  __typename?: 'Presentation'
-  title: Scalars['String']
-  url: Scalars['String']
-}
+  __typename?: "Presentation";
+  title: Scalars["String"];
+  url: Scalars["String"];
+};
 
 export type Query = {
-  __typename?: 'Query'
-  basic: Basic
-  bio: Array<Bio>
-  postById: Post
-  posts: Array<PostHeader>
-  postsByTag: Array<PostHeader>
-  work: Work
-  works: Array<Work>
-}
+  __typename?: "Query";
+  basic: Basic;
+  bio: Array<Bio>;
+  postById: Post;
+  posts: Array<PostHeader>;
+  postsByTag: Array<PostHeader>;
+  work: Work;
+  works: Array<Work>;
+};
 
 export type QueryPostByIdArgs = {
-  id: Scalars['String']
-}
+  id: Scalars["String"];
+};
 
 export type QueryPostsByTagArgs = {
-  tag: Scalars['String']
-}
+  tag: Scalars["String"];
+};
 
 export type QueryWorkArgs = {
-  id: Scalars['String']
-}
+  id: Scalars["String"];
+};
 
 export type Stack = {
-  __typename?: 'Stack'
-  icon?: Maybe<Scalars['String']>
-  name: Scalars['String']
-}
+  __typename?: "Stack";
+  icon?: Maybe<Scalars["String"]>;
+  name: Scalars["String"];
+};
 
 export type Work = {
-  __typename?: 'Work'
-  date: Scalars['String']
-  description: Scalars['String']
-  id: Scalars['String']
-  imageUrl: Scalars['String']
-  title: Scalars['String']
-  workPage: WorkPage
-}
+  __typename?: "Work";
+  date: Scalars["String"];
+  description: Scalars["String"];
+  id: Scalars["String"];
+  imageUrl: Scalars["String"];
+  title: Scalars["String"];
+  workPage: WorkPage;
+};
 
 export type WorkPage = {
-  __typename?: 'WorkPage'
-  detail: Scalars['String']
-  images?: Maybe<Array<Scalars['String']>>
-  meta: Meta
-  title: Scalars['String']
-}
+  __typename?: "WorkPage";
+  detail: Scalars["String"];
+  images?: Maybe<Array<Scalars["String"]>>;
+  meta: Meta;
+  title: Scalars["String"];
+};
 
-export type AboutQueryVariables = Exact<{ [key: string]: never }>
+export type AboutQueryVariables = Exact<{ [key: string]: never }>;
 
 export type AboutQuery = {
-  __typename?: 'Query'
+  __typename?: "Query";
   basic: {
-    __typename?: 'Basic'
-    introduction: string
-    affiliation: { __typename?: 'Affiliation'; location: string; assign: string }
-  }
-}
+    __typename?: "Basic";
+    introduction: string;
+    affiliation: { __typename?: "Affiliation"; location: string; assign: string };
+  };
+};
 
-export type HomeQueryVariables = Exact<{ [key: string]: never }>
+export type HomeQueryVariables = Exact<{ [key: string]: never }>;
 
 export type HomeQuery = {
-  __typename?: 'Query'
-  basic: { __typename?: 'Basic'; name: { __typename?: 'Name'; position: string; primary: string } }
-  bio: Array<{ __typename?: 'Bio'; date: string; title: string; action: string }>
+  __typename?: "Query";
+  basic: { __typename?: "Basic"; name: { __typename?: "Name"; position: string; primary: string } };
+  bio: Array<{ __typename?: "Bio"; date: string; title: string; action: string }>;
   posts: Array<{
-    __typename?: 'PostHeader'
-    emoji: string
-    id: string
-    title: string
-    date: string
-    tags: Array<string>
-  }>
-  works: Array<{ __typename?: 'Work'; id: string; imageUrl: string; title: string; date: string }>
-}
+    __typename?: "PostHeader";
+    emoji: string;
+    id: string;
+    title: string;
+    date: string;
+    tags: Array<string>;
+  }>;
+  works: Array<{ __typename?: "Work"; id: string; imageUrl: string; title: string; date: string }>;
+};
 
 export type PostQueryVariables = Exact<{
-  id: Scalars['String']
-}>
+  id: Scalars["String"];
+}>;
 
 export type PostQuery = {
-  __typename?: 'Query'
+  __typename?: "Query";
   postById: {
-    __typename?: 'Post'
-    content: string
-    header: { __typename?: 'PostHeader'; emoji: string; id: string; title: string; date: string; tags: Array<string> }
-  }
-}
+    __typename?: "Post";
+    content: string;
+    header: { __typename?: "PostHeader"; emoji: string; id: string; title: string; date: string; tags: Array<string> };
+  };
+};
 
-export type PostsQueryVariables = Exact<{ [key: string]: never }>
+export type PostsQueryVariables = Exact<{ [key: string]: never }>;
 
 export type PostsQuery = {
-  __typename?: 'Query'
+  __typename?: "Query";
   posts: Array<{
-    __typename?: 'PostHeader'
-    emoji: string
-    id: string
-    title: string
-    date: string
-    tags: Array<string>
-  }>
-}
+    __typename?: "PostHeader";
+    emoji: string;
+    id: string;
+    title: string;
+    date: string;
+    tags: Array<string>;
+  }>;
+};
 
 export type TagQueryVariables = Exact<{
-  tag: Scalars['String']
-}>
+  tag: Scalars["String"];
+}>;
 
 export type TagQuery = {
-  __typename?: 'Query'
+  __typename?: "Query";
   postsByTag: Array<{
-    __typename?: 'PostHeader'
-    emoji: string
-    id: string
-    title: string
-    date: string
-    tags: Array<string>
-  }>
-}
+    __typename?: "PostHeader";
+    emoji: string;
+    id: string;
+    title: string;
+    date: string;
+    tags: Array<string>;
+  }>;
+};
 
-export type TagsQueryVariables = Exact<{ [key: string]: never }>
+export type TagsQueryVariables = Exact<{ [key: string]: never }>;
 
-export type TagsQuery = { __typename?: 'Query'; posts: Array<{ __typename?: 'PostHeader'; tags: Array<string> }> }
+export type TagsQuery = { __typename?: "Query"; posts: Array<{ __typename?: "PostHeader"; tags: Array<string> }> };
 
 export type WorkQueryVariables = Exact<{
-  id: Scalars['String']
-}>
+  id: Scalars["String"];
+}>;
 
 export type WorkQuery = {
-  __typename?: 'Query'
+  __typename?: "Query";
   work: {
-    __typename?: 'Work'
-    id: string
-    imageUrl: string
-    date: string
+    __typename?: "Work";
+    id: string;
+    imageUrl: string;
+    date: string;
     workPage: {
-      __typename?: 'WorkPage'
-      title: string
-      detail: string
-      images?: Array<string> | null
+      __typename?: "WorkPage";
+      title: string;
+      detail: string;
+      images?: Array<string> | null;
       meta: {
-        __typename?: 'Meta'
-        website?: string | null
-        platform: Array<string>
-        source?: string | null
-        stack: Array<{ __typename?: 'Stack'; icon?: string | null; name: string }>
-        blogPost?: { __typename?: 'BlogPost'; title: string; url: string } | null
-        presentation?: { __typename?: 'Presentation'; title: string; url: string } | null
-      }
-    }
-  }
-}
+        __typename?: "Meta";
+        website?: string | null;
+        platform: Array<string>;
+        source?: string | null;
+        stack: Array<{ __typename?: "Stack"; icon?: string | null; name: string }>;
+        blogPost?: { __typename?: "BlogPost"; title: string; url: string } | null;
+        presentation?: { __typename?: "Presentation"; title: string; url: string } | null;
+      };
+    };
+  };
+};
 
-export type WorksQueryVariables = Exact<{ [key: string]: never }>
+export type WorksQueryVariables = Exact<{ [key: string]: never }>;
 
 export type WorksQuery = {
-  __typename?: 'Query'
-  works: Array<{ __typename?: 'Work'; title: string; id: string; imageUrl: string; description: string; date: string }>
-}
+  __typename?: "Query";
+  works: Array<{ __typename?: "Work"; title: string; id: string; imageUrl: string; description: string; date: string }>;
+};
 
 export const AboutDocument = gql`
   query about {
@@ -246,10 +246,10 @@ export const AboutDocument = gql`
       }
     }
   }
-`
+`;
 
-export function useAboutQuery(options?: Omit<Urql.UseQueryArgs<AboutQueryVariables>, 'query'>) {
-  return Urql.useQuery<AboutQuery>({ query: AboutDocument, ...options })
+export function useAboutQuery(options?: Omit<Urql.UseQueryArgs<AboutQueryVariables>, "query">) {
+  return Urql.useQuery<AboutQuery>({ query: AboutDocument, ...options });
 }
 export const HomeDocument = gql`
   query home {
@@ -278,10 +278,10 @@ export const HomeDocument = gql`
       date
     }
   }
-`
+`;
 
-export function useHomeQuery(options?: Omit<Urql.UseQueryArgs<HomeQueryVariables>, 'query'>) {
-  return Urql.useQuery<HomeQuery>({ query: HomeDocument, ...options })
+export function useHomeQuery(options?: Omit<Urql.UseQueryArgs<HomeQueryVariables>, "query">) {
+  return Urql.useQuery<HomeQuery>({ query: HomeDocument, ...options });
 }
 export const PostDocument = gql`
   query post($id: String!) {
@@ -296,10 +296,10 @@ export const PostDocument = gql`
       content
     }
   }
-`
+`;
 
-export function usePostQuery(options: Omit<Urql.UseQueryArgs<PostQueryVariables>, 'query'>) {
-  return Urql.useQuery<PostQuery>({ query: PostDocument, ...options })
+export function usePostQuery(options: Omit<Urql.UseQueryArgs<PostQueryVariables>, "query">) {
+  return Urql.useQuery<PostQuery>({ query: PostDocument, ...options });
 }
 export const PostsDocument = gql`
   query posts {
@@ -311,10 +311,10 @@ export const PostsDocument = gql`
       tags
     }
   }
-`
+`;
 
-export function usePostsQuery(options?: Omit<Urql.UseQueryArgs<PostsQueryVariables>, 'query'>) {
-  return Urql.useQuery<PostsQuery>({ query: PostsDocument, ...options })
+export function usePostsQuery(options?: Omit<Urql.UseQueryArgs<PostsQueryVariables>, "query">) {
+  return Urql.useQuery<PostsQuery>({ query: PostsDocument, ...options });
 }
 export const TagDocument = gql`
   query Tag($tag: String!) {
@@ -326,10 +326,10 @@ export const TagDocument = gql`
       tags
     }
   }
-`
+`;
 
-export function useTagQuery(options: Omit<Urql.UseQueryArgs<TagQueryVariables>, 'query'>) {
-  return Urql.useQuery<TagQuery>({ query: TagDocument, ...options })
+export function useTagQuery(options: Omit<Urql.UseQueryArgs<TagQueryVariables>, "query">) {
+  return Urql.useQuery<TagQuery>({ query: TagDocument, ...options });
 }
 export const TagsDocument = gql`
   query Tags {
@@ -337,10 +337,10 @@ export const TagsDocument = gql`
       tags
     }
   }
-`
+`;
 
-export function useTagsQuery(options?: Omit<Urql.UseQueryArgs<TagsQueryVariables>, 'query'>) {
-  return Urql.useQuery<TagsQuery>({ query: TagsDocument, ...options })
+export function useTagsQuery(options?: Omit<Urql.UseQueryArgs<TagsQueryVariables>, "query">) {
+  return Urql.useQuery<TagsQuery>({ query: TagsDocument, ...options });
 }
 export const WorkDocument = gql`
   query work($id: String!) {
@@ -372,10 +372,10 @@ export const WorkDocument = gql`
       }
     }
   }
-`
+`;
 
-export function useWorkQuery(options: Omit<Urql.UseQueryArgs<WorkQueryVariables>, 'query'>) {
-  return Urql.useQuery<WorkQuery>({ query: WorkDocument, ...options })
+export function useWorkQuery(options: Omit<Urql.UseQueryArgs<WorkQueryVariables>, "query">) {
+  return Urql.useQuery<WorkQuery>({ query: WorkDocument, ...options });
 }
 export const WorksDocument = gql`
   query works {
@@ -387,700 +387,700 @@ export const WorksDocument = gql`
       date
     }
   }
-`
+`;
 
-export function useWorksQuery(options?: Omit<Urql.UseQueryArgs<WorksQueryVariables>, 'query'>) {
-  return Urql.useQuery<WorksQuery>({ query: WorksDocument, ...options })
+export function useWorksQuery(options?: Omit<Urql.UseQueryArgs<WorksQueryVariables>, "query">) {
+  return Urql.useQuery<WorksQuery>({ query: WorksDocument, ...options });
 }
-import { IntrospectionQuery } from 'graphql'
+import { IntrospectionQuery } from "graphql";
 export default {
   __schema: {
     queryType: {
-      name: 'Query'
+      name: "Query",
     },
     mutationType: null,
     subscriptionType: null,
     types: [
       {
-        kind: 'OBJECT',
-        name: 'Affiliation',
+        kind: "OBJECT",
+        name: "Affiliation",
         fields: [
           {
-            name: 'assign',
+            name: "assign",
             type: {
-              kind: 'NON_NULL',
+              kind: "NON_NULL",
               ofType: {
-                kind: 'SCALAR',
-                name: 'Any'
-              }
+                kind: "SCALAR",
+                name: "Any",
+              },
             },
-            args: []
+            args: [],
           },
           {
-            name: 'location',
+            name: "location",
             type: {
-              kind: 'NON_NULL',
+              kind: "NON_NULL",
               ofType: {
-                kind: 'SCALAR',
-                name: 'Any'
-              }
+                kind: "SCALAR",
+                name: "Any",
+              },
             },
-            args: []
-          }
+            args: [],
+          },
         ],
-        interfaces: []
+        interfaces: [],
       },
       {
-        kind: 'OBJECT',
-        name: 'Basic',
+        kind: "OBJECT",
+        name: "Basic",
         fields: [
           {
-            name: 'affiliation',
+            name: "affiliation",
             type: {
-              kind: 'NON_NULL',
+              kind: "NON_NULL",
               ofType: {
-                kind: 'OBJECT',
-                name: 'Affiliation',
-                ofType: null
-              }
+                kind: "OBJECT",
+                name: "Affiliation",
+                ofType: null,
+              },
             },
-            args: []
+            args: [],
           },
           {
-            name: 'introduction',
+            name: "introduction",
             type: {
-              kind: 'NON_NULL',
+              kind: "NON_NULL",
               ofType: {
-                kind: 'SCALAR',
-                name: 'Any'
-              }
+                kind: "SCALAR",
+                name: "Any",
+              },
             },
-            args: []
+            args: [],
           },
           {
-            name: 'name',
+            name: "name",
             type: {
-              kind: 'NON_NULL',
+              kind: "NON_NULL",
               ofType: {
-                kind: 'OBJECT',
-                name: 'Name',
-                ofType: null
-              }
+                kind: "OBJECT",
+                name: "Name",
+                ofType: null,
+              },
             },
-            args: []
-          }
+            args: [],
+          },
         ],
-        interfaces: []
+        interfaces: [],
       },
       {
-        kind: 'OBJECT',
-        name: 'Bio',
+        kind: "OBJECT",
+        name: "Bio",
         fields: [
           {
-            name: 'action',
+            name: "action",
             type: {
-              kind: 'NON_NULL',
+              kind: "NON_NULL",
               ofType: {
-                kind: 'SCALAR',
-                name: 'Any'
-              }
+                kind: "SCALAR",
+                name: "Any",
+              },
             },
-            args: []
+            args: [],
           },
           {
-            name: 'date',
+            name: "date",
             type: {
-              kind: 'NON_NULL',
+              kind: "NON_NULL",
               ofType: {
-                kind: 'SCALAR',
-                name: 'Any'
-              }
+                kind: "SCALAR",
+                name: "Any",
+              },
             },
-            args: []
+            args: [],
           },
           {
-            name: 'title',
+            name: "title",
             type: {
-              kind: 'NON_NULL',
+              kind: "NON_NULL",
               ofType: {
-                kind: 'SCALAR',
-                name: 'Any'
-              }
+                kind: "SCALAR",
+                name: "Any",
+              },
             },
-            args: []
-          }
+            args: [],
+          },
         ],
-        interfaces: []
+        interfaces: [],
       },
       {
-        kind: 'OBJECT',
-        name: 'BlogPost',
+        kind: "OBJECT",
+        name: "BlogPost",
         fields: [
           {
-            name: 'title',
+            name: "title",
             type: {
-              kind: 'NON_NULL',
+              kind: "NON_NULL",
               ofType: {
-                kind: 'SCALAR',
-                name: 'Any'
-              }
+                kind: "SCALAR",
+                name: "Any",
+              },
             },
-            args: []
+            args: [],
           },
           {
-            name: 'url',
+            name: "url",
             type: {
-              kind: 'NON_NULL',
+              kind: "NON_NULL",
               ofType: {
-                kind: 'SCALAR',
-                name: 'Any'
-              }
+                kind: "SCALAR",
+                name: "Any",
+              },
             },
-            args: []
-          }
+            args: [],
+          },
         ],
-        interfaces: []
+        interfaces: [],
       },
       {
-        kind: 'OBJECT',
-        name: 'Meta',
+        kind: "OBJECT",
+        name: "Meta",
         fields: [
           {
-            name: 'blogPost',
+            name: "blogPost",
             type: {
-              kind: 'OBJECT',
-              name: 'BlogPost',
-              ofType: null
+              kind: "OBJECT",
+              name: "BlogPost",
+              ofType: null,
             },
-            args: []
+            args: [],
           },
           {
-            name: 'platform',
+            name: "platform",
             type: {
-              kind: 'NON_NULL',
+              kind: "NON_NULL",
               ofType: {
-                kind: 'LIST',
+                kind: "LIST",
                 ofType: {
-                  kind: 'NON_NULL',
+                  kind: "NON_NULL",
                   ofType: {
-                    kind: 'SCALAR',
-                    name: 'Any'
-                  }
-                }
-              }
+                    kind: "SCALAR",
+                    name: "Any",
+                  },
+                },
+              },
             },
-            args: []
+            args: [],
           },
           {
-            name: 'presentation',
+            name: "presentation",
             type: {
-              kind: 'OBJECT',
-              name: 'Presentation',
-              ofType: null
+              kind: "OBJECT",
+              name: "Presentation",
+              ofType: null,
             },
-            args: []
+            args: [],
           },
           {
-            name: 'source',
+            name: "source",
             type: {
-              kind: 'SCALAR',
-              name: 'Any'
+              kind: "SCALAR",
+              name: "Any",
             },
-            args: []
+            args: [],
           },
           {
-            name: 'stack',
+            name: "stack",
             type: {
-              kind: 'NON_NULL',
+              kind: "NON_NULL",
               ofType: {
-                kind: 'LIST',
+                kind: "LIST",
                 ofType: {
-                  kind: 'NON_NULL',
+                  kind: "NON_NULL",
                   ofType: {
-                    kind: 'OBJECT',
-                    name: 'Stack',
-                    ofType: null
-                  }
-                }
-              }
+                    kind: "OBJECT",
+                    name: "Stack",
+                    ofType: null,
+                  },
+                },
+              },
             },
-            args: []
+            args: [],
           },
           {
-            name: 'website',
+            name: "website",
             type: {
-              kind: 'SCALAR',
-              name: 'Any'
+              kind: "SCALAR",
+              name: "Any",
             },
-            args: []
-          }
+            args: [],
+          },
         ],
-        interfaces: []
+        interfaces: [],
       },
       {
-        kind: 'OBJECT',
-        name: 'Name',
+        kind: "OBJECT",
+        name: "Name",
         fields: [
           {
-            name: 'position',
+            name: "position",
             type: {
-              kind: 'NON_NULL',
+              kind: "NON_NULL",
               ofType: {
-                kind: 'SCALAR',
-                name: 'Any'
-              }
+                kind: "SCALAR",
+                name: "Any",
+              },
             },
-            args: []
+            args: [],
           },
           {
-            name: 'primary',
+            name: "primary",
             type: {
-              kind: 'NON_NULL',
+              kind: "NON_NULL",
               ofType: {
-                kind: 'SCALAR',
-                name: 'Any'
-              }
+                kind: "SCALAR",
+                name: "Any",
+              },
             },
-            args: []
-          }
+            args: [],
+          },
         ],
-        interfaces: []
+        interfaces: [],
       },
       {
-        kind: 'OBJECT',
-        name: 'Post',
+        kind: "OBJECT",
+        name: "Post",
         fields: [
           {
-            name: 'content',
+            name: "content",
             type: {
-              kind: 'NON_NULL',
+              kind: "NON_NULL",
               ofType: {
-                kind: 'SCALAR',
-                name: 'Any'
-              }
+                kind: "SCALAR",
+                name: "Any",
+              },
             },
-            args: []
+            args: [],
           },
           {
-            name: 'header',
+            name: "header",
             type: {
-              kind: 'NON_NULL',
+              kind: "NON_NULL",
               ofType: {
-                kind: 'OBJECT',
-                name: 'PostHeader',
-                ofType: null
-              }
+                kind: "OBJECT",
+                name: "PostHeader",
+                ofType: null,
+              },
             },
-            args: []
-          }
+            args: [],
+          },
         ],
-        interfaces: []
+        interfaces: [],
       },
       {
-        kind: 'OBJECT',
-        name: 'PostHeader',
+        kind: "OBJECT",
+        name: "PostHeader",
         fields: [
           {
-            name: 'date',
+            name: "date",
             type: {
-              kind: 'NON_NULL',
+              kind: "NON_NULL",
               ofType: {
-                kind: 'SCALAR',
-                name: 'Any'
-              }
+                kind: "SCALAR",
+                name: "Any",
+              },
             },
-            args: []
+            args: [],
           },
           {
-            name: 'emoji',
+            name: "emoji",
             type: {
-              kind: 'NON_NULL',
+              kind: "NON_NULL",
               ofType: {
-                kind: 'SCALAR',
-                name: 'Any'
-              }
+                kind: "SCALAR",
+                name: "Any",
+              },
             },
-            args: []
+            args: [],
           },
           {
-            name: 'id',
+            name: "id",
             type: {
-              kind: 'NON_NULL',
+              kind: "NON_NULL",
               ofType: {
-                kind: 'SCALAR',
-                name: 'Any'
-              }
+                kind: "SCALAR",
+                name: "Any",
+              },
             },
-            args: []
+            args: [],
           },
           {
-            name: 'tags',
+            name: "tags",
             type: {
-              kind: 'NON_NULL',
+              kind: "NON_NULL",
               ofType: {
-                kind: 'LIST',
+                kind: "LIST",
                 ofType: {
-                  kind: 'NON_NULL',
+                  kind: "NON_NULL",
                   ofType: {
-                    kind: 'SCALAR',
-                    name: 'Any'
-                  }
-                }
-              }
+                    kind: "SCALAR",
+                    name: "Any",
+                  },
+                },
+              },
             },
-            args: []
+            args: [],
           },
           {
-            name: 'title',
+            name: "title",
             type: {
-              kind: 'NON_NULL',
+              kind: "NON_NULL",
               ofType: {
-                kind: 'SCALAR',
-                name: 'Any'
-              }
+                kind: "SCALAR",
+                name: "Any",
+              },
             },
-            args: []
-          }
+            args: [],
+          },
         ],
-        interfaces: []
+        interfaces: [],
       },
       {
-        kind: 'OBJECT',
-        name: 'Presentation',
+        kind: "OBJECT",
+        name: "Presentation",
         fields: [
           {
-            name: 'title',
+            name: "title",
             type: {
-              kind: 'NON_NULL',
+              kind: "NON_NULL",
               ofType: {
-                kind: 'SCALAR',
-                name: 'Any'
-              }
+                kind: "SCALAR",
+                name: "Any",
+              },
             },
-            args: []
+            args: [],
           },
           {
-            name: 'url',
+            name: "url",
             type: {
-              kind: 'NON_NULL',
+              kind: "NON_NULL",
               ofType: {
-                kind: 'SCALAR',
-                name: 'Any'
-              }
+                kind: "SCALAR",
+                name: "Any",
+              },
             },
-            args: []
-          }
+            args: [],
+          },
         ],
-        interfaces: []
+        interfaces: [],
       },
       {
-        kind: 'OBJECT',
-        name: 'Query',
+        kind: "OBJECT",
+        name: "Query",
         fields: [
           {
-            name: 'basic',
+            name: "basic",
             type: {
-              kind: 'NON_NULL',
+              kind: "NON_NULL",
               ofType: {
-                kind: 'OBJECT',
-                name: 'Basic',
-                ofType: null
-              }
+                kind: "OBJECT",
+                name: "Basic",
+                ofType: null,
+              },
             },
-            args: []
+            args: [],
           },
           {
-            name: 'bio',
+            name: "bio",
             type: {
-              kind: 'NON_NULL',
+              kind: "NON_NULL",
               ofType: {
-                kind: 'LIST',
+                kind: "LIST",
                 ofType: {
-                  kind: 'NON_NULL',
+                  kind: "NON_NULL",
                   ofType: {
-                    kind: 'OBJECT',
-                    name: 'Bio',
-                    ofType: null
-                  }
-                }
-              }
+                    kind: "OBJECT",
+                    name: "Bio",
+                    ofType: null,
+                  },
+                },
+              },
             },
-            args: []
+            args: [],
           },
           {
-            name: 'postById',
+            name: "postById",
             type: {
-              kind: 'NON_NULL',
+              kind: "NON_NULL",
               ofType: {
-                kind: 'OBJECT',
-                name: 'Post',
-                ofType: null
-              }
+                kind: "OBJECT",
+                name: "Post",
+                ofType: null,
+              },
             },
             args: [
               {
-                name: 'id',
+                name: "id",
                 type: {
-                  kind: 'NON_NULL',
+                  kind: "NON_NULL",
                   ofType: {
-                    kind: 'SCALAR',
-                    name: 'Any'
-                  }
-                }
-              }
-            ]
+                    kind: "SCALAR",
+                    name: "Any",
+                  },
+                },
+              },
+            ],
           },
           {
-            name: 'posts',
+            name: "posts",
             type: {
-              kind: 'NON_NULL',
+              kind: "NON_NULL",
               ofType: {
-                kind: 'LIST',
+                kind: "LIST",
                 ofType: {
-                  kind: 'NON_NULL',
+                  kind: "NON_NULL",
                   ofType: {
-                    kind: 'OBJECT',
-                    name: 'PostHeader',
-                    ofType: null
-                  }
-                }
-              }
+                    kind: "OBJECT",
+                    name: "PostHeader",
+                    ofType: null,
+                  },
+                },
+              },
             },
-            args: []
+            args: [],
           },
           {
-            name: 'postsByTag',
+            name: "postsByTag",
             type: {
-              kind: 'NON_NULL',
+              kind: "NON_NULL",
               ofType: {
-                kind: 'LIST',
+                kind: "LIST",
                 ofType: {
-                  kind: 'NON_NULL',
+                  kind: "NON_NULL",
                   ofType: {
-                    kind: 'OBJECT',
-                    name: 'PostHeader',
-                    ofType: null
-                  }
-                }
-              }
+                    kind: "OBJECT",
+                    name: "PostHeader",
+                    ofType: null,
+                  },
+                },
+              },
             },
             args: [
               {
-                name: 'tag',
+                name: "tag",
                 type: {
-                  kind: 'NON_NULL',
+                  kind: "NON_NULL",
                   ofType: {
-                    kind: 'SCALAR',
-                    name: 'Any'
-                  }
-                }
-              }
-            ]
+                    kind: "SCALAR",
+                    name: "Any",
+                  },
+                },
+              },
+            ],
           },
           {
-            name: 'work',
+            name: "work",
             type: {
-              kind: 'NON_NULL',
+              kind: "NON_NULL",
               ofType: {
-                kind: 'OBJECT',
-                name: 'Work',
-                ofType: null
-              }
+                kind: "OBJECT",
+                name: "Work",
+                ofType: null,
+              },
             },
             args: [
               {
-                name: 'id',
+                name: "id",
                 type: {
-                  kind: 'NON_NULL',
+                  kind: "NON_NULL",
                   ofType: {
-                    kind: 'SCALAR',
-                    name: 'Any'
-                  }
-                }
-              }
-            ]
+                    kind: "SCALAR",
+                    name: "Any",
+                  },
+                },
+              },
+            ],
           },
           {
-            name: 'works',
+            name: "works",
             type: {
-              kind: 'NON_NULL',
+              kind: "NON_NULL",
               ofType: {
-                kind: 'LIST',
+                kind: "LIST",
                 ofType: {
-                  kind: 'NON_NULL',
+                  kind: "NON_NULL",
                   ofType: {
-                    kind: 'OBJECT',
-                    name: 'Work',
-                    ofType: null
-                  }
-                }
-              }
+                    kind: "OBJECT",
+                    name: "Work",
+                    ofType: null,
+                  },
+                },
+              },
             },
-            args: []
-          }
+            args: [],
+          },
         ],
-        interfaces: []
+        interfaces: [],
       },
       {
-        kind: 'OBJECT',
-        name: 'Stack',
+        kind: "OBJECT",
+        name: "Stack",
         fields: [
           {
-            name: 'icon',
+            name: "icon",
             type: {
-              kind: 'SCALAR',
-              name: 'Any'
+              kind: "SCALAR",
+              name: "Any",
             },
-            args: []
+            args: [],
           },
           {
-            name: 'name',
+            name: "name",
             type: {
-              kind: 'NON_NULL',
+              kind: "NON_NULL",
               ofType: {
-                kind: 'SCALAR',
-                name: 'Any'
-              }
+                kind: "SCALAR",
+                name: "Any",
+              },
             },
-            args: []
-          }
+            args: [],
+          },
         ],
-        interfaces: []
+        interfaces: [],
       },
       {
-        kind: 'OBJECT',
-        name: 'Work',
+        kind: "OBJECT",
+        name: "Work",
         fields: [
           {
-            name: 'date',
+            name: "date",
             type: {
-              kind: 'NON_NULL',
+              kind: "NON_NULL",
               ofType: {
-                kind: 'SCALAR',
-                name: 'Any'
-              }
+                kind: "SCALAR",
+                name: "Any",
+              },
             },
-            args: []
+            args: [],
           },
           {
-            name: 'description',
+            name: "description",
             type: {
-              kind: 'NON_NULL',
+              kind: "NON_NULL",
               ofType: {
-                kind: 'SCALAR',
-                name: 'Any'
-              }
+                kind: "SCALAR",
+                name: "Any",
+              },
             },
-            args: []
+            args: [],
           },
           {
-            name: 'id',
+            name: "id",
             type: {
-              kind: 'NON_NULL',
+              kind: "NON_NULL",
               ofType: {
-                kind: 'SCALAR',
-                name: 'Any'
-              }
+                kind: "SCALAR",
+                name: "Any",
+              },
             },
-            args: []
+            args: [],
           },
           {
-            name: 'imageUrl',
+            name: "imageUrl",
             type: {
-              kind: 'NON_NULL',
+              kind: "NON_NULL",
               ofType: {
-                kind: 'SCALAR',
-                name: 'Any'
-              }
+                kind: "SCALAR",
+                name: "Any",
+              },
             },
-            args: []
+            args: [],
           },
           {
-            name: 'title',
+            name: "title",
             type: {
-              kind: 'NON_NULL',
+              kind: "NON_NULL",
               ofType: {
-                kind: 'SCALAR',
-                name: 'Any'
-              }
+                kind: "SCALAR",
+                name: "Any",
+              },
             },
-            args: []
+            args: [],
           },
           {
-            name: 'workPage',
+            name: "workPage",
             type: {
-              kind: 'NON_NULL',
+              kind: "NON_NULL",
               ofType: {
-                kind: 'OBJECT',
-                name: 'WorkPage',
-                ofType: null
-              }
+                kind: "OBJECT",
+                name: "WorkPage",
+                ofType: null,
+              },
             },
-            args: []
-          }
+            args: [],
+          },
         ],
-        interfaces: []
+        interfaces: [],
       },
       {
-        kind: 'OBJECT',
-        name: 'WorkPage',
+        kind: "OBJECT",
+        name: "WorkPage",
         fields: [
           {
-            name: 'detail',
+            name: "detail",
             type: {
-              kind: 'NON_NULL',
+              kind: "NON_NULL",
               ofType: {
-                kind: 'SCALAR',
-                name: 'Any'
-              }
+                kind: "SCALAR",
+                name: "Any",
+              },
             },
-            args: []
+            args: [],
           },
           {
-            name: 'images',
+            name: "images",
             type: {
-              kind: 'LIST',
+              kind: "LIST",
               ofType: {
-                kind: 'NON_NULL',
+                kind: "NON_NULL",
                 ofType: {
-                  kind: 'SCALAR',
-                  name: 'Any'
-                }
-              }
+                  kind: "SCALAR",
+                  name: "Any",
+                },
+              },
             },
-            args: []
+            args: [],
           },
           {
-            name: 'meta',
+            name: "meta",
             type: {
-              kind: 'NON_NULL',
+              kind: "NON_NULL",
               ofType: {
-                kind: 'OBJECT',
-                name: 'Meta',
-                ofType: null
-              }
+                kind: "OBJECT",
+                name: "Meta",
+                ofType: null,
+              },
             },
-            args: []
+            args: [],
           },
           {
-            name: 'title',
+            name: "title",
             type: {
-              kind: 'NON_NULL',
+              kind: "NON_NULL",
               ofType: {
-                kind: 'SCALAR',
-                name: 'Any'
-              }
+                kind: "SCALAR",
+                name: "Any",
+              },
             },
-            args: []
-          }
+            args: [],
+          },
         ],
-        interfaces: []
+        interfaces: [],
       },
       {
-        kind: 'SCALAR',
-        name: 'Any'
-      }
+        kind: "SCALAR",
+        name: "Any",
+      },
     ],
-    directives: []
-  }
-} as unknown as IntrospectionQuery
+    directives: [],
+  },
+} as unknown as IntrospectionQuery;

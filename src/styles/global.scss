@@ -10,7 +10,7 @@
   --scrollbar-color-one: #a0aec0;
   --scrollbar-color-two: #cbd5e0;
 }
-[class='dark'] {
+[class="dark"] {
   --text: #d8dee9;
   --border: #d8dee9;
   --background: #4c566a;
@@ -35,6 +35,6 @@
   }
 }
 html {
-  scrollbar-width: 'thin';
+  scrollbar-width: "thin";
   scrollbar-color: var(--scrollbar-color-one) var(--scrollbar-color-two);
 }

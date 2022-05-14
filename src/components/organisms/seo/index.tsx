@@ -1,31 +1,31 @@
-import Head from 'next/head'
-import React from 'react'
+import Head from "next/head";
+import React from "react";
 
 const PageType = {
-  Article: 'article',
-  Website: 'website'
-} as const
+  Article: "article",
+  Website: "website",
+} as const;
 
-type PageType = typeof PageType[keyof typeof PageType]
+type PageType = typeof PageType[keyof typeof PageType];
 
 const TwCardType = {
-  Summary: 'summary',
-  Summary_Large_Image: 'summary_large_image'
-} as const
+  Summary: "summary",
+  Summary_Large_Image: "summary_large_image",
+} as const;
 
-type TwCardType = typeof TwCardType[keyof typeof TwCardType]
+type TwCardType = typeof TwCardType[keyof typeof TwCardType];
 
 export type SeoProperties = {
-  title: string
-  sitename: string
-  description: string
-  ogImageUrl: string
-  pageRelPath: string
-  pagetype: PageType
-  twcardtype: TwCardType
-}
+  title: string;
+  sitename: string;
+  description: string;
+  ogImageUrl: string;
+  pageRelPath: string;
+  pagetype: PageType;
+  twcardtype: TwCardType;
+};
 
-const OGP_HOST = process.env.OGP_HOST ?? ''
+const OGP_HOST = process.env.OGP_HOST ?? "";
 
 const Seo: React.FC<SeoProperties> = properties => (
   <Head>
@@ -43,6 +43,6 @@ const Seo: React.FC<SeoProperties> = properties => (
     <meta property="og:image" content={properties.ogImageUrl} />
     <link rel="icon" href="/favicon.ico" />
   </Head>
-)
+);
 
-export { Seo, OGP_HOST }
+export { Seo, OGP_HOST };
