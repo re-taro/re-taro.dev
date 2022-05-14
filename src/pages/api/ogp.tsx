@@ -1,5 +1,7 @@
-import fs from 'node:fs'
-import path from 'node:path'
+// eslint-disable-next-line unicorn/prefer-node-protocol
+import fs from 'fs'
+// eslint-disable-next-line unicorn/prefer-node-protocol
+import path from 'path'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import * as chromium from 'playwright-aws-lambda'
 
