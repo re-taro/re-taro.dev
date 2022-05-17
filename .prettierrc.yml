@@ -1,6 +1,5 @@
 arrowParens: avoid
-singleQuote: true
 bracketSpacing: true
-semi: false
+semi: true
 tabWidth: 2
-trailingComma: none
+trailingComma: all

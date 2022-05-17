@@ -1,5 +1,5 @@
-import tw from 'twin.macro'
+import tw from "twin.macro";
 
-const Flex = tw.div`flex`
+const Flex = tw.div`flex`;
 
-export { Flex }
+export { Flex };

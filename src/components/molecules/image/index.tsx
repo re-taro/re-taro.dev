@@ -1,16 +1,16 @@
-import NextImage from 'next/image'
-import Link from 'next/link'
-import React from 'react'
-import tw from 'twin.macro'
+import NextImage from "next/image";
+import Link from "next/link";
+import React from "react";
+import tw from "twin.macro";
 
 export type ImageProperties = {
-  src: string
-  alt?: string
-}
+  src: string;
+  alt?: string;
+};
 
 const Image: React.FC<ImageProperties> = ({ src, alt }) =>
   // eslint-disable-next-line no-negated-condition
-  alt !== 'asciicast' ? (
+  alt !== "asciicast" ? (
     <figure css={tw`my-8 mx-0 flex flex-col gap-8`}>
       <div css={tw`flex relative min-h-[20em] w-full`}>
         <Link href={src} scroll={false}>
@@ -27,5 +27,5 @@ const Image: React.FC<ImageProperties> = ({ src, alt }) =>
     <div css={tw`flex relative min-h-[20em] w-full`}>
       <NextImage src={src} alt={alt} layout="fill" objectFit="contain" />
     </div>
-  )
-export { Image }
+  );
+export { Image };

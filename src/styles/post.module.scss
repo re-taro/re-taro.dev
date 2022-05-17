@@ -49,7 +49,7 @@
     color: #81a1c1;
     @apply py-0 px-6 relative flex items-center;
     &::before {
-      content: '';
+      content: "";
       @apply absolute h-full w-[.3rem] left-0 bg-frost-300/50;
     }
     p {
@@ -84,10 +84,10 @@
   h6 {
     color: var(--text);
   }
-  [class='math-display'] {
+  [class="math-display"] {
     color: var(--text);
   }
-  [class='footnotes'] {
+  [class="footnotes"] {
     @apply mt-[2em] border-t border-solid border-frost-300/50;
     li {
       font-size: 0.9rem;

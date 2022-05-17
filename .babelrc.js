@@ -1,26 +1,26 @@
 module.exports = {
   presets: [
     [
-      'next/babel',
+      "next/babel",
       {
-        'preset-react': {
-          runtime: 'automatic',
-          importSource: '@emotion/react'
-        }
-      }
-    ]
+        "preset-react": {
+          runtime: "automatic",
+          importSource: "@emotion/react",
+        },
+      },
+    ],
   ],
   plugins: [
-    '@emotion/babel-plugin',
-    'babel-plugin-macros',
+    "@emotion/babel-plugin",
+    "babel-plugin-macros",
     [
-      '@emotion/babel-plugin-jsx-pragmatic',
+      "@emotion/babel-plugin-jsx-pragmatic",
       {
-        export: 'jsx',
-        import: '__cssprop',
-        module: '@emotion/react'
-      }
+        export: "jsx",
+        import: "__cssprop",
+        module: "@emotion/react",
+      },
     ],
-    ['@babel/plugin-transform-react-jsx', { pragma: '__cssprop' }, 'twin.macro']
-  ]
-}
+    ["@babel/plugin-transform-react-jsx", { pragma: "__cssprop" }, "twin.macro"],
+  ],
+};

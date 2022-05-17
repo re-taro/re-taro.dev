@@ -1,5 +1,5 @@
-import tw from 'twin.macro'
+import tw from "twin.macro";
 
-const Image = tw.img``
+const Image = tw.img``;
 
-export { Image }
+export { Image };

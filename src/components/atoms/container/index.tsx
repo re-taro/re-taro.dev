@@ -1,5 +1,5 @@
-import tw from 'twin.macro'
+import tw from "twin.macro";
 
-const Container = tw.div`container`
+const Container = tw.div`container`;
 
-export { Container }
+export { Container };

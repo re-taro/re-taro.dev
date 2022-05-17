@@ -1,19 +1,19 @@
-import React from 'react'
-import twemoji from 'twemoji'
+import React from "react";
+import twemoji from "twemoji";
 
 type TwemojiProperties = {
-  emoji: string
-}
+  emoji: string;
+};
 
 const Twemoji: React.FC<TwemojiProperties> = ({ emoji }) => (
   <span
     dangerouslySetInnerHTML={{
       __html: twemoji.parse(emoji, {
-        ext: '.svg',
-        folder: 'svg'
-      })
+        ext: ".svg",
+        folder: "svg",
+      }),
     }}
   />
-)
+);
 
-export default React.memo(Twemoji)
+export default React.memo(Twemoji);
