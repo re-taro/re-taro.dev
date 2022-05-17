@@ -5,7 +5,7 @@
   "keywords": [
     "next",
     "typescript",
-    "template"
+    "portfolio"
   ],
   "repository": {
     "type": "git",
@@ -19,7 +19,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "playwright install chromium && next build",
+    "build": "next build",
     "export": "next export",
     "analyze": "cross-env ANALYZE=true yarn build",
     "start": "next start",
