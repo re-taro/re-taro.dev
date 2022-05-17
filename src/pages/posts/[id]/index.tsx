@@ -45,7 +45,7 @@ export const getStaticProps: GetStaticProps<
   const content = await MdToHtml(response.data?.postById.content as string);
   const meta: SeoProperties = {
     description: response.data?.postById.header.title as string,
-    ogImageUrl: encodeURI(`${OGP_HOST}/api/ogp?title=${response.data?.postById.header.title as string} | re-taro`),
+    ogImageUrl: encodeURI(`${OGP_HOST}/api/ogp?title=${response.data?.postById.header.title as string} | re-taro&date=${response.data?.postById.header.date as string}`),
     pageRelPath: `posts/${params?.id as string}`,
     pagetype: "article",
     sitename: "re-taro.dev",
