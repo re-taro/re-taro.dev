@@ -1,4 +1,4 @@
-import type { NextPage } from "next";
+import type { NextPage, InferGetStaticPropsType, GetStaticProps } from "next";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
@@ -12,17 +12,27 @@ import type { SeoProperties } from "~/components/organisms/seo";
 
 const ImageBox = tw.div`w-full sm:w-[70%] md:w-[60%] lg:w-[60%] my-0 mx-auto`;
 
-const meta: SeoProperties = {
-  description: "Rintaro Itokawa's Dev Site | re-taro",
-  ogImageUrl: encodeURI(`${OGP_HOST}/api/ogp?title=re-taro`),
-  pageRelPath: "",
-  pagetype: "website",
-  sitename: "re-taro.dev",
-  title: "Rintaro Itokawa - Emotion Seeker",
-  twcardtype: "summary_large_image",
+type Properties = InferGetStaticPropsType<typeof getStaticProps>;
+
+// eslint-disable-next-line unicorn/prevent-abbreviations
+export const getStaticProps: GetStaticProps<{ meta: SeoProperties }> = () => {
+  const meta: SeoProperties = {
+    description: "Rintaro Itokawa's Dev Site | re-taro",
+    ogImageUrl: encodeURI(`${OGP_HOST}/api/ogp?title=re-taro`),
+    pageRelPath: "",
+    pagetype: "website",
+    sitename: "re-taro.dev",
+    title: "Rintaro Itokawa - Emotion Seeker",
+    twcardtype: "summary_large_image",
+  };
+  return {
+    props: {
+      meta,
+    },
+  };
 };
 
-const NotFound: NextPage = () => {
+const NotFound: NextPage<Properties> = ({ meta }) => {
   const { theme } = useTheme();
   const [mounted, setMounted] = useState<boolean>(false);
   useEffect(() => setMounted(true), []);
