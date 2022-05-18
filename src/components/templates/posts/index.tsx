@@ -5,27 +5,18 @@ import { Grid } from "~/components/atoms/grid";
 import { Heading } from "~/components/atoms/heading";
 import { Text } from "~/components/atoms/text";
 import { PostCard } from "~/components/molecules/post-card";
-import { OGP_HOST, Seo } from "~/components/organisms/seo";
+import { Seo } from "~/components/organisms/seo";
 import type { SeoProperties } from "~/components/organisms/seo";
 import type { PostsQuery } from "~/graphql";
 
 const PostsHead = tw.div`mb-[22px]`;
 
-const meta: SeoProperties = {
-  description: "記事一覧",
-  ogImageUrl: encodeURI(`${OGP_HOST}/api/ogp?title=Posts | re-taro`),
-  pageRelPath: "",
-  pagetype: "website",
-  sitename: "re-taro.dev",
-  title: "Blog Posts | re-taro",
-  twcardtype: "summary_large_image",
-};
-
 type PostsProperties = {
   data: PostsQuery | undefined;
+  meta: SeoProperties;
 };
 
-const Posts: React.FC<PostsProperties> = ({ data }) => {
+const Posts: React.FC<PostsProperties> = ({ data, meta }) => {
   const router = useRouter();
   useEffect(() => {
     data?.posts
