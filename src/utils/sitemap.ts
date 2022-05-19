@@ -10,7 +10,7 @@ const formatXml = (sitemap: string) => prettier.format(sitemap, { parser: "html"
 
 // eslint-disable-next-line max-statements
 const generateSitemapXml = async (): Promise<string> => {
-  const solidPaths = await globby(["src/pages/*.tsx", "src/pages/posts/*.tsx", "src/pages/works/*.tsx"], {
+  const solidPaths = await globby(["src/pages/*.tsx", "src/pages/posts/*.tsx"], {
     ignore: ["src/pages/_*.tsx", "src/pages/404.tsx", "src/pages/sitemap.xml.tsx"],
   });
   const solidInfos = solidPaths.map(filePath => ({
@@ -19,16 +19,11 @@ const generateSitemapXml = async (): Promise<string> => {
   }));
   const client = createClient({ exchanges: [fetchExchange], url: END_POINT });
   const allPosts = await client.query<PostsQuery>(PostsDocument).toPromise();
-  const allWorks = await client.query<WorksQuery>(WorksDocument).toPromise();
   const postInfos = (allPosts.data?.posts as PostsQuery["posts"]).map(item => ({
     lastmod: item.date,
     relpath: `posts/${item.id}`,
   }));
-  const workInfos = (allWorks.data?.works as WorksQuery["works"]).map(item => ({
-    lastmod: item.date,
-    relpath: `works/${item.id}`,
-  }));
-  const sitemapInfos = [...solidInfos, ...postInfos, ...workInfos];
+  const sitemapInfos = [...solidInfos, ...postInfos];
   const pagesSitemap = `
   ${sitemapInfos
     .map(
