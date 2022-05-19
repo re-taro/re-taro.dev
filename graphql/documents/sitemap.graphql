@@ -1,0 +1,10 @@
+query sitemap {
+  posts {
+    id
+    date
+  }
+  works {
+    id
+    date
+  }
+}

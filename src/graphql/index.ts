@@ -180,6 +180,14 @@ export type PostsQuery = {
   }>;
 };
 
+export type SitemapQueryVariables = Exact<{ [key: string]: never }>;
+
+export type SitemapQuery = {
+  __typename?: "Query";
+  posts: Array<{ __typename?: "PostHeader"; id: string; date: string }>;
+  works: Array<{ __typename?: "Work"; id: string; date: string }>;
+};
+
 export type TagQueryVariables = Exact<{
   tag: Scalars["String"];
 }>;
@@ -315,6 +323,22 @@ export const PostsDocument = gql`
 
 export function usePostsQuery(options?: Omit<Urql.UseQueryArgs<PostsQueryVariables>, "query">) {
   return Urql.useQuery<PostsQuery>({ query: PostsDocument, ...options });
+}
+export const SitemapDocument = gql`
+  query sitemap {
+    posts {
+      id
+      date
+    }
+    works {
+      id
+      date
+    }
+  }
+`;
+
+export function useSitemapQuery(options?: Omit<Urql.UseQueryArgs<SitemapQueryVariables>, "query">) {
+  return Urql.useQuery<SitemapQuery>({ query: SitemapDocument, ...options });
 }
 export const TagDocument = gql`
   query Tag($tag: String!) {

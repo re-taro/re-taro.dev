@@ -1,8 +1,8 @@
 import { globby } from "globby";
 import prettier from "prettier";
 import { createClient, fetchExchange } from "urql";
-import type { PostsQuery } from "~/graphql";
-import { PostsDocument } from "~/graphql";
+import type { SitemapQuery } from "~/graphql";
+import { SitemapDocument } from "~/graphql";
 import { END_POINT } from "~/utils/client";
 
 const HOST = "https://re-taro.dev";
@@ -18,12 +18,16 @@ const generateSitemapXml = async (): Promise<string> => {
     relpath: filePath.replace("src/pages/", "").replace(".tsx", "").replace("index", ""),
   }));
   const client = createClient({ exchanges: [fetchExchange], url: END_POINT });
-  const allPosts = await client.query<PostsQuery>(PostsDocument).toPromise();
-  const postInfos = (allPosts.data?.posts as PostsQuery["posts"]).map(item => ({
+  const allData = await client.query<SitemapQuery>(SitemapDocument).toPromise();
+  const postInfos = (allData.data?.posts as SitemapQuery["posts"]).map(item => ({
     lastmod: item.date,
     relpath: `posts/${item.id}`,
   }));
-  const sitemapInfos = [...solidInfos, ...postInfos];
+  const workInfos = (allData.data?.works as SitemapQuery["works"]).map(item => ({
+    lastmod: item.date,
+    relpath: `works/${item.id}`,
+  }));
+  const sitemapInfos = [...solidInfos, ...postInfos, ...workInfos];
   const pagesSitemap = `
   ${sitemapInfos
     .map(
