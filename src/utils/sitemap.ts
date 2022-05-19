@@ -23,11 +23,7 @@ const generateSitemapXml = async (): Promise<string> => {
     lastmod: item.date,
     relpath: `posts/${item.id}`,
   }));
-  const workInfos = (allData.data?.works as SitemapQuery["works"]).map(item => ({
-    lastmod: item.date,
-    relpath: `works/${item.id}`,
-  }));
-  const sitemapInfos = [...solidInfos, ...postInfos, ...workInfos];
+  const sitemapInfos = [...solidInfos, ...postInfos];
   const pagesSitemap = `
   ${sitemapInfos
     .map(
