@@ -1,8 +1,8 @@
 import { globby } from "globby";
 import prettier from "prettier";
 import { createClient, fetchExchange } from "urql";
-import type { PostsQuery, WorksQuery } from "~/graphql";
-import { PostsDocument, WorksDocument } from "~/graphql";
+import type { PostsQuery } from "~/graphql";
+import { PostsDocument } from "~/graphql";
 import { END_POINT } from "~/utils/client";
 
 const HOST = "https://re-taro.dev";
