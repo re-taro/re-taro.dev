@@ -4,5 +4,10 @@
   "github": {
     "enabled": false
   },
-  "redirects": [{ "source": "/mail", "destination": "mailto:me@re-taro.dev?cc=aminokacho@gmail.com" }]
+  "redirects": [
+    {
+      "source": "/mail",
+      "destination": "mailto:me@re-taro.dev?cc=aminokacho@gmail.com"
+    }
+  ]
 }
