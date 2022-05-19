@@ -3,8 +3,4 @@ query sitemap {
     id
     date
   }
-  works {
-    id
-    date
-  }
 }

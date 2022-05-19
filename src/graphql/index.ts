@@ -185,7 +185,6 @@ export type SitemapQueryVariables = Exact<{ [key: string]: never }>;
 export type SitemapQuery = {
   __typename?: "Query";
   posts: Array<{ __typename?: "PostHeader"; id: string; date: string }>;
-  works: Array<{ __typename?: "Work"; id: string; date: string }>;
 };
 
 export type TagQueryVariables = Exact<{
@@ -327,10 +326,6 @@ export function usePostsQuery(options?: Omit<Urql.UseQueryArgs<PostsQueryVariabl
 export const SitemapDocument = gql`
   query sitemap {
     posts {
-      id
-      date
-    }
-    works {
       id
       date
     }
