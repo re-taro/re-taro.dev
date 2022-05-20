@@ -1,4 +1,4 @@
-query Tags {
+query tags {
   posts {
     tags
   }

@@ -136,6 +136,13 @@ export type AboutQuery = {
   };
 };
 
+export type FeedQueryVariables = Exact<{ [key: string]: never }>;
+
+export type FeedQuery = {
+  __typename?: "Query";
+  posts: Array<{ __typename?: "PostHeader"; id: string; title: string; date: string }>;
+};
+
 export type HomeQueryVariables = Exact<{ [key: string]: never }>;
 
 export type HomeQuery = {
@@ -186,6 +193,12 @@ export type SitemapQuery = {
   __typename?: "Query";
   posts: Array<{ __typename?: "PostHeader"; id: string; date: string }>;
 };
+
+export type SlugQueryVariables = Exact<{
+  id: Scalars["String"];
+}>;
+
+export type SlugQuery = { __typename?: "Query"; postById: { __typename?: "Post"; content: string } };
 
 export type TagQueryVariables = Exact<{
   tag: Scalars["String"];
@@ -257,6 +270,19 @@ export const AboutDocument = gql`
 
 export function useAboutQuery(options?: Omit<Urql.UseQueryArgs<AboutQueryVariables>, "query">) {
   return Urql.useQuery<AboutQuery>({ query: AboutDocument, ...options });
+}
+export const FeedDocument = gql`
+  query feed {
+    posts {
+      id
+      title
+      date
+    }
+  }
+`;
+
+export function useFeedQuery(options?: Omit<Urql.UseQueryArgs<FeedQueryVariables>, "query">) {
+  return Urql.useQuery<FeedQuery>({ query: FeedDocument, ...options });
 }
 export const HomeDocument = gql`
   query home {
@@ -335,8 +361,19 @@ export const SitemapDocument = gql`
 export function useSitemapQuery(options?: Omit<Urql.UseQueryArgs<SitemapQueryVariables>, "query">) {
   return Urql.useQuery<SitemapQuery>({ query: SitemapDocument, ...options });
 }
+export const SlugDocument = gql`
+  query slug($id: String!) {
+    postById(id: $id) {
+      content
+    }
+  }
+`;
+
+export function useSlugQuery(options: Omit<Urql.UseQueryArgs<SlugQueryVariables>, "query">) {
+  return Urql.useQuery<SlugQuery>({ query: SlugDocument, ...options });
+}
 export const TagDocument = gql`
-  query Tag($tag: String!) {
+  query tag($tag: String!) {
     postsByTag(tag: $tag) {
       emoji
       id
@@ -351,7 +388,7 @@ export function useTagQuery(options: Omit<Urql.UseQueryArgs<TagQueryVariables>, 
   return Urql.useQuery<TagQuery>({ query: TagDocument, ...options });
 }
 export const TagsDocument = gql`
-  query Tags {
+  query tags {
     posts {
       tags
     }
