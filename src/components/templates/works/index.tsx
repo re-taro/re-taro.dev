@@ -22,7 +22,7 @@ const Works: React.FC<WorksProperties> = ({ data, meta }) => {
   return (
     <React.Fragment>
       <Seo {...meta} />
-      <div css={tw`mb-8`}>
+      <div css={tw`mb-8 transition delay-150 ease-out`}>
         <Heading as={"h3"} css={tw`mb-2`}>
           Works
         </Heading>

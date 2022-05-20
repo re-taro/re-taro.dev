@@ -9,7 +9,7 @@ import { Card } from "~/components/molecules/card";
 import type { HomeQuery } from "~/graphql";
 import { trackEventToUmami } from "~/utils/umami";
 
-const ProjectsBox = tw.section`mb-16 space-y-4`;
+const ProjectsBox = tw.section`mb-16 space-y-4 transition delay-150 ease-out`;
 
 type ProjectsSectionProperties = React.ComponentProps<React.ReactHTML["section"]> & {
   data: HomeQuery["works"] | undefined;

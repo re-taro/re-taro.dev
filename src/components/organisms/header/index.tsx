@@ -9,7 +9,7 @@ import { Navigation } from "~/components/molecules/navigation";
 import { ToggleButton } from "~/components/molecules/toggle-button";
 const Hamburger = dynamic(() => import("~/components/molecules/hamburger"));
 
-const HeaderBox = tw.header`fixed w-full bg-snow-300/80 dark:bg-night-300/80 top-0 backdrop-filter backdrop-blur-[6px] z-30 transition delay-150 ease-in-out`;
+const HeaderBox = tw.header`fixed w-full bg-snow-300/80 dark:bg-night-300/80 top-0 backdrop-filter backdrop-blur-[6px] z-30 transition delay-150 ease-out`;
 
 type HeaderProperties = React.ComponentProps<React.ReactHTML["header"]>;
 

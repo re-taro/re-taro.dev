@@ -9,7 +9,7 @@ import { Seo } from "~/components/organisms/seo";
 import type { SeoProperties } from "~/components/organisms/seo";
 import type { PostsQuery } from "~/graphql";
 
-const PostsHead = tw.div`mb-[22px]`;
+const PostsHead = tw.div`mb-[22px] transition delay-150 ease-out`;
 
 type PostsProperties = {
   data: PostsQuery | undefined;

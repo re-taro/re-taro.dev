@@ -16,7 +16,7 @@ type WorkProperties = {
 
 // eslint-disable-next-line max-lines-per-function
 const Work: React.FC<WorkProperties> = ({ data, meta }) => (
-  <article>
+  <article css={tw`transition delay-150 ease-out`}>
     <WorkMeta meta={meta} />
     <WorkHead data={data?.work} />
     <article>
@@ -59,7 +59,7 @@ const Work: React.FC<WorkProperties> = ({ data, meta }) => (
               <Chip css={tw`mr-4 px-5`}>WebSite</Chip>
               <a
                 href={data.work.workPage.meta.website}
-                css={tw`text-night-400 dark:text-snow-300 self-center underline transition delay-150 ease-in-out`}
+                css={tw`text-night-400 dark:text-snow-300 self-center underline transition delay-150 ease-out`}
               >
                 {data.work.workPage.meta.website}
               </a>
@@ -72,7 +72,7 @@ const Work: React.FC<WorkProperties> = ({ data, meta }) => (
               <Chip css={tw`mr-4 px-5`}>Presentation</Chip>
               <a
                 href={data.work.workPage.meta.presentation.url}
-                css={tw`text-night-400 dark:text-snow-300 self-center underline transition delay-150 ease-in-out`}
+                css={tw`text-night-400 dark:text-snow-300 self-center underline transition delay-150 ease-out`}
               >
                 {data.work.workPage.meta.presentation.title}
               </a>
@@ -85,7 +85,7 @@ const Work: React.FC<WorkProperties> = ({ data, meta }) => (
               <Chip css={tw`mr-4 px-5`}>Blog Post</Chip>
               <a
                 href={data.work.workPage.meta.blogPost.url}
-                css={tw`text-night-400 dark:text-snow-300 self-center underline transition delay-150 ease-in-out`}
+                css={tw`text-night-400 dark:text-snow-300 self-center underline transition delay-150 ease-out`}
               >
                 {data.work.workPage.meta.blogPost.title}
               </a>
@@ -98,7 +98,7 @@ const Work: React.FC<WorkProperties> = ({ data, meta }) => (
               <Chip css={tw`mr-4 px-5`}>Source</Chip>
               <a
                 href={data.work.workPage.meta.source}
-                css={tw`text-night-400 dark:text-snow-300 self-center underline transition delay-150 ease-in-out`}
+                css={tw`text-night-400 dark:text-snow-300 self-center underline transition delay-150 ease-out`}
               >
                 {data.work.workPage.meta.source}
               </a>

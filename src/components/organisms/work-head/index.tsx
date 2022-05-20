@@ -12,7 +12,7 @@ type WorkHeadProperties = {
 };
 
 const WorkHead: React.FC<WorkHeadProperties> = ({ data }) => (
-  <Flex css={tw`items-center mb-8`}>
+  <Flex css={tw`items-center mb-8 transition delay-150 ease-out`}>
     <div
       css={css`
         flex-basis: 60%;

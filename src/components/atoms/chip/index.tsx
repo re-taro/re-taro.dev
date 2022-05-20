@@ -5,7 +5,7 @@ import React from "react";
 import tw from "twin.macro";
 import { Text } from "../text";
 
-const ChipBox = tw.div`min-w-min min-h-full px-2 py-1 flex justify-center items-center rounded-l-full rounded-r-full space-x-1 bg-frost-200 focus:outline-none appearance-none select-none transition delay-150 ease-in-out`;
+const ChipBox = tw.div`min-w-min min-h-full px-2 py-1 flex justify-center items-center rounded-l-full rounded-r-full space-x-1 bg-frost-200 focus:outline-none appearance-none select-none transition delay-150 ease-out`;
 
 type ChipIconProperties = IconProps & {
   ref?: never;
@@ -24,12 +24,12 @@ type ChipVariantProperties = {
 
 type ButtonProperties<T extends AnyComponent> = React.PropsWithChildren<
   PropertiesOf<T> &
-    ChipVariantProperties & {
-      boxStyles?: CSSInterpolation;
-      textStyles?: CSSInterpolation;
-      ref?: never;
-      as?: T;
-    }
+  ChipVariantProperties & {
+    boxStyles?: CSSInterpolation;
+    textStyles?: CSSInterpolation;
+    ref?: never;
+    as?: T;
+  }
 >;
 
 const Chip = <T extends AnyComponent>({

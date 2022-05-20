@@ -19,7 +19,7 @@ const Image: React.FC<ImageProperties> = ({ src, alt }) =>
           </a>
         </Link>
       </div>
-      <figcaption css={tw`text-center text-night-400 dark:text-snow-300 transition delay-150 ease-in-out`}>
+      <figcaption css={tw`text-center text-night-400 dark:text-snow-300 transition delay-150 ease-out`}>
         {alt}
       </figcaption>
     </figure>

@@ -4,7 +4,7 @@ import tw from "twin.macro";
 import { Text } from "../text";
 import { trackEventToUmami } from "~/utils/umami";
 
-const TagBox = tw.div`bg-snow-300 dark:bg-night-300 border border-night-300 dark:border-snow-300 rounded-[5px] py-0 px-2 h-7 transition delay-150 ease-in-out`;
+const TagBox = tw.div`bg-snow-300 dark:bg-night-300 border border-night-300 dark:border-snow-300 rounded-[5px] py-0 px-2 h-7 transition delay-150 ease-out`;
 
 type TagProperties = React.ComponentProps<React.ReactHTML["div"]> & {
   tag: string;
