@@ -10,7 +10,7 @@ import type { WorksQuery } from "~/graphql";
 import { formatDate } from "~/utils/date";
 import { trackEventToUmami } from "~/utils/umami";
 
-const ProjectCardBox = tw.div`w-full h-full p-8 rounded-3xl border-2 border-night-300 dark:border-snow-300 transition delay-150 ease-in-out hover:scale-[1.03] hover:drop-shadow-lg`;
+const ProjectCardBox = tw.div`w-full h-full p-8 rounded-3xl border-2 border-night-300 dark:border-snow-300 transition delay-150 ease-out hover:scale-[1.03] hover:drop-shadow-lg`;
 
 type ProjectCardProperties = React.ComponentProps<React.ReactHTML["div"]> & {
   projects: WorksQuery["works"] | undefined;

@@ -5,7 +5,7 @@ import { Heading } from "~/components/atoms/heading";
 import { Text } from "~/components/atoms/text";
 import type { Affiliation } from "~/graphql";
 
-const HeadingBox = tw.section`mb-16`;
+const HeadingBox = tw.section`mb-16 transition delay-150 ease-out`;
 
 type HeadingSectionProperties = React.ComponentProps<React.ReactHTML["section"]> & {
   data: Affiliation | undefined;

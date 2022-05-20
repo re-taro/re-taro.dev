@@ -8,7 +8,7 @@ type ContentSectionProperties = React.ComponentProps<React.ReactHTML["section"]>
 };
 
 const ContentSection: React.FC<ContentSectionProperties> = ({ data, ...rest }) => (
-  <section {...rest}>
+  <section css={tw`transition delay-150 ease-out`} {...rest}>
     <Heading css={tw`mb-4`} as={"h3"}>
       👋 Hi, how are you?
     </Heading>

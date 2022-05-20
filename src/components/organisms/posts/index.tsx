@@ -10,7 +10,7 @@ import { PostCard } from "~/components/molecules/post-card";
 import { PostHeader } from "~/graphql";
 import { trackEventToUmami } from "~/utils/umami";
 
-const PostsBox = tw.section`space-y-4`;
+const PostsBox = tw.section`space-y-4 transition delay-150 ease-out`;
 
 type PostsSectionProperties = React.ComponentProps<React.ReactHTML["section"]> & {
   data: Array<PostHeader> | undefined;

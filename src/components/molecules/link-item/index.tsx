@@ -27,7 +27,7 @@ const LinkItem: React.FC<LinkItemProperties> = ({ url, css, icon, platformName, 
   >
     <InlineIcon
       icon={icon}
-      css={tw`w-full h-full text-night-400 dark:text-snow-300 transition delay-150 ease-in-out`}
+      css={tw`w-full h-full text-night-400 dark:text-snow-300 transition delay-150 ease-out`}
     />
   </LinkBox>
 );

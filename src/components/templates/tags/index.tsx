@@ -8,7 +8,7 @@ import { Seo } from "~/components/organisms/seo";
 import type { SeoProperties } from "~/components/organisms/seo";
 import type { TagsQuery } from "~/graphql";
 
-const TagsHead = tw.div`mb-[22px]`;
+const TagsHead = tw.div`mb-[22px] transition delay-150 ease-out`;
 
 type TagsProperties = {
   data: TagsQuery | undefined;

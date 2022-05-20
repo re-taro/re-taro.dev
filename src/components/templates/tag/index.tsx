@@ -9,7 +9,7 @@ import type { SeoProperties } from "~/components/organisms/seo";
 import { Seo } from "~/components/organisms/seo";
 import type { TagQuery } from "~/graphql";
 
-const TagHead = tw.div`mb-[22px]`;
+const TagHead = tw.div`mb-[22px] transition delay-150 ease-out`;
 
 type TagProperties = {
   data: TagQuery | undefined;

@@ -10,7 +10,7 @@ import type { PostHeader } from "~/graphql";
 import { formatDate } from "~/utils/date";
 import { trackEventToUmami } from "~/utils/umami";
 
-const PostBox = tw.div`w-full transition delay-150 ease-in-out hover:scale-[1.03]`;
+const PostBox = tw.div`w-full transition delay-150 ease-out hover:scale-[1.03]`;
 
 type PostCardProperties = React.ComponentProps<React.ReactHTML["div"]> & {
   post: PostHeader;
