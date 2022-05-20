@@ -14,6 +14,7 @@ import remarkRehype from "remark-rehype";
 import remarkToc from "remark-toc";
 import remarkUnwrapImages from "remark-unwrap-images";
 import * as shiki from "shiki";
+import stripMarkdown from "strip-markdown";
 import { unified } from "unified";
 
 const MdToHtml = async (md: string) => {
@@ -42,4 +43,21 @@ const MdToHtml = async (md: string) => {
   return result.toString();
 };
 
-export { MdToHtml };
+const MdStrip = (md: string) => {
+  const result = unified()
+    .use(remarkParse)
+    .use(stripMarkdown, {
+      remove: ["list", "blockquote", "image", "code"],
+    })
+    .use(remarkGfm)
+    .use(remarkGemoji)
+    .use(remarkMath)
+    .use(remarkJaruby)
+    .use(remarkRehype)
+    .use(rehypeKatex)
+    .use(rehypeStringify)
+    .processSync(md);
+  return result.toString();
+};
+
+export { MdToHtml, MdStrip };

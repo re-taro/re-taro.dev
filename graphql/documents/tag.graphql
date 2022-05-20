@@ -1,4 +1,4 @@
-query Tag($tag: String!) {
+query tag($tag: String!) {
   postsByTag(tag: $tag) {
     emoji
     id
