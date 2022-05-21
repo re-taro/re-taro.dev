@@ -9,6 +9,8 @@ import { Image } from "~/components/molecules/image";
 import type { ImageProperties } from "~/components/molecules/image";
 import { Link } from "~/components/molecules/link";
 import type { LinkProperties } from "~/components/molecules/link";
+import { LinkWidget } from "~/components/molecules/link-widget";
+import type { LinkWidgetProperties } from "~/components/molecules/link-widget";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const RehypeReact = (html: string): React.ReactElement<unknown, string | React.JSXElementConstructor<any>> => {
@@ -20,6 +22,7 @@ const RehypeReact = (html: string): React.ReactElement<unknown, string | React.J
       components: {
         // eslint-disable-next-line id-length
         a: (properties: LinkProperties) => Link(properties),
+        extlink: (properties: LinkWidgetProperties) => LinkWidget(properties),
         img: (properties: ImageProperties) => Image(properties),
       },
       createElement: React.createElement,

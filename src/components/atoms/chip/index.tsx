@@ -24,12 +24,12 @@ type ChipVariantProperties = {
 
 type ButtonProperties<T extends AnyComponent> = React.PropsWithChildren<
   PropertiesOf<T> &
-  ChipVariantProperties & {
-    boxStyles?: CSSInterpolation;
-    textStyles?: CSSInterpolation;
-    ref?: never;
-    as?: T;
-  }
+    ChipVariantProperties & {
+      boxStyles?: CSSInterpolation;
+      textStyles?: CSSInterpolation;
+      ref?: never;
+      as?: T;
+    }
 >;
 
 const Chip = <T extends AnyComponent>({

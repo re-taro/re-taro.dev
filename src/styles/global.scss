@@ -9,18 +9,22 @@
   --scrollbar-thumb-hover: #718096;
   --scrollbar-color-one: #a0aec0;
   --scrollbar-color-two: #cbd5e0;
+  --description: #4c566a;
+  --host: #3b4252;
 }
 [class="dark"] {
   --text: #d8dee9;
   --border: #d8dee9;
   --background: #4c566a;
-  --code: #d8dee9;
+  --code: #4c566a;
   --underline: #d8dee955;
   --scroll-bar: #000000;
   --scrollbar-thumb: #2d3748;
   --scrollbar-thumb-hover: #4a5568;
   --scrollbar-color-one: #2d3748;
   --scrollbar-color-two: #000000;
+  --description: #eceff4;
+  --host: #d8dee9;
 }
 ::-webkit-scrollbar {
   width: 0.75rem;
