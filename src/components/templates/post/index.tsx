@@ -7,7 +7,7 @@ import type { PostQuery } from "~/graphql";
 import Styles from "~/styles/post.module.scss";
 import { RehypeReact } from "~/utils/rehype-react";
 
-const PostBox = tw.article`transition delay-150 ease-out`
+const PostBox = tw.article`transition delay-150 ease-out`;
 
 type PostProperties = {
   data: PostQuery | undefined;
