@@ -15,8 +15,8 @@ const PostMeta: React.FC<PostMetaPropeties> = ({ meta }) => (
     <Head>
       <link
         rel={"stylesheet"}
-        href={"https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css"}
-        integrity={"sha384-ljao5I1l+8KYFXG7LNEA7DyaFvuvSCmedUf6Y6JI7LJqiu8q5dEivP2nDdFH31V4"}
+        href={"https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css"}
+        integrity={"sha384-KiWOvVjnN8qwAZbuQyWDIbfCLFhLXNETzBQjA/92pIowpC0d2O3nppDGQVgwd2nB"}
         crossOrigin={"anonymous"}
       />
       <title></title>
