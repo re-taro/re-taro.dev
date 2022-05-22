@@ -2,7 +2,6 @@
   width: 100%;
   overflow-wrap: break-word;
   word-wrap: break-word;
-  @apply transition delay-150 ease-out;
   p {
     @apply my-8 mx-0 transition delay-150 ease-out;
     color: var(--text);
@@ -34,7 +33,7 @@
   code {
     background: var(--code);
     font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, monospace;
-    @apply p-[0.2rem] rounded-[0.2rem] transition delay-150 ease-out;
+    @apply p-[0.2rem] rounded-[0.2rem];
   }
   pre {
     @apply w-full text-base flex my-8 mx-0;

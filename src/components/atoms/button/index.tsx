@@ -23,42 +23,42 @@ const ButtonIcon: React.FC<ButtonIconProperties> = ({ icon, css, ...rest }) => (
 
 type ButtonVariantProperties =
   | {
-    variant: "normal";
-    leftIcon?: never;
-    rightIcon?: never;
-    onClose?: never;
-    iconStyles?: never;
-  }
+      variant: "normal";
+      leftIcon?: never;
+      rightIcon?: never;
+      onClose?: never;
+      iconStyles?: never;
+    }
   | {
-    variant: "icon";
-    leftIcon: string | IconifyIcon;
-    rightIcon?: never;
-    onClose?: never;
-    iconStyles?: CSSInterpolation;
-  }
+      variant: "icon";
+      leftIcon: string | IconifyIcon;
+      rightIcon?: never;
+      onClose?: never;
+      iconStyles?: CSSInterpolation;
+    }
   | {
-    variant: "icon";
-    leftIcon?: never;
-    rightIcon: IconifyIcon | string;
-    onClose?: never;
-    iconStyles?: CSSInterpolation;
-  }
+      variant: "icon";
+      leftIcon?: never;
+      rightIcon: IconifyIcon | string;
+      onClose?: never;
+      iconStyles?: CSSInterpolation;
+    }
   | {
-    variant: "close";
-    leftIcon?: never;
-    rightIcon?: never;
-    onClose?: React.MouseEventHandler;
-    iconStyles?: never;
-  };
+      variant: "close";
+      leftIcon?: never;
+      rightIcon?: never;
+      onClose?: React.MouseEventHandler;
+      iconStyles?: never;
+    };
 
 type ButtonProperties<T extends AnyComponent> = React.PropsWithChildren<
   PropertiesOf<T> &
-  ButtonVariantProperties & {
-    boxStyles?: CSSInterpolation;
-    textStyles?: CSSInterpolation;
-    ref?: never;
-    as?: T;
-  }
+    ButtonVariantProperties & {
+      boxStyles?: CSSInterpolation;
+      textStyles?: CSSInterpolation;
+      ref?: never;
+      as?: T;
+    }
 >;
 
 const Button = <T extends AnyComponent>({

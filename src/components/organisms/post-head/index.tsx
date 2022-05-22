@@ -14,7 +14,7 @@ type PostHeadProperties = {
 };
 
 const PostHead: React.FC<PostHeadProperties> = ({ data }) => (
-  <Flex css={tw`items-center mb-16 transition delay-150 ease-out`}>
+  <Flex css={tw`items-center mb-16`}>
     <div
       css={css`
         flex-basis: 80%;

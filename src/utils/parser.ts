@@ -11,11 +11,13 @@ import remarkJaruby from "remark-jaruby";
 import remarkMath from "remark-math";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
+import type { Options as RemarkRehypeOptions } from "remark-rehype";
 import remarkToc from "remark-toc";
 import remarkUnwrapImages from "remark-unwrap-images";
 import * as shiki from "shiki";
 import stripMarkdown from "strip-markdown";
 import { unified } from "unified";
+import { remarkLinkWidget, extensionLinkHandler } from "./remark-link-widget";
 
 const MdToHtml = async (md: string) => {
   const result = await unified()
@@ -24,12 +26,17 @@ const MdToHtml = async (md: string) => {
     .use(remarkGemoji)
     .use(remarkMath)
     .use(remarkJaruby)
+    .use(remarkLinkWidget)
     .use(remarkUnwrapImages)
     .use(remarkToc, {
       heading: "目次",
       tight: true,
     })
-    .use(remarkRehype)
+    .use(remarkRehype, {
+      handlers: {
+        extlink: extensionLinkHandler,
+      },
+    } as RemarkRehypeOptions)
     .use(rehypeKatex)
     .use(rehypeShiki, {
       highlighter: await shiki.getHighlighter({ theme: "nord" }),
