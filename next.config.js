@@ -10,16 +10,7 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(process.cwd(), "styles")],
   },
-  webpack: (config, { dev, isServer }) => {
-    if (!dev && !isServer) {
-      Object.assign(config.resolve.alias, {
-        react: "preact/compat",
-        "react-dom": "preact/compat",
-        "react/jsx-runtime": "preact/jsx-runtime",
-      });
-    }
-    return config;
-  },
+  swcMinify: true,
   eslint: {
     dirs: ["src"],
   },
