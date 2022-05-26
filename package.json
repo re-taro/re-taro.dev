@@ -30,7 +30,7 @@
     "codegen": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
-    "@iconify/react": "3.2.1",
+    "@iconify/react": "3.2.2",
     "@re-taro/rehype-shiki": "1.1.0",
     "dayjs": "1.11.2",
     "mdast-util-to-hast": "12.1.1",

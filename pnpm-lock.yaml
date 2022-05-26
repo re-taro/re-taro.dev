@@ -15,7 +15,7 @@ specifiers:
   '@graphql-codegen/typescript-operations': 2.4.0
   '@graphql-codegen/typescript-urql': 3.5.10
   '@graphql-codegen/urql-introspection': 2.1.1
-  '@iconify/react': 3.2.1
+  '@iconify/react': 3.2.2
   '@next/bundle-analyzer': 12.1.6
   '@re-taro/rehype-shiki': 1.1.0
   '@tailwindcss/aspect-ratio': 0.4.0
@@ -77,7 +77,7 @@ specifiers:
   vfile: 5.3.2
 
 dependencies:
-  '@iconify/react': 3.2.1
+  '@iconify/react': 3.2.2_react@18.1.0
   '@re-taro/rehype-shiki': 1.1.0_shiki@0.10.1
   dayjs: 1.11.2
   mdast-util-to-hast: 12.1.1
@@ -1595,8 +1595,12 @@ packages:
     resolution: {integrity: sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==}
     dev: true
 
-  /@iconify/react/3.2.1:
-    resolution: {integrity: sha512-yKzixjC9ct9RC/aSGo1OGxkG2rpfhlr/urRz6k2YZlIBzn92PBTlqtSx8o8dFYEorr3eUFSCBZFzBy1yw5jsAA==}
+  /@iconify/react/3.2.2_react@18.1.0:
+    resolution: {integrity: sha512-z3+Jno3VcJzgNHsN5mEvYMsgCkOZkydqdIwOxjXh45+i2Vs9RGH68Y52vt39izwFSfuYUXhaW+1u7m7+IhCn/g==}
+    peerDependencies:
+      react: '>=16'
+    dependencies:
+      react: 18.1.0
     dev: false
 
   /@istanbuljs/load-nyc-config/1.1.0:
