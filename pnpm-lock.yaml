@@ -73,7 +73,7 @@ specifiers:
   typescript: 4.7.2
   unified: 10.1.2
   unist-util-visit: 4.1.0
-  urql: 2.2.0
+  urql: 2.2.1
   vfile: 5.3.2
 
 dependencies:
@@ -84,7 +84,7 @@ dependencies:
   metadata-scraper: 0.2.55
   next: 12.1.6_ui3n5xdcs5okasbbdhjl4hhppi
   next-themes: 0.2.0_2mgcgz5qhsdxw4fgpqzqeafmkq
-  next-urql: 3.3.2_react@18.1.0+urql@2.2.0
+  next-urql: 3.3.2_react@18.1.0+urql@2.2.1
   react: 18.1.0
   react-dom: 18.1.0_react@18.1.0
   rehype-autolink-headings: 6.1.1
@@ -107,7 +107,7 @@ dependencies:
   twemoji: 14.0.2
   unified: 10.1.2
   unist-util-visit: 4.1.0
-  urql: 2.2.0_7oyq4t3ocdziwagw7zfqg4youi
+  urql: 2.2.1_7oyq4t3ocdziwagw7zfqg4youi
   vfile: 5.3.2
 
 devDependencies:
@@ -7220,7 +7220,7 @@ packages:
       react-dom: 18.1.0_react@18.1.0
     dev: false
 
-  /next-urql/3.3.2_react@18.1.0+urql@2.2.0:
+  /next-urql/3.3.2_react@18.1.0+urql@2.2.1:
     resolution: {integrity: sha512-oXQHCFU0R3pIwXWtDqZDYOjKcD7SlNP7aove9YuukgKuItdtIR9CRUgo3qMOD5dSQ3wBBGfQ8zR6XtzqV5WiGg==}
     peerDependencies:
       react: '>=16.8.0'
@@ -7228,7 +7228,7 @@ packages:
     dependencies:
       react: 18.1.0
       react-ssr-prepass: 1.5.0_react@18.1.0
-      urql: 2.2.0_7oyq4t3ocdziwagw7zfqg4youi
+      urql: 2.2.1_7oyq4t3ocdziwagw7zfqg4youi
     dev: false
 
   /next/12.1.6_ui3n5xdcs5okasbbdhjl4hhppi:
@@ -9554,8 +9554,8 @@ packages:
       prepend-http: 2.0.0
     dev: true
 
-  /urql/2.2.0_7oyq4t3ocdziwagw7zfqg4youi:
-    resolution: {integrity: sha512-36wnWqDrpXqhwT5r2/qRSZXhb7Y4sXA0nLlYEd3uLgvfIdOA8kUaPdfTujzfrvfCcfiVVFxhzqVAhc8r17NMwQ==}
+  /urql/2.2.1_7oyq4t3ocdziwagw7zfqg4youi:
+    resolution: {integrity: sha512-KoGxe8FBUkX0Ava5qOlnK2bRup2JTKF577MfQ8mpdt/kqq+b2RHJiAYdCLcMEE0Xh6kGQoY99pteFp/F47Buzg==}
     peerDependencies:
       graphql: ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
       react: '>= 16.8.0'
