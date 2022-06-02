@@ -60,7 +60,7 @@
     "twemoji": "14.0.2",
     "unified": "10.1.2",
     "unist-util-visit": "4.1.0",
-    "urql": "2.2.0",
+    "urql": "2.2.1",
     "vfile": "5.3.2"
   },
   "devDependencies": {
