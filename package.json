@@ -32,7 +32,7 @@
   "dependencies": {
     "@iconify/react": "3.2.2",
     "@re-taro/rehype-shiki": "1.1.0",
-    "dayjs": "1.11.2",
+    "dayjs": "1.11.3",
     "mdast-util-to-hast": "12.1.1",
     "metadata-scraper": "0.2.55",
     "next": "12.1.6",
