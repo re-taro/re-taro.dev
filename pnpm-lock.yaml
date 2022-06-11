@@ -42,7 +42,7 @@ specifiers:
   metadata-scraper: 0.2.55
   next: 12.1.6
   next-themes: 0.2.0
-  next-urql: 3.3.2
+  next-urql: 3.3.3
   postcss: 8.4.14
   prettier: 2.6.2
   react: 18.1.0
@@ -73,8 +73,8 @@ specifiers:
   typescript: 4.7.3
   unified: 10.1.2
   unist-util-visit: 4.1.0
-  urql: 2.2.1
-  vfile: 5.3.2
+  urql: 2.2.2
+  vfile: 5.3.3
 
 dependencies:
   '@iconify/react': 3.2.2_react@18.1.0
@@ -84,7 +84,7 @@ dependencies:
   metadata-scraper: 0.2.55
   next: 12.1.6_mcsqq22aumckte2jlj4o4ye7ru
   next-themes: 0.2.0_2mgcgz5qhsdxw4fgpqzqeafmkq
-  next-urql: 3.3.2_react@18.1.0+urql@2.2.1
+  next-urql: 3.3.3_react@18.1.0+urql@2.2.2
   react: 18.1.0
   react-dom: 18.1.0_react@18.1.0
   rehype-autolink-headings: 6.1.1
@@ -107,8 +107,8 @@ dependencies:
   twemoji: 14.0.2
   unified: 10.1.2
   unist-util-visit: 4.1.0
-  urql: 2.2.1_7oyq4t3ocdziwagw7zfqg4youi
-  vfile: 5.3.2
+  urql: 2.2.2_7oyq4t3ocdziwagw7zfqg4youi
+  vfile: 5.3.3
 
 devDependencies:
   '@babel/core': 7.18.2
@@ -5128,7 +5128,7 @@ packages:
       '@types/unist': 2.0.6
       hastscript: 7.0.2
       property-information: 6.1.1
-      vfile: 5.3.2
+      vfile: 5.3.3
       vfile-location: 4.0.1
       web-namespaces: 2.0.1
     dev: false
@@ -7220,15 +7220,15 @@ packages:
       react-dom: 18.1.0_react@18.1.0
     dev: false
 
-  /next-urql/3.3.2_react@18.1.0+urql@2.2.1:
-    resolution: {integrity: sha512-oXQHCFU0R3pIwXWtDqZDYOjKcD7SlNP7aove9YuukgKuItdtIR9CRUgo3qMOD5dSQ3wBBGfQ8zR6XtzqV5WiGg==}
+  /next-urql/3.3.3_react@18.1.0+urql@2.2.2:
+    resolution: {integrity: sha512-mKdpbvxW7FifHjupRKNjE1YuZxhLF+GlN/y1sARcUSEdrCv10dRkFGQl03p4UpWtdggCyZ5lOVBBaQGW7UNfiQ==}
     peerDependencies:
       react: '>=16.8.0'
       urql: ^2.0.0
     dependencies:
       react: 18.1.0
       react-ssr-prepass: 1.5.0_react@18.1.0
-      urql: 2.2.1_7oyq4t3ocdziwagw7zfqg4youi
+      urql: 2.2.2_7oyq4t3ocdziwagw7zfqg4youi
     dev: false
 
   /next/12.1.6_mcsqq22aumckte2jlj4o4ye7ru:
@@ -9353,7 +9353,7 @@ packages:
       is-buffer: 2.0.5
       is-plain-obj: 4.0.0
       trough: 2.1.0
-      vfile: 5.3.2
+      vfile: 5.3.3
     dev: false
 
   /unified/10.1.2:
@@ -9365,7 +9365,7 @@ packages:
       is-buffer: 2.0.5
       is-plain-obj: 4.0.0
       trough: 2.1.0
-      vfile: 5.3.2
+      vfile: 5.3.3
 
   /unified/9.2.0:
     resolution: {integrity: sha512-vx2Z0vY+a3YoTj8+pttM3tiJHCwY5UFbYdiWrwBEbHmK8pvsPj2rtAX2BFfgXen8T39CJWblWRDT4L5WGXtDdg==}
@@ -9554,8 +9554,8 @@ packages:
       prepend-http: 2.0.0
     dev: true
 
-  /urql/2.2.1_7oyq4t3ocdziwagw7zfqg4youi:
-    resolution: {integrity: sha512-KoGxe8FBUkX0Ava5qOlnK2bRup2JTKF577MfQ8mpdt/kqq+b2RHJiAYdCLcMEE0Xh6kGQoY99pteFp/F47Buzg==}
+  /urql/2.2.2_7oyq4t3ocdziwagw7zfqg4youi:
+    resolution: {integrity: sha512-jaVhDxWS2gfJLWWupFXtRkTCuGeRX+b9v19PU6TnKIJ7VP+xyrgpNHghHcTBGo58F+rxvCXVNEvSvdlKFMiHhg==}
     peerDependencies:
       graphql: ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
       react: '>= 16.8.0'
@@ -9622,7 +9622,7 @@ packages:
     resolution: {integrity: sha512-JDxPlTbZrZCQXogGheBHjbRWjESSPEak770XwWPfw5mTc1v1nWGLB/apzZxsx8a0SJVfF8HK8ql8RD308vXRUw==}
     dependencies:
       '@types/unist': 2.0.6
-      vfile: 5.3.2
+      vfile: 5.3.3
     dev: false
 
   /vfile-message/2.0.4:
@@ -9647,8 +9647,8 @@ packages:
       vfile-message: 2.0.4
     dev: true
 
-  /vfile/5.3.2:
-    resolution: {integrity: sha512-w0PLIugRY3Crkgw89TeMvHCzqCs/zpreR31hl4D92y6SOE07+bfJe+dK5Q2akwS+i/c801kzjoOr9gMcTe6IAA==}
+  /vfile/5.3.3:
+    resolution: {integrity: sha512-xwALvwUKmXzHOri5dGXqXNN8JDEvxPhf8avC+E+pJEl32e4/grLdRdsgx23HpK7QI0cwgR4+QfaM8D5KUnki3g==}
     dependencies:
       '@types/unist': 2.0.6
       is-buffer: 2.0.5
