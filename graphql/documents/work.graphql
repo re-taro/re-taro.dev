@@ -1,9 +1,9 @@
 query work($id: String!) {
   work(id: $id) {
     id
-    image_url
+    imageUrl
     date
-    work_page {
+    workPage {
       title
       detail
       meta {
@@ -13,7 +13,7 @@ query work($id: String!) {
           icon
           name
         }
-        blog_post {
+        blogPost {
           title
           url
         }

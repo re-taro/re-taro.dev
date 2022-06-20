@@ -25,7 +25,7 @@ type BlogPost {
 }
 
 type Meta {
-  blog_post: BlogPost
+  blogPost: BlogPost
   platform: [String!]!
   presentation: Presentation
   source: String
@@ -75,9 +75,9 @@ type Work {
   date: String!
   description: String!
   id: String!
-  image_url: String!
+  imageUrl: String!
   title: String!
-  work_page: WorkPage!
+  workPage: WorkPage!
 }
 
 type WorkPage {

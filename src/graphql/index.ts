@@ -43,7 +43,7 @@ export type BlogPost = {
 
 export type Meta = {
   __typename?: 'Meta';
-  blog_post?: Maybe<BlogPost>;
+  blogPost?: Maybe<BlogPost>;
   platform: Array<Scalars['String']>;
   presentation?: Maybe<Presentation>;
   source?: Maybe<Scalars['String']>;
@@ -115,9 +115,9 @@ export type Work = {
   date: Scalars['String'];
   description: Scalars['String'];
   id: Scalars['String'];
-  image_url: Scalars['String'];
+  imageUrl: Scalars['String'];
   title: Scalars['String'];
-  work_page: WorkPage;
+  workPage: WorkPage;
 };
 
 export type WorkPage = {
@@ -141,7 +141,7 @@ export type FeedQuery = { __typename?: 'Query', posts: Array<{ __typename?: 'Pos
 export type HomeQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type HomeQuery = { __typename?: 'Query', basic: { __typename?: 'Basic', name: { __typename?: 'Name', position: string, primary: string } }, bio: Array<{ __typename?: 'Bio', date: string, title: string, action: string }>, posts: Array<{ __typename?: 'PostHeader', emoji: string, id: string, title: string, date: string, tags: Array<string> }>, works: Array<{ __typename?: 'Work', id: string, image_url: string, title: string, date: string }> };
+export type HomeQuery = { __typename?: 'Query', basic: { __typename?: 'Basic', name: { __typename?: 'Name', position: string, primary: string } }, bio: Array<{ __typename?: 'Bio', date: string, title: string, action: string }>, posts: Array<{ __typename?: 'PostHeader', emoji: string, id: string, title: string, date: string, tags: Array<string> }>, works: Array<{ __typename?: 'Work', id: string, imageUrl: string, title: string, date: string }> };
 
 export type PostQueryVariables = Exact<{
   id: Scalars['String'];
@@ -184,12 +184,12 @@ export type WorkQueryVariables = Exact<{
 }>;
 
 
-export type WorkQuery = { __typename?: 'Query', work: { __typename?: 'Work', id: string, image_url: string, date: string, work_page: { __typename?: 'WorkPage', title: string, detail: string, images?: Array<string> | null, meta: { __typename?: 'Meta', website?: string | null, platform: Array<string>, source?: string | null, stack: Array<{ __typename?: 'Stack', icon?: string | null, name: string }>, blog_post?: { __typename?: 'BlogPost', title: string, url: string } | null, presentation?: { __typename?: 'Presentation', title: string, url: string } | null } } } };
+export type WorkQuery = { __typename?: 'Query', work: { __typename?: 'Work', id: string, imageUrl: string, date: string, workPage: { __typename?: 'WorkPage', title: string, detail: string, images?: Array<string> | null, meta: { __typename?: 'Meta', website?: string | null, platform: Array<string>, source?: string | null, stack: Array<{ __typename?: 'Stack', icon?: string | null, name: string }>, blogPost?: { __typename?: 'BlogPost', title: string, url: string } | null, presentation?: { __typename?: 'Presentation', title: string, url: string } | null } } } };
 
 export type WorksQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type WorksQuery = { __typename?: 'Query', works: Array<{ __typename?: 'Work', title: string, id: string, image_url: string, description: string, date: string }> };
+export type WorksQuery = { __typename?: 'Query', works: Array<{ __typename?: 'Work', title: string, id: string, imageUrl: string, description: string, date: string }> };
 
 
 export const AboutDocument = gql`
@@ -242,7 +242,7 @@ export const HomeDocument = gql`
   }
   works {
     id
-    image_url
+    imageUrl
     title
     date
   }
@@ -338,9 +338,9 @@ export const WorkDocument = gql`
     query work($id: String!) {
   work(id: $id) {
     id
-    image_url
+    imageUrl
     date
-    work_page {
+    workPage {
       title
       detail
       meta {
@@ -350,7 +350,7 @@ export const WorkDocument = gql`
           icon
           name
         }
-        blog_post {
+        blogPost {
           title
           url
         }
@@ -374,7 +374,7 @@ export const WorksDocument = gql`
   works {
     title
     id
-    image_url
+    imageUrl
     description
     date
   }
@@ -538,7 +538,7 @@ export default {
         "name": "Meta",
         "fields": [
           {
-            "name": "blog_post",
+            "name": "blogPost",
             "type": {
               "kind": "OBJECT",
               "name": "BlogPost",
@@ -977,7 +977,7 @@ export default {
             "args": []
           },
           {
-            "name": "image_url",
+            "name": "imageUrl",
             "type": {
               "kind": "NON_NULL",
               "ofType": {
@@ -999,7 +999,7 @@ export default {
             "args": []
           },
           {
-            "name": "work_page",
+            "name": "workPage",
             "type": {
               "kind": "NON_NULL",
               "ofType": {

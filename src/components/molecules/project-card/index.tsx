@@ -66,7 +66,7 @@ const ProjectCard: React.FC<ProjectCardProperties> = ({ projects, ...rest }) => 
                     layout={"responsive"}
                     objectFit={"cover"}
                     objectPosition={"50% 0"}
-                    src={project.image_url}
+                    src={project.imageUrl}
                     alt={project.title}
                     css={tw`rounded-lg`}
                   />

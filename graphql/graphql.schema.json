@@ -226,7 +226,7 @@
         "description": null,
         "fields": [
           {
-            "name": "blog_post",
+            "name": "blogPost",
             "description": null,
             "args": [],
             "type": {
@@ -864,7 +864,7 @@
             "deprecationReason": null
           },
           {
-            "name": "image_url",
+            "name": "imageUrl",
             "description": null,
             "args": [],
             "type": {
@@ -896,7 +896,7 @@
             "deprecationReason": null
           },
           {
-            "name": "work_page",
+            "name": "workPage",
             "description": null,
             "args": [],
             "type": {

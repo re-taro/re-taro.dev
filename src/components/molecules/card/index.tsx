@@ -29,7 +29,7 @@ const Card: React.FC<CardProperties> = ({ projects, ...rest }) => (
           >
             <div css={tw`h-[200] sm:h-[250] md:h-[200]`}>
               <Image
-                src={project.image_url}
+                src={project.imageUrl}
                 height={200}
                 width={355}
                 layout={"responsive"}

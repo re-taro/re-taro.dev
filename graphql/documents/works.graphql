@@ -2,7 +2,7 @@ query works {
   works {
     title
     id
-    image_url
+    imageUrl
     description
     date
   }

@@ -18,7 +18,7 @@ type Properties = InferGetStaticPropsType<typeof getStaticProps>;
 export const getStaticProps: GetStaticProps<{ meta: SeoProperties }> = () => {
   const meta: SeoProperties = {
     description: "Rintaro Itokawa's Dev Site | re-taro",
-    ogimage_url: encodeURI(`${OGP_HOST}/api/ogp?title=re-taro`),
+    ogimageUrl: encodeURI(`${OGP_HOST}/api/ogp?title=re-taro`),
     pageRelPath: "",
     pagetype: "website",
     sitename: "re-taro.dev",

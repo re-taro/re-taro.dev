@@ -42,15 +42,15 @@ export const getStaticProps: GetStaticProps<
   await client.query(WorkDocument, { id: params?.id }).toPromise();
   const response = await fetcher.query<WorkQuery>(WorkDocument, { id: params?.id }).toPromise();
   const meta: SeoProperties = {
-    description: response.data?.work.work_page.title as string,
-    ogimage_url: encodeURI(
-      `${OGP_HOST}/api/ogp?title=${response.data?.work.work_page.title as string} | re-taro&date=${response.data?.work.date as string
+    description: response.data?.work.workPage.title as string,
+    ogimageUrl: encodeURI(
+      `${OGP_HOST}/api/ogp?title=${response.data?.work.workPage.title as string} | re-taro&date=${response.data?.work.date as string
       }`,
     ),
     pageRelPath: `works/${params?.id as string}`,
     pagetype: "article",
     sitename: "re-taro.dev",
-    title: `${response.data?.work.work_page.title as string} | re-taro`,
+    title: `${response.data?.work.workPage.title as string} | re-taro`,
     twcardtype: "summary_large_image",
   };
   return {
@@ -62,7 +62,7 @@ export const getStaticProps: GetStaticProps<
   };
 };
 
-const work_page: NextPage<Properties> = ({ id, meta }) => {
+const workPage: NextPage<Properties> = ({ id, meta }) => {
   const [response] = useQuery<WorkQuery>({ query: WorkDocument, variables: { id } });
   return <Work data={response.data} meta={meta} />;
 };
@@ -72,4 +72,4 @@ export default withUrqlClient(
     url: END_POINT,
   }),
   { neverSuspend: true, ssr: false },
-)(work_page);
+)(workPage);

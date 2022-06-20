@@ -18,7 +18,7 @@ export const getStaticProps: GetStaticProps<{ meta: SeoProperties; urqlState: SS
   await client.query(WorksDocument).toPromise();
   const meta: SeoProperties = {
     description: "ポートフォリオ",
-    ogimage_url: encodeURI(`${OGP_HOST}/api/ogp?title=Works | re-taro`),
+    ogimageUrl: encodeURI(`${OGP_HOST}/api/ogp?title=Works | re-taro`),
     pageRelPath: "",
     pagetype: "website",
     sitename: "re-taro.dev",
