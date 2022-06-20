@@ -1,0 +1,88 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Affiliation {
+  assign: String!
+  location: String!
+}
+
+type Basic {
+  affiliation: Affiliation!
+  introduction: String!
+  name: Name!
+}
+
+type Bio {
+  action: String!
+  date: String!
+  title: String!
+}
+
+type BlogPost {
+  title: String!
+  url: String!
+}
+
+type Meta {
+  blogPost: BlogPost
+  platform: [String!]!
+  presentation: Presentation
+  source: String
+  stack: [Stack!]!
+  website: String
+}
+
+type Name {
+  position: String!
+  primary: String!
+}
+
+type Post {
+  content: String!
+  header: PostHeader!
+}
+
+type PostHeader {
+  date: String!
+  emoji: String!
+  id: String!
+  tags: [String!]!
+  title: String!
+}
+
+type Presentation {
+  title: String!
+  url: String!
+}
+
+type Query {
+  basic: Basic!
+  bio: [Bio!]!
+  postById(id: String!): Post!
+  posts: [PostHeader!]!
+  postsByTag(tag: String!): [PostHeader!]!
+  work(id: String!): Work!
+  works: [Work!]!
+}
+
+type Stack {
+  icon: String
+  name: String!
+}
+
+type Work {
+  date: String!
+  description: String!
+  id: String!
+  imageUrl: String!
+  title: String!
+  workPage: WorkPage!
+}
+
+type WorkPage {
+  detail: String!
+  images: [String!]
+  meta: Meta!
+  title: String!
+}

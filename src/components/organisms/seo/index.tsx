@@ -19,7 +19,7 @@ export type SeoProperties = {
   title: string;
   sitename: string;
   description: string;
-  ogImageUrl: string;
+  ogimageUrl: string;
   pageRelPath: string;
   pagetype: PageType;
   twcardtype: TwCardType;
@@ -33,14 +33,14 @@ const Seo: React.FC<SeoProperties> = properties => (
     <meta name="description" content={properties.description} lang="ja" />
     <meta name="twitter:site" content="@10969_rintaro" />
     <meta name="twitter:creator" content="@10969_rintaro" />
-    <meta name="twitter:image" content={properties.ogImageUrl} />
+    <meta name="twitter:image" content={properties.ogimageUrl} />
     <meta name="twitter:card" content={properties.twcardtype} />
     <meta property="og:url" content={`https://re-taro.dev/${properties.pageRelPath}`} />
     <meta property="og:type" content={properties.pagetype} />
     <meta property="og:title" content={`${properties.title}`} />
     <meta property="og:description" content={properties.description} />
     <meta property="og:site_name" content={properties.sitename} />
-    <meta property="og:image" content={properties.ogImageUrl} />
+    <meta property="og:image" content={properties.ogimageUrl} />
     <link rel="icon" href="/favicon.ico" />
   </Head>
 );
