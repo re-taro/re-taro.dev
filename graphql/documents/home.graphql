@@ -19,7 +19,7 @@ query home {
   }
   works {
     id
-    imageUrl
+    image_url
     title
     date
   }

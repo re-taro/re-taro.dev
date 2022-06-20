@@ -18,7 +18,7 @@ export const getStaticProps: GetStaticProps<{ meta: SeoProperties; urqlState: SS
   await client.query(PostsDocument).toPromise();
   const meta: SeoProperties = {
     description: "記事一覧",
-    ogImageUrl: encodeURI(`${OGP_HOST}/api/ogp?title=Posts | re-taro`),
+    ogimage_url: encodeURI(`${OGP_HOST}/api/ogp?title=Posts | re-taro`),
     pageRelPath: "",
     pagetype: "website",
     sitename: "re-taro.dev",

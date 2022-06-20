@@ -18,7 +18,7 @@ const WorkHead: React.FC<WorkHeadProperties> = ({ data }) => (
         flex-basis: 60%;
       `}
     >
-      <Heading as={"h4"}>{data?.workPage.title}</Heading>
+      <Heading as={"h4"}>{data?.work_page.title}</Heading>
       <Text>{formatDate(data?.date as string, "MMM D, YYYY")}</Text>
     </div>
     <div
@@ -32,8 +32,8 @@ const WorkHead: React.FC<WorkHeadProperties> = ({ data }) => (
         layout={"responsive"}
         objectFit={"cover"}
         objectPosition={"50% 0"}
-        src={data?.imageUrl as string}
-        alt={data?.workPage.title}
+        src={data?.image_url as string}
+        alt={data?.work_page.title}
         css={tw`rounded-lg`}
       />
     </div>
