@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/10969_rintaro
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://re-taro.dev
+  * I am 10969_rintaro (https://keybase.io/10969_rintaro) on keybase.
+  * I have a public key ASBEl05wy7N28lE-5eEeXXtH693cUBkHu42tQ6I1JAbM_Qo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01205ac0f46c54a87f5f4b3bb261b3e70e3d61e841350894ae3cde16f0068a9f08490a",
+      "host": "keybase.io",
+      "kid": "012044974e70cbb376f2513ee5e11e5d7b47ebdddc501907bb8dad43a2352406ccfd0a",
+      "uid": "b73c3b8c1f0b4a302c015b18f3723c19",
+      "username": "10969_rintaro"
+    },
+    "merkle_root": {
+      "ctime": 1655994832,
+      "hash": "9fe2ce726296ce63c9bbf377ad7aa403ac45ba459d35f37180ca3313f513f9bb1fe8550d2db649455180527afd683eaa52dfcf58dd418dad4664f0087ba61527",
+      "hash_meta": "efe0b231aefc0d3d3337e7e6d18a02b930008317ca9ac17d935b5a693e5f770e",
+      "seqno": 22727883
+    },
+    "service": {
+      "entropy": "M+Ef63SO16kObalMRUlLJGZq",
+      "hostname": "re-taro.dev",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.0.1"
+  },
+  "ctime": 1655994866,
+  "expire_in": 504576000,
+  "prev": "421f9ece4eefcb732aa9b8f204675c1bfcd3cde33f603fd58f2d6dd000d026ae",
+  "seqno": 50,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgRJdOcMuzdvJRPuXhHl17R+vd3FAZB7uNrUOiNSQGzP0Kp3BheWxvYWTESpcCMsQgQh+ezk7vy3MqqbjyBGdcG/zTzeM/YD/Vjy1t0ADQJq7EIPiGvgsxy5xGI/Ehw72JD3+MSn4oS5wHxSgWjcqL3hz7AgHCo3NpZ8RA4wNgaNfvf4VCnuoQHK1ue+VCbJD6ySLEPqvM6drVGlT2ayh1/pB9GucfpZec4iQq3yt/GImmoleczY6TkxxuDqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIMSIl8tLNN4YmOuMi8TyjXGJI9RrPmsfvvVk0xNxFj9Ho3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/10969_rintaro
+
+==================================================================
