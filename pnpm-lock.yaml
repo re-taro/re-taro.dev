@@ -62,7 +62,7 @@ specifiers:
   remark-rehype: 10.1.0
   remark-toc: 8.0.1
   remark-unwrap-images: 3.0.1
-  sass: 1.52.3
+  sass: 1.53.0
   sharp: 0.30.7
   shiki: 0.10.1
   strip-markdown: 5.0.0
@@ -82,7 +82,7 @@ dependencies:
   dayjs: 1.11.3
   mdast-util-to-hast: 12.1.1
   metadata-scraper: 0.2.56
-  next: 12.1.6_3quvswhzwszfjhnmmzhvmw36ga
+  next: 12.1.6_ztxnoo3uixbsvffired6a5qucu
   next-themes: 0.2.0_2nrpme5s5xmpdgccbbbdwhosda
   next-urql: 3.3.3_react@18.2.0+urql@2.2.2
   react: 18.2.0
@@ -148,7 +148,7 @@ devDependencies:
   postcss: 8.4.14
   prettier: 2.7.1
   react-is: 18.2.0
-  sass: 1.52.3
+  sass: 1.53.0
   strip-markdown: 5.0.0
   tailwindcss: 3.1.4
   twin.macro: 2.8.2
@@ -7207,7 +7207,7 @@ packages:
       react: '*'
       react-dom: '*'
     dependencies:
-      next: 12.1.6_3quvswhzwszfjhnmmzhvmw36ga
+      next: 12.1.6_ztxnoo3uixbsvffired6a5qucu
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     dev: false
@@ -7223,7 +7223,7 @@ packages:
       urql: 2.2.2_aez2jvt6lsvokp3l4ousdbdxf4
     dev: false
 
-  /next/12.1.6_3quvswhzwszfjhnmmzhvmw36ga:
+  /next/12.1.6_ztxnoo3uixbsvffired6a5qucu:
     resolution: {integrity: sha512-cebwKxL3/DhNKfg9tPZDQmbRKjueqykHHbgaoG4VBRH3AHQJ2HO0dbKFiS1hPhe1/qgc2d/hFeadsbPicmLD+A==}
     engines: {node: '>=12.22.0'}
     hasBin: true
@@ -7246,7 +7246,7 @@ packages:
       postcss: 8.4.5
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      sass: 1.52.3
+      sass: 1.53.0
       styled-jsx: 5.0.2_u6so5zdo33wcdz64qb23nallaa
     optionalDependencies:
       '@next/swc-android-arm-eabi': 12.1.6
@@ -8423,8 +8423,8 @@ packages:
     engines: {node: '>=7.0.0'}
     dev: false
 
-  /sass/1.52.3:
-    resolution: {integrity: sha512-LNNPJ9lafx+j1ArtA7GyEJm9eawXN8KlA1+5dF6IZyoONg1Tyo/g+muOsENWJH/2Q1FHbbV4UwliU0cXMa/VIA==}
+  /sass/1.53.0:
+    resolution: {integrity: sha512-zb/oMirbKhUgRQ0/GFz8TSAwRq2IlR29vOUJZOx0l8sV+CkHUfHa4u5nqrG+1VceZp7Jfj59SVW9ogdhTvJDcQ==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     dependencies:
