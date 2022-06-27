@@ -25,7 +25,7 @@ specifiers:
   '@types/node': 17.0.21
   '@types/react': 18.0.14
   '@types/react-dom': 18.0.5
-  '@types/tailwindcss': 3.0.10
+  '@types/tailwindcss': 3.0.11
   '@types/umami': 0.1.0
   '@types/unist': 2.0.6
   autoprefixer: 10.4.7
@@ -133,7 +133,7 @@ devDependencies:
   '@types/node': 17.0.21
   '@types/react': 18.0.14
   '@types/react-dom': 18.0.5
-  '@types/tailwindcss': 3.0.10
+  '@types/tailwindcss': 3.0.11
   '@types/umami': 0.1.0
   '@types/unist': 2.0.6
   autoprefixer: 10.4.7_postcss@8.4.14
@@ -2382,8 +2382,8 @@ packages:
     resolution: {integrity: sha512-Hl219/BT5fLAaz6NDkSuhzasy49dwQS/DSdu4MdggFB8zcXv7vflBI3xp7FEmkmdDkBUI2bPUNeMttp2knYdxw==}
     dev: true
 
-  /@types/tailwindcss/3.0.10:
-    resolution: {integrity: sha512-1UnZIHO0NOPyPlPFV0HuMjki2SHkvG9uBA1ZehWj/OQMSROk503nuNyyfmJSIT289yewxTbKoPG+KLxYRvfIIg==}
+  /@types/tailwindcss/3.0.11:
+    resolution: {integrity: sha512-PR+BOIrI+rxteHwFvkfIOty+PDJwTG4ute3alxSSXpF/xKpryO1room265m46Auyae0VwqUYs3PuVEOF9Oil3w==}
     dev: true
 
   /@types/umami/0.1.0:
