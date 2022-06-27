@@ -39,7 +39,7 @@ specifiers:
   graphql: 16.5.0
   graphql-tag: 2.12.6
   mdast-util-to-hast: 12.1.1
-  metadata-scraper: 0.2.56
+  metadata-scraper: 0.2.57
   next: 12.1.6
   next-themes: 0.2.0
   next-urql: 3.3.3
@@ -81,7 +81,7 @@ dependencies:
   '@re-taro/rehype-shiki': 1.1.0_shiki@0.10.1
   dayjs: 1.11.3
   mdast-util-to-hast: 12.1.1
-  metadata-scraper: 0.2.56
+  metadata-scraper: 0.2.57
   next: 12.1.6_ztxnoo3uixbsvffired6a5qucu
   next-themes: 0.2.0_2nrpme5s5xmpdgccbbbdwhosda
   next-urql: 3.3.3_react@18.2.0+urql@2.2.2
@@ -6798,8 +6798,8 @@ packages:
       '@types/node': 17.0.21
     dev: true
 
-  /metadata-scraper/0.2.56:
-    resolution: {integrity: sha512-BwHJ70Jao6lmWz1/DGgqn9Cy8UINd0zekYMsqHgfvQOfi2XvFZgfAxie5PNDF7kj3G5YNmi8kr/8FOmipoWV4w==}
+  /metadata-scraper/0.2.57:
+    resolution: {integrity: sha512-ukPUAiSzsUc0eL+2uh+2I0CwQDDQiN8y1ee3oTli2mr3UL2EEECTBAYPMbUuUY6kS7Oy4Kou3lj5seEiXKbnNQ==}
     dependencies:
       domino: 2.1.6
       got: 11.8.3
