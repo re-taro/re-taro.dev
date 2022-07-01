@@ -24,7 +24,7 @@
     "analyze": "cross-env ANALYZE=true yarn build",
     "start": "next start",
     "lint": "next lint",
-    "lint:fix": "eslint ./**/**/**/**/*.{js,jsx,ts,tsx,json,yaml,yml,toml} --fix && npm run fmt",
+    "lint:fix": "eslint ./**/*.{js,jsx,ts,tsx,json,yaml,yml,toml} --fix && npm run fmt",
     "fmt": "prettier -w -u .",
     "type": "tsc --noEmit",
     "codegen": "graphql-codegen --config codegen.yml"

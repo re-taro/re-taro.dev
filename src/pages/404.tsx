@@ -57,8 +57,8 @@ const NotFound: NextPage<Properties> = ({ meta }) => {
           </Heading>
           <div css={tw`text-center`}>
             <Link href={"/"} passHref>
-              <Button variant={"normal"} as={"a"}>
-                <Text css={tw`text-lg`}>Let&apos;s Head Back</Text>
+              <Button variant={"normal"} textStyles={tw`text-lg`} as={"a"}>
+                Let&apos;s Head Back
               </Button>
             </Link>
           </div>
