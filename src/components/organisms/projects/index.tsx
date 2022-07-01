@@ -4,7 +4,6 @@ import React, { useEffect } from "react";
 import tw from "twin.macro";
 import { Button } from "~/components/atoms/button";
 import { Heading } from "~/components/atoms/heading";
-import { Text } from "~/components/atoms/text";
 import { Card } from "~/components/molecules/card";
 import type { HomeQuery } from "~/graphql";
 import { trackEventToUmami } from "~/utils/umami";
@@ -38,9 +37,10 @@ const ProjectsSection: React.FC<ProjectsSectionProperties> = ({ data, ...rest })
           variant={"icon"}
           rightIcon={"fa-solid:arrow-right"}
           boxStyles={tw`px-0`}
+          textStyles={tw`text-lg`}
           onClick={() => trackEventToUmami({ eventType: "navigate", eventValue: "Home: View All Projects" })}
         >
-          <Text css={tw`text-lg`}>view all works</Text>
+          view all works
         </Button>
       </Link>
     </ProjectsBox>

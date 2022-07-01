@@ -44,7 +44,8 @@ export const getStaticProps: GetStaticProps<
   const meta: SeoProperties = {
     description: response.data?.work.workPage.title as string,
     ogimageUrl: encodeURI(
-      `${OGP_HOST}/api/ogp?title=${response.data?.work.workPage.title as string} | re-taro&date=${response.data?.work.date as string
+      `${OGP_HOST}/api/ogp?title=${response.data?.work.workPage.title as string} | re-taro&date=${
+        response.data?.work.date as string
       }`,
     ),
     pageRelPath: `works/${params?.id as string}`,

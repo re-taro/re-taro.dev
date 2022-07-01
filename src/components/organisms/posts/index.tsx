@@ -5,7 +5,6 @@ import tw from "twin.macro";
 import { Button } from "~/components/atoms/button";
 import { Grid } from "~/components/atoms/grid";
 import { Heading } from "~/components/atoms/heading";
-import { Text } from "~/components/atoms/text";
 import { PostCard } from "~/components/molecules/post-card";
 import { PostHeader } from "~/graphql";
 import { trackEventToUmami } from "~/utils/umami";
@@ -44,9 +43,10 @@ const PostsSection: React.FC<PostsSectionProperties> = ({ data, ...rest }) => {
           variant={"icon"}
           rightIcon={"fa-solid:arrow-right"}
           boxStyles={tw`px-0`}
+          textStyles={tw`text-lg`}
           onClick={() => trackEventToUmami({ eventType: "navigate", eventValue: "Home: View All Blog Posts" })}
         >
-          <Text css={tw`text-lg`}>view all posts</Text>
+          view all posts
         </Button>
       </Link>
     </PostsBox>

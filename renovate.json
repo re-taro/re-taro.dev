@@ -1,3 +1,4 @@
 {
+  "baseBranches": ["dev"],
   "extends": ["github>re-taro/renovate"]
 }

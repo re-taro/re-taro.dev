@@ -2,7 +2,7 @@ import { initUrqlClient } from "next-urql";
 import { ssrExchange, dedupExchange, cacheExchange, fetchExchange } from "urql";
 import type { Client } from "urql";
 
-const END_POINT = process.env.END_POINT || "http://localhost:8000/graphql";
+const END_POINT = process.env.END_POINT || "http://localhost:3003/graphql";
 
 const ssrCache = ssrExchange({ isClient: false });
 

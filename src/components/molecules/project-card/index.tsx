@@ -35,7 +35,7 @@ const ProjectCard: React.FC<ProjectCardProperties> = ({ projects, ...rest }) => 
                   tw`gap-6 flex-wrap h-full`,
                   css`
                     flex-basis: 100%;
-                    @media (min-width: 640px) {
+                    @media (min-width: 768px) {
                       flex-basis: 60%;
                     }
                   `,
@@ -54,7 +54,7 @@ const ProjectCard: React.FC<ProjectCardProperties> = ({ projects, ...rest }) => 
               <div
                 css={css`
                   flex-basis: 0;
-                  @media (min-width: 640px) {
+                  @media (min-width: 768px) {
                     flex-basis: 40%;
                   }
                 `}

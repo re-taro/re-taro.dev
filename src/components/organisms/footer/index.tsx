@@ -26,7 +26,7 @@ const Footer: React.FC<FooterProperties> = ({ ...rest }) => (
         tw`md:flex gap-4 md:gap-6`,
         css`
           grid-template-columns: repeat(2, 1fr);
-          @media (min-width: 640px) {
+          @media (min-width: 768px) {
             grid-template-columns: repeat(${links.length <= 4 ? links.length : 4}, 1fr);
           }
         `,
