@@ -21,9 +21,9 @@ jobs:
         uses: actions/cache@v3
         with:
           path: |
-              ~/.pnpm-store
-              ${{ github.workspace }}/.next/cache
-              ~/.cache/ms-playwright
+            ~/.pnpm-store
+            ${{ github.workspace }}/.next/cache
+            ~/.cache/ms-playwright
           key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-

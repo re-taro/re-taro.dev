@@ -16,7 +16,7 @@ jobs:
         with:
           step: start
           token: ${{ secrets.GITHUB_TOKEN }}
-          env: prod
+          env: Production
       - uses: amondnet/vercel-action@v25
         id: deploy
         with:
