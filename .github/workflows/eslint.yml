@@ -22,6 +22,7 @@ jobs:
         with:
           path: |
             ~/.pnpm-store
+            ${{ github.workspace }}/.next/cache
             ~/.cache/ms-playwright
           key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
@@ -32,6 +33,7 @@ jobs:
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
         with:
           version: ${{ env.pnpm-version }}
-          run_install: true
+          run_install: |
+            - recursive: true
       - name: eslint
         run: pnpm run lint
