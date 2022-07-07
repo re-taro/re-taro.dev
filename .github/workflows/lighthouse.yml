@@ -16,7 +16,10 @@ jobs:
       - name: Cache pnpm modules
         uses: actions/cache@v3
         with:
-          path: ~/.pnpm-store
+          path: |
+              ~/.pnpm-store
+              ${{ github.workspace }}/.next/cache
+              ~/.cache/ms-playwright
           key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-
@@ -25,8 +28,9 @@ jobs:
         env:
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
         with:
-          version: latest
-          run_install: true
+          version: ${{ env.pnpm-version }}
+          run_install: |
+            - recursive: true
       - name: production build
         run: pnpm run build
       - name: install Lighthouse cli
