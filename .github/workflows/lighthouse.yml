@@ -28,7 +28,7 @@ jobs:
         env:
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
         with:
-          version: ${{ env.pnpm-version }}
+          version: latest
           run_install: |
             - recursive: true
       - name: production build
