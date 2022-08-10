@@ -62,7 +62,7 @@ specifiers:
   remark-rehype: 10.1.0
   remark-toc: 8.0.1
   remark-unwrap-images: 3.0.1
-  sass: 1.54.3
+  sass: 1.54.4
   sharp: 0.30.7
   shiki: 0.10.1
   strip-markdown: 5.0.0
@@ -82,7 +82,7 @@ dependencies:
   dayjs: 1.11.4
   mdast-util-to-hast: 12.2.0
   metadata-scraper: 0.2.57
-  next: 12.2.4_rfofbibef5ppkk62pxaoz4p72m
+  next: 12.2.4_6lcifign6tl22mspzp5hr7tzm4
   next-themes: 0.2.0_vyccxgqxcnj5vudpssiumaxlme
   next-urql: 3.3.3_react@18.2.0+urql@2.2.3
   react: 18.2.0
@@ -148,7 +148,7 @@ devDependencies:
   postcss: 8.4.16
   prettier: 2.7.1
   react-is: 18.2.0
-  sass: 1.54.3
+  sass: 1.54.4
   strip-markdown: 5.0.0
   tailwindcss: 3.1.8
   twin.macro: 2.8.2
@@ -7029,7 +7029,7 @@ packages:
       react: '*'
       react-dom: '*'
     dependencies:
-      next: 12.2.4_rfofbibef5ppkk62pxaoz4p72m
+      next: 12.2.4_6lcifign6tl22mspzp5hr7tzm4
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     dev: false
@@ -7045,7 +7045,7 @@ packages:
       urql: 2.2.3_aez2jvt6lsvokp3l4ousdbdxf4
     dev: false
 
-  /next/12.2.4_rfofbibef5ppkk62pxaoz4p72m:
+  /next/12.2.4_6lcifign6tl22mspzp5hr7tzm4:
     resolution: {integrity: sha512-b1xlxEozmAWokAXzXsi5vlmU/IfJcFNIJA8dpU5UdkFbyDPio8wwb8mAQ/Y7rGtfTgG/t/u49BiyEA+xAgFvow==}
     engines: {node: '>=12.22.0'}
     hasBin: true
@@ -7069,7 +7069,7 @@ packages:
       postcss: 8.4.14
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      sass: 1.54.3
+      sass: 1.54.4
       styled-jsx: 5.0.2_u4wix26yyf47dz5vm23gtjjwbi
       use-sync-external-store: 1.2.0_react@18.2.0
     optionalDependencies:
@@ -8192,8 +8192,8 @@ packages:
     engines: {node: '>=7.0.0'}
     dev: false
 
-  /sass/1.54.3:
-    resolution: {integrity: sha512-fLodey5Qd41Pxp/Tk7Al97sViYwF/TazRc5t6E65O7JOk4XF8pzwIW7CvCxYVOfJFFI/1x5+elDyBIixrp+zrw==}
+  /sass/1.54.4:
+    resolution: {integrity: sha512-3tmF16yvnBwtlPrNBHw/H907j8MlOX8aTBnlNX1yrKx24RKcJGPyLhFUwkoKBKesR3unP93/2z14Ll8NicwQUA==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     dependencies:
