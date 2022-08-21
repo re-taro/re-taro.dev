@@ -42,7 +42,7 @@ specifiers:
   metadata-scraper: 0.2.58
   next: 12.2.5
   next-themes: 0.2.0
-  next-urql: 3.3.3
+  next-urql: 4.0.0
   postcss: 8.4.16
   prettier: 2.7.1
   react: 18.2.0
@@ -84,7 +84,7 @@ dependencies:
   metadata-scraper: 0.2.58
   next: 12.2.5_46yixp4rc7xq45bcunpedxp5s4
   next-themes: 0.2.0_3xcjr4wz26biff45sz3jtokgje
-  next-urql: 3.3.3_react@18.2.0+urql@2.2.3
+  next-urql: 4.0.0_react@18.2.0+urql@2.2.3
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   rehype-autolink-headings: 6.1.1
@@ -7065,11 +7065,11 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: false
 
-  /next-urql/3.3.3_react@18.2.0+urql@2.2.3:
-    resolution: {integrity: sha512-mKdpbvxW7FifHjupRKNjE1YuZxhLF+GlN/y1sARcUSEdrCv10dRkFGQl03p4UpWtdggCyZ5lOVBBaQGW7UNfiQ==}
+  /next-urql/4.0.0_react@18.2.0+urql@2.2.3:
+    resolution: {integrity: sha512-c/dLhNg9bP+ku7GJDAYlsNnKEazrjcDnRx8/mBsGnjMj4c0yM+p2PBGbirWXkYL7Z2ogOHnSqHTt8swB9sJvQg==}
     peerDependencies:
       react: '>=16.8.0'
-      urql: ^2.0.0
+      urql: ^3.0.0
     dependencies:
       react: 18.2.0
       react-ssr-prepass: 1.5.0_react@18.2.0
