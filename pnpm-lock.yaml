@@ -38,7 +38,7 @@ specifiers:
   globby: 13.1.2
   graphql: 16.6.0
   graphql-tag: 2.12.6
-  mdast-util-to-hast: 12.2.1
+  mdast-util-to-hast: 12.2.2
   metadata-scraper: 0.2.60
   next: 12.3.0
   next-themes: 0.2.1
@@ -80,7 +80,7 @@ dependencies:
   '@iconify/react': 4.0.0_react@18.2.0
   '@re-taro/rehype-shiki': 1.1.0_shiki@0.11.1
   dayjs: 1.11.5
-  mdast-util-to-hast: 12.2.1
+  mdast-util-to-hast: 12.2.2
   metadata-scraper: 0.2.60
   next: 12.3.0_k4a6inbe7no4naien4h4xiu25e
   next-themes: 0.2.1_c3hne4hwj64hb7tofigd3bvkji
@@ -6732,8 +6732,8 @@ packages:
       - supports-color
     dev: true
 
-  /mdast-util-to-hast/12.2.1:
-    resolution: {integrity: sha512-dyindR2P7qOqXO1hQirZeGtVbiX7xlNQbw7gGaAwN4A1dh4+X8xU/JyYmRoyB8Fu1uPXzp7mlL5QwW7k+knvgA==}
+  /mdast-util-to-hast/12.2.2:
+    resolution: {integrity: sha512-lVkUttV9wqmdXFtEBXKcepvU/zfwbhjbkM5rxrquLW55dS1DfOrnAXCk5mg1be1sfY/WfMmayGy1NsbK1GLCYQ==}
     dependencies:
       '@types/hast': 2.3.4
       '@types/mdast': 3.0.10
@@ -8230,7 +8230,7 @@ packages:
     dependencies:
       '@types/hast': 2.3.4
       '@types/mdast': 3.0.10
-      mdast-util-to-hast: 12.2.1
+      mdast-util-to-hast: 12.2.2
       unified: 10.1.2
     dev: false
 
