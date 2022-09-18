@@ -33,7 +33,7 @@
     "@iconify/react": "4.0.0",
     "@re-taro/rehype-shiki": "1.1.0",
     "dayjs": "1.11.5",
-    "mdast-util-to-hast": "12.2.1",
+    "mdast-util-to-hast": "12.2.2",
     "metadata-scraper": "0.2.60",
     "next": "12.3.0",
     "next-themes": "0.2.1",
