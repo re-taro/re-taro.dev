@@ -28,7 +28,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-
       - name: Install pnpm
-        uses: pnpm/action-setup@v2.2.2
+        uses: pnpm/action-setup@v2.2.4
         env:
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
         with:
