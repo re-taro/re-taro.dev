@@ -73,7 +73,7 @@ specifiers:
   typescript: 4.8.4
   unified: 10.1.2
   unist-util-visit: 4.1.1
-  urql: 2.2.3
+  urql: 3.0.3
   vfile: 5.3.5
 
 dependencies:
@@ -84,7 +84,7 @@ dependencies:
   metadata-scraper: 0.2.61
   next: 12.3.3_d4fvdmolrbxtne34af5lkdd4eq
   next-themes: 0.2.1_axequwibc5yadwk55bo7ehxsoe
-  next-urql: 4.0.0_react@18.2.0+urql@2.2.3
+  next-urql: 4.0.0_react@18.2.0+urql@3.0.3
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   rehype-autolink-headings: 6.1.1
@@ -107,7 +107,7 @@ dependencies:
   twemoji: 14.0.2
   unified: 10.1.2
   unist-util-visit: 4.1.1
-  urql: 2.2.3_onqnqwb3ubg5opvemcqf7c2qhy
+  urql: 3.0.3_onqnqwb3ubg5opvemcqf7c2qhy
   vfile: 5.3.5
 
 devDependencies:
@@ -2645,14 +2645,14 @@ packages:
       eslint-visitor-keys: 3.3.0
     dev: true
 
-  /@urql/core/2.6.1_graphql@16.6.0:
-    resolution: {integrity: sha512-gYrEHy3tViJhwIhauK6MIf2Qp09QTsgNHZRd0n71rS+hF6gdwjspf1oKljl4m25+272cJF7fPjBUGmjaiEr7Kg==}
+  /@urql/core/3.0.5_graphql@16.6.0:
+    resolution: {integrity: sha512-6/1HG+WEAcPs+hXSFnxWBTWkNUwa8dj2cHysWokMaFIbAioGtUaSdxp2q9FDMtWAIGdc640NFSt2B8itGLdoAA==}
     peerDependencies:
       graphql: ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
     dependencies:
       '@graphql-typed-document-node/core': 3.1.1_graphql@16.6.0
       graphql: 16.6.0
-      wonka: 4.0.15
+      wonka: 6.1.1
     dev: false
 
   /@urql/introspection/0.3.3_graphql@16.6.0:
@@ -7230,7 +7230,7 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: false
 
-  /next-urql/4.0.0_react@18.2.0+urql@2.2.3:
+  /next-urql/4.0.0_react@18.2.0+urql@3.0.3:
     resolution: {integrity: sha512-c/dLhNg9bP+ku7GJDAYlsNnKEazrjcDnRx8/mBsGnjMj4c0yM+p2PBGbirWXkYL7Z2ogOHnSqHTt8swB9sJvQg==}
     peerDependencies:
       react: '>=16.8.0'
@@ -7238,7 +7238,7 @@ packages:
     dependencies:
       react: 18.2.0
       react-ssr-prepass: 1.5.0_react@18.2.0
-      urql: 2.2.3_onqnqwb3ubg5opvemcqf7c2qhy
+      urql: 3.0.3_onqnqwb3ubg5opvemcqf7c2qhy
     dev: false
 
   /next/12.3.3_d4fvdmolrbxtne34af5lkdd4eq:
@@ -9238,16 +9238,16 @@ packages:
       punycode: 2.1.1
     dev: true
 
-  /urql/2.2.3_onqnqwb3ubg5opvemcqf7c2qhy:
-    resolution: {integrity: sha512-XMkSYJKW9s4ZlbSuxcUz3fTBIykOn0sGileRXQeyZpaRBXJPVz5saSY05k7jdefNxShZtTI+/nr7PYUWQertfg==}
+  /urql/3.0.3_onqnqwb3ubg5opvemcqf7c2qhy:
+    resolution: {integrity: sha512-aVUAMRLdc5AOk239DxgXt6ZxTl/fEmjr7oyU5OGo8uvpqu42FkeJErzd2qBzhAQ3DyusoZIbqbBLPlnKo/yy2A==}
     peerDependencies:
       graphql: ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
       react: '>= 16.8.0'
     dependencies:
-      '@urql/core': 2.6.1_graphql@16.6.0
+      '@urql/core': 3.0.5_graphql@16.6.0
       graphql: 16.6.0
       react: 18.2.0
-      wonka: 4.0.15
+      wonka: 6.1.1
     dev: false
 
   /use-sync-external-store/1.2.0_react@18.2.0:
@@ -9416,8 +9416,8 @@ packages:
       isexe: 2.0.0
     dev: true
 
-  /wonka/4.0.15:
-    resolution: {integrity: sha512-U0IUQHKXXn6PFo9nqsHphVCE5m3IntqZNB9Jjn7EB1lrR7YTDY3YWgFvEvwniTzXSvOH/XMzAZaIfJF/LvHYXg==}
+  /wonka/6.1.1:
+    resolution: {integrity: sha512-shBtyZ0KFvUadtnDGlTRA4mF4pgcRoyZKikdputKhmShoXWcZDvlg6CUw6Jx9nTL7Ub8QUJoIarPpxdlosg9cw==}
     dev: false
 
   /word-wrap/1.2.3:
