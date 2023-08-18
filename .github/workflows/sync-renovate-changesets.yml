@@ -15,4 +15,4 @@ jobs:
           fetch-depth: 0
           ref: ${{ github.head_ref}}
       - name: Generate changesets
-        uses: re-taro/actions/sync-renovate-changesets@v1.2.0
+        uses: re-taro/actions/sync-renovate-changesets@v2.0.0
