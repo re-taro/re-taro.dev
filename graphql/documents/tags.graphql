@@ -1,5 +1,0 @@
-query tags {
-  posts {
-    tags
-  }
-}

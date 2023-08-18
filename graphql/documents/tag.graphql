@@ -1,9 +1,0 @@
-query tag($tag: String!) {
-  postsByTag(tag: $tag) {
-    emoji
-    id
-    title
-    date
-    tags
-  }
-}

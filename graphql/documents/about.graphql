@@ -1,9 +1,0 @@
-query about {
-  basic {
-    introduction
-    affiliation {
-      location
-      assign
-    }
-  }
-}

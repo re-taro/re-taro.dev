@@ -1,9 +1,1 @@
-package.json
-tsconfig.json
-.next
-out
-graphql
-pnpm-lock.yaml
-next-env.d.ts
-*.config.ts
-*.config.js
+.formatignore

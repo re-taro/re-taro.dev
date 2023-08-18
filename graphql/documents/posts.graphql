@@ -1,9 +1,0 @@
-query posts {
-  posts {
-    emoji
-    id
-    title
-    date
-    tags
-  }
-}
