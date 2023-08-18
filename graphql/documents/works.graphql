@@ -1,9 +1,0 @@
-query works {
-  works {
-    title
-    id
-    imageUrl
-    description
-    date
-  }
-}

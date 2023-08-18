@@ -1,0 +1,50 @@
+name: Main CI
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.5.3
+      - name: Setup Node.js
+        uses: re-taro/actions/setup-node@v1.1.2
+        with:
+          node-version-file: .tool-versions
+      - name: Run production build
+        run: pnpm build
+#      - name: Run storybook build
+#        run: pnpm build:storybook
+  format-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.5.3
+      - name: Setup Node.js
+        uses: re-taro/actions/setup-node@v1.1.2
+        with:
+          node-version-file: .tool-versions
+      - name: Run format check
+        run: pnpm lint
+#  test:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v3.5.3
+#      - name: Setup Node.js
+#        uses: re-taro/actions/setup-node@v1.1.2
+#        with:
+#          node-version-file: .tool-versions
+#      - name: Run test
+#        run: pnpm test
+  changeset-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.5.3
+      - name: Setup Node.js
+        uses: re-taro/actions/setup-node@v1.1.2
+        with:
+          node-version-file: .tool-versions
+      - name: Run changeset status
+        run: pnpm changeset status --since origin/main

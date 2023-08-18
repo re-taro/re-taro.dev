@@ -1,7 +1,0 @@
-query feed {
-  posts {
-    id
-    title
-    date
-  }
-}

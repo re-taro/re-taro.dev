@@ -1,5 +1,0 @@
-query slug($id: String!) {
-  postById(id: $id) {
-    content
-  }
-}
