@@ -52,7 +52,7 @@
     "@types/node": "20.5.1",
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
-    "@vanilla-extract/css": "1.11.1",
+    "@vanilla-extract/css": "1.12.0",
     "better-sqlite3": "8.5.1",
     "drizzle-kit": "0.18.1",
     "drizzle-orm": "0.26.5",
