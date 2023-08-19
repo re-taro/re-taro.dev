@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@remix-run/cloudflare':
-    specifier: 1.17.0
-    version: 1.17.0(@cloudflare/workers-types@4.20230518.0)
+    specifier: 1.17.1
+    version: 1.17.1(@cloudflare/workers-types@4.20230518.0)
   '@remix-run/cloudflare-pages':
     specifier: 1.17.0
     version: 1.17.0(@cloudflare/workers-types@4.20230518.0)
@@ -2566,6 +2566,17 @@ packages:
       '@remix-run/server-runtime': 1.17.0
     dev: false
 
+  /@remix-run/cloudflare@1.17.1(@cloudflare/workers-types@4.20230518.0):
+    resolution: {integrity: sha512-zPubGaHVh4eMhgsAtvYJb/krHcNTqPjP251EsOtE4KXXucCTyQZjUzq9gOf+w21+dPnjQyW8p7LBMp8PuQehzw==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      '@cloudflare/workers-types': ^2.0.0 || ^3.0.0
+    dependencies:
+      '@cloudflare/kv-asset-handler': 0.1.3
+      '@cloudflare/workers-types': 4.20230518.0
+      '@remix-run/server-runtime': 1.17.1
+    dev: false
+
   /@remix-run/css-bundle@1.19.3:
     resolution: {integrity: sha512-XccfuPmTdtXT+Kx7Df62cyk8d2I6DrHIB02uDyIGOTq8lPlMXznErMW14asVcbGOV5ieAOvnch/pUJrsKoWRmw==}
     engines: {node: '>=14.0.0'}
@@ -2686,7 +2697,6 @@ packages:
       cookie: 0.4.2
       set-cookie-parser: 2.6.0
       source-map: 0.7.4
-    dev: true
 
   /@rollup/pluginutils@4.2.1:
     resolution: {integrity: sha512-iKnFXr7NkdZAIHiIWE+BX5ULi/ucVFYWD6TbAV+rZctiRTY2PL6tsIKhoIOaoskiWAkgu+VsbXgUVDNLHf+InQ==}
