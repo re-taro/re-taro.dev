@@ -21,7 +21,7 @@ jobs:
           app_id: ${{ secrets.APP_ID}}
           private_key: ${{ secrets.PRIVATE_KEY}}
       - name: Generate changesets
-        uses: re-taro/actions/sync-renovate-changesets@v2.2.0
+        uses: re-taro/actions/sync-renovate-changesets@v3.0.1
         with:
           token: ${{ steps.bot.outputs.token }}
       - name: Revoke GitHub Apps token
