@@ -27,6 +27,7 @@ jobs:
         uses: changesets/action@v1.4.5
         with:
           publish: pnpm wrangler d1 migrations apply portfolio && pnpm build && pnpm wrangler pages publish ./public
+          setupGitUser: false
         env:
           GITHUB_TOKEN: ${{ steps.bot.outputs.token }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
