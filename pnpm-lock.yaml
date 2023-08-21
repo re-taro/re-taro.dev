@@ -62,8 +62,8 @@ devDependencies:
     specifier: 18.2.7
     version: 18.2.7
   '@vanilla-extract/css':
-    specifier: 1.12.0
-    version: 1.12.0
+    specifier: 1.13.0
+    version: 1.13.0
   better-sqlite3:
     specifier: 8.5.1
     version: 8.5.1
@@ -3275,8 +3275,8 @@ packages:
       - supports-color
     dev: true
 
-  /@vanilla-extract/css@1.12.0:
-    resolution: {integrity: sha512-TEttZfnqTRtwgVYiBWQSGGUiVaYWReHp59DsavITEvh4TpJNifZFGhBznHx4wQFEsyio6xA513jps4tmqR6zmw==}
+  /@vanilla-extract/css@1.13.0:
+    resolution: {integrity: sha512-JFFBXhnJrPlGqHBabagXqo5ghXw9mtV270ycIGyLDZG8NAK5eRwAYkMowAxuzK7wZSm67GnETWYB7b0AUmyttg==}
     dependencies:
       '@emotion/hash': 0.9.1
       '@vanilla-extract/private': 1.0.3
@@ -3297,7 +3297,7 @@ packages:
       '@babel/core': 7.22.5
       '@babel/plugin-syntax-typescript': 7.22.5(@babel/core@7.22.5)
       '@vanilla-extract/babel-plugin-debug-ids': 1.0.3
-      '@vanilla-extract/css': 1.12.0
+      '@vanilla-extract/css': 1.13.0
       esbuild: 0.17.6
       eval: 0.1.6
       find-up: 5.0.0
@@ -8021,6 +8021,7 @@ packages:
 
   /node-addon-api@1.7.2:
     resolution: {integrity: sha512-ibPK3iA+vaY1eEjESkQkM0BbCqFOaZMiXRTtdB0u7b4djtY6JnsjvPdUHVMg6xQt3B8fpTTWHI9A+ADjM9frzg==}
+    requiresBuild: true
     dev: true
     optional: true
 
