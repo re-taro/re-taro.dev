@@ -46,7 +46,7 @@
     "@cloudflare/workers-types": "4.20230904.0",
     "@markuplint/jsx-parser": "3.9.1",
     "@markuplint/ml-config": "3.11.1",
-    "@markuplint/react-spec": "3.10.0",
+    "@markuplint/react-spec": "3.10.1",
     "@re-taro/eslint-config": "1.10.3",
     "@remix-run/dev": "1.17.1",
     "@types/node": "20.6.0",
