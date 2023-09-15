@@ -43,7 +43,7 @@
   "devDependencies": {
     "@changesets/changelog-github": "0.4.8",
     "@changesets/cli": "2.26.2",
-    "@cloudflare/workers-types": "4.20230904.0",
+    "@cloudflare/workers-types": "4.20230914.0",
     "@markuplint/jsx-parser": "3.9.1",
     "@markuplint/ml-config": "3.11.1",
     "@markuplint/react-spec": "3.10.1",
