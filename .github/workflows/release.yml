@@ -14,12 +14,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4.1.0
       - name: Setup Node.js
-        uses: re-taro/actions/setup-node@v3.3.0
+        uses: re-taro/actions/setup-node@v3.3.1
         with:
           node-version-file: .tool-versions
       - name: Setup GitHub App
         id: bot
-        uses: re-taro/actions/gen-installation-token@v3.3.0
+        uses: re-taro/actions/gen-installation-token@v3.3.1
         with:
           app_id: ${{ secrets.APP_ID}}
           private_key: ${{ secrets.PRIVATE_KEY}}
