@@ -51,7 +51,7 @@
     "@remix-run/dev": "2.0.1",
     "@types/node": "20.8.2",
     "@types/react": "18.2.24",
-    "@types/react-dom": "18.2.8",
+    "@types/react-dom": "18.2.9",
     "@vanilla-extract/css": "1.13.0",
     "better-sqlite3": "8.7.0",
     "drizzle-kit": "0.19.13",
