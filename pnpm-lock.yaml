@@ -7,10 +7,10 @@ settings:
 dependencies:
   '@remix-run/cloudflare':
     specifier: 2.1.0
-    version: 2.1.0(@cloudflare/workers-types@4.20231010.0)(typescript@5.2.2)
+    version: 2.1.0(@cloudflare/workers-types@4.20231016.0)(typescript@5.2.2)
   '@remix-run/cloudflare-pages':
     specifier: 2.1.0
-    version: 2.1.0(@cloudflare/workers-types@4.20231010.0)(typescript@5.2.2)
+    version: 2.1.0(@cloudflare/workers-types@4.20231016.0)(typescript@5.2.2)
   '@remix-run/css-bundle':
     specifier: 2.1.0
     version: 2.1.0
@@ -35,8 +35,8 @@ devDependencies:
     specifier: 2.26.2
     version: 2.26.2
   '@cloudflare/workers-types':
-    specifier: 4.20231010.0
-    version: 4.20231010.0
+    specifier: 4.20231016.0
+    version: 4.20231016.0
   '@markuplint/jsx-parser':
     specifier: 3.10.0
     version: 3.10.0(typescript@5.2.2)
@@ -72,7 +72,7 @@ devDependencies:
     version: 0.19.13
   drizzle-orm:
     specifier: 0.28.6
-    version: 0.28.6(@cloudflare/workers-types@4.20231010.0)(better-sqlite3@9.0.0)
+    version: 0.28.6(@cloudflare/workers-types@4.20231016.0)(better-sqlite3@9.0.0)
   eslint:
     specifier: 8.51.0
     version: 8.51.0
@@ -711,8 +711,8 @@ packages:
     dev: true
     optional: true
 
-  /@cloudflare/workers-types@4.20231010.0:
-    resolution: {integrity: sha512-Jscqg52ScJMTMRHHVeoUvXYYiXPT4V59NKaClQVju9B6oPAzuePFYHwi5PLQ5Yr+xEbJ6+bHuq1aYV/69z6L0w==}
+  /@cloudflare/workers-types@4.20231016.0:
+    resolution: {integrity: sha512-eGB0cRVyoJpeyGJx2re5sbd9R316a61sY73xwnqm4cwGpb+OxCK2gc651RxGiN7H4w6LY1RpysUgeGLmj5B3+g==}
 
   /@cspotcode/source-map-support@0.8.1:
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
@@ -1872,7 +1872,7 @@ packages:
       - typescript
     dev: true
 
-  /@remix-run/cloudflare-pages@2.1.0(@cloudflare/workers-types@4.20231010.0)(typescript@5.2.2):
+  /@remix-run/cloudflare-pages@2.1.0(@cloudflare/workers-types@4.20231016.0)(typescript@5.2.2):
     resolution: {integrity: sha512-Ia6k6wFwK13/YHrFyKGJ8H/WHnPjyiQW7oTqQjJ34Oev/HTHIro9Y07FMoy8UHMZNYmqrpZ9P2bbIN5b/Oco9A==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
@@ -1882,12 +1882,12 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@cloudflare/workers-types': 4.20231010.0
-      '@remix-run/cloudflare': 2.1.0(@cloudflare/workers-types@4.20231010.0)(typescript@5.2.2)
+      '@cloudflare/workers-types': 4.20231016.0
+      '@remix-run/cloudflare': 2.1.0(@cloudflare/workers-types@4.20231016.0)(typescript@5.2.2)
       typescript: 5.2.2
     dev: false
 
-  /@remix-run/cloudflare@2.1.0(@cloudflare/workers-types@4.20231010.0)(typescript@5.2.2):
+  /@remix-run/cloudflare@2.1.0(@cloudflare/workers-types@4.20231016.0)(typescript@5.2.2):
     resolution: {integrity: sha512-NTuxAHYM/QcI81iE4q0/S+xgQAGAFyyEdBKoWwZBoWOG7gDduOIjfa+dnXaXmSMrmksRUxbyLeSnC+00l0SKbw==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
@@ -1898,7 +1898,7 @@ packages:
         optional: true
     dependencies:
       '@cloudflare/kv-asset-handler': 0.1.3
-      '@cloudflare/workers-types': 4.20231010.0
+      '@cloudflare/workers-types': 4.20231016.0
       '@remix-run/server-runtime': 2.1.0(typescript@5.2.2)
       typescript: 5.2.2
     dev: false
@@ -3493,7 +3493,7 @@ packages:
       - supports-color
     dev: true
 
-  /drizzle-orm@0.28.6(@cloudflare/workers-types@4.20231010.0)(better-sqlite3@9.0.0):
+  /drizzle-orm@0.28.6(@cloudflare/workers-types@4.20231016.0)(better-sqlite3@9.0.0):
     resolution: {integrity: sha512-yBe+F9htrlYER7uXgDJUQsTHFoIrI5yMm5A0bg0GiZ/kY5jNXTWoEy4KQtg35cE27sw1VbgzoMWHAgCckUUUww==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
@@ -3555,7 +3555,7 @@ packages:
       sqlite3:
         optional: true
     dependencies:
-      '@cloudflare/workers-types': 4.20231010.0
+      '@cloudflare/workers-types': 4.20231016.0
       better-sqlite3: 9.0.0
     dev: true
 
