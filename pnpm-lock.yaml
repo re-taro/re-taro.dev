@@ -44,8 +44,8 @@ devDependencies:
     specifier: 3.13.0
     version: 3.13.0
   '@markuplint/react-spec':
-    specifier: 3.11.0
-    version: 3.11.0(@markuplint/ml-core@3.13.0)
+    specifier: 3.12.0
+    version: 3.12.0(@markuplint/ml-core@3.13.0)
   '@re-taro/eslint-config':
     specifier: 1.10.4
     version: 1.10.4(eslint@8.51.0)(svelte@3.59.1)(typescript@5.2.2)
@@ -1643,10 +1643,10 @@ packages:
     dependencies:
       '@markuplint/ml-ast': 3.2.0
       '@markuplint/types': 3.10.0
-      dom-accessibility-api: 0.6.1
+      dom-accessibility-api: 0.6.3
       is-plain-object: 5.0.0
       tslib: 2.6.2
-      type-fest: 4.3.1
+      type-fest: 4.5.0
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1690,13 +1690,13 @@ packages:
       - supports-color
     dev: true
 
-  /@markuplint/react-spec@3.11.0(@markuplint/ml-core@3.13.0):
-    resolution: {integrity: sha512-IxalmM5227DhXI1E4cBg/mPBgjyMiqq7udvLE0ctV3bvKzu4gByjVgQFqmtw4fpW13zQRRBQKgNWLuTiftLeNQ==}
+  /@markuplint/react-spec@3.12.0(@markuplint/ml-core@3.13.0):
+    resolution: {integrity: sha512-HvPUOBPqg1TRHfQuBcfHGPpso4XvzdYcIapLSATxYEXPT1VILe889TVF1jBpASJ4MunBW5j6qhDB/3t2fWMeSg==}
     peerDependencies:
       '@markuplint/ml-core': 3.x
     dependencies:
       '@markuplint/ml-core': 3.13.0
-      '@markuplint/ml-spec': 3.12.0
+      '@markuplint/ml-spec': 3.13.0
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1757,8 +1757,8 @@ packages:
     resolution: {integrity: sha512-1BB9t1xgCcaHv7vzJdz1siyP65JIurAu6Rn9Iv8PXhMjlF9h/sSeACZPnBjF98wtWDmTOluFrWucc72jng382w==}
     dependencies:
       '@types/bcp-47': 1.0.0
-      '@types/css-tree': 2.3.2
-      '@types/debug': 4.1.8
+      '@types/css-tree': 2.3.3
+      '@types/debug': 4.1.10
       '@types/whatwg-mimetype': 3.0.0
       bcp-47: 1.0.8
       css-tree: 2.3.1
@@ -2140,10 +2140,6 @@ packages:
 
   /@types/cookie@0.4.1:
     resolution: {integrity: sha512-XW/Aa8APYr6jSVVA1y/DEIZX0/GMKLEVekNG727R8cs56ahETkRAy/3DR7+fJyh7oUgGwNQaRfXCun0+KbWY7Q==}
-
-  /@types/css-tree@2.3.2:
-    resolution: {integrity: sha512-B5nF6h7xxpMLvZ1pzugAYUGj1aw4KgTpXZzOijkDMRzey4SlFi0jVWb3o0SS1CVSxyBciltVgjt67CwrgjmlWA==}
-    dev: true
 
   /@types/css-tree@2.3.3:
     resolution: {integrity: sha512-w2id4lNf2DzAAQ+A3bD9QTY/qpCw9rYlci9RbBscEmF5RO3U/acrcCErvsqkoIZqz9n0yv4CVUqz/6DKDOEZnw==}
@@ -3528,10 +3524,6 @@ packages:
     engines: {node: '>=6.0.0'}
     dependencies:
       esutils: 2.0.3
-    dev: true
-
-  /dom-accessibility-api@0.6.1:
-    resolution: {integrity: sha512-WbiG8jCZESbcSwxLmbUiv3WZurc6H4opBIbBkBe/I3OSZvWCXXj+wxPueWodM/p4gegM1CqEr0iFY5DqyrncxA==}
     dev: true
 
   /dom-accessibility-api@0.6.3:
