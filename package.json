@@ -49,7 +49,7 @@
     "@markuplint/react-spec": "3.12.0",
     "@re-taro/eslint-config": "1.10.4",
     "@remix-run/dev": "2.1.0",
-    "@types/node": "20.8.7",
+    "@types/node": "20.8.8",
     "@types/react": "18.2.31",
     "@types/react-dom": "18.2.14",
     "@vanilla-extract/css": "1.13.0",
