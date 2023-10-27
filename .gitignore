@@ -3,5 +3,9 @@ node_modules
 /.cache
 /functions/\[\[path\]\].js
 /functions/\[\[path\]\].js.map
+/functions/metafile.css.json
+/functions/metafile.js.json
+/functions/metafile.server.json
+/functions/version.txt
 /public/build
 .wrangler
