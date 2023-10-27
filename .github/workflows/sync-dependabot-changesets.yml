@@ -16,7 +16,7 @@ jobs:
           ref: ${{ github.head_ref}}
       - name: Setup GitHub App
         id: bot
-        uses: re-taro/actions/gen-installation-token@v3.3.2
+        uses: re-taro/actions/gen-installation-token@v3.4.1
         with:
           app_id: ${{ secrets.APP_ID}}
           private_key: ${{ secrets.PRIVATE_KEY}}
