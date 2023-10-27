@@ -23,7 +23,7 @@
     "lint": "run-s -c lint:*",
     "lint:eslint": "eslint . --ext .js,.cjs,.ts,.tsx,.json",
     "lint:prettier": "prettier --check './*.config.js' './**/*.{cjs,ts,tsx,json}'",
-    "lint:markuplint": "markuplint .",
+    "lint:markuplint": "markuplint './**/*.tsx'",
     "lint:tsc": "tsc -p . --noEmit",
     "fmt": "run-s -c fmt:*",
     "fmt:eslint": "pnpm run lint:eslint --fix",
