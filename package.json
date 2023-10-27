@@ -15,8 +15,7 @@
   },
   "sideEffects": false,
   "scripts": {
-    "dev": "NODE_ENV=development npm-run-all build --parallel dev:*",
-    "dev:remix": "remix watch",
+    "dev": "NODE_ENV=development remix dev --manual -c \"pnpm dev:wrangler\"",
     "dev:wrangler": "wrangler pages dev ./public",
     "build": "remix build",
     "start": "NODE_ENV=production wrangler pages dev ./public",
