@@ -1,7 +1,7 @@
+import type { EntryContext } from "@remix-run/cloudflare";
 import { RemixServer } from "@remix-run/react";
 import isbot from "isbot";
 import { renderToReadableStream } from "react-dom/server";
-import type { EntryContext } from "@remix-run/cloudflare";
 
 export default async function handleRequest(
   request: Request,
@@ -23,6 +23,7 @@ export default async function handleRequest(
   }
 
   responseHeaders.set("Content-Type", "text/html");
+
   return new Response(body, {
     headers: responseHeaders,
     status: responseStatusCode,

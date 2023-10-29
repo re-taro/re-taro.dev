@@ -1,21 +1,21 @@
 {
-  "include": ["remix.env.d.ts", "**/*.ts", "**/*.tsx"],
   "compilerOptions": {
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "isolatedModules": true,
-    "esModuleInterop": true,
-    "jsx": "react-jsx",
-    "moduleResolution": "Bundler",
-    "resolveJsonModule": true,
     "target": "ESNext",
-    "strict": true,
-    "allowJs": true,
-    "forceConsistentCasingInFileNames": true,
+    "jsx": "react-jsx",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "baseUrl": ".",
+    "moduleResolution": "Bundler",
     "paths": {
       "~/*": ["./app/*"]
     },
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "strict": true,
     "noEmit": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
     "skipLibCheck": true
-  }
+  },
+  "include": ["remix.env.d.ts", "**/*.ts", "**/*.tsx"]
 }

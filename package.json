@@ -13,6 +13,7 @@
     "type": "git",
     "url": "https://github.com/re-taro/re-taro.dev"
   },
+  "type": "module",
   "sideEffects": false,
   "scripts": {
     "dev": "NODE_ENV=development remix dev --manual -c \"pnpm dev:wrangler\"",
@@ -20,14 +21,13 @@
     "build": "remix build",
     "start": "NODE_ENV=production wrangler pages dev ./public",
     "lint": "run-s -c lint:*",
-    "lint:eslint": "eslint . --ext .js,.cjs,.ts,.tsx,.json",
-    "lint:prettier": "prettier --check './*.config.js' './**/*.{cjs,ts,tsx,json}'",
+    "lint:eslint": "eslint .",
+    "lint:prettier": "prettier . -c",
     "lint:markuplint": "markuplint './**/*.tsx'",
     "lint:tsc": "tsc -p . --noEmit",
     "fmt": "run-s -c fmt:*",
     "fmt:eslint": "pnpm run lint:eslint --fix",
-    "fmt:prettier": "prettier --write './*.config.js' './**/*.{cjs,ts,tsx,json}'",
-    "fmt:markuplint": "pnpm run lint:markuplint --fix",
+    "fmt:prettier": "prettier . -w",
     "gen:migrate": "drizzle-kit generate:sqlite --out migrations --schema app/schema.ts"
   },
   "dependencies": {
