@@ -1,6 +1,6 @@
-import { re_taro } from "@re-taro/eslint-config";
+const { re_taro } = require("@re-taro/eslint-config");
 
-export default re_taro({
+module.exports = re_taro({
   parserOptions: {
     project: "./tsconfig.json",
   },
