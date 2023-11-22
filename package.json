@@ -30,10 +30,10 @@
     "gen:migrate": "drizzle-kit generate:sqlite --out migrations --schema app/schema.ts"
   },
   "dependencies": {
-    "@remix-run/cloudflare": "2.3.0",
-    "@remix-run/cloudflare-pages": "2.3.0",
-    "@remix-run/css-bundle": "2.3.0",
-    "@remix-run/react": "2.3.0",
+    "@remix-run/cloudflare": "2.3.1",
+    "@remix-run/cloudflare-pages": "2.3.1",
+    "@remix-run/css-bundle": "2.3.1",
+    "@remix-run/react": "2.3.1",
     "isbot": "3.7.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
@@ -46,7 +46,7 @@
     "@markuplint/ml-config": "3.13.0",
     "@markuplint/react-spec": "3.12.0",
     "@re-taro/eslint-config": "2.2.0",
-    "@remix-run/dev": "2.3.0",
+    "@remix-run/dev": "2.3.1",
     "@types/node": "20.9.4",
     "@types/react": "18.2.38",
     "@types/react-dom": "18.2.17",
