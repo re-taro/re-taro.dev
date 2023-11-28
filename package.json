@@ -43,7 +43,7 @@
     "@changesets/cli": "2.27.0",
     "@cloudflare/workers-types": "4.20231121.0",
     "@markuplint/jsx-parser": "3.12.0",
-    "@markuplint/ml-config": "3.13.0",
+    "@markuplint/ml-config": "3.14.0",
     "@markuplint/react-spec": "3.12.0",
     "@re-taro/eslint-config": "2.2.0",
     "@remix-run/dev": "2.3.1",
