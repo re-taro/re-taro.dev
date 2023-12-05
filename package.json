@@ -51,7 +51,7 @@
     "@types/react": "18.2.42",
     "@types/react-dom": "18.2.17",
     "@vanilla-extract/css": "1.14.0",
-    "better-sqlite3": "9.2.0",
+    "better-sqlite3": "9.2.2",
     "drizzle-kit": "0.20.6",
     "drizzle-orm": "0.29.1",
     "eslint": "8.55.0",
