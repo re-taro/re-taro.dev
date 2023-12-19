@@ -45,7 +45,7 @@
     "@markuplint/jsx-parser": "3.12.0",
     "@markuplint/ml-config": "3.14.0",
     "@markuplint/react-spec": "3.13.0",
-    "@re-taro/eslint-config": "2.4.0",
+    "@re-taro/eslint-config": "2.4.1",
     "@remix-run/dev": "2.4.0",
     "@types/node": "20.10.5",
     "@types/react": "18.2.45",
