@@ -51,7 +51,7 @@ jobs:
         with:
           node-version-file: .tool-versions
       - name: Deploy portfolio
-        uses: cloudflare/wrangler-action@v3.4.0
+        uses: cloudflare/wrangler-action@v3.4.1
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           preCommands: |
