@@ -1,13 +1,13 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["local>re-taro/renovate-config"],
-  "npm": {
-    "packageRules": [
-      {
-        "groupName": "remix-run",
-        "matchPackagePatterns": ["@remix-run/*"],
-        "semanticCommitType": "fix"
-      }
-    ]
-  }
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"extends": ["local>re-taro/renovate-config"],
+	"npm": {
+		"packageRules": [
+			{
+				"groupName": "remix-run",
+				"matchPackagePatterns": ["@remix-run/*"],
+				"semanticCommitType": "fix"
+			}
+		]
+	}
 }
