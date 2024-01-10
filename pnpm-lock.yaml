@@ -21,8 +21,8 @@ dependencies:
     specifier: 3.12.1
     version: 3.12.1
   isbot:
-    specifier: 3.7.1
-    version: 3.7.1
+    specifier: 4.3.0
+    version: 4.3.0
   react:
     specifier: 18.2.0
     version: 18.2.0
@@ -6527,9 +6527,9 @@ packages:
     resolution: {integrity: sha512-xHjhDr3cNBK0BzdUJSPXZntQUx/mwMS5Rw4A7lPJ90XGAO6ISP/ePDNuo0vhqOZU+UD5JoodwCAAoZQd3FeAKw==}
     dev: true
 
-  /isbot@3.7.1:
-    resolution: {integrity: sha512-JfqOaY3O1lcWt2nc+D6Mq231CNpwZrBboLa59Go0J8hjGH+gY/Sy0CA/YLUSIScINmAVwTdJZIsOTk4PfBtRuw==}
-    engines: {node: '>=12'}
+  /isbot@4.3.0:
+    resolution: {integrity: sha512-cohu4X66cXP120xwF+UubL+BQzOQLN1O0DOPOmkci6elgZ7o6XIn8B3FARk59RL0aX3cGTq8Ta7MVOWpay3rbw==}
+    engines: {node: '>=18'}
     dev: false
 
   /isexe@2.0.0:
