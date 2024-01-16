@@ -18,8 +18,8 @@ dependencies:
     specifier: 2.4.1
     version: 2.4.1(react-dom@18.2.0)(react@18.2.0)(typescript@5.3.3)
   hono:
-    specifier: 3.12.4
-    version: 3.12.4
+    specifier: 3.12.5
+    version: 3.12.5
   isbot:
     specifier: 4.4.0
     version: 4.4.0
@@ -6000,8 +6000,8 @@ packages:
       parse-passwd: 1.0.0
     dev: true
 
-  /hono@3.12.4:
-    resolution: {integrity: sha512-tEkoBCmhMoQdnBJ3hNUZm9UVA6XkSm6YaPxN8xMaKvz062KhYnd52s/GbmxFywO0vsb+T+wjaJ0708NY7Tr1VA==}
+  /hono@3.12.5:
+    resolution: {integrity: sha512-oIuZfMGwk/IUIAOW+9/VZhT4g99Wce39GYBs2nhY7386iYFAprI8vF2/+nfXjzlrY+CXGJ0+GxF833nN0oRp2w==}
     engines: {node: '>=16.0.0'}
     dev: false
 
