@@ -55,7 +55,7 @@
 		"eslint": "8.56.0",
 		"markuplint": "3.15.0",
 		"npm-run-all2": "6.1.1",
-		"prettier": "3.2.3",
+		"prettier": "3.2.4",
 		"typescript": "5.3.3",
 		"wrangler": "3.22.5"
 	}
