@@ -46,7 +46,7 @@
 		"@re-taro/prettier-config": "1.2.0",
 		"@remix-run/dev": "2.5.1",
 		"@types/node": "20.11.15",
-		"@types/react": "18.2.48",
+		"@types/react": "18.2.51",
 		"@types/react-dom": "18.2.18",
 		"@vanilla-extract/css": "1.14.1",
 		"better-sqlite3": "9.3.0",
