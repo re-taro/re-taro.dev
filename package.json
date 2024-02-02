@@ -26,10 +26,10 @@
 		"start": "NODE_ENV=production wrangler pages dev ./public"
 	},
 	"dependencies": {
-		"@remix-run/cloudflare": "2.5.1",
-		"@remix-run/cloudflare-pages": "2.5.1",
-		"@remix-run/css-bundle": "2.5.1",
-		"@remix-run/react": "2.5.1",
+		"@remix-run/cloudflare": "2.6.0",
+		"@remix-run/cloudflare-pages": "2.6.0",
+		"@remix-run/css-bundle": "2.6.0",
+		"@remix-run/react": "2.6.0",
 		"hono": "3.12.9",
 		"isbot": "4.4.0",
 		"react": "18.2.0",
@@ -44,7 +44,7 @@
 		"@markuplint/react-spec": "3.13.0",
 		"@re-taro/eslint-config": "2.5.0",
 		"@re-taro/prettier-config": "1.2.0",
-		"@remix-run/dev": "2.5.1",
+		"@remix-run/dev": "2.6.0",
 		"@types/node": "20.11.16",
 		"@types/react": "18.2.51",
 		"@types/react-dom": "18.2.18",
