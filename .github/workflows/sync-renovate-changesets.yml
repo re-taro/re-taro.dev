@@ -16,12 +16,12 @@ jobs:
           ref: ${{ github.head_ref}}
       - name: Setup GitHub App
         id: bot
-        uses: re-taro/actions/gen-installation-token@v3.5.0
+        uses: re-taro/actions/gen-installation-token@v3.5.1
         with:
           app_id: ${{ secrets.APP_ID}}
           private_key: ${{ secrets.PRIVATE_KEY}}
       - name: Generate changesets
-        uses: re-taro/actions/sync-renovate-changesets@v3.5.0
+        uses: re-taro/actions/sync-renovate-changesets@v3.5.1
         with:
           token: ${{ steps.bot.outputs.token }}
       - name: Revoke GitHub Apps token
