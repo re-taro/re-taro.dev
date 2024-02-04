@@ -44,8 +44,8 @@ devDependencies:
     specifier: 4.0.0
     version: 4.0.0(typescript@5.3.3)
   '@markuplint/ml-config':
-    specifier: 3.14.0
-    version: 3.14.0
+    specifier: 4.0.0
+    version: 4.0.0
   '@markuplint/react-spec':
     specifier: 3.13.0
     version: 3.13.0(@markuplint/ml-core@3.15.0)
@@ -1789,7 +1789,7 @@ packages:
       '@markuplint/parser-utils': 3.13.0
       parse5: 7.1.2
       tslib: 2.6.2
-      type-fest: 4.8.2
+      type-fest: 4.10.2
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1848,7 +1848,22 @@ packages:
       deepmerge: 4.3.1
       is-plain-object: 5.0.0
       mustache: 4.2.0
-      type-fest: 4.8.2
+      type-fest: 4.10.2
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /@markuplint/ml-config@4.0.0:
+    resolution: {integrity: sha512-n+TEi/UIV3MXCmZPjmuix6P2Q5c54V6bC90FqUGBSNaCNfKt9lZXY9iYI7y/jJxaV8HKwDuRnp9hdHkkJvkfgQ==}
+    dependencies:
+      '@markuplint/ml-ast': 4.0.0
+      '@markuplint/selector': 4.0.0
+      '@markuplint/shared': 4.0.0
+      '@types/mustache': 4.2.5
+      deepmerge: 4.3.1
+      is-plain-object: 5.0.0
+      mustache: 4.2.0
+      type-fest: 4.10.2
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1869,7 +1884,7 @@ packages:
       debug: 4.3.4
       is-plain-object: 5.0.0
       tslib: 2.6.2
-      type-fest: 4.8.2
+      type-fest: 4.10.2
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1882,7 +1897,7 @@ packages:
       dom-accessibility-api: 0.6.3
       is-plain-object: 5.0.0
       tslib: 2.6.2
-      type-fest: 4.8.2
+      type-fest: 4.10.2
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1906,7 +1921,7 @@ packages:
       '@markuplint/types': 3.12.0
       '@types/uuid': 9.0.7
       tslib: 2.6.2
-      type-fest: 4.8.2
+      type-fest: 4.10.2
       uuid: 9.0.1
     transitivePeerDependencies:
       - supports-color
@@ -1953,7 +1968,7 @@ packages:
       chrono-node: 2.7.3
       debug: 4.3.4
       tslib: 2.6.2
-      type-fest: 4.8.2
+      type-fest: 4.10.2
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1966,13 +1981,31 @@ packages:
       debug: 4.3.4
       postcss-selector-parser: 6.0.13
       tslib: 2.6.2
-      type-fest: 4.8.2
+      type-fest: 4.10.2
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /@markuplint/selector@4.0.0:
+    resolution: {integrity: sha512-pbdUt9XwTCK3eTSEkLmJhhYo4NNfPgcRCt4U4ha8A8F8P9BwPveGF0XnRNnnT0WP2I5PGYzD0hoV2Xkf0+37mw==}
+    dependencies:
+      '@markuplint/ml-spec': 4.0.0
+      '@types/debug': 4.1.12
+      debug: 4.3.4
+      postcss-selector-parser: 6.0.15
+      type-fest: 4.10.2
     transitivePeerDependencies:
       - supports-color
     dev: true
 
   /@markuplint/shared@3.8.0:
     resolution: {integrity: sha512-Pw9UiSi5qVsApm6DuMyGRYomAsfTnOH7yz7NT8RzlfObL6i9C3op2c019stw/eBrXRn2w8hsBHOfAfqfgY2jzQ==}
+    dependencies:
+      html-entities: 2.4.0
+    dev: true
+
+  /@markuplint/shared@4.0.0:
+    resolution: {integrity: sha512-5/KEufAd2T67D8qsn6IOKMmc2c9wc+cwM89QRR3S1Dzi5Vbl4QjveTCDtV/MHGtUccGRNlQmT4eR28fo++HjWg==}
     dependencies:
       html-entities: 2.4.0
     dev: true
@@ -1988,7 +2021,7 @@ packages:
       css-tree: 2.3.1
       debug: 4.3.4
       leven: 3.1.0
-      type-fest: 4.8.2
+      type-fest: 4.10.2
       whatwg-mimetype: 3.0.0
     transitivePeerDependencies:
       - supports-color
@@ -9275,6 +9308,14 @@ packages:
 
   /postcss-selector-parser@6.0.13:
     resolution: {integrity: sha512-EaV1Gl4mUEV4ddhDnv/xtj7sxwrwxdetHdWUGnT4VJQf+4d05v6lHYZr8N573k5Z0BViss7BDhfWtKS3+sfAqQ==}
+    engines: {node: '>=4'}
+    dependencies:
+      cssesc: 3.0.0
+      util-deprecate: 1.0.2
+    dev: true
+
+  /postcss-selector-parser@6.0.15:
+    resolution: {integrity: sha512-rEYkQOMUCEMhsKbK66tbEU9QVIxbhN18YiniAwA7XQYTVBqrBy+P2p5JcdqsHgKM2zWylp8d7J6eszocfds5Sw==}
     engines: {node: '>=4'}
     dependencies:
       cssesc: 3.0.0
