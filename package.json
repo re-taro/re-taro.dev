@@ -30,7 +30,7 @@
 		"@remix-run/cloudflare-pages": "2.6.0",
 		"@remix-run/css-bundle": "2.6.0",
 		"@remix-run/react": "2.6.0",
-		"hono": "3.12.10",
+		"hono": "3.12.11",
 		"isbot": "4.4.0",
 		"react": "18.2.0",
 		"react-dom": "18.2.0"
