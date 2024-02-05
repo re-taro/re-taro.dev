@@ -83,8 +83,8 @@ devDependencies:
     specifier: 8.56.0
     version: 8.56.0
   markuplint:
-    specifier: 4.0.0
-    version: 4.0.0(typescript@5.3.3)
+    specifier: 4.0.1
+    version: 4.0.1(typescript@5.3.3)
   npm-run-all2:
     specifier: 6.1.2
     version: 6.1.2
@@ -1610,7 +1610,7 @@ packages:
       debug: 4.3.4
       espree: 9.6.1
       globals: 13.24.0
-      ignore: 5.3.0
+      ignore: 5.3.1
       import-fresh: 3.3.0
       js-yaml: 4.1.0
       minimatch: 3.1.2
@@ -1753,13 +1753,13 @@ packages:
     resolution: {integrity: sha512-iFSdRYAqAWhfsfbw9X8JuoKAQpZN10UR2M6yzkW6LI3q0FZcoUGoxBf6xYmGeHNtiP9dyzJ3pa5Vj4dzsmWykQ==}
     dev: true
 
-  /@markuplint/file-resolver@4.0.0(typescript@5.3.3):
-    resolution: {integrity: sha512-o8QNDVjSIkCtCkVntwdJLvmuM32yBNt19U1ogpYh25ntqrg0QMwSAiNh88tm3rXiz1yJkfDtjG1h2jy0Ez2bEQ==}
+  /@markuplint/file-resolver@4.0.1(typescript@5.3.3):
+    resolution: {integrity: sha512-IxORnEJ8/lz++EySj9dhmUlfx3Kyj+Z5jAIsqwC3TxMOqHxBwP2CMloar0iin4LWE8HGvyca5672xcMHWa748Q==}
     dependencies:
       '@markuplint/html-parser': 4.0.0
       '@markuplint/ml-ast': 4.0.0
       '@markuplint/ml-config': 4.0.0
-      '@markuplint/ml-core': 4.0.0
+      '@markuplint/ml-core': 4.0.1
       '@markuplint/ml-spec': 4.0.0
       '@markuplint/parser-utils': 4.0.0
       '@markuplint/selector': 4.0.0
@@ -1786,8 +1786,8 @@ packages:
       - supports-color
     dev: true
 
-  /@markuplint/html-spec@4.0.0:
-    resolution: {integrity: sha512-opnLO1GEksQYEXuWgISWTUlzngXnIsAgydq1W56uioFp8T0gofEeI12k0NvH2/z0XrwoU1UQwhAcoPmjrj7vqQ==}
+  /@markuplint/html-spec@4.0.1:
+    resolution: {integrity: sha512-pnMqUEzTiAAavC9QEnyLQJBbw4R/YLdrQWNyfyXVzeOsuKT0e1M+XV0/8NBegHuIoBmes+8BBQ7acJW977elEg==}
     dependencies:
       '@markuplint/ml-spec': 4.0.0
     transitivePeerDependencies:
@@ -1830,12 +1830,12 @@ packages:
       - supports-color
     dev: true
 
-  /@markuplint/ml-core@4.0.0:
-    resolution: {integrity: sha512-23smJd3K3UnySfe86STnUciTBk7lnortfnZ3XzMDyC0belgoOpPl8oiVDlh7FlPF9SkJkTLmGXXwH2tH/94cOg==}
+  /@markuplint/ml-core@4.0.1:
+    resolution: {integrity: sha512-kFoMJN6YxUv4cLf3A8sBjF8Vl1AAwhwEbZJ8KDgry5KinMEH71Oz8NEffaY2ftM1ZkPz2Qig4kbrMXmqz0mK3Q==}
     dependencies:
       '@markuplint/config-presets': 4.0.0
       '@markuplint/html-parser': 4.0.0
-      '@markuplint/html-spec': 4.0.0
+      '@markuplint/html-spec': 4.0.1
       '@markuplint/i18n': 4.0.0
       '@markuplint/ml-ast': 4.0.0
       '@markuplint/ml-config': 4.0.0
@@ -1885,11 +1885,11 @@ packages:
       - supports-color
     dev: true
 
-  /@markuplint/rules@4.0.0:
-    resolution: {integrity: sha512-6qqlmSjbqxSV4EcVP86yHyfh9IRv1UEEuH8vyo4v3U8+ZODzqQU+lEZTuWRZ1ofg067oIliVjWHvbtV/K/m/Vg==}
+  /@markuplint/rules@4.0.1:
+    resolution: {integrity: sha512-WnLthIp0fq3811sg/+75Z0Tw78jK1tn4//gKM5Jonw1Q+b62WjPVhsVuISdN28Ed6T66yKR7MIvEv+vHIkDdHQ==}
     dependencies:
-      '@markuplint/html-spec': 4.0.0
-      '@markuplint/ml-core': 4.0.0
+      '@markuplint/html-spec': 4.0.1
+      '@markuplint/ml-core': 4.0.1
       '@markuplint/ml-spec': 4.0.0
       '@markuplint/selector': 4.0.0
       '@markuplint/shared': 4.0.0
@@ -7200,20 +7200,20 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /markuplint@4.0.0(typescript@5.3.3):
-    resolution: {integrity: sha512-uCzKkLLht4z88ZBFoPfR7qtq9yu32RgKnH5h/sDmJipwoOdodaFgHn6XRcZkIETqeEDtNhrmS5j3MmHbL5ChMg==}
+  /markuplint@4.0.1(typescript@5.3.3):
+    resolution: {integrity: sha512-YsZ779Ml7JIA0ew45E0PiL4VNIv+Yrg5k5YBrFibMvzxf6HVZD3OQMaC8omBfgVY+BConh7sNkCVuFGCtckoZg==}
     hasBin: true
     dependencies:
       '@markuplint/cli-utils': 4.0.0
-      '@markuplint/file-resolver': 4.0.0(typescript@5.3.3)
+      '@markuplint/file-resolver': 4.0.1(typescript@5.3.3)
       '@markuplint/html-parser': 4.0.0
-      '@markuplint/html-spec': 4.0.0
+      '@markuplint/html-spec': 4.0.1
       '@markuplint/i18n': 4.0.0
       '@markuplint/ml-ast': 4.0.0
       '@markuplint/ml-config': 4.0.0
-      '@markuplint/ml-core': 4.0.0
+      '@markuplint/ml-core': 4.0.1
       '@markuplint/ml-spec': 4.0.0
-      '@markuplint/rules': 4.0.0
+      '@markuplint/rules': 4.0.1
       '@markuplint/shared': 4.0.0
       '@types/debug': 4.1.12
       chokidar: 3.5.3
