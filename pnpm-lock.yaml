@@ -41,8 +41,8 @@ devDependencies:
     specifier: 4.20240129.0
     version: 4.20240129.0
   '@markuplint/jsx-parser':
-    specifier: 4.0.0
-    version: 4.0.0(typescript@5.3.3)
+    specifier: 4.0.1
+    version: 4.0.1(typescript@5.3.3)
   '@markuplint/ml-config':
     specifier: 4.0.0
     version: 4.0.0
@@ -1798,8 +1798,8 @@ packages:
     resolution: {integrity: sha512-nv2H+0qrKvWVqW7kCe+dn830EgB98TJhIPHcC/T8ip9mi0gWn3dL2AdjpJZwfSFkKV9VEr1OmQI3kaNYRvaLOg==}
     dev: true
 
-  /@markuplint/jsx-parser@4.0.0(typescript@5.3.3):
-    resolution: {integrity: sha512-8+INvrvLz7Nv2fCr7kPKDOajZRPjnkgxhaofL0uee+CUCXXjYCgnTQ8+Bh1iUTfZLKDmr6YwB2EBkXz3Vxyw7g==}
+  /@markuplint/jsx-parser@4.0.1(typescript@5.3.3):
+    resolution: {integrity: sha512-DzQRarQoshRh+sHcDjQhXEtmN39Si1rhp/ubz4Kud0kQS6Ctq+64Phv5T6zbDK7ruCk/50+XpkKK3P/lhTu/IA==}
     dependencies:
       '@markuplint/html-parser': 4.0.0
       '@markuplint/ml-ast': 4.0.0
@@ -6150,7 +6150,7 @@ packages:
       array-union: 2.1.0
       dir-glob: 3.0.1
       fast-glob: 3.3.1
-      ignore: 5.3.0
+      ignore: 5.3.1
       merge2: 1.4.1
       slash: 3.0.0
     dev: true
@@ -10572,7 +10572,7 @@ packages:
       concat-stream: 2.0.0
       debug: 4.3.4
       glob: 10.3.10
-      ignore: 5.3.0
+      ignore: 5.3.1
       is-empty: 1.2.0
       is-plain-obj: 4.1.0
       load-plugin: 6.0.1
