@@ -83,8 +83,8 @@ devDependencies:
     specifier: 8.56.0
     version: 8.56.0
   markuplint:
-    specifier: 4.0.1
-    version: 4.0.1(typescript@5.3.3)
+    specifier: 4.0.2
+    version: 4.0.2(typescript@5.3.3)
   npm-run-all2:
     specifier: 6.1.2
     version: 6.1.2
@@ -1749,17 +1749,17 @@ packages:
       strip-ansi: 7.1.0
     dev: true
 
-  /@markuplint/config-presets@4.0.0:
-    resolution: {integrity: sha512-iFSdRYAqAWhfsfbw9X8JuoKAQpZN10UR2M6yzkW6LI3q0FZcoUGoxBf6xYmGeHNtiP9dyzJ3pa5Vj4dzsmWykQ==}
+  /@markuplint/config-presets@4.0.1:
+    resolution: {integrity: sha512-jpOFqPSpNJxKrk5WluT+awavpXiHbJezzRGZB/NYYBOHJ871xWJPLXlTRtJqnrfHjPjOtKwfGlCa/A4FwCT4/A==}
     dev: true
 
-  /@markuplint/file-resolver@4.0.1(typescript@5.3.3):
-    resolution: {integrity: sha512-IxORnEJ8/lz++EySj9dhmUlfx3Kyj+Z5jAIsqwC3TxMOqHxBwP2CMloar0iin4LWE8HGvyca5672xcMHWa748Q==}
+  /@markuplint/file-resolver@4.0.2(typescript@5.3.3):
+    resolution: {integrity: sha512-bVfwVjPVeK+edVhu3U3RNK4YJFY4ly+BkG70rhPKE1KJeXxGsKPtD7QIlOcPl00EPkzm/ch+wcaccad6oOanpw==}
     dependencies:
       '@markuplint/html-parser': 4.0.0
       '@markuplint/ml-ast': 4.0.0
       '@markuplint/ml-config': 4.0.0
-      '@markuplint/ml-core': 4.0.1
+      '@markuplint/ml-core': 4.0.2
       '@markuplint/ml-spec': 4.0.0
       '@markuplint/parser-utils': 4.0.0
       '@markuplint/selector': 4.0.0
@@ -1830,10 +1830,10 @@ packages:
       - supports-color
     dev: true
 
-  /@markuplint/ml-core@4.0.1:
-    resolution: {integrity: sha512-kFoMJN6YxUv4cLf3A8sBjF8Vl1AAwhwEbZJ8KDgry5KinMEH71Oz8NEffaY2ftM1ZkPz2Qig4kbrMXmqz0mK3Q==}
+  /@markuplint/ml-core@4.0.2:
+    resolution: {integrity: sha512-NNQQ7mdOeH0KyZ6nlf/lDtMgVp9jXda1KHCQYU28XbrrThtGRBk7Lr07jxXl3X6aQicWWH1SDDe4HoJ/El/Vdg==}
     dependencies:
-      '@markuplint/config-presets': 4.0.0
+      '@markuplint/config-presets': 4.0.1
       '@markuplint/html-parser': 4.0.0
       '@markuplint/html-spec': 4.0.1
       '@markuplint/i18n': 4.0.0
@@ -1885,11 +1885,11 @@ packages:
       - supports-color
     dev: true
 
-  /@markuplint/rules@4.0.1:
-    resolution: {integrity: sha512-WnLthIp0fq3811sg/+75Z0Tw78jK1tn4//gKM5Jonw1Q+b62WjPVhsVuISdN28Ed6T66yKR7MIvEv+vHIkDdHQ==}
+  /@markuplint/rules@4.0.2:
+    resolution: {integrity: sha512-KFIVZOrEC0IPi6vYzQbVturUukraRXTipkEudRXjr9jhJEIBgyj5Z9d/70UzYU8+MvDzP/zQSlPaEy9scHuh4Q==}
     dependencies:
       '@markuplint/html-spec': 4.0.1
-      '@markuplint/ml-core': 4.0.1
+      '@markuplint/ml-core': 4.0.2
       '@markuplint/ml-spec': 4.0.0
       '@markuplint/selector': 4.0.0
       '@markuplint/shared': 4.0.0
@@ -7200,20 +7200,20 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /markuplint@4.0.1(typescript@5.3.3):
-    resolution: {integrity: sha512-YsZ779Ml7JIA0ew45E0PiL4VNIv+Yrg5k5YBrFibMvzxf6HVZD3OQMaC8omBfgVY+BConh7sNkCVuFGCtckoZg==}
+  /markuplint@4.0.2(typescript@5.3.3):
+    resolution: {integrity: sha512-XLqlFsWyjwIb9N9Cu7KAtNeX7NweB9bI24A1QNZa8YQ9w1QSSHN/d8diriaHoFq6k1q5y/ijw1DsixzvzDyNnw==}
     hasBin: true
     dependencies:
       '@markuplint/cli-utils': 4.0.0
-      '@markuplint/file-resolver': 4.0.1(typescript@5.3.3)
+      '@markuplint/file-resolver': 4.0.2(typescript@5.3.3)
       '@markuplint/html-parser': 4.0.0
       '@markuplint/html-spec': 4.0.1
       '@markuplint/i18n': 4.0.0
       '@markuplint/ml-ast': 4.0.0
       '@markuplint/ml-config': 4.0.0
-      '@markuplint/ml-core': 4.0.1
+      '@markuplint/ml-core': 4.0.2
       '@markuplint/ml-spec': 4.0.0
-      '@markuplint/rules': 4.0.1
+      '@markuplint/rules': 4.0.2
       '@markuplint/shared': 4.0.0
       '@types/debug': 4.1.12
       chokidar: 3.5.3
