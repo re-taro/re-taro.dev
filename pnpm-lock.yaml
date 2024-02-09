@@ -44,8 +44,8 @@ devDependencies:
     specifier: 4.0.3
     version: 4.0.3(typescript@5.3.3)
   '@markuplint/ml-config':
-    specifier: 4.0.0
-    version: 4.0.0
+    specifier: 4.0.1
+    version: 4.0.1
   '@markuplint/react-spec':
     specifier: 4.0.0
     version: 4.0.0
@@ -1845,6 +1845,21 @@ packages:
       - supports-color
     dev: true
 
+  /@markuplint/ml-config@4.0.1:
+    resolution: {integrity: sha512-9ao4Tid6H7aqFh/URsq52dV5HI7FzceREbJVOynPAYnpnio2fsh1Z50bKtYH50I5tMUpaNBpSSNObwpqFV8haA==}
+    dependencies:
+      '@markuplint/ml-ast': 4.0.1
+      '@markuplint/selector': 4.0.1
+      '@markuplint/shared': 4.0.1
+      '@types/mustache': 4.2.5
+      deepmerge: 4.3.1
+      is-plain-object: 5.0.0
+      mustache: 4.2.0
+      type-fest: 4.10.2
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /@markuplint/ml-core@4.0.2:
     resolution: {integrity: sha512-NNQQ7mdOeH0KyZ6nlf/lDtMgVp9jXda1KHCQYU28XbrrThtGRBk7Lr07jxXl3X6aQicWWH1SDDe4HoJ/El/Vdg==}
     dependencies:
@@ -1958,8 +1973,26 @@ packages:
       - supports-color
     dev: true
 
+  /@markuplint/selector@4.0.1:
+    resolution: {integrity: sha512-SIYpvwD4qWa7BH4x86Nlh1vjtQxiYXIJb2jKGyl7COub/Jf4pTQSFDzgCTGcZW9UTQ8QpfNLZYrR5OJwfS4QtQ==}
+    dependencies:
+      '@markuplint/ml-spec': 4.0.1
+      '@types/debug': 4.1.12
+      debug: 4.3.4
+      postcss-selector-parser: 6.0.15
+      type-fest: 4.10.2
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /@markuplint/shared@4.0.0:
     resolution: {integrity: sha512-5/KEufAd2T67D8qsn6IOKMmc2c9wc+cwM89QRR3S1Dzi5Vbl4QjveTCDtV/MHGtUccGRNlQmT4eR28fo++HjWg==}
+    dependencies:
+      html-entities: 2.4.0
+    dev: true
+
+  /@markuplint/shared@4.0.1:
+    resolution: {integrity: sha512-RggPgyahqgunGHa7K5hEFm52+dyjwpgp4YfdNPq7wVhJOu9x/zuVmjzjfyuzdG5zcr68ek8IWh76aaqRYfSwXw==}
     dependencies:
       html-entities: 2.4.0
     dev: true
@@ -5364,7 +5397,7 @@ packages:
       postcss: 8.4.31
       postcss-load-config: 3.1.4(postcss@8.4.31)
       postcss-safe-parser: 6.0.0(postcss@8.4.31)
-      postcss-selector-parser: 6.0.13
+      postcss-selector-parser: 6.0.15
       semver: 7.5.4
       svelte: 3.59.1
       svelte-eslint-parser: 0.33.1(svelte@3.59.1)
@@ -5461,7 +5494,7 @@ packages:
       eslint: 8.56.0
       natural-compare: 1.4.0
       nth-check: 2.1.1
-      postcss-selector-parser: 6.0.13
+      postcss-selector-parser: 6.0.15
       semver: 7.5.4
       vue-eslint-parser: 9.4.2(eslint@8.56.0)
       xml-name-validator: 4.0.0
@@ -9001,7 +9034,7 @@ packages:
     dependencies:
       icss-utils: 5.1.0(postcss@8.4.31)
       postcss: 8.4.31
-      postcss-selector-parser: 6.0.13
+      postcss-selector-parser: 6.0.15
       postcss-value-parser: 4.2.0
     dev: true
 
@@ -9012,7 +9045,7 @@ packages:
       postcss: ^8.1.0
     dependencies:
       postcss: 8.4.31
-      postcss-selector-parser: 6.0.13
+      postcss-selector-parser: 6.0.15
     dev: true
 
   /postcss-modules-values@4.0.0(postcss@8.4.31):
@@ -9057,14 +9090,6 @@ packages:
       postcss: ^8.4.29
     dependencies:
       postcss: 8.4.31
-    dev: true
-
-  /postcss-selector-parser@6.0.13:
-    resolution: {integrity: sha512-EaV1Gl4mUEV4ddhDnv/xtj7sxwrwxdetHdWUGnT4VJQf+4d05v6lHYZr8N573k5Z0BViss7BDhfWtKS3+sfAqQ==}
-    engines: {node: '>=4'}
-    dependencies:
-      cssesc: 3.0.0
-      util-deprecate: 1.0.2
     dev: true
 
   /postcss-selector-parser@6.0.15:
