@@ -57,10 +57,10 @@ devDependencies:
     version: 1.2.0(prettier@3.2.5)
   '@remix-run/dev':
     specifier: 2.6.0
-    version: 2.6.0(@types/node@20.11.17)(typescript@5.3.3)(wrangler@3.28.2)
+    version: 2.6.0(@types/node@20.11.18)(typescript@5.3.3)(wrangler@3.28.2)
   '@types/node':
-    specifier: 20.11.17
-    version: 20.11.17
+    specifier: 20.11.18
+    version: 20.11.18
   '@types/react':
     specifier: 18.2.55
     version: 18.2.55
@@ -2237,7 +2237,7 @@ packages:
     engines: {node: '>=18.0.0'}
     dev: false
 
-  /@remix-run/dev@2.6.0(@types/node@20.11.17)(typescript@5.3.3)(wrangler@3.28.2):
+  /@remix-run/dev@2.6.0(@types/node@20.11.18)(typescript@5.3.3)(wrangler@3.28.2):
     resolution: {integrity: sha512-wf5DoKxBwz3/84FNyFM6NKvQIOEv+Ukwj9DjXrDs6YLI6oSqw2XsJCxWN4lAbOxXuK37pBt1WAE8LzEMuyowsw==}
     engines: {node: '>=18.0.0'}
     hasBin: true
@@ -2270,7 +2270,7 @@ packages:
       '@remix-run/router': 1.15.0
       '@remix-run/server-runtime': 2.6.0(typescript@5.3.3)
       '@types/mdx': 2.0.7
-      '@vanilla-extract/integration': 6.2.1(@types/node@20.11.17)
+      '@vanilla-extract/integration': 6.2.1(@types/node@20.11.18)
       arg: 5.0.2
       cacache: 17.1.4
       chalk: 4.1.2
@@ -2451,7 +2451,7 @@ packages:
   /@types/concat-stream@2.0.1:
     resolution: {integrity: sha512-v5HP9ZsRbzFq5XRo2liUZPKzwbGK5SuGVMWZjE6iJOm/JNdESk3/rkfcPe0lcal0C32PTLVlYUYqGpMGNdDsDg==}
     dependencies:
-      '@types/node': 20.11.17
+      '@types/node': 20.11.18
     dev: true
 
   /@types/cookie@0.6.0:
@@ -2533,8 +2533,8 @@ packages:
     resolution: {integrity: sha512-J8xLz7q2OFulZ2cyGTLE1TbbZcjpno7FaN6zdJNrgAdrJ+DZzh/uFR6YrTb4C+nXakvud8Q4+rbhoIWlYQbUFQ==}
     dev: true
 
-  /@types/node@20.11.17:
-    resolution: {integrity: sha512-QmgQZGWu1Yw9TDyAP9ZzpFJKynYNeOvwMJmaxABfieQoVoiVOS6MN1WSpqpRcbeA5+RW82kraAVxCCJg+780Qw==}
+  /@types/node@20.11.18:
+    resolution: {integrity: sha512-ABT5VWnnYneSBcNWYSCuR05M826RoMyMSGiFivXGx6ZUIsXb9vn4643IEwkg2zbEOSgAiSogtapN2fgc4mAPlw==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -3136,7 +3136,7 @@ packages:
       outdent: 0.8.0
     dev: true
 
-  /@vanilla-extract/integration@6.2.1(@types/node@20.11.17):
+  /@vanilla-extract/integration@6.2.1(@types/node@20.11.18):
     resolution: {integrity: sha512-+xYJz07G7TFAMZGrOqArOsURG+xcYvqctujEkANjw2McCBvGEK505RxQqOuNiA9Mi9hgGdNp2JedSa94f3eoLg==}
     dependencies:
       '@babel/core': 7.22.5
@@ -3150,8 +3150,8 @@ packages:
       lodash: 4.17.21
       mlly: 1.4.2
       outdent: 0.8.0
-      vite: 4.5.2(@types/node@20.11.17)
-      vite-node: 0.28.5(@types/node@20.11.17)
+      vite: 4.5.2(@types/node@20.11.18)
+      vite-node: 0.28.5(@types/node@20.11.18)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -10578,7 +10578,7 @@ packages:
       '@types/concat-stream': 2.0.1
       '@types/debug': 4.1.12
       '@types/is-empty': 1.2.2
-      '@types/node': 20.11.17
+      '@types/node': 20.11.18
       '@types/unist': 3.0.2
       '@ungap/structured-clone': 1.2.0
       concat-stream: 2.0.0
@@ -10889,7 +10889,7 @@ packages:
       vfile-message: 4.0.2
     dev: true
 
-  /vite-node@0.28.5(@types/node@20.11.17):
+  /vite-node@0.28.5(@types/node@20.11.18):
     resolution: {integrity: sha512-LmXb9saMGlrMZbXTvOveJKwMTBTNUH66c8rJnQ0ZPNX+myPEol64+szRzXtV5ORb0Hb/91yq+/D3oERoyAt6LA==}
     engines: {node: '>=v14.16.0'}
     hasBin: true
@@ -10901,7 +10901,7 @@ packages:
       picocolors: 1.0.0
       source-map: 0.6.1
       source-map-support: 0.5.21
-      vite: 4.5.2(@types/node@20.11.17)
+      vite: 4.5.2(@types/node@20.11.18)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -10913,7 +10913,7 @@ packages:
       - terser
     dev: true
 
-  /vite@4.5.2(@types/node@20.11.17):
+  /vite@4.5.2(@types/node@20.11.18):
     resolution: {integrity: sha512-tBCZBNSBbHQkaGyhGCDUGqeo2ph8Fstyp6FMSvTtsXeZSPpSMGlviAOav2hxVTqFcx8Hj/twtWKsMJXNY0xI8w==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -10941,7 +10941,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 20.11.17
+      '@types/node': 20.11.18
       esbuild: 0.18.20
       postcss: 8.4.31
       rollup: 3.29.4
