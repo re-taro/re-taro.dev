@@ -42,7 +42,7 @@
 		"@markuplint/jsx-parser": "4.1.0",
 		"@markuplint/ml-config": "4.1.0",
 		"@markuplint/react-spec": "4.0.1",
-		"@re-taro/eslint-config": "2.5.0",
+		"@re-taro/eslint-config": "2.6.0",
 		"@re-taro/prettier-config": "2.0.0",
 		"@remix-run/dev": "2.6.0",
 		"@types/node": "20.11.19",
