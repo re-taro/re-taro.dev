@@ -47,8 +47,8 @@ devDependencies:
     specifier: 4.1.1
     version: 4.1.1
   '@markuplint/react-spec':
-    specifier: 4.0.1
-    version: 4.0.1
+    specifier: 4.0.2
+    version: 4.0.2
   '@re-taro/eslint-config':
     specifier: 2.5.0
     version: 2.5.0(eslint-plugin-import@2.28.1)(eslint@8.56.0)(prettier@3.2.5)(svelte@3.59.1)(typescript@5.3.3)
@@ -1930,10 +1930,10 @@ packages:
       - supports-color
     dev: true
 
-  /@markuplint/react-spec@4.0.1:
-    resolution: {integrity: sha512-nJKkNFTuI5lKHXln9XQtM75CAEggqZ8vGYP0HymmZjawmBVnY9mnKxI5tmvp8xzc5XlWwsLYt77b9KNJv3V1Yg==}
+  /@markuplint/react-spec@4.0.2:
+    resolution: {integrity: sha512-ylg+6hK/2GQHw4V6NRVC+Oy7Vkk4mkTyiMMOXmcR1JL1pTyUr/sAU25hLURIxyT0nFN128ZdRmSLbqY2BGqAJw==}
     dependencies:
-      '@markuplint/ml-spec': 4.0.1
+      '@markuplint/ml-spec': 4.0.2
     transitivePeerDependencies:
       - supports-color
     dev: true
