@@ -57,7 +57,7 @@ devDependencies:
     version: 2.0.0(prettier@3.2.5)
   '@remix-run/dev':
     specifier: 2.6.0
-    version: 2.6.0(@types/node@20.11.19)(typescript@5.3.3)(wrangler@3.28.3)
+    version: 2.6.0(@types/node@20.11.19)(typescript@5.3.3)(wrangler@3.28.4)
   '@types/node':
     specifier: 20.11.19
     version: 20.11.19
@@ -95,8 +95,8 @@ devDependencies:
     specifier: 5.3.3
     version: 5.3.3
   wrangler:
-    specifier: 3.28.3
-    version: 3.28.3(@cloudflare/workers-types@4.20240208.0)
+    specifier: 3.28.4
+    version: 3.28.4(@cloudflare/workers-types@4.20240208.0)
 
 packages:
 
@@ -2238,7 +2238,7 @@ packages:
     engines: {node: '>=18.0.0'}
     dev: false
 
-  /@remix-run/dev@2.6.0(@types/node@20.11.19)(typescript@5.3.3)(wrangler@3.28.3):
+  /@remix-run/dev@2.6.0(@types/node@20.11.19)(typescript@5.3.3)(wrangler@3.28.4):
     resolution: {integrity: sha512-wf5DoKxBwz3/84FNyFM6NKvQIOEv+Ukwj9DjXrDs6YLI6oSqw2XsJCxWN4lAbOxXuK37pBt1WAE8LzEMuyowsw==}
     engines: {node: '>=18.0.0'}
     hasBin: true
@@ -2310,7 +2310,7 @@ packages:
       tar-fs: 2.1.1
       tsconfig-paths: 4.2.0
       typescript: 5.3.3
-      wrangler: 3.28.3(@cloudflare/workers-types@4.20240208.0)
+      wrangler: 3.28.4(@cloudflare/workers-types@4.20240208.0)
       ws: 7.5.9
     transitivePeerDependencies:
       - '@types/node'
@@ -11107,8 +11107,8 @@ packages:
       '@cloudflare/workerd-windows-64': 1.20240129.0
     dev: true
 
-  /wrangler@3.28.3(@cloudflare/workers-types@4.20240208.0):
-    resolution: {integrity: sha512-pLuvWA5W8FhjI/a7Mr5F491KOqNMYzyWVN7dmwr+52sPv2BFrfN1v6btmhHYotSblCH8yfs5DmuxwdKuVPMw9w==}
+  /wrangler@3.28.4(@cloudflare/workers-types@4.20240208.0):
+    resolution: {integrity: sha512-LDwW4KhplRhIEfQaZry8AMZIOTpkYZXLWjg1MDSC3a12BXSY37pXACmFxbZeg2TzcOi30j+KqwLfv15vCavIyA==}
     engines: {node: '>=16.17.0'}
     hasBin: true
     peerDependencies:
