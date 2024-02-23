@@ -52,7 +52,7 @@
 		"better-sqlite3": "9.4.3",
 		"drizzle-kit": "0.20.14",
 		"drizzle-orm": "0.29.4",
-		"eslint": "8.56.0",
+		"eslint": "8.57.0",
 		"markuplint": "4.1.1",
 		"npm-run-all2": "6.1.2",
 		"prettier": "3.2.5",
