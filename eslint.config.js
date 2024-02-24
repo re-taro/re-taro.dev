@@ -1,7 +1,14 @@
-const { re_taro } = require("@re-taro/eslint-config");
+// @ts-check
 
-module.exports = re_taro({
-	parserOptions: {
-		project: "./tsconfig.json",
+import { re_taro } from "@re-taro/eslint-config";
+
+export default re_taro(
+	{
+		parserOptions: {
+			project: "./tsconfig.json",
+		},
 	},
-});
+	{
+		ignores: ["functions/*.ts"],
+	},
+);

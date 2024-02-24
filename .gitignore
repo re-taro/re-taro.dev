@@ -7,5 +7,5 @@ node_modules
 /functions/metafile.js.json
 /functions/metafile.server.json
 /functions/version.txt
-/public/build
-.wrangler
+/build
+/.wrangler

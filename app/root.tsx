@@ -1,10 +1,9 @@
 import "./styles/globals.css";
 
-import type { LinksFunction } from "@remix-run/cloudflare";
-import { cssBundleHref } from "@remix-run/css-bundle";
-import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
+import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
+import type { ReactNode } from "react";
 
-const App = () => (
+export const Layout = ({ children }: { children: ReactNode }): ReactNode => (
 	<html lang="ja-JP">
 		<head>
 			<meta charSet="utf-8" />
@@ -13,14 +12,13 @@ const App = () => (
 			<Links />
 		</head>
 		<body>
-			<Outlet />
+			{children}
 			<ScrollRestoration />
 			<Scripts />
-			<LiveReload />
 		</body>
 	</html>
 );
 
-export const links: LinksFunction = () => [...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : [])];
+const App = () => <Outlet />;
 
 export default App;

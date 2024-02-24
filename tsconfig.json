@@ -17,5 +17,5 @@
 		"isolatedModules": true,
 		"skipLibCheck": true
 	},
-	"include": ["remix.env.d.ts", "**/*.ts", "**/*.tsx"]
+	"include": ["env.d.ts", "**/*.ts", "**/*.tsx"]
 }
