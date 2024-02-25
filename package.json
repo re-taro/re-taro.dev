@@ -26,7 +26,7 @@
 		"lint:markuplint": "markuplint './**/*.tsx'",
 		"lint:prettier": "prettier . -c",
 		"lint:tsc": "tsc -p . --noEmit",
-		"start": "NODE_ENV=production wrangler pages dev ./build/client"
+		"start": "NODE_ENV=production wrangler pages dev build/client"
 	},
 	"dependencies": {
 		"@remix-run/cloudflare": "2.8.0",
