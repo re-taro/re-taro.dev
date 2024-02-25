@@ -41,7 +41,7 @@
 		"@changesets/cli": "2.27.1",
 		"@cloudflare/workers-types": "4.20240222.0",
 		"@markuplint/jsx-parser": "4.2.0",
-		"@markuplint/ml-config": "4.1.1",
+		"@markuplint/ml-config": "4.2.0",
 		"@markuplint/react-spec": "4.0.2",
 		"@re-taro/eslint-config": "3.0.0",
 		"@re-taro/prettier-config": "2.0.0",
