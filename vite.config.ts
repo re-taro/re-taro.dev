@@ -6,18 +6,23 @@ import typecript from "vite-tsconfig-paths";
 
 import { getLoadContext } from "./app/load-context";
 
+const isStorybook = process.argv[1]?.includes("storybook");
+
 export default defineConfig(({ mode }) => ({
 	build: {
 		cssMinify: mode === "production",
 	},
 	plugins: [
 		cloudflare({ getLoadContext }),
-		remix({
-			ignoredRouteFiles: ["**/.*"],
-			serverModuleFormat: "esm",
-		}),
+		!isStorybook &&
+			remix({
+				ignoredRouteFiles: ["**/.*"],
+				serverModuleFormat: "esm",
+			}),
 		typecript(),
-		vanillaExtractPlugin(),
+		vanillaExtractPlugin({
+			identifiers: mode === "production" ? "short" : "debug",
+		}),
 		mode === "analyze" &&
 			visualizer({
 				open: true,
