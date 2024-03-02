@@ -12,7 +12,7 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     outputs:
-      released: ${{ steps.changesets.outputs.published }}
+      has_changesets: ${{ steps.changesets.outputs.hasChangesets }}
     steps:
       - uses: actions/checkout@v4.1.1
       - name: Setup Node.js
@@ -43,18 +43,27 @@ jobs:
     name: Deploy
     needs: release
     runs-on: ubuntu-latest
-    if: needs.release.outputs.released == 'true'
+    if: ${{ needs.release.outputs.has_changesets == 'false' }}
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4.1.1
       - name: Setup Node.js
         uses: re-taro/actions/setup-node@v3.5.2
         with:
           node-version-file: .tool-versions
-      - name: Deploy portfolio
-        uses: cloudflare/wrangler-action@v3.4.1
+      #      - name: Deploy | Apply Migrations to Cloudflare D1
+      #        uses: cloudflare/wrangler-action@v3.4.1
+      #        with:
+      #          apiToken: ${{ secrets.CF_API_TOKEN }}
+      #          command: d1 migrations apply portfolio
+      - name: Deploy | Build
+        run: pnpm build
+      - name: Deploy | Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1.5.0
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
-          preCommands: |
-            wrangler d1 migrations apply portfolio
-            pnpm build
-          command: pages publish ./public
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          projectName: portfolio
+          directory: build
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,64 @@
+name: Deploy to staging
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  deployments: write
+  pull-requests: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup | Comment deploy start
+        uses: mshick/add-pr-comment@v2.8.2
+        with:
+          message-id: dev-deploy
+          message: |
+            ### <span aria-hidden="true">🚧</span> Deploy Preview building...
+
+            |  Name | Link |
+            |---------------------------------|------------------------|
+            |<span aria-hidden="true">🔨</span> Latest commit | ${{ github.sha }} |
+            |<span aria-hidden="true">🔍</span> Latest deploy log | ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} |
+            ---
+      - uses: actions/checkout@v4.1.1
+      - name: Setup | Node.js
+        uses: re-taro/actions/setup-node@v3.5.2
+        with:
+          node-version-file: .tool-versions
+      #      - name: Deploy | Apply Migrations to Cloudflare D1
+      #        uses: cloudflare/wrangler-action@v3.4.1
+      #        with:
+      #          apiToken: ${{ secrets.CF_API_TOKEN }}
+      #          command: d1 migrations apply portfolio
+      - name: Deploy | Build
+        run: pnpm build
+      - name: Deploy | Deploy to Cloudflare Pages
+        id: page
+        uses: cloudflare/pages-action@v1.5.0
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          projectName: portfolio
+          directory: build
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+      - name: PostDeploy | Comment deploy url
+        uses: mshick/add-pr-comment@v2.8.2
+        with:
+          message-id: cloudflare-deploy
+          message: |
+            ### <span aria-hidden="true">✅</span> Deploy Preview ready!
+
+
+            |  Name | Link |
+            |---------------------------------|------------------------|
+            |<span aria-hidden="true">🔨</span> Latest commit | ${{ github.sha }} |
+            |<span aria-hidden="true">🔍</span> Latest deploy log | ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} |
+            |<span aria-hidden="true">😎</span> Deploy Preview Url | [${{ steps.page.outputs.url }}](${{ steps.page.outputs.url }}) |
+            |<span aria-hidden="true">🌳</span> Environment | ${{ steps.page.outputs.environment }} |
+            ---
