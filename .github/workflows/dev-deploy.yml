@@ -40,13 +40,11 @@ jobs:
         run: pnpm build
       - name: Deploy | Deploy to Cloudflare Pages
         id: page
-        uses: cloudflare/pages-action@v1.5.0
+        uses: cloudflare/wrangler-action@v3.4.1
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          projectName: portfolio
-          directory: build
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          command: pages deploy --project-name portfolio --directory build/client
       - name: PostDeploy | Comment deploy url
         uses: mshick/add-pr-comment@v2.8.2
         with:
@@ -59,6 +57,5 @@ jobs:
             |---------------------------------|------------------------|
             |<span aria-hidden="true">🔨</span> Latest commit | ${{ github.sha }} |
             |<span aria-hidden="true">🔍</span> Latest deploy log | ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} |
-            |<span aria-hidden="true">😎</span> Deploy Preview Url | [${{ steps.page.outputs.url }}](${{ steps.page.outputs.url }}) |
-            |<span aria-hidden="true">🌳</span> Environment | ${{ steps.page.outputs.environment }} |
+            |<span aria-hidden="true">😎</span> Deploy Preview Url | [${{ steps.page.outputs.deployment-url }}](${{ steps.page.outputs.deployment-url }}) |
             ---
