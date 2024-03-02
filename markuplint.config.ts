@@ -8,13 +8,6 @@ const config: Config = {
 	specs: {
 		"\\.tsx$": "@markuplint/react-spec",
 	},
-	overrides: {
-		"app/root.tsx": {
-			rules: {
-				"permitted-contents": false,
-			},
-		},
-	},
 };
 
 export default config;
