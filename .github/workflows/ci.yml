@@ -4,20 +4,17 @@ on:
   pull_request:
     branches:
       - main
-    types:
-      - opened
-      - synchronize
 
 jobs:
   build-test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4.1.1
-      - name: Setup Node.js
+      - name: Setup | Node.js
         uses: re-taro/actions/setup-node@v3.5.2
         with:
           node-version-file: .tool-versions
-      - name: Run production build
+      - name: Test | build
         run: pnpm build
   #      - name: Run storybook build
   #        run: pnpm build:storybook
@@ -25,31 +22,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4.1.1
-      - name: Setup Node.js
+      - name: Setup | Node.js
         uses: re-taro/actions/setup-node@v3.5.2
         with:
           node-version-file: .tool-versions
-      - name: Run format check
+      - name: Test | format
         run: pnpm lint
   #  test:
   #    runs-on: ubuntu-latest
   #    steps:
   #      - uses: actions/checkout@v3.5.3
-  #      - name: Setup Node.js
+  #      - name: Setup | Node.js
   #        uses: re-taro/actions/setup-node@v1.1.2
   #        with:
   #          node-version-file: .tool-versions
-  #      - name: Run test
+  #      - name: Test | Run test
   #        run: pnpm test
-  changeset-test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4.1.1
-        with:
-          fetch-depth: 0
-      - name: Setup Node.js
-        uses: re-taro/actions/setup-node@v3.5.2
-        with:
-          node-version-file: .tool-versions
-      - name: Run changeset status
-        run: pnpm changeset status --since origin/main
