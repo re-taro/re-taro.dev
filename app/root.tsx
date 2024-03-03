@@ -3,7 +3,7 @@ import "./styles/globals.css";
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
 import type { ReactNode } from "react";
 
-export function Layout({ children }: { children: ReactNode }): ReactNode {
+function App(): ReactNode {
 	return (
 		<html lang="ja-JP">
 			<head>
@@ -19,14 +19,12 @@ export function Layout({ children }: { children: ReactNode }): ReactNode {
 				<Links />
 			</head>
 			<body>
-				{children}
+				<Outlet />
 				<ScrollRestoration />
 				<Scripts />
 			</body>
 		</html>
 	);
 }
-
-const App = () => <Outlet />;
 
 export default App;
