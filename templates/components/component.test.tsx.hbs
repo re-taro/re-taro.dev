@@ -1,0 +1,8 @@
+import { composeStories } from "@storybook/react";
+import { render } from "@testing-library/react";
+
+import * as stories from "./{{ pascalCase name }}.stories";
+
+describe("{{ pascalCase name }}.tsx", () => {
+	const { Default } = composeStories(stories);
+});
