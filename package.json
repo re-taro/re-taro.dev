@@ -62,7 +62,7 @@
 		"@storybook/test": "7.6.17",
 		"@storybook/test-runner": "0.16.0",
 		"@types/node": "20.11.24",
-		"@types/react": "18.2.61",
+		"@types/react": "18.2.62",
 		"@types/react-dom": "18.2.19",
 		"@vanilla-extract/css": "1.14.1",
 		"@vanilla-extract/vite-plugin": "4.0.4",
