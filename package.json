@@ -63,7 +63,7 @@
 		"@storybook/test-runner": "0.16.0",
 		"@types/node": "20.11.24",
 		"@types/react": "18.2.63",
-		"@types/react-dom": "18.2.19",
+		"@types/react-dom": "18.2.20",
 		"@vanilla-extract/css": "1.14.1",
 		"@vanilla-extract/vite-plugin": "4.0.4",
 		"axe-playwright": "2.0.1",
