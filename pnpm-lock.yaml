@@ -98,8 +98,8 @@ devDependencies:
     specifier: 1.14.1
     version: 1.14.1
   '@vanilla-extract/vite-plugin':
-    specifier: 4.0.5
-    version: 4.0.5(@types/node@20.11.25)(vite@5.1.5)
+    specifier: 4.0.6
+    version: 4.0.6(@types/node@20.11.25)(vite@5.1.5)
   axe-playwright:
     specifier: 2.0.1
     version: 2.0.1(playwright@1.42.1)
@@ -6393,8 +6393,8 @@ packages:
     resolution: {integrity: sha512-17kVyLq3ePTKOkveHxXuIJZtGYs+cSoev7BlP+Lf4916qfDhk/HBjvlYDe8egrea7LNPHKwSZJK/bzZC+Q6AwQ==}
     dev: true
 
-  /@vanilla-extract/vite-plugin@4.0.5(@types/node@20.11.25)(vite@5.1.5):
-    resolution: {integrity: sha512-Yd85OqAnf1mim2tfoQAP5M+AXTIQP1Yx6HnEhCleagbMrqVrpW6n9RhkX4+mMglHbBGtA4DbjOK3gpwqjZ8g9Q==}
+  /@vanilla-extract/vite-plugin@4.0.6(@types/node@20.11.25)(vite@5.1.5):
+    resolution: {integrity: sha512-uT2AhzxEC8qdn7SFxD/MHF7pxyFMb2e7HY3+isyPDzkTyIdiA/ZXk7qwWhcigFMNCJ6YuyxFQJmiDhP9U9oOmg==}
     peerDependencies:
       vite: ^4.0.3 || ^5.0.0
     dependencies:
