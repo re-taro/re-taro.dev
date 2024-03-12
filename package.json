@@ -80,6 +80,6 @@
 		"typescript": "5.4.2",
 		"vite": "5.1.6",
 		"vite-tsconfig-paths": "4.3.1",
-		"wrangler": "3.32.0"
+		"wrangler": "3.33.0"
 	}
 }
