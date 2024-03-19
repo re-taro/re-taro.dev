@@ -59,8 +59,8 @@ devDependencies:
     specifier: 8.0.2
     version: 8.0.2
   '@storybook/addon-actions':
-    specifier: 8.0.1
-    version: 8.0.1
+    specifier: 8.0.2
+    version: 8.0.2
   '@storybook/addon-essentials':
     specifier: 8.0.1
     version: 8.0.1(@types/react@18.2.67)(react-dom@18.2.0)(react@18.2.0)
@@ -3932,6 +3932,17 @@ packages:
       uuid: 9.0.1
     dev: true
 
+  /@storybook/addon-actions@8.0.2:
+    resolution: {integrity: sha512-yW4crc+EWvu/9XQmfYQAsLrMyZp8hLohjZMgXHKJL3ohWShWEGcw5PXL3aYn0UcJFHoFtCtAwLbXbrP8bNLNXA==}
+    dependencies:
+      '@storybook/core-events': 8.0.2
+      '@storybook/global': 5.0.0
+      '@types/uuid': 9.0.8
+      dequal: 2.0.3
+      polished: 4.3.1
+      uuid: 9.0.1
+    dev: true
+
   /@storybook/addon-backgrounds@8.0.1:
     resolution: {integrity: sha512-A06rUg7yEmyEoRTS8B46CkiUh49lKQ9ipGK323O7S9qkwbXSLvqBQTaKmGstZq6p0begPF1DWaGUxCXfU3qr2g==}
     dependencies:
@@ -4383,6 +4394,12 @@ packages:
 
   /@storybook/core-events@8.0.1:
     resolution: {integrity: sha512-AI8W9YNNXtkC9W1wL+LV2M/hd4SJWVOGNFhwf+bGSFfGb9NLl23CIBWg8XgYVpTtil3etw5ODDgykEmUBcKsKw==}
+    dependencies:
+      ts-dedent: 2.2.0
+    dev: true
+
+  /@storybook/core-events@8.0.2:
+    resolution: {integrity: sha512-1rtecdU3eyWGMT3U27ldF6ApdakvmmcS8E+1PqLGd5K9v5T0W82n+QyXft3kb434N8KYSwNFf08NfrU0VZeC4w==}
     dependencies:
       ts-dedent: 2.2.0
     dev: true
