@@ -53,7 +53,7 @@
 		"@remix-run/node": "2.8.1",
 		"@storybook/addon-a11y": "8.0.2",
 		"@storybook/addon-actions": "8.0.2",
-		"@storybook/addon-essentials": "8.0.1",
+		"@storybook/addon-essentials": "8.0.2",
 		"@storybook/addon-interactions": "8.0.1",
 		"@storybook/addon-links": "8.0.1",
 		"@storybook/blocks": "8.0.1",
