@@ -52,7 +52,6 @@ jobs:
           message: |
             ### <span aria-hidden="true">✅</span> Deploy Preview ready!
 
-
             |  Name | Link |
             |---------------------------------|------------------------|
             |<span aria-hidden="true">🔨</span> Latest commit | ${{ github.sha }} |

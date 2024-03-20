@@ -9,9 +9,8 @@ const a11yConfig: TestRunnerConfig = {
 	async postVisit(page, context) {
 		const storyContext = await getStoryContext(page, context);
 
-		if (storyContext.parameters?.["a11y"]?.disable as boolean) {
+		if (storyContext.parameters?.a11y?.disable as boolean)
 			return;
-		}
 
 		await configureAxe(page, {
 			rules: [
@@ -19,7 +18,7 @@ const a11yConfig: TestRunnerConfig = {
 					id: "color-contrast",
 					enabled: false,
 				},
-				...(storyContext.parameters?.["a11y"]?.config?.rules ?? []),
+				...(storyContext.parameters?.a11y?.config?.rules ?? []),
 			],
 		});
 

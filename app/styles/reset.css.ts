@@ -168,7 +168,7 @@ globalStyle(":where([hidden])", {
  * - Fix for the content editable attribute will work properly.
  * - Webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element
  */
-globalStyle(':where([contenteditable]:not([contenteditable="false"]))', {
+globalStyle(":where([contenteditable]:not([contenteditable=\"false\"]))", {
 	// @ts-expect-error: -webkit-line-break is a non-standard property
 	"@layer": {
 		[layers.reset]: {
@@ -184,7 +184,7 @@ globalStyle(':where([contenteditable]:not([contenteditable="false"]))', {
 /**
  * Apply back the draggable feature - exist only in Chromium and Safari
  */
-globalStyle(':where([draggable="true"])', {
+globalStyle(":where([draggable=\"true\"])", {
 	"@layer": {
 		[layers.reset]: {
 			// @ts-expect-error: -webkit-user-drag is a non-standard property
