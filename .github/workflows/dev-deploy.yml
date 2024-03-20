@@ -35,6 +35,7 @@ jobs:
       #        uses: cloudflare/wrangler-action@v3.4.1
       #        with:
       #          apiToken: ${{ secrets.CF_API_TOKEN }}
+      #          accountId: ${{ secrets.CF_ACCOUNT_ID }}
       #          command: d1 migrations apply portfolio
       - name: Deploy | Build
         run: pnpm build
