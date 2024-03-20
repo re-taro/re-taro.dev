@@ -5,22 +5,21 @@ const pages = fs
 	.map((it) => {
 		const path = `app/routes${it}`;
 		const stat = fs.statSync(path);
-		if (stat.isDirectory()) {
+		if (stat.isDirectory())
 			return { name: it, value: it };
-		}
 
 		return null;
 	})
-	.filter((it) => it !== null);
+	.filter(it => it !== null);
 
 pages.push({ name: "root", value: "" });
 
-const config = (
+function config(
 	/**
 	 * @type {import("plop").NodePlopAPI}
 	 */
 	plop,
-) => {
+) {
 	plop.setGenerator("page", {
 		description: "Create a new page",
 		prompts: [
@@ -67,7 +66,8 @@ const config = (
 						templateFile: "templates/styles/styles.css.ts.hbs",
 					});
 				}
-			} else {
+			}
+			else {
 				actions.push({
 					type: "add",
 					path: "app/routes/{{parent}}.{{name}}/route.tsx",
@@ -180,7 +180,8 @@ const config = (
 					path: "app/routes/features/{{ pascalCase name }}/{{ pascalCase name }}.test.tsx",
 					templateFile: "templates/components/component.test.tsx.hbs",
 				});
-			} else {
+			}
+			else {
 				actions.push({
 					type: "add",
 					path: "app/routes/{{parent}}/features/{{ pascalCase name }}/index.ts",
@@ -259,7 +260,8 @@ const config = (
 						path: "app/routes/handlers/index.ts",
 						template: "export { loader } from './loader';",
 					});
-				} else {
+				}
+				else {
 					actions.push({
 						type: "add",
 						path: "app/routes/handlers/action.ts",
@@ -278,7 +280,8 @@ const config = (
 						template: "export { action } from './action';",
 					});
 				}
-			} else {
+			}
+			else {
 				if (data?.type === "loader") {
 					actions.push({
 						type: "add",
@@ -297,7 +300,8 @@ const config = (
 						path: "app/routes/{{parent}}/handlers/index.ts",
 						template: "export { loader } from './loader';",
 					});
-				} else {
+				}
+				else {
 					actions.push({
 						type: "add",
 						path: "app/routes/{{parent}}/handlers/action.ts",
@@ -319,6 +323,6 @@ const config = (
 			}
 		},
 	});
-};
+}
 
 export default config;
