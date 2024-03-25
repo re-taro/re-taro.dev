@@ -36,42 +36,42 @@ jobs:
         uses: re-taro/actions/setup-node@v3.5.2
       - name: Run | tsc
         run: pnpm run lint:tsc
-#  unit-test:
-#    runs-on: ubuntu-latest
-#    timeout-minutes: 5
-#    steps:
-#      - name: Setup | Checkout
-#        uses: actions/checkout@v4.1.1
-#      - name: Setup | Node.js
-#        uses: re-taro/actions/setup-node@v3.5.2
-#      - name: Test | Unit
-#        run: pnpm run test:unit
-#  integration-test:
-#    runs-on: ubuntu-latest
-#    timeout-minutes: 5
-#    steps:
-#      - name: Setup | Checkout
-#        uses: actions/checkout@v4.1.1
-#      - name: Setup | Node.js
-#        uses: re-taro/actions/setup-node@v3.5.2
-#      - name: Setup | Playwright
-#        uses: ./.github/actions/setup-playwright
-#      - name: Test | Integration
-#        run: pnpm run test:integration
-#  storybook-test:
-#    runs-on: ubuntu-latest
-#    timeout-minutes: 5
-#    steps:
-#      - name: Setup | Checkout
-#        uses: actions/checkout@v4.1.1
-#      - name: Setup | Node.js
-#        uses: re-taro/actions/setup-node@v3.5.2
-#      - name: Setup | Playwright
-#        uses: ./.github/actions/setup-playwright
-#      - name: Build | Storybook
-#        run: pnpm run build-storybook --test
-#      - name: Test | Storybook
-#        run: |
-#          pnpm concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
-#            "pnpm sirv-cli storybook-static --host 127.0.0.1 --port 6006 --quiet" \
-#            "pnpm wait-on http://127.0.0.1:6006 && pnpm test:storybook"
+  #  unit-test:
+  #    runs-on: ubuntu-latest
+  #    timeout-minutes: 5
+  #    steps:
+  #      - name: Setup | Checkout
+  #        uses: actions/checkout@v4.1.1
+  #      - name: Setup | Node.js
+  #        uses: re-taro/actions/setup-node@v3.5.2
+  #      - name: Test | Unit
+  #        run: pnpm run test:unit
+  #  integration-test:
+  #    runs-on: ubuntu-latest
+  #    timeout-minutes: 5
+  #    steps:
+  #      - name: Setup | Checkout
+  #        uses: actions/checkout@v4.1.1
+  #      - name: Setup | Node.js
+  #        uses: re-taro/actions/setup-node@v3.5.2
+  #      - name: Setup | Playwright
+  #        uses: ./.github/actions/setup-playwright
+  #      - name: Test | Integration
+  #        run: pnpm run test:integration
+  storybook-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Setup | Checkout
+        uses: actions/checkout@v4.1.1
+      - name: Setup | Node.js
+        uses: re-taro/actions/setup-node@v3.5.2
+      - name: Setup | Playwright
+        uses: ./.github/actions/setup-playwright
+      - name: Build | Storybook
+        run: pnpm run build-storybook --test
+      - name: Test | Storybook
+        run: |
+          pnpm concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
+            "pnpm sirv-cli storybook-static --host 127.0.0.1 --port 6006 --quiet" \
+            "pnpm wait-on http://127.0.0.1:6006 && pnpm test:storybook"
