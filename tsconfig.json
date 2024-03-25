@@ -9,6 +9,7 @@
 			"~/*": ["./app/*"]
 		},
 		"resolveJsonModule": true,
+		"types": ["vitest/globals"],
 		"allowJs": true,
 		"strict": true,
 		"noEmit": true,

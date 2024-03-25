@@ -1,0 +1,27 @@
+name: Setup Playwright
+description: Setup Playwright environment and use cache for faster setup
+
+runs:
+  using: composite
+  steps:
+    - name: Setup | Get Playwright version
+      id: playwright-version
+      shell: bash
+      run: |
+        echo "version=$(pnpm list playwright --json | jq -r '.[].devDependencies.playwright.version')" >> $GITHUB_OUTPUT
+    - name: Setup | Playwright Cache
+      uses: actions/cache@v3
+      id: playwright-cache
+      with:
+        path: ~/.cache/ms-playwright
+        key: ${{ runner.os }}-playwright-${{ steps.playwright-version.outputs.version }}
+        restore-keys: |
+          ${{ runner.os }}-playwright-
+    - name: Setup | Install Playwright (without cache)
+      if: steps.playwright-cache.outputs.cache-hit != 'true'
+      shell: bash
+      run: pnpm exec playwright install --with-deps
+    - name: Setup | Install playwright (with cache)
+      if: steps.playwright-cache.outputs.cache-hit == 'true'
+      shell: bash
+      run: pnpm exec playwright install-deps
