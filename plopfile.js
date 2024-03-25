@@ -133,7 +133,7 @@ function config(
 
 				actions.push({
 					type: "add",
-					path: "app/routes/features/{{ pascalCase name }}/{{ pascalCase name }}.ts",
+					path: "app/routes/features/{{ pascalCase name }}/{{ pascalCase name }}.tsx",
 					templateFile: "templates/components/component.tsx.hbs",
 				});
 
@@ -158,7 +158,7 @@ function config(
 
 				actions.push({
 					type: "add",
-					path: "app/routes/{{parent}}/features/{{ pascalCase name }}/{{ pascalCase name }}.ts",
+					path: "app/routes/{{parent}}/features/{{ pascalCase name }}/{{ pascalCase name }}.tsx",
 					templateFile: "templates/components/component.tsx.hbs",
 				});
 
