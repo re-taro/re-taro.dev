@@ -35,6 +35,15 @@ export default defineConfig({
 		stroke: {
 			values: "colors",
 		},
+		lineHeight: {
+			values: "lineHeights",
+		},
+		fontWeight: {
+			values: "fontWeights",
+		},
+		fontSize: {
+			values: "fontSizes",
+		},
 	},
 	theme: {
 		tokens: {
@@ -64,7 +73,71 @@ export default defineConfig({
 					},
 				},
 			},
+			lineHeights: {
+				normal: {
+					value: 1.5,
+				},
+				tight: {
+					value: 1.25,
+				},
+				none: {
+					value: 1,
+				},
+			},
+			fontWeights: {
+				normal: {
+					value: 400,
+				},
+				bold: {
+					value: 600,
+				},
+			},
+			fontSizes: {
+				"4xl": {
+					value: "3rem",
+				},
+				"3xl": {
+					value: "2.5rem",
+				},
+				"2xl": {
+					value: "2rem",
+				},
+				"xl": {
+					value: "1.5rem",
+				},
+				"l": {
+					value: "1.125rem",
+				},
+				"m": {
+					value: "1rem",
+				},
+				"s": {
+					value: "0.875rem",
+				},
+				"xs": {
+					value: "0.75rem",
+				},
+				"2xs": {
+					value: "0.625rem",
+				},
+			},
 		},
+	},
+	conditions: {
+		hover: "@media (hover: hover)",
+		focusVisible: "&:is(:focus-visible, [data-focus-visible])",
+		disabled: "&:is(:disabled, [disabled], [data-disabled])",
+		active: "&:is(:active, [data-active])",
+		readOnly: "&:is(:read-only, [data-read-only])",
+		checked: "&:is(:checked, [data-checked], [aria-checked=true], [data-state=\"checked\"])",
+		enabled: "&:enabled",
+		before: "&::before",
+		after: "&::after",
+		required: "&:is(:required, [data-required], [aria-required=true])",
+		valid: "&:is(:valid, [data-valid])",
+		invalid: "&:is(:invalid, [data-invalid])",
+		pressed: "&:is([aria-pressed=true], [data-pressed])",
+		selected: "&:is([aria-selected=true], [data-selected])",
 	},
 	globalCss: {
 		body: {
