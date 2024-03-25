@@ -3,7 +3,7 @@ import fs from "node:fs";
 const pages = fs
 	.readdirSync("app/routes")
 	.map((it) => {
-		const path = `app/routes${it}`;
+		const path = `app/routes/${it}`;
 		const stat = fs.statSync(path);
 		if (stat.isDirectory())
 			return { name: it, value: it };
@@ -46,7 +46,7 @@ function config(
 			 */
 			const actions = [];
 
-			if (data?.parent === "root") {
+			if (data?.parent === "") {
 				actions.push({
 					type: "add",
 					path: "app/routes/{{name}}/route.tsx",
@@ -150,7 +150,7 @@ function config(
 			 */
 			const actions = [];
 
-			if (data?.parent === "root") {
+			if (data?.parent === "") {
 				actions.push({
 					type: "add",
 					path: "app/routes/features/{{ pascalCase name }}/index.ts",
@@ -241,7 +241,7 @@ function config(
 			 */
 			const actions = [];
 
-			if (data?.parent === "root") {
+			if (data?.parent === "") {
 				if (data?.type === "loader") {
 					actions.push({
 						type: "add",

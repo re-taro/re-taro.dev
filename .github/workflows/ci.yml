@@ -8,33 +8,70 @@ on:
 jobs:
   build-test:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v4.1.1
+      - name: Setup | Checkout
+        uses: actions/checkout@v4.1.1
       - name: Setup | Node.js
         uses: re-taro/actions/setup-node@v3.5.2
-        with:
-          node-version-file: .tool-versions
-      - name: Test | build
-        run: pnpm build
-  #      - name: Run storybook build
-  #        run: pnpm build:storybook
-  format-test:
+      - name: Run | Build
+        run: pnpm run build
+  lint-test:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v4.1.1
+      - name: Setup | Checkout
+        uses: actions/checkout@v4.1.1
       - name: Setup | Node.js
         uses: re-taro/actions/setup-node@v3.5.2
-        with:
-          node-version-file: .tool-versions
-      - name: Test | format
-        run: pnpm lint
-  #  test:
-  #    runs-on: ubuntu-latest
-  #    steps:
-  #      - uses: actions/checkout@v3.5.3
-  #      - name: Setup | Node.js
-  #        uses: re-taro/actions/setup-node@v1.1.2
-  #        with:
-  #          node-version-file: .tool-versions
-  #      - name: Test | Run test
-  #        run: pnpm test
+      - name: Run | ESLint
+        run: pnpm run lint:eslint
+  type-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Setup | Checkout
+        uses: actions/checkout@v4.1.1
+      - name: Setup | Node.js
+        uses: re-taro/actions/setup-node@v3.5.2
+      - name: Run | tsc
+        run: pnpm run lint:tsc
+#  unit-test:
+#    runs-on: ubuntu-latest
+#    timeout-minutes: 5
+#    steps:
+#      - name: Setup | Checkout
+#        uses: actions/checkout@v4.1.1
+#      - name: Setup | Node.js
+#        uses: re-taro/actions/setup-node@v3.5.2
+#      - name: Test | Unit
+#        run: pnpm run test:unit
+#  integration-test:
+#    runs-on: ubuntu-latest
+#    timeout-minutes: 5
+#    steps:
+#      - name: Setup | Checkout
+#        uses: actions/checkout@v4.1.1
+#      - name: Setup | Node.js
+#        uses: re-taro/actions/setup-node@v3.5.2
+#      - name: Setup | Playwright
+#        uses: ./.github/actions/setup-playwright
+#      - name: Test | Integration
+#        run: pnpm run test:integration
+#  storybook-test:
+#    runs-on: ubuntu-latest
+#    timeout-minutes: 5
+#    steps:
+#      - name: Setup | Checkout
+#        uses: actions/checkout@v4.1.1
+#      - name: Setup | Node.js
+#        uses: re-taro/actions/setup-node@v3.5.2
+#      - name: Setup | Playwright
+#        uses: ./.github/actions/setup-playwright
+#      - name: Build | Storybook
+#        run: pnpm run build-storybook --test
+#      - name: Test | Storybook
+#        run: |
+#          pnpm concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
+#            "pnpm sirv-cli storybook-static --host 127.0.0.1 --port 6006 --quiet" \
+#            "pnpm wait-on http://127.0.0.1:6006 && pnpm test:storybook"
