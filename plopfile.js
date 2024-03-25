@@ -34,11 +34,6 @@ function config(
 				name: "name",
 				message: "page name please.(This will be the name of the endpoint)",
 			},
-			{
-				type: "confirm",
-				name: "hasStyles",
-				message: "Do you want to add styles?",
-			},
 		],
 		actions: (data) => {
 			/**
@@ -58,14 +53,6 @@ function config(
 					path: "app/tests/{{name}}.test.ts",
 					templateFile: "templates/tests/route.test.ts.hbs",
 				});
-
-				if (data?.hasStyles) {
-					actions.push({
-						type: "add",
-						path: "app/routes/{{name}}/styles.css.ts",
-						templateFile: "templates/styles/styles.css.ts.hbs",
-					});
-				}
 			}
 			else {
 				actions.push({
@@ -79,14 +66,6 @@ function config(
 					path: "app/tests/{{parent}}.{{name}}.test.ts",
 					templateFile: "templates/tests/route.test.ts.hbs",
 				});
-
-				if (data?.hasStyles) {
-					actions.push({
-						type: "add",
-						path: "app/routes/{{parent}}.{{name}}/styles.css.ts",
-						templateFile: "templates/styles/styles.css.ts.hbs",
-					});
-				}
 			}
 
 			return actions;
@@ -111,11 +90,6 @@ function config(
 				type: "add",
 				path: "app/components/{{pascalCase name}}/{{pascalCase name}}.tsx",
 				templateFile: "templates/components/component.tsx.hbs",
-			},
-			{
-				type: "add",
-				path: "app/components/{{pascalCase name}}/styles.css.ts",
-				templateFile: "templates/styles/styles.css.ts.hbs",
 			},
 			{
 				type: "add",
@@ -165,12 +139,6 @@ function config(
 
 				actions.push({
 					type: "add",
-					path: "app/routes/features/{{ pascalCase name }}/styles.css.ts",
-					templateFile: "templates/styles/styles.css.ts.hbs",
-				});
-
-				actions.push({
-					type: "add",
 					path: "app/routes/features/{{ pascalCase name }}/{{ pascalCase name }}.stories.ts",
 					templateFile: "templates/components/component.stories.ts.hbs",
 				});
@@ -192,12 +160,6 @@ function config(
 					type: "add",
 					path: "app/routes/{{parent}}/features/{{ pascalCase name }}/{{ pascalCase name }}.ts",
 					templateFile: "templates/components/component.tsx.hbs",
-				});
-
-				actions.push({
-					type: "add",
-					path: "app/routes/{{parent}}/features/{{ pascalCase name }}/styles.css.ts",
-					templateFile: "templates/styles/styles.css.ts.hbs",
 				});
 
 				actions.push({

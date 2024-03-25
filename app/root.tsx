@@ -1,7 +1,7 @@
-import "./styles/globals.css";
-
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
 import type { ReactNode } from "react";
+import type { LinksFunction } from "@remix-run/cloudflare";
+import styles from "./index.css?url";
 
 function App(): ReactNode {
 	return (
@@ -26,5 +26,10 @@ function App(): ReactNode {
 		</html>
 	);
 }
+
+// eslint-disable-next-line react-refresh/only-export-components
+export const links: LinksFunction = () => [
+	{ rel: "stylesheet", href: styles },
+];
 
 export default App;

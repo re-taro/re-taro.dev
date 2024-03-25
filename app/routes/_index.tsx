@@ -1,7 +1,9 @@
+import { css } from "styled-system/css";
+
 function Index() {
 	return (
 		<div>
-			<h1>Welcome to Remix</h1>
+			<h1 className={css({ color: "text.main" })}>Welcome to Remix</h1>
 			<ul>
 				<li>
 					<a target="_blank" href="https://remix.run/tutorials/blog" rel="noreferrer">
