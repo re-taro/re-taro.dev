@@ -1,5 +1,4 @@
 import { cloudflareDevProxyVitePlugin as cloudflare, vitePlugin as remix } from "@remix-run/dev";
-import { vanillaExtractPlugin } from "@vanilla-extract/vite-plugin";
 import { visualizer } from "rollup-plugin-visualizer";
 import { defineConfig } from "vite";
 import typecript from "vite-tsconfig-paths";
@@ -21,9 +20,6 @@ export default defineConfig(({ mode }) => ({
 			serverModuleFormat: "esm",
 		}),
 		typecript(),
-		vanillaExtractPlugin({
-			identifiers: mode === "production" ? "short" : "debug",
-		}),
 		mode === "analyze"
 		&& visualizer({
 			open: true,
