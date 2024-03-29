@@ -67,7 +67,7 @@
 		"axe-playwright": "2.0.1",
 		"better-sqlite3": "9.4.3",
 		"drizzle-kit": "0.20.14",
-		"drizzle-orm": "0.30.5",
+		"drizzle-orm": "0.30.6",
 		"eslint": "8.57.0",
 		"eslint-plugin-format": "0.1.0",
 		"markuplint": "4.4.0",
