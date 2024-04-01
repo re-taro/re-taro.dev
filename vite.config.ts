@@ -2,6 +2,7 @@ import { cloudflareDevProxyVitePlugin as cloudflare, vitePlugin as remix } from 
 import { visualizer } from "rollup-plugin-visualizer";
 import { defineConfig } from "vite";
 import typecript from "vite-tsconfig-paths";
+import { remixDevTools } from "remix-development-tools";
 
 import { getLoadContext } from "./app/load-context";
 
@@ -14,6 +15,7 @@ export default defineConfig(({ mode }) => ({
 	},
 	plugins: [
 		cloudflare({ getLoadContext }),
+		remixDevTools(),
 		!isStorybook
 		&& remix({
 			ignoredRouteFiles: ["**/.*"],
