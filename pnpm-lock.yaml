@@ -41,8 +41,8 @@ devDependencies:
     specifier: 4.3.0
     version: 4.3.0
   '@markuplint/react-spec':
-    specifier: 4.2.0
-    version: 4.2.0
+    specifier: 4.3.0
+    version: 4.3.0
   '@re-taro/eslint-config':
     specifier: 4.0.0
     version: 4.0.0(eslint-plugin-format@0.1.0)(eslint@8.57.0)(typescript@5.4.3)
@@ -3320,6 +3320,10 @@ packages:
     resolution: {integrity: sha512-X1qEGVRIb15yw4Aj1nrW+aMc4UceKe5s43UnFWZdT4yGhuiAszvmM8w/cOKoVuSVXyHmFmiwXjTK7663nby6mA==}
     dev: true
 
+  /@markuplint/ml-ast@4.2.0:
+    resolution: {integrity: sha512-b5ZrVKKg1OdaWJXCKVobbemdQncbHTpk6VKNWah05Gji9RKC7RekyhNVYmTRO0LZqNXlM9fzhCWnoFuEWzzeLg==}
+    dev: true
+
   /@markuplint/ml-config@4.3.0:
     resolution: {integrity: sha512-zN8/4ZyyW5yyciWcmvQ/VByWv2EcDcV+QXLeP6yZL6tOiZ34wsNiy3q710WlCHKyiCkSUgAkibuvX/mN/EocDQ==}
     dependencies:
@@ -3367,6 +3371,18 @@ packages:
       - supports-color
     dev: true
 
+  /@markuplint/ml-spec@4.3.0:
+    resolution: {integrity: sha512-91YJI47UYD8OCIzI06Qn06kdd2rPi23gpH9Ul12kjfWc9mqwE/PcmnZwtRbYJ9wJXlAkCbJkCLYd7nxZue1eVA==}
+    dependencies:
+      '@markuplint/ml-ast': 4.2.0
+      '@markuplint/types': 4.2.0
+      dom-accessibility-api: 0.6.3
+      is-plain-object: 5.0.0
+      type-fest: 4.14.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /@markuplint/parser-utils@4.3.0:
     resolution: {integrity: sha512-9g2wgp36YnToCqLdhUcBQxdrxPHsBmJ69e982Z5YtoNJ7a2O8bFBVUF3eEwjX71t67P7vi5h59d0H2Oq1T3GjA==}
     dependencies:
@@ -3382,10 +3398,10 @@ packages:
       - supports-color
     dev: true
 
-  /@markuplint/react-spec@4.2.0:
-    resolution: {integrity: sha512-2ky+UD7qWSMQTOgIPKF6v7U/jzS2cnH539mV8IC9LN57oUPW9akB/xeBw6ixrj7SK0oPwepWF1X9zNshjl3zCw==}
+  /@markuplint/react-spec@4.3.0:
+    resolution: {integrity: sha512-eIS3IzXqxK33IYDTtLuzoi3gQYCrKfwGYusSGKi2w7ji96qJnwFfasVjnsS3I08fb2p84bnX8ygL7Da8DqbxIA==}
     dependencies:
-      '@markuplint/ml-spec': 4.2.0
+      '@markuplint/ml-spec': 4.3.0
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -3429,6 +3445,22 @@ packages:
 
   /@markuplint/types@4.1.0:
     resolution: {integrity: sha512-oyXeZTdfjmRwvbs8XfvGTYVu2H9jJCVVWw1CU9KH0FJy7AwL8rcufhHp0rxCU3elsdiXA1rbPbbHcF8CgJpbew==}
+    dependencies:
+      '@types/css-tree': 2.3.7
+      '@types/debug': 4.1.12
+      '@types/whatwg-mimetype': 3.0.2
+      bcp-47: 2.1.0
+      css-tree: 2.3.1
+      debug: 4.3.4
+      leven: 4.0.0
+      type-fest: 4.14.0
+      whatwg-mimetype: 4.0.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /@markuplint/types@4.2.0:
+    resolution: {integrity: sha512-0Y1UTvvanysqVOTRIJrx5uNsCPwO5tiO87XIXneFQNTHOInRae4UHrOfXggKAgUf4aMlBBjq8F5zB01lwWRnvg==}
     dependencies:
       '@types/css-tree': 2.3.7
       '@types/debug': 4.1.12
