@@ -70,7 +70,7 @@
 		"drizzle-orm": "0.30.6",
 		"eslint": "8.57.0",
 		"eslint-plugin-format": "0.1.0",
-		"markuplint": "4.4.0",
+		"markuplint": "4.5.0",
 		"npm-run-all2": "6.1.2",
 		"rollup-plugin-visualizer": "5.12.0",
 		"serve": "14.2.1",
