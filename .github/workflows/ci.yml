@@ -54,20 +54,20 @@ jobs:
   #          node-version-file: .tool-versions
   #      - name: Test | Unit
   #        run: pnpm run test:unit
-  #  integration-test:
-  #    runs-on: ubuntu-latest
-  #    timeout-minutes: 5
-  #    steps:
-  #      - name: Setup | Checkout
-  #        uses: actions/checkout@v4.1.1
-  #      - name: Setup | Node.js
-  #        uses: re-taro/actions/setup-node@v3.5.3
-  #        with:
-  #          node-version-file: .tool-versions
-  #      - name: Setup | Playwright
-  #        uses: ./.github/actions/setup-playwright
-  #      - name: Test | Integration
-  #        run: pnpm run test:integration
+  integration-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Setup | Checkout
+        uses: actions/checkout@v4.1.1
+      - name: Setup | Node.js
+        uses: re-taro/actions/setup-node@v3.5.3
+        with:
+          node-version-file: .tool-versions
+      - name: Setup | Playwright
+        uses: ./.github/actions/setup-playwright
+      - name: Test | Integration
+        run: pnpm run test:integration
   storybook-test:
     runs-on: ubuntu-latest
     timeout-minutes: 5

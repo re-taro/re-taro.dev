@@ -112,6 +112,9 @@ devDependencies:
   '@vitejs/plugin-react-swc':
     specifier: 3.6.0
     version: 3.6.0(vite@5.2.7)
+  axe-html-reporter:
+    specifier: 2.2.3
+    version: 2.2.3(axe-core@4.8.4)
   axe-playwright:
     specifier: 2.0.1
     version: 2.0.1(playwright@1.42.1)
@@ -7424,6 +7427,17 @@ packages:
       rimraf: 3.0.2
     dev: true
 
+  /axe-html-reporter@2.2.3(axe-core@4.8.4):
+    resolution: {integrity: sha512-io8aCEt4fJvv43W+33n3zEa8rdplH5Ti2v5fOnth3GBKLhLHarNs7jj46xGfpnGnpaNrz23/tXPHC3HbwTzwwA==}
+    engines: {node: '>=8.9.0'}
+    peerDependencies:
+      axe-core: '>=3'
+    dependencies:
+      axe-core: 4.8.4
+      mustache: 4.2.0
+      rimraf: 3.0.2
+    dev: true
+
   /axe-playwright@2.0.1(playwright@1.42.1):
     resolution: {integrity: sha512-MHjNjGARulF9XzqSfspmNjw+tpBz4x9o1VlTuLWEUW9fqzhn+xWa1qEpuOIQPbsRWQiLfooDjQAunLeE0PM5AQ==}
     peerDependencies:
@@ -14615,6 +14629,7 @@ packages:
 
   /mustache@4.2.0:
     resolution: {integrity: sha512-71ippSywq5Yb7/tVYyGbkBggbU8H3u5Rz56fH60jGFgr8uHwxs+aSKeqmluIVzM0m0kB7xQjKS6qPfd0b2ZoqQ==}
+    hasBin: true
     dev: true
 
   /mute-stream@1.0.0:
@@ -16717,12 +16732,14 @@ packages:
 
   /rimraf@2.6.3:
     resolution: {integrity: sha512-mwqeW5XsA2qAejG46gYdENaxXjx9onRNCfn7L0duuP4hCuTIi/QO7PDK07KJfp1d+izWPrzEJDcSqBa0OZQriA==}
+    hasBin: true
     dependencies:
       glob: 7.2.3
     dev: true
 
   /rimraf@3.0.2:
     resolution: {integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==}
+    hasBin: true
     dependencies:
       glob: 7.2.3
     dev: true

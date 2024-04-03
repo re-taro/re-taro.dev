@@ -29,6 +29,7 @@
 		"start": "NODE_ENV=production wrangler pages dev build/client",
 		"storybook": "storybook dev -p 6006",
 		"test": "run-p -c test:*",
+		"test:integration": "playwright test",
 		"test:storybook": "test-storybook",
 		"test:unit": "vitest"
 	},
@@ -70,6 +71,7 @@
 		"@types/react": "18.2.73",
 		"@types/react-dom": "18.2.23",
 		"@vitejs/plugin-react-swc": "3.6.0",
+		"axe-html-reporter": "2.2.3",
 		"axe-playwright": "2.0.1",
 		"better-sqlite3": "9.4.3",
 		"concurrently": "8.2.2",

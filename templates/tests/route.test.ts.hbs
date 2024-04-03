@@ -1,7 +1,11 @@
 import { AxeBuilder } from "@axe-core/playwright";
 import { expect, test } from "@playwright/test";
+import { createHtmlReport } from "axe-html-reporter";
 
 test.describe("/{{ name }}", () => {
+	test.beforeEach(async ({ page }) => {
+		await page.goto("http://localhost:8787/{{ name }}");
+	});
 	test.describe("rendering", () => {});
 	test.describe("action", () => {});
 	test.describe("validation", () => {});
@@ -9,9 +13,11 @@ test.describe("/{{ name }}", () => {
 		test("should not have any automatically detectable accessibility issues", async ({
 			page,
 		}) => {
-			await page.goto("http://localhost:3000/{{ name }}");
-
 			const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
+
+			createHtmlReport({
+				results: accessibilityScanResults,
+			});
 
 			expect(accessibilityScanResults.violations).toEqual([]);
 		});

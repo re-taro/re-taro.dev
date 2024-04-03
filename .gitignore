@@ -13,3 +13,8 @@ node_modules
 ## Panda
 styled-system
 styled-system-studio
+
+## Playwright
+/playwright-report
+/artifacts
+/test-results
