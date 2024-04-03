@@ -1,8 +1,8 @@
 import { cloudflareDevProxyVitePlugin as cloudflare, vitePlugin as remix } from "@remix-run/dev";
-import { vanillaExtractPlugin } from "@vanilla-extract/vite-plugin";
 import { visualizer } from "rollup-plugin-visualizer";
 import { defineConfig } from "vite";
 import typecript from "vite-tsconfig-paths";
+import { remixDevTools } from "remix-development-tools";
 
 import { getLoadContext } from "./app/load-context";
 
@@ -15,15 +15,12 @@ export default defineConfig(({ mode }) => ({
 	},
 	plugins: [
 		cloudflare({ getLoadContext }),
+		remixDevTools(),
 		!isStorybook
 		&& remix({
-			ignoredRouteFiles: ["**/.*"],
 			serverModuleFormat: "esm",
 		}),
 		typecript(),
-		vanillaExtractPlugin({
-			identifiers: mode === "production" ? "short" : "debug",
-		}),
 		mode === "analyze"
 		&& visualizer({
 			open: true,

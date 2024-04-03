@@ -9,3 +9,12 @@ node_modules
 /functions/version.txt
 /build
 /.wrangler
+
+## Panda
+styled-system
+styled-system-studio
+
+## Playwright
+/playwright-report
+/artifacts
+/test-results
