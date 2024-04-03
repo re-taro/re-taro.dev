@@ -51,6 +51,7 @@
 		"@re-taro/eslint-config": "4.0.0",
 		"@remix-run/dev": "2.8.1",
 		"@remix-run/node": "2.8.1",
+		"@remix-run/testing": "2.8.1",
 		"@storybook/addon-a11y": "8.0.5",
 		"@storybook/addon-actions": "8.0.5",
 		"@storybook/addon-backgrounds": "8.0.5",

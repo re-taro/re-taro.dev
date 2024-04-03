@@ -1,5 +1,5 @@
-import type { ComponentProps, HTMLAttributes, ReactNode } from "react";
-import { useContext, useMemo } from "react";
+import type { ComponentPropsWithoutRef, ForwardedRef, HTMLAttributes, ReactNode } from "react";
+import { forwardRef, useContext, useMemo } from "react";
 import { css, cva } from "styled-system/css";
 import type { SystemStyleObject } from "styled-system/types";
 import { LevelContext } from "~/components/SectioningContent";
@@ -14,6 +14,7 @@ type HeadingTagTypes = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 interface Props {
 	type?: HeadingTypes;
 	prefix?: boolean;
+	bold?: boolean;
 	css?: SystemStyleObject;
 	/**
 	 * @deprecated SectioningContent(Article, Aside, Nav, Section, SectioningFragment)を使ってHeadingと関連する範囲を明確に指定してください
@@ -31,10 +32,11 @@ interface HeadingBaseProps {
 	level?: 1 | 2 | 3 | 4 | 5 | 6;
 	css?: SystemStyleObject;
 	children?: ReactNode;
+	headingRef?: ForwardedRef<HTMLHeadingElement>;
 }
 
 type ElementProps = Omit<
-	ComponentProps<"h1">,
+	ComponentPropsWithoutRef<"h1">,
 	keyof Props | keyof HeadingBaseProps | "role" | "aria-level" | "className"
 >;
 
@@ -147,11 +149,13 @@ function HeadingBase({
 	prefix = false,
 	level,
 	css: cssProps,
+	headingRef,
 	...props
 }: HeadingBaseProps & HeadingBaseElementProps): ReactNode {
 	return (
 		<Component
 			{...props}
+			ref={headingRef}
 			className={css(base.raw({ weight, size, color, prefix, level }), cssProps)}
 		/>
 	);
@@ -163,29 +167,36 @@ const MAPPER: Record<HeadingTypes, HeadingBaseProps> = {
 	block: { weight: "normal",	size: "s",	color: "white" },
 };
 
-export function Heading({
+export const Heading = forwardRef<HTMLHeadingElement, Props & ElementProps>(({
 	tag,
 	prefix = false,
+	bold = false,
 	type = "section",
 	css: cssProps,
 	...props
-}: Props & ElementProps): ReactNode {
+}, ref) => {
 	const level = useContext(LevelContext) as 1 | 2 | 3 | 4 | 5 | 6;
 	const tagProps = useMemo(() => generateTagProps(level, tag), [level, tag]);
 	const actualProps: HeadingBaseProps & HeadingBaseElementProps = {
 		...props,
 		...tagProps,
 		...MAPPER[type],
+		weight: bold ? "bold" : "normal",
 		prefix,
 		level,
 		css: cssProps,
+		headingRef: ref,
 	};
 	return <HeadingBase {...actualProps} />;
-}
+});
 
-export function PageHeading({
+Heading.displayName = "Heading";
+
+export const PageHeading = forwardRef<HTMLHeadingElement, Omit<Props & ElementProps, "tag">>(({
 	type = "screen",
 	...props
-}: Omit<Props & ElementProps, "tag">): ReactNode {
-	return <Heading {...props} type={type} tag="h1" />;
-}
+}, ref) => {
+	return <Heading {...props} ref={ref} type={type} tag="h1" />;
+});
+
+PageHeading.displayName = "PageHeading";

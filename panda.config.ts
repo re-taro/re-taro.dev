@@ -1,5 +1,8 @@
 import { defineConfig } from "@pandacss/dev";
 
+import { removeUnusedKeyframes } from "./removeUnusedKeyframse";
+import { removeUnusedCssVars } from "./removeUnusedvars";
+
 export default defineConfig({
 	include: ["./app/**/*.tsx"],
 	exclude: [],
@@ -46,6 +49,9 @@ export default defineConfig({
 		},
 	},
 	theme: {
+		breakpoints: {
+			md: "768px",
+		},
 		tokens: {
 			colors: {
 				bg: {
@@ -141,9 +147,17 @@ export default defineConfig({
 	},
 	globalCss: {
 		body: {
+			backgroundColor: "bg.main",
+
 			fontFamily: "Inter, \"Noto Sans JP\", \"Hiragino Kaku Gothic ProN\", \"Hiragino Sans\", Meiryo, sans-serif",
 			WebkitFontSmoothing: "antialiased",
 			MozOsxFontSmoothing: "grayscale",
+		},
+	},
+	hooks: {
+		"cssgen:done": ({ artifact, content }) => {
+			if (artifact === "styles.css")
+				return removeUnusedCssVars(removeUnusedKeyframes(content));
 		},
 	},
 });

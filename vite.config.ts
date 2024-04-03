@@ -18,7 +18,6 @@ export default defineConfig(({ mode }) => ({
 		remixDevTools(),
 		!isStorybook
 		&& remix({
-			ignoredRouteFiles: ["**/.*"],
 			serverModuleFormat: "esm",
 		}),
 		typecript(),
