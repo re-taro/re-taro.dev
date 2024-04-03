@@ -42,13 +42,14 @@ export function Hero(): ReactNode {
 		<div className={css({
 			display: "grid",
 			gap: "1.5rem",
-			gridTemplateColumns: "1fr auto 7.5rem",
-			alignItems: "center",
+			gridTemplateColumns: { base: "1fr", md: "1fr auto 8rem" },
+			gridTemplateRows: { base: "1fr auto auto", md: "1fr" },
+			placeItems: "center",
 		})}
 		>
 			<div className={css({
 				display: "grid",
-				gridTemplateRows: "auto 3.75rem auto",
+				gridTemplateRows: { base: "auto 2.5rem auto", md: "auto 3.75rem auto" },
 				gap: ".5rem",
 				textAlign: "center",
 			})}
@@ -61,7 +62,7 @@ export function Hero(): ReactNode {
 					width={240}
 					height={240}
 					className={css({
-						margin: { base: 0, md: "0 5rem" },
+						margin: { base: "0 3.5rem", md: "0 5rem" },
 						aspectRatio: "1 / 1",
 						borderRadius: "50%",
 						width: { base: "10rem", md: "15rem" },
@@ -81,8 +82,8 @@ export function Hero(): ReactNode {
 			</div>
 			<hr className={css({
 				margin: 0,
-				width: "1px",
-				height: "20rem",
+				width: { base: "80%", md: "1px" },
+				height: { base: "1px", md: "20rem" },
 				border: "none",
 				backgroundColor: "bg.teriary",
 			})}
@@ -101,23 +102,35 @@ export function Hero(): ReactNode {
 					})
 				}
 				>
-					<li onMouseOver={() => {
-						linkReplay1();
-					}}
+					<li
+						className={css({
+							height: "2.25rem",
+						})}
+						onMouseOver={() => {
+							linkReplay1();
+						}}
 					>
-						<Link ref={linkRef1} to="/about" prefetch="intent">About</Link>
+						<Link ref={linkRef1} to="/about" prefetch="intent" />
 					</li>
-					<li onMouseOver={() => {
-						linkReplay2();
-					}}
+					<li
+						className={css({
+							height: "2.25rem",
+						})}
+						onMouseOver={() => {
+							linkReplay2();
+						}}
 					>
-						<Link ref={linkRef2} to="/timeline" prefetch="intent">Timeline</Link>
+						<Link ref={linkRef2} to="/timeline" prefetch="intent" />
 					</li>
-					<li onMouseOver={() => {
-						linkReplay3();
-					}}
+					<li
+						className={css({
+							height: "2.25rem",
+						})}
+						onMouseOver={() => {
+							linkReplay3();
+						}}
 					>
-						<Link ref={linkRef3} to="/works" prefetch="intent">Works</Link>
+						<Link ref={linkRef3} to="/works" prefetch="intent" />
 					</li>
 				</ul>
 			</nav>

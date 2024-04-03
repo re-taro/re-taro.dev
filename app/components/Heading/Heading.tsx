@@ -80,13 +80,13 @@ const base = cva({
 		},
 		size: {
 			s: {
-				fontSize: "2xl",
+				fontSize: { base: "l", md: "2xl" },
 			},
 			m: {
-				fontSize: "3xl",
+				fontSize: { base: "xl", md: "3xl" },
 			},
 			l: {
-				fontSize: "4xl",
+				fontSize: { base: "2xl", md: "4xl" },
 			},
 		},
 		color: {
