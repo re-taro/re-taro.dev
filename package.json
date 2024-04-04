@@ -73,7 +73,7 @@
 		"@vitejs/plugin-react-swc": "3.6.0",
 		"axe-html-reporter": "2.2.3",
 		"axe-playwright": "2.0.1",
-		"better-sqlite3": "9.4.4",
+		"better-sqlite3": "9.4.5",
 		"concurrently": "8.2.2",
 		"drizzle-kit": "0.20.14",
 		"drizzle-orm": "0.30.7",
