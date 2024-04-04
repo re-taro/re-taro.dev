@@ -46,7 +46,7 @@
 		"@changesets/changelog-github": "0.5.0",
 		"@changesets/cli": "2.27.1",
 		"@cloudflare/workers-types": "4.20240403.0",
-		"@pandacss/dev": "0.36.1",
+		"@pandacss/dev": "0.37.1",
 		"@pandacss/studio": "0.37.1",
 		"@playwright/test": "1.42.1",
 		"@re-taro/eslint-config": "4.0.0",
