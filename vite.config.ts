@@ -3,6 +3,7 @@ import { visualizer } from "rollup-plugin-visualizer";
 import { defineConfig } from "vite";
 import typecript from "vite-tsconfig-paths";
 import { remixDevTools } from "remix-development-tools";
+import browserslistToEsbuild from "browserslist-to-esbuild";
 
 import { getLoadContext } from "./app/load-context";
 
@@ -11,7 +12,9 @@ const isStorybook = process.argv[1]?.includes("storybook");
 
 export default defineConfig(({ mode }) => ({
 	build: {
+		target: browserslistToEsbuild(),
 		cssMinify: mode === "production",
+		minify: "terser",
 	},
 	plugins: [
 		cloudflare({ getLoadContext }),
