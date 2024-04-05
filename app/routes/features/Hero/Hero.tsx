@@ -88,8 +88,7 @@ export function Hero(): ReactNode {
 				backgroundColor: "bg.teriary",
 			})}
 			/>
-			<nav>
-				<ul className={
+			<ul className={
 					css({
 						display: "flex",
 						flexDirection: "column",
@@ -101,39 +100,38 @@ export function Hero(): ReactNode {
 						lineHeight: "normal",
 					})
 				}
+			>
+				<li
+					className={css({
+						height: "2.25rem",
+					})}
+					onMouseOver={() => {
+						linkReplay1();
+					}}
 				>
-					<li
-						className={css({
-							height: "2.25rem",
-						})}
-						onMouseOver={() => {
-							linkReplay1();
-						}}
-					>
-						<Link ref={linkRef1} to="/about" prefetch="intent" title="About" />
-					</li>
-					<li
-						className={css({
-							height: "2.25rem",
-						})}
-						onMouseOver={() => {
-							linkReplay2();
-						}}
-					>
-						<Link ref={linkRef2} to="/timeline" prefetch="intent" title="Timeline" />
-					</li>
-					<li
-						className={css({
-							height: "2.25rem",
-						})}
-						onMouseOver={() => {
-							linkReplay3();
-						}}
-					>
-						<Link ref={linkRef3} to="/works" prefetch="intent" title="Works" />
-					</li>
-				</ul>
-			</nav>
+					<Link ref={linkRef1} to="/about" prefetch="intent" title="About" />
+				</li>
+				<li
+					className={css({
+						height: "2.25rem",
+					})}
+					onMouseOver={() => {
+						linkReplay2();
+					}}
+				>
+					<Link ref={linkRef2} to="/timeline" prefetch="intent" title="Timeline" />
+				</li>
+				<li
+					className={css({
+						height: "2.25rem",
+					})}
+					onMouseOver={() => {
+						linkReplay3();
+					}}
+				>
+					<Link ref={linkRef3} to="/works" prefetch="intent" title="Works" />
+				</li>
+			</ul>
 		</div>
 	);
 }
