@@ -48,7 +48,7 @@
 		"@changesets/cli": "2.27.1",
 		"@cloudflare/workers-types": "4.20240404.0",
 		"@pandacss/dev": "0.37.2",
-		"@pandacss/studio": "0.37.1",
+		"@pandacss/studio": "0.37.2",
 		"@playwright/test": "1.42.1",
 		"@re-taro/eslint-config": "4.0.0",
 		"@remix-run/dev": "2.8.1",
