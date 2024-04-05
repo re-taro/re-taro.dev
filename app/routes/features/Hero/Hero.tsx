@@ -1,6 +1,6 @@
 import { Link } from "@remix-run/react";
 import type { ReactNode } from "react";
-import { useRef, useState } from "react";
+import { Suspense, useRef, useState } from "react";
 import { css } from "styled-system/css";
 import { PageHeading } from "~/components/Heading";
 import { useScramble } from "~/hooks/useScramble";
@@ -69,7 +69,7 @@ export function Hero(): ReactNode {
 						height: { base: "10rem", md: "15rem" },
 					})}
 				/>
-				<HeroText />
+				<Suspense fallback={<PageHeading bold>Rintaro Itokawa</PageHeading>}><HeroText /></Suspense>
 				<p className={css({
 					color: "text.secondary",
 					fontSize: "xl",
@@ -110,7 +110,7 @@ export function Hero(): ReactNode {
 							linkReplay1();
 						}}
 					>
-						<Link ref={linkRef1} to="/about" prefetch="intent" />
+						<Link ref={linkRef1} to="/about" prefetch="intent" title="About" />
 					</li>
 					<li
 						className={css({
@@ -120,7 +120,7 @@ export function Hero(): ReactNode {
 							linkReplay2();
 						}}
 					>
-						<Link ref={linkRef2} to="/timeline" prefetch="intent" />
+						<Link ref={linkRef2} to="/timeline" prefetch="intent" title="Timeline" />
 					</li>
 					<li
 						className={css({
@@ -130,7 +130,7 @@ export function Hero(): ReactNode {
 							linkReplay3();
 						}}
 					>
-						<Link ref={linkRef3} to="/works" prefetch="intent" />
+						<Link ref={linkRef3} to="/works" prefetch="intent" title="Works" />
 					</li>
 				</ul>
 			</nav>
