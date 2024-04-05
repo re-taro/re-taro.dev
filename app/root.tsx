@@ -1,7 +1,10 @@
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
 import type { ReactNode } from "react";
 import type { LinksFunction } from "@remix-run/cloudflare";
+import { css } from "styled-system/css";
 import styles from "./index.css?url";
+import { Footer } from "~/components/Footer";
+import { Header } from "~/components/Header";
 
 function App(): ReactNode {
 	return (
@@ -44,8 +47,18 @@ function App(): ReactNode {
 				<Meta />
 				<Links />
 			</head>
-			<body>
-				<Outlet />
+			<body className={css({
+				display: "grid",
+				gridTemplateRows: "auto 1fr auto",
+				gridTemplateAreas: `"header" "main" "footer"`,
+				minHeight: "100lvh",
+			})}
+			>
+				<Header css={css.raw({ gridArea: "header" })} />
+				<div className={css({ gridArea: "main" })}>
+					<Outlet />
+				</div>
+				<Footer	css={css.raw({ gridArea: "footer" })} />
 				<ScrollRestoration />
 				<Scripts />
 			</body>

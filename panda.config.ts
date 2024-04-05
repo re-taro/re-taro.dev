@@ -130,7 +130,7 @@ export default defineConfig({
 		},
 	},
 	conditions: {
-		hover: "@media (hover: hover)",
+		hover: "&:is(:hover, [data-hover])",
 		focusVisible: "&:is(:focus-visible, [data-focus-visible])",
 		disabled: "&:is(:disabled, [disabled], [data-disabled])",
 		active: "&:is(:active, [data-active])",
