@@ -4,6 +4,7 @@
 		"jsx": "react-jsx",
 		"lib": ["DOM", "DOM.Iterable", "ESNext"],
 		"baseUrl": ".",
+		"module": "ESNext",
 		"moduleResolution": "Bundler",
 		"paths": {
 			"~/*": ["./app/*"]
