@@ -50,7 +50,7 @@
 		"@pandacss/dev": "0.37.2",
 		"@pandacss/studio": "0.37.2",
 		"@playwright/test": "1.42.1",
-		"@re-taro/eslint-config": "4.0.0",
+		"@re-taro/eslint-config": "4.1.0",
 		"@remix-run/dev": "2.8.1",
 		"@remix-run/node": "2.8.1",
 		"@remix-run/testing": "2.8.1",
