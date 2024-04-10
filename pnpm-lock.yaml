@@ -122,8 +122,8 @@ devDependencies:
     specifier: 2.0.1
     version: 2.0.1(playwright@1.42.1)
   better-sqlite3:
-    specifier: 9.4.5
-    version: 9.4.5
+    specifier: 9.5.0
+    version: 9.5.0
   concurrently:
     specifier: 8.2.2
     version: 8.2.2
@@ -132,7 +132,7 @@ devDependencies:
     version: 0.20.14
   drizzle-orm:
     specifier: 0.30.7
-    version: 0.30.7(@cloudflare/workers-types@4.20240405.0)(@types/react@18.2.75)(better-sqlite3@9.4.5)(react@18.2.0)
+    version: 0.30.7(@cloudflare/workers-types@4.20240405.0)(@types/react@18.2.75)(better-sqlite3@9.5.0)(react@18.2.0)
   eslint:
     specifier: 8.57.0
     version: 8.57.0
@@ -7607,8 +7607,8 @@ packages:
       is-windows: 1.0.2
     dev: true
 
-  /better-sqlite3@9.4.5:
-    resolution: {integrity: sha512-uFVyoyZR9BNcjSca+cp3MWCv6upAv+tbMC4SWM51NIMhoQOm4tjIkyxFO/ZsYdGAF61WJBgdzyJcz4OokJi0gQ==}
+  /better-sqlite3@9.5.0:
+    resolution: {integrity: sha512-01qVcM4gPNwE+PX7ARNiHINwzVuD6nx0gdldaAAcu+MrzyIAukQ31ZDKEpzRO/CNA9sHpxoTZ8rdjoyAin4dyg==}
     requiresBuild: true
     dependencies:
       bindings: 1.5.0
@@ -9113,7 +9113,7 @@ packages:
       - supports-color
     dev: true
 
-  /drizzle-orm@0.30.7(@cloudflare/workers-types@4.20240405.0)(@types/react@18.2.75)(better-sqlite3@9.4.5)(react@18.2.0):
+  /drizzle-orm@0.30.7(@cloudflare/workers-types@4.20240405.0)(@types/react@18.2.75)(better-sqlite3@9.5.0)(react@18.2.0):
     resolution: {integrity: sha512-9qefSZQlu2fO2qv24piHyWFWcxcOY15//0v4j8qomMqaxzipNoG+fUBrQ7Ftk7PY7APRbRdn/nkEXWxiI4a8mw==}
     peerDependencies:
       '@aws-sdk/client-rds-data': '>=3'
@@ -9195,7 +9195,7 @@ packages:
     dependencies:
       '@cloudflare/workers-types': 4.20240405.0
       '@types/react': 18.2.75
-      better-sqlite3: 9.4.5
+      better-sqlite3: 9.5.0
       react: 18.2.0
     dev: true
 
