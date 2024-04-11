@@ -68,8 +68,8 @@ devDependencies:
     specifier: 8.0.8
     version: 8.0.8
   '@storybook/addon-backgrounds':
-    specifier: 8.0.7
-    version: 8.0.7
+    specifier: 8.0.8
+    version: 8.0.8
   '@storybook/addon-essentials':
     specifier: 8.0.7
     version: 8.0.7(@types/react@18.2.75)(react-dom@18.2.0)(react@18.2.0)
@@ -4925,6 +4925,14 @@ packages:
 
   /@storybook/addon-backgrounds@8.0.7:
     resolution: {integrity: sha512-pPp0AhlHgd4+eYg2terXbf/Ncpt2x0U9K2d0OKufLWWqcwl19Nq/SX2zEmLoAqMbLfML6euNLUiH0VLirg3h+Q==}
+    dependencies:
+      '@storybook/global': 5.0.0
+      memoizerific: 1.11.3
+      ts-dedent: 2.2.0
+    dev: true
+
+  /@storybook/addon-backgrounds@8.0.8:
+    resolution: {integrity: sha512-lrAJjVxDeXSK116rDajb56TureZiT76ygraP22/IvU3IcWCEcRiKYwlay8WgCTbJHtFmdBpelLBapoT46+IR9Q==}
     dependencies:
       '@storybook/global': 5.0.0
       memoizerific: 1.11.3
