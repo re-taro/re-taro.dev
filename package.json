@@ -77,7 +77,7 @@
 		"better-sqlite3": "9.5.0",
 		"concurrently": "8.2.2",
 		"drizzle-kit": "0.20.14",
-		"drizzle-orm": "0.30.7",
+		"drizzle-orm": "0.30.8",
 		"eslint": "8.57.0",
 		"eslint-plugin-format": "0.1.0",
 		"jsdom": "24.0.0",
