@@ -25,7 +25,7 @@ jobs:
       - name: Analyze | Bundle Size
         uses: preactjs/compressed-size-action@2.5.0
         with:
-          pattern: build/clients/assets/*.{js,css}
+          pattern: build/client/assets/*.{js,css}
           repo-token: ${{ steps.bot.outputs.token }}
       - name: Revoke GitHub Apps token
         env:

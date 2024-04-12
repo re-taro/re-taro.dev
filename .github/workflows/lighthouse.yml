@@ -1,0 +1,66 @@
+name: Lighthouse Report
+
+on:
+  pull_request:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  lighthouse-report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup | Checkout
+        uses: actions/checkout@v4.1.1
+      - name: Setup GitHub App
+        id: bot
+        uses: re-taro/actions/gen-installation-token@v3.5.4
+        with:
+          app_id: ${{ secrets.APP_ID}}
+          private_key: ${{ secrets.PRIVATE_KEY}}
+      - name: Setup | Node.js
+        uses: re-taro/actions/setup-node@v3.5.4
+        with:
+          node-version-file: .tool-versions
+      - name: Setup | Build website
+        run: pnpm build
+      - name: Run | Audit URLs using Lighthouse
+        id: lighthouse_audit
+        uses: treosh/lighthouse-ci-action@11.4.0
+        with:
+          urls: |
+            http://localhost:8787
+          configPath: ./.github/lighthouserc.json
+          uploadArtifacts: true
+          temporaryPublicStorage: true
+      - name: Run | Format lighthouse score
+        id: format_lighthouse_score
+        uses: actions/github-script@v7.0.1
+        with:
+          github-token: ${{ steps.bot.outputs.token }}
+          script: |
+            const results = ${{ steps.lighthouse_audit.outputs.manifest }};
+            const links = ${{ steps.lighthouse_audit.outputs.links }};
+            const createLighthouseReport = (await import(`${process.env.GITHUB_WORKSPACE}/.github/scripts/formatLighthouseReport.js`)).default;
+            const comment = createLighthouseReport({ results, links });
+            core.setOutput("comment", comment);
+      - name: Post | Add Lighthouse stats as comment
+        id: comment_to_pr
+        uses: marocchino/sticky-pull-request-comment@v2.9.0
+        with:
+          GITHUB_TOKEN: ${{ steps.bot.outputs.token }}
+          number: ${{ github.event.pull_request.number }}
+          header: lighthouse
+          message: ${{ steps.format_lighthouse_score.outputs.comment }}
+      - name: Revoke GitHub Apps token
+        env:
+          GITHUB_TOKEN: ${{ steps.bot.outputs.token }}
+        run: |
+          curl --location --silent --request DELETE \
+            --url "${GITHUB_API_URL}/installation/token" \
+            --header "Accept: application/vnd.github+json" \
+            --header "X-GitHub-Api-Version: 2022-11-28" \
+            --header "Authorization: Bearer ${GITHUB_TOKEN}"
