@@ -22,7 +22,8 @@ jobs:
         uses: re-taro/actions/setup-node@v3.5.4
         with:
           node-version-file: .tool-versions
-      - uses: preactjs/compressed-size-action@2.5.0
+      - name: Analyze | Bundle Size
+        uses: preactjs/compressed-size-action@2.5.0
         with:
           pattern: build/clients/assets/*.{js,css}
           repo-token: ${{ steps.bot.outputs.token }}

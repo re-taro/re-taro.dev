@@ -1,6 +1,7 @@
 import { AxeBuilder } from "@axe-core/playwright";
 import { expect, test } from "@playwright/test";
 import { createHtmlReport } from "axe-html-reporter";
+import { waitForImageToLoad } from "./utils";
 
 test.describe("/", () => {
 	test.beforeEach(async ({ page }) => {
@@ -30,12 +31,12 @@ test.describe("/", () => {
 
 			await expect(heroText).toContainText("re-taro");
 		});
-		//		test("should render correctly", async ({ page }) => {
-		//			const heroImage = page.getByRole("img", { name: "Rintaro Itokawa's profile image" });
-		//			await waitForImageToLoad(heroImage);
-		//
-		//			await expect(page).toHaveScreenshot("root.png");
-		//		});
+		test("should render correctly", async ({ page }) => {
+			const heroImage = page.getByRole("img", { name: "Rintaro Itokawa's profile image" });
+			await waitForImageToLoad(heroImage);
+
+			await expect(page).toHaveScreenshot("root.png");
+		});
 	});
 	test.describe("action", () => {});
 	test.describe("validation", () => {});
