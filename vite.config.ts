@@ -3,6 +3,7 @@ import { visualizer } from "rollup-plugin-visualizer";
 import { defineConfig } from "vite";
 import typecript from "vite-tsconfig-paths";
 import { remixDevTools } from "remix-development-tools";
+import browserslistToEsbuild from "browserslist-to-esbuild";
 
 import { getLoadContext } from "./app/load-context";
 
@@ -11,7 +12,43 @@ const isStorybook = process.argv[1]?.includes("storybook");
 
 export default defineConfig(({ mode }) => ({
 	build: {
-		cssMinify: mode === "production",
+		target: browserslistToEsbuild(),
+		cssMinify: "lightningcss",
+		minify: "terser",
+		rollupOptions: {
+			output: {
+				manualChunks(id: string) {
+					if (id.includes("node_modules")) {
+						const basic = id.toString().split("node_modules/")[1];
+						const sub1 = basic.split("/")[0];
+						if (sub1 !== ".pnpm")
+							return sub1.toString();
+
+						const name2 = basic.split("/")[1];
+						return name2.split("@")[name2[0] === "@" ? 1 : 0].toString();
+					}
+				},
+			},
+		},
+		terserOptions: {
+			ecma: 2020,
+			compress: {
+				passes: 5,
+				ecma: 2020,
+				inline: 3,
+			},
+			format: {
+				comments: false,
+			},
+			toplevel: true,
+			nameCache: {},
+		},
+	},
+	optimizeDeps: {
+		esbuildOptions: {
+			minify: true,
+			treeShaking: true,
+		},
 	},
 	plugins: [
 		cloudflare({ getLoadContext }),
@@ -23,8 +60,6 @@ export default defineConfig(({ mode }) => ({
 		typecript(),
 		mode === "analyze"
 		&& visualizer({
-			open: true,
-			template: "flamegraph", // use `network` to see why something was included
 			gzipSize: true,
 			brotliSize: true,
 			emitFile: true, // `emitFile` is necessary since Remix builds more than one bundle
