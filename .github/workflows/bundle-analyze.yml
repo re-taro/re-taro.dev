@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build:
+  bundle-analyze:
     runs-on: ubuntu-latest
 
     steps:
