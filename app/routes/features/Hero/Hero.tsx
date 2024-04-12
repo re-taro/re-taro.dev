@@ -58,6 +58,7 @@ export function Hero(): ReactNode {
 					decoding="async"
 					loading="eager"
 					src="/images/rintaro.avif"
+					srcSet={["/images/rintaro.avif 1x", "/images/rintaro@2x.avif 2x"].join(", ")}
 					alt="Rintaro Itokawa's profile image"
 					width={240}
 					height={240}
