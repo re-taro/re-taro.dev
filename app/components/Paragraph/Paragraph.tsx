@@ -8,7 +8,7 @@ interface BaseProps {
 	emphasis?: boolean;
 	leading?: "normal" | "tight" | "none";
 	weight?: "normal" | "bold";
-	children: string;
+	children: ReactNode;
 	css?: SystemStyleObject;
 }
 
@@ -17,6 +17,11 @@ type ElementProps = Omit<HTMLAttributes<HTMLSpanElement>, keyof BaseProps>;
 const text = cva({
 	base: {
 		fontSize: "m",
+
+		wordBreak: "keep-all",
+		lineBreak: "strict",
+		hangingPunctuation: "allow-end",
+		overflowWrap: "anywhere",
 	},
 	variants: {
 		type: {
