@@ -27,7 +27,7 @@ function createURL(url) {
 	try {
 		return new URL(url);
 	}
-	catch (e) {
+	catch (_) {
 		throw new Error(`Can't create URL for string=${url}`);
 	}
 }
