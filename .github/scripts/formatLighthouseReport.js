@@ -21,7 +21,7 @@ function scoreEntry(rawScore) {
 
 /**
  * @param {string} url
- * @returns {module:url.URL}
+ * @returns {module:url.URL} URL
  */
 function createURL(url) {
 	try {
@@ -41,9 +41,7 @@ function createURL(url) {
 function createMarkdownTableRow({ url, summary, reportUrl }) {
 	return [
     `| [${createURL(url).pathname}](${url})`,
-    ...(
-    	Object.keys(summaryKeys)
-    ).map(k => scoreEntry(summary[k])),
+    ...(Object.keys(summaryKeys)).map(k => scoreEntry(summary[k])),
     `[Report](${reportUrl}) |`,
 	].join(" | ");
 }
