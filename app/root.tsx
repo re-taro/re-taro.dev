@@ -54,7 +54,7 @@ function Document({ title, noIndex, children }: Props): ReactNode {
 			})}
 			>
 				<Header css={css.raw({ gridArea: "header" })} />
-				<main className={css({ gridArea: "main" })}>
+				<main className={css({ gridArea: "main", padding: "0 1rem" })}>
 					{children}
 				</main>
 				<Footer	css={css.raw({ gridArea: "footer" })} />
