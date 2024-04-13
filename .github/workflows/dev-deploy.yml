@@ -59,3 +59,7 @@ jobs:
             |<span aria-hidden="true">🔍</span> Latest deploy log | ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} |
             |<span aria-hidden="true">😎</span> Deploy Preview Url | [${{ steps.page.outputs.deployment-url }}](${{ steps.page.outputs.deployment-url }}) |
             ---
+      - name: Lighthouse | Audit
+        uses: ./.github/workflows/lighthouse.yml
+        with:
+          url: ${{ steps.page.outputs.deployment-url }}

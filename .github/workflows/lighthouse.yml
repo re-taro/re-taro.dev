@@ -1,9 +1,12 @@
 name: Lighthouse Report
 
 on:
-  pull_request:
-    branches:
-      - main
+  workflow_call:
+    inputs:
+      url:
+        description: 'URL to audit'
+        required: true
+        type: string
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
@@ -32,8 +35,8 @@ jobs:
         uses: treosh/lighthouse-ci-action@11.4.0
         with:
           urls: |
-            http://localhost:8787
-            http://localhost:8787/about
+            ${{ inputs.url }}
+            ${{ inputs.url }}/about
           configPath: ./.github/lighthouserc.json
           uploadArtifacts: true
           temporaryPublicStorage: true
