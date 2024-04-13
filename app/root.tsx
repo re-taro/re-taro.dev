@@ -54,9 +54,9 @@ function Document({ title, noIndex, children }: Props): ReactNode {
 			})}
 			>
 				<Header css={css.raw({ gridArea: "header" })} />
-				<div className={css({ gridArea: "main" })}>
+				<main className={css({ gridArea: "main", padding: "0 1rem" })}>
 					{children}
-				</div>
+				</main>
 				<Footer	css={css.raw({ gridArea: "footer" })} />
 				<ScrollRestoration />
 				<Scripts />

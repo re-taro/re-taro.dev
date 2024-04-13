@@ -33,6 +33,7 @@ jobs:
         with:
           urls: |
             http://localhost:8787
+            http://localhost:8787/about
           configPath: ./.github/lighthouserc.json
           uploadArtifacts: true
           temporaryPublicStorage: true

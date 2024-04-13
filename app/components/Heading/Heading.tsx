@@ -29,7 +29,6 @@ interface HeadingBaseProps {
 	size?: "s" | "m" | "l";
 	color?: "white" | "grey";
 	prefix?: boolean;
-	level?: 1 | 2 | 3 | 4 | 5 | 6;
 	css?: SystemStyleObject;
 	children?: ReactNode;
 	headingRef?: ForwardedRef<HTMLHeadingElement>;
@@ -101,19 +100,20 @@ const base = cva({
 			true: {},
 			false: {},
 		},
-		level: {
-			1: {},
-			2: {},
-			3: {},
-			4: {}, // NOT USED
-			5: {}, // NOT USED
-			6: {}, // NOT USED
+		as: {
+			h1: {},
+			h2: {},
+			h3: {},
+			h4: {}, // NOT USED
+			h5: {}, // NOT USED
+			h6: {}, // NOT USED
+			span: {}, // NOT USED
 		},
 	},
 	compoundVariants: [
 		{
 			prefix: true,
-			level: 1,
+			as: "h1",
 			css: {
 				_before: {
 					content: "'# '",
@@ -122,7 +122,7 @@ const base = cva({
 		},
 		{
 			prefix: true,
-			level: 2,
+			as: "h2",
 			css: {
 				_before: {
 					content: "'## '",
@@ -131,7 +131,7 @@ const base = cva({
 		},
 		{
 			prefix: true,
-			level: 3,
+			as: "h3",
 			css: {
 				_before: {
 					content: "'### '",
@@ -147,7 +147,6 @@ function HeadingBase({
 	color = "white",
 	as: Component = "span",
 	prefix = false,
-	level,
 	css: cssProps,
 	headingRef,
 	...props
@@ -156,7 +155,7 @@ function HeadingBase({
 		<Component
 			{...props}
 			ref={headingRef}
-			className={css(base.raw({ weight, size, color, prefix, level }), cssProps)}
+			className={css(base.raw({ weight, size, color, prefix, as: Component }), cssProps)}
 		/>
 	);
 }
@@ -183,7 +182,6 @@ export const Heading = forwardRef<HTMLHeadingElement, Props & ElementProps>(({
 		...MAPPER[type],
 		weight: bold ? "bold" : "normal",
 		prefix,
-		level,
 		css: cssProps,
 		headingRef: ref,
 	};
