@@ -13,6 +13,8 @@ permissions:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    outputs:
+      url: ${{ steps.page.outputs.deployment-url }}
     steps:
       - name: Setup | Comment deploy start
         uses: mshick/add-pr-comment@v2.8.2
@@ -59,3 +61,9 @@ jobs:
             |<span aria-hidden="true">🔍</span> Latest deploy log | ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} |
             |<span aria-hidden="true">😎</span> Deploy Preview Url | [${{ steps.page.outputs.deployment-url }}](${{ steps.page.outputs.deployment-url }}) |
             ---
+  lighthouse:
+    needs: publish
+    uses: ./.github/workflows/lighthouse.yml
+    with:
+      url: ${{ needs.publish.outputs.url }}
+    secrets: inherit

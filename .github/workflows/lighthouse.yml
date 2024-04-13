@@ -1,9 +1,17 @@
 name: Lighthouse Report
 
 on:
-  pull_request:
-    branches:
-      - main
+  workflow_call:
+    inputs:
+      url:
+        description: URL to audit
+        required: true
+        type: string
+    secrets:
+      APP_ID:
+        required: true
+      PRIVATE_KEY:
+        required: true
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
@@ -25,15 +33,13 @@ jobs:
         uses: re-taro/actions/setup-node@v3.5.4
         with:
           node-version-file: .tool-versions
-      - name: Setup | Build website
-        run: pnpm build
       - name: Run | Audit URLs using Lighthouse
         id: lighthouse_audit
         uses: treosh/lighthouse-ci-action@11.4.0
         with:
           urls: |
-            http://localhost:8787
-            http://localhost:8787/about
+            ${{ inputs.url }}
+            ${{ inputs.url }}/about
           configPath: ./.github/lighthouserc.json
           uploadArtifacts: true
           temporaryPublicStorage: true
