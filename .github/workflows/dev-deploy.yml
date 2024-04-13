@@ -66,3 +66,4 @@ jobs:
     uses: ./.github/workflows/lighthouse.yml
     with:
       url: ${{ needs.publish.outputs.url }}
+    secrets: inherit
