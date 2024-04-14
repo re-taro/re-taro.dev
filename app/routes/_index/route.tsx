@@ -1,7 +1,7 @@
 import { css } from "styled-system/css";
 import { Hero } from "./features/Hero";
 
-function Root() {
+export default function Page() {
 	return (
 		<section className={css({
 			width: "100%",
@@ -14,5 +14,3 @@ function Root() {
 		</section>
 	);
 }
-
-export default Root;

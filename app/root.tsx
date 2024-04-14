@@ -1,6 +1,6 @@
 import { Links, Meta, Outlet, Scripts, ScrollRestoration, isRouteErrorResponse, useRouteError } from "@remix-run/react";
 import type { ReactNode } from "react";
-import type { LinksFunction } from "@remix-run/cloudflare";
+import type { LinksFunction, MetaFunction } from "@remix-run/cloudflare";
 import { css } from "styled-system/css";
 import styles from "./index.css?url";
 import { Footer } from "~/components/Footer";
@@ -16,31 +16,6 @@ function Document({ title, noIndex, children }: Props): ReactNode {
 	return (
 		<html lang="ja-JP">
 			<head>
-				<meta charSet="utf-8" />
-				<meta name="viewport" content="width=device-width" />
-				<meta
-					name="description"
-					content="Rintaro Itokawa(re-taro)のポートフォリオです。"
-				/>
-				<meta property="og:title" content="Rintaro Itokawa - Web Developer" />
-				<meta
-					property="og:description"
-					content="Rintaro Itokawa(re-taro)のポートフォリオです。"
-				/>
-				<meta property="og:url" content="https://re-taro.dev" />
-				<meta property="og:image" content="https://og.re-taro.dev?title=Rintaro+Itokawa&text=re-taro.dev" />
-				<meta property="og:type" content="website" />
-				<meta property="twitter:card" content="summary_large_image" />
-				<meta
-					property="twitter:title"
-					content="Rintaro Itokawa - Web Developer"
-				/>
-				<meta
-					property="twitter:description"
-					content="Rintaro Itokawa(re-taro)のポートフォリオです。"
-				/>
-				<meta property="twitter:image" content="https://og.re-taro.dev?title=Rintaro+Itokawa&text=re-taro.dev" />
-				<meta property="twitter:site" content="@re_taro_" />
 				{noIndex && <meta name="robots" content="noindex" />}
 				<Meta />
 				<Links />
@@ -73,7 +48,6 @@ function App(): ReactNode {
 	);
 }
 
-// eslint-disable-next-line react-refresh/only-export-components
 export const links: LinksFunction = () => [
 	{ rel: "preconnect", href: "https://fonts.googleapis.com" },
 	{ rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
@@ -81,6 +55,22 @@ export const links: LinksFunction = () => [
 	{ rel: "stylesheet", href: styles },
 	{ rel: "icon", href: "/favicon.ico", sizes: "any" },
 	{ rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
+];
+
+export const meta: MetaFunction = () => [
+	{ charSet: "utf-8" },
+	{ name: "viewport", content: "width=device-width" },
+	{ name: "description", content: "Rintaro Itokawa (re-taro) のポートフォリオです。" },
+	{ name: "og:title", content: "Rintaro Itokawa - Web Developer" },
+	{ name: "og:description", content: "Rintaro Itokawa (re-taro) のポートフォリオです。" },
+	{ name: "og:url", content: "https://re-taro.dev" },
+	{ name: "og:image", content: "https://og.re-taro.dev?title=Rintaro+Itokawa&text=re-taro.dev" },
+	{ name: "og:type", content: "website" },
+	{ name: "twitter:card", content: "summary_large_image" },
+	{ name: "twitter:title", content: "Rintaro Itokawa - Web Developer" },
+	{ name: "twitter:description", content: "Rintaro Itokawa (re-taro) のポートフォリオです。" },
+	{ name: "twitter:image", content: "https://og.re-taro.dev?title=Rintaro+Itokawa&text=re-taro.dev" },
+	{ name: "twitter:site", content: "@re_taro_" },
 ];
 
 export function ErrorBoundary() {
