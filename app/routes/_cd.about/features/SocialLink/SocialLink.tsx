@@ -23,7 +23,7 @@ export function SocialLink({ href, icon: Icon, children }: Props): ReactNode {
 				lineHeight: "normal",
 				color: "text.main",
 				opacity: 0.6,
-				transition: "opacity 0.3s ease-in-out",
+				transition: "opacity 0.3s ease-in",
 
 				_hover: {
 					opacity: 1,

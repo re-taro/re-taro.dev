@@ -132,18 +132,18 @@ export default function Page(): ReactNode {
 					backgroundColor: "bg.teriary",
 				})}
 				/>
-				<Section aria-label="SNS">
-					<Paragraph as="p">Find me on</Paragraph>
-					<p className={css({ display: "flex", flexWrap: "wrap", gap: "0.5rem" })}>
-						<SocialLink href="https://github.com/re-taro" icon={SiGithub}>GitHub</SocialLink>
-						<SocialLink href="https://twitter.com/re_taro_" icon={RiTwitterXLine}>Twitter</SocialLink>
-						<SocialLink href="https://bsky.app/profile/re-taro.dev" icon={PiButterflyFill}>Bluesky</SocialLink>
-						<SocialLink href="https://discord.com/users/713739439041544273" icon={SiDiscord}>Discord</SocialLink>
-						<SocialLink href="https://keybase.io/10969_rintaro" icon={SiKeybase}>Keybase</SocialLink>
-						<SocialLink href="https://keys.openpgp.org/vks/v1/by-fingerprint/60EC8DD6265105FFDD3D6EFEB3BBD234590C77FC" icon={SiMonkeytie}>GPG Keys</SocialLink>
-						<SocialLink href="mailto:me@re-taro.dev" icon={RiMailLine}>me&#64;re-taro.dev</SocialLink>
-					</p>
-				</Section>
+			</Section>
+			<Section aria-label="SNS">
+				<Paragraph as="p">Find me on</Paragraph>
+				<p className={css({ display: "flex", flexWrap: "wrap", gap: "0.5rem" })}>
+					<SocialLink href="https://github.com/re-taro" icon={SiGithub}>GitHub</SocialLink>
+					<SocialLink href="https://twitter.com/re_taro_" icon={RiTwitterXLine}>Twitter</SocialLink>
+					<SocialLink href="https://bsky.app/profile/re-taro.dev" icon={PiButterflyFill}>Bluesky</SocialLink>
+					<SocialLink href="https://discord.com/users/713739439041544273" icon={SiDiscord}>Discord</SocialLink>
+					<SocialLink href="https://keybase.io/10969_rintaro" icon={SiKeybase}>Keybase</SocialLink>
+					<SocialLink href="https://keys.openpgp.org/vks/v1/by-fingerprint/60EC8DD6265105FFDD3D6EFEB3BBD234590C77FC" icon={SiMonkeytie}>GPG Keys</SocialLink>
+					<SocialLink href="mailto:me@re-taro.dev" icon={RiMailLine}>me&#64;re-taro.dev</SocialLink>
+				</p>
 			</Section>
 		</div>
 	);

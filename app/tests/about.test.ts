@@ -30,7 +30,17 @@ test.describe("/about", () => {
 			await expect(link).toContainText("GitHub");
 		});
 	});
-	test.describe("action", () => {});
+	test.describe("action", () => {
+		test("should navigate to top", async ({ page }) => {
+			const COLLECT_URL = "http://localhost:8787/";
+			const link = page.getByRole("link", { name: "cd" });
+			await link.click();
+			await page.waitForURL(COLLECT_URL);
+			const url = page.url();
+
+			expect(url).toBe(COLLECT_URL);
+		});
+	});
 	test.describe("validation", () => {});
 	test.describe("a11y", () => {
 		test("should not have any automatically detectable accessibility issues", async ({
