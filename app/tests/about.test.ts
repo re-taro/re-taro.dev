@@ -23,6 +23,12 @@ test.describe("/about", () => {
 			await expect(firstLanguage).toContainText("TypeScript (JavaScript)");
 			await expect(firstFramework).toContainText("React / Next.js (Remix.js)");
 		});
+		test("should render SNS links", async ({ page }) => {
+			const section = page.getByRole("region", { name: "SNS" });
+			const link = section.getByRole("link").first();
+
+			await expect(link).toContainText("GitHub");
+		});
 	});
 	test.describe("action", () => {});
 	test.describe("validation", () => {});
