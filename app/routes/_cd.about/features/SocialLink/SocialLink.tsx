@@ -1,10 +1,9 @@
-import type { ReactNode } from "react";
-import type { IconType } from "react-icons";
+import type { ReactElement, ReactNode, SVGProps } from "react";
 import { css } from "styled-system/css";
 
 interface Props {
 	href: string;
-	icon: IconType;
+	icon: (props: SVGProps<SVGSVGElement>) => ReactElement;
 	children: string;
 }
 

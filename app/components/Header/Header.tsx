@@ -1,9 +1,12 @@
 import { Link } from "@remix-run/react";
 import type { ReactElement, ReactNode } from "react";
-import { CiViewTimeline } from "react-icons/ci";
-import { RiAccountCircleLine, RiGithubLine, RiLightbulbLine, RiTwitterXLine } from "react-icons/ri";
 import { css } from "styled-system/css";
 import type { SystemStyleObject } from "styled-system/types";
+import ViewTimeline from "~icons/circum/view-timeline";
+import AccountCircleLine from "~icons/ri/account-circle-line";
+import LightbulbLine from "~icons/ri/lightbulb-line";
+import TwitterXLine from "~icons/ri/twitter-x-line";
+import GithubLine from "~icons/ri/github-line";
 import { useScramble } from "~/hooks/useScramble";
 
 function ListItem({ to, text, icon }: { to: string; text: string; icon: ReactElement }): ReactNode {
@@ -96,9 +99,9 @@ export function Header({ css: cssStyle }: Props): ReactNode {
 					},
 				})}
 				>
-					<ListItem to="/about" text="About" icon={<RiAccountCircleLine />} />
-					<ListItem to="/timeline" text="Timeline" icon={<CiViewTimeline />} />
-					<ListItem to="/works" text="Works" icon={<RiLightbulbLine />} />
+					<ListItem to="/about" text="About" icon={<AccountCircleLine />} />
+					<ListItem to="/timeline" text="Timeline" icon={<ViewTimeline />} />
+					<ListItem to="/works" text="Works" icon={<LightbulbLine />} />
 					<li className={css({
 						display: { base: "none", md: "inline" },
 					})}
@@ -117,7 +120,7 @@ export function Header({ css: cssStyle }: Props): ReactNode {
 							target="_blank"
 							title="Twitter"
 						>
-							<RiTwitterXLine />
+							<TwitterXLine />
 						</a>
 					</li>
 					<li className={css({
@@ -138,7 +141,7 @@ export function Header({ css: cssStyle }: Props): ReactNode {
 							target="_blank"
 							title="GitHub"
 						>
-							<RiGithubLine />
+							<GithubLine />
 						</a>
 					</li>
 				</ul>

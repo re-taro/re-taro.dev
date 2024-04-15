@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { SiGithub } from "react-icons/si";
 import { SocialLink } from "./SocialLink";
+import Github from "~icons/simple-icons/github";
 
 type T = typeof SocialLink;
 
@@ -19,7 +19,7 @@ type Story = StoryObj<T>;
 export const Default: Story = {
 	args: {
 		href: "https://github.com/re-taro",
-		icon: SiGithub,
+		icon: Github,
 		children: "GitHub",
 	},
 };
