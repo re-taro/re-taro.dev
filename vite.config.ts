@@ -4,6 +4,7 @@ import { defineConfig } from "vite";
 import typecript from "vite-tsconfig-paths";
 import { remixDevTools } from "remix-development-tools";
 import browserslistToEsbuild from "browserslist-to-esbuild";
+import icons from "unplugin-icons/vite";
 
 import { getLoadContext } from "./app/load-context";
 
@@ -57,6 +58,7 @@ export default defineConfig(({ mode }) => ({
 		&& remix({
 			serverModuleFormat: "esm",
 		}),
+		icons({ compiler: "jsx", jsx: "react" }),
 		typecript(),
 		mode === "analyze"
 		&& visualizer({

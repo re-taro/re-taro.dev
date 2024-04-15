@@ -1,10 +1,14 @@
 import type { ReactNode } from "react";
 import { css } from "styled-system/css";
-import { SiDiscord, SiGithub, SiKeybase, SiMonkeytie } from "react-icons/si";
-import { RiMailLine, RiTwitterXLine } from "react-icons/ri";
-import { PiButterflyFill } from "react-icons/pi";
 import { ListItem } from "./features/ListItem";
 import { SocialLink } from "./features/SocialLink";
+import Discord from "~icons/simple-icons/discord";
+import Github from "~icons/simple-icons/github";
+import Keybase from "~icons/simple-icons/keybase";
+import Monkeytie from "~icons/simple-icons/monkeytie";
+import Bluesky from "~icons/simple-icons/bluesky";
+import MailLine from "~icons/ri/mail-line";
+import Twitter from "~icons/ri/twitter-x-line";
 import { Heading, PageHeading } from "~/components/Heading";
 import { Paragraph } from "~/components/Paragraph";
 import { Section } from "~/components/SectioningContent";
@@ -136,13 +140,13 @@ export default function Page(): ReactNode {
 			<Section aria-label="SNS">
 				<Paragraph as="p">Find me on</Paragraph>
 				<p className={css({ display: "flex", flexWrap: "wrap", gap: "0.5rem" })}>
-					<SocialLink href="https://github.com/re-taro" icon={SiGithub}>GitHub</SocialLink>
-					<SocialLink href="https://twitter.com/re_taro_" icon={RiTwitterXLine}>Twitter</SocialLink>
-					<SocialLink href="https://bsky.app/profile/re-taro.dev" icon={PiButterflyFill}>Bluesky</SocialLink>
-					<SocialLink href="https://discord.com/users/713739439041544273" icon={SiDiscord}>Discord</SocialLink>
-					<SocialLink href="https://keybase.io/10969_rintaro" icon={SiKeybase}>Keybase</SocialLink>
-					<SocialLink href="https://keys.openpgp.org/vks/v1/by-fingerprint/60EC8DD6265105FFDD3D6EFEB3BBD234590C77FC" icon={SiMonkeytie}>GPG Keys</SocialLink>
-					<SocialLink href="mailto:me@re-taro.dev" icon={RiMailLine}>me&#64;re-taro.dev</SocialLink>
+					<SocialLink href="https://github.com/re-taro" icon={Github}>GitHub</SocialLink>
+					<SocialLink href="https://twitter.com/re_taro_" icon={Twitter}>Twitter</SocialLink>
+					<SocialLink href="https://bsky.app/profile/re-taro.dev" icon={Bluesky}>Bluesky</SocialLink>
+					<SocialLink href="https://discord.com/users/713739439041544273" icon={Discord}>Discord</SocialLink>
+					<SocialLink href="https://keybase.io/10969_rintaro" icon={Keybase}>Keybase</SocialLink>
+					<SocialLink href="https://keys.openpgp.org/vks/v1/by-fingerprint/60EC8DD6265105FFDD3D6EFEB3BBD234590C77FC" icon={Monkeytie}>GPG Keys</SocialLink>
+					<SocialLink href="mailto:me@re-taro.dev" icon={MailLine}>me&#64;re-taro.dev</SocialLink>
 				</p>
 			</Section>
 		</div>

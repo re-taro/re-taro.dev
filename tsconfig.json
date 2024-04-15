@@ -10,7 +10,7 @@
 			"~/*": ["./app/*"]
 		},
 		"resolveJsonModule": true,
-		"types": ["vitest/globals"],
+		"types": ["vitest/globals", "unplugin-icons/types/react"],
 		"allowJs": true,
 		"strict": true,
 		"noEmit": true,
