@@ -3,7 +3,7 @@ import { expect, test } from "@playwright/test";
 
 test.describe("/", () => {
 	test.beforeEach(async ({ page }) => {
-		await page.goto("http://localhost:8787/");
+		await page.goto("http://localhost:8788/");
 	});
 	test.describe("rendering", () => {
 		test("should render hero icon", async ({ page }) => {
