@@ -65,7 +65,7 @@
 		"@storybook/blocks": "8.0.9",
 		"@storybook/react": "8.0.9",
 		"@storybook/react-vite": "8.0.9",
-		"@storybook/test": "8.0.8",
+		"@storybook/test": "8.0.9",
 		"@storybook/test-runner": "0.17.0",
 		"@svgr/core": "8.1.0",
 		"@svgr/plugin-jsx": "8.1.0",
