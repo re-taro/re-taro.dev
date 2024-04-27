@@ -48,6 +48,7 @@ function App(): ReactNode {
 	);
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const links: LinksFunction = () => [
 	{ rel: "preconnect", href: "https://fonts.googleapis.com" },
 	{ rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
@@ -57,6 +58,7 @@ export const links: LinksFunction = () => [
 	{ rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
 ];
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const meta: MetaFunction = () => [
 	{ charSet: "utf-8" },
 	{ name: "viewport", content: "width=device-width" },
