@@ -133,8 +133,8 @@ importers:
         specifier: 2.0.1
         version: 2.0.1(playwright@1.43.1)
       better-sqlite3:
-        specifier: 9.5.0
-        version: 9.5.0
+        specifier: 9.6.0
+        version: 9.6.0
       browserslist-to-esbuild:
         specifier: 2.1.1
         version: 2.1.1(browserslist@4.23.0)
@@ -146,7 +146,7 @@ importers:
         version: 0.20.17
       drizzle-orm:
         specifier: 0.30.9
-        version: 0.30.9(@cloudflare/workers-types@4.20240423.0)(@types/react@18.2.79)(better-sqlite3@9.5.0)(react@18.2.0)
+        version: 0.30.9(@cloudflare/workers-types@4.20240423.0)(@types/react@18.2.79)(better-sqlite3@9.6.0)(react@18.2.0)
       eslint:
         specifier: 8.57.0
         version: 8.57.0
@@ -3820,8 +3820,8 @@ packages:
     resolution: {integrity: sha512-pbnl5XzGBdrFU/wT4jqmJVPn2B6UHPBOhzMQkY/SPUPB6QtUXtmBHBIwCbXJol93mOpGMnQyP/+BB19q04xj7g==}
     engines: {node: '>=4'}
 
-  better-sqlite3@9.5.0:
-    resolution: {integrity: sha512-01qVcM4gPNwE+PX7ARNiHINwzVuD6nx0gdldaAAcu+MrzyIAukQ31ZDKEpzRO/CNA9sHpxoTZ8rdjoyAin4dyg==}
+  better-sqlite3@9.6.0:
+    resolution: {integrity: sha512-yR5HATnqeYNVnkaUTf4bOP2dJSnyhP4puJN/QPRyx4YkBEEUxib422n2XzPqDEHjQQqazoYoADdAm5vE15+dAQ==}
 
   big-integer@1.6.51:
     resolution: {integrity: sha512-GPEid2Y9QU1Exl1rpO9B2IPJGHPSupF5GnVIP0blYvNOMer2bTvSWs1jGOUg04hTmu67nmLsQ9TBo1puaotBHg==}
@@ -7914,6 +7914,7 @@ packages:
   prebuild-install@7.1.1:
     resolution: {integrity: sha512-jAXscXWMcCK8GgCoHOfIr0ODh5ai8mj63L2nWrjuAgXE6tDyYGnx4/8o/rCgU+B4JSyZBKbeZqzhtwtC3ovxjw==}
     engines: {node: '>=10'}
+    hasBin: true
 
   preferred-pm@3.0.3:
     resolution: {integrity: sha512-+wZgbxNES/KlJs9q40F/1sfOd/j7f1O9JaHcW5Dsn3aUUOZg3L2bjpVUcKV2jvtElYfoTuQiNeMfQJ4kwUAhCQ==}
@@ -8077,6 +8078,7 @@ packages:
 
   rc@1.2.8:
     resolution: {integrity: sha512-y3bGgqKj3QBdxLbLkomlohkvsA8gdAiUQlSBJnBhfn+BPxg4bc62d8TcBW15wavDfgexCgccckhcZvywyQYPOw==}
+    hasBin: true
 
   react-colorful@5.6.1:
     resolution: {integrity: sha512-1exovf0uGTGyq5mXQT0zgQ80uvj2PCwvF8zY1RN9/vbJVSjSo3fsB/4L3ObbF7u70NduSiK4xu4Y6q1MHoUGEw==}
@@ -14499,7 +14501,7 @@ snapshots:
     dependencies:
       is-windows: 1.0.2
 
-  better-sqlite3@9.5.0:
+  better-sqlite3@9.6.0:
     dependencies:
       bindings: 1.5.0
       prebuild-install: 7.1.1
@@ -15410,11 +15412,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  drizzle-orm@0.30.9(@cloudflare/workers-types@4.20240423.0)(@types/react@18.2.79)(better-sqlite3@9.5.0)(react@18.2.0):
+  drizzle-orm@0.30.9(@cloudflare/workers-types@4.20240423.0)(@types/react@18.2.79)(better-sqlite3@9.6.0)(react@18.2.0):
     optionalDependencies:
       '@cloudflare/workers-types': 4.20240423.0
       '@types/react': 18.2.79
-      better-sqlite3: 9.5.0
+      better-sqlite3: 9.6.0
       react: 18.2.0
 
   dset@3.1.3: {}
