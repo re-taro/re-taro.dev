@@ -91,8 +91,8 @@ importers:
         specifier: 8.0.9
         version: 8.0.9(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@storybook/react':
-        specifier: 8.0.8
-        version: 8.0.8(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.4.5)
+        specifier: 8.0.9
+        version: 8.0.9(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.4.5)
       '@storybook/react-vite':
         specifier: 8.0.8
         version: 8.0.8(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(rollup@4.13.0)(typescript@5.4.5)(vite@5.2.9(@types/node@20.12.7)(lightningcss@1.24.1)(terser@5.30.3))
@@ -2869,6 +2869,17 @@ packages:
       typescript:
         optional: true
 
+  '@storybook/react@8.0.9':
+    resolution: {integrity: sha512-NeQ6suZG3HKikwe3Tx9cAIaRx7uP8FKCmlVvIiBg4LTTI5orCt94PPakvuZukZcbkqvcCnEBkebAzwUpn8PiJw==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+      typescript: '>= 4.2.x'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
   '@storybook/router@8.0.8':
     resolution: {integrity: sha512-wdFdNsEKweigU9VkGZtpb7GhBJLWzbABcwOuEy2h0d5m7egB97hy9BxhANdqkC+PbAHrabxC99Ca3wTj50MoDg==}
 
@@ -3565,6 +3576,7 @@ packages:
   acorn@7.4.1:
     resolution: {integrity: sha512-nQyp0o1/mNdbTO1PO6kHkwSrmgZ0MT/jCCpNiwbUjGoRN4dlBhqJtoQuCnEOKzgTVwg0ZWiCoQy6SxMebQVh8A==}
     engines: {node: '>=0.4.0'}
+    hasBin: true
 
   acorn@8.11.3:
     resolution: {integrity: sha512-Y9rRfJG5jcKOE0CLisYbojUjIrIEE7AGMzA/Sm4BslANhbS+cDMpgBdcPT91oJ7OuJ9hYJBx59RjbhxVnrF8Xg==}
@@ -4988,6 +5000,7 @@ packages:
   escodegen@2.1.0:
     resolution: {integrity: sha512-2NlIDTwUWJN0mRPQOdtQBzbUHvdGY2P1VXSyU83Q3xKxM7WHX2Ql8dKq782Q9TgQUNOLEzEYu9bzLNj1q88I5w==}
     engines: {node: '>=6.0'}
+    hasBin: true
 
   eslint-compat-utils@0.1.2:
     resolution: {integrity: sha512-Jia4JDldWnFNIru1Ehx1H5s9/yxiRHY/TimCuUc0jNexew3cF1gI6CYZil1ociakfWO3rRqFjl1mskBblB3RYg==}
@@ -5177,6 +5190,7 @@ packages:
   esprima@4.0.1:
     resolution: {integrity: sha512-eGuFFw7Upda+g4p+QHvnW0RyTX/SVeJBDM/gCtMARO0cLuT2HcEKnTPvhjV6aGeqrCB/sbNop0Kszm0jsaWU4A==}
     engines: {node: '>=4'}
+    hasBin: true
 
   esquery@1.5.0:
     resolution: {integrity: sha512-YQLXUplAwJgCydQ78IMJywZCceoqk1oH01OERdSAJc/7U2AylwjhSCLDEtqwg811idIS/9fIU5GjG73IgjKMVg==}
@@ -8526,6 +8540,7 @@ packages:
 
   semver@5.7.1:
     resolution: {integrity: sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==}
+    hasBin: true
 
   semver@6.3.1:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
@@ -13310,6 +13325,37 @@ snapshots:
       '@storybook/preview-api': 8.0.8
       '@storybook/react-dom-shim': 8.0.8(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@storybook/types': 8.0.8
+      '@types/escodegen': 0.0.6
+      '@types/estree': 0.0.51
+      '@types/node': 18.19.21
+      acorn: 7.4.1
+      acorn-jsx: 5.3.2(acorn@7.4.1)
+      acorn-walk: 7.2.0
+      escodegen: 2.1.0
+      html-tags: 3.3.1
+      lodash: 4.17.21
+      prop-types: 15.8.1
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      react-element-to-jsx-string: 15.0.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      semver: 7.6.0
+      ts-dedent: 2.2.0
+      type-fest: 2.19.0
+      util-deprecate: 1.0.2
+    optionalDependencies:
+      typescript: 5.4.5
+    transitivePeerDependencies:
+      - encoding
+      - supports-color
+
+  '@storybook/react@8.0.9(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.4.5)':
+    dependencies:
+      '@storybook/client-logger': 8.0.9
+      '@storybook/docs-tools': 8.0.9
+      '@storybook/global': 5.0.0
+      '@storybook/preview-api': 8.0.9
+      '@storybook/react-dom-shim': 8.0.9(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@storybook/types': 8.0.9
       '@types/escodegen': 0.0.6
       '@types/estree': 0.0.51
       '@types/node': 18.19.21
