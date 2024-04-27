@@ -23,7 +23,7 @@ jobs:
         with:
           node-version-file: .tool-versions
       - name: Analyze | Bundle Size
-        uses: preactjs/compressed-size-action@2.5.0
+        uses: preactjs/compressed-size-action@2.6.0
         with:
           pattern: build/client/assets/*.{js,css}
           repo-token: ${{ steps.bot.outputs.token }}
