@@ -57,7 +57,7 @@
 		"@remix-run/node": "2.8.1",
 		"@remix-run/testing": "2.8.1",
 		"@storybook/addon-a11y": "8.0.9",
-		"@storybook/addon-actions": "8.0.8",
+		"@storybook/addon-actions": "8.0.9",
 		"@storybook/addon-backgrounds": "8.0.8",
 		"@storybook/addon-essentials": "8.0.8",
 		"@storybook/addon-interactions": "8.0.8",

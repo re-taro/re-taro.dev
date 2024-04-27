@@ -73,8 +73,8 @@ importers:
         specifier: 8.0.9
         version: 8.0.9
       '@storybook/addon-actions':
-        specifier: 8.0.8
-        version: 8.0.8
+        specifier: 8.0.9
+        version: 8.0.9
       '@storybook/addon-backgrounds':
         specifier: 8.0.8
         version: 8.0.8
@@ -2644,6 +2644,9 @@ packages:
   '@storybook/addon-actions@8.0.8':
     resolution: {integrity: sha512-F3qpN0n53d058EroW1A2IlzrsFNR5p2srLY4FmXB80nxAKV8oqoDI4jp15zYlf8ThcJoQl36plT8gx3r1BpANA==}
 
+  '@storybook/addon-actions@8.0.9':
+    resolution: {integrity: sha512-+I3VTvlKdj8puHeS2tyaOVv9syDiNLneVZbTfqN+UDOK2i42NwvZr8PVwjTzMlEj9eePJdCZgiipz55xwts5bw==}
+
   '@storybook/addon-backgrounds@8.0.8':
     resolution: {integrity: sha512-lrAJjVxDeXSK116rDajb56TureZiT76ygraP22/IvU3IcWCEcRiKYwlay8WgCTbJHtFmdBpelLBapoT46+IR9Q==}
 
@@ -2749,6 +2752,9 @@ packages:
 
   '@storybook/core-events@8.0.8':
     resolution: {integrity: sha512-PtuvR7vS4glDEdCfKB4f1k3Vs1C3rTWP2DNbF+IjjPhNLMBznCdzTAPcz+NUIBvpjjGnhKwWikJ0yj931YjSVg==}
+
+  '@storybook/core-events@8.0.9':
+    resolution: {integrity: sha512-DxSUx7wG9Qe3OFUBnv3OrYq48J8UWNo2DUR5/JecJCtp3n++L4fAEW3J0IF5FfxpQDMQSp1yTNjZ2PaWCMd2ag==}
 
   '@storybook/core-server@8.0.8':
     resolution: {integrity: sha512-tSEueEBttbSohzhZVN2bFNlFx3eoqQ7p57cjQLKXXwKygS2qKxISKnFy+Y0nj20APz68Wj51kx0rN0nGALeegw==}
@@ -9338,9 +9344,11 @@ packages:
 
   uuid@8.3.2:
     resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
+    hasBin: true
 
   uuid@9.0.1:
     resolution: {integrity: sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==}
+    hasBin: true
 
   uvu@0.5.6:
     resolution: {integrity: sha512-+g8ENReyr8YsOc6fv/NVJs2vFdHBnBNdfE49rshrTzDWOlUx4Gq7KOS2GD8eqhy2j+Ejq29+SbKH8yjkAqXqoA==}
@@ -12506,6 +12514,15 @@ snapshots:
       polished: 4.3.1
       uuid: 9.0.1
 
+  '@storybook/addon-actions@8.0.9':
+    dependencies:
+      '@storybook/core-events': 8.0.9
+      '@storybook/global': 5.0.0
+      '@types/uuid': 9.0.8
+      dequal: 2.0.3
+      polished: 4.3.1
+      uuid: 9.0.1
+
   '@storybook/addon-backgrounds@8.0.8':
     dependencies:
       '@storybook/global': 5.0.0
@@ -12880,6 +12897,10 @@ snapshots:
       ts-dedent: 2.2.0
 
   '@storybook/core-events@8.0.8':
+    dependencies:
+      ts-dedent: 2.2.0
+
+  '@storybook/core-events@8.0.9':
     dependencies:
       ts-dedent: 2.2.0
 
