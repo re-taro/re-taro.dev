@@ -66,8 +66,13 @@ jobs:
           node-version-file: .tool-versions
       - name: Setup | Playwright
         uses: ./.github/actions/setup-playwright
+      - name: Setup | Build
+        run: pnpm build
       - name: Test | Integration
-        run: pnpm run test:integration
+        run: |
+          pnpm concurrently -k -s first -n "APP,TEST" -c "magenta,blue" \
+          "pnpm start" \
+          "pnpm wait-on http://127.0.0.1:8788 && pnpm test:integration"
   storybook-test:
     runs-on: ubuntu-latest
     timeout-minutes: 5

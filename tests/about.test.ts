@@ -1,10 +1,9 @@
 import { AxeBuilder } from "@axe-core/playwright";
 import { expect, test } from "@playwright/test";
-import { createHtmlReport } from "axe-html-reporter";
 
 test.describe("/about", () => {
 	test.beforeEach(async ({ page }) => {
-		await page.goto("http://localhost:8787/about");
+		await page.goto("http://localhost:8788/about");
 	});
 	test.describe("rendering", () => {
 		test("should render profile", async ({ page }) => {
@@ -32,7 +31,7 @@ test.describe("/about", () => {
 	});
 	test.describe("action", () => {
 		test("should navigate to top", async ({ page }) => {
-			const COLLECT_URL = "http://localhost:8787/";
+			const COLLECT_URL = "http://localhost:8788/";
 			const link = page.getByRole("link", { name: "cd" });
 			await link.click();
 			await page.waitForURL(COLLECT_URL);
@@ -47,10 +46,6 @@ test.describe("/about", () => {
 			page,
 		}) => {
 			const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
-
-			createHtmlReport({
-				results: accessibilityScanResults,
-			});
 
 			expect(accessibilityScanResults.violations).toEqual([]);
 		});

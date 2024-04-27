@@ -1,7 +1,7 @@
 import { defineConfig, devices } from "@playwright/test";
 
 export default defineConfig({
-	testDir: "app/tests",
+	testDir: "tests",
 	testMatch: "**/*.test.ts",
 	fullyParallel: true,
 	expect: {
@@ -15,10 +15,6 @@ export default defineConfig({
 	forbidOnly: !!process.env.CI,
 	// eslint-disable-next-line node/prefer-global/process
 	reporter: process.env.CI ? [["github"], ["dot"]] : [["list"], ["html"]],
-	webServer: {
-		command: "pnpm build && pnpm start",
-		port: 8787,
-	},
 	use: {
 		headless: true,
 		trace: "on-first-retry",
