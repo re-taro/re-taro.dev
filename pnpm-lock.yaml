@@ -129,9 +129,6 @@ importers:
       '@vitejs/plugin-react-swc':
         specifier: 3.6.0
         version: 3.6.0(vite@5.2.9(@types/node@20.12.7)(lightningcss@1.24.1)(terser@5.30.3))
-      axe-html-reporter:
-        specifier: 2.2.3
-        version: 2.2.3(axe-core@4.7.0)
       axe-playwright:
         specifier: 2.0.1
         version: 2.0.1(playwright@1.42.1)

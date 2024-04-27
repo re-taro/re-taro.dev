@@ -1,6 +1,5 @@
 import { AxeBuilder } from "@axe-core/playwright";
 import { expect, test } from "@playwright/test";
-import { createHtmlReport } from "axe-html-reporter";
 
 test.describe("/", () => {
 	test.beforeEach(async ({ page }) => {
@@ -38,10 +37,6 @@ test.describe("/", () => {
 			page,
 		}) => {
 			const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
-
-			createHtmlReport({
-				results: accessibilityScanResults,
-			});
 
 			expect(accessibilityScanResults.violations).toEqual([]);
 		});
