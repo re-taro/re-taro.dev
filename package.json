@@ -88,7 +88,7 @@
 		"jsdom": "24.0.0",
 		"lightningcss": "1.24.1",
 		"npm-run-all2": "6.1.2",
-		"playwright": "1.42.1",
+		"playwright": "1.43.1",
 		"plop": "4.0.1",
 		"postcss": "8.4.38",
 		"postcss-load-config": "5.0.3",
