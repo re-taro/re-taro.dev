@@ -48,7 +48,7 @@
 		"@cloudflare/workers-types": "4.20240423.0",
 		"@iconify-json/circum": "1.1.11",
 		"@iconify-json/ri": "1.1.20",
-		"@iconify-json/simple-icons": "1.1.100",
+		"@iconify-json/simple-icons": "1.1.101",
 		"@pandacss/dev": "0.37.2",
 		"@pandacss/studio": "0.37.2",
 		"@playwright/test": "1.43.1",
