@@ -96,7 +96,7 @@
 		"serve": "14.2.3",
 		"sirv-cli": "2.0.2",
 		"storybook": "8.0.9",
-		"terser": "5.30.4",
+		"terser": "5.31.0",
 		"typescript": "5.4.5",
 		"unplugin-icons": "0.18.5",
 		"vite": "5.2.10",
