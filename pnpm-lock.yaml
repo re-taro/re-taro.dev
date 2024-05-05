@@ -85,8 +85,8 @@ importers:
         specifier: 8.0.10
         version: 8.0.10(@jest/globals@29.7.0)(jest@29.7.0(@types/node@20.12.8)(babel-plugin-macros@3.1.0))(vitest@1.6.0(@types/node@20.12.8)(jsdom@24.0.0)(lightningcss@1.24.1)(terser@5.31.0))
       '@storybook/addon-links':
-        specifier: 8.0.9
-        version: 8.0.9(react@18.3.1)
+        specifier: 8.0.10
+        version: 8.0.10(react@18.3.1)
       '@storybook/blocks':
         specifier: 8.0.9
         version: 8.0.9(@types/react@18.3.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -2701,8 +2701,8 @@ packages:
   '@storybook/addon-interactions@8.0.10':
     resolution: {integrity: sha512-6yFNmk6+7082/8TRVyjUsKlwumalEdO0XQ5amPbVGuECzc3HFn0ELwzPrQ4TBlN5MRtX4+buoh5dc/1RUDrh9w==}
 
-  '@storybook/addon-links@8.0.9':
-    resolution: {integrity: sha512-FVt+AdW3JFSqbJzkKiqKsMRWqHXqEvCBqFs7lNfk3OW0w0jfv1iREtrxE0dVdJoUFQC9V/2Im/EpJ7UB3C2bNQ==}
+  '@storybook/addon-links@8.0.10':
+    resolution: {integrity: sha512-+mIyH2UcrgQfAyRM4+ARkB/D0OOY8UMwkZsD8dD23APZ8oru7W/NHX3lXl0WjPfQcOIx/QwWNWI3+DgVZJY3jw==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     peerDependenciesMeta:
@@ -12931,7 +12931,7 @@ snapshots:
       - jest
       - vitest
 
-  '@storybook/addon-links@8.0.9(react@18.3.1)':
+  '@storybook/addon-links@8.0.10(react@18.3.1)':
     dependencies:
       '@storybook/csf': 0.1.5
       '@storybook/global': 5.0.0
