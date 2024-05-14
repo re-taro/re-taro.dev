@@ -64,7 +64,7 @@
 		"@storybook/addon-links": "8.1.0",
 		"@storybook/blocks": "8.1.0",
 		"@storybook/react": "8.1.0",
-		"@storybook/react-vite": "8.0.10",
+		"@storybook/react-vite": "8.1.0",
 		"@storybook/test": "8.0.10",
 		"@storybook/test-runner": "0.18.0",
 		"@svgr/core": "8.1.0",
