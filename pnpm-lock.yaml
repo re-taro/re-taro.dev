@@ -73,8 +73,8 @@ importers:
         specifier: 8.1.0
         version: 8.1.0
       '@storybook/addon-actions':
-        specifier: 8.0.10
-        version: 8.0.10
+        specifier: 8.1.0
+        version: 8.1.0
       '@storybook/addon-backgrounds':
         specifier: 8.0.10
         version: 8.0.10
@@ -2634,6 +2634,9 @@ packages:
   '@storybook/addon-actions@8.0.10':
     resolution: {integrity: sha512-IEuc30UAFl7Ws0GwaY/whjBnGaViVEVjmPc+MXUym2wwwJbnCbI+BKJxPoYi/I7QJb5aUNToAE6pl2pDda2g3Q==}
 
+  '@storybook/addon-actions@8.1.0':
+    resolution: {integrity: sha512-6c/uZo8peHh7ZWBsNAPDSdj9keBp1q7Gddci3LIxq9S8gFLEgPwjAv+f6HVx0T61wG5PGnK0ilZsrCrXyoJodA==}
+
   '@storybook/addon-backgrounds@8.0.10':
     resolution: {integrity: sha512-445SUQqOH5xFJWlNeMu74FEgk26O9Zm/5aqnvmeteB0Q2JLaw7k2q9i/W6XFu97QkRxqA1EGbDxLR3+e1xCjaA==}
 
@@ -2729,6 +2732,9 @@ packages:
   '@storybook/core-events@8.0.10':
     resolution: {integrity: sha512-TuHPS6p5ZNr4vp4butLb4R98aFx0NRYCI/7VPhJEUH5rPiqNzE3PZd8DC8rnVxavsJ+jO1/y+egNKXRYkEcoPQ==}
 
+  '@storybook/core-events@8.1.0':
+    resolution: {integrity: sha512-9oCACeyYqH7rZVHglzH//cJXdP0mM5d2nBM4kgFgTTLJpbb0+SrF0rD0EVpHfA1l4Kz7pgzTY6Xj2p4mEiZ0Qg==}
+
   '@storybook/core-server@8.0.10':
     resolution: {integrity: sha512-HYDw2QFBxg1X/d6g0rUhirOB5Jq6g90HBnyrZzxKoqKWJCNsCADSgM+h9HgtUw0jA97qBpIqmNO9n3mXFPWU/Q==}
 
@@ -2740,6 +2746,9 @@ packages:
 
   '@storybook/csf@0.1.5':
     resolution: {integrity: sha512-pW7Dtk/bE2JGrAe/KuBY4Io02NBe/2CLP2DkgVgWlSwvEVdm/rbQyiwy8RaL0lQlJCv9CsGBY+n9HQG8d4bZjQ==}
+
+  '@storybook/csf@0.1.7':
+    resolution: {integrity: sha512-53JeLZBibjQxi0Ep+/AJTfxlofJlxy1jXcSKENlnKxHjWEYyHQCumMP5yTFjf7vhNnMjEpV3zx6t23ssFiGRyw==}
 
   '@storybook/docs-mdx@3.0.0':
     resolution: {integrity: sha512-NmiGXl2HU33zpwTv1XORe9XG9H+dRUC1Jl11u92L4xr062pZtrShLmD4VKIsOQujxhhOrbxpwhNOt+6TdhyIdQ==}
@@ -12542,6 +12551,15 @@ snapshots:
       polished: 4.3.1
       uuid: 9.0.1
 
+  '@storybook/addon-actions@8.1.0':
+    dependencies:
+      '@storybook/core-events': 8.1.0
+      '@storybook/global': 5.0.0
+      '@types/uuid': 9.0.8
+      dequal: 2.0.3
+      polished: 4.3.1
+      uuid: 9.0.1
+
   '@storybook/addon-backgrounds@8.0.10':
     dependencies:
       '@storybook/global': 5.0.0
@@ -12869,6 +12887,11 @@ snapshots:
     dependencies:
       ts-dedent: 2.2.0
 
+  '@storybook/core-events@8.1.0':
+    dependencies:
+      '@storybook/csf': 0.1.7
+      ts-dedent: 2.2.0
+
   '@storybook/core-server@8.0.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@aw-web-design/x-default-browser': 1.4.126
@@ -12944,6 +12967,10 @@ snapshots:
       - supports-color
 
   '@storybook/csf@0.1.5':
+    dependencies:
+      type-fest: 2.19.0
+
+  '@storybook/csf@0.1.7':
     dependencies:
       type-fest: 2.19.0
 
