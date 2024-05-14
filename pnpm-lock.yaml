@@ -70,8 +70,8 @@ importers:
         specifier: 2.9.2
         version: 2.9.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5)
       '@storybook/addon-a11y':
-        specifier: 8.0.10
-        version: 8.0.10
+        specifier: 8.1.0
+        version: 8.1.0
       '@storybook/addon-actions':
         specifier: 8.0.10
         version: 8.0.10
@@ -2628,8 +2628,8 @@ packages:
   '@sinonjs/fake-timers@10.3.0':
     resolution: {integrity: sha512-V4BG07kuYSUkTCSBHG8G8TNhM+F19jXFWnQtzj+we8DrkpSBCee9Z3Ms8yiGer/dlmhe35/Xdgyo3/0rQKg7YA==}
 
-  '@storybook/addon-a11y@8.0.10':
-    resolution: {integrity: sha512-ymeTRE1uWplifWUMc3tO5lLGn4buS/hUVWKRM11SqugmxRym55B4thCJU089HAEMY+V/imiCeOE63TT+DGsk8g==}
+  '@storybook/addon-a11y@8.1.0':
+    resolution: {integrity: sha512-oJBi0nxxf6kwjZpUTVX+OynQnNIA3Nj8ZDtCrKhW+bU+bumOgi8I0wu40/pP8LCbNVLGUs8UMookKNMqKdnnLA==}
 
   '@storybook/addon-actions@8.0.10':
     resolution: {integrity: sha512-IEuc30UAFl7Ws0GwaY/whjBnGaViVEVjmPc+MXUym2wwwJbnCbI+BKJxPoYi/I7QJb5aUNToAE6pl2pDda2g3Q==}
@@ -2648,6 +2648,9 @@ packages:
 
   '@storybook/addon-highlight@8.0.10':
     resolution: {integrity: sha512-40GB82t1e2LCCjqXcC6Z5lq1yIpA1+Yl5E2tKeggOVwg5HHAX02ESNDdBaIOlCqMkU3WKzjGPurDNOLUAbsV2g==}
+
+  '@storybook/addon-highlight@8.1.0':
+    resolution: {integrity: sha512-bH9WiJdw69ZDvr5XyPJG6Fqlpn9lQujkdCeWy6fqFnqR4SCqNlmEiwgDptrUt76Q9SDA+hc6twreCXz0GkgALg==}
 
   '@storybook/addon-interactions@8.0.10':
     resolution: {integrity: sha512-6yFNmk6+7082/8TRVyjUsKlwumalEdO0XQ5amPbVGuECzc3HFn0ELwzPrQ4TBlN5MRtX4+buoh5dc/1RUDrh9w==}
@@ -12525,9 +12528,9 @@ snapshots:
     dependencies:
       '@sinonjs/commons': 3.0.1
 
-  '@storybook/addon-a11y@8.0.10':
+  '@storybook/addon-a11y@8.1.0':
     dependencies:
-      '@storybook/addon-highlight': 8.0.10
+      '@storybook/addon-highlight': 8.1.0
       axe-core: 4.9.0
 
   '@storybook/addon-actions@8.0.10':
@@ -12607,6 +12610,10 @@ snapshots:
       - supports-color
 
   '@storybook/addon-highlight@8.0.10':
+    dependencies:
+      '@storybook/global': 5.0.0
+
+  '@storybook/addon-highlight@8.1.0':
     dependencies:
       '@storybook/global': 5.0.0
 
