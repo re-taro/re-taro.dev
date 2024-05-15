@@ -73,8 +73,8 @@ importers:
         specifier: 8.1.1
         version: 8.1.1
       '@storybook/addon-actions':
-        specifier: 8.1.0
-        version: 8.1.0
+        specifier: 8.1.1
+        version: 8.1.1
       '@storybook/addon-backgrounds':
         specifier: 8.1.0
         version: 8.1.0
@@ -2813,8 +2813,8 @@ packages:
   '@storybook/addon-actions@8.0.10':
     resolution: {integrity: sha512-IEuc30UAFl7Ws0GwaY/whjBnGaViVEVjmPc+MXUym2wwwJbnCbI+BKJxPoYi/I7QJb5aUNToAE6pl2pDda2g3Q==}
 
-  '@storybook/addon-actions@8.1.0':
-    resolution: {integrity: sha512-6c/uZo8peHh7ZWBsNAPDSdj9keBp1q7Gddci3LIxq9S8gFLEgPwjAv+f6HVx0T61wG5PGnK0ilZsrCrXyoJodA==}
+  '@storybook/addon-actions@8.1.1':
+    resolution: {integrity: sha512-EEBjOMuQOdCSVrwPQEkJFc42I0TWj/bK+8lboV0jXi61ZI3okDPCJ/04vu5iTvX0HjRoYqqwBjyYj0Crf7ihag==}
 
   '@storybook/addon-backgrounds@8.0.10':
     resolution: {integrity: sha512-445SUQqOH5xFJWlNeMu74FEgk26O9Zm/5aqnvmeteB0Q2JLaw7k2q9i/W6XFu97QkRxqA1EGbDxLR3+e1xCjaA==}
@@ -2947,6 +2947,9 @@ packages:
 
   '@storybook/core-events@8.1.0':
     resolution: {integrity: sha512-9oCACeyYqH7rZVHglzH//cJXdP0mM5d2nBM4kgFgTTLJpbb0+SrF0rD0EVpHfA1l4Kz7pgzTY6Xj2p4mEiZ0Qg==}
+
+  '@storybook/core-events@8.1.1':
+    resolution: {integrity: sha512-WpeiBV6RWTZ6t8SI1YdQh8NlbvQtZs9WRr4CPfpzHAly+oxFy6PtPz0h5TMKsU5/kt/L9yL7tE9ZzPYzvFWH/A==}
 
   '@storybook/core-server@8.1.0':
     resolution: {integrity: sha512-12BjLHOND9mezi8/8VgyB8U80DOFcMqmgPTy6y6TkEmpI3TszbMIIderuWWXU0Yq9rFGya34+e2Srd6ffYh6hA==}
@@ -13174,9 +13177,9 @@ snapshots:
       polished: 4.3.1
       uuid: 9.0.1
 
-  '@storybook/addon-actions@8.1.0':
+  '@storybook/addon-actions@8.1.1':
     dependencies:
-      '@storybook/core-events': 8.1.0
+      '@storybook/core-events': 8.1.1
       '@storybook/global': 5.0.0
       '@types/uuid': 9.0.8
       dequal: 2.0.3
@@ -13622,6 +13625,11 @@ snapshots:
       ts-dedent: 2.2.0
 
   '@storybook/core-events@8.1.0':
+    dependencies:
+      '@storybook/csf': 0.1.7
+      ts-dedent: 2.2.0
+
+  '@storybook/core-events@8.1.1':
     dependencies:
       '@storybook/csf': 0.1.7
       ts-dedent: 2.2.0
