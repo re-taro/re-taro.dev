@@ -51,7 +51,7 @@
 		"@iconify-json/simple-icons": "1.1.101",
 		"@pandacss/dev": "0.39.1",
 		"@pandacss/studio": "0.39.1",
-		"@playwright/test": "1.43.1",
+		"@playwright/test": "1.44.0",
 		"@re-taro/eslint-config": "4.1.0",
 		"@remix-run/dev": "2.9.2",
 		"@remix-run/node": "2.9.2",
