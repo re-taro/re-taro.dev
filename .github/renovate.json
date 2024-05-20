@@ -7,6 +7,11 @@
 				"groupName": "remix-run",
 				"matchPackagePatterns": ["@remix-run/*"],
 				"semanticCommitType": "fix"
+			},
+			{
+				"groupName": "playwright",
+				"matchPackagePatterns": ["@playwright/*", "playwright"],
+				"semanticCommitType": "fix"
 			}
 		]
 	}
