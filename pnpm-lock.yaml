@@ -28,8 +28,8 @@ importers:
         version: 18.3.1(react@18.3.1)
     devDependencies:
       '@axe-core/playwright':
-        specifier: 4.9.0
-        version: 4.9.0(playwright-core@1.44.0)
+        specifier: 4.9.1
+        version: 4.9.1(playwright-core@1.44.0)
       '@changesets/changelog-github':
         specifier: 0.5.0
         version: 0.5.0
@@ -273,8 +273,8 @@ packages:
     resolution: {integrity: sha512-Xk1sIhyNC/esHGGVjL/niHLowM0csl/kFO5uawBy4IrWwy0o1G8LGt3jP6nmWGz+USxeeqbihAmp/oVZju6wug==}
     hasBin: true
 
-  '@axe-core/playwright@4.9.0':
-    resolution: {integrity: sha512-Q1Lz75dNsX38jof+aev7RficDMdH/HLOLySkDdXR0fUoeFcLdw4UNgDO2CNNP4CTpoesEdfYRdd6VmDXjhBgbA==}
+  '@axe-core/playwright@4.9.1':
+    resolution: {integrity: sha512-8m4WZbZq7/aq7ZY5IG8GqV+ZdvtGn/iJdom+wBg+iv/3BAOBIfNQtIu697a41438DzEEyptXWmC3Xl5Kx/o9/g==}
     peerDependencies:
       playwright-core: '>= 1.0.0'
 
@@ -3859,6 +3859,10 @@ packages:
 
   axe-core@4.9.0:
     resolution: {integrity: sha512-H5orY+M2Fr56DWmMFpMrq5Ge93qjNdPVqzBv5gWK3aD1OvjBEJlEzxf09z93dGVQeI0LiW+aCMIx1QtShC/zUw==}
+    engines: {node: '>=4'}
+
+  axe-core@4.9.1:
+    resolution: {integrity: sha512-QbUdXJVTpvUTHU7871ppZkdOLBeGUKBQWHkHrvN2V9IQWGMt61zf3B45BtzjxEJzYuj0JBjBZP/hmYS/R9pmAw==}
     engines: {node: '>=4'}
 
   axe-html-reporter@2.2.3:
@@ -10115,9 +10119,9 @@ snapshots:
     dependencies:
       default-browser-id: 3.0.0
 
-  '@axe-core/playwright@4.9.0(playwright-core@1.44.0)':
+  '@axe-core/playwright@4.9.1(playwright-core@1.44.0)':
     dependencies:
-      axe-core: 4.9.0
+      axe-core: 4.9.1
       playwright-core: 1.44.0
 
   '@babel/code-frame@7.23.5':
@@ -14842,6 +14846,8 @@ snapshots:
   axe-core@4.7.0: {}
 
   axe-core@4.9.0: {}
+
+  axe-core@4.9.1: {}
 
   axe-html-reporter@2.2.3(axe-core@4.7.0):
     dependencies:
