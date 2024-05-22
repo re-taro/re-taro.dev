@@ -76,8 +76,8 @@ importers:
         specifier: 8.1.2
         version: 8.1.2
       '@storybook/addon-backgrounds':
-        specifier: 8.1.1
-        version: 8.1.1
+        specifier: 8.1.2
+        version: 8.1.2
       '@storybook/addon-essentials':
         specifier: 8.1.1
         version: 8.1.1(@types/react-dom@18.3.0)(@types/react@18.3.2)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -2791,6 +2791,9 @@ packages:
 
   '@storybook/addon-backgrounds@8.1.1':
     resolution: {integrity: sha512-UFbKI3Ebsllg3DZIlVtYvp1nuLnBp85sKI98KnnYqiHCKWHDWlK7Li0Y1J2ab0w/Fx0grspC8WUgGId6NHrIrA==}
+
+  '@storybook/addon-backgrounds@8.1.2':
+    resolution: {integrity: sha512-zCSDQ6a0od1Na1fzBcwCtxykKBLi97eKdVBTCVWQ3IPztl+WODO306PfE4vC9QV8icq8BPgPp4MsKuNLx1uFxQ==}
 
   '@storybook/addon-controls@8.1.1':
     resolution: {integrity: sha512-KJXW/hjIWM+VLqqUAvdGIkX7hTDs8FtQOuUFSC/FPDqKveUoWz0hd+WaoT9HhNF8gyzFXYACoeb9XkQVVcDATA==}
@@ -13010,6 +13013,12 @@ snapshots:
       uuid: 9.0.1
 
   '@storybook/addon-backgrounds@8.1.1':
+    dependencies:
+      '@storybook/global': 5.0.0
+      memoizerific: 1.11.3
+      ts-dedent: 2.2.0
+
+  '@storybook/addon-backgrounds@8.1.2':
     dependencies:
       '@storybook/global': 5.0.0
       memoizerific: 1.11.3
