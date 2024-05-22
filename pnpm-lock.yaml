@@ -73,8 +73,8 @@ importers:
         specifier: 8.1.2
         version: 8.1.2
       '@storybook/addon-actions':
-        specifier: 8.1.1
-        version: 8.1.1
+        specifier: 8.1.2
+        version: 8.1.2
       '@storybook/addon-backgrounds':
         specifier: 8.1.1
         version: 8.1.1
@@ -2786,6 +2786,9 @@ packages:
   '@storybook/addon-actions@8.1.1':
     resolution: {integrity: sha512-EEBjOMuQOdCSVrwPQEkJFc42I0TWj/bK+8lboV0jXi61ZI3okDPCJ/04vu5iTvX0HjRoYqqwBjyYj0Crf7ihag==}
 
+  '@storybook/addon-actions@8.1.2':
+    resolution: {integrity: sha512-EW8sYgA1vpn67pTheBjfLCfPO82w0jMkKYFDFMMvxVoEDbJ3fgsUDDd058zBBFiDtnngv3VUrXASPTxK51F2mQ==}
+
   '@storybook/addon-backgrounds@8.1.1':
     resolution: {integrity: sha512-UFbKI3Ebsllg3DZIlVtYvp1nuLnBp85sKI98KnnYqiHCKWHDWlK7Li0Y1J2ab0w/Fx0grspC8WUgGId6NHrIrA==}
 
@@ -2885,6 +2888,9 @@ packages:
 
   '@storybook/core-events@8.1.1':
     resolution: {integrity: sha512-WpeiBV6RWTZ6t8SI1YdQh8NlbvQtZs9WRr4CPfpzHAly+oxFy6PtPz0h5TMKsU5/kt/L9yL7tE9ZzPYzvFWH/A==}
+
+  '@storybook/core-events@8.1.2':
+    resolution: {integrity: sha512-GKsvo/eeEQYDEhAw5YkUIZHYNurAJjzW3+uzThUuC1r0CGcfE+twJVfQXynAyOgL6hFdqy7879/3augf3v3cJQ==}
 
   '@storybook/core-server@8.1.1':
     resolution: {integrity: sha512-/r70ORN9PdrLTLOeZfZkYhR/UBe6dj5DhcQ21zJhKU/0b10nuLJh4SGVD93Hah2wAYEN7YoJzX1bZMo6zRkTRQ==}
@@ -12994,6 +13000,15 @@ snapshots:
       polished: 4.3.1
       uuid: 9.0.1
 
+  '@storybook/addon-actions@8.1.2':
+    dependencies:
+      '@storybook/core-events': 8.1.2
+      '@storybook/global': 5.0.0
+      '@types/uuid': 9.0.8
+      dequal: 2.0.3
+      polished: 4.3.1
+      uuid: 9.0.1
+
   '@storybook/addon-backgrounds@8.1.1':
     dependencies:
       '@storybook/global': 5.0.0
@@ -13334,6 +13349,11 @@ snapshots:
       - supports-color
 
   '@storybook/core-events@8.1.1':
+    dependencies:
+      '@storybook/csf': 0.1.7
+      ts-dedent: 2.2.0
+
+  '@storybook/core-events@8.1.2':
     dependencies:
       '@storybook/csf': 0.1.7
       ts-dedent: 2.2.0
