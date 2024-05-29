@@ -93,7 +93,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          command: pages deploy --project-name portfolio --directory storybook-static
+          command: pages deploy --project-name portfolio-sb --directory storybook-static
       - name: PostDeploy | Comment deploy url
         uses: mshick/add-pr-comment@v2.8.2
         with:
