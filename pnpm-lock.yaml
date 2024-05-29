@@ -90,6 +90,9 @@ importers:
       '@storybook/blocks':
         specifier: 8.1.4
         version: 8.1.4(@types/react-dom@18.3.0)(@types/react@18.3.3)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@storybook/manager-api':
+        specifier: 8.1.4
+        version: 8.1.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/react':
         specifier: 8.1.4
         version: 8.1.4(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5)
@@ -102,6 +105,9 @@ importers:
       '@storybook/test-runner':
         specifier: 0.18.1
         version: 0.18.1(@types/node@20.12.12)(babel-plugin-macros@3.1.0)(prettier@3.2.5)
+      '@storybook/theming':
+        specifier: 8.1.4
+        version: 8.1.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@svgr/core':
         specifier: 8.1.0
         version: 8.1.0(typescript@5.4.5)
@@ -156,9 +162,6 @@ importers:
       jsdom:
         specifier: 24.1.0
         version: 24.1.0
-      lightningcss:
-        specifier: 1.25.1
-        version: 1.25.1
       npm-run-all2:
         specifier: 6.2.0
         version: 6.2.0
@@ -18574,6 +18577,7 @@ snapshots:
       lightningcss-linux-x64-gnu: 1.25.1
       lightningcss-linux-x64-musl: 1.25.1
       lightningcss-win32-x64-msvc: 1.25.1
+    optional: true
 
   lilconfig@2.1.0: {}
 

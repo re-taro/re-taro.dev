@@ -4,5 +4,5 @@ import { render } from "@testing-library/react";
 import meta, { Default as DefaultStory } from "./{{ pascalCase name }}.stories";
 
 describe("{{ pascalCase name }}.tsx", () => {
-	const { Default } = composeStory(DefaultStory, meta);
+	const Default = composeStory(DefaultStory, meta);
 });

@@ -14,7 +14,7 @@ const isStorybook = process.argv[1]?.includes("storybook");
 export default defineConfig(({ mode }) => ({
 	build: {
 		target: browserslistToEsbuild(),
-		cssMinify: "lightningcss",
+		cssMinify: "esbuild",
 		minify: "terser",
 		rollupOptions: {
 			output: {
