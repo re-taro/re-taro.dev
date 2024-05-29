@@ -12,6 +12,11 @@
 				"groupName": "playwright",
 				"matchPackagePatterns": ["@playwright/*", "playwright"],
 				"semanticCommitType": "fix"
+			},
+			{
+				"groupName": "storybook",
+				"matchPackagePatterns": ["@storybook/*", "storybook"],
+				"semanticCommitType": "fix"
 			}
 		]
 	}
