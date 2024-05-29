@@ -50,7 +50,7 @@ function config(
 
 				actions.push({
 					type: "add",
-					path: "app/tests/{{name}}.test.ts",
+					path: "tests/{{name}}.test.ts",
 					templateFile: "templates/tests/route.test.ts.hbs",
 				});
 			}
@@ -63,7 +63,7 @@ function config(
 
 				actions.push({
 					type: "add",
-					path: "app/tests/{{parent}}.{{name}}.test.ts",
+					path: "tests/{{parent}}.{{name}}.test.ts",
 					templateFile: "templates/tests/route.test.ts.hbs",
 				});
 			}
