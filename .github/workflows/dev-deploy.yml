@@ -61,6 +61,52 @@ jobs:
             |<span aria-hidden="true">🔍</span> Latest deploy log | ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} |
             |<span aria-hidden="true">😎</span> Deploy Preview Url | [${{ steps.page.outputs.deployment-url }}](${{ steps.page.outputs.deployment-url }}) |
             ---
+  storybook:
+    runs-on: ubuntu-latest
+    outputs:
+      url: ${{ steps.page.outputs.deployment-url }}
+    steps:
+      - name: Setup | Comment deploy start
+        uses: mshick/add-pr-comment@v2.8.2
+        with:
+          message-id: dev-storybook-deploy
+          message: |
+            ### <span aria-hidden="true">🚧</span> Deploy Preview(Storybook) building...
+
+            |  Name | Link |
+            |---------------------------------|------------------------|
+            |<span aria-hidden="true">🔨</span> Latest commit | ${{ github.sha }} |
+            |<span aria-hidden="true">🔍</span> Latest deploy log | ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} |
+            ---
+      - uses: actions/checkout@v4.1.6
+      - name: Setup | Node.js
+        uses: re-taro/actions/setup-node@v3.5.4
+        with:
+          node-version-file: .tool-versions
+      - name: Deploy | Build
+        run: pnpm build
+      - name: Deploy | Build Storybook
+        run: pnpm build-storybook
+      - name: Deploy | Deploy to Cloudflare Pages
+        id: page
+        uses: cloudflare/wrangler-action@v3.6.1
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          command: pages deploy --project-name portfolio --directory storybook-static
+      - name: PostDeploy | Comment deploy url
+        uses: mshick/add-pr-comment@v2.8.2
+        with:
+          message-id: cloudflare-storybook-deploy
+          message: |
+            ### <span aria-hidden="true">✅</span> Deploy Preview(Storybook) ready!
+
+            |  Name | Link |
+            |---------------------------------|------------------------|
+            |<span aria-hidden="true">🔨</span> Latest commit | ${{ github.sha }} |
+            |<span aria-hidden="true">🔍</span> Latest deploy log | ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} |
+            |<span aria-hidden="true">😎</span> Deploy Preview Url | [${{ steps.page.outputs.deployment-url }}](${{ steps.page.outputs.deployment-url }}) |
+            ---
   lighthouse:
     needs: publish
     uses: ./.github/workflows/lighthouse.yml

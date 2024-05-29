@@ -68,3 +68,26 @@ jobs:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
           command: pages deploy --project-name portfolio --directory build/client
+  storybook:
+    name: Storybook
+    needs: release
+    runs-on: ubuntu-latest
+    if: ${{ needs.release.outputs.has_changesets == 'false' }}
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4.1.6
+      - name: Setup Node.js
+        uses: re-taro/actions/setup-node@v3.5.4
+        with:
+          node-version-file: .tool-versions
+      - name: Deploy | Build
+        run: pnpm build
+      - name: Deploy | Build Storybook
+        run: pnpm build-storybook
+      - name: Deploy | Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3.6.1
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          command: pages deploy --project-name storybook --directory storybook-static

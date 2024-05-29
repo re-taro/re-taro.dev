@@ -90,6 +90,9 @@ importers:
       '@storybook/blocks':
         specifier: 8.1.4
         version: 8.1.4(@types/react-dom@18.3.0)(@types/react@18.3.3)(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@storybook/manager-api':
+        specifier: 8.1.4
+        version: 8.1.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/react':
         specifier: 8.1.4
         version: 8.1.4(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5)
@@ -102,6 +105,9 @@ importers:
       '@storybook/test-runner':
         specifier: 0.18.1
         version: 0.18.1(@types/node@20.12.12)(babel-plugin-macros@3.1.0)(prettier@3.2.5)
+      '@storybook/theming':
+        specifier: 8.1.4
+        version: 8.1.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@svgr/core':
         specifier: 8.1.0
         version: 8.1.0(typescript@5.4.5)
