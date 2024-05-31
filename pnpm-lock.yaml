@@ -52,8 +52,8 @@ importers:
         specifier: 0.40.1
         version: 0.40.1(jsdom@24.1.0)(typescript@5.4.5)
       '@pandacss/studio':
-        specifier: 0.40.0
-        version: 0.40.0(@types/node@20.12.13)(@types/react-dom@18.3.0)(@types/react@18.3.3)(jsdom@24.1.0)(lightningcss@1.25.1)(terser@5.31.0)(typescript@5.4.5)
+        specifier: 0.40.1
+        version: 0.40.1(@types/node@20.12.13)(@types/react-dom@18.3.0)(@types/react@18.3.3)(jsdom@24.1.0)(lightningcss@1.25.1)(terser@5.31.0)(typescript@5.4.5)
       '@playwright/test':
         specifier: 1.44.1
         version: 1.44.1
@@ -2146,19 +2146,13 @@ packages:
   '@one-ini/wasm@0.1.1':
     resolution: {integrity: sha512-XuySG1E38YScSJoMlqovLru4KTUNSjgVTIjyh7qMX6aNN5HY5Ct5LhRJdxO79JtTzKfzV/bnWpz+zquYrISsvw==}
 
-  '@pandacss/astro-plugin-studio@0.40.0':
-    resolution: {integrity: sha512-7+4jLTUOy+HfPi9ykmA15VLdEwAmuvBP+gG/gVa1K8LHg9y/8Xl7NpTq7TOm5DUyksUj4leINI+X61BrWLW0pw==}
+  '@pandacss/astro-plugin-studio@0.40.1':
+    resolution: {integrity: sha512-IQrzpofV+Vrpd8eLpyW6lnDhyj8CfvDZN1Pu+nnWZSDfuQrM1eW30sK/NGZWh4bMrHhZRqrV4BBknzvIef3naQ==}
     peerDependencies:
       astro: '>=4'
 
-  '@pandacss/config@0.40.0':
-    resolution: {integrity: sha512-MGVQciHCPDdDi04WKqj6cBqdvv++L9L9U04n5F9jEFi5Mv6LwTroDVdkHvTGClC4h5A4RgI+2d910eYVGQ5iRw==}
-
   '@pandacss/config@0.40.1':
     resolution: {integrity: sha512-Pzm0GpsrV8OoXgrBJ+V7aaKG39ytbLex1XsRKY6JThkAAz0rE2P8k4nbSQU8WXuG7mbOijBKYybi/cxRAIUL1w==}
-
-  '@pandacss/core@0.40.0':
-    resolution: {integrity: sha512-f3qx5rH265vvlgmU291yzWBk/WfsPzVpVNVRgfPpOFCjjxh/iWS2ZUZ8/BQ39CNM0ySIVz32je4FWXvf8V5zgA==}
 
   '@pandacss/core@0.40.1':
     resolution: {integrity: sha512-12Eu6ReCYZYu6Y/cX5YvGUS8eJkCVJYR8njWAqJmSg+rg/vqmkAM+KL8qdYw95WiTzih1dPaSq+MqkiX3N9hUg==}
@@ -2167,38 +2161,20 @@ packages:
     resolution: {integrity: sha512-61vy1KjwfVdWTaQtwY4ghmvwPhcRRVnfwpAG5S/kogw0p1rIp7a8vDHi31CjbPxO4qccjhNNzVVGDzaqnzHf+w==}
     hasBin: true
 
-  '@pandacss/extractor@0.40.0':
-    resolution: {integrity: sha512-VhlF2YPjqnLd5+tKpJHXrRwq0W1GhLQx6z2jn+2z9kQMyMrXysEWncNK4je8dZvDLVzvP3pBRXlBYT6LK5cxSg==}
-
   '@pandacss/extractor@0.40.1':
     resolution: {integrity: sha512-eHTAiNBLPxOYsf4pqbwhxjqejzaYx6EGFvdxznKohO++ihPgoph4/zl6WZx+/Ncb/IcHKMXpIBghQmmE68LIyA==}
-
-  '@pandacss/generator@0.40.0':
-    resolution: {integrity: sha512-0jLIqgs/PviVTJmkZKpfYtGpViEnehRxGSmqv5NQjztqiLWL+6VoEj5pcRDiEyFJUDVBq5XeuUFK3OGt1DJyEg==}
 
   '@pandacss/generator@0.40.1':
     resolution: {integrity: sha512-kidMyFPVuJYue4uah9uL4iNdhCPikTPCsc8j9IwrcrKPT6uhLqdeBQEF3Kxs0Pik8v+cMaDV0BSSceCujxHzhA==}
 
-  '@pandacss/is-valid-prop@0.40.0':
-    resolution: {integrity: sha512-SJk4hY84Kjr1jWd+A6tCdNAzGOi1dMpLahjK7urNdTkVb0lvFb/0SURFM5zj9+N90zXaqPNtWgOoUvN5o0E+kQ==}
-
   '@pandacss/is-valid-prop@0.40.1':
     resolution: {integrity: sha512-YcWecr6zecEiCqRi/zoCONcokG64T2LiEOCEYZMhqX9ma/KsKNd4oZO6r001/1ZUSBSVD6ZIb95h/N4gctfayg==}
-
-  '@pandacss/logger@0.40.0':
-    resolution: {integrity: sha512-PsGHBigBWlwagh0mzBZ5GP8RgR1mwnxhEjQ7qFKlgsbch49EJgJQO8mwFod37sB9Bx2oF3KVMqWxqbPjRX4Jgg==}
 
   '@pandacss/logger@0.40.1':
     resolution: {integrity: sha512-UnxDZGWj4e2Cl9XJWBp5WTJiWmfXIbyYLXt0tOlVIGTiBfZtsqVnT/uD3g71QSJgyUCyYqCx/zHJTIsKIm2/HQ==}
 
-  '@pandacss/node@0.40.0':
-    resolution: {integrity: sha512-EGDCcQgzQKQVtphyNdvrvhZ3DK3QyjN1jfmd528blaSuJKiPWV0t3yyfC5U+6jHC9UESZoinDknd6vywJ+snUg==}
-
   '@pandacss/node@0.40.1':
     resolution: {integrity: sha512-r00E85hAFmU49H0JgEwRqf2R5P6CIAydLcTTGrqYEvC8NrP2Y2vsnNENYwDT6PChAzjIZxtZK5myYki3qkfWTA==}
-
-  '@pandacss/parser@0.40.0':
-    resolution: {integrity: sha512-KtdeHWT0nY2xPI94je7TPLnT7/RwNT7cRBxs2akxEZMXR0WXQGiu4x7GASATdPNKyO0qUcXKZ44950k4NWAu+g==}
 
   '@pandacss/parser@0.40.1':
     resolution: {integrity: sha512-tcBw29Qzxe7BSyf3G76d4ux8rCnqzg4kIApOZQFPrPLGzkc6/TO59HQr3gz8YQbD0HhO2QzjnUkVwCuOpCJoOQ==}
@@ -2206,35 +2182,20 @@ packages:
   '@pandacss/postcss@0.40.1':
     resolution: {integrity: sha512-PunPSjbDYRw9ljLf4iGKpndAxUkDhptaVATVhHALA1zC31qjF86/ZQRTvMpbBKkIi18x0WKW4lQVA7NFb7+iYg==}
 
-  '@pandacss/preset-base@0.40.0':
-    resolution: {integrity: sha512-2iVg3W+CqezHjuj9EGST2/RB/yjuy4M1U8zrcS6pVK9dCsImD47/PZHijcQwjT4RjTOU+oVuQyV/TbjWtiswPQ==}
-
   '@pandacss/preset-base@0.40.1':
     resolution: {integrity: sha512-uPevTES6MonoCSLa5BLHcIkj0hJE6Nynlnaqyen4BPESJFh+ylzVjQa8K3RpOAtD6phVgWsjf21cjmKfnxo+0Q==}
-
-  '@pandacss/preset-panda@0.40.0':
-    resolution: {integrity: sha512-/K/i2HQR+T1cbJxRRmTK7wQrOjtBD9MJata8CsqBWDp8CfhZQt7rl3zfyWxbOtMa+IAh4bKu5CIOxY76yFzXvg==}
 
   '@pandacss/preset-panda@0.40.1':
     resolution: {integrity: sha512-rNw+mfU3rhQzOgUkKTZqQ6y0qRMua5Z8AVuWUrSPYCERsxmbdAVrdoOfkCjiZ+Kf+nWGumlDca9IWxI5vYlSMw==}
 
-  '@pandacss/shared@0.40.0':
-    resolution: {integrity: sha512-cf+2AR01tNOBNLcMdAMOS4+O+rQX9Pc+GFspJexciKiOk94fUC7eTj0gJFuIbbAsAxdD3J2OGh6w9j4Vk/5xxA==}
-
   '@pandacss/shared@0.40.1':
     resolution: {integrity: sha512-FBI2AaaYQZoA7TU/qa9z4FVGU3eQDC/cXobTOzmvewpVb+kFSjPo9hralYAViq+5EFRAJOFM7NMqQH0Enitjnw==}
 
-  '@pandacss/studio@0.40.0':
-    resolution: {integrity: sha512-cxY+aV1OunSC+GEQebA3yuFQY+faKS0cAsjS3NUtJL6ZXeU9DwJcd3hnh2oHtvjnHMUVSmjDFX7mhqvc+5ON1Q==}
-
-  '@pandacss/token-dictionary@0.40.0':
-    resolution: {integrity: sha512-VgUw6CJIThYvrmdKSsQmvz6G+4oMGPtU5ZibodlkVxZ29B8GDJ9eVIAyUCWWe/dCuto9p3faB7PVayXK6ZrAtw==}
+  '@pandacss/studio@0.40.1':
+    resolution: {integrity: sha512-Rze9bKn0+y2J7dcHNHmZtPSHn52IG1CpYAIzVHLKRJFwtfpFfUOUJAPckbcwobibGD18lZJw6lwAwKmPitkpjA==}
 
   '@pandacss/token-dictionary@0.40.1':
     resolution: {integrity: sha512-vpeGGJMd1dasGD2siEqSxtg9wAYNHVnafJSL+QCtarRSwVf9/ETw48md6CvGX7Iq6mfUpNJaa1JkBmhnQUVuNg==}
-
-  '@pandacss/types@0.40.0':
-    resolution: {integrity: sha512-oAzs5YvN7kuO+/4cQqpYBspmtDRmTNdNqwKgQQb5l232bGhjbrJzo1U4uE8OgP1Agl8in+nzwC5kf3wPaPOMWw==}
 
   '@pandacss/types@0.40.1':
     resolution: {integrity: sha512-znHd2Qc9zv/3e86CkM04Dv5b3dTymucfAvbvkUrvz4AT1KME7BQ1YEQRpaXgdE4UI5waV+Rv0Tx7Dmtt//4yWQ==}
@@ -10194,7 +10155,7 @@ snapshots:
       '@babel/helper-optimise-call-expression': 7.22.5
       '@babel/helper-replace-supers': 7.22.20(@babel/core@7.23.9)
       '@babel/helper-skip-transparent-expression-wrappers': 7.22.5
-      '@babel/helper-split-export-declaration': 7.22.6
+      '@babel/helper-split-export-declaration': 7.24.5
       semver: 6.3.1
 
   '@babel/helper-create-class-features-plugin@7.24.0(@babel/core@7.24.5)':
@@ -10207,7 +10168,7 @@ snapshots:
       '@babel/helper-optimise-call-expression': 7.22.5
       '@babel/helper-replace-supers': 7.22.20(@babel/core@7.24.5)
       '@babel/helper-skip-transparent-expression-wrappers': 7.22.5
-      '@babel/helper-split-export-declaration': 7.22.6
+      '@babel/helper-split-export-declaration': 7.24.5
       semver: 6.3.1
 
   '@babel/helper-create-class-features-plugin@7.24.5(@babel/core@7.24.5)':
@@ -10370,7 +10331,7 @@ snapshots:
   '@babel/helpers@7.23.9':
     dependencies:
       '@babel/template': 7.24.0
-      '@babel/traverse': 7.23.9
+      '@babel/traverse': 7.24.5
       '@babel/types': 7.24.5
     transitivePeerDependencies:
       - supports-color
@@ -11041,7 +11002,7 @@ snapshots:
   '@babel/template@7.23.9':
     dependencies:
       '@babel/code-frame': 7.23.5
-      '@babel/parser': 7.23.9
+      '@babel/parser': 7.24.5
       '@babel/types': 7.24.5
 
   '@babel/template@7.24.0':
@@ -12164,27 +12125,14 @@ snapshots:
 
   '@one-ini/wasm@0.1.1': {}
 
-  '@pandacss/astro-plugin-studio@0.40.0(astro@4.4.0(@types/node@20.12.13)(lightningcss@1.25.1)(terser@5.31.0)(typescript@5.4.5))(jsdom@24.1.0)(typescript@5.4.5)':
+  '@pandacss/astro-plugin-studio@0.40.1(astro@4.4.0(@types/node@20.12.13)(lightningcss@1.25.1)(terser@5.31.0)(typescript@5.4.5))(jsdom@24.1.0)(typescript@5.4.5)':
     dependencies:
-      '@pandacss/node': 0.40.0(jsdom@24.1.0)(typescript@5.4.5)
+      '@pandacss/node': 0.40.1(jsdom@24.1.0)(typescript@5.4.5)
       astro: 4.4.0(@types/node@20.12.13)(lightningcss@1.25.1)(terser@5.31.0)(typescript@5.4.5)
       javascript-stringify: 2.1.0
     transitivePeerDependencies:
       - jsdom
       - typescript
-
-  '@pandacss/config@0.40.0':
-    dependencies:
-      '@pandacss/logger': 0.40.0
-      '@pandacss/preset-base': 0.40.0
-      '@pandacss/preset-panda': 0.40.0
-      '@pandacss/shared': 0.40.0
-      '@pandacss/types': 0.40.0
-      bundle-n-require: 1.1.1
-      escalade: 3.1.2
-      merge-anything: 5.1.7
-      microdiff: 1.3.2
-      typescript: 5.3.3
 
   '@pandacss/config@0.40.1':
     dependencies:
@@ -12198,29 +12146,6 @@ snapshots:
       merge-anything: 5.1.7
       microdiff: 1.3.2
       typescript: 5.3.3
-
-  '@pandacss/core@0.40.0':
-    dependencies:
-      '@csstools/postcss-cascade-layers': 4.0.6(postcss@8.4.38)
-      '@pandacss/is-valid-prop': 0.40.0
-      '@pandacss/logger': 0.40.0
-      '@pandacss/shared': 0.40.0
-      '@pandacss/token-dictionary': 0.40.0
-      '@pandacss/types': 0.40.0
-      browserslist: 4.23.0
-      hookable: 5.5.3
-      lightningcss: 1.23.0
-      lodash.merge: 4.6.2
-      outdent: 0.8.0
-      postcss: 8.4.38
-      postcss-discard-duplicates: 7.0.0(postcss@8.4.38)
-      postcss-discard-empty: 7.0.0(postcss@8.4.38)
-      postcss-merge-rules: 7.0.0(postcss@8.4.38)
-      postcss-minify-selectors: 7.0.0(postcss@8.4.38)
-      postcss-nested: 6.0.1(postcss@8.4.38)
-      postcss-normalize-whitespace: 7.0.0(postcss@8.4.38)
-      postcss-selector-parser: 6.0.16
-      ts-pattern: 5.0.8
 
   '@pandacss/core@0.40.1':
     dependencies:
@@ -12261,15 +12186,6 @@ snapshots:
       - jsdom
       - typescript
 
-  '@pandacss/extractor@0.40.0(jsdom@24.1.0)(typescript@5.4.5)':
-    dependencies:
-      '@pandacss/shared': 0.40.0
-      ts-evaluator: 1.2.0(jsdom@24.1.0)(typescript@5.4.5)
-      ts-morph: 21.0.1
-    transitivePeerDependencies:
-      - jsdom
-      - typescript
-
   '@pandacss/extractor@0.40.1(jsdom@24.1.0)(typescript@5.4.5)':
     dependencies:
       '@pandacss/shared': 0.40.1
@@ -12278,20 +12194,6 @@ snapshots:
     transitivePeerDependencies:
       - jsdom
       - typescript
-
-  '@pandacss/generator@0.40.0':
-    dependencies:
-      '@pandacss/core': 0.40.0
-      '@pandacss/is-valid-prop': 0.40.0
-      '@pandacss/logger': 0.40.0
-      '@pandacss/shared': 0.40.0
-      '@pandacss/token-dictionary': 0.40.0
-      '@pandacss/types': 0.40.0
-      javascript-stringify: 2.1.0
-      outdent: 0.8.0
-      pluralize: 8.0.0
-      postcss: 8.4.38
-      ts-pattern: 5.0.8
 
   '@pandacss/generator@0.40.1':
     dependencies:
@@ -12307,54 +12209,12 @@ snapshots:
       postcss: 8.4.38
       ts-pattern: 5.0.8
 
-  '@pandacss/is-valid-prop@0.40.0': {}
-
   '@pandacss/is-valid-prop@0.40.1': {}
-
-  '@pandacss/logger@0.40.0':
-    dependencies:
-      '@pandacss/types': 0.40.0
-      kleur: 4.1.5
 
   '@pandacss/logger@0.40.1':
     dependencies:
       '@pandacss/types': 0.40.1
       kleur: 4.1.5
-
-  '@pandacss/node@0.40.0(jsdom@24.1.0)(typescript@5.4.5)':
-    dependencies:
-      '@pandacss/config': 0.40.0
-      '@pandacss/core': 0.40.0
-      '@pandacss/extractor': 0.40.0(jsdom@24.1.0)(typescript@5.4.5)
-      '@pandacss/generator': 0.40.0
-      '@pandacss/logger': 0.40.0
-      '@pandacss/parser': 0.40.0(jsdom@24.1.0)(typescript@5.4.5)
-      '@pandacss/shared': 0.40.0
-      '@pandacss/token-dictionary': 0.40.0
-      '@pandacss/types': 0.40.0
-      browserslist: 4.23.0
-      chokidar: 3.6.0
-      fast-glob: 3.3.2
-      file-size: 1.0.0
-      filesize: 10.1.2
-      fs-extra: 11.2.0
-      glob-parent: 6.0.2
-      is-glob: 4.0.3
-      lodash.merge: 4.6.2
-      look-it-up: 2.1.0
-      outdent: 0.8.0
-      perfect-debounce: 1.0.0
-      pkg-types: 1.0.3
-      pluralize: 8.0.0
-      postcss: 8.4.38
-      preferred-pm: 3.1.2
-      prettier: 3.2.5
-      ts-morph: 21.0.1
-      ts-pattern: 5.0.8
-      tsconfck: 3.0.2(typescript@5.4.5)
-    transitivePeerDependencies:
-      - jsdom
-      - typescript
 
   '@pandacss/node@0.40.1(jsdom@24.1.0)(typescript@5.4.5)':
     dependencies:
@@ -12391,22 +12251,6 @@ snapshots:
       - jsdom
       - typescript
 
-  '@pandacss/parser@0.40.0(jsdom@24.1.0)(typescript@5.4.5)':
-    dependencies:
-      '@pandacss/config': 0.40.0
-      '@pandacss/core': 0.40.0
-      '@pandacss/extractor': 0.40.0(jsdom@24.1.0)(typescript@5.4.5)
-      '@pandacss/logger': 0.40.0
-      '@pandacss/shared': 0.40.0
-      '@pandacss/types': 0.40.0
-      '@vue/compiler-sfc': 3.4.19
-      magic-string: 0.30.10
-      ts-morph: 21.0.1
-      ts-pattern: 5.0.8
-    transitivePeerDependencies:
-      - jsdom
-      - typescript
-
   '@pandacss/parser@0.40.1(jsdom@24.1.0)(typescript@5.4.5)':
     dependencies:
       '@pandacss/config': 0.40.1
@@ -12431,35 +12275,25 @@ snapshots:
       - jsdom
       - typescript
 
-  '@pandacss/preset-base@0.40.0':
-    dependencies:
-      '@pandacss/types': 0.40.0
-
   '@pandacss/preset-base@0.40.1':
     dependencies:
       '@pandacss/types': 0.40.1
-
-  '@pandacss/preset-panda@0.40.0':
-    dependencies:
-      '@pandacss/types': 0.40.0
 
   '@pandacss/preset-panda@0.40.1':
     dependencies:
       '@pandacss/types': 0.40.1
 
-  '@pandacss/shared@0.40.0': {}
-
   '@pandacss/shared@0.40.1': {}
 
-  '@pandacss/studio@0.40.0(@types/node@20.12.13)(@types/react-dom@18.3.0)(@types/react@18.3.3)(jsdom@24.1.0)(lightningcss@1.25.1)(terser@5.31.0)(typescript@5.4.5)':
+  '@pandacss/studio@0.40.1(@types/node@20.12.13)(@types/react-dom@18.3.0)(@types/react@18.3.3)(jsdom@24.1.0)(lightningcss@1.25.1)(terser@5.31.0)(typescript@5.4.5)':
     dependencies:
       '@astrojs/react': 3.0.10(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(vite@5.1.7(@types/node@20.12.13)(lightningcss@1.25.1)(terser@5.31.0))
-      '@pandacss/astro-plugin-studio': 0.40.0(astro@4.4.0(@types/node@20.12.13)(lightningcss@1.25.1)(terser@5.31.0)(typescript@5.4.5))(jsdom@24.1.0)(typescript@5.4.5)
-      '@pandacss/config': 0.40.0
-      '@pandacss/logger': 0.40.0
-      '@pandacss/shared': 0.40.0
-      '@pandacss/token-dictionary': 0.40.0
-      '@pandacss/types': 0.40.0
+      '@pandacss/astro-plugin-studio': 0.40.1(astro@4.4.0(@types/node@20.12.13)(lightningcss@1.25.1)(terser@5.31.0)(typescript@5.4.5))(jsdom@24.1.0)(typescript@5.4.5)
+      '@pandacss/config': 0.40.1
+      '@pandacss/logger': 0.40.1
+      '@pandacss/shared': 0.40.1
+      '@pandacss/token-dictionary': 0.40.1
+      '@pandacss/types': 0.40.1
       astro: 4.4.0(@types/node@20.12.13)(lightningcss@1.25.1)(terser@5.31.0)(typescript@5.4.5)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -12478,21 +12312,12 @@ snapshots:
       - terser
       - typescript
 
-  '@pandacss/token-dictionary@0.40.0':
-    dependencies:
-      '@pandacss/logger': 0.40.0
-      '@pandacss/shared': 0.40.0
-      '@pandacss/types': 0.40.0
-      ts-pattern: 5.0.8
-
   '@pandacss/token-dictionary@0.40.1':
     dependencies:
       '@pandacss/logger': 0.40.1
       '@pandacss/shared': 0.40.1
       '@pandacss/types': 0.40.1
       ts-pattern: 5.0.8
-
-  '@pandacss/types@0.40.0': {}
 
   '@pandacss/types@0.40.1': {}
 
