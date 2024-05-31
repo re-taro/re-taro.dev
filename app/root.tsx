@@ -61,7 +61,7 @@ export const links: LinksFunction = () => [
 // eslint-disable-next-line react-refresh/only-export-components
 export const meta: MetaFunction = () => [
 	{ charSet: "utf-8" },
-	{ name: "viewport", content: "width=device-width" },
+	{ name: "viewport", content: "width=device-width, initial-scale=1" },
 	{ name: "description", content: "Rintaro Itokawa (re-taro) のポートフォリオです。" },
 	{ name: "og:title", content: "Rintaro Itokawa - Web Developer" },
 	{ name: "og:description", content: "Rintaro Itokawa (re-taro) のポートフォリオです。" },
