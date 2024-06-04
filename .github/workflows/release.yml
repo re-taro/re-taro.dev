@@ -16,12 +16,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4.1.6
       - name: Setup Node.js
-        uses: re-taro/actions/setup-node@v3.5.4
+        uses: re-taro/actions/setup-node@v3.6.0
         with:
           node-version-file: .tool-versions
       - name: Setup GitHub App
         id: bot
-        uses: re-taro/actions/gen-installation-token@v3.5.4
+        uses: re-taro/actions/gen-installation-token@v3.6.0
         with:
           app_id: ${{ secrets.APP_ID}}
           private_key: ${{ secrets.PRIVATE_KEY}}
@@ -51,7 +51,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4.1.6
       - name: Setup Node.js
-        uses: re-taro/actions/setup-node@v3.5.4
+        uses: re-taro/actions/setup-node@v3.6.0
         with:
           node-version-file: .tool-versions
       #      - name: Deploy | Apply Migrations to Cloudflare D1
@@ -78,7 +78,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4.1.6
       - name: Setup Node.js
-        uses: re-taro/actions/setup-node@v3.5.4
+        uses: re-taro/actions/setup-node@v3.6.0
         with:
           node-version-file: .tool-versions
       - name: Deploy | Build
