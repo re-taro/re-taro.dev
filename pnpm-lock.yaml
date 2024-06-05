@@ -175,8 +175,8 @@ importers:
         specifier: 8.4.38
         version: 8.4.38
       postcss-load-config:
-        specifier: 5.1.0
-        version: 5.1.0(postcss@8.4.38)
+        specifier: 6.0.1
+        version: 6.0.1(postcss@8.4.38)(yaml@2.4.2)
       remix-development-tools:
         specifier: 4.1.6
         version: 4.1.6(@remix-run/react@2.9.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5))(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@5.2.12(@types/node@20.14.2)(lightningcss@1.25.1)(terser@5.31.0))
@@ -7954,19 +7954,22 @@ packages:
       ts-node:
         optional: true
 
-  postcss-load-config@5.1.0:
-    resolution: {integrity: sha512-G5AJ+IX0aD0dygOE0yFZQ/huFFMSNneyfp0e3/bT05a8OfPC5FUoZRPfGijUdGOJNMewJiwzcHJXFafFzeKFVA==}
+  postcss-load-config@6.0.1:
+    resolution: {integrity: sha512-oPtTM4oerL+UXmx+93ytZVN82RrlY/wPUV8IeDxFrzIjXOLF1pN+EmKPLbubvKHT2HC20xXsCAH2Z+CKV6Oz/g==}
     engines: {node: '>= 18'}
     peerDependencies:
       jiti: '>=1.21.0'
       postcss: '>=8.0.9'
       tsx: ^4.8.1
+      yaml: ^2.4.2
     peerDependenciesMeta:
       jiti:
         optional: true
       postcss:
         optional: true
       tsx:
+        optional: true
+      yaml:
         optional: true
 
   postcss-merge-rules@7.0.0:
@@ -19869,12 +19872,12 @@ snapshots:
     optionalDependencies:
       postcss: 8.4.38
 
-  postcss-load-config@5.1.0(postcss@8.4.38):
+  postcss-load-config@6.0.1(postcss@8.4.38)(yaml@2.4.2):
     dependencies:
       lilconfig: 3.1.1
-      yaml: 2.4.2
     optionalDependencies:
       postcss: 8.4.38
+      yaml: 2.4.2
 
   postcss-merge-rules@7.0.0(postcss@8.4.38):
     dependencies:
