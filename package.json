@@ -92,7 +92,7 @@
 		"plop": "4.0.1",
 		"postcss": "8.4.38",
 		"postcss-load-config": "6.0.1",
-		"remix-development-tools": "4.1.6",
+		"remix-development-tools": "4.2.0",
 		"rollup-plugin-visualizer": "5.12.0",
 		"serve": "14.2.3",
 		"sirv-cli": "2.0.2",
