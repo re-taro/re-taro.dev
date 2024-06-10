@@ -62,7 +62,7 @@ importers:
         version: 4.1.0(eslint-plugin-format@0.1.1(eslint@8.57.0))(eslint@8.57.0)(typescript@5.4.5)(vitest@1.6.0(@types/node@20.14.2)(jsdom@24.1.0)(lightningcss@1.25.1)(terser@5.31.1))
       '@remix-run/dev':
         specifier: 2.9.2
-        version: 2.9.2(@remix-run/react@2.9.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5))(@types/node@20.14.2)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.4.5)(vite@5.2.13(@types/node@20.14.2)(lightningcss@1.25.1)(terser@5.31.1))(wrangler@3.60.0(@cloudflare/workers-types@4.20240605.0))
+        version: 2.9.2(@remix-run/react@2.9.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5))(@types/node@20.14.2)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.4.5)(vite@5.2.13(@types/node@20.14.2)(lightningcss@1.25.1)(terser@5.31.1))(wrangler@3.60.1(@cloudflare/workers-types@4.20240605.0))
       '@remix-run/node':
         specifier: 2.9.2
         version: 2.9.2(typescript@5.4.5)
@@ -214,8 +214,8 @@ importers:
         specifier: 7.2.0
         version: 7.2.0
       wrangler:
-        specifier: 3.60.0
-        version: 3.60.0(@cloudflare/workers-types@4.20240605.0)
+        specifier: 3.60.1
+        version: 3.60.1(@cloudflare/workers-types@4.20240605.0)
 
 packages:
 
@@ -9839,8 +9839,8 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
 
-  wrangler@3.60.0:
-    resolution: {integrity: sha512-8lW4E7VAhCVXy7AV7Vom2BsyjekIt15Aa8jnBLsfE2CxalzWQzx49BK25hOYhjHQT4GqBXeoNOZ43FrMQ+SUUA==}
+  wrangler@3.60.1:
+    resolution: {integrity: sha512-pVrqzgpRwFk/8bp/afsnuw6ttOJ0Y8XFDfLjVMnVeDGZJpQ5eHV3hf8fImavn2BeH6DLHucKnJHwISnzDciqRQ==}
     engines: {node: '>=16.17.0'}
     hasBin: true
     peerDependencies:
@@ -12750,7 +12750,7 @@ snapshots:
     optionalDependencies:
       typescript: 5.4.5
 
-  '@remix-run/dev@2.9.2(@remix-run/react@2.9.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5))(@types/node@20.14.2)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.4.5)(vite@5.2.13(@types/node@20.14.2)(lightningcss@1.25.1)(terser@5.31.1))(wrangler@3.60.0(@cloudflare/workers-types@4.20240605.0))':
+  '@remix-run/dev@2.9.2(@remix-run/react@2.9.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5))(@types/node@20.14.2)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.4.5)(vite@5.2.13(@types/node@20.14.2)(lightningcss@1.25.1)(terser@5.31.1))(wrangler@3.60.1(@cloudflare/workers-types@4.20240605.0))':
     dependencies:
       '@babel/core': 7.23.9
       '@babel/generator': 7.23.6
@@ -12809,7 +12809,7 @@ snapshots:
     optionalDependencies:
       typescript: 5.4.5
       vite: 5.2.13(@types/node@20.14.2)(lightningcss@1.25.1)(terser@5.31.1)
-      wrangler: 3.60.0(@cloudflare/workers-types@4.20240605.0)
+      wrangler: 3.60.1(@cloudflare/workers-types@4.20240605.0)
     transitivePeerDependencies:
       - '@types/node'
       - bluebird
@@ -22010,7 +22010,7 @@ snapshots:
       '@cloudflare/workerd-linux-arm64': 1.20240605.0
       '@cloudflare/workerd-windows-64': 1.20240605.0
 
-  wrangler@3.60.0(@cloudflare/workers-types@4.20240605.0):
+  wrangler@3.60.1(@cloudflare/workers-types@4.20240605.0):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.3.2
       '@esbuild-plugins/node-globals-polyfill': 0.2.3(esbuild@0.17.19)
