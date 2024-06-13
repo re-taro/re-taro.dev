@@ -43,8 +43,8 @@ importers:
         specifier: 1.1.11
         version: 1.1.11
       '@iconify-json/ri':
-        specifier: 1.1.20
-        version: 1.1.20
+        specifier: 1.1.21
+        version: 1.1.21
       '@iconify-json/simple-icons':
         specifier: 1.1.105
         version: 1.1.105
@@ -1958,8 +1958,8 @@ packages:
   '@iconify-json/circum@1.1.11':
     resolution: {integrity: sha512-L8W22uUaPP/oczYqAX2jAx/LHYO5Ti1nEi3aj8+mbcZsyIj6fTb4ssuUFMRJtZQ0hHLb42N1n5RvPXRU1nC0iQ==}
 
-  '@iconify-json/ri@1.1.20':
-    resolution: {integrity: sha512-yScIGjLFBCJKWKskQTWRjNI2Awoq+VRDkRxEsCQvSfdz41n+xkRtFG2K6J1OVI90ClRHfjFC8VJ2+WzxxyFjTQ==}
+  '@iconify-json/ri@1.1.21':
+    resolution: {integrity: sha512-ssU2CRaB4T83Q3cncCZtITholhYkH6gEL5XLmdMII6Xzn8bTCpDCkt+HdX4URc24uUMD0PGIaNLJUIAgdfLMjQ==}
 
   '@iconify-json/simple-icons@1.1.105':
     resolution: {integrity: sha512-eSI32492Ga6IR7BhpDy222pSupqshZIVuYllaYHDO0MjmgVvfus5wgXb/U8RXpMZTpcQ/8dNcCK82LkupFqD4w==}
@@ -11782,7 +11782,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/ri@1.1.20':
+  '@iconify-json/ri@1.1.21':
     dependencies:
       '@iconify/types': 2.0.0
 

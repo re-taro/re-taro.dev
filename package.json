@@ -47,7 +47,7 @@
 		"@changesets/cli": "2.27.5",
 		"@cloudflare/workers-types": "4.20240605.0",
 		"@iconify-json/circum": "1.1.11",
-		"@iconify-json/ri": "1.1.20",
+		"@iconify-json/ri": "1.1.21",
 		"@iconify-json/simple-icons": "1.1.105",
 		"@pandacss/dev": "0.40.1",
 		"@pandacss/studio": "0.40.1",
