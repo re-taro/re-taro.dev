@@ -85,7 +85,7 @@
 		"drizzle-kit": "0.22.7",
 		"drizzle-orm": "0.31.2",
 		"eslint": "8.57.0",
-		"eslint-plugin-format": "0.1.1",
+		"eslint-plugin-format": "0.1.2",
 		"jsdom": "24.1.0",
 		"npm-run-all2": "6.2.0",
 		"playwright": "1.44.1",
