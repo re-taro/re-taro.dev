@@ -15,15 +15,16 @@ import { Section } from "~/components/SectioningContent";
 
 export default function Page(): ReactNode {
 	return (
-		<div className={css({
-			boxSizing: "border-box",
-			display: "flex",
-			flexDirection: "column",
-			rowGap: "2rem",
-			width: "100%",
-			maxWidth: "50rem",
-			margin: "5rem auto 0",
-		})}
+		<div
+			className={css({
+				boxSizing: "border-box",
+				display: "flex",
+				flexDirection: "column",
+				rowGap: "2rem",
+				width: "100%",
+				maxWidth: "50rem",
+				margin: "5rem auto 0",
+			})}
 		>
 			<PageHeading css={css.raw({ fontSize: "xl" })} type="section" prefix bold>About me</PageHeading>
 			<Section css={css.raw({ display: "flex", flexDirection: "column", rowGap: "1rem" })} aria-label="Profile">
@@ -128,13 +129,14 @@ export default function Page(): ReactNode {
 						</ListItem>
 					</ul>
 				</Section>
-				<hr className={css({
-					margin: "1rem 0",
-					width: "100%",
-					height: "1px",
-					border: "none",
-					backgroundColor: "bg.teriary",
-				})}
+				<hr
+					className={css({
+						margin: "1rem 0",
+						width: "100%",
+						height: "1px",
+						border: "none",
+						backgroundColor: "bg.teriary",
+					})}
 				/>
 			</Section>
 			<Section aria-label="SNS">
