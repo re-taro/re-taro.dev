@@ -26,6 +26,9 @@ importers:
       react-dom:
         specifier: 18.3.1
         version: 18.3.1(react@18.3.1)
+      temporal-polyfill:
+        specifier: 0.2.5
+        version: 0.2.5
     devDependencies:
       '@axe-core/playwright':
         specifier: 4.9.1
@@ -42,6 +45,9 @@ importers:
       '@iconify-json/circum':
         specifier: 1.1.11
         version: 1.1.11
+      '@iconify-json/la':
+        specifier: 1.1.8
+        version: 1.1.8
       '@iconify-json/ri':
         specifier: 1.1.21
         version: 1.1.21
@@ -2095,6 +2101,9 @@ packages:
 
   '@iconify-json/circum@1.1.11':
     resolution: {integrity: sha512-L8W22uUaPP/oczYqAX2jAx/LHYO5Ti1nEi3aj8+mbcZsyIj6fTb4ssuUFMRJtZQ0hHLb42N1n5RvPXRU1nC0iQ==}
+
+  '@iconify-json/la@1.1.8':
+    resolution: {integrity: sha512-67cXIkU4kg78OA52qcIzC5rIIHMf3K2rdl8GqiNgpiMbbX3o7n+yPh/0QWIIn8lDUQT6qT5d0ZkUCnwEYzxl2w==}
 
   '@iconify-json/ri@1.1.21':
     resolution: {integrity: sha512-ssU2CRaB4T83Q3cncCZtITholhYkH6gEL5XLmdMII6Xzn8bTCpDCkt+HdX4URc24uUMD0PGIaNLJUIAgdfLMjQ==}
@@ -9206,6 +9215,12 @@ packages:
     resolution: {integrity: sha512-s0ZZzd0BzYv5tLSptZooSjK8oj6C+c19p7Vqta9+6NPOf7r+fxq0cJe6/oN4LTC79sy5NY8ucOJNgwsKCSbfqg==}
     engines: {node: '>=6.0.0'}
 
+  temporal-polyfill@0.2.5:
+    resolution: {integrity: sha512-ye47xp8Cb0nDguAhrrDS1JT1SzwEV9e26sSsrWzVu+yPZ7LzceEcH0i2gci9jWfOfSCCgM3Qv5nOYShVUUFUXA==}
+
+  temporal-spec@0.2.4:
+    resolution: {integrity: sha512-lDMFv4nKQrSjlkHKAlHVqKrBG4DyFfa9F74cmBZ3Iy3ed8yvWnlWSIdi4IKfSqwmazAohBNwiN64qGx4y5Q3IQ==}
+
   tempy@1.0.1:
     resolution: {integrity: sha512-biM9brNqxSc04Ee71hzFbryD11nX7VPhQQY32AdDmjFvodsRFz/3ufeoTZ6uYkRFfGo188tENcASNs3vTdsM0w==}
     engines: {node: '>=10'}
@@ -11996,6 +12011,10 @@ snapshots:
   '@humanwhocodes/object-schema@2.0.2': {}
 
   '@iconify-json/circum@1.1.11':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/la@1.1.8':
     dependencies:
       '@iconify/types': 2.0.0
 
@@ -21459,6 +21478,12 @@ snapshots:
   temp@0.8.4:
     dependencies:
       rimraf: 2.6.3
+
+  temporal-polyfill@0.2.5:
+    dependencies:
+      temporal-spec: 0.2.4
+
+  temporal-spec@0.2.4: {}
 
   tempy@1.0.1:
     dependencies:
