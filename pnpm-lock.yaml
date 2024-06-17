@@ -46,8 +46,8 @@ importers:
         specifier: 1.1.21
         version: 1.1.21
       '@iconify-json/simple-icons':
-        specifier: 1.1.105
-        version: 1.1.105
+        specifier: 1.1.106
+        version: 1.1.106
       '@pandacss/dev':
         specifier: 0.41.0
         version: 0.41.0(jsdom@24.1.0)(typescript@5.4.5)
@@ -2099,8 +2099,8 @@ packages:
   '@iconify-json/ri@1.1.21':
     resolution: {integrity: sha512-ssU2CRaB4T83Q3cncCZtITholhYkH6gEL5XLmdMII6Xzn8bTCpDCkt+HdX4URc24uUMD0PGIaNLJUIAgdfLMjQ==}
 
-  '@iconify-json/simple-icons@1.1.105':
-    resolution: {integrity: sha512-eSI32492Ga6IR7BhpDy222pSupqshZIVuYllaYHDO0MjmgVvfus5wgXb/U8RXpMZTpcQ/8dNcCK82LkupFqD4w==}
+  '@iconify-json/simple-icons@1.1.106':
+    resolution: {integrity: sha512-3aHpMAgc0UES/ecsCzaXhyBuJVy1AEC/IG03cso6KqvG+DJzrb3LT2ibTTB4uoGGPAmz/mq9df4LqYQhbSrHCA==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -12003,7 +12003,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/simple-icons@1.1.105':
+  '@iconify-json/simple-icons@1.1.106':
     dependencies:
       '@iconify/types': 2.0.0
 
