@@ -16,6 +16,11 @@ const meta: Meta = {
 		title: "誕生",
 		date: Temporal.PlainDate.from({ year: 2004, month: 4, day: 25 }),
 	},
+	decorators: [Story => (
+		<ul>
+			<Story />
+		</ul>
+	)],
 } satisfies Meta<T>;
 
 type Story = StoryObj<T>;
