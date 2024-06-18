@@ -186,8 +186,8 @@ function config(
 				name: "type",
 				message: "Which type of handler?",
 				choices: [
-					{ name: "Loader", value: "loader" },
-					{ name: "Action", value: "action" },
+					{ key: "l", name: "Loader", value: "loader" },
+					{ key: "a", name: "Action", value: "action" },
 				],
 			},
 			{
@@ -211,11 +211,11 @@ function config(
 						templateFile: "templates/handlers/loader.ts.hbs",
 					});
 
-					actions.push({
-						type: "add",
-						path: "app/routes/handlers/loader.test.ts",
-						templateFile: "templates/handlers/loader.test.ts.hbs",
-					});
+					//					actions.push({
+					//						type: "add",
+					//						path: "app/routes/handlers/loader.test.ts",
+					//						templateFile: "templates/handlers/loader.test.ts.hbs",
+					//					});
 
 					actions.push({
 						type: "append",
@@ -230,11 +230,11 @@ function config(
 						templateFile: "templates/handlers/action.ts.hbs",
 					});
 
-					actions.push({
-						type: "add",
-						path: "app/routes/handlers/action.test.ts",
-						templateFile: "templates/handlers/action.test.ts.hbs",
-					});
+					//					actions.push({
+					//						type: "add",
+					//						path: "app/routes/handlers/action.test.ts",
+					//						templateFile: "templates/handlers/action.test.ts.hbs",
+					//					});
 
 					actions.push({
 						type: "append",
@@ -251,11 +251,11 @@ function config(
 						templateFile: "templates/handlers/loader.ts.hbs",
 					});
 
-					actions.push({
-						type: "add",
-						path: "app/routes/{{parent}}/handlers/loader.test.ts",
-						templateFile: "templates/handlers/loader.test.ts.hbs",
-					});
+					//					actions.push({
+					//						type: "add",
+					//						path: "app/routes/{{parent}}/handlers/loader.test.ts",
+					//						templateFile: "templates/handlers/loader.test.ts.hbs",
+					//					});
 
 					actions.push({
 						type: "append",
@@ -270,11 +270,11 @@ function config(
 						templateFile: "templates/handlers/action.ts.hbs",
 					});
 
-					actions.push({
-						type: "add",
-						path: "app/routes/{{parent}}/handlers/action.test.ts",
-						templateFile: "templates/handlers/action.test.ts.hbs",
-					});
+					//					actions.push({
+					//						type: "add",
+					//						path: "app/routes/{{parent}}/handlers/action.test.ts",
+					//						templateFile: "templates/handlers/action.test.ts.hbs",
+					//					});
 
 					actions.push({
 						type: "append",
@@ -283,6 +283,8 @@ function config(
 					});
 				}
 			}
+
+			return actions;
 		},
 	});
 }

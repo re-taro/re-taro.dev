@@ -9,21 +9,23 @@ import Monkeytie from "~icons/simple-icons/monkeytie";
 import Bluesky from "~icons/simple-icons/bluesky";
 import MailLine from "~icons/ri/mail-line";
 import Twitter from "~icons/ri/twitter-x-line";
+import Blog from "~icons/fa-solid/blog";
 import { Heading, PageHeading } from "~/components/Heading";
 import { Paragraph } from "~/components/Paragraph";
 import { Section } from "~/components/SectioningContent";
 
 export default function Page(): ReactNode {
 	return (
-		<div className={css({
-			boxSizing: "border-box",
-			display: "flex",
-			flexDirection: "column",
-			rowGap: "2rem",
-			width: "100%",
-			maxWidth: "50rem",
-			margin: "5rem auto 0",
-		})}
+		<div
+			className={css({
+				boxSizing: "border-box",
+				display: "flex",
+				flexDirection: "column",
+				rowGap: "2rem",
+				width: "100%",
+				maxWidth: "50rem",
+				margin: "5rem auto 0",
+			})}
 		>
 			<PageHeading css={css.raw({ fontSize: "xl" })} type="section" prefix bold>About me</PageHeading>
 			<Section css={css.raw({ display: "flex", flexDirection: "column", rowGap: "1rem" })} aria-label="Profile">
@@ -128,13 +130,14 @@ export default function Page(): ReactNode {
 						</ListItem>
 					</ul>
 				</Section>
-				<hr className={css({
-					margin: "1rem 0",
-					width: "100%",
-					height: "1px",
-					border: "none",
-					backgroundColor: "bg.teriary",
-				})}
+				<hr
+					className={css({
+						margin: "1rem 0",
+						width: "100%",
+						height: "1px",
+						border: "none",
+						backgroundColor: "bg.teriary",
+					})}
 				/>
 			</Section>
 			<Section aria-label="SNS">
@@ -142,6 +145,7 @@ export default function Page(): ReactNode {
 				<p className={css({ display: "flex", flexWrap: "wrap", gap: "0.5rem" })}>
 					<SocialLink href="https://github.com/re-taro" icon={Github}>GitHub</SocialLink>
 					<SocialLink href="https://twitter.com/re_taro_" icon={Twitter}>Twitter</SocialLink>
+					<SocialLink href="https://blog.re-taro.dev" icon={Blog}>Blog</SocialLink>
 					<SocialLink href="https://bsky.app/profile/re-taro.dev" icon={Bluesky}>Bluesky</SocialLink>
 					<SocialLink href="https://discord.com/users/713739439041544273" icon={Discord}>Discord</SocialLink>
 					<SocialLink href="https://keybase.io/10969_rintaro" icon={Keybase}>Keybase</SocialLink>
