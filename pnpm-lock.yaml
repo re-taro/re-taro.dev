@@ -18,8 +18,8 @@ importers:
         specifier: 2.9.2
         version: 2.9.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.2)
       isbot:
-        specifier: 5.1.9
-        version: 5.1.9
+        specifier: 5.1.10
+        version: 5.1.10
       react:
         specifier: 18.3.1
         version: 18.3.1
@@ -6454,8 +6454,8 @@ packages:
     resolution: {integrity: sha512-GvcjojwonMjWbTkfMpnVHVqXW/wKMYDfEpY94/8zy8HFMOqb/VL6oeONq9v87q4ttVlaTLnGXnJD4B5B1OTGIg==}
     engines: {node: '>= 18.0.0'}
 
-  isbot@5.1.9:
-    resolution: {integrity: sha512-NITFjA2Jpcv1qWCpzqZQoW/66H3xXbF+n4yJIXr/gIn/wgaSKOPXTTczswiKMYx+BVymG9lm30ZGPtFWqAD4hA==}
+  isbot@5.1.10:
+    resolution: {integrity: sha512-ob0oFuq/YcNxPZKhGJ+t0TDdDT/5BPNIk74r41528qAf2or2fgUY7Ty8vl0wEz/LIiaJ9JG4qSa1yBqCdPg5ag==}
     engines: {node: '>=18'}
 
   isexe@2.0.0:
@@ -17693,7 +17693,7 @@ snapshots:
 
   isbinaryfile@5.0.2: {}
 
-  isbot@5.1.9: {}
+  isbot@5.1.10: {}
 
   isexe@2.0.0: {}
 
