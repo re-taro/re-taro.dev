@@ -45,7 +45,7 @@
 	"devDependencies": {
 		"@axe-core/playwright": "4.9.1",
 		"@changesets/changelog-github": "0.5.0",
-		"@changesets/cli": "2.27.5",
+		"@changesets/cli": "2.27.6",
 		"@cloudflare/workers-types": "4.20240620.0",
 		"@iconify-json/circum": "1.1.11",
 		"@iconify-json/fa-solid": "1.1.8",
