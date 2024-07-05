@@ -145,8 +145,8 @@ importers:
         specifier: 2.0.1
         version: 2.0.1(playwright@1.45.0)
       better-sqlite3:
-        specifier: 11.1.1
-        version: 11.1.1
+        specifier: 11.1.2
+        version: 11.1.2
       browserslist-to-esbuild:
         specifier: 2.1.1
         version: 2.1.1(browserslist@4.23.0)
@@ -158,7 +158,7 @@ importers:
         version: 0.22.8
       drizzle-orm:
         specifier: 0.31.2
-        version: 0.31.2(@cloudflare/workers-types@4.20240620.0)(@types/react@18.3.3)(better-sqlite3@11.1.1)(react@18.3.1)
+        version: 0.31.2(@cloudflare/workers-types@4.20240620.0)(@types/react@18.3.3)(better-sqlite3@11.1.2)(react@18.3.1)
       eslint:
         specifier: 8.57.0
         version: 8.57.0
@@ -4140,8 +4140,8 @@ packages:
     resolution: {integrity: sha512-pbnl5XzGBdrFU/wT4jqmJVPn2B6UHPBOhzMQkY/SPUPB6QtUXtmBHBIwCbXJol93mOpGMnQyP/+BB19q04xj7g==}
     engines: {node: '>=4'}
 
-  better-sqlite3@11.1.1:
-    resolution: {integrity: sha512-bAlQQb7gwCgxNpDYafK0O4AaIOiTwA7srfqRtBbw0Nsiq6P+qxEYGl3hLw+9C5jX2FVjKW7oxkSouxlJ+3VX8A==}
+  better-sqlite3@11.1.2:
+    resolution: {integrity: sha512-gujtFwavWU4MSPT+h9B+4pkvZdyOUkH54zgLdIrMmmmd4ZqiBIrRNBzNzYVFO417xo882uP5HBu4GjOfaSrIQw==}
 
   big-integer@1.6.51:
     resolution: {integrity: sha512-GPEid2Y9QU1Exl1rpO9B2IPJGHPSupF5GnVIP0blYvNOMer2bTvSWs1jGOUg04hTmu67nmLsQ9TBo1puaotBHg==}
@@ -15007,7 +15007,7 @@ snapshots:
     dependencies:
       is-windows: 1.0.2
 
-  better-sqlite3@11.1.1:
+  better-sqlite3@11.1.2:
     dependencies:
       bindings: 1.5.0
       prebuild-install: 7.1.1
@@ -15827,11 +15827,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  drizzle-orm@0.31.2(@cloudflare/workers-types@4.20240620.0)(@types/react@18.3.3)(better-sqlite3@11.1.1)(react@18.3.1):
+  drizzle-orm@0.31.2(@cloudflare/workers-types@4.20240620.0)(@types/react@18.3.3)(better-sqlite3@11.1.2)(react@18.3.1):
     optionalDependencies:
       '@cloudflare/workers-types': 4.20240620.0
       '@types/react': 18.3.3
-      better-sqlite3: 11.1.1
+      better-sqlite3: 11.1.2
       react: 18.3.1
 
   dset@3.1.3: {}
