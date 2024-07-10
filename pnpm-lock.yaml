@@ -154,8 +154,8 @@ importers:
         specifier: 8.2.2
         version: 8.2.2
       drizzle-kit:
-        specifier: 0.22.8
-        version: 0.22.8
+        specifier: 0.23.0
+        version: 0.23.0
       drizzle-orm:
         specifier: 0.31.4
         version: 0.31.4(@cloudflare/workers-types@4.20240620.0)(@types/react@18.3.3)(better-sqlite3@11.1.2)(react@18.3.1)
@@ -4993,8 +4993,8 @@ packages:
     resolution: {integrity: sha512-IrPdXQsk2BbzvCBGBOTmmSH5SodmqZNt4ERAZDmW4CT+tL8VtvinqywuANaFu4bOMWki16nqf0e4oC0QIaDr/g==}
     engines: {node: '>=10'}
 
-  drizzle-kit@0.22.8:
-    resolution: {integrity: sha512-VjI4wsJjk3hSqHSa3TwBf+uvH6M6pRHyxyoVbt935GUzP9tUR/BRZ+MhEJNgryqbzN2Za1KP0eJMTgKEPsalYQ==}
+  drizzle-kit@0.23.0:
+    resolution: {integrity: sha512-w9jE97z193dd4jzAyj4Uv2SOh8Ydue70Ki6W0awy4bGM1aPXan6zD6Yv+nNTA6oGgNTDl2MJFxutjHG4fden5g==}
     hasBin: true
 
   drizzle-orm@0.31.4:
@@ -15899,7 +15899,7 @@ snapshots:
 
   dotenv@8.6.0: {}
 
-  drizzle-kit@0.22.8:
+  drizzle-kit@0.23.0:
     dependencies:
       '@esbuild-kit/esm-loader': 2.5.5
       esbuild: 0.19.7
@@ -16074,14 +16074,14 @@ snapshots:
 
   esbuild-register@3.5.0(esbuild@0.19.7):
     dependencies:
-      debug: 4.3.4
+      debug: 4.3.5
       esbuild: 0.19.7
     transitivePeerDependencies:
       - supports-color
 
   esbuild-register@3.5.0(esbuild@0.20.2):
     dependencies:
-      debug: 4.3.4
+      debug: 4.3.5
       esbuild: 0.20.2
     transitivePeerDependencies:
       - supports-color
