@@ -85,7 +85,7 @@
 		"browserslist-to-esbuild": "2.1.1",
 		"concurrently": "8.2.2",
 		"drizzle-kit": "0.23.0",
-		"drizzle-orm": "0.32.0",
+		"drizzle-orm": "0.32.1",
 		"eslint": "8.57.0",
 		"eslint-plugin-format": "0.1.2",
 		"jsdom": "24.1.1",
