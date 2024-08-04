@@ -47,7 +47,7 @@
 		"@changesets/changelog-github": "0.5.0",
 		"@changesets/cli": "2.27.7",
 		"@cloudflare/workers-types": "4.20240729.0",
-		"@iconify-json/circum": "1.1.11",
+		"@iconify-json/circum": "1.1.12",
 		"@iconify-json/fa-solid": "1.1.8",
 		"@iconify-json/ri": "1.1.21",
 		"@iconify-json/simple-icons": "1.1.111",
