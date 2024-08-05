@@ -154,8 +154,8 @@ importers:
         specifier: 8.2.2
         version: 8.2.2
       drizzle-kit:
-        specifier: 0.23.1
-        version: 0.23.1
+        specifier: 0.23.2
+        version: 0.23.2
       drizzle-orm:
         specifier: 0.32.1
         version: 0.32.1(@cloudflare/workers-types@4.20240729.0)(@types/react@18.3.3)(better-sqlite3@11.1.2)(react@18.3.1)
@@ -4836,8 +4836,8 @@ packages:
     resolution: {integrity: sha512-IrPdXQsk2BbzvCBGBOTmmSH5SodmqZNt4ERAZDmW4CT+tL8VtvinqywuANaFu4bOMWki16nqf0e4oC0QIaDr/g==}
     engines: {node: '>=10'}
 
-  drizzle-kit@0.23.1:
-    resolution: {integrity: sha512-posGQhj8/K4S4CPhk7BO9+IcpNdIh96t0DvcAr/NvMKhPhe5D0MELzmpq9R2MpmSP3fd+Z3upwidtetrw7xnjg==}
+  drizzle-kit@0.23.2:
+    resolution: {integrity: sha512-NWkQ7GD2OTbQ7HzcjsaCOf3n0tlFPSEAF38fvDpwDj8jRbGWGFtN2cD8I8wp4lU+5Os/oyP2xycTKGLHdPipUw==}
     hasBin: true
 
   drizzle-orm@0.32.1:
@@ -15215,7 +15215,7 @@ snapshots:
 
   dotenv@8.6.0: {}
 
-  drizzle-kit@0.23.1:
+  drizzle-kit@0.23.2:
     dependencies:
       '@drizzle-team/brocli': 0.8.2
       '@esbuild-kit/esm-loader': 2.5.5
