@@ -84,7 +84,7 @@
 		"better-sqlite3": "11.1.2",
 		"browserslist-to-esbuild": "2.1.1",
 		"concurrently": "8.2.2",
-		"drizzle-kit": "0.23.1",
+		"drizzle-kit": "0.23.2",
 		"drizzle-orm": "0.32.1",
 		"eslint": "8.57.0",
 		"eslint-plugin-format": "0.1.2",
