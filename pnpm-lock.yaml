@@ -184,8 +184,8 @@ importers:
         specifier: 6.0.1
         version: 6.0.1(postcss@8.4.41)(yaml@2.4.2)
       remix-development-tools:
-        specifier: 4.2.3
-        version: 4.2.3(@remix-run/react@2.11.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.4))(@types/react-dom@18.3.0)(@types/react@18.3.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@5.4.2(@types/node@20.16.1)(lightningcss@1.25.1)(terser@5.31.6))
+        specifier: 4.3.3
+        version: 4.3.3(@remix-run/react@2.11.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.4))(@types/react-dom@18.3.0)(@types/react@18.3.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@5.4.2(@types/node@20.16.1)(lightningcss@1.25.1)(terser@5.31.6))
       rollup-plugin-visualizer:
         specifier: 5.12.0
         version: 5.12.0(rollup@4.21.0)
@@ -8478,8 +8478,8 @@ packages:
   remark-stringify@11.0.0:
     resolution: {integrity: sha512-1OSmLd3awB/t8qdoEOMazZkNsfVTeY4fTsgzcQFdXNq8ToTN4ZGwrMnlda4K6smTFKD+GRV6O48i6Z4iKgPPpw==}
 
-  remix-development-tools@4.2.3:
-    resolution: {integrity: sha512-xLogLzObwpjY6keI63ElMRTQGm6KEjM3JJ8WdG4Zy1BDbh47h3crh2uDkEsZ7hfGp3H2OTOvetJ+QSdxOKmrPA==}
+  remix-development-tools@4.3.3:
+    resolution: {integrity: sha512-v8mb6aSZusuV5ei/zsk7vlQRvqLuqwc3dutUh4mMuwTbzVlQ8CRqkAHsxVrqWLEdUaGO/RwhsYiuIEiV7D4AdQ==}
     peerDependencies:
       '@remix-run/react': '>=1.15'
       react: '>=17'
@@ -19995,7 +19995,7 @@ snapshots:
       mdast-util-to-markdown: 2.1.0
       unified: 11.0.4
 
-  remix-development-tools@4.2.3(@remix-run/react@2.11.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.4))(@types/react-dom@18.3.0)(@types/react@18.3.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@5.4.2(@types/node@20.16.1)(lightningcss@1.25.1)(terser@5.31.6)):
+  remix-development-tools@4.3.3(@remix-run/react@2.11.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.4))(@types/react-dom@18.3.0)(@types/react@18.3.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@5.4.2(@types/node@20.16.1)(lightningcss@1.25.1)(terser@5.31.6)):
     dependencies:
       '@radix-ui/react-accordion': 1.1.2(@types/react-dom@18.3.0)(@types/react@18.3.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@radix-ui/react-select': 1.2.2(@types/react-dom@18.3.0)(@types/react@18.3.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
