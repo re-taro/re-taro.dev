@@ -56,16 +56,16 @@ importers:
         version: 1.1.114
       '@pandacss/dev':
         specifier: 0.45.1
-        version: 0.45.1(jsdom@24.1.3)(typescript@5.5.4)
+        version: 0.45.1(jsdom@25.0.0)(typescript@5.5.4)
       '@pandacss/studio':
         specifier: 0.45.1
-        version: 0.45.1(@types/node@20.16.1)(@types/react-dom@18.3.0)(@types/react@18.3.4)(jsdom@24.1.3)(lightningcss@1.25.1)(terser@5.31.6)(typescript@5.5.4)
+        version: 0.45.1(@types/node@20.16.1)(@types/react-dom@18.3.0)(@types/react@18.3.4)(jsdom@25.0.0)(lightningcss@1.25.1)(terser@5.31.6)(typescript@5.5.4)
       '@playwright/test':
         specifier: 1.46.1
         version: 1.46.1
       '@re-taro/eslint-config':
         specifier: 4.1.0
-        version: 4.1.0(eslint-plugin-format@0.1.2(eslint@8.57.0))(eslint@8.57.0)(typescript@5.5.4)(vitest@2.0.5(@types/node@20.16.1)(jsdom@24.1.3)(lightningcss@1.25.1)(terser@5.31.6))
+        version: 4.1.0(eslint-plugin-format@0.1.2(eslint@8.57.0))(eslint@8.57.0)(typescript@5.5.4)(vitest@2.0.5(@types/node@20.16.1)(jsdom@25.0.0)(lightningcss@1.25.1)(terser@5.31.6))
       '@remix-run/dev':
         specifier: 2.11.2
         version: 2.11.2(@remix-run/react@2.11.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.4))(@types/node@20.16.1)(lightningcss@1.25.1)(terser@5.31.6)(typescript@5.5.4)(vite@5.4.2(@types/node@20.16.1)(lightningcss@1.25.1)(terser@5.31.6))(wrangler@3.72.2(@cloudflare/workers-types@4.20240821.1))
@@ -89,7 +89,7 @@ importers:
         version: 8.2.9(storybook@8.2.9(@babel/preset-env@7.24.5(@babel/core@7.24.5)))
       '@storybook/addon-interactions':
         specifier: 8.2.9
-        version: 8.2.9(@jest/globals@29.7.0)(jest@29.7.0(@types/node@20.16.1)(babel-plugin-macros@3.1.0))(storybook@8.2.9(@babel/preset-env@7.24.5(@babel/core@7.24.5)))(vitest@2.0.5(@types/node@20.16.1)(jsdom@24.1.3)(lightningcss@1.25.1)(terser@5.31.6))
+        version: 8.2.9(@jest/globals@29.7.0)(jest@29.7.0(@types/node@20.16.1)(babel-plugin-macros@3.1.0))(storybook@8.2.9(@babel/preset-env@7.24.5(@babel/core@7.24.5)))(vitest@2.0.5(@types/node@20.16.1)(jsdom@25.0.0)(lightningcss@1.25.1)(terser@5.31.6))
       '@storybook/addon-links':
         specifier: 8.2.9
         version: 8.2.9(react@18.3.1)(storybook@8.2.9(@babel/preset-env@7.24.5(@babel/core@7.24.5)))
@@ -107,7 +107,7 @@ importers:
         version: 8.2.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.21.0)(storybook@8.2.9(@babel/preset-env@7.24.5(@babel/core@7.24.5)))(typescript@5.5.4)(vite@5.4.2(@types/node@20.16.1)(lightningcss@1.25.1)(terser@5.31.6))
       '@storybook/test':
         specifier: 8.2.9
-        version: 8.2.9(@jest/globals@29.7.0)(jest@29.7.0(@types/node@20.16.1)(babel-plugin-macros@3.1.0))(storybook@8.2.9(@babel/preset-env@7.24.5(@babel/core@7.24.5)))(vitest@2.0.5(@types/node@20.16.1)(jsdom@24.1.3)(lightningcss@1.25.1)(terser@5.31.6))
+        version: 8.2.9(@jest/globals@29.7.0)(jest@29.7.0(@types/node@20.16.1)(babel-plugin-macros@3.1.0))(storybook@8.2.9(@babel/preset-env@7.24.5(@babel/core@7.24.5)))(vitest@2.0.5(@types/node@20.16.1)(jsdom@25.0.0)(lightningcss@1.25.1)(terser@5.31.6))
       '@storybook/test-runner':
         specifier: 0.19.1
         version: 0.19.1(@types/node@20.16.1)(babel-plugin-macros@3.1.0)(prettier@3.3.2)
@@ -166,8 +166,8 @@ importers:
         specifier: 0.1.2
         version: 0.1.2(eslint@8.57.0)
       jsdom:
-        specifier: 24.1.3
-        version: 24.1.3
+        specifier: 25.0.0
+        version: 25.0.0
       npm-run-all2:
         specifier: 6.2.2
         version: 6.2.2
@@ -215,7 +215,7 @@ importers:
         version: 5.0.1(typescript@5.5.4)(vite@5.4.2(@types/node@20.16.1)(lightningcss@1.25.1)(terser@5.31.6))
       vitest:
         specifier: 2.0.5
-        version: 2.0.5(@types/node@20.16.1)(jsdom@24.1.3)(lightningcss@1.25.1)(terser@5.31.6)
+        version: 2.0.5(@types/node@20.16.1)(jsdom@25.0.0)(lightningcss@1.25.1)(terser@5.31.6)
       wait-on:
         specifier: 8.0.0
         version: 8.0.0
@@ -6653,8 +6653,8 @@ packages:
     resolution: {integrity: sha512-YtOli5Cmzy3q4dP26GraSOeAhqecewG04hoO8DY56CH4KJ9Fvv5qKWUCCo3HZob7esJQHCv6/+bnTy72xZZaVQ==}
     engines: {node: '>=12.0.0'}
 
-  jsdom@24.1.3:
-    resolution: {integrity: sha512-MyL55p3Ut3cXbeBEG7Hcv0mVM8pp8PBNWxRqchZnSfAiES1v1mRnMeFfaHWIPULpwsYfvO+ZmMZz5tGCnjzDUQ==}
+  jsdom@25.0.0:
+    resolution: {integrity: sha512-OhoFVT59T7aEq75TVw9xxEfkXgacpqAhQaYgP9y/fDqWQCMB/b1H66RfmPm/MaeaAIU9nDwMOVTlPN51+ao6CQ==}
     engines: {node: '>=18'}
     peerDependencies:
       canvas: ^2.11.2
@@ -12058,9 +12058,9 @@ snapshots:
 
   '@one-ini/wasm@0.1.1': {}
 
-  '@pandacss/astro-plugin-studio@0.45.1(astro@4.4.0(@types/node@20.16.1)(lightningcss@1.25.1)(terser@5.31.6)(typescript@5.5.4))(jsdom@24.1.3)(typescript@5.5.4)':
+  '@pandacss/astro-plugin-studio@0.45.1(astro@4.4.0(@types/node@20.16.1)(lightningcss@1.25.1)(terser@5.31.6)(typescript@5.5.4))(jsdom@25.0.0)(typescript@5.5.4)':
     dependencies:
-      '@pandacss/node': 0.45.1(jsdom@24.1.3)(typescript@5.5.4)
+      '@pandacss/node': 0.45.1(jsdom@25.0.0)(typescript@5.5.4)
       astro: 4.4.0(@types/node@20.16.1)(lightningcss@1.25.1)(terser@5.31.6)(typescript@5.5.4)
       javascript-stringify: 2.1.0
     transitivePeerDependencies:
@@ -12103,13 +12103,13 @@ snapshots:
       postcss-selector-parser: 6.1.1
       ts-pattern: 5.0.8
 
-  '@pandacss/dev@0.45.1(jsdom@24.1.3)(typescript@5.5.4)':
+  '@pandacss/dev@0.45.1(jsdom@25.0.0)(typescript@5.5.4)':
     dependencies:
       '@clack/prompts': 0.7.0
       '@pandacss/config': 0.45.1
       '@pandacss/logger': 0.45.1
-      '@pandacss/node': 0.45.1(jsdom@24.1.3)(typescript@5.5.4)
-      '@pandacss/postcss': 0.45.1(jsdom@24.1.3)(typescript@5.5.4)
+      '@pandacss/node': 0.45.1(jsdom@25.0.0)(typescript@5.5.4)
+      '@pandacss/postcss': 0.45.1(jsdom@25.0.0)(typescript@5.5.4)
       '@pandacss/preset-panda': 0.45.1
       '@pandacss/shared': 0.45.1
       '@pandacss/token-dictionary': 0.45.1
@@ -12119,10 +12119,10 @@ snapshots:
       - jsdom
       - typescript
 
-  '@pandacss/extractor@0.45.1(jsdom@24.1.3)(typescript@5.5.4)':
+  '@pandacss/extractor@0.45.1(jsdom@25.0.0)(typescript@5.5.4)':
     dependencies:
       '@pandacss/shared': 0.45.1
-      ts-evaluator: 1.2.0(jsdom@24.1.3)(typescript@5.5.4)
+      ts-evaluator: 1.2.0(jsdom@25.0.0)(typescript@5.5.4)
       ts-morph: 21.0.1
     transitivePeerDependencies:
       - jsdom
@@ -12149,14 +12149,14 @@ snapshots:
       '@pandacss/types': 0.45.1
       kleur: 4.1.5
 
-  '@pandacss/node@0.45.1(jsdom@24.1.3)(typescript@5.5.4)':
+  '@pandacss/node@0.45.1(jsdom@25.0.0)(typescript@5.5.4)':
     dependencies:
       '@pandacss/config': 0.45.1
       '@pandacss/core': 0.45.1
-      '@pandacss/extractor': 0.45.1(jsdom@24.1.3)(typescript@5.5.4)
+      '@pandacss/extractor': 0.45.1(jsdom@25.0.0)(typescript@5.5.4)
       '@pandacss/generator': 0.45.1
       '@pandacss/logger': 0.45.1
-      '@pandacss/parser': 0.45.1(jsdom@24.1.3)(typescript@5.5.4)
+      '@pandacss/parser': 0.45.1(jsdom@25.0.0)(typescript@5.5.4)
       '@pandacss/shared': 0.45.1
       '@pandacss/token-dictionary': 0.45.1
       '@pandacss/types': 0.45.1
@@ -12184,11 +12184,11 @@ snapshots:
       - jsdom
       - typescript
 
-  '@pandacss/parser@0.45.1(jsdom@24.1.3)(typescript@5.5.4)':
+  '@pandacss/parser@0.45.1(jsdom@25.0.0)(typescript@5.5.4)':
     dependencies:
       '@pandacss/config': 0.45.1
       '@pandacss/core': 0.45.1
-      '@pandacss/extractor': 0.45.1(jsdom@24.1.3)(typescript@5.5.4)
+      '@pandacss/extractor': 0.45.1(jsdom@25.0.0)(typescript@5.5.4)
       '@pandacss/logger': 0.45.1
       '@pandacss/shared': 0.45.1
       '@pandacss/types': 0.45.1
@@ -12200,9 +12200,9 @@ snapshots:
       - jsdom
       - typescript
 
-  '@pandacss/postcss@0.45.1(jsdom@24.1.3)(typescript@5.5.4)':
+  '@pandacss/postcss@0.45.1(jsdom@25.0.0)(typescript@5.5.4)':
     dependencies:
-      '@pandacss/node': 0.45.1(jsdom@24.1.3)(typescript@5.5.4)
+      '@pandacss/node': 0.45.1(jsdom@25.0.0)(typescript@5.5.4)
       postcss: 8.4.41
     transitivePeerDependencies:
       - jsdom
@@ -12218,10 +12218,10 @@ snapshots:
 
   '@pandacss/shared@0.45.1': {}
 
-  '@pandacss/studio@0.45.1(@types/node@20.16.1)(@types/react-dom@18.3.0)(@types/react@18.3.4)(jsdom@24.1.3)(lightningcss@1.25.1)(terser@5.31.6)(typescript@5.5.4)':
+  '@pandacss/studio@0.45.1(@types/node@20.16.1)(@types/react-dom@18.3.0)(@types/react@18.3.4)(jsdom@25.0.0)(lightningcss@1.25.1)(terser@5.31.6)(typescript@5.5.4)':
     dependencies:
       '@astrojs/react': 3.0.10(@types/react-dom@18.3.0)(@types/react@18.3.4)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(vite@5.4.0(@types/node@20.16.1)(lightningcss@1.25.1)(terser@5.31.6))
-      '@pandacss/astro-plugin-studio': 0.45.1(astro@4.4.0(@types/node@20.16.1)(lightningcss@1.25.1)(terser@5.31.6)(typescript@5.5.4))(jsdom@24.1.3)(typescript@5.5.4)
+      '@pandacss/astro-plugin-studio': 0.45.1(astro@4.4.0(@types/node@20.16.1)(lightningcss@1.25.1)(terser@5.31.6)(typescript@5.5.4))(jsdom@25.0.0)(typescript@5.5.4)
       '@pandacss/config': 0.45.1
       '@pandacss/logger': 0.45.1
       '@pandacss/shared': 0.45.1
@@ -12549,7 +12549,7 @@ snapshots:
     dependencies:
       '@babel/runtime': 7.23.5
 
-  '@re-taro/eslint-config@4.1.0(eslint-plugin-format@0.1.2(eslint@8.57.0))(eslint@8.57.0)(typescript@5.5.4)(vitest@2.0.5(@types/node@20.16.1)(jsdom@24.1.3)(lightningcss@1.25.1)(terser@5.31.6))':
+  '@re-taro/eslint-config@4.1.0(eslint-plugin-format@0.1.2(eslint@8.57.0))(eslint@8.57.0)(typescript@5.5.4)(vitest@2.0.5(@types/node@20.16.1)(jsdom@25.0.0)(lightningcss@1.25.1)(terser@5.31.6))':
     dependencies:
       '@antfu/eslint-define-config': 1.23.0-2
       '@antfu/install-pkg': 0.3.2
@@ -12577,7 +12577,7 @@ snapshots:
       eslint-plugin-toml: 0.11.0(eslint@8.57.0)
       eslint-plugin-unicorn: 52.0.0(eslint@8.57.0)
       eslint-plugin-unused-imports: 3.1.0(@typescript-eslint/eslint-plugin@7.5.0(@typescript-eslint/parser@7.5.0(eslint@8.57.0)(typescript@5.5.4))(eslint@8.57.0)(typescript@5.5.4))(eslint@8.57.0)
-      eslint-plugin-vitest: 0.4.1(@typescript-eslint/eslint-plugin@7.5.0(@typescript-eslint/parser@7.5.0(eslint@8.57.0)(typescript@5.5.4))(eslint@8.57.0)(typescript@5.5.4))(eslint@8.57.0)(typescript@5.5.4)(vitest@2.0.5(@types/node@20.16.1)(jsdom@24.1.3)(lightningcss@1.25.1)(terser@5.31.6))
+      eslint-plugin-vitest: 0.4.1(@typescript-eslint/eslint-plugin@7.5.0(@typescript-eslint/parser@7.5.0(eslint@8.57.0)(typescript@5.5.4))(eslint@8.57.0)(typescript@5.5.4))(eslint@8.57.0)(typescript@5.5.4)(vitest@2.0.5(@types/node@20.16.1)(jsdom@25.0.0)(lightningcss@1.25.1)(terser@5.31.6))
       eslint-plugin-yml: 1.14.0(eslint@8.57.0)
       globals: 15.0.0
       jsonc-eslint-parser: 2.4.0
@@ -12948,11 +12948,11 @@ snapshots:
       '@storybook/global': 5.0.0
       storybook: 8.2.9(@babel/preset-env@7.24.5(@babel/core@7.24.5))
 
-  '@storybook/addon-interactions@8.2.9(@jest/globals@29.7.0)(jest@29.7.0(@types/node@20.16.1)(babel-plugin-macros@3.1.0))(storybook@8.2.9(@babel/preset-env@7.24.5(@babel/core@7.24.5)))(vitest@2.0.5(@types/node@20.16.1)(jsdom@24.1.3)(lightningcss@1.25.1)(terser@5.31.6))':
+  '@storybook/addon-interactions@8.2.9(@jest/globals@29.7.0)(jest@29.7.0(@types/node@20.16.1)(babel-plugin-macros@3.1.0))(storybook@8.2.9(@babel/preset-env@7.24.5(@babel/core@7.24.5)))(vitest@2.0.5(@types/node@20.16.1)(jsdom@25.0.0)(lightningcss@1.25.1)(terser@5.31.6))':
     dependencies:
       '@storybook/global': 5.0.0
       '@storybook/instrumenter': 8.2.9(storybook@8.2.9(@babel/preset-env@7.24.5(@babel/core@7.24.5)))
-      '@storybook/test': 8.2.9(@jest/globals@29.7.0)(jest@29.7.0(@types/node@20.16.1)(babel-plugin-macros@3.1.0))(storybook@8.2.9(@babel/preset-env@7.24.5(@babel/core@7.24.5)))(vitest@2.0.5(@types/node@20.16.1)(jsdom@24.1.3)(lightningcss@1.25.1)(terser@5.31.6))
+      '@storybook/test': 8.2.9(@jest/globals@29.7.0)(jest@29.7.0(@types/node@20.16.1)(babel-plugin-macros@3.1.0))(storybook@8.2.9(@babel/preset-env@7.24.5(@babel/core@7.24.5)))(vitest@2.0.5(@types/node@20.16.1)(jsdom@25.0.0)(lightningcss@1.25.1)(terser@5.31.6))
       polished: 4.3.1
       storybook: 8.2.9(@babel/preset-env@7.24.5(@babel/core@7.24.5))
       ts-dedent: 2.2.0
@@ -13284,12 +13284,12 @@ snapshots:
       - supports-color
       - ts-node
 
-  '@storybook/test@8.2.9(@jest/globals@29.7.0)(jest@29.7.0(@types/node@20.16.1)(babel-plugin-macros@3.1.0))(storybook@8.2.9(@babel/preset-env@7.24.5(@babel/core@7.24.5)))(vitest@2.0.5(@types/node@20.16.1)(jsdom@24.1.3)(lightningcss@1.25.1)(terser@5.31.6))':
+  '@storybook/test@8.2.9(@jest/globals@29.7.0)(jest@29.7.0(@types/node@20.16.1)(babel-plugin-macros@3.1.0))(storybook@8.2.9(@babel/preset-env@7.24.5(@babel/core@7.24.5)))(vitest@2.0.5(@types/node@20.16.1)(jsdom@25.0.0)(lightningcss@1.25.1)(terser@5.31.6))':
     dependencies:
       '@storybook/csf': 0.1.11
       '@storybook/instrumenter': 8.2.9(storybook@8.2.9(@babel/preset-env@7.24.5(@babel/core@7.24.5)))
       '@testing-library/dom': 10.1.0
-      '@testing-library/jest-dom': 6.4.5(@jest/globals@29.7.0)(jest@29.7.0(@types/node@20.16.1)(babel-plugin-macros@3.1.0))(vitest@2.0.5(@types/node@20.16.1)(jsdom@24.1.3)(lightningcss@1.25.1)(terser@5.31.6))
+      '@testing-library/jest-dom': 6.4.5(@jest/globals@29.7.0)(jest@29.7.0(@types/node@20.16.1)(babel-plugin-macros@3.1.0))(vitest@2.0.5(@types/node@20.16.1)(jsdom@25.0.0)(lightningcss@1.25.1)(terser@5.31.6))
       '@testing-library/user-event': 14.5.2(@testing-library/dom@10.1.0)
       '@vitest/expect': 1.6.0
       '@vitest/spy': 1.6.0
@@ -13550,7 +13550,7 @@ snapshots:
       lz-string: 1.5.0
       pretty-format: 27.5.1
 
-  '@testing-library/jest-dom@6.4.5(@jest/globals@29.7.0)(jest@29.7.0(@types/node@20.16.1)(babel-plugin-macros@3.1.0))(vitest@2.0.5(@types/node@20.16.1)(jsdom@24.1.3)(lightningcss@1.25.1)(terser@5.31.6))':
+  '@testing-library/jest-dom@6.4.5(@jest/globals@29.7.0)(jest@29.7.0(@types/node@20.16.1)(babel-plugin-macros@3.1.0))(vitest@2.0.5(@types/node@20.16.1)(jsdom@25.0.0)(lightningcss@1.25.1)(terser@5.31.6))':
     dependencies:
       '@adobe/css-tools': 4.4.0
       '@babel/runtime': 7.23.5
@@ -13563,7 +13563,7 @@ snapshots:
     optionalDependencies:
       '@jest/globals': 29.7.0
       jest: 29.7.0(@types/node@20.16.1)(babel-plugin-macros@3.1.0)
-      vitest: 2.0.5(@types/node@20.16.1)(jsdom@24.1.3)(lightningcss@1.25.1)(terser@5.31.6)
+      vitest: 2.0.5(@types/node@20.16.1)(jsdom@25.0.0)(lightningcss@1.25.1)(terser@5.31.6)
 
   '@testing-library/jest-dom@6.5.0':
     dependencies:
@@ -15959,13 +15959,13 @@ snapshots:
     optionalDependencies:
       '@typescript-eslint/eslint-plugin': 7.5.0(@typescript-eslint/parser@7.5.0(eslint@8.57.0)(typescript@5.5.4))(eslint@8.57.0)(typescript@5.5.4)
 
-  eslint-plugin-vitest@0.4.1(@typescript-eslint/eslint-plugin@7.5.0(@typescript-eslint/parser@7.5.0(eslint@8.57.0)(typescript@5.5.4))(eslint@8.57.0)(typescript@5.5.4))(eslint@8.57.0)(typescript@5.5.4)(vitest@2.0.5(@types/node@20.16.1)(jsdom@24.1.3)(lightningcss@1.25.1)(terser@5.31.6)):
+  eslint-plugin-vitest@0.4.1(@typescript-eslint/eslint-plugin@7.5.0(@typescript-eslint/parser@7.5.0(eslint@8.57.0)(typescript@5.5.4))(eslint@8.57.0)(typescript@5.5.4))(eslint@8.57.0)(typescript@5.5.4)(vitest@2.0.5(@types/node@20.16.1)(jsdom@25.0.0)(lightningcss@1.25.1)(terser@5.31.6)):
     dependencies:
       '@typescript-eslint/utils': 7.5.0(eslint@8.57.0)(typescript@5.5.4)
       eslint: 8.57.0
     optionalDependencies:
       '@typescript-eslint/eslint-plugin': 7.5.0(@typescript-eslint/parser@7.5.0(eslint@8.57.0)(typescript@5.5.4))(eslint@8.57.0)(typescript@5.5.4)
-      vitest: 2.0.5(@types/node@20.16.1)(jsdom@24.1.3)(lightningcss@1.25.1)(terser@5.31.6)
+      vitest: 2.0.5(@types/node@20.16.1)(jsdom@25.0.0)(lightningcss@1.25.1)(terser@5.31.6)
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -17679,7 +17679,7 @@ snapshots:
 
   jsdoc-type-pratt-parser@4.0.0: {}
 
-  jsdom@24.1.3:
+  jsdom@25.0.0:
     dependencies:
       cssstyle: 4.0.1
       data-urls: 5.0.0
@@ -20841,14 +20841,14 @@ snapshots:
 
   ts-dedent@2.2.0: {}
 
-  ts-evaluator@1.2.0(jsdom@24.1.3)(typescript@5.5.4):
+  ts-evaluator@1.2.0(jsdom@25.0.0)(typescript@5.5.4):
     dependencies:
       ansi-colors: 4.1.3
       crosspath: 2.0.0
       object-path: 0.11.8
       typescript: 5.5.4
     optionalDependencies:
-      jsdom: 24.1.3
+      jsdom: 25.0.0
 
   ts-morph@21.0.1:
     dependencies:
@@ -21335,7 +21335,7 @@ snapshots:
     optionalDependencies:
       vite: 5.4.2(@types/node@20.16.1)(lightningcss@1.25.1)(terser@5.31.6)
 
-  vitest@2.0.5(@types/node@20.16.1)(jsdom@24.1.3)(lightningcss@1.25.1)(terser@5.31.6):
+  vitest@2.0.5(@types/node@20.16.1)(jsdom@25.0.0)(lightningcss@1.25.1)(terser@5.31.6):
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@vitest/expect': 2.0.5
@@ -21358,7 +21358,7 @@ snapshots:
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 20.16.1
-      jsdom: 24.1.3
+      jsdom: 25.0.0
     transitivePeerDependencies:
       - less
       - lightningcss
