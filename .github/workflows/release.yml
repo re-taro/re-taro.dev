@@ -27,7 +27,7 @@ jobs:
           private_key: ${{ secrets.PRIVATE_KEY}}
       - name: Create Release Pull Request
         id: changesets
-        uses: changesets/action@v1.4.7
+        uses: changesets/action@v1.4.8
         with:
           publish: pnpm changeset publish
         env:
