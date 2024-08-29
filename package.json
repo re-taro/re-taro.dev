@@ -51,7 +51,7 @@
 		"@iconify-json/fa-solid": "1.1.9",
 		"@iconify-json/ri": "1.1.22",
 		"@iconify-json/simple-icons": "1.1.115",
-		"@pandacss/dev": "0.45.1",
+		"@pandacss/dev": "0.45.2",
 		"@pandacss/studio": "0.45.1",
 		"@playwright/test": "1.46.1",
 		"@re-taro/eslint-config": "4.1.0",
