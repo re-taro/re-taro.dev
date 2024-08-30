@@ -3,13 +3,13 @@ import type { SystemStyleObject } from "styled-system/types";
 import type { HTMLAttributes, ReactNode } from "react";
 
 interface BaseProps {
-	type?: "main" | "sub";
-	as?: "span" | "p" | "em";
-	emphasis?: boolean;
-	leading?: "normal" | "tight" | "none";
-	weight?: "normal" | "bold";
 	children: ReactNode;
+	as?: "em" | "p" | "span";
 	css?: SystemStyleObject;
+	emphasis?: boolean;
+	leading?: "none" | "normal" | "tight";
+	type?: "main" | "sub";
+	weight?: "bold" | "normal";
 }
 
 type ElementProps = Omit<HTMLAttributes<HTMLSpanElement>, keyof BaseProps>;
@@ -18,12 +18,28 @@ const text = cva({
 	base: {
 		fontSize: "m",
 
-		wordBreak: "keep-all",
-		lineBreak: "strict",
 		hangingPunctuation: "allow-end",
+		lineBreak: "strict",
 		overflowWrap: "anywhere",
+		wordBreak: "keep-all",
 	},
 	variants: {
+		emphasis: {
+			true: {
+				fontWeight: "bold",
+			},
+		},
+		leading: {
+			none: {
+				lineHeight: "none",
+			},
+			normal: {
+				lineHeight: "normal",
+			},
+			tight: {
+				lineHeight: "tight",
+			},
+		},
 		type: {
 			main: {
 				color: "text.main",
@@ -32,46 +48,31 @@ const text = cva({
 				color: "text.secondary",
 			},
 		},
-		leading: {
-			normal: {
-				lineHeight: "normal",
-			},
-			tight: {
-				lineHeight: "tight",
-			},
-			none: {
-				lineHeight: "none",
-			},
-		},
 		weight: {
-			normal: {
-				fontWeight: "normal",
-			},
 			bold: {
 				fontWeight: "bold",
 			},
-		},
-		emphasis: {
-			true: {
-				fontWeight: "bold",
+			normal: {
+				fontWeight: "normal",
 			},
 		},
 	},
 });
 
 export function Paragraph({
-	type = "main",
+	css: cssStyle,
 	emphasis = false,
 	leading = "normal",
+	type = "main",
 	weight = "normal",
+	// eslint-disable-next-line perfectionist/sort-objects
 	as: Component = emphasis ? "em" : "span",
-	css: cssStyle,
 	...props
 }: BaseProps & ElementProps): ReactNode {
 	return (
 		<Component
 			{...props}
-			className={css(text.raw({ type, leading, weight, emphasis }), cssStyle)}
+			className={css(text.raw({ emphasis, leading, type, weight }), cssStyle)}
 		/>
 	);
 }

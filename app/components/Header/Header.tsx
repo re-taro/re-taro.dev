@@ -10,40 +10,40 @@ import GithubLine from "~icons/ri/github-line";
 import FaSolidBlog from "~icons/fa-solid/blog";
 import { useScramble } from "~/hooks/useScramble";
 
-function ListItem({ to, text, icon }: { to: string; text: string; icon: ReactElement }): ReactNode {
+function ListItem({ icon, text, to }: { icon: ReactElement; text: string; to: string }): ReactNode {
 	return (
 		<li>
 			<Link
 				className={css({
-					display: { base: "none", md: "inline" },
+					_focusVisible: {
+						opacity: 1,
+					},
 
 					_hover: {
 						opacity: 1,
 					},
-					_focusVisible: {
-						opacity: 1,
-					},
+					display: { base: "none", md: "inline" },
 				})}
-				to={to}
 				prefetch="intent"
 				title={text}
+				to={to}
 			>
 				{text}
 			</Link>
 			<Link
 				className={css({
-					display: { base: "inline", md: "none" },
+					_focusVisible: {
+						opacity: 1,
+					},
 
 					_hover: {
 						opacity: 1,
 					},
-					_focusVisible: {
-						opacity: 1,
-					},
+					display: { base: "inline", md: "none" },
 				})}
-				to={to}
 				prefetch="intent"
 				title={text}
+				to={to}
 			>
 				{icon}
 			</Link>
@@ -56,19 +56,19 @@ interface Props {
 }
 
 export function Header({ css: cssStyle }: Props): ReactNode {
-	const { ref, replay } = useScramble({ text: "re-taro", scramble: 8 });
+	const { ref, replay } = useScramble({ scramble: 8, text: "re-taro" });
 
 	return (
 		<header
 			className={css({
+				alignItems: "center",
+				backgroundColor: "bg.main",
+				display: "flex",
+				insetInline: 0,
+				paddingInline: "1rem",
 				position: "fixed",
 				top: 0,
-				insetInline: 0,
-				display: "flex",
-				alignItems: "center",
 				width: "100%",
-				paddingInline: "1rem",
-				backgroundColor: "bg.main",
 				zIndex: 100,
 			}, cssStyle)}
 		>
@@ -80,31 +80,31 @@ export function Header({ css: cssStyle }: Props): ReactNode {
 					lineHeight: "none",
 					marginRight: "auto",
 				})}
-				to="/"
-				ref={ref}
 				onMouseOver={() => { replay(); }}
+				ref={ref}
 				title="Rintaro Itokawa @re-taro"
+				to="/"
 			/>
 			<nav>
 				<ul
 					className={css({
-						"display": "flex",
-						"gap": "1.2rem",
-						"alignItems": "center",
-						"color": "text.main",
-						"fontSize": "m",
-						"fontWeight": "normal",
-						"lineHeight": "tight",
-
 						"& > li > a": {
 							opacity: 0.6,
 							transition: "opacity 0.2s ease",
 						},
+						"alignItems": "center",
+						"color": "text.main",
+						"display": "flex",
+						"fontSize": "m",
+						"fontWeight": "normal",
+						"gap": "1.2rem",
+
+						"lineHeight": "tight",
 					})}
 				>
-					<ListItem to="/about" text="About" icon={<AccountCircleLine />} />
-					<ListItem to="/timeline" text="Timeline" icon={<ViewTimeline />} />
-					<ListItem to="/works" text="Works" icon={<LightbulbLine />} />
+					<ListItem icon={<AccountCircleLine />} text="About" to="/about" />
+					<ListItem icon={<ViewTimeline />} text="Timeline" to="/timeline" />
+					<ListItem icon={<LightbulbLine />} text="Works" to="/works" />
 					<li
 						className={css({
 							display: { base: "none", md: "inline" },
@@ -112,10 +112,10 @@ export function Header({ css: cssStyle }: Props): ReactNode {
 					>
 						<a
 							className={css({
-								_hover: {
+								_focusVisible: {
 									opacity: 1,
 								},
-								_focusVisible: {
+								_hover: {
 									opacity: 1,
 								},
 							})}
@@ -134,10 +134,10 @@ export function Header({ css: cssStyle }: Props): ReactNode {
 					>
 						<a
 							className={css({
-								_hover: {
+								_focusVisible: {
 									opacity: 1,
 								},
-								_focusVisible: {
+								_hover: {
 									opacity: 1,
 								},
 							})}
@@ -156,10 +156,10 @@ export function Header({ css: cssStyle }: Props): ReactNode {
 					>
 						<a
 							className={css({
-								_hover: {
+								_focusVisible: {
 									opacity: 1,
 								},
-								_focusVisible: {
+								_hover: {
 									opacity: 1,
 								},
 							})}

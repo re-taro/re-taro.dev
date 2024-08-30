@@ -10,11 +10,11 @@ export default async function handleRequest(
 	remixContext: EntryContext,
 ) {
 	const body = await renderToReadableStream(<RemixServer context={remixContext} url={request.url} />, {
-		signal: request.signal,
 		onError(error: unknown) {
 			console.error("[error]", error);
 			responseStatusCode = 500;
 		},
+		signal: request.signal,
 	});
 
 	if (isbot(request.headers.get("user-agent")))

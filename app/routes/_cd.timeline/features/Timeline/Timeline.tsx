@@ -9,8 +9,8 @@ interface Props {
 export function Timeline({ timelines }: Props): ReactNode {
 	return (
 		<ul>
-			{timelines.map((timeline, index) => (
-				<TimelineItem title={timeline.title} date={timeline.date} slug={timeline.slug} key={index} />
+			{timelines.map(timeline => (
+				<TimelineItem date={timeline.date} key={timeline.title} slug={timeline.slug} title={timeline.title} />
 			))}
 		</ul>
 	);

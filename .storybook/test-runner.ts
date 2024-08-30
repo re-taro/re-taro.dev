@@ -3,9 +3,6 @@ import { getStoryContext } from "@storybook/test-runner";
 import { checkA11y, configureAxe, injectAxe } from "axe-playwright";
 
 const a11yConfig: TestRunnerConfig = {
-	async preVisit(page) {
-		await injectAxe(page);
-	},
 	async postVisit(page, context) {
 		const storyContext = await getStoryContext(page, context);
 
@@ -15,8 +12,8 @@ const a11yConfig: TestRunnerConfig = {
 		await configureAxe(page, {
 			rules: [
 				{
-					id: "color-contrast",
 					enabled: false,
+					id: "color-contrast",
 				},
 				...(storyContext.parameters?.a11y?.config?.rules ?? []),
 			],
@@ -28,6 +25,9 @@ const a11yConfig: TestRunnerConfig = {
 				html: true,
 			},
 		});
+	},
+	async preVisit(page) {
+		await injectAxe(page);
 	},
 };
 

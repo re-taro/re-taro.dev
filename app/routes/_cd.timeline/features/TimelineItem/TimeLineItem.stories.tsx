@@ -6,21 +6,21 @@ import { TimelineItem } from "./TimelineItem";
 type T = typeof TimelineItem;
 
 const meta: Meta = {
-	title: "TimelineItem",
-	component: TimelineItem,
-	parameters: {
-		layout: "centered",
-	},
-	tags: ["autodocs"],
 	args: {
+		date: Temporal.PlainDate.from({ day: 25, month: 4, year: 2004 }),
 		title: "誕生",
-		date: Temporal.PlainDate.from({ year: 2004, month: 4, day: 25 }),
 	},
+	component: TimelineItem,
 	decorators: [Story => (
 		<ul>
 			<Story />
 		</ul>
 	)],
+	parameters: {
+		layout: "centered",
+	},
+	tags: ["autodocs"],
+	title: "TimelineItem",
 } satisfies Meta<T>;
 
 type Story = StoryObj<T>;

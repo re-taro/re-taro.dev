@@ -4,50 +4,52 @@ import { removeUnusedKeyframes } from "./removeUnusedKeyframse";
 import { removeUnusedCssVars } from "./removeUnusedvars";
 
 export default defineConfig({
-	include: ["./app/**/*.tsx"],
-	exclude: [],
-	outdir: "styled-system",
-	outExtension: "js",
-	minify: true,
-	hash: true,
-	clean: true,
-	lightningcss: true,
 	browserslist: ["defaults and > 0.3%"],
-	strictTokens: true,
-	strictPropertyValues: true,
-	jsxStyleProps: "none",
-	preflight: true,
-	presets: [],
+	clean: true,
+	conditions: {
+		active: "&:is(:active, [data-active])",
+		after: "&::after",
+		before: "&::before",
+		checked: "&:is(:checked, [data-checked], [aria-checked=true], [data-state=\"checked\"])",
+		disabled: "&:is(:disabled, [disabled], [data-disabled])",
+		enabled: "&:enabled",
+		focusVisible: "&:is(:focus-visible, [data-focus-visible])",
+		hover: "&:is(:hover, [data-hover])",
+		invalid: "&:is(:invalid, [data-invalid])",
+		pressed: "&:is([aria-pressed=true], [data-pressed])",
+		readOnly: "&:is(:read-only, [data-read-only])",
+		required: "&:is(:required, [data-required], [aria-required=true])",
+		selected: "&:is([aria-selected=true], [data-selected])",
+		valid: "&:is(:valid, [data-valid])",
+	},
 	eject: true,
-	utilities: {
-		color: {
-			values: "colors",
-		},
-		backgroundColor: {
-			values: "colors",
-		},
-		borderColor: {
-			values: "colors",
-		},
-		outlineColor: {
-			values: "colors",
-		},
-		fill: {
-			values: "colors",
-		},
-		stroke: {
-			values: "colors",
-		},
-		lineHeight: {
-			values: "lineHeights",
-		},
-		fontWeight: {
-			values: "fontWeights",
-		},
-		fontSize: {
-			values: "fontSizes",
+	exclude: [],
+	globalCss: {
+		body: {
+			backgroundColor: "bg.main",
+
+			fontFamily: "Inter, \"Noto Sans JP\", \"Hiragino Kaku Gothic ProN\", \"Hiragino Sans\", Meiryo, sans-serif",
+			MozOsxFontSmoothing: "grayscale",
+			WebkitFontSmoothing: "antialiased",
 		},
 	},
+	hash: true,
+	hooks: {
+		"cssgen:done": ({ artifact, content }) => {
+			if (artifact === "styles.css")
+				return removeUnusedCssVars(removeUnusedKeyframes(content));
+		},
+	},
+	include: ["./app/**/*.tsx"],
+	jsxStyleProps: "none",
+	lightningcss: true,
+	minify: true,
+	outdir: "styled-system",
+	outExtension: "js",
+	preflight: true,
+	presets: [],
+	strictPropertyValues: true,
+	strictTokens: true,
 	theme: {
 		breakpoints: {
 			md: "768px",
@@ -65,6 +67,11 @@ export default defineConfig({
 						value: "#3c4144",
 					},
 				},
+				border: {
+					main: {
+						value: "#909191",
+					},
+				},
 				text: {
 					main: {
 						value: "#ced0d0",
@@ -73,43 +80,19 @@ export default defineConfig({
 						value: "#b4b5b5",
 					},
 				},
-				border: {
-					main: {
-						value: "#909191",
-					},
-				},
-			},
-			lineHeights: {
-				normal: {
-					value: 1.5,
-				},
-				tight: {
-					value: 1.25,
-				},
-				none: {
-					value: 1,
-				},
-			},
-			fontWeights: {
-				normal: {
-					value: 400,
-				},
-				bold: {
-					value: 600,
-				},
 			},
 			fontSizes: {
-				"4xl": {
-					value: "3rem",
+				"2xl": {
+					value: "2rem",
+				},
+				"2xs": {
+					value: "0.625rem",
 				},
 				"3xl": {
 					value: "2.5rem",
 				},
-				"2xl": {
-					value: "2rem",
-				},
-				"xl": {
-					value: "1.5rem",
+				"4xl": {
+					value: "3rem",
 				},
 				"l": {
 					value: "1.125rem",
@@ -120,44 +103,61 @@ export default defineConfig({
 				"s": {
 					value: "0.875rem",
 				},
+				"xl": {
+					value: "1.5rem",
+				},
 				"xs": {
 					value: "0.75rem",
 				},
-				"2xs": {
-					value: "0.625rem",
+			},
+			fontWeights: {
+				bold: {
+					value: 600,
+				},
+				normal: {
+					value: 400,
+				},
+			},
+			lineHeights: {
+				none: {
+					value: 1,
+				},
+				normal: {
+					value: 1.5,
+				},
+				tight: {
+					value: 1.25,
 				},
 			},
 		},
 	},
-	conditions: {
-		hover: "&:is(:hover, [data-hover])",
-		focusVisible: "&:is(:focus-visible, [data-focus-visible])",
-		disabled: "&:is(:disabled, [disabled], [data-disabled])",
-		active: "&:is(:active, [data-active])",
-		readOnly: "&:is(:read-only, [data-read-only])",
-		checked: "&:is(:checked, [data-checked], [aria-checked=true], [data-state=\"checked\"])",
-		enabled: "&:enabled",
-		before: "&::before",
-		after: "&::after",
-		required: "&:is(:required, [data-required], [aria-required=true])",
-		valid: "&:is(:valid, [data-valid])",
-		invalid: "&:is(:invalid, [data-invalid])",
-		pressed: "&:is([aria-pressed=true], [data-pressed])",
-		selected: "&:is([aria-selected=true], [data-selected])",
-	},
-	globalCss: {
-		body: {
-			backgroundColor: "bg.main",
-
-			fontFamily: "Inter, \"Noto Sans JP\", \"Hiragino Kaku Gothic ProN\", \"Hiragino Sans\", Meiryo, sans-serif",
-			WebkitFontSmoothing: "antialiased",
-			MozOsxFontSmoothing: "grayscale",
+	utilities: {
+		backgroundColor: {
+			values: "colors",
 		},
-	},
-	hooks: {
-		"cssgen:done": ({ artifact, content }) => {
-			if (artifact === "styles.css")
-				return removeUnusedCssVars(removeUnusedKeyframes(content));
+		borderColor: {
+			values: "colors",
+		},
+		color: {
+			values: "colors",
+		},
+		fill: {
+			values: "colors",
+		},
+		fontSize: {
+			values: "fontSizes",
+		},
+		fontWeight: {
+			values: "fontWeights",
+		},
+		lineHeight: {
+			values: "lineHeights",
+		},
+		outlineColor: {
+			values: "colors",
+		},
+		stroke: {
+			values: "colors",
 		},
 	},
 });

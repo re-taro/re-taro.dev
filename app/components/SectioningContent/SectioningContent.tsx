@@ -12,23 +12,23 @@ import { css } from "styled-system/css";
 import { LevelContext } from "./level";
 
 type BaseProps = PropsWithChildren<{
-	css?: SystemStyleObject;
 	// via https://html.spec.whatwg.org/multipage/dom.html#sectioning-content
 	as?: "article" | "aside" | "nav" | "section";
 	baseLevel?: number;
+	css?: SystemStyleObject;
 }>;
 
-type SectioningContentProps = Omit<
-	HTMLAttributes<HTMLElement>,
+type SectioningContentProps = BaseProps &
+	Omit<
+		HTMLAttributes<HTMLElement>,
 	keyof BaseProps | "className"
-> &
-BaseProps;
+	>;
 
 type Props = Omit<ComponentProps<typeof SectioningContent>, "as">;
 
 export function SectioningFragment({
-	children,
 	baseLevel,
+	children,
 }: PropsWithChildren<{ baseLevel?: number }>): ReactNode {
 	const level = useContext(LevelContext);
 
@@ -39,9 +39,8 @@ export function SectioningFragment({
 	);
 }
 
-// eslint-disable-next-line react/display-name
 const SectioningContent = forwardRef<HTMLElement, SectioningContentProps>(
-	({ children, baseLevel, as: Component = "section", css: cssProps, ...props }, ref) => (
+	({ as: Component = "section", baseLevel, children, css: cssProps, ...props }, ref) => (
 		<Component {...props} className={css(cssProps)} ref={ref}>
 			<SectioningFragment baseLevel={baseLevel}>{children}</SectioningFragment>
 		</Component>

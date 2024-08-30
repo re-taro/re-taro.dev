@@ -6,12 +6,12 @@ import { Section } from "~/components/SectioningContent";
 type T = typeof Heading;
 
 const meta: Meta = {
-	title: "Heading",
 	component: Heading,
 	parameters: {
 		layout: "centered",
 	},
 	tags: ["autodocs"],
+	title: "Heading",
 } satisfies Meta<T>;
 
 type Story = StoryObj<T>;
@@ -99,12 +99,12 @@ function Headings() {
 }
 
 export const AutoHeading: Story = {
-	render: () => <Headings />,
 	parameters: {
 		a11y: {
 			disable: true,
 		},
 	},
+	render: () => <Headings />,
 };
 
 export default meta;

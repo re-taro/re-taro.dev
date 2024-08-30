@@ -21,20 +21,6 @@ function config(
 	plop,
 ) {
 	plop.setGenerator("page", {
-		description: "Create a new page",
-		prompts: [
-			{
-				type: "list",
-				name: "parent",
-				message: "/{path please}/...",
-				choices: pages,
-			},
-			{
-				type: "input",
-				name: "name",
-				message: "page name please.(This will be the name of the endpoint)",
-			},
-		],
 		actions: (data) => {
 			/**
 			 * @type {import("plop").ActionType[]}
@@ -43,81 +29,81 @@ function config(
 
 			if (data?.parent === "") {
 				actions.push({
-					type: "add",
 					path: "app/routes/{{name}}/route.tsx",
 					templateFile: "templates/pages/route.tsx.hbs",
+					type: "add",
 				});
 
 				actions.push({
-					type: "add",
 					path: "tests/{{name}}.test.ts",
 					templateFile: "templates/tests/route.test.ts.hbs",
+					type: "add",
 				});
 			}
 			else {
 				actions.push({
-					type: "add",
 					path: "app/routes/{{parent}}.{{name}}/route.tsx",
 					templateFile: "templates/pages/route.tsx.hbs",
+					type: "add",
 				});
 
 				actions.push({
-					type: "add",
 					path: "tests/{{parent}}.{{name}}.test.ts",
 					templateFile: "templates/tests/route.test.ts.hbs",
+					type: "add",
 				});
 			}
 
 			return actions;
 		},
+		description: "Create a new page",
+		prompts: [
+			{
+				choices: pages,
+				message: "/{path please}/...",
+				name: "parent",
+				type: "list",
+			},
+			{
+				message: "page name please.(This will be the name of the endpoint)",
+				name: "name",
+				type: "input",
+			},
+		],
 	});
 	plop.setGenerator("component", {
+		actions: [
+			{
+				path: "app/components/{{pascalCase name}}/index.ts",
+				templateFile: "templates/components/index.ts.hbs",
+				type: "add",
+			},
+			{
+				path: "app/components/{{pascalCase name}}/{{pascalCase name}}.tsx",
+				templateFile: "templates/components/component.tsx.hbs",
+				type: "add",
+			},
+			{
+				path: "app/components/{{pascalCase name}}/{{pascalCase name}}.stories.ts",
+				templateFile: "templates/components/component.stories.ts.hbs",
+				type: "add",
+			},
+			{
+				path: "app/components/{{pascalCase name}}/{{pascalCase name}}.test.tsx",
+				templateFile: "templates/components/component.test.tsx.hbs",
+				type: "add",
+			},
+		],
 		description: "Create a new component",
 		prompts: [
 			{
-				type: "input",
-				name: "name",
 				message: "component name please",
-			},
-		],
-		actions: [
-			{
-				type: "add",
-				path: "app/components/{{pascalCase name}}/index.ts",
-				templateFile: "templates/components/index.ts.hbs",
-			},
-			{
-				type: "add",
-				path: "app/components/{{pascalCase name}}/{{pascalCase name}}.tsx",
-				templateFile: "templates/components/component.tsx.hbs",
-			},
-			{
-				type: "add",
-				path: "app/components/{{pascalCase name}}/{{pascalCase name}}.stories.ts",
-				templateFile: "templates/components/component.stories.ts.hbs",
-			},
-			{
-				type: "add",
-				path: "app/components/{{pascalCase name}}/{{pascalCase name}}.test.tsx",
-				templateFile: "templates/components/component.test.tsx.hbs",
+				name: "name",
+				type: "input",
 			},
 		],
 	});
 	plop.setGenerator("feature", {
-		description: "Create a new feature",
-		prompts: [
-			{
-				type: "list",
-				name: "parent",
-				message: "app/routes/{path please}/features/...",
-				choices: pages,
-			},
-			{
-				type: "input",
-				name: "name",
-				message: "feature name please",
-			},
-		],
 		actions: (data) => {
 			/**
 			 * @type {import("plop").ActionType[]}
@@ -126,77 +112,73 @@ function config(
 
 			if (data?.parent === "") {
 				actions.push({
-					type: "add",
 					path: "app/routes/features/{{ pascalCase name }}/index.ts",
 					templateFile: "templates/components/index.ts.hbs",
+					type: "add",
 				});
 
 				actions.push({
-					type: "add",
 					path: "app/routes/features/{{ pascalCase name }}/{{ pascalCase name }}.tsx",
 					templateFile: "templates/components/component.tsx.hbs",
+					type: "add",
 				});
 
 				actions.push({
-					type: "add",
 					path: "app/routes/features/{{ pascalCase name }}/{{ pascalCase name }}.stories.ts",
 					templateFile: "templates/components/component.stories.ts.hbs",
+					type: "add",
 				});
 
 				actions.push({
-					type: "add",
 					path: "app/routes/features/{{ pascalCase name }}/{{ pascalCase name }}.test.tsx",
 					templateFile: "templates/components/component.test.tsx.hbs",
+					type: "add",
 				});
 			}
 			else {
 				actions.push({
-					type: "add",
 					path: "app/routes/{{parent}}/features/{{ pascalCase name }}/index.ts",
 					templateFile: "templates/components/index.ts.hbs",
+					type: "add",
 				});
 
 				actions.push({
-					type: "add",
 					path: "app/routes/{{parent}}/features/{{ pascalCase name }}/{{ pascalCase name }}.tsx",
 					templateFile: "templates/components/component.tsx.hbs",
+					type: "add",
 				});
 
 				actions.push({
-					type: "add",
 					path: "app/routes/{{parent}}/features/{{ pascalCase name }}/{{ pascalCase name }}.stories.ts",
 					templateFile: "templates/components/component.stories.ts.hbs",
+					type: "add",
 				});
 
 				actions.push({
-					type: "add",
 					path: "app/routes/{{parent}}/features/{{ pascalCase name }}/{{ pascalCase name }}.test.tsx",
 					templateFile: "templates/components/component.test.tsx.hbs",
+					type: "add",
 				});
 			}
 
 			return actions;
 		},
-	});
-	plop.setGenerator("handler", {
-		description: "Create a new handler",
+		description: "Create a new feature",
 		prompts: [
 			{
-				type: "expand",
-				name: "type",
-				message: "Which type of handler?",
-				choices: [
-					{ key: "l", name: "Loader", value: "loader" },
-					{ key: "a", name: "Action", value: "action" },
-				],
+				choices: pages,
+				message: "app/routes/{path please}/features/...",
+				name: "parent",
+				type: "list",
 			},
 			{
-				type: "list",
-				name: "parent",
-				message: "app/routes/{path please}/handlers/...",
-				choices: pages,
+				message: "feature name please",
+				name: "name",
+				type: "input",
 			},
 		],
+	});
+	plop.setGenerator("handler", {
 		actions: (data) => {
 			/**
 			 * @type {import("plop").ActionType[]}
@@ -206,9 +188,9 @@ function config(
 			if (data?.parent === "") {
 				if (data?.type === "loader") {
 					actions.push({
-						type: "add",
 						path: "app/routes/handlers/loader.ts",
 						templateFile: "templates/handlers/loader.ts.hbs",
+						type: "add",
 					});
 
 					//					actions.push({
@@ -218,16 +200,16 @@ function config(
 					//					});
 
 					actions.push({
-						type: "append",
 						path: "app/routes/handlers/index.ts",
 						template: "export { loader } from './loader';",
+						type: "append",
 					});
 				}
 				else {
 					actions.push({
-						type: "add",
 						path: "app/routes/handlers/action.ts",
 						templateFile: "templates/handlers/action.ts.hbs",
+						type: "add",
 					});
 
 					//					actions.push({
@@ -237,18 +219,18 @@ function config(
 					//					});
 
 					actions.push({
-						type: "append",
 						path: "app/routes/handlers/index.ts",
 						template: "export { action } from './action';",
+						type: "append",
 					});
 				}
 			}
 			else {
 				if (data?.type === "loader") {
 					actions.push({
-						type: "add",
 						path: "app/routes/{{parent}}/handlers/loader.ts",
 						templateFile: "templates/handlers/loader.ts.hbs",
+						type: "add",
 					});
 
 					//					actions.push({
@@ -258,16 +240,16 @@ function config(
 					//					});
 
 					actions.push({
-						type: "append",
 						path: "app/routes/{{parent}}/handlers/index.ts",
 						template: "export { loader } from './loader';",
+						type: "append",
 					});
 				}
 				else {
 					actions.push({
-						type: "add",
 						path: "app/routes/{{parent}}/handlers/action.ts",
 						templateFile: "templates/handlers/action.ts.hbs",
+						type: "add",
 					});
 
 					//					actions.push({
@@ -277,15 +259,33 @@ function config(
 					//					});
 
 					actions.push({
-						type: "append",
 						path: "app/routes/{{parent}}/handlers/index.ts",
 						template: "export { action } from './action';",
+						type: "append",
 					});
 				}
 			}
 
 			return actions;
 		},
+		description: "Create a new handler",
+		prompts: [
+			{
+				choices: [
+					{ key: "l", name: "Loader", value: "loader" },
+					{ key: "a", name: "Action", value: "action" },
+				],
+				message: "Which type of handler?",
+				name: "type",
+				type: "expand",
+			},
+			{
+				choices: pages,
+				message: "app/routes/{path please}/handlers/...",
+				name: "parent",
+				type: "list",
+			},
+		],
 	});
 }
 

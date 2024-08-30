@@ -6,26 +6,26 @@ import { Hero } from "./Hero";
 type T = typeof Hero;
 
 const meta: Meta = {
-	title: "Hero",
 	component: Hero,
-	parameters: {
-		layout: "centered",
-	},
-	tags: ["autodocs"],
 	decorators: [
 		(story) => {
 			const remixStub = createRemixStub([
 				{
-					path: "/*",
 					action: () => ({ redirect: "/" }),
-					loader: () => ({ redirect: "/" }),
 					Component: () => story(),
+					loader: () => ({ redirect: "/" }),
+					path: "/*",
 				},
 			]);
 
 			return remixStub({ initialEntries: ["/"] });
 		},
 	],
+	parameters: {
+		layout: "centered",
+	},
+	tags: ["autodocs"],
+	title: "Hero",
 } satisfies Meta<T>;
 
 type Story = StoryObj<T>;

@@ -8,14 +8,14 @@ interface Props {
 export function Footer({ css: cssStyle }: Props): ReactNode {
 	return (
 		<footer className={css({
-			display: "flex",
-			justifyContent: "center",
-			width: "100%",
 			color: "text.secondary",
+			display: "flex",
 			fontSize: "l",
 			fontWeight: "normal",
+			justifyContent: "center",
 			lineHeight: "tight",
 			padding: "1rem 0 2rem",
+			width: "100%",
 		}, cssStyle)}
 		>
 			2021 - PRESENT &copy; Rintaro Itokawa

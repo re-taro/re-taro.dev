@@ -4,48 +4,48 @@ import type { Temporal } from "temporal-polyfill";
 import { Paragraph } from "~/components/Paragraph";
 
 export interface Props {
-	title: string;
 	date: Temporal.PlainDate;
+	title: string;
 	slug?: string;
 }
 
-export function TimelineItem({ title, date, slug }: Props): ReactNode {
+export function TimelineItem({ date, slug, title }: Props): ReactNode {
 	return (
 		<li
 			className={cx(css({
-				position: "relative",
-				padding: "0.5rem 0 0.5rem 1rem",
 				listStyle: "none",
+				padding: "0.5rem 0 0.5rem 1rem",
+				position: "relative",
 			}), "timeline-item")}
 		>
 			<span
 				className={css({
-					"position": "absolute",
-					"top": 0,
-					"bottom": 0,
-					"left": "-0.5px",
-					"width": "1px",
-					"backgroundColor": "bg.teriary",
-
 					".timeline-item:first-child &": {
 						top: "1rem",
 					},
-
 					".timeline-item:last-child &": {
 						bottom: "calc(100% - 1rem)",
 					},
+					"backgroundColor": "bg.teriary",
+					"bottom": 0,
+					"left": "-0.5px",
+					"position": "absolute",
+
+					"top": 0,
+
+					"width": "1px",
 				})}
 				role="presentation"
 			/>
 			<span
 				className={css({
+					backgroundColor: "bg.teriary",
+					borderRadius: "9999px",
+					height: "0.5rem",
+					left: "-4px",
 					position: "absolute",
 					top: "1rem",
-					left: "-4px",
-					height: "0.5rem",
 					width: "0.5rem",
-					borderRadius: "9999px",
-					backgroundColor: "bg.teriary",
 				})}
 				role="presentation"
 			/>
@@ -59,8 +59,8 @@ export function TimelineItem({ title, date, slug }: Props): ReactNode {
 				dateTime={date.toString()}
 			>
 				{date.toLocaleString("en-US", {
-					year: "numeric",
 					month: "short",
+					year: "numeric",
 				})}
 			</time>
 			<h2

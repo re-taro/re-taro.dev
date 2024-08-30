@@ -7,24 +7,24 @@ import { Footer } from "~/components/Footer";
 import { Header } from "~/components/Header";
 
 interface Props {
-	title?: string;
-	noIndex?: boolean;
 	children: ReactNode;
+	noIndex?: boolean;
+	title?: string;
 }
 
-function Document({ title, noIndex, children }: Props): ReactNode {
+function Document({ children, noIndex, title }: Props): ReactNode {
 	return (
 		<html lang="ja-JP">
 			<head>
-				{noIndex && <meta name="robots" content="noindex" />}
+				{noIndex && <meta content="noindex" name="robots" />}
 				<Meta />
 				<Links />
 				{title ? <title data-title-override="">{title}</title> : <title>Rintaro Itokawa - Web Developer</title>}
 			</head>
 			<body className={css({
 				display: "grid",
-				gridTemplateRows: "auto 1fr auto",
 				gridTemplateAreas: `"header" "main" "footer"`,
+				gridTemplateRows: "auto 1fr auto",
 				minHeight: "100lvh",
 			})}
 			>
@@ -48,39 +48,38 @@ function App(): ReactNode {
 	);
 }
 
-// eslint-disable-next-line react-refresh/only-export-components
 export const links: LinksFunction = () => [
-	{ rel: "preconnect", href: "https://fonts.googleapis.com" },
-	{ rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-	{ rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Noto+Sans+JP:wght@400;600&display=swap" },
-	{ rel: "stylesheet", href: styles },
-	{ rel: "icon", href: "/favicon.ico", sizes: "any" },
-	{ rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
+	{ href: "https://fonts.googleapis.com", rel: "preconnect" },
+	{ crossOrigin: "anonymous", href: "https://fonts.gstatic.com", rel: "preconnect" },
+	{ href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Noto+Sans+JP:wght@400;600&display=swap", rel: "stylesheet" },
+	{ href: styles, rel: "stylesheet" },
+	{ href: "/favicon.ico", rel: "icon", sizes: "any" },
+	{ href: "/favicon.svg", rel: "icon", type: "image/svg+xml" },
 ];
 
-// eslint-disable-next-line react-refresh/only-export-components
 export const meta: MetaFunction = () => [
 	{ charSet: "utf-8" },
-	{ name: "viewport", content: "width=device-width, initial-scale=1" },
-	{ name: "description", content: "Rintaro Itokawa (re-taro) のポートフォリオです。" },
-	{ name: "og:title", content: "Rintaro Itokawa - Web Developer" },
-	{ name: "og:description", content: "Rintaro Itokawa (re-taro) のポートフォリオです。" },
-	{ name: "og:url", content: "https://re-taro.dev" },
-	{ name: "og:image", content: "https://og.re-taro.dev?title=Rintaro+Itokawa&text=re-taro.dev" },
-	{ name: "og:type", content: "website" },
-	{ name: "twitter:card", content: "summary_large_image" },
-	{ name: "twitter:title", content: "Rintaro Itokawa - Web Developer" },
-	{ name: "twitter:description", content: "Rintaro Itokawa (re-taro) のポートフォリオです。" },
-	{ name: "twitter:image", content: "https://og.re-taro.dev?title=Rintaro+Itokawa&text=re-taro.dev" },
-	{ name: "twitter:site", content: "@re_taro_" },
+	{ content: "width=device-width, initial-scale=1", name: "viewport" },
+	{ content: "Rintaro Itokawa (re-taro) のポートフォリオです。", name: "description" },
+	{ content: "Rintaro Itokawa - Web Developer", name: "og:title" },
+	{ content: "Rintaro Itokawa (re-taro) のポートフォリオです。", name: "og:description" },
+	{ content: "https://re-taro.dev", name: "og:url" },
+	{ content: "https://og.re-taro.dev?title=Rintaro+Itokawa&text=re-taro.dev", name: "og:image" },
+	{ content: "website", name: "og:type" },
+	{ content: "summary_large_image", name: "twitter:card" },
+	{ content: "Rintaro Itokawa - Web Developer", name: "twitter:title" },
+	{ content: "Rintaro Itokawa (re-taro) のポートフォリオです。", name: "twitter:description" },
+	{ content: "https://og.re-taro.dev?title=Rintaro+Itokawa&text=re-taro.dev", name: "twitter:image" },
+	{ content: "@re_taro_", name: "twitter:site" },
 ];
 
 export function ErrorBoundary() {
 	const error = useRouteError();
 	if (!(typeof window !== "undefined"
 		&& window.document
-		&& window.document.createElement))
+		&& window.document.createElement)) {
 		console.error(error);
+	}
 
 	if (isRouteErrorResponse(error)) {
 		return (
@@ -90,17 +89,17 @@ export function ErrorBoundary() {
 			>
 				<main
 					className={css({
-						width: "100%",
-						height: "100svh",
-						display: "grid",
-						placeItems: "center",
 						color: "text.main",
+						display: "grid",
+						height: "100svh",
+						placeItems: "center",
+						width: "100%",
 					})}
 				>
 					<div
 						className={css({
-							textAlign: "center",
 							lineHeight: "none",
+							textAlign: "center",
 						})}
 					>
 						<h1
@@ -132,16 +131,16 @@ export function ErrorBoundary() {
 		<Document noIndex title="Error">
 			<main
 				className={css({
-					width: "100%",
-					height: "100svh",
-					display: "grid",
-					placeItems: "center",
 					color: "text.main",
+					display: "grid",
+					height: "100svh",
+					placeItems: "center",
+					width: "100%",
 				})}
 			>
 				<div className={css({
-					textAlign: "center",
 					lineHeight: "none",
+					textAlign: "center",
 				})}
 				>
 					<h1 className={css({

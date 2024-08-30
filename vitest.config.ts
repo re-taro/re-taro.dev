@@ -8,10 +8,10 @@ export default defineConfig({
 		typecript(),
 	],
 	test: {
+		environment: "jsdom",
+		exclude: [...configDefaults.exclude, "tests/**/*"],
 		globals: true,
 		root: "src",
-		environment: "jsdom",
 		setupFiles: ["./vitest.setup.ts"],
-		exclude: [...configDefaults.exclude, "tests/**/*"],
 	},
 });

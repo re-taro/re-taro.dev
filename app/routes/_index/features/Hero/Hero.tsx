@@ -14,29 +14,28 @@ function HeroText(): ReactNode {
 		"Rintaro Itokawa",
 		"狂創",
 		"re-taro",
-		"狂創",
 	];
 
 	const { ref: headingRef } = useScramble({
-		text: texts[index],
-		onAnimationStart: () => {
-			clearInterval(loopRef.current);
-		},
 		onAnimationEnd: () => {
 			clearInterval(loopRef.current);
 			loopRef.current = window.setTimeout(() => {
 				setIndex(index => (index < texts.length - 1 ? index + 1 : 0));
-			}, index === 1 || index === 3 ? 100 : 3000);
+			}, index === 1 ? 100 : 3000);
 		},
+		onAnimationStart: () => {
+			clearInterval(loopRef.current);
+		},
+		text: texts[index],
 	});
 
 	return <PageHeading bold aria-label={texts[index]} ref={headingRef} />;
 }
 
 export function Hero(): ReactNode {
-	const { ref: linkRef1, replay: linkReplay1 } = useScramble({ text: "About", scramble: 8, playOnMount: false });
-	const { ref: linkRef2, replay: linkReplay2 } = useScramble({ text: "Timeline", scramble: 10, playOnMount: false });
-	const { ref: linkRef3, replay: linkReplay3 } = useScramble({ text: "Works", scramble: 8, playOnMount: false });
+	const { ref: linkRef1, replay: linkReplay1 } = useScramble({ playOnMount: false, scramble: 8, text: "About" });
+	const { ref: linkRef2, replay: linkReplay2 } = useScramble({ playOnMount: false, scramble: 10, text: "Timeline" });
+	const { ref: linkRef3, replay: linkReplay3 } = useScramble({ playOnMount: false, scramble: 8, text: "Works" });
 
 	return (
 		<div className={css({
@@ -49,26 +48,26 @@ export function Hero(): ReactNode {
 		>
 			<div className={css({
 				display: "grid",
-				gridTemplateRows: { base: "auto 2.5rem auto", md: "auto 3.75rem auto" },
 				gap: ".5rem",
+				gridTemplateRows: { base: "auto 2.5rem auto", md: "auto 3.75rem auto" },
 				textAlign: "center",
 			})}
 			>
 				<img
+					className={css({
+						aspectRatio: "1 / 1",
+						borderRadius: "50%",
+						height: { base: "10rem", md: "15rem" },
+						margin: { base: "0 3.5rem", md: "0 5rem" },
+						width: { base: "10rem", md: "15rem" },
+					})}
+					alt="Rintaro Itokawa's profile image"
 					decoding="async"
+					height={240}
 					loading="eager"
 					src="/images/rintaro.avif"
 					srcSet={["/images/rintaro.avif 1x", "/images/rintaro@2x.avif 2x"].join(", ")}
-					alt="Rintaro Itokawa's profile image"
 					width={240}
-					height={240}
-					className={css({
-						margin: { base: "0 3.5rem", md: "0 5rem" },
-						aspectRatio: "1 / 1",
-						borderRadius: "50%",
-						width: { base: "10rem", md: "15rem" },
-						height: { base: "10rem", md: "15rem" },
-					})}
 				/>
 				<Suspense fallback={<PageHeading bold>Rintaro Itokawa</PageHeading>}><HeroText /></Suspense>
 				<p className={css({
@@ -82,25 +81,25 @@ export function Hero(): ReactNode {
 				</p>
 			</div>
 			<hr className={css({
+				backgroundColor: "bg.teriary",
+				border: "none",
+				height: { base: "1px", md: "20rem" },
 				margin: 0,
 				width: { base: "80%", md: "1px" },
-				height: { base: "1px", md: "20rem" },
-				border: "none",
-				backgroundColor: "bg.teriary",
 			})}
 			/>
 			<ul className={
-					css({
-						display: "flex",
-						flexDirection: "column",
-						gap: "1rem",
-						textAlign: "center",
-						color: "text.secondary",
-						fontSize: "xl",
-						fontWeight: "normal",
-						lineHeight: "normal",
-					})
-				}
+				css({
+					color: "text.secondary",
+					display: "flex",
+					flexDirection: "column",
+					fontSize: "xl",
+					fontWeight: "normal",
+					gap: "1rem",
+					lineHeight: "normal",
+					textAlign: "center",
+				})
+			}
 			>
 				<li
 					className={css({
@@ -110,7 +109,7 @@ export function Hero(): ReactNode {
 						linkReplay1();
 					}}
 				>
-					<Link ref={linkRef1} to="/about" prefetch="intent" title="About" />
+					<Link prefetch="intent" ref={linkRef1} title="About" to="/about" />
 				</li>
 				<li
 					className={css({
@@ -120,7 +119,7 @@ export function Hero(): ReactNode {
 						linkReplay2();
 					}}
 				>
-					<Link ref={linkRef2} to="/timeline" prefetch="intent" title="Timeline" />
+					<Link prefetch="intent" ref={linkRef2} title="Timeline" to="/timeline" />
 				</li>
 				<li
 					className={css({
@@ -130,7 +129,7 @@ export function Hero(): ReactNode {
 						linkReplay3();
 					}}
 				>
-					<Link ref={linkRef3} to="/works" prefetch="intent" title="Works" />
+					<Link prefetch="intent" ref={linkRef3} title="Works" to="/works" />
 				</li>
 			</ul>
 		</div>

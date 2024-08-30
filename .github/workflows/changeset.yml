@@ -3,7 +3,7 @@ name: need changeset
 on:
   pull_request:
     paths:
-      - "app/**"
+      - 'app/**'
 
 jobs:
   changeset-test:

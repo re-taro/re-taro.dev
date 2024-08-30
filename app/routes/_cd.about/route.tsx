@@ -21,15 +21,15 @@ export default function Page(): ReactNode {
 				boxSizing: "border-box",
 				display: "flex",
 				flexDirection: "column",
+				margin: "5rem auto 0",
+				maxWidth: "50rem",
 				rowGap: "2rem",
 				width: "100%",
-				maxWidth: "50rem",
-				margin: "5rem auto 0",
 			})}
 		>
-			<PageHeading css={css.raw({ fontSize: "xl" })} type="section" prefix bold>About me</PageHeading>
-			<Section css={css.raw({ display: "flex", flexDirection: "column", rowGap: "1rem" })} aria-label="Profile">
-				<Heading css={css.raw({ fontSize: "l" })} type="block" prefix bold>Profile</Heading>
+			<PageHeading bold prefix css={css.raw({ fontSize: "xl" })} type="section">About me</PageHeading>
+			<Section aria-label="Profile" css={css.raw({ display: "flex", flexDirection: "column", rowGap: "1rem" })}>
+				<Heading bold prefix css={css.raw({ fontSize: "l" })} type="block">Profile</Heading>
 				<Paragraph as="p">鈴鹿高専で情報工学を学んでいる学生です。</Paragraph>
 				<Paragraph as="p">趣味や仕事でWebアプリケーション開発を行っています。</Paragraph>
 				<Paragraph as="p">
@@ -60,10 +60,10 @@ export default function Page(): ReactNode {
 					KAMITSUBAKI STUDIOやヨルシカをよく聴いています。
 				</Paragraph>
 			</Section>
-			<Section css={css.raw({ display: "flex", flexDirection: "column", rowGap: "1rem" })} aria-label="Skills">
-				<Heading css={css.raw({ fontSize: "l" })} type="block" prefix bold>Computing Skills</Heading>
+			<Section aria-label="Skills" css={css.raw({ display: "flex", flexDirection: "column", rowGap: "1rem" })}>
+				<Heading bold prefix css={css.raw({ fontSize: "l" })} type="block">Computing Skills</Heading>
 				<Section aria-label="Language">
-					<Heading css={css.raw({ fontSize: "m" })} type="block" prefix bold>Language</Heading>
+					<Heading bold prefix css={css.raw({ fontSize: "m" })} type="block">Language</Heading>
 					<ul className={css({ marginTop: ".5rem" })}>
 						<ListItem name="TypeScript (JavaScript)">
 							Webアプリケーションや
@@ -88,7 +88,7 @@ export default function Page(): ReactNode {
 					</ul>
 				</Section>
 				<Section aria-label="Framework">
-					<Heading css={css.raw({ fontSize: "m" })} type="block" prefix bold>Framework</Heading>
+					<Heading bold prefix css={css.raw({ fontSize: "m" })} type="block">Framework</Heading>
 					<ul className={css({ marginTop: ".5rem" })}>
 						<ListItem name="React / Next.js (Remix.js)">
 							大規模なWebアプリケーションを
@@ -132,11 +132,11 @@ export default function Page(): ReactNode {
 				</Section>
 				<hr
 					className={css({
+						backgroundColor: "bg.teriary",
+						border: "none",
+						height: "1px",
 						margin: "1rem 0",
 						width: "100%",
-						height: "1px",
-						border: "none",
-						backgroundColor: "bg.teriary",
 					})}
 				/>
 			</Section>

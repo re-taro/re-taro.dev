@@ -20,39 +20,39 @@ type RangeOrCharCodes = {
 } & Array<number>;
 
 interface UseScrambleProps {
-	playOnMount?: boolean;
-	text?: string;
-	speed?: number;
-	tick?: number;
-	step?: number;
 	chance?: number;
-	seed?: number;
-	scramble?: number;
 	ignore?: string[];
-	range?: RangeOrCharCodes;
+	onAnimationEnd?: () => void;
+	onAnimationFrame?: (result: string) => void;
+	onAnimationStart?: () => void;
 	overdrive?: boolean | number;
 	overflow?: boolean;
-	onAnimationStart?: Function;
-	onAnimationEnd?: Function;
-	onAnimationFrame?: (result: string) => void;
+	playOnMount?: boolean;
+	range?: RangeOrCharCodes;
+	scramble?: number;
+	seed?: number;
+	speed?: number;
+	step?: number;
+	text?: string;
+	tick?: number;
 }
 
 export function useScramble({
-	playOnMount = true,
-	text = "",
-	speed = 1,
-	seed = 1,
-	step = 1,
-	tick = 1,
-	scramble = 1,
 	chance = 1,
-	overflow = true,
-	range = [65, 125],
-	overdrive = true,
-	onAnimationStart,
-	onAnimationFrame,
-	onAnimationEnd,
 	ignore = [" "],
+	onAnimationEnd,
+	onAnimationFrame,
+	onAnimationStart,
+	overdrive = true,
+	overflow = true,
+	playOnMount = true,
+	range = [65, 125],
+	scramble = 1,
+	seed = 1,
+	speed = 1,
+	step = 1,
+	text = "",
+	tick = 1,
 }: UseScrambleProps) {
 	const prefersReducedMotion = typeof window !== "undefined" ? window.matchMedia("(prefers-reduced-motion: reduce)").matches : false;
 
@@ -79,14 +79,14 @@ export function useScramble({
 	const scrambleIndexRef = useRef<number>(0);
 
 	// scramble controller
-	const controlRef = useRef<Array<string | number | null>>([]);
+	const controlRef = useRef<Array<number | string | null>>([]);
 
 	// overdrive control index
 	const overdriveRef = useRef<number>(0);
 
 	const setIfNotIgnored = (
-		value: string | number | null | number,
-		replace: string | number | null,
+		value: number | number | string | null,
+		replace: number | string | null,
 	) => (ignore.includes(`${value}`) ? value : replace);
 
 	// pick random character ahead in the string, and add them to the randomizer
@@ -222,7 +222,8 @@ export function useScramble({
 		// set text
 		nodeRef.current.innerHTML = result;
 
-		onAnimationFrame && onAnimationFrame(result);
+		if (typeof onAnimationFrame === "function")
+			onAnimationFrame(result);
 
 		/**
 		 * Exit if the result is equal to the input
@@ -232,7 +233,8 @@ export function useScramble({
 		 */
 		if (result === text) {
 			controlRef.current.splice(text.length, controlRef.current.length);
-			onAnimationEnd && onAnimationEnd();
+			if (typeof onAnimationEnd === "function")
+				onAnimationEnd();
 
 			cancelAnimationFrame(rafRef.current);
 		}
@@ -245,6 +247,7 @@ export function useScramble({
 	 *
 	 * if speed is 0, stop the animation
 	 */
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	const animate = (time: number) => {
 		if (!speed)
 			return;
@@ -285,7 +288,8 @@ export function useScramble({
 	const play = () => {
 		cancelAnimationFrame(rafRef.current);
 		reset();
-		onAnimationStart && onAnimationStart();
+		if (typeof onAnimationStart === "function")
+			onAnimationStart();
 		rafRef.current = requestAnimationFrame(animate);
 	};
 
@@ -294,6 +298,7 @@ export function useScramble({
 	 */
 	useEffect(() => {
 		reset();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [text]);
 
 	/**
@@ -319,6 +324,7 @@ export function useScramble({
 			draw();
 			cancelAnimationFrame(rafRef.current);
 		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	return { ref: nodeRef, replay: play };

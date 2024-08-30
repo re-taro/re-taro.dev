@@ -12,13 +12,13 @@ import { Heading, PageHeading } from "~/components/Heading";
 type T = typeof Section;
 
 const meta = {
-	title: "SectioningContent",
 	component: Section,
-	subcomponents: { Article, Aside, Nav },
 	parameters: {
 		layout: "centered",
 	},
+	subcomponents: { Article, Aside, Nav },
 	tags: ["autodocs"],
+	title: "SectioningContent",
 };
 
 type Story = StoryObj<T>;
