@@ -6,19 +6,19 @@ import { Timeline } from "./Timeline";
 type T = typeof Timeline;
 
 const meta: Meta = {
-	title: "Timeline",
+	args: {
+		timelines: Array.from({ length: 3 }, (_, index) => ({
+			date: Temporal.PlainDate.from({ day: 25, month: index + 1, year: 2004 }),
+			slug: `slug-${index + 1}`,
+			title: `Title ${index + 1}`,
+		})),
+	},
 	component: Timeline,
 	parameters: {
 		layout: "centered",
 	},
 	tags: ["autodocs"],
-	args: {
-		timelines: Array.from({ length: 3 }, (_, index) => ({
-			title: `Title ${index + 1}`,
-			date: Temporal.PlainDate.from({ year: 2004, month: index + 1, day: 25 }),
-			slug: `slug-${index + 1}`,
-		})),
-	},
+	title: "Timeline",
 } satisfies Meta<T>;
 
 type Story = StoryObj<T>;

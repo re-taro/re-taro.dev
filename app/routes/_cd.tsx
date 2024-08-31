@@ -9,10 +9,10 @@ export default function WithCdLayout(): ReactNode {
 		<>
 			<Outlet />
 			<div className={(css({
+				color: "text.secondary",
 				margin: "2rem auto 0",
 				maxWidth: "50rem",
 				width: "100%",
-				color: "text.secondary",
 			}))}
 			>
 				<span className={css({
@@ -23,17 +23,17 @@ export default function WithCdLayout(): ReactNode {
 				</span>
 				<Link
 					className={css({
-						opacity: 0.6,
-						color: "text.main",
-						transition: "opacity 0.3s ease-in",
-
-						_hover: {
-							opacity: 1,
-						},
-
 						_focusVisible: {
 							opacity: 1,
 						},
+						_hover: {
+							opacity: 1,
+						},
+						color: "text.main",
+
+						opacity: 0.6,
+
+						transition: "opacity 0.3s ease-in",
 
 					})}
 					to={pathname.split("/").slice(0, -1).join("/") || "/"}

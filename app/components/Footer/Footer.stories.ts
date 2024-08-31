@@ -5,12 +5,12 @@ import { Footer } from "./Footer";
 type T = typeof Footer;
 
 const meta: Meta = {
-	title: "Footer",
 	component: Footer,
 	parameters: {
 		layout: "centered",
 	},
 	tags: ["autodocs"],
+	title: "Footer",
 } satisfies Meta<T>;
 
 type Story = StoryObj<T>;

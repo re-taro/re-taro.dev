@@ -13,7 +13,6 @@ const isStorybook = process.argv[1]?.includes("storybook");
 
 export default defineConfig(({ mode }) => ({
 	build: {
-		target: browserslistToEsbuild(),
 		cssMinify: "esbuild",
 		minify: "terser",
 		rollupOptions: {
@@ -31,18 +30,19 @@ export default defineConfig(({ mode }) => ({
 				},
 			},
 		},
+		target: browserslistToEsbuild(),
 		terserOptions: {
-			ecma: 2020,
 			compress: {
-				passes: 5,
 				ecma: 2020,
 				inline: 3,
+				passes: 5,
 			},
+			ecma: 2020,
 			format: {
 				comments: false,
 			},
-			toplevel: true,
 			nameCache: {},
+			toplevel: true,
 		},
 	},
 	optimizeDeps: {
@@ -62,9 +62,9 @@ export default defineConfig(({ mode }) => ({
 		typecript(),
 		mode === "analyze"
 		&& visualizer({
-			gzipSize: true,
 			brotliSize: true,
 			emitFile: true, // `emitFile` is necessary since Remix builds more than one bundle
+			gzipSize: true,
 		}),
 	],
 }));

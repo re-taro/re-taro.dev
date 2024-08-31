@@ -18,15 +18,15 @@ export default function Page(): ReactNode {
 				boxSizing: "border-box",
 				display: "flex",
 				flexDirection: "column",
+				margin: "5rem auto 0",
+				maxWidth: "50rem",
 				rowGap: "2rem",
 				width: "100%",
-				maxWidth: "50rem",
-				margin: "5rem auto 0",
 			})}
 		>
-			<PageHeading css={css.raw({ fontSize: "xl" })} type="section" prefix bold>Timeline</PageHeading>
+			<PageHeading bold prefix css={css.raw({ fontSize: "xl" })} type="section">Timeline</PageHeading>
 			<Paragraph as="p">私のこれまで</Paragraph>
-			<Section css={css.raw({ display: "flex", flexDirection: "column", rowGap: "1rem" })} aria-label="Timeline">
+			<Section aria-label="Timeline" css={css.raw({ display: "flex", flexDirection: "column", rowGap: "1rem" })}>
 				<Timeline timelines={timelines} />
 			</Section>
 		</div>
@@ -44,5 +44,4 @@ function useLoaderData() {
 	};
 }
 
-// eslint-disable-next-line react-refresh/only-export-components
 export { loader };

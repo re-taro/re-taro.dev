@@ -5,38 +5,38 @@ import type { SystemStyleObject } from "styled-system/types";
 import { LevelContext } from "~/components/SectioningContent";
 
 export type HeadingTypes =
+	| "block"
 	| "screen"
-	| "section"
-	| "block";
+	| "section";
 
 type HeadingTagTypes = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 
 interface Props {
-	type?: HeadingTypes;
-	prefix?: boolean;
 	bold?: boolean;
+	children?: ReactNode;
 	css?: SystemStyleObject;
+	prefix?: boolean;
 	/**
 	 * @deprecated SectioningContent(Article, Aside, Nav, Section, SectioningFragment)を使ってHeadingと関連する範囲を明確に指定してください
 	 */
 	tag?: HeadingTagTypes;
-	children?: ReactNode;
+	type?: HeadingTypes;
 }
 
 interface HeadingBaseProps {
 	as?: HeadingTagTypes | "span";
-	weight?: "normal" | "bold";
-	size?: "s" | "m" | "l";
-	color?: "white" | "grey";
-	prefix?: boolean;
-	css?: SystemStyleObject;
 	children?: ReactNode;
+	color?: "grey" | "white";
+	css?: SystemStyleObject;
 	headingRef?: ForwardedRef<HTMLHeadingElement>;
+	prefix?: boolean;
+	size?: "l" | "m" | "s";
+	weight?: "bold" | "normal";
 }
 
 type ElementProps = Omit<
 	ComponentPropsWithoutRef<"h1">,
-	keyof Props | keyof HeadingBaseProps | "role" | "aria-level" | "className"
+	keyof HeadingBaseProps | keyof Props | "aria-level" | "className" | "role"
 >;
 
 type HeadingBaseElementProps = Omit<
@@ -57,10 +57,10 @@ function generateTagProps(level: number, tag?: HeadingTagTypes) {
 	}
 
 	return {
+		"aria-level": ariaLevel,
 		"as":
 			tag ?? ((level <= 6 ? `h${level}` : "span") as HeadingTagTypes | "span"),
 		role,
-		"aria-level": ariaLevel,
 	};
 }
 
@@ -68,38 +68,36 @@ const base = cva({
 	base: {
 		lineHeight: "tight",
 	},
+	compoundVariants: [
+		{
+			as: "h1",
+			css: {
+				_before: {
+					content: "'# '",
+				},
+			},
+			prefix: true,
+		},
+		{
+			as: "h2",
+			css: {
+				_before: {
+					content: "'## '",
+				},
+			},
+			prefix: true,
+		},
+		{
+			as: "h3",
+			css: {
+				_before: {
+					content: "'### '",
+				},
+			},
+			prefix: true,
+		},
+	],
 	variants: {
-		weight: {
-			normal: {
-				fontWeight: "normal",
-			},
-			bold: {
-				fontWeight: "bold",
-			},
-		},
-		size: {
-			s: {
-				fontSize: { base: "l", md: "2xl" },
-			},
-			m: {
-				fontSize: { base: "xl", md: "3xl" },
-			},
-			l: {
-				fontSize: { base: "2xl", md: "4xl" },
-			},
-		},
-		color: {
-			white: {
-				color: "text.main",
-			},
-			grey: {
-				color: "text.secondary",
-			},
-		},
-		prefix: {
-			true: {},
-			false: {},
-		},
 		as: {
 			h1: {},
 			h2: {},
@@ -109,92 +107,94 @@ const base = cva({
 			h6: {}, // NOT USED
 			span: {}, // NOT USED
 		},
+		color: {
+			grey: {
+				color: "text.secondary",
+			},
+			white: {
+				color: "text.main",
+			},
+		},
+		prefix: {
+			false: {},
+			true: {},
+		},
+		size: {
+			l: {
+				fontSize: { base: "2xl", md: "4xl" },
+			},
+			m: {
+				fontSize: { base: "xl", md: "3xl" },
+			},
+			s: {
+				fontSize: { base: "l", md: "2xl" },
+			},
+		},
+		weight: {
+			bold: {
+				fontWeight: "bold",
+			},
+			normal: {
+				fontWeight: "normal",
+			},
+		},
 	},
-	compoundVariants: [
-		{
-			prefix: true,
-			as: "h1",
-			css: {
-				_before: {
-					content: "'# '",
-				},
-			},
-		},
-		{
-			prefix: true,
-			as: "h2",
-			css: {
-				_before: {
-					content: "'## '",
-				},
-			},
-		},
-		{
-			prefix: true,
-			as: "h3",
-			css: {
-				_before: {
-					content: "'### '",
-				},
-			},
-		},
-	],
 });
 
 function HeadingBase({
-	weight = "normal",
-	size = "m",
-	color = "white",
 	as: Component = "span",
-	prefix = false,
+	color = "white",
 	css: cssProps,
 	headingRef,
+	prefix = false,
+	size = "m",
+	weight = "normal",
 	...props
-}: HeadingBaseProps & HeadingBaseElementProps): ReactNode {
+}: HeadingBaseElementProps & HeadingBaseProps): ReactNode {
 	return (
 		<Component
 			{...props}
+			className={css(base.raw({ as: Component, color, prefix, size, weight }), cssProps)}
 			ref={headingRef}
-			className={css(base.raw({ weight, size, color, prefix, as: Component }), cssProps)}
 		/>
 	);
 }
 
 const MAPPER: Record<HeadingTypes, HeadingBaseProps> = {
-	screen: { weight: "normal",	size: "l",	color: "white" },
-	section: { weight: "normal",	size: "m",	color: "white" },
-	block: { weight: "normal",	size: "s",	color: "white" },
+	block: { color: "white",	size: "s",	weight: "normal" },
+	screen: { color: "white",	size: "l",	weight: "normal" },
+	section: { color: "white",	size: "m",	weight: "normal" },
 };
 
-export const Heading = forwardRef<HTMLHeadingElement, Props & ElementProps>(({
-	tag,
-	prefix = false,
+export const Heading = forwardRef<HTMLHeadingElement, ElementProps & Props>(({
 	bold = false,
-	type = "section",
 	css: cssProps,
+	prefix = false,
+	tag,
+	type = "section",
 	...props
 }, ref) => {
 	const level = useContext(LevelContext) as 1 | 2 | 3 | 4 | 5 | 6;
 	const tagProps = useMemo(() => generateTagProps(level, tag), [level, tag]);
-	const actualProps: HeadingBaseProps & HeadingBaseElementProps = {
+	const actualProps: HeadingBaseElementProps & HeadingBaseProps = {
 		...props,
 		...tagProps,
 		...MAPPER[type],
-		weight: bold ? "bold" : "normal",
-		prefix,
 		css: cssProps,
 		headingRef: ref,
+		prefix,
+		weight: bold ? "bold" : "normal",
 	};
 	return <HeadingBase {...actualProps} />;
 });
 
 Heading.displayName = "Heading";
 
-export const PageHeading = forwardRef<HTMLHeadingElement, Omit<Props & ElementProps, "tag">>(({
+export const PageHeading = forwardRef<HTMLHeadingElement, Omit<ElementProps & Props, "tag">>(({
 	type = "screen",
 	...props
 }, ref) => {
-	return <Heading {...props} ref={ref} type={type} tag="h1" />;
+	return <Heading {...props} ref={ref} tag="h1" type={type} />;
 });
 
 PageHeading.displayName = "PageHeading";

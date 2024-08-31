@@ -5,39 +5,39 @@ type Props = PropsWithChildren< {
 	name: string;
 }>;
 
-export function ListItem({ name, children }: Props): ReactNode {
+export function ListItem({ children, name }: Props): ReactNode {
 	return (
 		<li className={css({
-			position: "relative",
+			_before: {
+				content: "'-'",
+				left: "-1em",
+				position: "absolute",
+			},
 			color: "text.main",
 			fontSize: "m",
 			fontWeight: "normal",
 			lineHeight: "normal",
 			marginLeft: "1em",
 
-			_before: {
-				position: "absolute",
-				content: "'-'",
-				left: "-1em",
-			},
+			position: "relative",
 		})}
 		>
 			{name}
 			<ul>
 				<li className={css({
-					position: "relative",
-					color: "text.secondary",
-					marginLeft: "1.25em",
-					wordBreak: "keep-all",
-					lineBreak: "strict",
-					hangingPunctuation: "allow-end",
-					overflowWrap: "anywhere",
-
 					_before: {
-						position: "absolute",
 						content: "'-'",
 						left: "-1em",
+						position: "absolute",
 					},
+					color: "text.secondary",
+					hangingPunctuation: "allow-end",
+					lineBreak: "strict",
+					marginLeft: "1.25em",
+					overflowWrap: "anywhere",
+					position: "relative",
+
+					wordBreak: "keep-all",
 				})}
 				>
 					{children}

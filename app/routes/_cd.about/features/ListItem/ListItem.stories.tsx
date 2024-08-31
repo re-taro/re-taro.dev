@@ -5,17 +5,17 @@ import { ListItem } from "./ListItem";
 type T = typeof ListItem;
 
 const meta: Meta = {
-	title: "ListItem",
+	args: {
+		children: "Webアプリケーション開発に使用している言語です。",
+		name: "TypeScript",
+	},
 	component: ListItem,
+	decorators: [Story => <ul><Story /></ul>],
 	parameters: {
 		layout: "centered",
 	},
 	tags: ["autodocs"],
-	args: {
-		name: "TypeScript",
-		children: "Webアプリケーション開発に使用している言語です。",
-	},
-	decorators: [Story => <ul><Story /></ul>],
+	title: "ListItem",
 } satisfies Meta<T>;
 
 type Story = StoryObj<T>;

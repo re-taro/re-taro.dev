@@ -5,15 +5,15 @@ import { Paragraph } from "./Paragraph";
 type T = typeof Paragraph;
 
 const meta: Meta = {
-	title: "Paragraph",
+	args: {
+		children: "テキストテキスト",
+	},
 	component: Paragraph,
 	parameters: {
 		layout: "centered",
 	},
 	tags: ["autodocs"],
-	args: {
-		children: "テキストテキスト",
-	},
+	title: "Paragraph",
 } satisfies Meta<T>;
 
 type Story = StoryObj<T>;

@@ -1,9 +1,9 @@
 import postcss from "postcss";
 
 interface UseRecord {
-	uses: number;
-	dependencies: Set<string>;
 	declarations: Set<postcss.Declaration>;
+	dependencies: Set<string>;
+	uses: number;
 }
 
 const varRegex = /var\(\s*(?<name>--[^ ,);]+)/g;
@@ -19,7 +19,7 @@ export function removeUnusedCssVars(css: string) {
 	const getRecord = (variable: string): UseRecord => {
 		let record = records.get(variable);
 		if (!record) {
-			record = { uses: 0, dependencies: new Set(), declarations: new Set() };
+			record = { declarations: new Set(), dependencies: new Set(), uses: 0 };
 			records.set(variable, record);
 		}
 		return record;
@@ -71,7 +71,7 @@ export function removeUnusedCssVars(css: string) {
 	});
 
 	// Remove unused variables
-	for (const { uses, declarations } of records.values()) {
+	for (const { declarations, uses } of records.values()) {
 		if (uses === 0) {
 			for (const decl of declarations) {
 				if (decl.parent?.nodes.length === 1)

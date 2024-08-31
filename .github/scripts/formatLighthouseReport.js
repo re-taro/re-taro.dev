@@ -4,11 +4,11 @@
 
 /** @type {Record<keyof LighthouseSummary, string>} */
 const summaryKeys = {
-	"performance": "Performance",
 	"accessibility": "Accessibility",
 	"best-practices": "Best Practices",
-	"seo": "SEO",
+	"performance": "Performance",
 	"pwa": "PWA",
+	"seo": "SEO",
 };
 
 /** @param {number} rawScore */
@@ -27,6 +27,7 @@ function createURL(url) {
 	try {
 		return new URL(url);
 	}
+	// eslint-disable-next-line unused-imports/no-unused-vars
 	catch (_) {
 		throw new Error(`Can't create URL for string=${url}`);
 	}
@@ -38,7 +39,7 @@ function createURL(url) {
  * @param {LighthouseSummary} param0.summary
  * @param {string} param0.reportUrl
  */
-function createMarkdownTableRow({ url, summary, reportUrl }) {
+function createMarkdownTableRow({ reportUrl, summary, url }) {
 	return [
     `| [${createURL(url).pathname}](${url})`,
     ...(Object.keys(summaryKeys)).map(k => scoreEntry(summary[k])),
@@ -60,7 +61,7 @@ function createMarkdownTableHeader() {
  * @param {Record<string, string>} param0.links
  * @param {{url: string, summary: LighthouseSummary}[]} param0.results
  */
-function createLighthouseReport({ results, links }) {
+function createLighthouseReport({ links, results }) {
 	const tableHeader = createMarkdownTableHeader();
 	const tableBody = results.map((result) => {
 		const testUrl = /** @type {string} */ (
@@ -69,9 +70,9 @@ function createLighthouseReport({ results, links }) {
 		const reportPublicUrl = /** @type {string} */ (links[testUrl]);
 
 		return createMarkdownTableRow({
-			url: testUrl,
-			summary: result.summary,
 			reportUrl: reportPublicUrl,
+			summary: result.summary,
+			url: testUrl,
 		});
 	});
 	const comment = [

@@ -6,26 +6,26 @@ import { Header } from "./Header";
 type T = typeof Header;
 
 const meta: Meta = {
-	title: "Header",
 	component: Header,
-	parameters: {
-		layout: "centered",
-	},
-	tags: ["autodocs"],
 	decorators: [
 		(story) => {
 			const remixStub = createRemixStub([
 				{
-					path: "/*",
 					action: () => ({ redirect: "/" }),
-					loader: () => ({ redirect: "/" }),
 					Component: () => story(),
+					loader: () => ({ redirect: "/" }),
+					path: "/*",
 				},
 			]);
 
 			return remixStub({ initialEntries: ["/"] });
 		},
 	],
+	parameters: {
+		layout: "centered",
+	},
+	tags: ["autodocs"],
+	title: "Header",
 } satisfies Meta<T>;
 
 type Story = StoryObj<T>;
