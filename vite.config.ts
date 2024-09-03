@@ -34,8 +34,6 @@ export default defineConfig(({ mode }) => ({
 		terserOptions: {
 			compress: {
 				ecma: 2020,
-				hoist_props: true,
-				inline: 3,
 				passes: 5,
 			},
 			ecma: 2020,
