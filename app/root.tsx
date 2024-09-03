@@ -61,16 +61,17 @@ export const meta: MetaFunction = () => [
 	{ charSet: "utf-8" },
 	{ content: "width=device-width, initial-scale=1", name: "viewport" },
 	{ content: "Rintaro Itokawa (re-taro) のポートフォリオです。", name: "description" },
-	{ content: "Rintaro Itokawa - Web Developer", name: "og:title" },
-	{ content: "Rintaro Itokawa (re-taro) のポートフォリオです。", name: "og:description" },
-	{ content: "https://re-taro.dev", name: "og:url" },
-	{ content: "https://og.re-taro.dev?title=Rintaro+Itokawa&text=re-taro.dev", name: "og:image" },
-	{ content: "website", name: "og:type" },
+	{ name: "og:title", property: "Rintaro Itokawa - Web Developer" },
+	{ name: "og:description", property: "Rintaro Itokawa (re-taro) のポートフォリオです。" },
+	{ name: "og:url", property: "https://re-taro.dev" },
+	{ name: "og:image", property: "https://og.re-taro.dev?title=Rintaro+Itokawa&tmp=color&text=re-taro.dev" },
+	{ name: "og:type", property: "website" },
 	{ content: "summary_large_image", name: "twitter:card" },
 	{ content: "Rintaro Itokawa - Web Developer", name: "twitter:title" },
 	{ content: "Rintaro Itokawa (re-taro) のポートフォリオです。", name: "twitter:description" },
-	{ content: "https://og.re-taro.dev?title=Rintaro+Itokawa&text=re-taro.dev", name: "twitter:image" },
+	{ content: "https://og.re-taro.dev?title=Rintaro+Itokawa&tmp=color&text=re-taro.dev", name: "twitter:image" },
 	{ content: "@re_taro_", name: "twitter:site" },
+	{ content: "@re_taro_", name: "twitter:creator" },
 ];
 
 export function ErrorBoundary() {
