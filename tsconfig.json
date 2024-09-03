@@ -3,11 +3,12 @@
     "target": "ESNext",
     "jsx": "react-jsx",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "baseUrl": ".",
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "paths": {
-      "~/*": ["./app/*"]
+      "~/*": ["./app/*"],
+      "styled-system/*": ["./styled-system/*"],
+      "content-collections": ["./.content-collections/generated"]
     },
     "resolveJsonModule": true,
     "types": ["vitest/globals", "unplugin-icons/types/react"],

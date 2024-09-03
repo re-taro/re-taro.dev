@@ -5,7 +5,7 @@ import typecript from "vite-tsconfig-paths";
 import { remixDevTools } from "remix-development-tools";
 import browserslistToEsbuild from "browserslist-to-esbuild";
 import icons from "unplugin-icons/vite";
-
+import contentCollections from "@content-collections/remix-vite";
 import { getLoadContext } from "./app/load-context";
 
 // eslint-disable-next-line node/prefer-global/process
@@ -34,6 +34,7 @@ export default defineConfig(({ mode }) => ({
 		terserOptions: {
 			compress: {
 				ecma: 2020,
+				hoist_props: true,
 				inline: 3,
 				passes: 5,
 			},
@@ -56,8 +57,14 @@ export default defineConfig(({ mode }) => ({
 		remixDevTools(),
 		!isStorybook
 		&& remix({
+			future: {
+				v3_fetcherPersist: true,
+				v3_relativeSplatPath: true,
+				v3_throwAbortReason: true,
+			},
 			serverModuleFormat: "esm",
 		}),
+		contentCollections(),
 		icons({ compiler: "jsx", jsx: "react" }),
 		typecript(),
 		mode === "analyze"

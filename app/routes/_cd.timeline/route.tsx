@@ -37,9 +37,10 @@ function useLoaderData() {
 	const { timelines } = _useLoaderData<typeof loader>();
 
 	return {
-		timelines: timelines.map<TimelineItemProps>(({ date, ...rest }) => ({
-			...rest,
+		timelines: timelines.map<TimelineItemProps>(({ date, slug, title }) => ({
 			date: Temporal.PlainDate.from(date),
+			slug,
+			title,
 		})),
 	};
 }
