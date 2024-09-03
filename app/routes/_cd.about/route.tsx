@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { css } from "styled-system/css";
+import type { MetaFunction } from "@remix-run/cloudflare";
 import { ListItem } from "./features/ListItem";
 import { SocialLink } from "./features/SocialLink";
 import Discord from "~icons/simple-icons/discord";
@@ -156,3 +157,18 @@ export default function Page(): ReactNode {
 		</div>
 	);
 }
+
+export const meta: MetaFunction = () => [
+	{ content: "Rintaro Itokawa (re-taro) について。", name: "description" },
+	{ name: "og:title", property: "Rintaro Itokawa - Web Developer" },
+	{ name: "og:description", property: "Rintaro Itokawa (re-taro) について。" },
+	{ name: "og:url", property: "https://re-taro.dev" },
+	{ name: "og:image", property: "https://og.re-taro.dev?title=About+re-taro&text=re-taro.dev" },
+	{ name: "og:type", property: "website" },
+	{ content: "summary_large_image", name: "twitter:card" },
+	{ content: "Rintaro Itokawa - Web Developer", name: "twitter:title" },
+	{ content: "Rintaro Itokawa (re-taro) について。", name: "twitter:description" },
+	{ content: "https://og.re-taro.dev?title=About+re-taro&text=re-taro.dev", name: "twitter:image" },
+	{ content: "@re_taro_", name: "twitter:site" },
+	{ content: "@re_taro_", name: "twitter:creator" },
+];

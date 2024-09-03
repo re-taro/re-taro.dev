@@ -287,6 +287,33 @@ function config(
 			},
 		],
 	});
+	plop.setGenerator("timeline", {
+		actions: [
+			{
+				path: "contents/timeline/{{ kebabCase name }}.md",
+				templateFile: "templates/contents/timeline.md.hbs",
+				type: "add",
+			},
+		],
+		description: "Create a new timeline",
+		prompts: [
+			{
+				message: "timeline name please",
+				name: "name",
+				type: "input",
+			},
+			{
+				message: "timeline date please",
+				name: "date",
+				type: "input",
+			},
+			{
+				message: "timeline title please",
+				name: "title",
+				type: "input",
+			},
+		],
+	});
 }
 
 export default config;

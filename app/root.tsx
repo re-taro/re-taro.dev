@@ -1,6 +1,6 @@
 import { Links, Meta, Outlet, Scripts, ScrollRestoration, isRouteErrorResponse, useRouteError } from "@remix-run/react";
 import type { ReactNode } from "react";
-import type { LinksFunction, MetaFunction } from "@remix-run/cloudflare";
+import type { MetaFunction } from "@remix-run/cloudflare";
 import { css } from "styled-system/css";
 import styles from "./index.css?url";
 import { Footer } from "~/components/Footer";
@@ -17,6 +17,14 @@ function Document({ children, noIndex, title }: Props): ReactNode {
 		<html lang="ja-JP">
 			<head>
 				{noIndex && <meta content="noindex" name="robots" />}
+				<meta charSet="utf-8" />
+				<meta content="width=device-width, initial-scale=1" name="viewport" />
+				<link href="https://fonts.googleapis.com" rel="preconnect" />
+				<link crossOrigin="anonymous" href="https://fonts.gstatic.com" rel="preconnect" />
+				<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Noto+Sans+JP:wght@400;600&display=swap" rel="stylesheet" />
+				<link href={styles} rel="stylesheet" />
+				<link href="/favicon.ico" rel="icon" sizes="any" />
+				<link href="/favicon.svg" rel="icon" type="image/svg+xml" />
 				<Meta />
 				<Links />
 				{title ? <title data-title-override="">{title}</title> : <title>Rintaro Itokawa - Web Developer</title>}
@@ -48,18 +56,7 @@ function App(): ReactNode {
 	);
 }
 
-export const links: LinksFunction = () => [
-	{ href: "https://fonts.googleapis.com", rel: "preconnect" },
-	{ crossOrigin: "anonymous", href: "https://fonts.gstatic.com", rel: "preconnect" },
-	{ href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Noto+Sans+JP:wght@400;600&display=swap", rel: "stylesheet" },
-	{ href: styles, rel: "stylesheet" },
-	{ href: "/favicon.ico", rel: "icon", sizes: "any" },
-	{ href: "/favicon.svg", rel: "icon", type: "image/svg+xml" },
-];
-
 export const meta: MetaFunction = () => [
-	{ charSet: "utf-8" },
-	{ content: "width=device-width, initial-scale=1", name: "viewport" },
 	{ content: "Rintaro Itokawa (re-taro) のポートフォリオです。", name: "description" },
 	{ name: "og:title", property: "Rintaro Itokawa - Web Developer" },
 	{ name: "og:description", property: "Rintaro Itokawa (re-taro) のポートフォリオです。" },
