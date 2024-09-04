@@ -27,7 +27,7 @@ function Document({ children, noIndex, title }: Props): ReactNode {
 				<link href="/favicon.svg" rel="icon" type="image/svg+xml" />
 				<Meta />
 				<Links />
-				{title ? <title data-title-override="">{title}</title> : <title>Rintaro Itokawa - Web Developer</title>}
+				{title ? <title data-title-override="">{title}</title> : <title>re-taro</title>}
 			</head>
 			<body className={css({
 				display: "grid",
