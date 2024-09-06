@@ -104,7 +104,7 @@
     "vite-tsconfig-paths": "5.0.1",
     "vitest": "2.0.5",
     "wait-on": "8.0.0",
-    "wrangler": "3.74.0"
+    "wrangler": "3.75.0"
   },
   "browserslist": [
     "defaults and > 0.3%"
