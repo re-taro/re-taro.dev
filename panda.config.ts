@@ -27,7 +27,6 @@ export default defineConfig({
 	globalCss: {
 		body: {
 			backgroundColor: "bg.main",
-
 			fontFamily: "Inter, \"Noto Sans JP\", \"Hiragino Kaku Gothic ProN\", \"Hiragino Sans\", Meiryo, sans-serif",
 			MozOsxFontSmoothing: "grayscale",
 			WebkitFontSmoothing: "antialiased",
@@ -83,31 +82,31 @@ export default defineConfig({
 			},
 			fontSizes: {
 				"2xl": {
-					value: "2rem",
+					value: "calc(1rem * 8 / 5)",
 				},
 				"2xs": {
-					value: "0.625rem",
+					value: "calc(1rem * 8 / 11)",
 				},
 				"3xl": {
-					value: "2.5rem",
+					value: "calc(1rem * 8 / 4)",
 				},
 				"4xl": {
-					value: "3rem",
+					value: "calc(1rem * 8 / 3)",
 				},
 				"l": {
-					value: "1.125rem",
+					value: "calc(1rem * 8 / 7)",
 				},
 				"m": {
-					value: "1rem",
+					value: "calc(1rem * 8 / 8)",
 				},
 				"s": {
-					value: "0.875rem",
+					value: "calc(1rem * 8 / 9)",
 				},
 				"xl": {
-					value: "1.5rem",
+					value: "calc(1rem * 8 / 6)",
 				},
 				"xs": {
-					value: "0.75rem",
+					value: "calc(1rem * 8 / 10)",
 				},
 			},
 			fontWeights: {
