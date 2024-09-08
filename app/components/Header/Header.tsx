@@ -98,7 +98,6 @@ export function Header({ css: cssStyle }: Props): ReactNode {
 						"fontSize": "m",
 						"fontWeight": "normal",
 						"gap": "1.2rem",
-
 						"lineHeight": "tight",
 					})}
 				>
