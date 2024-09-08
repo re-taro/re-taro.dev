@@ -83,7 +83,7 @@
     "axe-playwright": "2.0.2",
     "better-sqlite3": "11.2.1",
     "browserslist-to-esbuild": "2.1.1",
-    "concurrently": "8.2.2",
+    "concurrently": "9.0.0",
     "eslint": "8.57.0",
     "eslint-plugin-format": "0.1.2",
     "jsdom": "25.0.0",
