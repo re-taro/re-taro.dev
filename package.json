@@ -90,7 +90,7 @@
     "npm-run-all2": "6.2.3",
     "playwright": "1.47.1",
     "plop": "4.0.1",
-    "postcss": "8.4.45",
+    "postcss": "8.4.47",
     "postcss-load-config": "6.0.1",
     "remix-development-tools": "4.4.1",
     "rollup-plugin-visualizer": "5.12.0",
