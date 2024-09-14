@@ -87,7 +87,7 @@
     "eslint": "8.57.0",
     "eslint-plugin-format": "0.1.2",
     "jsdom": "25.0.0",
-    "npm-run-all2": "6.2.2",
+    "npm-run-all2": "6.2.3",
     "playwright": "1.47.1",
     "plop": "4.0.1",
     "postcss": "8.4.45",
