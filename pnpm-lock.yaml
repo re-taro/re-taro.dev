@@ -43,11 +43,11 @@ importers:
         specifier: 4.20240919.0
         version: 4.20240919.0
       '@content-collections/core':
-        specifier: 0.7.0
-        version: 0.7.0(typescript@5.6.2)
+        specifier: 0.7.1
+        version: 0.7.1(typescript@5.6.2)
       '@content-collections/remix-vite':
         specifier: 0.1.1
-        version: 0.1.1(@content-collections/core@0.7.0(typescript@5.6.2))(vite@5.4.6(@types/node@20.16.5)(lightningcss@1.25.1)(terser@5.33.0))
+        version: 0.1.1(@content-collections/core@0.7.1(typescript@5.6.2))(vite@5.4.6(@types/node@20.16.5)(lightningcss@1.25.1)(terser@5.33.0))
       '@iconify-json/circum':
         specifier: 1.2.0
         version: 1.2.0
@@ -674,8 +674,8 @@ packages:
   '@cloudflare/workers-types@4.20240919.0':
     resolution: {integrity: sha512-DZwTpZVAV+fKTLxo6ntC2zMNRL/UJwvtMKUt/U7ZyJdR+t0qcBUZGx8jLi9gOFWYxkzO3s7slajwkR2hQRPXYQ==}
 
-  '@content-collections/core@0.7.0':
-    resolution: {integrity: sha512-S1YQ5WSNiQtmf8tPhRAzqEmst4fPCMGE5iCt04gBkuAJM3EZdIRbV06eQsyJAiRNk2/L7Bqz3VIKdYSgdk84zg==}
+  '@content-collections/core@0.7.1':
+    resolution: {integrity: sha512-qa9oR9Z9aHExNMu2LzAKIYC/rqgDnKQ7Lnc/AmKaYhf/PBWvJBvjXyeYQ3YFhEOrM6qdCqSKaml1fG7zzKpOrQ==}
     peerDependencies:
       typescript: ^5.0.2
 
@@ -3826,12 +3826,6 @@ packages:
   bundle-n-require@1.1.1:
     resolution: {integrity: sha512-EB2wFjXF106LQLe/CYnKCMCdLeTW47AtcEtUfiqAOgr2a08k0+YgRklur2aLfEYHlhz6baMskZ8L2U92Hh0vyA==}
 
-  bundle-require@5.0.0:
-    resolution: {integrity: sha512-GuziW3fSSmopcx4KRymQEJVbZUfqlCqcq7dvs6TYwKRZiegK/2buMxQTPs6MGlNv50wms1699qYO54R8XfRX4w==}
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
-    peerDependencies:
-      esbuild: '>=0.18'
-
   bytes@3.0.0:
     resolution: {integrity: sha512-pMhOfFDPiv9t5jjIXkHosWmkSyQbvsgEVNkz0ERHbuLh2T/7j4Mqqpz523Fe8MVY89KC6Sh/QfS2sM+SjgFDcw==}
     engines: {node: '>= 0.8'}
@@ -6237,10 +6231,6 @@ packages:
 
   lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
-
-  load-tsconfig@0.2.5:
-    resolution: {integrity: sha512-IXO6OCs9yg8tMKzfPZ1YmheJbZCiEsnBdcB03l0OcfK9prKnJb96siuHCr5Fl37/yo9DnKU+TLpxzTUspw9shg==}
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
   load-yaml-file@0.2.0:
     resolution: {integrity: sha512-OfCBkGEw4nN6JLtgRidPX6QxjBQGQf72q3si2uvqyFEMbycSFFHwAZeXx6cJgFM9wmLrf9zBwCP3Ivqa+LLZPw==}
@@ -9902,10 +9892,9 @@ snapshots:
 
   '@cloudflare/workers-types@4.20240919.0': {}
 
-  '@content-collections/core@0.7.0(typescript@5.6.2)':
+  '@content-collections/core@0.7.1(typescript@5.6.2)':
     dependencies:
       '@parcel/watcher': 2.4.1
-      bundle-require: 5.0.0(esbuild@0.21.5)
       camelcase: 8.0.0
       esbuild: 0.21.5
       gray-matter: 4.0.3
@@ -9918,9 +9907,9 @@ snapshots:
       yaml: 2.5.0
       zod: 3.23.8
 
-  '@content-collections/remix-vite@0.1.1(@content-collections/core@0.7.0(typescript@5.6.2))(vite@5.4.6(@types/node@20.16.5)(lightningcss@1.25.1)(terser@5.33.0))':
+  '@content-collections/remix-vite@0.1.1(@content-collections/core@0.7.1(typescript@5.6.2))(vite@5.4.6(@types/node@20.16.5)(lightningcss@1.25.1)(terser@5.33.0))':
     dependencies:
-      '@content-collections/core': 0.7.0(typescript@5.6.2)
+      '@content-collections/core': 0.7.1(typescript@5.6.2)
       vite: 5.4.6(@types/node@20.16.5)(lightningcss@1.25.1)(terser@5.33.0)
 
   '@cspotcode/source-map-support@0.8.1':
@@ -13563,11 +13552,6 @@ snapshots:
       esbuild: 0.20.2
       node-eval: 2.0.0
 
-  bundle-require@5.0.0(esbuild@0.21.5):
-    dependencies:
-      esbuild: 0.21.5
-      load-tsconfig: 0.2.5
-
   bytes@3.0.0: {}
 
   bytes@3.1.2: {}
@@ -16470,8 +16454,6 @@ snapshots:
   lilconfig@3.1.1: {}
 
   lines-and-columns@1.2.4: {}
-
-  load-tsconfig@0.2.5: {}
 
   load-yaml-file@0.2.0:
     dependencies:
