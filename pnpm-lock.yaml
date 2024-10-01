@@ -46,8 +46,8 @@ importers:
         specifier: 0.7.2
         version: 0.7.2(typescript@5.6.2)
       '@content-collections/remix-vite':
-        specifier: 0.1.1
-        version: 0.1.1(@content-collections/core@0.7.2(typescript@5.6.2))(vite@5.4.7(@types/node@20.16.6)(lightningcss@1.25.1)(terser@5.33.0))
+        specifier: 0.1.2
+        version: 0.1.2(@content-collections/core@0.7.2(typescript@5.6.2))(vite@5.4.7(@types/node@20.16.6)(lightningcss@1.25.1)(terser@5.33.0))
       '@iconify-json/circum':
         specifier: 1.2.0
         version: 1.2.0
@@ -676,8 +676,8 @@ packages:
     peerDependencies:
       typescript: ^5.0.2
 
-  '@content-collections/remix-vite@0.1.1':
-    resolution: {integrity: sha512-85YtfasjVXAves4nCRnrf3uZ1dIyjJ3r3JfG+Iq5SvhZLN+ikvrXsxDGPzeog4YAvvNFYs+AEpVWKsmYHtd0BA==}
+  '@content-collections/remix-vite@0.1.2':
+    resolution: {integrity: sha512-s/rVs7EffrmvQBDP/mG0vO+Ye9OZZ0RL9BCJUA5xefigxMCK59QJhxQ/vsNHWjDDQ0wWlWCH406zMoi7yDIFcg==}
     peerDependencies:
       '@content-collections/core': ^0.x
       vite: ^5
@@ -9869,7 +9869,7 @@ snapshots:
       yaml: 2.5.0
       zod: 3.23.8
 
-  '@content-collections/remix-vite@0.1.1(@content-collections/core@0.7.2(typescript@5.6.2))(vite@5.4.7(@types/node@20.16.6)(lightningcss@1.25.1)(terser@5.33.0))':
+  '@content-collections/remix-vite@0.1.2(@content-collections/core@0.7.2(typescript@5.6.2))(vite@5.4.7(@types/node@20.16.6)(lightningcss@1.25.1)(terser@5.33.0))':
     dependencies:
       '@content-collections/core': 0.7.2(typescript@5.6.2)
       vite: 5.4.7(@types/node@20.16.6)(lightningcss@1.25.1)(terser@5.33.0)
