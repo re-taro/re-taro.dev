@@ -74,7 +74,7 @@ importers:
         version: 5.2.0(eslint-plugin-format@0.1.2(eslint@8.57.1))(eslint@8.57.1)(typescript@5.6.2)(vitest@2.1.2(@types/node@20.16.11)(jsdom@25.0.1)(lightningcss@1.25.1)(terser@5.34.1))
       '@remix-run/dev':
         specifier: 2.12.1
-        version: 2.12.1(@remix-run/react@2.12.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.2))(@types/node@20.16.11)(lightningcss@1.25.1)(terser@5.34.1)(typescript@5.6.2)(vite@5.4.8(@types/node@20.16.11)(lightningcss@1.25.1)(terser@5.34.1))(wrangler@3.80.0(@cloudflare/workers-types@4.20241004.0))
+        version: 2.12.1(@remix-run/react@2.12.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.2))(@types/node@20.16.11)(lightningcss@1.25.1)(terser@5.34.1)(typescript@5.6.2)(vite@5.4.8(@types/node@20.16.11)(lightningcss@1.25.1)(terser@5.34.1))(wrangler@3.80.1(@cloudflare/workers-types@4.20241004.0))
       '@remix-run/node':
         specifier: 2.12.1
         version: 2.12.1(typescript@5.6.2)
@@ -217,8 +217,8 @@ importers:
         specifier: 8.0.1
         version: 8.0.1
       wrangler:
-        specifier: 3.80.0
-        version: 3.80.0(@cloudflare/workers-types@4.20241004.0)
+        specifier: 3.80.1
+        version: 3.80.1(@cloudflare/workers-types@4.20241004.0)
 
 packages:
 
@@ -6716,8 +6716,8 @@ packages:
     resolution: {integrity: sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==}
     engines: {node: '>=4'}
 
-  miniflare@3.20240925.0:
-    resolution: {integrity: sha512-2LmQbKHf0n6ertUKhT+Iltixi53giqDH7P71+wCir3OnGyXIODqYwOECx1mSDNhYThpxM2dav8UdPn6SQiMoXw==}
+  miniflare@3.20240925.1:
+    resolution: {integrity: sha512-odavnAwWLevMWOi/efIdAI9AVlg8C8NfXe2YLoAeG+Fj5BDHPDxCoY7AjZvBj3CJ7bszkoYyhoPEH60X+Vk+7g==}
     engines: {node: '>=16.13'}
     hasBin: true
 
@@ -9095,8 +9095,8 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
 
-  wrangler@3.80.0:
-    resolution: {integrity: sha512-c9aN7Buf7XgTPpQkw1d0VjNRI4qg3m35PTg70Tg4mOeHwHGjsd74PAsP1G8BjpdqDjfWtsua7tj1g4M3/5dYNQ==}
+  wrangler@3.80.1:
+    resolution: {integrity: sha512-5pBZpzrGpfAtIzF3iBXfZZ9DoP8OjwfIUYjYmddfkmoe6fSyY5r/+IFP56fb/biK5q6FV5HxUnonDiuNyJKnug==}
     engines: {node: '>=16.17.0'}
     hasBin: true
     peerDependencies:
@@ -11537,7 +11537,7 @@ snapshots:
     optionalDependencies:
       typescript: 5.6.2
 
-  '@remix-run/dev@2.12.1(@remix-run/react@2.12.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.2))(@types/node@20.16.11)(lightningcss@1.25.1)(terser@5.34.1)(typescript@5.6.2)(vite@5.4.8(@types/node@20.16.11)(lightningcss@1.25.1)(terser@5.34.1))(wrangler@3.80.0(@cloudflare/workers-types@4.20241004.0))':
+  '@remix-run/dev@2.12.1(@remix-run/react@2.12.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.2))(@types/node@20.16.11)(lightningcss@1.25.1)(terser@5.34.1)(typescript@5.6.2)(vite@5.4.8(@types/node@20.16.11)(lightningcss@1.25.1)(terser@5.34.1))(wrangler@3.80.1(@cloudflare/workers-types@4.20241004.0))':
     dependencies:
       '@babel/core': 7.24.5
       '@babel/generator': 7.24.5
@@ -11596,7 +11596,7 @@ snapshots:
     optionalDependencies:
       typescript: 5.6.2
       vite: 5.4.8(@types/node@20.16.11)(lightningcss@1.25.1)(terser@5.34.1)
-      wrangler: 3.80.0(@cloudflare/workers-types@4.20241004.0)
+      wrangler: 3.80.1(@cloudflare/workers-types@4.20241004.0)
     transitivePeerDependencies:
       - '@types/node'
       - bluebird
@@ -17279,7 +17279,7 @@ snapshots:
 
   min-indent@1.0.1: {}
 
-  miniflare@3.20240925.0:
+  miniflare@3.20240925.1:
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       acorn: 8.12.1
@@ -19856,7 +19856,7 @@ snapshots:
       '@cloudflare/workerd-linux-arm64': 1.20240925.0
       '@cloudflare/workerd-windows-64': 1.20240925.0
 
-  wrangler@3.80.0(@cloudflare/workers-types@4.20241004.0):
+  wrangler@3.80.1(@cloudflare/workers-types@4.20241004.0):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.3.4
       '@cloudflare/workers-shared': 0.5.4
@@ -19865,7 +19865,7 @@ snapshots:
       blake3-wasm: 2.1.5
       chokidar: 3.6.0
       esbuild: 0.17.19
-      miniflare: 3.20240925.0
+      miniflare: 3.20240925.1
       nanoid: 3.3.7
       path-to-regexp: 6.3.0
       resolve: 1.22.8
