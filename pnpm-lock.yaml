@@ -49,8 +49,8 @@ importers:
         specifier: 0.1.2
         version: 0.1.2(@content-collections/core@0.7.2(typescript@5.6.2))(vite@5.4.8(@types/node@20.16.11)(lightningcss@1.25.1)(terser@5.34.1))
       '@iconify-json/circum':
-        specifier: 1.2.0
-        version: 1.2.0
+        specifier: 1.2.1
+        version: 1.2.1
       '@iconify-json/fa-solid':
         specifier: 1.2.0
         version: 1.2.0
@@ -1652,8 +1652,8 @@ packages:
     resolution: {integrity: sha512-93zYdMES/c1D69yZiKDBj0V24vqNzB/koF26KPaagAfd3P/4gUlh3Dys5ogAK+Exi9QyzlD8x/08Zt7wIKcDcA==}
     deprecated: Use @eslint/object-schema instead
 
-  '@iconify-json/circum@1.2.0':
-    resolution: {integrity: sha512-3XJEizPxs+qkem/dLCvNh0uVBw4ek99IMwXVP2CKiTrxfhyIsWeuPYa8ruL1JKPwh8O5t0+O1khnYdTGAWdAzQ==}
+  '@iconify-json/circum@1.2.1':
+    resolution: {integrity: sha512-HFYP8jlN2ucDH9xDyLarHwEeKMgdUEvwVLZW9eVwmO37G7971Jwn7yI60sdMgXvBqehYWkSl0JzIuREodYSn+w==}
 
   '@iconify-json/fa-solid@1.2.0':
     resolution: {integrity: sha512-8WV0gViiLN7WK150B9Ub+2nzqOmdmhMAKZAO9JqRDGhO07GEH4T/FYlKXK2zlF51C6HAx8fXV8pDapDX3TBavg==}
@@ -10569,7 +10569,7 @@ snapshots:
 
   '@humanwhocodes/object-schema@2.0.3': {}
 
-  '@iconify-json/circum@1.2.0':
+  '@iconify-json/circum@1.2.1':
     dependencies:
       '@iconify/types': 2.0.0
 

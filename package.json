@@ -47,7 +47,7 @@
     "@cloudflare/workers-types": "4.20241004.0",
     "@content-collections/core": "0.7.2",
     "@content-collections/remix-vite": "0.1.2",
-    "@iconify-json/circum": "1.2.0",
+    "@iconify-json/circum": "1.2.1",
     "@iconify-json/fa-solid": "1.2.0",
     "@iconify-json/ri": "1.2.0",
     "@iconify-json/simple-icons": "1.2.6",
