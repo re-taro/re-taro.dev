@@ -32,7 +32,7 @@ importers:
     devDependencies:
       '@axe-core/playwright':
         specifier: 4.10.0
-        version: 4.10.0(playwright-core@1.47.2)
+        version: 4.10.0(playwright-core@1.48.0)
       '@changesets/changelog-github':
         specifier: 0.5.0
         version: 0.5.0
@@ -67,8 +67,8 @@ importers:
         specifier: 0.46.1
         version: 0.46.1(@types/node@20.16.11)(@types/react-dom@18.3.0)(@types/react@18.3.11)(jsdom@25.0.1)(lightningcss@1.25.1)(terser@5.34.1)(typescript@5.6.3)
       '@playwright/test':
-        specifier: 1.47.2
-        version: 1.47.2
+        specifier: 1.48.0
+        version: 1.48.0
       '@re-taro/eslint-config':
         specifier: 5.2.0
         version: 5.2.0(eslint-plugin-format@0.1.2(eslint@8.57.1))(eslint@8.57.1)(typescript@5.6.3)(vitest@2.1.2(@types/node@20.16.11)(jsdom@25.0.1)(lightningcss@1.25.1)(terser@5.34.1))
@@ -149,7 +149,7 @@ importers:
         version: 3.7.1(vite@5.4.8(@types/node@20.16.11)(lightningcss@1.25.1)(terser@5.34.1))
       axe-playwright:
         specifier: 2.0.3
-        version: 2.0.3(playwright@1.47.2)
+        version: 2.0.3(playwright@1.48.0)
       browserslist-to-esbuild:
         specifier: 2.1.1
         version: 2.1.1(browserslist@4.23.3)
@@ -169,8 +169,8 @@ importers:
         specifier: 6.2.3
         version: 6.2.3
       playwright:
-        specifier: 1.47.2
-        version: 1.47.2
+        specifier: 1.48.0
+        version: 1.48.0
       plop:
         specifier: 4.0.1
         version: 4.0.1
@@ -1983,8 +1983,8 @@ packages:
     resolution: {integrity: sha512-cq8o4cWH0ibXh9VGi5P20Tu9XF/0fFXl9EUinr9QfTM7a7p0oTA4iJRCQWppXR1Pg8dSM0UCItCkPwsk9qWWYA==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
 
-  '@playwright/test@1.47.2':
-    resolution: {integrity: sha512-jTXRsoSPONAs8Za9QEQdyjFn+0ZQFjCiIztAIF6bi1HqhBzG9Ma7g1WotyiGqFSBRZjIEqMdT8RUlbk1QVhzCQ==}
+  '@playwright/test@1.48.0':
+    resolution: {integrity: sha512-W5lhqPUVPqhtc/ySvZI5Q8X2ztBOUgZ8LbAFy0JQgrXZs2xaILrUcNO3rQjwbLPfGK13+rZsDa1FpG+tqYkT5w==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -7250,13 +7250,13 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  playwright-core@1.47.2:
-    resolution: {integrity: sha512-3JvMfF+9LJfe16l7AbSmU555PaTl2tPyQsVInqm3id16pdDfvZ8TTZ/pyzmkbDrZTQefyzU7AIHlZqQnxpqHVQ==}
+  playwright-core@1.48.0:
+    resolution: {integrity: sha512-RBvzjM9rdpP7UUFrQzRwR8L/xR4HyC1QXMzGYTbf1vjw25/ya9NRAVnXi/0fvFopjebvyPzsmoK58xxeEOaVvA==}
     engines: {node: '>=18'}
     hasBin: true
 
-  playwright@1.47.2:
-    resolution: {integrity: sha512-nx1cLMmQWqmA3UsnjaaokyoUpdVaaDhJhMoxX2qj3McpjnsqFHs516QAKYhqHAgOP+oCFTEOCOAaD1RgD/RQfA==}
+  playwright@1.48.0:
+    resolution: {integrity: sha512-qPqFaMEHuY/ug8o0uteYJSRfMGFikhUysk8ZvAtfKmUK3kc/6oNl/y3EczF8OFGYIi/Ex2HspMfzYArk6+XQSA==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -9317,10 +9317,10 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@axe-core/playwright@4.10.0(playwright-core@1.47.2)':
+  '@axe-core/playwright@4.10.0(playwright-core@1.48.0)':
     dependencies:
       axe-core: 4.10.0
-      playwright-core: 1.47.2
+      playwright-core: 1.48.0
 
   '@babel/code-frame@7.23.5':
     dependencies:
@@ -11185,9 +11185,9 @@ snapshots:
 
   '@pkgr/core@0.1.1': {}
 
-  '@playwright/test@1.47.2':
+  '@playwright/test@1.48.0':
     dependencies:
-      playwright: 1.47.2
+      playwright: 1.48.0
 
   '@polka/url@1.0.0-next.25': {}
 
@@ -12129,7 +12129,7 @@ snapshots:
       jest-serializer-html: 7.1.0
       jest-watch-typeahead: 2.2.2(jest@29.7.0(@types/node@20.16.11)(babel-plugin-macros@3.1.0))
       nyc: 15.1.0
-      playwright: 1.47.2
+      playwright: 1.48.0
     transitivePeerDependencies:
       - '@swc/helpers'
       - '@types/node'
@@ -13289,14 +13289,14 @@ snapshots:
       axe-core: 4.10.0
       mustache: 4.2.0
 
-  axe-playwright@2.0.3(playwright@1.47.2):
+  axe-playwright@2.0.3(playwright@1.48.0):
     dependencies:
       '@types/junit-report-builder': 3.0.2
       axe-core: 4.10.0
       axe-html-reporter: 2.2.11(axe-core@4.10.0)
       junit-report-builder: 5.1.1
       picocolors: 1.1.0
-      playwright: 1.47.2
+      playwright: 1.48.0
 
   axios@1.7.4:
     dependencies:
@@ -17859,11 +17859,11 @@ snapshots:
 
   playwright-core@1.45.2: {}
 
-  playwright-core@1.47.2: {}
+  playwright-core@1.48.0: {}
 
-  playwright@1.47.2:
+  playwright@1.48.0:
     dependencies:
-      playwright-core: 1.47.2
+      playwright-core: 1.48.0
     optionalDependencies:
       fsevents: 2.3.2
 
