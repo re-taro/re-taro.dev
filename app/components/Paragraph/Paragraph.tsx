@@ -1,3 +1,5 @@
+/* eslint-disable perfectionist/sort-objects */
+
 import { css, cva } from "styled-system/css";
 import type { SystemStyleObject } from "styled-system/types";
 import type { HTMLAttributes, ReactNode } from "react";
@@ -65,7 +67,6 @@ export function Paragraph({
 	leading = "normal",
 	type = "main",
 	weight = "normal",
-	// eslint-disable-next-line perfectionist/sort-objects
 	as: Component = emphasis ? "em" : "span",
 	...props
 }: BaseProps & ElementProps): ReactNode {

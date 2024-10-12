@@ -41,9 +41,9 @@ function createURL(url) {
  */
 function createMarkdownTableRow({ reportUrl, summary, url }) {
 	return [
-    `| [${createURL(url).pathname}](${url})`,
-    ...(Object.keys(summaryKeys)).map(k => scoreEntry(summary[k])),
-    `[Report](${reportUrl}) |`,
+		`| [${createURL(url).pathname}](${url})`,
+		...(Object.keys(summaryKeys)).map(k => scoreEntry(summary[k])),
+		`[Report](${reportUrl}) |`,
 	].join(" | ");
 }
 
