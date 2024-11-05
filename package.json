@@ -50,7 +50,7 @@
     "@iconify-json/circum": "1.2.1",
     "@iconify-json/fa-solid": "1.2.0",
     "@iconify-json/ri": "1.2.3",
-    "@iconify-json/simple-icons": "1.2.10",
+    "@iconify-json/simple-icons": "1.2.11",
     "@pandacss/dev": "0.46.1",
     "@pandacss/studio": "0.46.1",
     "@playwright/test": "1.48.2",
