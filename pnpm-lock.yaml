@@ -202,8 +202,8 @@ importers:
         specifier: 5.6.3
         version: 5.6.3
       unplugin-icons:
-        specifier: 0.19.3
-        version: 0.19.3(@svgr/core@8.1.0(typescript@5.6.3))(@vue/compiler-sfc@3.4.19)
+        specifier: 0.20.1
+        version: 0.20.1(@svgr/core@8.1.0(typescript@5.6.3))(@vue/compiler-sfc@3.4.19)
       vite:
         specifier: 5.4.10
         version: 5.4.10(@types/node@22.9.0)(lightningcss@1.25.1)(terser@5.36.0)
@@ -8673,12 +8673,13 @@ packages:
     resolution: {integrity: sha512-pjy2bYhSsufwWlKwPc+l3cN7+wuJlK6uz0YdJEOlQDbl6jo/YlPi4mb8agUkVC8BF7V8NuzeyPNqRksA3hztKQ==}
     engines: {node: '>= 0.8'}
 
-  unplugin-icons@0.19.3:
-    resolution: {integrity: sha512-EUegRmsAI6+rrYr0vXjFlIP+lg4fSC4zb62zAZKx8FGXlWAGgEGBCa3JDe27aRAXhistObLPbBPhwa/0jYLFkQ==}
+  unplugin-icons@0.20.1:
+    resolution: {integrity: sha512-0z5sYGx07Q69ZrJB4kjmx7a5LYLNSWwyq95Ox9OuSG2y/sbhJaHUapRPOJcKmKhOAyToDVRdy9P7gxJ05lYipw==}
     peerDependencies:
       '@svgr/core': '>=7.0.0'
       '@svgx/core': ^1.0.1
       '@vue/compiler-sfc': ^3.0.2 || ^2.7.0
+      svelte: ^3.0.0 || ^4.0.0 || ^5.0.0
       vue-template-compiler: ^2.6.12
       vue-template-es2015-compiler: ^1.9.0
     peerDependenciesMeta:
@@ -8687,6 +8688,8 @@ packages:
       '@svgx/core':
         optional: true
       '@vue/compiler-sfc':
+        optional: true
+      svelte:
         optional: true
       vue-template-compiler:
         optional: true
@@ -19359,12 +19362,12 @@ snapshots:
 
   unpipe@1.0.0: {}
 
-  unplugin-icons@0.19.3(@svgr/core@8.1.0(typescript@5.6.3))(@vue/compiler-sfc@3.4.19):
+  unplugin-icons@0.20.1(@svgr/core@8.1.0(typescript@5.6.3))(@vue/compiler-sfc@3.4.19):
     dependencies:
       '@antfu/install-pkg': 0.4.1
       '@antfu/utils': 0.7.10
       '@iconify/utils': 2.1.29
-      debug: 4.3.6
+      debug: 4.3.7
       kolorist: 1.8.0
       local-pkg: 0.5.0
       unplugin: 1.12.0
@@ -19376,7 +19379,7 @@ snapshots:
 
   unplugin@1.12.0:
     dependencies:
-      acorn: 8.12.1
+      acorn: 8.14.0
       chokidar: 3.6.0
       webpack-sources: 3.2.3
       webpack-virtual-modules: 0.6.2
