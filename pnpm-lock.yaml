@@ -43,11 +43,11 @@ importers:
         specifier: 4.20241106.0
         version: 4.20241106.0
       '@content-collections/core':
-        specifier: 0.7.2
-        version: 0.7.2(typescript@5.6.3)
+        specifier: 0.7.3
+        version: 0.7.3(typescript@5.6.3)
       '@content-collections/remix-vite':
         specifier: 0.1.2
-        version: 0.1.2(@content-collections/core@0.7.2(typescript@5.6.3))(vite@5.4.10(@types/node@22.9.0)(lightningcss@1.25.1)(terser@5.36.0))
+        version: 0.1.2(@content-collections/core@0.7.3(typescript@5.6.3))(vite@5.4.10(@types/node@22.9.0)(lightningcss@1.25.1)(terser@5.36.0))
       '@iconify-json/circum':
         specifier: 1.2.1
         version: 1.2.1
@@ -752,8 +752,8 @@ packages:
   '@cloudflare/workers-types@4.20241106.0':
     resolution: {integrity: sha512-pI4ivacmp+vgNO/siHDsZ6BdITR0LC4Mh/1+yzVLcl9U75pt5DUDCOWOiqIRFXRq6H65DPnJbEPFo3x9UfgofQ==}
 
-  '@content-collections/core@0.7.2':
-    resolution: {integrity: sha512-jOpQV6etstGF477CoMXdh4Cwl4fEbgZhty/WKxPsP3akx1LE4Ds8w89WZVsy8pttnR6KC4psrjCtlwa9WNS+rg==}
+  '@content-collections/core@0.7.3':
+    resolution: {integrity: sha512-eqrQ/59BdorWQFFLF1sGPtIKzsn1OPSomok8e6MevYAaZ2knkhI3ddTQqo8OMrW/zA5H71Pbg0cgxbCN0pOVsg==}
     peerDependencies:
       typescript: ^5.0.2
 
@@ -9974,7 +9974,7 @@ snapshots:
 
   '@cloudflare/workers-types@4.20241106.0': {}
 
-  '@content-collections/core@0.7.2(typescript@5.6.3)':
+  '@content-collections/core@0.7.3(typescript@5.6.3)':
     dependencies:
       '@parcel/watcher': 2.4.1
       camelcase: 8.0.0
@@ -9989,9 +9989,9 @@ snapshots:
       yaml: 2.5.0
       zod: 3.23.8
 
-  '@content-collections/remix-vite@0.1.2(@content-collections/core@0.7.2(typescript@5.6.3))(vite@5.4.10(@types/node@22.9.0)(lightningcss@1.25.1)(terser@5.36.0))':
+  '@content-collections/remix-vite@0.1.2(@content-collections/core@0.7.3(typescript@5.6.3))(vite@5.4.10(@types/node@22.9.0)(lightningcss@1.25.1)(terser@5.36.0))':
     dependencies:
-      '@content-collections/core': 0.7.2(typescript@5.6.3)
+      '@content-collections/core': 0.7.3(typescript@5.6.3)
       vite: 5.4.10(@types/node@22.9.0)(lightningcss@1.25.1)(terser@5.36.0)
 
   '@cspotcode/source-map-support@0.8.1':
