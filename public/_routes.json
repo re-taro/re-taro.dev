@@ -1,5 +1,14 @@
 {
   "version": 1,
   "include": ["/*"],
-  "exclude": ["/keybase.txt", "/.well-known/*"]
+  "exclude": [
+    "/keybase.txt",
+    "/.well-known/*",
+    "/favicon.ico",
+    "/favicon.svg",
+    "/robots.txt",
+    "/~partytown/*",
+    "/images/*",
+    "/assets/*.css"
+  ]
 }
