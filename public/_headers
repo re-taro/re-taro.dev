@@ -2,3 +2,7 @@
   Cache-Control: public, max-age=3600, s-maxage=3600
 /.well-known/*
   Cache-Control: public, max-age=3600, s-maxage=3600
+/assets/*
+	cache-control: public, immutable, max-age=31536000
+/images/*
+	cache-control: public, immutable, max-age=604800
