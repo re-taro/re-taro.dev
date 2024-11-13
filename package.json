@@ -101,7 +101,7 @@
     "unplugin-icons": "0.20.1",
     "vite": "5.4.11",
     "vite-tsconfig-paths": "5.1.2",
-    "vitest": "2.1.4",
+    "vitest": "2.1.5",
     "wait-on": "8.0.1",
     "wrangler": "3.86.1"
   },
