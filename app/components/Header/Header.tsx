@@ -68,7 +68,7 @@ export function Header({ css: cssStyle }: Props): ReactNode {
 				paddingInline: "1rem",
 				position: "fixed",
 				top: 0,
-				width: "100%",
+				width: "[100%]",
 				zIndex: 100,
 			}, cssStyle)}
 		>
@@ -90,7 +90,7 @@ export function Header({ css: cssStyle }: Props): ReactNode {
 					className={css({
 						"& > li > a": {
 							opacity: 0.6,
-							transition: "opacity 0.2s ease",
+							transition: "[opacity 0.2s ease]",
 						},
 						"alignItems": "center",
 						"color": "text.main",

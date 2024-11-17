@@ -30,10 +30,8 @@ export function TimelineItem({ date, slug, title }: Props): ReactNode {
 					"bottom": 0,
 					"left": "-0.5px",
 					"position": "absolute",
-
 					"top": 0,
-
-					"width": "1px",
+					"width": "[1px]",
 				})}
 				role="presentation"
 			/>
@@ -41,11 +39,11 @@ export function TimelineItem({ date, slug, title }: Props): ReactNode {
 				className={css({
 					backgroundColor: "bg.teriary",
 					borderRadius: "9999px",
-					height: "0.5rem",
+					height: "[0.5rem]",
 					left: "-4px",
 					position: "absolute",
 					top: "1rem",
-					width: "0.5rem",
+					width: "[0.5rem]",
 				})}
 				role="presentation"
 			/>

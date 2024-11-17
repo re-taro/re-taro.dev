@@ -24,9 +24,8 @@ export function SocialLink({ children, href, icon: Icon }: Props): ReactNode {
 				fontSize: "m",
 				fontWeight: "normal",
 				lineHeight: "normal",
-
 				opacity: 0.6,
-				transition: "opacity 0.3s ease-in",
+				transition: "[opacity 0.3s ease-in]",
 			})}
 			href={href}
 			rel="noreferrer"
