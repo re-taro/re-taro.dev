@@ -57,9 +57,9 @@ export function Hero(): ReactNode {
 					className={css({
 						aspectRatio: "1 / 1",
 						borderRadius: "50%",
-						height: { base: "10rem", md: "15rem" },
-						margin: { base: "0 3.5rem", md: "0 5rem" },
-						width: { base: "10rem", md: "15rem" },
+						height: { base: "[10rem]", md: "[15rem]" },
+						margin: { base: "[0 3.5rem]", md: "[0 5rem]" },
+						width: { base: "[10rem]", md: "[15rem]" },
 					})}
 					alt="Rintaro Itokawa's profile image"
 					decoding="async"
@@ -83,9 +83,9 @@ export function Hero(): ReactNode {
 			<hr className={css({
 				backgroundColor: "bg.teriary",
 				border: "none",
-				height: { base: "1px", md: "20rem" },
-				margin: 0,
-				width: { base: "80%", md: "1px" },
+				height: { base: "[1px]", md: "[20rem]" },
+				margin: "[0]",
+				width: { base: "[80%]", md: "[1px]" },
 			})}
 			/>
 			<ul className={
@@ -103,7 +103,7 @@ export function Hero(): ReactNode {
 			>
 				<li
 					className={css({
-						height: "2.25rem",
+						height: "[2.25rem]",
 					})}
 					onMouseOver={() => {
 						linkReplay1();
@@ -113,7 +113,7 @@ export function Hero(): ReactNode {
 				</li>
 				<li
 					className={css({
-						height: "2.25rem",
+						height: "[2.25rem]",
 					})}
 					onMouseOver={() => {
 						linkReplay2();
@@ -123,7 +123,7 @@ export function Hero(): ReactNode {
 				</li>
 				<li
 					className={css({
-						height: "2.25rem",
+						height: "[2.25rem]",
 					})}
 					onMouseOver={() => {
 						linkReplay3();

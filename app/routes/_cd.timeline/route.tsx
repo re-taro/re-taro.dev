@@ -19,10 +19,10 @@ export default function Page(): ReactNode {
 				boxSizing: "border-box",
 				display: "flex",
 				flexDirection: "column",
-				margin: "5rem auto 0",
-				maxWidth: "50rem",
+				margin: "[5rem auto 0]",
+				maxWidth: "[62.5rem]",
 				rowGap: "2rem",
-				width: "100%",
+				width: "[100%]",
 			})}
 		>
 			<PageHeading bold prefix css={css.raw({ fontSize: "xl" })} type="section">Timeline</PageHeading>

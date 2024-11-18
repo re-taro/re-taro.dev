@@ -22,10 +22,10 @@ export default function Page(): ReactNode {
 				boxSizing: "border-box",
 				display: "flex",
 				flexDirection: "column",
-				margin: "5rem auto 0",
-				maxWidth: "50rem",
+				margin: "[5rem auto 0]",
+				maxWidth: "[62.5rem]",
 				rowGap: "2rem",
-				width: "100%",
+				width: "[100%]",
 			})}
 		>
 			<PageHeading bold prefix css={css.raw({ fontSize: "xl" })} type="section">About me</PageHeading>
@@ -65,7 +65,7 @@ export default function Page(): ReactNode {
 				<Heading bold prefix css={css.raw({ fontSize: "l" })} type="block">Computing Skills</Heading>
 				<Section aria-label="Language">
 					<Heading bold prefix css={css.raw({ fontSize: "m" })} type="block">Language</Heading>
-					<ul className={css({ marginTop: ".5rem" })}>
+					<ul className={css({ marginTop: "[.5rem]" })}>
 						<ListItem name="TypeScript (JavaScript)">
 							Webアプリケーションや
 							<wbr />
@@ -90,7 +90,7 @@ export default function Page(): ReactNode {
 				</Section>
 				<Section aria-label="Framework">
 					<Heading bold prefix css={css.raw({ fontSize: "m" })} type="block">Framework</Heading>
-					<ul className={css({ marginTop: ".5rem" })}>
+					<ul className={css({ marginTop: "[.5rem]" })}>
 						<ListItem name="React / Next.js (Remix.js)">
 							大規模なWebアプリケーションを
 							<wbr />
@@ -135,9 +135,9 @@ export default function Page(): ReactNode {
 					className={css({
 						backgroundColor: "bg.teriary",
 						border: "none",
-						height: "1px",
-						margin: "1rem 0",
-						width: "100%",
+						height: "[1px]",
+						margin: "[1rem 0]",
+						width: "[100%]",
 					})}
 				/>
 			</Section>

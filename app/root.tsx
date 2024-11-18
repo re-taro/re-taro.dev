@@ -33,7 +33,7 @@ function Document({ children, noIndex, title }: Props): ReactNode {
 				display: "grid",
 				gridTemplateAreas: `"header" "main" "footer"`,
 				gridTemplateRows: "auto 1fr auto",
-				minHeight: "100lvh",
+				minHeight: "[100lvh]",
 			})}
 			>
 				<Header css={css.raw({ gridArea: "header" })} />
@@ -89,9 +89,9 @@ export function ErrorBoundary() {
 					className={css({
 						color: "text.main",
 						display: "grid",
-						height: "100svh",
+						height: "[100svh]",
 						placeItems: "center",
-						width: "100%",
+						width: "[100%]",
 					})}
 				>
 					<div
@@ -131,9 +131,9 @@ export function ErrorBoundary() {
 				className={css({
 					color: "text.main",
 					display: "grid",
-					height: "100svh",
+					height: "[100svh]",
 					placeItems: "center",
-					width: "100%",
+					width: "[100%]",
 				})}
 			>
 				<div className={css({

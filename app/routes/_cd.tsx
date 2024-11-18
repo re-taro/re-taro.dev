@@ -10,13 +10,13 @@ export default function WithCdLayout(): ReactNode {
 			<Outlet />
 			<div className={(css({
 				color: "text.secondary",
-				margin: "2rem auto 0",
-				maxWidth: "50rem",
-				width: "100%",
+				margin: "[2rem auto 0]",
+				maxWidth: "[62.5rem]",
+				width: "[100%]",
 			}))}
 			>
 				<span className={css({
-					marginRight: "0.5rem",
+					marginRight: "[0.5rem]",
 				})}
 				>
 					&gt;
@@ -33,7 +33,7 @@ export default function WithCdLayout(): ReactNode {
 
 						opacity: 0.6,
 
-						transition: "opacity 0.3s ease-in",
+						transition: "[opacity 0.3s ease-in]",
 
 					})}
 					to={pathname.split("/").slice(0, -1).join("/") || "/"}

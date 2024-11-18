@@ -5,9 +5,9 @@ export default function Page() {
 	return (
 		<section className={css({
 			display: "grid",
-			height: "100svh",
+			height: "[100svh]",
 			placeItems: "center",
-			width: "100%",
+			width: "[100%]",
 		})}
 		>
 			<Hero />

@@ -15,7 +15,7 @@ export function Footer({ css: cssStyle }: Props): ReactNode {
 			justifyContent: "center",
 			lineHeight: "tight",
 			padding: "1rem 0 2rem",
-			width: "100%",
+			width: "[100%]",
 		}, cssStyle)}
 		>
 			2021 - PRESENT &copy; Rintaro Itokawa

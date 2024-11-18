@@ -17,7 +17,7 @@ export function ListItem({ children, name }: Props): ReactNode {
 			fontSize: "m",
 			fontWeight: "normal",
 			lineHeight: "normal",
-			marginLeft: "1em",
+			marginLeft: "[1em]",
 
 			position: "relative",
 		})}
@@ -33,7 +33,7 @@ export function ListItem({ children, name }: Props): ReactNode {
 					color: "text.secondary",
 					hangingPunctuation: "allow-end",
 					lineBreak: "strict",
-					marginLeft: "1.25em",
+					marginLeft: "[1.25em]",
 					overflowWrap: "anywhere",
 					position: "relative",
 

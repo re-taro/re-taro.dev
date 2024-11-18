@@ -1,29 +1,10 @@
 import { defineConfig } from "@pandacss/dev";
-
 import { removeUnusedKeyframes } from "./removeUnusedKeyframse";
 import { removeUnusedCssVars } from "./removeUnusedvars";
 
 export default defineConfig({
 	browserslist: ["defaults and > 0.3%"],
 	clean: true,
-	conditions: {
-		active: "&:is(:active, [data-active])",
-		after: "&::after",
-		before: "&::before",
-		checked: "&:is(:checked, [data-checked], [aria-checked=true], [data-state=\"checked\"])",
-		disabled: "&:is(:disabled, [disabled], [data-disabled])",
-		enabled: "&:enabled",
-		focusVisible: "&:is(:focus-visible, [data-focus-visible])",
-		hover: "&:is(:hover, [data-hover])",
-		invalid: "&:is(:invalid, [data-invalid])",
-		pressed: "&:is([aria-pressed=true], [data-pressed])",
-		readOnly: "&:is(:read-only, [data-read-only])",
-		required: "&:is(:required, [data-required], [aria-required=true])",
-		selected: "&:is([aria-selected=true], [data-selected])",
-		valid: "&:is(:valid, [data-valid])",
-	},
-	eject: true,
-	exclude: [],
 	globalCss: {
 		body: {
 			backgroundColor: "bg.main",
@@ -46,7 +27,6 @@ export default defineConfig({
 	outdir: "styled-system",
 	outExtension: "js",
 	preflight: true,
-	presets: [],
 	strictPropertyValues: true,
 	strictTokens: true,
 	theme: {
@@ -55,6 +35,14 @@ export default defineConfig({
 		},
 		tokens: {
 			colors: {
+				accent: {
+					main: {
+						value: "#c084fc",
+					},
+					secondary: {
+						value: "#e9d5ff",
+					},
+				},
 				bg: {
 					main: {
 						value: "#0b1215",
@@ -128,35 +116,6 @@ export default defineConfig({
 					value: 1.25,
 				},
 			},
-		},
-	},
-	utilities: {
-		backgroundColor: {
-			values: "colors",
-		},
-		borderColor: {
-			values: "colors",
-		},
-		color: {
-			values: "colors",
-		},
-		fill: {
-			values: "colors",
-		},
-		fontSize: {
-			values: "fontSizes",
-		},
-		fontWeight: {
-			values: "fontWeights",
-		},
-		lineHeight: {
-			values: "lineHeights",
-		},
-		outlineColor: {
-			values: "colors",
-		},
-		stroke: {
-			values: "colors",
 		},
 	},
 });
