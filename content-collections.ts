@@ -41,6 +41,10 @@ const work = defineCollection({
 			alt: z.string({ message: "Value of \"alt\" must be a string." }),
 			src: z.string({ message: "Value of \"src\" must be a string." }),
 		})).optional(),
+		links: z.array(z.object({
+			text: z.string({ message: "Value of \"text\" must be a string." }),
+			url: z.string({ message: "Value of \"url\" must be a string." }),
+		})).optional(),
 		thumbnail: z.object({
 			alt: z.string({ message: "Value of \"alt\" must be a string." }),
 			src: z.string({ message: "Value of \"src\" must be a string." }),
