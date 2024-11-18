@@ -11,7 +11,7 @@ export default function WithCdLayout(): ReactNode {
 			<div className={(css({
 				color: "text.secondary",
 				margin: "[2rem auto 0]",
-				maxWidth: "[50rem]",
+				maxWidth: "[62.5rem]",
 				width: "[100%]",
 			}))}
 			>

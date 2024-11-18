@@ -23,7 +23,7 @@ export default function Page(): ReactNode {
 				display: "flex",
 				flexDirection: "column",
 				margin: "[5rem auto 0]",
-				maxWidth: "[50rem]",
+				maxWidth: "[62.5rem]",
 				rowGap: "2rem",
 				width: "[100%]",
 			})}
