@@ -160,7 +160,7 @@ export function Carousel({ images }: Props): ReactNode {
 				})}
 			>
 				{scrollSnaps.map((snap, idx) => (
-					<CarouselDotButton index={snap} isSelected={idx === selectedIndex} key={idx} onClick={() => onDotButtonClick(idx)} />
+					<CarouselDotButton index={idx} isSelected={idx === selectedIndex} key={snap} onClick={() => onDotButtonClick(idx)} />
 				))}
 			</div>
 		</section>
