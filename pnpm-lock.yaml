@@ -190,8 +190,8 @@ importers:
         specifier: 6.0.1
         version: 6.0.1(postcss@8.4.49)(yaml@2.5.0)
       remix-development-tools:
-        specifier: 4.7.6
-        version: 4.7.6(@remix-run/react@2.14.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.3))(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@5.4.11(@types/node@22.9.0)(lightningcss@1.25.1)(terser@5.36.0))
+        specifier: 4.7.7
+        version: 4.7.7(@remix-run/react@2.14.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.3))(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@5.4.11(@types/node@22.9.0)(lightningcss@1.25.1)(terser@5.36.0))
       rollup-plugin-visualizer:
         specifier: 5.12.0
         version: 5.12.0(rollup@4.21.0)
@@ -7597,9 +7597,6 @@ packages:
       '@types/react':
         optional: true
 
-  react-use-websocket@4.9.0:
-    resolution: {integrity: sha512-/6OaCMggQCTnryCAsw/N+/wfH7bBfIXk5WXTMPdyf0x9HWJXLGUVttAT5hqAimRytD1dkHEJCUrFHAGzOAg1eg==}
-
   react@18.2.0:
     resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
     engines: {node: '>=0.10.0'}
@@ -7728,8 +7725,8 @@ packages:
   remark-stringify@11.0.0:
     resolution: {integrity: sha512-1OSmLd3awB/t8qdoEOMazZkNsfVTeY4fTsgzcQFdXNq8ToTN4ZGwrMnlda4K6smTFKD+GRV6O48i6Z4iKgPPpw==}
 
-  remix-development-tools@4.7.6:
-    resolution: {integrity: sha512-+Qhy97SOWc3GyK5aCiMLksSNxuM+Z4qrEzWPZqvf47sA2dwMf3j1DYF3m/gyMgu+zoPlTfEs39SQGQFhKkDGHg==}
+  remix-development-tools@4.7.7:
+    resolution: {integrity: sha512-yJlLm1hxhZhLr2Q4CqPyEtaIrg9GsTvU72Eu9moLkR5azVZeVepJcuHwACZJN0vGVdV4eto1IRPljYuODcG4Vw==}
     peerDependencies:
       '@remix-run/react': '>=1.15'
       react: '>=17'
@@ -18041,8 +18038,6 @@ snapshots:
     optionalDependencies:
       '@types/react': 18.3.12
 
-  react-use-websocket@4.9.0: {}
-
   react@18.2.0:
     dependencies:
       loose-envify: 1.4.0
@@ -18249,7 +18244,7 @@ snapshots:
       mdast-util-to-markdown: 2.1.0
       unified: 11.0.5
 
-  remix-development-tools@4.7.6(@remix-run/react@2.14.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.3))(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@5.4.11(@types/node@22.9.0)(lightningcss@1.25.1)(terser@5.36.0)):
+  remix-development-tools@4.7.7(@remix-run/react@2.14.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.6.3))(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@5.4.11(@types/node@22.9.0)(lightningcss@1.25.1)(terser@5.36.0)):
     dependencies:
       '@radix-ui/react-accordion': 1.1.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@radix-ui/react-select': 1.2.2(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -18264,7 +18259,6 @@ snapshots:
       react-diff-viewer-continued: 3.4.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react-dom: 18.3.1(react@18.3.1)
       react-hotkeys-hook: 4.5.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react-use-websocket: 4.9.0
       tailwind-merge: 1.14.0
       vite: 5.4.11(@types/node@22.9.0)(lightningcss@1.25.1)(terser@5.36.0)
     transitivePeerDependencies:
