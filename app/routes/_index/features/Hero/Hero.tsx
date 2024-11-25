@@ -62,7 +62,7 @@ export function Hero(): ReactNode {
 						width: { base: "[10rem]", md: "[15rem]" },
 					})}
 					alt="Rintaro Itokawa's profile image"
-					decoding="async"
+					fetchPriority="high"
 					height={240}
 					loading="eager"
 					sizes={["(max-width: 768px) 160px", "240px"].join(", ")}
