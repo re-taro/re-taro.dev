@@ -1,5 +1,11 @@
 # re-taro.dev
 
+## 2.1.0
+
+### Minor Changes
+
+- [#1474](https://github.com/re-taro/re-taro.dev/pull/1474) [`af472af`](https://github.com/re-taro/re-taro.dev/commit/af472affa845427f7a0fca0439f152d7f45764dd) Thanks [@re-taro](https://github.com/re-taro)! - Add tl content about intern
+
 ## 2.0.1
 
 ### Patch Changes
