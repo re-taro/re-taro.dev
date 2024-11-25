@@ -8,15 +8,12 @@ import { Header } from "~/components/Header";
 
 interface Props {
 	children: ReactNode;
-	noIndex?: boolean;
-	title?: string;
 }
 
-function Document({ children, noIndex, title }: Props): ReactNode {
+export function Layout({ children }: Props): ReactNode {
 	return (
 		<html lang="ja-JP">
 			<head>
-				{noIndex && <meta content="noindex" name="robots" />}
 				<meta charSet="utf-8" />
 				<meta content="width=device-width, initial-scale=1" name="viewport" />
 				<link href="https://fonts.googleapis.com" rel="preconnect" />
@@ -27,14 +24,15 @@ function Document({ children, noIndex, title }: Props): ReactNode {
 				<link href="/favicon.svg" rel="icon" type="image/svg+xml" />
 				<Meta />
 				<Links />
-				{title ? <title data-title-override="">{title}</title> : <title>re-taro</title>}
+				<title>re-taro</title>
 			</head>
-			<body className={css({
-				display: "grid",
-				gridTemplateAreas: `"header" "main" "footer"`,
-				gridTemplateRows: "auto 1fr auto",
-				minHeight: "[100lvh]",
-			})}
+			<body
+				className={css({
+					display: "grid",
+					gridTemplateAreas: `"header" "main" "footer"`,
+					gridTemplateRows: "auto 1fr auto",
+					minHeight: "[100lvh]",
+				})}
 			>
 				<Header css={css.raw({ gridArea: "header" })} />
 				<main className={css({ gridArea: "main", padding: "0 1rem" })}>
@@ -50,9 +48,7 @@ function Document({ children, noIndex, title }: Props): ReactNode {
 
 function App(): ReactNode {
 	return (
-		<Document>
-			<Outlet />
-		</Document>
+		<Outlet />
 	);
 }
 
@@ -81,52 +77,6 @@ export function ErrorBoundary() {
 
 	if (isRouteErrorResponse(error)) {
 		return (
-			<Document
-				noIndex
-				title={error.statusText}
-			>
-				<main
-					className={css({
-						color: "text.main",
-						display: "grid",
-						height: "[100svh]",
-						placeItems: "center",
-						width: "[100%]",
-					})}
-				>
-					<div
-						className={css({
-							lineHeight: "none",
-							textAlign: "center",
-						})}
-					>
-						<h1
-							className={css({
-								fontSize: "4xl",
-							})}
-						>
-							{error.status}
-						</h1>
-						<a
-							className={css({
-								display: "inline-block",
-								fontSize: "xl",
-								textDecoration: "underline",
-							})}
-							href={`https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/${error.status}`}
-							rel="noreferrer"
-							target="_blank"
-						>
-							{error.statusText}
-						</a>
-					</div>
-				</main>
-			</Document>
-		);
-	}
-
-	return (
-		<Document noIndex title="Error">
 			<main
 				className={css({
 					color: "text.main",
@@ -136,27 +86,66 @@ export function ErrorBoundary() {
 					width: "[100%]",
 				})}
 			>
-				<div className={css({
-					lineHeight: "none",
-					textAlign: "center",
-				})}
-				>
-					<h1 className={css({
-						fontSize: "4xl",
+				<div
+					className={css({
+						lineHeight: "none",
+						textAlign: "center",
 					})}
-					>
-						Error
-					</h1>
-					<p
+				>
+					<h1
 						className={css({
-							fontSize: "xl",
+							fontSize: "4xl",
 						})}
 					>
-						Something went wrong! Please try again later.
-					</p>
+						{error.status}
+					</h1>
+					<a
+						className={css({
+							display: "inline-block",
+							fontSize: "xl",
+							textDecoration: "underline",
+						})}
+						href={`https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/${error.status}`}
+						rel="noreferrer"
+						target="_blank"
+					>
+						{error.statusText}
+					</a>
 				</div>
 			</main>
-		</Document>
+		);
+	}
+
+	return (
+		<main
+			className={css({
+				color: "text.main",
+				display: "grid",
+				height: "[100svh]",
+				placeItems: "center",
+				width: "[100%]",
+			})}
+		>
+			<div className={css({
+				lineHeight: "none",
+				textAlign: "center",
+			})}
+			>
+				<h1 className={css({
+					fontSize: "4xl",
+				})}
+				>
+					Error
+				</h1>
+				<p
+					className={css({
+						fontSize: "xl",
+					})}
+				>
+					Something went wrong! Please try again later.
+				</p>
+			</div>
+		</main>
 	);
 }
 
