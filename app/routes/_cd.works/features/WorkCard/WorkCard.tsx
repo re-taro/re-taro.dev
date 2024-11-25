@@ -30,7 +30,7 @@ export function WorkCard({ work }: Props): ReactNode {
 					flexDirection: "column",
 				})}
 				prefetch="intent"
-				to={`/works/${work._meta.path}`}
+				to={`/work/${work._meta.path}`}
 			>
 				<Heading
 					type="block"

@@ -7,7 +7,19 @@ export default function WithCdLayout(): ReactNode {
 
 	return (
 		<>
-			<Outlet />
+			<div
+				className={css({
+					boxSizing: "border-box",
+					display: "flex",
+					flexDirection: "column",
+					margin: "[5rem auto 0]",
+					maxWidth: "[62.5rem]",
+					rowGap: "2rem",
+					width: "[100%]",
+				})}
+			>
+				<Outlet />
+			</div>
 			<div className={(css({
 				color: "text.secondary",
 				margin: "[2rem auto 0]",

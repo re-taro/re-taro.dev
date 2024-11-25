@@ -14,23 +14,13 @@ export default function Page(): ReactNode {
 	const { timelines } = useLoaderData();
 
 	return (
-		<div
-			className={css({
-				boxSizing: "border-box",
-				display: "flex",
-				flexDirection: "column",
-				margin: "[5rem auto 0]",
-				maxWidth: "[62.5rem]",
-				rowGap: "2rem",
-				width: "[100%]",
-			})}
-		>
+		<>
 			<PageHeading bold prefix css={css.raw({ fontSize: "xl" })} type="section">Timeline</PageHeading>
 			<Paragraph as="p">私のこれまで</Paragraph>
 			<Section aria-label="Timeline" css={css.raw({ display: "flex", flexDirection: "column", rowGap: "1rem" })}>
 				<Timeline timelines={timelines} />
 			</Section>
-		</div>
+		</>
 	);
 }
 

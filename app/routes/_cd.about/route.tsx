@@ -17,17 +17,7 @@ import { Section } from "~/components/SectioningContent";
 
 export default function Page(): ReactNode {
 	return (
-		<div
-			className={css({
-				boxSizing: "border-box",
-				display: "flex",
-				flexDirection: "column",
-				margin: "[5rem auto 0]",
-				maxWidth: "[62.5rem]",
-				rowGap: "2rem",
-				width: "[100%]",
-			})}
-		>
+		<>
 			<PageHeading bold prefix css={css.raw({ fontSize: "xl" })} type="section">About me</PageHeading>
 			<Section aria-label="Profile" css={css.raw({ display: "flex", flexDirection: "column", rowGap: "1rem" })}>
 				<Heading bold prefix css={css.raw({ fontSize: "l" })} type="block">Profile</Heading>
@@ -154,7 +144,7 @@ export default function Page(): ReactNode {
 					<SocialLink href="mailto:me@re-taro.dev" icon={MailLine}>me&#64;re-taro.dev</SocialLink>
 				</p>
 			</Section>
-		</div>
+		</>
 	);
 }
 
