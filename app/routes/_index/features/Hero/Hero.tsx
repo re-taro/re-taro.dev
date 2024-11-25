@@ -65,8 +65,9 @@ export function Hero(): ReactNode {
 					decoding="async"
 					height={240}
 					loading="eager"
-					src="/images/rintaro.avif"
-					srcSet={["/images/rintaro.avif 1x", "/images/rintaro@2x.avif 2x"].join(", ")}
+					sizes={["(max-width: 768px) 160px", "240px"].join(", ")}
+					src="/images/rintaro@240w.avif"
+					srcSet={["/images/rintaro@160w.avif 160w", "/images/rintaro@240w.avif 240w"].join(", ")}
 					width={240}
 				/>
 				<Suspense fallback={<PageHeading bold>Rintaro Itokawa</PageHeading>}><HeroText /></Suspense>
