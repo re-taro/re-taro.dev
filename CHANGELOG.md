@@ -1,5 +1,11 @@
 # re-taro.dev
 
+## 2.2.0
+
+### Minor Changes
+
+- [#1476](https://github.com/re-taro/re-taro.dev/pull/1476) [`997a6fd`](https://github.com/re-taro/re-taro.dev/commit/997a6fdfb69887ebf2c1a698f9db87bc4fe35f06) Thanks [@re-taro](https://github.com/re-taro)! - Optimize FOUC
+
 ## 2.1.0
 
 ### Minor Changes
