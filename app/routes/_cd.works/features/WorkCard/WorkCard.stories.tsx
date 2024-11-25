@@ -82,7 +82,7 @@ export const Default: Story = {
 			],
 			thumbnail: {
 				alt: "togather",
-				src: "/images/works/togather/togather_thumb.png",
+				src: "https://re-taro.dev/images/works/togather/togather_thumb.png",
 			},
 			title: "togather",
 		},

@@ -6,7 +6,6 @@ import type { EmblaCarouselType, EmblaEventType } from "embla-carousel";
 import type { Work } from "content-collections";
 import { css } from "styled-system/css";
 import { CarouselDotButton, useDotButton } from "../CarouselDotButton";
-import { HOST } from "~/constants";
 
 const TWEEN_FACTOR_BASE = 0.84;
 const SLIDE_SPACING = "1rem";
@@ -109,8 +108,6 @@ export function Carousel({ images }: Props): ReactNode {
 					})}
 				>
 					{images.map((image) => {
-						const src = new URL(image.src, HOST).toString();
-
 						return (
 							<div
 								className={css({
@@ -134,7 +131,7 @@ export function Carousel({ images }: Props): ReactNode {
 									alt={image.alt}
 									height={450}
 									loading="lazy"
-									src={`https://img.re-taro.dev?url=${src}`}
+									src={`https://img.re-taro.dev?url=${image.src}`}
 									width={800}
 								/>
 								<span

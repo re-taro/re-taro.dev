@@ -5,15 +5,12 @@ import { css } from "styled-system/css";
 import { Heading } from "~/components/Heading";
 import { Paragraph } from "~/components/Paragraph";
 import { Article } from "~/components/SectioningContent";
-import { HOST } from "~/constants";
 
 interface Props {
 	work: Work;
 }
 
 export function WorkCard({ work }: Props): ReactNode {
-	const src = new URL(work.thumbnail.src, HOST).toString();
-
 	return (
 		<Article
 			css={css.raw({
@@ -69,7 +66,7 @@ export function WorkCard({ work }: Props): ReactNode {
 					})}
 					alt={work.thumbnail.alt}
 					height={360}
-					src={`https://img.re-taro.dev?url=${src}&w=640`}
+					src={`https://img.re-taro.dev?url=${work.thumbnail.src}&w=640`}
 					width={640}
 				/>
 				<Paragraph as="p" css={css.raw({ marginTop: "[0.5rem]" })}>{work.description}</Paragraph>
