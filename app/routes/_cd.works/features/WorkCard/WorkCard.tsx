@@ -14,7 +14,7 @@ export function WorkCard({ work }: Props): ReactNode {
 	return (
 		<Article
 			css={css.raw({
-				flexBasis: "[calc(50% - 0.5rem)]",
+				flexBasis: { base: "[18.75rem]", md: "[calc(50% - 0.5rem)]" },
 				flexGrow: 1,
 			})}
 		>
