@@ -1,5 +1,11 @@
 # re-taro.dev
 
+## 2.0.1
+
+### Patch Changes
+
+- [#1472](https://github.com/re-taro/re-taro.dev/pull/1472) [`6caf2aa`](https://github.com/re-taro/re-taro.dev/commit/6caf2aa7faecc98a270ac42047aa247384d5413c) Thanks [@re-taro](https://github.com/re-taro)! - Fix typo
+
 ## 2.0.0
 
 ### Major Changes
