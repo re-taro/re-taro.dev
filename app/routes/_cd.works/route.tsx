@@ -1,6 +1,7 @@
 import { useLoaderData } from "@remix-run/react";
 import type { ReactNode } from "react";
 import { css } from "styled-system/css";
+import type { MetaFunction } from "@remix-run/cloudflare";
 import { loader } from "./handlers";
 import { WorkCard } from "./features/WorkCard";
 import { PageHeading } from "~/components/Heading";
@@ -29,5 +30,20 @@ export default function Page(): ReactNode {
 		</>
 	);
 }
+
+export const meta: MetaFunction = () => [
+	{ content: "Rintaro Itokawa (re-taro) の創作です。", name: "description" },
+	{ name: "og:title", property: "Rintaro Itokawa - Web Developer" },
+	{ name: "og:description", property: "Rintaro Itokawa (re-taro) の創作です。" },
+	{ name: "og:url", property: "https://re-taro.dev" },
+	{ name: "og:image", property: "https://og.re-taro.dev?title=re-taro's+Creative&text=re-taro.dev" },
+	{ name: "og:type", property: "website" },
+	{ content: "summary_large_image", name: "twitter:card" },
+	{ content: "Rintaro Itokawa - Web Developer", name: "twitter:title" },
+	{ content: "Rintaro Itokawa (re-taro) の創作です。", name: "twitter:description" },
+	{ content: "https://og.re-taro.dev?title=re-taro's+Creative&text=re-taro.dev", name: "twitter:image" },
+	{ content: "@re_taro_", name: "twitter:site" },
+	{ content: "@re_taro_", name: "twitter:creator" },
+];
 
 export { loader };
