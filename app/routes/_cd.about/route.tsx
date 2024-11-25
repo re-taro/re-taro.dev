@@ -64,7 +64,7 @@ export default function Page(): ReactNode {
 						<ListItem name="Rust">
 							WasmやCLIツール、
 							<wbr />
-							バックエンドサービスを構築できますす。
+							バックエンドサービスを構築できます。
 						</ListItem>
 						<ListItem name="CSS">
 							デザインやアニメーションを
@@ -72,7 +72,7 @@ export default function Page(): ReactNode {
 							実装できます。
 						</ListItem>
 						<ListItem name="C++">
-							レガシーなOSSのコードを読むことができます。
+							OSSのコードを読むことができます。
 							<wbr />
 							また、簡単なアルゴリズムを実装できます。
 						</ListItem>
