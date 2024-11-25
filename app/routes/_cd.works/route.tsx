@@ -10,17 +10,7 @@ export default function Page(): ReactNode {
 	const { works } = useLoaderData<typeof loader>();
 
 	return (
-		<div
-			className={css({
-				boxSizing: "border-box",
-				display: "flex",
-				flexDirection: "column",
-				margin: "[5rem auto 0]",
-				maxWidth: "[62.5rem]",
-				rowGap: "2rem",
-				width: "[100%]",
-			})}
-		>
+		<>
 			<PageHeading bold prefix css={css.raw({ fontSize: "xl" })} type="section">Works</PageHeading>
 			<Paragraph as="p">私がつくったもの</Paragraph>
 			<div
@@ -36,7 +26,7 @@ export default function Page(): ReactNode {
 					<WorkCard key={work.title} work={work} />
 				))}
 			</div>
-		</div>
+		</>
 	);
 }
 
