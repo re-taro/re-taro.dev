@@ -42,6 +42,7 @@ jobs:
             ${{ inputs.url }}/about
             ${{ inputs.url }}/timeline
             ${{ inputs.url }}/works
+            ${{ inputs.url }}/work/togather
           configPath: ./.github/lighthouserc.json
           uploadArtifacts: true
           temporaryPublicStorage: true
