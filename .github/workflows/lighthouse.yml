@@ -41,6 +41,7 @@ jobs:
             ${{ inputs.url }}
             ${{ inputs.url }}/about
             ${{ inputs.url }}/timeline
+            ${{ inputs.url }}/works
           configPath: ./.github/lighthouserc.json
           uploadArtifacts: true
           temporaryPublicStorage: true
