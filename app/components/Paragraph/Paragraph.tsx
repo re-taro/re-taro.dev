@@ -19,7 +19,6 @@ type ElementProps = Omit<HTMLAttributes<HTMLSpanElement>, keyof BaseProps>;
 const text = cva({
 	base: {
 		fontSize: "m",
-
 		hangingPunctuation: "allow-end",
 		lineBreak: "strict",
 		overflowWrap: "anywhere",
