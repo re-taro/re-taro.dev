@@ -131,7 +131,7 @@ export function Carousel({ images }: Props): ReactNode {
 									alt={image.alt}
 									height={450}
 									loading="lazy"
-									src={`https://img.re-taro.dev?url=${image.src}`}
+									src={`https://img.re-taro.dev?url=${image.src}&w=800`}
 									width={800}
 								/>
 								<span
