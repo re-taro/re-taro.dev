@@ -66,6 +66,7 @@ export function WorkCard({ work }: Props): ReactNode {
 					})}
 					alt={work.thumbnail.alt}
 					height={360}
+					loading="lazy"
 					src={`https://img.re-taro.dev?url=${work.thumbnail.src}&w=640`}
 					width={640}
 				/>
