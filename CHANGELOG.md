@@ -1,5 +1,11 @@
 # re-taro.dev
 
+## 2.2.1
+
+### Patch Changes
+
+- [#1486](https://github.com/re-taro/re-taro.dev/pull/1486) [`50873d9`](https://github.com/re-taro/re-taro.dev/commit/50873d903c2ec256c8cc05005253d2000ffc02fc) Thanks [@re-taro](https://github.com/re-taro)! - Fix ace date
+
 ## 2.2.0
 
 ### Minor Changes
