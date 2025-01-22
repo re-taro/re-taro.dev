@@ -63,7 +63,7 @@ jobs:
       - name: Deploy | Build
         run: pnpm build
       - name: Deploy | Deploy to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3.13.0
+        uses: cloudflare/wrangler-action@v3.13.1
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
@@ -86,7 +86,7 @@ jobs:
       - name: Deploy | Build Storybook
         run: pnpm build-storybook
       - name: Deploy | Deploy to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3.13.0
+        uses: cloudflare/wrangler-action@v3.13.1
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
