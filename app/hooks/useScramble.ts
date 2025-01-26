@@ -14,10 +14,10 @@ function getRandomChar(range: RangeOrCharCodes) {
 	return String.fromCharCode(rand);
 }
 
-type RangeOrCharCodes = {
+type RangeOrCharCodes = Array<number> & {
 	0: number;
 	1: number;
-} & Array<number>;
+};
 
 interface UseScrambleProps {
 	chance?: number;

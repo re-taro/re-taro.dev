@@ -1,10 +1,10 @@
 import type { ComponentPropsWithoutRef, ReactNode } from "react";
 import { css, cx } from "styled-system/css";
 
-type Props = {
+type Props = Pick<ComponentPropsWithoutRef<"button">, "onClick"> & {
 	index: number;
 	isSelected: boolean;
-} & Pick<ComponentPropsWithoutRef<"button">, "onClick">;
+};
 
 export function CarouselDotButton({ index, isSelected, onClick }: Props): ReactNode {
 	return (

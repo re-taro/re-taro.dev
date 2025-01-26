@@ -4,13 +4,13 @@
 
 /** @type {Record<keyof LighthouseSummary, string>} */
 const summaryKeys = {
+	/* eslint-disable perfectionist/sort-objects */
 	"performance": "Performance",
-	// eslint-disable-next-line perfectionist/sort-objects
 	"accessibility": "Accessibility",
 	"best-practices": "Best Practices",
 	"seo": "SEO",
-	// eslint-disable-next-line perfectionist/sort-objects
 	"pwa": "PWA",
+	/* eslint-enable perfectionist/sort-objects */
 };
 
 /** @param {number} rawScore */
