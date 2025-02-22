@@ -151,8 +151,8 @@ importers:
         specifier: 18.3.5
         version: 18.3.5(@types/react@18.3.18)
       '@vitejs/plugin-react-swc':
-        specifier: 3.7.2
-        version: 3.7.2(vite@5.4.14(@types/node@22.13.5)(lightningcss@1.25.1)(terser@5.37.0))
+        specifier: 3.8.0
+        version: 3.8.0(vite@5.4.14(@types/node@22.13.5)(lightningcss@1.25.1)(terser@5.37.0))
       axe-playwright:
         specifier: 2.0.3
         version: 2.0.3(playwright@1.50.1)
@@ -2818,10 +2818,22 @@ packages:
     peerDependencies:
       '@svgr/core': '*'
 
+  '@swc/core-darwin-arm64@1.10.18':
+    resolution: {integrity: sha512-FdGqzAIKVQJu8ROlnHElP59XAUsUzCFSNsou+tY/9ba+lhu8R9v0OI5wXiPErrKGZpQFMmx/BPqqhx3X4SuGNg==}
+    engines: {node: '>=10'}
+    cpu: [arm64]
+    os: [darwin]
+
   '@swc/core-darwin-arm64@1.7.26':
     resolution: {integrity: sha512-FF3CRYTg6a7ZVW4yT9mesxoVVZTrcSWtmZhxKCYJX9brH4CS/7PRPjAKNk6kzWgWuRoglP7hkjQcd6EpMcZEAw==}
     engines: {node: '>=10'}
     cpu: [arm64]
+    os: [darwin]
+
+  '@swc/core-darwin-x64@1.10.18':
+    resolution: {integrity: sha512-RZ73gZRituL/ZVLgrW6BYnQ5g8tuStG4cLUiPGJsUZpUm0ullSH6lHFvZTCBNFTfpQChG6eEhi2IdG6DwFp1lw==}
+    engines: {node: '>=10'}
+    cpu: [x64]
     os: [darwin]
 
   '@swc/core-darwin-x64@1.7.26':
@@ -2830,14 +2842,32 @@ packages:
     cpu: [x64]
     os: [darwin]
 
+  '@swc/core-linux-arm-gnueabihf@1.10.18':
+    resolution: {integrity: sha512-8iJqI3EkxJuuq21UHoen1VS+QlS23RvynRuk95K+Q2HBjygetztCGGEc+Xelx9a0uPkDaaAtFvds4JMDqb9SAA==}
+    engines: {node: '>=10'}
+    cpu: [arm]
+    os: [linux]
+
   '@swc/core-linux-arm-gnueabihf@1.7.26':
     resolution: {integrity: sha512-VYPFVJDO5zT5U3RpCdHE5v1gz4mmR8BfHecUZTmD2v1JeFY6fv9KArJUpjrHEEsjK/ucXkQFmJ0jaiWXmpOV9Q==}
     engines: {node: '>=10'}
     cpu: [arm]
     os: [linux]
 
+  '@swc/core-linux-arm64-gnu@1.10.18':
+    resolution: {integrity: sha512-8f1kSktWzMB6PG+r8lOlCfXz5E8Qhsmfwonn77T/OfjvGwQaWrcoASh2cdjpk3dydbf8jsKGPQE1lSc7GyjXRQ==}
+    engines: {node: '>=10'}
+    cpu: [arm64]
+    os: [linux]
+
   '@swc/core-linux-arm64-gnu@1.7.26':
     resolution: {integrity: sha512-YKevOV7abpjcAzXrhsl+W48Z9mZvgoVs2eP5nY+uoMAdP2b3GxC0Df1Co0I90o2lkzO4jYBpTMcZlmUXLdXn+Q==}
+    engines: {node: '>=10'}
+    cpu: [arm64]
+    os: [linux]
+
+  '@swc/core-linux-arm64-musl@1.10.18':
+    resolution: {integrity: sha512-4rv+E4VLdgQw6zjbTAauCAEExxChvxMpBUMCiZweTNPKbJJ2dY6BX2WGJ1ea8+RcgqR/Xysj3AFbOz1LBz6dGA==}
     engines: {node: '>=10'}
     cpu: [arm64]
     os: [linux]
@@ -2848,8 +2878,20 @@ packages:
     cpu: [arm64]
     os: [linux]
 
+  '@swc/core-linux-x64-gnu@1.10.18':
+    resolution: {integrity: sha512-vTNmyRBVP+sZca+vtwygYPGTNudTU6Gl6XhaZZ7cEUTBr8xvSTgEmYXoK/2uzyXpaTUI4Bmtp1x81cGN0mMoLQ==}
+    engines: {node: '>=10'}
+    cpu: [x64]
+    os: [linux]
+
   '@swc/core-linux-x64-gnu@1.7.26':
     resolution: {integrity: sha512-c+pp9Zkk2lqb06bNGkR2Looxrs7FtGDMA4/aHjZcCqATgp348hOKH5WPvNLBl+yPrISuWjbKDVn3NgAvfvpH4w==}
+    engines: {node: '>=10'}
+    cpu: [x64]
+    os: [linux]
+
+  '@swc/core-linux-x64-musl@1.10.18':
+    resolution: {integrity: sha512-1TZPReKhFCeX776XaT6wegknfg+g3zODve+r4oslFHI+g7cInfWlxoGNDS3niPKyuafgCdOjme2g3OF+zzxfsQ==}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [linux]
@@ -2860,10 +2902,22 @@ packages:
     cpu: [x64]
     os: [linux]
 
+  '@swc/core-win32-arm64-msvc@1.10.18':
+    resolution: {integrity: sha512-o/2CsaWSN3bkzVQ6DA+BiFKSVEYvhWGA1h+wnL2zWmIDs2Knag54sOEXZkCaf8YQyZesGeXJtPEy9hh/vjJgkA==}
+    engines: {node: '>=10'}
+    cpu: [arm64]
+    os: [win32]
+
   '@swc/core-win32-arm64-msvc@1.7.26':
     resolution: {integrity: sha512-9TNXPIJqFynlAOrRD6tUQjMq7KApSklK3R/tXgIxc7Qx+lWu8hlDQ/kVPLpU7PWvMMwC/3hKBW+p5f+Tms1hmA==}
     engines: {node: '>=10'}
     cpu: [arm64]
+    os: [win32]
+
+  '@swc/core-win32-ia32-msvc@1.10.18':
+    resolution: {integrity: sha512-eTPASeJtk4mJDfWiYEiOC6OYUi/N7meHbNHcU8e+aKABonhXrIo/FmnTE8vsUtC6+jakT1TQBdiQ8fzJ1kJVwA==}
+    engines: {node: '>=10'}
+    cpu: [ia32]
     os: [win32]
 
   '@swc/core-win32-ia32-msvc@1.7.26':
@@ -2872,11 +2926,26 @@ packages:
     cpu: [ia32]
     os: [win32]
 
+  '@swc/core-win32-x64-msvc@1.10.18':
+    resolution: {integrity: sha512-1Dud8CDBnc34wkBOboFBQud9YlV1bcIQtKSg7zC8LtwR3h+XAaCayZPkpGmmAlCv1DLQPvkF+s0JcaVC9mfffQ==}
+    engines: {node: '>=10'}
+    cpu: [x64]
+    os: [win32]
+
   '@swc/core-win32-x64-msvc@1.7.26':
     resolution: {integrity: sha512-VR+hzg9XqucgLjXxA13MtV5O3C0bK0ywtLIBw/+a+O+Oc6mxFWHtdUeXDbIi5AiPbn0fjgVJMqYnyjGyyX8u0w==}
     engines: {node: '>=10'}
     cpu: [x64]
     os: [win32]
+
+  '@swc/core@1.10.18':
+    resolution: {integrity: sha512-IUWKD6uQYGRy8w2X9EZrtYg1O3SCijlHbCXzMaHQYc1X7yjijQh4H3IVL9ssZZyVp2ZDfQZu4bD5DWxxvpyjvg==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      '@swc/helpers': '*'
+    peerDependenciesMeta:
+      '@swc/helpers':
+        optional: true
 
   '@swc/core@1.7.26':
     resolution: {integrity: sha512-f5uYFf+TmMQyYIoxkn/evWhNGuUzC730dFwAKGwBVHHVoPyak1/GvJUm6i1SKl+2Hrj9oN0i3WSoWWZ4pgI8lw==}
@@ -2898,6 +2967,9 @@ packages:
 
   '@swc/types@0.1.12':
     resolution: {integrity: sha512-wBJA+SdtkbFhHjTMYH+dEH1y4VpfGdAc2Kw/LK09i9bXd/K6j6PkDcFCEzb6iVfZMkPRrl/q0e3toqTAJdkIVA==}
+
+  '@swc/types@0.1.17':
+    resolution: {integrity: sha512-V5gRru+aD8YVyCOMAjMpWR1Ui577DD5KSJsHP8RAxopAH22jFz6GZd/qxqjO6MJHQhcsjvjOFXyDhyLQUnMveQ==}
 
   '@testing-library/dom@10.4.0':
     resolution: {integrity: sha512-pemlzrSESWbdAloYml3bAJMEfNh1Z7EduzqPKprCH5S341frlpYnUEW0H72dLxa6IsYr+mPno20GiSm+h9dEdQ==}
@@ -3217,8 +3289,8 @@ packages:
   '@vanilla-extract/private@1.0.4':
     resolution: {integrity: sha512-8FGD6AejeC/nXcblgNCM5rnZb9KXa4WNkR03HCWtdJBpANjTgjHEglNLFnhuvdQ78tC6afaxBPI+g7F2NX3tgg==}
 
-  '@vitejs/plugin-react-swc@3.7.2':
-    resolution: {integrity: sha512-y0byko2b2tSVVf5Gpng1eEhX1OvPC7x8yns1Fx8jDzlJp4LS6CMkCPfLw47cjyoMrshQDoQw4qcgjsU9VvlCew==}
+  '@vitejs/plugin-react-swc@3.8.0':
+    resolution: {integrity: sha512-T4sHPvS+DIqDP51ifPqa9XIRAz/kIvIi8oXcnOZZgHmMotgmmdxe/DD5tMFlt5nuIRzT0/QuiwmKlH0503Aapw==}
     peerDependencies:
       vite: ^4 || ^5 || ^6
 
@@ -11912,35 +11984,81 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  '@swc/core-darwin-arm64@1.10.18':
+    optional: true
+
   '@swc/core-darwin-arm64@1.7.26':
+    optional: true
+
+  '@swc/core-darwin-x64@1.10.18':
     optional: true
 
   '@swc/core-darwin-x64@1.7.26':
     optional: true
 
+  '@swc/core-linux-arm-gnueabihf@1.10.18':
+    optional: true
+
   '@swc/core-linux-arm-gnueabihf@1.7.26':
+    optional: true
+
+  '@swc/core-linux-arm64-gnu@1.10.18':
     optional: true
 
   '@swc/core-linux-arm64-gnu@1.7.26':
     optional: true
 
+  '@swc/core-linux-arm64-musl@1.10.18':
+    optional: true
+
   '@swc/core-linux-arm64-musl@1.7.26':
+    optional: true
+
+  '@swc/core-linux-x64-gnu@1.10.18':
     optional: true
 
   '@swc/core-linux-x64-gnu@1.7.26':
     optional: true
 
+  '@swc/core-linux-x64-musl@1.10.18':
+    optional: true
+
   '@swc/core-linux-x64-musl@1.7.26':
+    optional: true
+
+  '@swc/core-win32-arm64-msvc@1.10.18':
     optional: true
 
   '@swc/core-win32-arm64-msvc@1.7.26':
     optional: true
 
+  '@swc/core-win32-ia32-msvc@1.10.18':
+    optional: true
+
   '@swc/core-win32-ia32-msvc@1.7.26':
+    optional: true
+
+  '@swc/core-win32-x64-msvc@1.10.18':
     optional: true
 
   '@swc/core-win32-x64-msvc@1.7.26':
     optional: true
+
+  '@swc/core@1.10.18':
+    dependencies:
+      '@swc/counter': 0.1.3
+      '@swc/types': 0.1.17
+    optionalDependencies:
+      '@swc/core-darwin-arm64': 1.10.18
+      '@swc/core-darwin-x64': 1.10.18
+      '@swc/core-linux-arm-gnueabihf': 1.10.18
+      '@swc/core-linux-arm64-gnu': 1.10.18
+      '@swc/core-linux-arm64-musl': 1.10.18
+      '@swc/core-linux-x64-gnu': 1.10.18
+      '@swc/core-linux-x64-musl': 1.10.18
+      '@swc/core-win32-arm64-msvc': 1.10.18
+      '@swc/core-win32-ia32-msvc': 1.10.18
+      '@swc/core-win32-x64-msvc': 1.10.18
 
   '@swc/core@1.7.26':
     dependencies:
@@ -11968,6 +12086,10 @@ snapshots:
       jsonc-parser: 3.2.0
 
   '@swc/types@0.1.12':
+    dependencies:
+      '@swc/counter': 0.1.3
+
+  '@swc/types@0.1.17':
     dependencies:
       '@swc/counter': 0.1.3
 
@@ -12389,9 +12511,9 @@ snapshots:
 
   '@vanilla-extract/private@1.0.4': {}
 
-  '@vitejs/plugin-react-swc@3.7.2(vite@5.4.14(@types/node@22.13.5)(lightningcss@1.25.1)(terser@5.37.0))':
+  '@vitejs/plugin-react-swc@3.8.0(vite@5.4.14(@types/node@22.13.5)(lightningcss@1.25.1)(terser@5.37.0))':
     dependencies:
-      '@swc/core': 1.7.26
+      '@swc/core': 1.10.18
       vite: 5.4.14(@types/node@22.13.5)(lightningcss@1.25.1)(terser@5.37.0)
     transitivePeerDependencies:
       - '@swc/helpers'
