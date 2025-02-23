@@ -154,8 +154,8 @@ importers:
         specifier: 3.8.0
         version: 3.8.0(vite@5.4.14(@types/node@22.13.5)(lightningcss@1.25.1)(terser@5.39.0))
       axe-playwright:
-        specifier: 2.0.3
-        version: 2.0.3(playwright@1.50.1)
+        specifier: 2.1.0
+        version: 2.1.0(playwright@1.50.1)
       browserslist-to-esbuild:
         specifier: 2.1.1
         version: 2.1.1(browserslist@4.24.2)
@@ -3557,10 +3557,6 @@ packages:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
     engines: {node: '>= 0.4'}
 
-  axe-core@4.10.0:
-    resolution: {integrity: sha512-Mr2ZakwQ7XUAjp7pAwQWRhhK8mQQ6JAaNWSjmjxil0R8BPioMtQsTLOolGYkji1rcL++3dCqZA3zWqpT+9Ew6g==}
-    engines: {node: '>=4'}
-
   axe-core@4.10.2:
     resolution: {integrity: sha512-RE3mdQ7P3FRSe7eqCWoeQ/Z9QXrtniSjp1wUjt5nRC3WIpz5rSCve6o3fsZ2aCpJtrZjSZgjwXAoTO5k4tEI0w==}
     engines: {node: '>=4'}
@@ -3571,8 +3567,8 @@ packages:
     peerDependencies:
       axe-core: '>=3'
 
-  axe-playwright@2.0.3:
-    resolution: {integrity: sha512-s7iI2okyHHsD3XZK4RMJtTy2UASkNWLQtnzLuaHiK3AWkERf+cqZJqkxb7O4b56fnbib9YnZVRByTl92ME3o6g==}
+  axe-playwright@2.1.0:
+    resolution: {integrity: sha512-tY48SX56XaAp16oHPyD4DXpybz8Jxdz9P7exTjF/4AV70EGUavk+1fUPWirM0OYBR+YyDx6hUeDvuHVA6fB9YA==}
     peerDependencies:
       playwright: '>1.0.0'
 
@@ -7046,9 +7042,6 @@ packages:
 
   periscopic@3.1.0:
     resolution: {integrity: sha512-vKiQ8RRtkl9P+r/+oefh25C3fhybptkHKCZSPlcXiJux2tJF55GnEj3BVn4A5gKfq9NWWXXrxkHBwVPUfH0opw==}
-
-  picocolors@1.1.0:
-    resolution: {integrity: sha512-TQ92mBOW0l3LeMeyLV6mzy/kWr8lkd/hp3mTg7wYK7zJhuBStmGMBG0BdeDZS/dZx1IukaX6Bk11zcln25o1Aw==}
 
   picocolors@1.1.1:
     resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==}
@@ -12878,22 +12871,20 @@ snapshots:
     dependencies:
       possible-typed-array-names: 1.0.0
 
-  axe-core@4.10.0: {}
-
   axe-core@4.10.2: {}
 
-  axe-html-reporter@2.2.11(axe-core@4.10.0):
+  axe-html-reporter@2.2.11(axe-core@4.10.2):
     dependencies:
-      axe-core: 4.10.0
+      axe-core: 4.10.2
       mustache: 4.2.0
 
-  axe-playwright@2.0.3(playwright@1.50.1):
+  axe-playwright@2.1.0(playwright@1.50.1):
     dependencies:
       '@types/junit-report-builder': 3.0.2
-      axe-core: 4.10.0
-      axe-html-reporter: 2.2.11(axe-core@4.10.0)
+      axe-core: 4.10.2
+      axe-html-reporter: 2.2.11(axe-core@4.10.2)
       junit-report-builder: 5.1.1
-      picocolors: 1.1.0
+      picocolors: 1.1.1
       playwright: 1.50.1
 
   axios@1.7.9:
@@ -17315,8 +17306,6 @@ snapshots:
       '@types/estree': 1.0.6
       estree-walker: 3.0.3
       is-reference: 3.0.1
-
-  picocolors@1.1.0: {}
 
   picocolors@1.1.1: {}
 
