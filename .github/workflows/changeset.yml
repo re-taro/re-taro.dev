@@ -11,11 +11,11 @@ jobs:
     timeout-minutes: 5
     steps:
       - name: Setup | Checkout
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           fetch-depth: 0
       - name: Setup | Node.js
-        uses: re-taro/actions/setup-node@v3.6.0
+        uses: re-taro/actions/setup-node@2a3fa6a8d2f4cd382a244fa14582e2b3d1fb00eb # v3.7.0
         with:
           node-version-file: .tool-versions
       - name: Test | Run changeset status
