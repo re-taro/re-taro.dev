@@ -16,9 +16,6 @@ export function Layout({ children }: Props): ReactNode {
 			<head>
 				<meta charSet="utf-8" />
 				<meta content="width=device-width, initial-scale=1" name="viewport" />
-				<link href="https://fonts.googleapis.com" rel="preconnect" />
-				<link crossOrigin="anonymous" href="https://fonts.gstatic.com" rel="preconnect" />
-				<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Noto+Sans+JP:wght@400;600&display=swap" rel="stylesheet" />
 				<link href={styles} rel="stylesheet" />
 				<link href="/favicon.ico" rel="icon" sizes="any" />
 				<link href="/favicon.svg" rel="icon" type="image/svg+xml" />
