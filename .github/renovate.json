@@ -1,22 +1,32 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["local>re-taro/renovate-config"],
+  "extends": [
+    "local>re-taro/renovate-config"
+  ],
   "npm": {
     "packageRules": [
       {
         "groupName": "remix-run",
-        "matchPackagePatterns": ["@remix-run/*"],
-        "semanticCommitType": "fix"
+        "semanticCommitType": "fix",
+        "matchPackageNames": [
+          "/@remix-run/*/"
+        ]
       },
       {
         "groupName": "playwright",
-        "matchPackagePatterns": ["@playwright/*", "playwright"],
-        "semanticCommitType": "fix"
+        "semanticCommitType": "fix",
+        "matchPackageNames": [
+          "/@playwright/*/",
+          "/playwright/"
+        ]
       },
       {
         "groupName": "storybook",
-        "matchPackagePatterns": ["@storybook/*", "storybook"],
-        "semanticCommitType": "fix"
+        "semanticCommitType": "fix",
+        "matchPackageNames": [
+          "/@storybook/*/",
+          "/storybook/"
+        ]
       }
     ]
   }
