@@ -22,11 +22,12 @@
       },
       {
         "groupName": "storybook",
-        "semanticCommitType": "fix",
-        "matchPackageNames": [
-          "/@storybook/*/",
-          "/storybook/"
-        ]
+        "matchPackageNames": ["@storybook/*", "storybook"],
+        "semanticCommitType": "fix"
+      },
+      {
+        "matchDepTypes": ["action"],
+        "pinDigests": true
       }
     ]
   }

@@ -22,20 +22,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup | Checkout
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Setup GitHub App
         id: bot
-        uses: re-taro/actions/gen-installation-token@v3.6.0
+        uses: re-taro/actions/gen-installation-token@2a3fa6a8d2f4cd382a244fa14582e2b3d1fb00eb # v3.7.0
         with:
           app_id: ${{ secrets.APP_ID}}
           private_key: ${{ secrets.PRIVATE_KEY}}
       - name: Setup | Node.js
-        uses: re-taro/actions/setup-node@v3.6.0
+        uses: re-taro/actions/setup-node@2a3fa6a8d2f4cd382a244fa14582e2b3d1fb00eb # v3.7.0
         with:
           node-version-file: .tool-versions
       - name: Run | Audit URLs using Lighthouse
         id: lighthouse_audit
-        uses: treosh/lighthouse-ci-action@12.1.0
+        uses: treosh/lighthouse-ci-action@2f8dda6cf4de7d73b29853c3f29e73a01e297bd8 # 12.1.0
         with:
           urls: |
             ${{ inputs.url }}
@@ -48,7 +48,7 @@ jobs:
           temporaryPublicStorage: true
       - name: Run | Format lighthouse score
         id: format_lighthouse_score
-        uses: actions/github-script@v7.0.1
+        uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea # v7.0.1
         with:
           github-token: ${{ steps.bot.outputs.token }}
           script: |
@@ -59,7 +59,7 @@ jobs:
             core.setOutput("comment", comment);
       - name: Post | Add Lighthouse stats as comment
         id: comment_to_pr
-        uses: marocchino/sticky-pull-request-comment@v2.9.1
+        uses: marocchino/sticky-pull-request-comment@52423e01640425a022ef5fd42c6fb5f633a02728 # v2.9.1
         with:
           GITHUB_TOKEN: ${{ steps.bot.outputs.token }}
           number: ${{ github.event.pull_request.number }}

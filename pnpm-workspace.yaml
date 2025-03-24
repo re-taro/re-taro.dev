@@ -1,0 +1,4 @@
+saveExact: true
+onlyBuiltDependencies:
+  - '@swc/core'
+  - workerd
