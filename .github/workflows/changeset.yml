@@ -15,7 +15,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Setup | Node.js
-        uses: re-taro/actions/setup-node@v3.6.0
+        uses: re-taro/actions/setup-node@v3.7.0
         with:
           node-version-file: .tool-versions
       - name: Test | Run changeset status
