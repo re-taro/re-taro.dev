@@ -1,5 +1,11 @@
 # re-taro.dev
 
+## 2.3.0
+
+### Minor Changes
+
+- [#1607](https://github.com/re-taro/re-taro.dev/pull/1607) [`034e9a7`](https://github.com/re-taro/re-taro.dev/commit/034e9a721cfd1ff0bc99afdf5956272bc997150b) Thanks [@re-taro](https://github.com/re-taro)! - Remove web fonts
+
 ## 2.2.1
 
 ### Patch Changes
