@@ -102,7 +102,7 @@
     "terser": "5.39.0",
     "typescript": "5.8.2",
     "unplugin-icons": "0.20.1",
-    "vite": "5.4.15",
+    "vite": "5.4.16",
     "vite-tsconfig-paths": "5.1.4",
     "vitest": "3.0.9",
     "wait-on": "8.0.3",
