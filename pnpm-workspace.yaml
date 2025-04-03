@@ -1,4 +1,7 @@
 saveExact: true
 onlyBuiltDependencies:
   - '@swc/core'
+  - esbuild
+  - modern-ahocorasick
+  - sharp
   - workerd
