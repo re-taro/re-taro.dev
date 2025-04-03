@@ -21,7 +21,7 @@ export default function Page(): ReactNode {
 			<PageHeading bold prefix css={css.raw({ fontSize: "xl" })} type="section">About me</PageHeading>
 			<Section aria-label="Profile" css={css.raw({ display: "flex", flexDirection: "column", rowGap: "1rem" })}>
 				<Heading bold prefix css={css.raw({ fontSize: "l" })} type="block">Profile</Heading>
-				<Paragraph as="p">鈴鹿高専で情報工学を学んでいる学生です。</Paragraph>
+				<Paragraph as="p">株式会社サイバーエージェントに在籍しています。</Paragraph>
 				<Paragraph as="p">趣味や仕事でWebアプリケーション開発を行っています。</Paragraph>
 				<Paragraph as="p">
 					座右の銘は
