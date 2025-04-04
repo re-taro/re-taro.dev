@@ -1,5 +1,11 @@
 # re-taro.dev
 
+## 2.4.0
+
+### Minor Changes
+
+- [#1640](https://github.com/re-taro/re-taro.dev/pull/1640) [`f369156`](https://github.com/re-taro/re-taro.dev/commit/f36915640834e5851b9c4fcd4dd59f10b04f30cb) Thanks [@re-taro](https://github.com/re-taro)! - Update about page
+
 ## 2.3.0
 
 ### Minor Changes
