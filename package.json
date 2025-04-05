@@ -100,7 +100,7 @@
     "sirv-cli": "3.0.1",
     "storybook": "8.6.12",
     "terser": "5.39.0",
-    "typescript": "5.8.2",
+    "typescript": "5.8.3",
     "unplugin-icons": "0.20.1",
     "vite": "5.4.17",
     "vite-tsconfig-paths": "5.1.4",
