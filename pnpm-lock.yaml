@@ -18,11 +18,11 @@ importers:
         specifier: 2.16.4
         version: 2.16.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)
       embla-carousel-autoplay:
-        specifier: 8.5.2
-        version: 8.5.2(embla-carousel@8.5.2)
+        specifier: 8.6.0
+        version: 8.6.0(embla-carousel@8.6.0)
       embla-carousel-react:
-        specifier: 8.5.2
-        version: 8.5.2(react@18.3.1)
+        specifier: 8.6.0
+        version: 8.6.0(react@18.3.1)
       isbot:
         specifier: 5.1.25
         version: 5.1.25
@@ -163,8 +163,8 @@ importers:
         specifier: 9.1.2
         version: 9.1.2
       embla-carousel:
-        specifier: 8.5.2
-        version: 8.5.2
+        specifier: 8.6.0
+        version: 8.6.0
       eslint:
         specifier: 9.24.0
         version: 9.24.0
@@ -4503,23 +4503,23 @@ packages:
   electron-to-chromium@1.5.55:
     resolution: {integrity: sha512-6maZ2ASDOTBtjt9FhqYPRnbvKU5tjG0IN9SztUOWYw2AzNDNpKJYLJmlK0/En4Hs/aiWnB+JZ+gW19PIGszgKg==}
 
-  embla-carousel-autoplay@8.5.2:
-    resolution: {integrity: sha512-27emJ0px3q/c0kCHCjwRrEbYcyYUPfGO3g5IBWF1i7714TTzE6L9P81V6PHLoSMAKJ1aHoT2e7YFOsuFKCbyag==}
+  embla-carousel-autoplay@8.6.0:
+    resolution: {integrity: sha512-OBu5G3nwaSXkZCo1A6LTaFMZ8EpkYbwIaH+bPqdBnDGQ2fh4+NbzjXjs2SktoPNKCtflfVMc75njaDHOYXcrsA==}
     peerDependencies:
-      embla-carousel: 8.5.2
+      embla-carousel: 8.6.0
 
-  embla-carousel-react@8.5.2:
-    resolution: {integrity: sha512-Tmx+uY3MqseIGdwp0ScyUuxpBgx5jX1f7od4Cm5mDwg/dptEiTKf9xp6tw0lZN2VA9JbnVMl/aikmbc53c6QFA==}
+  embla-carousel-react@8.6.0:
+    resolution: {integrity: sha512-0/PjqU7geVmo6F734pmPqpyHqiM99olvyecY7zdweCw+6tKEXnrE90pBiBbMMU8s5tICemzpQ3hi5EpxzGW+JA==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.1 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
 
-  embla-carousel-reactive-utils@8.5.2:
-    resolution: {integrity: sha512-QC8/hYSK/pEmqEdU1IO5O+XNc/Ptmmq7uCB44vKplgLKhB/l0+yvYx0+Cv0sF6Ena8Srld5vUErZkT+yTahtDg==}
+  embla-carousel-reactive-utils@8.6.0:
+    resolution: {integrity: sha512-fMVUDUEx0/uIEDM0Mz3dHznDhfX+znCCDCeIophYb1QGVM7YThSWX+wz11zlYwWFOr74b4QLGg0hrGPJeG2s4A==}
     peerDependencies:
-      embla-carousel: 8.5.2
+      embla-carousel: 8.6.0
 
-  embla-carousel@8.5.2:
-    resolution: {integrity: sha512-xQ9oVLrun/eCG/7ru3R+I5bJ7shsD8fFwLEY7yPe27/+fDHCNj0OT5EoG5ZbFyOxOcG6yTwW8oTz/dWyFnyGpg==}
+  embla-carousel@8.6.0:
+    resolution: {integrity: sha512-SjWyZBHJPbqxHOzckOfo8lHisEaJWmwd23XppYFYVh10bU66/Pn5tkVkbkCMZVdbUE5eTCI2nD8OyIP4Z+uwkA==}
 
   emittery@0.13.1:
     resolution: {integrity: sha512-DeWwawk6r5yR9jFgnDKYt4sLS0LmHJJi3ZOnb5/JdbYwj3nW+FxQnHIjhBKz8YLC7oRNPVM9NQ47I3CVx34eqQ==}
@@ -13864,21 +13864,21 @@ snapshots:
 
   electron-to-chromium@1.5.55: {}
 
-  embla-carousel-autoplay@8.5.2(embla-carousel@8.5.2):
+  embla-carousel-autoplay@8.6.0(embla-carousel@8.6.0):
     dependencies:
-      embla-carousel: 8.5.2
+      embla-carousel: 8.6.0
 
-  embla-carousel-react@8.5.2(react@18.3.1):
+  embla-carousel-react@8.6.0(react@18.3.1):
     dependencies:
-      embla-carousel: 8.5.2
-      embla-carousel-reactive-utils: 8.5.2(embla-carousel@8.5.2)
+      embla-carousel: 8.6.0
+      embla-carousel-reactive-utils: 8.6.0(embla-carousel@8.6.0)
       react: 18.3.1
 
-  embla-carousel-reactive-utils@8.5.2(embla-carousel@8.5.2):
+  embla-carousel-reactive-utils@8.6.0(embla-carousel@8.6.0):
     dependencies:
-      embla-carousel: 8.5.2
+      embla-carousel: 8.6.0
 
-  embla-carousel@8.5.2: {}
+  embla-carousel@8.6.0: {}
 
   emittery@0.13.1: {}
 
