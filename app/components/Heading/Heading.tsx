@@ -1,15 +1,12 @@
-import type { ComponentPropsWithoutRef, ForwardedRef, HTMLAttributes, ReactNode } from "react";
-import { forwardRef, useContext, useMemo } from "react";
-import { css, cva } from "styled-system/css";
-import type { SystemStyleObject } from "styled-system/types";
-import { LevelContext } from "~/components/SectioningContent";
+import type { ComponentPropsWithoutRef, ForwardedRef, HTMLAttributes, ReactNode } from 'react';
+import { forwardRef, useContext, useMemo } from 'react';
+import { css, cva } from 'styled-system/css';
+import type { SystemStyleObject } from 'styled-system/types';
+import { LevelContext } from '~/components/SectioningContent';
 
-export type HeadingTypes =
-	| "block"
-	| "screen"
-	| "section";
+export type HeadingTypes = 'block' | 'screen' | 'section';
 
-type HeadingTagTypes = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+type HeadingTagTypes = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
 interface Props {
 	bold?: boolean;
@@ -24,53 +21,48 @@ interface Props {
 }
 
 interface HeadingBaseProps {
-	as?: HeadingTagTypes | "span";
+	as?: HeadingTagTypes | 'span';
 	children?: ReactNode;
-	color?: "grey" | "white";
+	color?: 'grey' | 'white';
 	css?: SystemStyleObject;
 	headingRef?: ForwardedRef<HTMLHeadingElement>;
 	prefix?: boolean;
-	size?: "l" | "m" | "s";
-	weight?: "bold" | "normal";
+	size?: 'l' | 'm' | 's';
+	weight?: 'bold' | 'normal';
 }
 
 type ElementProps = Omit<
-	ComponentPropsWithoutRef<"h1">,
-	keyof HeadingBaseProps | keyof Props | "aria-level" | "className" | "role"
+	ComponentPropsWithoutRef<'h1'>,
+	keyof HeadingBaseProps | keyof Props | 'aria-level' | 'className' | 'role'
 >;
 
-type HeadingBaseElementProps = Omit<
-	HTMLAttributes<HTMLHeadingElement>,
-	keyof HeadingBaseProps | "className"
->;
+type HeadingBaseElementProps = Omit<HTMLAttributes<HTMLHeadingElement>, keyof HeadingBaseProps | 'className'>;
 
 function generateTagProps(level: number, tag?: HeadingTagTypes) {
 	let role;
 	let ariaLevel;
 
 	if (!tag && level > 6) {
-		if (level === 1)
-			throw new Error("Use PageHeading for h1");
+		if (level === 1) throw new Error('Use PageHeading for h1');
 
-		role = "heading";
+		role = 'heading';
 		ariaLevel = level;
 	}
 
 	return {
-		"aria-level": ariaLevel,
-		"as":
-			tag ?? ((level <= 6 ? `h${level}` : "span") as HeadingTagTypes | "span"),
+		'aria-level': ariaLevel,
+		'as': tag ?? ((level <= 6 ? `h${level}` : 'span') as HeadingTagTypes | 'span'),
 		role,
 	};
 }
 
 const base = cva({
 	base: {
-		lineHeight: "tight",
+		lineHeight: 'tight',
 	},
 	compoundVariants: [
 		{
-			as: "h1",
+			as: 'h1',
 			css: {
 				_before: {
 					content: "'# '",
@@ -79,7 +71,7 @@ const base = cva({
 			prefix: true,
 		},
 		{
-			as: "h2",
+			as: 'h2',
 			css: {
 				_before: {
 					content: "'## '",
@@ -88,7 +80,7 @@ const base = cva({
 			prefix: true,
 		},
 		{
-			as: "h3",
+			as: 'h3',
 			css: {
 				_before: {
 					content: "'### '",
@@ -109,10 +101,10 @@ const base = cva({
 		},
 		color: {
 			grey: {
-				color: "text.secondary",
+				color: 'text.secondary',
 			},
 			white: {
-				color: "text.main",
+				color: 'text.main',
 			},
 		},
 		prefix: {
@@ -121,34 +113,34 @@ const base = cva({
 		},
 		size: {
 			l: {
-				fontSize: { base: "2xl", md: "4xl" },
+				fontSize: { base: '2xl', md: '4xl' },
 			},
 			m: {
-				fontSize: { base: "xl", md: "3xl" },
+				fontSize: { base: 'xl', md: '3xl' },
 			},
 			s: {
-				fontSize: { base: "l", md: "2xl" },
+				fontSize: { base: 'l', md: '2xl' },
 			},
 		},
 		weight: {
 			bold: {
-				fontWeight: "bold",
+				fontWeight: 'bold',
 			},
 			normal: {
-				fontWeight: "normal",
+				fontWeight: 'normal',
 			},
 		},
 	},
 });
 
 function HeadingBase({
-	as: Component = "span",
-	color = "white",
+	as: Component = 'span',
+	color = 'white',
 	css: cssProps,
 	headingRef,
 	prefix = false,
-	size = "m",
-	weight = "normal",
+	size = 'm',
+	weight = 'normal',
 	...props
 }: HeadingBaseElementProps & HeadingBaseProps): ReactNode {
 	return (
@@ -161,40 +153,34 @@ function HeadingBase({
 }
 
 const MAPPER: Record<HeadingTypes, HeadingBaseProps> = {
-	block: { color: "white",	size: "s",	weight: "normal" },
-	screen: { color: "white",	size: "l",	weight: "normal" },
-	section: { color: "white",	size: "m",	weight: "normal" },
+	block: { color: 'white', size: 's', weight: 'normal' },
+	screen: { color: 'white', size: 'l', weight: 'normal' },
+	section: { color: 'white', size: 'm', weight: 'normal' },
 };
 
-export const Heading = forwardRef<HTMLHeadingElement, ElementProps & Props>(({
-	bold = false,
-	css: cssProps,
-	prefix = false,
-	tag,
-	type = "section",
-	...props
-}, ref) => {
-	const level = useContext(LevelContext) as 1 | 2 | 3 | 4 | 5 | 6;
-	const tagProps = useMemo(() => generateTagProps(level, tag), [level, tag]);
-	const actualProps: HeadingBaseElementProps & HeadingBaseProps = {
-		...props,
-		...tagProps,
-		...MAPPER[type],
-		css: cssProps,
-		headingRef: ref,
-		prefix,
-		weight: bold ? "bold" : "normal",
-	};
-	return <HeadingBase {...actualProps} />;
-});
+export const Heading = forwardRef<HTMLHeadingElement, ElementProps & Props>(
+	({ bold = false, css: cssProps, prefix = false, tag, type = 'section', ...props }, ref) => {
+		const level = useContext(LevelContext) as 1 | 2 | 3 | 4 | 5 | 6;
+		const tagProps = useMemo(() => generateTagProps(level, tag), [level, tag]);
+		const actualProps: HeadingBaseElementProps & HeadingBaseProps = {
+			...props,
+			...tagProps,
+			...MAPPER[type],
+			css: cssProps,
+			headingRef: ref,
+			prefix,
+			weight: bold ? 'bold' : 'normal',
+		};
+		return <HeadingBase {...actualProps} />;
+	},
+);
 
-Heading.displayName = "Heading";
+Heading.displayName = 'Heading';
 
-export const PageHeading = forwardRef<HTMLHeadingElement, Omit<ElementProps & Props, "tag">>(({
-	type = "screen",
-	...props
-}, ref) => {
-	return <Heading {...props} ref={ref} tag="h1" type={type} />;
-});
+export const PageHeading = forwardRef<HTMLHeadingElement, Omit<ElementProps & Props, 'tag'>>(
+	({ type = 'screen', ...props }, ref) => {
+		return <Heading {...props} ref={ref} tag="h1" type={type} />;
+	},
+);
 
-PageHeading.displayName = "PageHeading";
+PageHeading.displayName = 'PageHeading';

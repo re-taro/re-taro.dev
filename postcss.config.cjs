@@ -1,6 +1,10 @@
-/** @type {import('postcss-load-config').Config} */
+/**
+ * @type {import('postcss-load-config').Config}
+ */
 const config = {
-	plugins: [require("@pandacss/dev/postcss")()],
+	// eslint-disable-next-line no-undef
+	plugins: [require('@pandacss/dev/postcss')()],
 };
 
+// eslint-disable-next-line no-undef
 module.exports = config;

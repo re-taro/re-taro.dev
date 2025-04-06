@@ -1,16 +1,16 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from '@storybook/react';
 
-import { CarouselDotButton } from "./CarouselDotButton";
+import { CarouselDotButton } from './CarouselDotButton';
 
 type T = typeof CarouselDotButton;
 
 const meta: Meta = {
 	component: CarouselDotButton,
 	parameters: {
-		layout: "centered",
+		layout: 'centered',
 	},
-	tags: ["autodocs"],
-	title: "CarouselDotButton",
+	tags: ['autodocs'],
+	title: 'CarouselDotButton',
 } satisfies Meta<T>;
 
 type Story = StoryObj<T>;

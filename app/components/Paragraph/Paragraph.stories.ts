@@ -1,19 +1,19 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from '@storybook/react';
 
-import { Paragraph } from "./Paragraph";
+import { Paragraph } from './Paragraph';
 
 type T = typeof Paragraph;
 
 const meta: Meta = {
 	args: {
-		children: "テキストテキスト",
+		children: 'テキストテキスト',
 	},
 	component: Paragraph,
 	parameters: {
-		layout: "centered",
+		layout: 'centered',
 	},
-	tags: ["autodocs"],
-	title: "Paragraph",
+	tags: ['autodocs'],
+	title: 'Paragraph',
 } satisfies Meta<T>;
 
 type Story = StoryObj<T>;
@@ -22,13 +22,13 @@ export const Default: Story = {};
 
 export const MainText: Story = {
 	args: {
-		type: "main",
+		type: 'main',
 	},
 };
 
 export const SubText: Story = {
 	args: {
-		type: "sub",
+		type: 'sub',
 	},
 };
 
@@ -40,31 +40,31 @@ export const EmphasisText: Story = {
 
 export const NormalLeadingText: Story = {
 	args: {
-		leading: "normal",
+		leading: 'normal',
 	},
 };
 
 export const TightLeadingText: Story = {
 	args: {
-		leading: "tight",
+		leading: 'tight',
 	},
 };
 
 export const NoneLeadingText: Story = {
 	args: {
-		leading: "none",
+		leading: 'none',
 	},
 };
 
 export const NormalWeightText: Story = {
 	args: {
-		weight: "normal",
+		weight: 'normal',
 	},
 };
 
 export const BoldWeightText: Story = {
 	args: {
-		weight: "bold",
+		weight: 'bold',
 	},
 };
 

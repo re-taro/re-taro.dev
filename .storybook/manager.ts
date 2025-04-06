@@ -1,10 +1,10 @@
-import { addons } from "@storybook/manager-api";
+import { addons } from '@storybook/manager-api';
 
-import { create } from "@storybook/theming";
+import { create } from '@storybook/theming';
 
 addons.setConfig({
 	theme: create({
-		base: "dark",
-		brandTitle: "re-taro.dev",
+		base: 'dark',
+		brandTitle: 're-taro.dev',
 	}),
 });

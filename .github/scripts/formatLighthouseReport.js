@@ -1,23 +1,32 @@
 // @ts-check
 
-/** @typedef {Record<'performance' | 'accessibility' | 'best-practices' | 'seo' | 'pwa', number>} LighthouseSummary */
+/**
+ * @typedef {Record<'performance' | 'accessibility' | 'best-practices' | 'seo' | 'pwa', number>} LighthouseSummary
+ */
 
-/** @type {Record<keyof LighthouseSummary, string>} */
+/**
+ * @type {Record<keyof LighthouseSummary, string>}
+ */
 const summaryKeys = {
 	/* eslint-disable perfectionist/sort-objects */
-	"performance": "Performance",
-	"accessibility": "Accessibility",
-	"best-practices": "Best Practices",
-	"seo": "SEO",
-	"pwa": "PWA",
+	'performance': 'Performance',
+	'accessibility': 'Accessibility',
+	'best-practices': 'Best Practices',
+	'seo': 'SEO',
+	'pwa': 'PWA',
 	/* eslint-enable perfectionist/sort-objects */
 };
 
-/** @param {number} rawScore */
+/**
+ * @param {number} rawScore
+ */
 function scoreEntry(rawScore) {
 	const score = Math.round(rawScore * 100);
 
-	const scoreIcon = score >= 90 ? "🟢" : score >= 50 ? "🟠" : "🔴";
+	const scoreIcon =
+		score >= 90 ? '🟢'
+		: score >= 50 ? '🟠'
+		: '🔴';
 	return `${scoreIcon} ${score}`;
 }
 
@@ -28,9 +37,8 @@ function scoreEntry(rawScore) {
 function createURL(url) {
 	try {
 		return new URL(url);
-	}
-	// eslint-disable-next-line unused-imports/no-unused-vars
-	catch (_) {
+	} catch (_) {
+		// eslint-disable-next-line unused-imports/no-unused-vars
 		throw new Error(`Can't create URL for string=${url}`);
 	}
 }
@@ -44,32 +52,32 @@ function createURL(url) {
 function createMarkdownTableRow({ reportUrl, summary, url }) {
 	return [
 		`| [${createURL(url).pathname}](${url})`,
-		...(Object.keys(summaryKeys)).map(k => scoreEntry(summary[k])),
+		...Object.keys(summaryKeys).map((k) => scoreEntry(summary[k])),
 		`[Report](${reportUrl}) |`,
-	].join(" | ");
+	].join(' | ');
 }
 
 function createMarkdownTableHeader() {
 	return [
-		["| URL", ...Object.values(summaryKeys), "Report |"].join(" | "),
-		["|---", ...Array(Object.keys(summaryKeys).length).fill("---"), "---|"].join(
-			"|",
-		),
+		['| URL', ...Object.values(summaryKeys), 'Report |'].join(' | '),
+		['|---', ...Array(Object.keys(summaryKeys).length).fill('---'), '---|'].join('|'),
 	];
 }
 
 /**
  * @param {object} param0
  * @param {Record<string, string>} param0.links
- * @param {{url: string, summary: LighthouseSummary}[]} param0.results
+ * @param {{ url: string; summary: LighthouseSummary }[]} param0.results
  */
 function createLighthouseReport({ links, results }) {
 	const tableHeader = createMarkdownTableHeader();
 	const tableBody = results.map((result) => {
-		const testUrl = /** @type {string} */ (
-			Object.keys(links).find(key => key === result.url)
-		);
-		const reportPublicUrl = /** @type {string} */ (links[testUrl]);
+		const testUrl = /**
+		 * @type {string}
+		 */ (Object.keys(links).find((key) => key === result.url));
+		const reportPublicUrl = /**
+		 * @type {string}
+		 */ (links[testUrl]);
 
 		return createMarkdownTableRow({
 			reportUrl: reportPublicUrl,
@@ -77,14 +85,8 @@ function createLighthouseReport({ links, results }) {
 			url: testUrl,
 		});
 	});
-	const comment = [
-		"### ⚡️ Lighthouse report for the deploy preview of this PR",
-		"",
-		...tableHeader,
-		...tableBody,
-		"",
-	];
-	return comment.join("\n");
+	const comment = ['### ⚡️ Lighthouse report for the deploy preview of this PR', '', ...tableHeader, ...tableBody, ''];
+	return comment.join('\n');
 }
 
 export default createLighthouseReport;

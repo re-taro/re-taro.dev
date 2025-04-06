@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef } from 'react';
 
 function getRandomInt(min: number, max: number) {
 	return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -6,10 +6,8 @@ function getRandomInt(min: number, max: number) {
 
 function getRandomChar(range: RangeOrCharCodes) {
 	let rand = 0;
-	if (range.length === 2)
-		rand = getRandomInt(range[0], range[1]);
-	else
-		rand = range[getRandomInt(0, range.length - 1)];
+	if (range.length === 2) rand = getRandomInt(range[0], range[1]);
+	else rand = range[getRandomInt(0, range.length - 1)];
 
 	return String.fromCharCode(rand);
 }
@@ -39,7 +37,7 @@ interface UseScrambleProps {
 
 export function useScramble({
 	chance = 1,
-	ignore = [" "],
+	ignore = [' '],
 	onAnimationEnd,
 	onAnimationFrame,
 	onAnimationStart,
@@ -51,10 +49,11 @@ export function useScramble({
 	seed = 1,
 	speed = 1,
 	step = 1,
-	text = "",
+	text = '',
 	tick = 1,
 }: UseScrambleProps) {
-	const prefersReducedMotion = typeof window !== "undefined" ? window.matchMedia("(prefers-reduced-motion: reduce)").matches : false;
+	const prefersReducedMotion =
+		typeof window !== 'undefined' ? window.matchMedia('(prefers-reduced-motion: reduce)').matches : false;
 
 	if (prefersReducedMotion) {
 		step = text.length;
@@ -84,25 +83,16 @@ export function useScramble({
 	// overdrive control index
 	const overdriveRef = useRef<number>(0);
 
-	const setIfNotIgnored = (
-		value: number | number | string | null,
-		replace: number | string | null,
-	) => (ignore.includes(`${value}`) ? value : replace);
+	const setIfNotIgnored = (value: number | number | string | null, replace: number | string | null) =>
+		ignore.includes(`${value}`) ? value : replace;
 
 	// pick random character ahead in the string, and add them to the randomizer
 	const seedForward = () => {
-		if (scrambleIndexRef.current === text.length)
-			return;
+		if (scrambleIndexRef.current === text.length) return;
 
 		for (let i = 0; i < seed; i++) {
-			const index = getRandomInt(
-				scrambleIndexRef.current,
-				controlRef.current.length,
-			);
-			if (
-				typeof controlRef.current[index] !== "number"
-				&& typeof controlRef.current[index] !== "undefined"
-			) {
+			const index = getRandomInt(scrambleIndexRef.current, controlRef.current.length);
+			if (typeof controlRef.current[index] !== 'number' && typeof controlRef.current[index] !== 'undefined') {
 				controlRef.current[index] = setIfNotIgnored(
 					controlRef.current[index],
 					getRandomInt(0, 10) >= (1 - chance) * 10 ? scramble || seed : 0,
@@ -121,9 +111,7 @@ export function useScramble({
 
 				controlRef.current[currentIndex] = setIfNotIgnored(
 					text[scrambleIndexRef.current],
-					shouldScramble
-						? scramble + getRandomInt(0, Math.ceil(scramble / 2))
-						: 0,
+					shouldScramble ? scramble + getRandomInt(0, Math.ceil(scramble / 2)) : 0,
 				);
 				scrambleIndexRef.current++;
 			}
@@ -137,23 +125,20 @@ export function useScramble({
 		}
 		for (let i = 0; i < step; i++) {
 			if (controlRef.current.length < text.length) {
-				controlRef.current.push(
-					setIfNotIgnored(text[controlRef.current.length + 1], null),
-				);
+				controlRef.current.push(setIfNotIgnored(text[controlRef.current.length + 1], null));
 			}
 		}
 	};
 
 	const onOverdrive = () => {
-		if (!overdrive)
-			return;
+		if (!overdrive) return;
 
 		for (let i = 0; i < step; i++) {
 			const max = Math.max(controlRef.current.length, text.length);
 			if (overdriveRef.current < max) {
 				controlRef.current[overdriveRef.current] = setIfNotIgnored(
 					text[overdriveRef.current],
-					String.fromCharCode(typeof overdrive === "boolean" ? 95 : overdrive),
+					String.fromCharCode(typeof overdrive === 'boolean' ? 95 : overdrive),
 				);
 				overdriveRef.current++;
 			}
@@ -170,19 +155,18 @@ export function useScramble({
 	 * Redraw text on every animation frame
 	 */
 	const draw = () => {
-		if (!nodeRef.current)
-			return;
+		if (!nodeRef.current) return;
 
-		let result = "";
+		let result = '';
 
 		for (let i = 0; i < controlRef.current.length; i++) {
 			const controlValue = controlRef.current[i];
 
 			switch (true) {
 				/**
-				 * a positive integer value, get a random character
+				 * A positive integer value, get a random character
 				 */
-				case typeof controlValue === "number" && controlValue > 0:
+				case typeof controlValue === 'number' && controlValue > 0:
 					result += getRandomChar(range);
 
 					if (i <= scrambleIndexRef.current) {
@@ -191,50 +175,47 @@ export function useScramble({
 					}
 					break;
 
-					/**
-					 * a string from the previous text
-					 */
-				case typeof controlValue === "string"
-					&& (i >= text.length || i >= scrambleIndexRef.current):
+				/**
+				 * A string from the previous text
+				 */
+				case typeof controlValue === 'string' && (i >= text.length || i >= scrambleIndexRef.current):
 					result += controlValue;
 					break;
 
-					/**
-					 * before scramble index, and equal to the string
-					 */
+				/**
+				 * Before scramble index, and equal to the string
+				 */
 				case controlValue === text[i] && i < scrambleIndexRef.current:
 					result += text[i];
 					break;
 
-					/**
-					 * scramble has finished
-					 */
+				/**
+				 * Scramble has finished
+				 */
 				case controlValue === 0 && i < text.length:
 					result += text[i];
 					controlRef.current[i] = text[i];
 					break;
 
 				default:
-					result += "";
+					result += '';
 			}
 		}
 
 		// set text
 		nodeRef.current.innerHTML = result;
 
-		if (typeof onAnimationFrame === "function")
-			onAnimationFrame(result);
+		if (typeof onAnimationFrame === 'function') onAnimationFrame(result);
 
 		/**
 		 * Exit if the result is equal to the input
 		 *
 		 * - Trim control to text length
-		 * - fire onAnimationEnd
+		 * - Fire onAnimationEnd
 		 */
 		if (result === text) {
 			controlRef.current.splice(text.length, controlRef.current.length);
-			if (typeof onAnimationEnd === "function")
-				onAnimationEnd();
+			if (typeof onAnimationEnd === 'function') onAnimationEnd();
 
 			cancelAnimationFrame(rafRef.current);
 		}
@@ -245,12 +226,11 @@ export function useScramble({
 	/**
 	 * Control the animation framerate, from the speed prop
 	 *
-	 * if speed is 0, stop the animation
+	 * If speed is 0, stop the animation
 	 */
 	// eslint-disable-next-line react-hooks/exhaustive-deps
 	const animate = (time: number) => {
-		if (!speed)
-			return;
+		if (!speed) return;
 
 		rafRef.current = requestAnimationFrame(animate);
 
@@ -260,8 +240,7 @@ export function useScramble({
 		if (timeElapsed > fpsInterval) {
 			elapsedRef.current = time;
 
-			if (stepRef.current % tick === 0)
-				onTick();
+			if (stepRef.current % tick === 0) onTick();
 
 			draw();
 		}
@@ -270,14 +249,14 @@ export function useScramble({
 	/**
 	 * Reset scramble controls
 	 *
-	 * if overflow is true, overflow the control to the an empty array, the size of the text input. This will cause the animation to play from an empty string
+	 * If overflow is true, overflow the control to the an empty array, the size of the text input. This will cause the
+	 * animation to play from an empty string
 	 */
 	const reset = () => {
 		stepRef.current = 0;
 		scrambleIndexRef.current = 0;
 		overdriveRef.current = 0;
-		if (!overflow)
-			controlRef.current = Array.from({ length: text?.length });
+		if (!overflow) controlRef.current = Array.from({ length: text?.length });
 	};
 
 	/**
@@ -288,13 +267,12 @@ export function useScramble({
 	const play = () => {
 		cancelAnimationFrame(rafRef.current);
 		reset();
-		if (typeof onAnimationStart === "function")
-			onAnimationStart();
+		if (typeof onAnimationStart === 'function') onAnimationStart();
 		rafRef.current = requestAnimationFrame(animate);
 	};
 
 	/**
-	 * reset scramble when text input is changed
+	 * Reset scramble when text input is changed
 	 */
 	useEffect(() => {
 		reset();
@@ -302,7 +280,7 @@ export function useScramble({
 	}, [text]);
 
 	/**
-	 * start or stop animation when text and speed change
+	 * Start or stop animation when text and speed change
 	 */
 	useEffect(() => {
 		cancelAnimationFrame(rafRef.current);
@@ -317,7 +295,7 @@ export function useScramble({
 
 	useEffect(() => {
 		if (!playOnMount) {
-			controlRef.current = text.split("");
+			controlRef.current = text.split('');
 			stepRef.current = text.length;
 			scrambleIndexRef.current = text.length;
 			overdriveRef.current = text.length;

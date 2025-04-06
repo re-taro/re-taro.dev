@@ -1,5 +1,5 @@
-import { redirect } from "@remix-run/cloudflare";
+import { redirect } from '@remix-run/cloudflare';
 
 export async function loader() {
-	return redirect("/works", 301);
+	return redirect('/works', 301);
 }

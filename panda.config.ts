@@ -1,100 +1,99 @@
-import { defineConfig } from "@pandacss/dev";
-import { removeUnusedKeyframes } from "./removeUnusedKeyframse";
-import { removeUnusedCssVars } from "./removeUnusedvars";
+import { defineConfig } from '@pandacss/dev';
+import { removeUnusedKeyframes } from './removeUnusedKeyframse';
+import { removeUnusedCssVars } from './removeUnusedvars';
 
 export default defineConfig({
-	browserslist: ["defaults and > 0.3%"],
+	browserslist: ['defaults and > 0.3%'],
 	clean: true,
 	globalCss: {
 		body: {
-			backgroundColor: "bg.main",
+			backgroundColor: 'bg.main',
 			fontFamily: "Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif",
-			MozOsxFontSmoothing: "grayscale",
-			WebkitFontSmoothing: "antialiased",
+			MozOsxFontSmoothing: 'grayscale',
+			WebkitFontSmoothing: 'antialiased',
 		},
 	},
 	hash: true,
 	hooks: {
-		"cssgen:done": ({ artifact, content }) => {
-			if (artifact === "styles.css")
-				return removeUnusedCssVars(removeUnusedKeyframes(content));
+		'cssgen:done': ({ artifact, content }) => {
+			if (artifact === 'styles.css') return removeUnusedCssVars(removeUnusedKeyframes(content));
 		},
 	},
-	include: ["./app/**/*.tsx"],
-	jsxStyleProps: "none",
+	include: ['./app/**/*.tsx'],
+	jsxStyleProps: 'none',
 	lightningcss: true,
 	minify: true,
-	outdir: "styled-system",
-	outExtension: "js",
+	outdir: 'styled-system',
+	outExtension: 'js',
 	preflight: true,
 	strictPropertyValues: true,
 	strictTokens: true,
 	theme: {
 		breakpoints: {
-			md: "768px",
+			md: '768px',
 		},
 		tokens: {
 			colors: {
 				accent: {
 					main: {
-						value: "#c084fc",
+						value: '#c084fc',
 					},
 					secondary: {
-						value: "#e9d5ff",
+						value: '#e9d5ff',
 					},
 				},
 				bg: {
 					main: {
-						value: "#0b1215",
+						value: '#0b1215',
 					},
 					secondary: {
-						value: "#232a2c",
+						value: '#232a2c',
 					},
 					teriary: {
-						value: "#3c4144",
+						value: '#3c4144',
 					},
 				},
 				border: {
 					main: {
-						value: "#909191",
+						value: '#909191',
 					},
 				},
 				text: {
 					main: {
-						value: "#ced0d0",
+						value: '#ced0d0',
 					},
 					secondary: {
-						value: "#b4b5b5",
+						value: '#b4b5b5',
 					},
 				},
 			},
 			fontSizes: {
-				"2xl": {
-					value: "calc(1rem * 8 / 5)",
+				'2xl': {
+					value: 'calc(1rem * 8 / 5)',
 				},
-				"2xs": {
-					value: "calc(1rem * 8 / 11)",
+				'2xs': {
+					value: 'calc(1rem * 8 / 11)',
 				},
-				"3xl": {
-					value: "calc(1rem * 8 / 4)",
+				'3xl': {
+					value: 'calc(1rem * 8 / 4)',
 				},
-				"4xl": {
-					value: "calc(1rem * 8 / 3)",
+				'4xl': {
+					value: 'calc(1rem * 8 / 3)',
 				},
-				"l": {
-					value: "calc(1rem * 8 / 7)",
+				'l': {
+					value: 'calc(1rem * 8 / 7)',
 				},
-				"m": {
-					value: "calc(1rem * 8 / 8)",
+				'm': {
+					value: 'calc(1rem * 8 / 8)',
 				},
-				"s": {
-					value: "calc(1rem * 8 / 9)",
+				's': {
+					value: 'calc(1rem * 8 / 9)',
 				},
-				"xl": {
-					value: "calc(1rem * 8 / 6)",
+				'xl': {
+					value: 'calc(1rem * 8 / 6)',
 				},
-				"xs": {
-					value: "calc(1rem * 8 / 10)",
+				'xs': {
+					value: 'calc(1rem * 8 / 10)',
 				},
 			},
 			fontWeights: {

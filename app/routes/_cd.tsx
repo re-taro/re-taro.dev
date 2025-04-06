@@ -1,6 +1,6 @@
-import { Link, Outlet, useLocation } from "@remix-run/react";
-import type { ReactNode } from "react";
-import { css } from "styled-system/css";
+import { Link, Outlet, useLocation } from '@remix-run/react';
+import type { ReactNode } from 'react';
+import { css } from 'styled-system/css';
 
 export default function WithCdLayout(): ReactNode {
 	const { pathname } = useLocation();
@@ -9,28 +9,27 @@ export default function WithCdLayout(): ReactNode {
 		<>
 			<div
 				className={css({
-					boxSizing: "border-box",
-					display: "flex",
-					flexDirection: "column",
-					margin: "[5rem auto 0]",
-					maxWidth: "[62.5rem]",
-					rowGap: "2rem",
-					width: "[100%]",
-				})}
-			>
+					boxSizing: 'border-box',
+					display: 'flex',
+					flexDirection: 'column',
+					margin: '[5rem auto 0]',
+					maxWidth: '[62.5rem]',
+					rowGap: '2rem',
+					width: '[100%]',
+				})}>
 				<Outlet />
 			</div>
-			<div className={(css({
-				color: "text.secondary",
-				margin: "[2rem auto 0]",
-				maxWidth: "[62.5rem]",
-				width: "[100%]",
-			}))}
-			>
-				<span className={css({
-					marginRight: "[0.5rem]",
-				})}
-				>
+			<div
+				className={css({
+					color: 'text.secondary',
+					margin: '[2rem auto 0]',
+					maxWidth: '[62.5rem]',
+					width: '[100%]',
+				})}>
+				<span
+					className={css({
+						marginRight: '[0.5rem]',
+					})}>
 					&gt;
 				</span>
 				<Link
@@ -41,15 +40,13 @@ export default function WithCdLayout(): ReactNode {
 						_hover: {
 							opacity: 1,
 						},
-						color: "text.main",
+						color: 'text.main',
 
 						opacity: 0.6,
 
-						transition: "[opacity 0.3s ease-in]",
-
+						transition: '[opacity 0.3s ease-in]',
 					})}
-					to={pathname.split("/").slice(0, -1).join("/") || "/"}
-				>
+					to={pathname.split('/').slice(0, -1).join('/') || '/'}>
 					cd ..
 				</Link>
 			</div>

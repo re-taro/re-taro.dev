@@ -1,7 +1,7 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { createRemixStub } from "@remix-run/testing";
+import type { Meta, StoryObj } from '@storybook/react';
+import { createRemixStub } from '@remix-run/testing';
 
-import { Hero } from "./Hero";
+import { Hero } from './Hero';
 
 type T = typeof Hero;
 
@@ -11,21 +11,21 @@ const meta: Meta = {
 		(story) => {
 			const remixStub = createRemixStub([
 				{
-					action: () => ({ redirect: "/" }),
+					action: () => ({ redirect: '/' }),
 					Component: () => story(),
-					loader: () => ({ redirect: "/" }),
-					path: "/*",
+					loader: () => ({ redirect: '/' }),
+					path: '/*',
 				},
 			]);
 
-			return remixStub({ initialEntries: ["/"] });
+			return remixStub({ initialEntries: ['/'] });
 		},
 	],
 	parameters: {
-		layout: "centered",
+		layout: 'centered',
 	},
-	tags: ["autodocs"],
-	title: "Hero",
+	tags: ['autodocs'],
+	title: 'Hero',
 } satisfies Meta<T>;
 
 type Story = StoryObj<T>;

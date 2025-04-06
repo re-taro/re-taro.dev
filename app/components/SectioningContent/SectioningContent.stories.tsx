@@ -1,24 +1,18 @@
-import type { StoryObj } from "@storybook/react";
+import type { StoryObj } from '@storybook/react';
 
-import {
-	Article,
-	Aside,
-	Nav,
-	Section,
-	SectioningFragment,
-} from "./SectioningContent";
-import { Heading, PageHeading } from "~/components/Heading";
+import { Article, Aside, Nav, Section, SectioningFragment } from './SectioningContent';
+import { Heading, PageHeading } from '~/components/Heading';
 
 type T = typeof Section;
 
 const meta = {
 	component: Section,
 	parameters: {
-		layout: "centered",
+		layout: 'centered',
 	},
 	subcomponents: { Article, Aside, Nav },
-	tags: ["autodocs"],
-	title: "SectioningContent",
+	tags: ['autodocs'],
+	title: 'SectioningContent',
 };
 
 type Story = StoryObj<T>;
@@ -28,9 +22,7 @@ function Contents() {
 		<>
 			<PageHeading>h1</PageHeading>
 			<Section>
-				<PageHeading>
-					PageHeading: Headingと違い、SectioningContent中でも常にh1を出力する
-				</PageHeading>
+				<PageHeading>PageHeading: Headingと違い、SectioningContent中でも常にh1を出力する</PageHeading>
 			</Section>
 			<Heading prefix>Heading without SectioningContent: h1</Heading>
 			<Nav>

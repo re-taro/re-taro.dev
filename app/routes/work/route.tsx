@@ -1,5 +1,5 @@
-import type { ReactNode } from "react";
-import { loader } from "./handlers";
+import type { ReactNode } from 'react';
+import { loader } from './handlers';
 
 export default function Page(): ReactNode {
 	return null;
