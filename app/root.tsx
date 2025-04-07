@@ -1,16 +1,16 @@
-import { Links, Meta, Outlet, Scripts, ScrollRestoration, isRouteErrorResponse, useRouteError } from "@remix-run/react";
-import type { ReactNode } from "react";
-import type { MetaFunction } from "@remix-run/cloudflare";
-import { css } from "styled-system/css";
-import styles from "./index.css?url";
-import { Footer } from "~/components/Footer";
-import { Header } from "~/components/Header";
+import { Links, Meta, Outlet, Scripts, ScrollRestoration, isRouteErrorResponse, useRouteError } from '@remix-run/react';
+import { css } from 'styled-system/css';
+import styles from './index.css?url';
+import type { MetaFunction } from '@remix-run/cloudflare';
+import type { FC, ReactNode } from 'react';
+import { Footer } from '~/components/Footer';
+import { Header } from '~/components/Header';
 
 interface Props {
 	children: ReactNode;
 }
 
-export function Layout({ children }: Props): ReactNode {
+export const Layout: FC<Props> = ({ children }) => {
 	return (
 		<html lang="ja-JP">
 			<head>
@@ -25,50 +25,44 @@ export function Layout({ children }: Props): ReactNode {
 			</head>
 			<body
 				className={css({
-					display: "grid",
+					display: 'grid',
 					gridTemplateAreas: `"header" "main" "footer"`,
-					gridTemplateRows: "auto 1fr auto",
-					minHeight: "[100lvh]",
-				})}
-			>
-				<Header css={css.raw({ gridArea: "header" })} />
-				<main className={css({ gridArea: "main", padding: "0 1rem" })}>
-					{children}
-				</main>
-				<Footer	css={css.raw({ gridArea: "footer" })} />
+					gridTemplateRows: 'auto 1fr auto',
+					minHeight: '[100lvh]',
+				})}>
+				<Header css={css.raw({ gridArea: 'header' })} />
+				<main className={css({ gridArea: 'main', padding: '0 1rem' })}>{children}</main>
+				<Footer css={css.raw({ gridArea: 'footer' })} />
 				<ScrollRestoration />
 				<Scripts />
 			</body>
 		</html>
 	);
-}
+};
 
-function App(): ReactNode {
-	return (
-		<Outlet />
-	);
-}
+const App: FC = () => {
+	return <Outlet />;
+};
 
 export const meta: MetaFunction = () => [
-	{ content: "Rintaro Itokawa (re-taro) のポートフォリオです。", name: "description" },
-	{ name: "og:title", property: "Rintaro Itokawa - Web Developer" },
-	{ name: "og:description", property: "Rintaro Itokawa (re-taro) のポートフォリオです。" },
-	{ name: "og:url", property: "https://re-taro.dev" },
-	{ name: "og:image", property: "https://og.re-taro.dev?title=Rintaro+Itokawa&tmp=color&text=re-taro.dev" },
-	{ name: "og:type", property: "website" },
-	{ content: "summary_large_image", name: "twitter:card" },
-	{ content: "Rintaro Itokawa - Web Developer", name: "twitter:title" },
-	{ content: "Rintaro Itokawa (re-taro) のポートフォリオです。", name: "twitter:description" },
-	{ content: "https://og.re-taro.dev?title=Rintaro+Itokawa&tmp=color&text=re-taro.dev", name: "twitter:image" },
-	{ content: "@re_taro_", name: "twitter:site" },
-	{ content: "@re_taro_", name: "twitter:creator" },
+	{ content: 'Rintaro Itokawa (re-taro) のポートフォリオです。', name: 'description' },
+	{ name: 'og:title', property: 'Rintaro Itokawa - Web Developer' },
+	{ name: 'og:description', property: 'Rintaro Itokawa (re-taro) のポートフォリオです。' },
+	{ name: 'og:url', property: 'https://re-taro.dev' },
+	{ name: 'og:image', property: 'https://og.re-taro.dev?title=Rintaro+Itokawa&tmp=color&text=re-taro.dev' },
+	{ name: 'og:type', property: 'website' },
+	{ content: 'summary_large_image', name: 'twitter:card' },
+	{ content: 'Rintaro Itokawa - Web Developer', name: 'twitter:title' },
+	{ content: 'Rintaro Itokawa (re-taro) のポートフォリオです。', name: 'twitter:description' },
+	{ content: 'https://og.re-taro.dev?title=Rintaro+Itokawa&tmp=color&text=re-taro.dev', name: 'twitter:image' },
+	{ content: '@re_taro_', name: 'twitter:site' },
+	{ content: '@re_taro_', name: 'twitter:creator' },
 ];
 
-export function ErrorBoundary() {
+export const ErrorBoundary: FC = () => {
 	const error = useRouteError();
-	if (!(typeof window !== "undefined"
-		&& window.document
-		&& window.document.createElement)) {
+	// eslint-disable-next-line ts/no-unnecessary-condition, ts/no-deprecated
+	if (!(typeof globalThis !== 'undefined' && globalThis.document.createElement)) {
 		console.error(error);
 	}
 
@@ -76,36 +70,32 @@ export function ErrorBoundary() {
 		return (
 			<main
 				className={css({
-					color: "text.main",
-					display: "grid",
-					height: "[100svh]",
-					placeItems: "center",
-					width: "[100%]",
-				})}
-			>
+					color: 'text.main',
+					display: 'grid',
+					height: '[100svh]',
+					placeItems: 'center',
+					width: '[100%]',
+				})}>
 				<div
 					className={css({
-						lineHeight: "none",
-						textAlign: "center",
-					})}
-				>
+						lineHeight: 'none',
+						textAlign: 'center',
+					})}>
 					<h1
 						className={css({
-							fontSize: "4xl",
-						})}
-					>
+							fontSize: '4xl',
+						})}>
 						{error.status}
 					</h1>
 					<a
 						className={css({
-							display: "inline-block",
-							fontSize: "xl",
-							textDecoration: "underline",
+							display: 'inline-block',
+							fontSize: 'xl',
+							textDecoration: 'underline',
 						})}
 						href={`https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/${error.status}`}
 						rel="noreferrer"
-						target="_blank"
-					>
+						target="_blank">
 						{error.statusText}
 					</a>
 				</div>
@@ -116,34 +106,32 @@ export function ErrorBoundary() {
 	return (
 		<main
 			className={css({
-				color: "text.main",
-				display: "grid",
-				height: "[100svh]",
-				placeItems: "center",
-				width: "[100%]",
-			})}
-		>
-			<div className={css({
-				lineHeight: "none",
-				textAlign: "center",
-			})}
-			>
-				<h1 className={css({
-					fontSize: "4xl",
-				})}
-				>
+				color: 'text.main',
+				display: 'grid',
+				height: '[100svh]',
+				placeItems: 'center',
+				width: '[100%]',
+			})}>
+			<div
+				className={css({
+					lineHeight: 'none',
+					textAlign: 'center',
+				})}>
+				<h1
+					className={css({
+						fontSize: '4xl',
+					})}>
 					Error
 				</h1>
 				<p
 					className={css({
-						fontSize: "xl",
-					})}
-				>
+						fontSize: 'xl',
+					})}>
 					Something went wrong! Please try again later.
 				</p>
 			</div>
 		</main>
 	);
-}
+};
 
 export default App;

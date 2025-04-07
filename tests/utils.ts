@@ -1,5 +1,5 @@
-import { expect } from "@playwright/test";
-import type { Locator } from "@playwright/test";
+import { expect } from '@playwright/test';
+import type { Locator } from '@playwright/test';
 
 export async function waitForImageToLoad(imageLocator: Locator): Promise<void> {
 	await imageLocator.scrollIntoViewIfNeeded();
@@ -8,12 +8,13 @@ export async function waitForImageToLoad(imageLocator: Locator): Promise<void> {
 		expect(
 			await (
 				await imageLocator.evaluateHandle((element, prop) => {
-					if (!(element instanceof HTMLImageElement))
-						throw new Error("Element is not an image");
+					if (!(element instanceof HTMLImageElement)) throw new Error('Element is not an image');
 
 					return element[prop as keyof typeof element];
-				}, "naturalWidth")
-			).jsonValue(),
+				}, 'naturalWidth')
+			)
+				// eslint-disable-next-line unicorn/no-await-expression-member
+				.jsonValue(),
 		).toBeGreaterThan(0);
 	}).toPass();
 }

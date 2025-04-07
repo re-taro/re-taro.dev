@@ -1,7 +1,6 @@
-import type { Meta, StoryObj } from "@storybook/react";
-
-import { Temporal } from "temporal-polyfill";
-import { Timeline } from "./Timeline";
+import { Temporal } from 'temporal-polyfill';
+import { Timeline } from './Timeline';
+import type { Meta, StoryObj } from '@storybook/react';
 
 type T = typeof Timeline;
 
@@ -15,10 +14,10 @@ const meta: Meta = {
 	},
 	component: Timeline,
 	parameters: {
-		layout: "centered",
+		layout: 'centered',
 	},
-	tags: ["autodocs"],
-	title: "Timeline",
+	tags: ['autodocs'],
+	title: 'Timeline',
 } satisfies Meta<T>;
 
 type Story = StoryObj<T>;

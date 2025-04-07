@@ -1,1 +1,1 @@
-export { loader } from "./loader";
+export { loader } from './loader';

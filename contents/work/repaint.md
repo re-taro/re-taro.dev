@@ -1,6 +1,6 @@
 ---
-title: "Re:paint"
-description: "第58回鈴鹿高専祭で運用したフィールドクエスト"
+title: 'Re:paint'
+description: '第58回鈴鹿高専祭で運用したフィールドクエスト'
 date: 2023-10-21
 thumbnail: { src: /images/works/repaint/repaint_thumb.png, alt: repaint }
 links: [{ url: https://github.com/after-school-garbage-squad, text: Repository }]

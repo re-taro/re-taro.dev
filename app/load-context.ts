@@ -1,9 +1,9 @@
-import type { AppLoadContext } from "@remix-run/cloudflare";
-import type { PlatformProxy } from "wrangler";
+import type { AppLoadContext } from '@remix-run/cloudflare';
+import type { PlatformProxy } from 'wrangler';
 
-type Cloudflare = Omit<PlatformProxy<Env>, "dispose">;
+type Cloudflare = Omit<PlatformProxy, 'dispose'>;
 
-declare module "@remix-run/cloudflare" {
+declare module '@remix-run/cloudflare' {
 	interface AppLoadContext {
 		cloudflare: Cloudflare;
 	}

@@ -1,5 +1,6 @@
-import { redirect } from "@remix-run/cloudflare";
+import { redirect } from '@remix-run/cloudflare';
+import type { LoaderFunction } from '@remix-run/cloudflare';
 
-export async function loader() {
-	return redirect("/works", 301);
-}
+export const loader: LoaderFunction = () => {
+	return redirect('/works', 301);
+};

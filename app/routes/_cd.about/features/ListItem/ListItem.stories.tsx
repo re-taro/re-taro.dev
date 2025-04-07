@@ -1,21 +1,26 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import type { ReactNode } from "react";
-import { ListItem } from "./ListItem";
+import { ListItem } from './ListItem';
+import type { Meta, StoryObj } from '@storybook/react';
+import type { ReactNode } from 'react';
 
 type T = typeof ListItem;
 
 const meta: Meta = {
 	args: {
-		children: "Webアプリケーション開発に使用している言語です。",
-		name: "TypeScript",
+		children: 'Webアプリケーション開発に使用している言語です。',
+		name: 'TypeScript',
 	},
 	component: ListItem,
-	decorators: [Story => <ul><Story /></ul>],
+	decorators: [
+		(Story) => (
+			<ul>
+				<Story />
+			</ul>
+		),
+	],
 	parameters: {
-		layout: "centered",
+		layout: 'centered',
 	},
-	tags: ["autodocs"],
-	title: "ListItem",
+	tags: ['autodocs'],
 } satisfies Meta<T>;
 
 type Story = StoryObj<T>;

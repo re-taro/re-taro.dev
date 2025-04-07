@@ -1,27 +1,26 @@
-import type { Meta, StoryObj } from "@storybook/react";
-
-import { Heading, PageHeading } from "./Heading";
-import { Section } from "~/components/SectioningContent";
+/* eslint-disable ts/explicit-module-boundary-types */
+import { Heading, PageHeading } from './Heading';
+import type { Meta, StoryObj } from '@storybook/react';
+import { Section } from '~/components/SectioningContent';
 
 type T = typeof Heading;
 
 const meta: Meta = {
 	component: Heading,
 	parameters: {
-		layout: "centered",
+		layout: 'centered',
 	},
-	tags: ["autodocs"],
-	title: "Heading",
+	tags: ['autodocs'],
 } satisfies Meta<T>;
 
 type Story = StoryObj<T>;
 
 export const SectionHeading: Story = {
 	args: {
-		children: "SectionHeading",
+		children: 'SectionHeading',
 	},
 	decorators: [
-		Story => (
+		(Story) => (
 			<Section>
 				<Story />
 			</Section>
@@ -31,11 +30,11 @@ export const SectionHeading: Story = {
 
 export const ScreenHeading: Story = {
 	args: {
-		children: "ScreenHeading",
-		type: "screen",
+		children: 'ScreenHeading',
+		type: 'screen',
 	},
 	decorators: [
-		Story => (
+		(Story) => (
 			<Section>
 				<Story />
 			</Section>
@@ -45,11 +44,11 @@ export const ScreenHeading: Story = {
 
 export const BlockHeading: Story = {
 	args: {
-		children: "BlockHeading",
-		type: "block",
+		children: 'BlockHeading',
+		type: 'block',
 	},
 	decorators: [
-		Story => (
+		(Story) => (
 			<Section>
 				<Story />
 			</Section>
@@ -59,11 +58,11 @@ export const BlockHeading: Story = {
 
 export const WithPrefix: Story = {
 	args: {
-		children: "WithPrefix",
+		children: 'WithPrefix',
 		prefix: true,
 	},
 	decorators: [
-		Story => (
+		(Story) => (
 			<Section>
 				<Story />
 			</Section>
