@@ -1,9 +1,8 @@
-import type { ComponentProps, FC, HTMLAttributes, PropsWithChildren, ReactNode } from 'react';
 import { forwardRef, useContext } from 'react';
-
-import type { SystemStyleObject } from 'styled-system/types';
 import { css } from 'styled-system/css';
 import { LevelContext } from './level';
+import type { ComponentProps, FC, HTMLAttributes, PropsWithChildren } from 'react';
+import type { SystemStyleObject } from 'styled-system/types';
 
 type BaseProps = PropsWithChildren<{
 	// via https://html.spec.whatwg.org/multipage/dom.html#sectioning-content
@@ -16,12 +15,13 @@ type SectioningContentProps = BaseProps & Omit<HTMLAttributes<HTMLElement>, keyo
 
 type Props = Omit<ComponentProps<typeof SectioningContent>, 'as'>;
 
-export function SectioningFragment({ baseLevel, children }: PropsWithChildren<{ baseLevel?: number }>): ReactNode {
+export const SectioningFragment: FC<PropsWithChildren<{ baseLevel?: number }>> = ({ baseLevel, children }) => {
 	const level = useContext(LevelContext);
 
 	return <LevelContext.Provider value={baseLevel ?? level + 1}>{children}</LevelContext.Provider>;
-}
+};
 
+// eslint-disable-next-line react/display-name
 const SectioningContent = forwardRef<HTMLElement, SectioningContentProps>(
 	({ as: Component = 'section', baseLevel, children, css: cssProps, ...props }, ref) => (
 		<Component {...props} className={css(cssProps)} ref={ref}>

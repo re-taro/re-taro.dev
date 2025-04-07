@@ -1,5 +1,5 @@
-import type { ReactElement, ReactNode, SVGProps } from 'react';
 import { css } from 'styled-system/css';
+import type { FC, ReactElement, SVGProps } from 'react';
 
 interface Props {
 	children: string;
@@ -7,7 +7,7 @@ interface Props {
 	icon: (props: SVGProps<SVGSVGElement>) => ReactElement;
 }
 
-export function SocialLink({ children, href, icon: Icon }: Props): ReactNode {
+export const SocialLink: FC<Props> = ({ children, href, icon: Icon }) => {
 	return (
 		<a
 			className={css({
@@ -39,4 +39,4 @@ export function SocialLink({ children, href, icon: Icon }: Props): ReactNode {
 			{children}
 		</a>
 	);
-}
+};

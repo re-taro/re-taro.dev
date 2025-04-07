@@ -1,12 +1,12 @@
-import type { ReactNode } from 'react';
-import type { Props as TimelineItemProps } from '../TimelineItem/TimelineItem';
 import { TimelineItem } from '../TimelineItem';
+import type { Props as TimelineItemProps } from '../TimelineItem/TimelineItem';
+import type { FC } from 'react';
 
 interface Props {
-	timelines: Array<TimelineItemProps>;
+	timelines: TimelineItemProps[];
 }
 
-export function Timeline({ timelines }: Props): ReactNode {
+export const Timeline: FC<Props> = ({ timelines }) => {
 	return (
 		<ul>
 			{timelines.map((timeline) => (
@@ -14,4 +14,4 @@ export function Timeline({ timelines }: Props): ReactNode {
 			))}
 		</ul>
 	);
-}
+};

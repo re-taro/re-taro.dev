@@ -1,21 +1,21 @@
-import type { ReactNode } from 'react';
 import { css } from 'styled-system/css';
-import type { MetaFunction } from '@remix-run/cloudflare';
 import { ListItem } from './features/ListItem';
 import { SocialLink } from './features/SocialLink';
+import type { MetaFunction } from '@remix-run/cloudflare';
+import type { FC } from 'react';
+import { Heading, PageHeading } from '~/components/Heading';
+import { Paragraph } from '~/components/Paragraph';
+import { Section } from '~/components/SectioningContent';
+import Blog from '~icons/fa-solid/blog';
+import MailLine from '~icons/ri/mail-line';
+import Twitter from '~icons/ri/twitter-x-line';
+import Bluesky from '~icons/simple-icons/bluesky';
 import Discord from '~icons/simple-icons/discord';
 import Github from '~icons/simple-icons/github';
 import Keybase from '~icons/simple-icons/keybase';
 import Monkeytie from '~icons/simple-icons/monkeytie';
-import Bluesky from '~icons/simple-icons/bluesky';
-import MailLine from '~icons/ri/mail-line';
-import Twitter from '~icons/ri/twitter-x-line';
-import Blog from '~icons/fa-solid/blog';
-import { Heading, PageHeading } from '~/components/Heading';
-import { Paragraph } from '~/components/Paragraph';
-import { Section } from '~/components/SectioningContent';
 
-export default function Page(): ReactNode {
+const Page: FC = () => {
 	return (
 		<>
 			<PageHeading bold prefix css={css.raw({ fontSize: 'xl' })} type="section">
@@ -174,7 +174,7 @@ export default function Page(): ReactNode {
 			</Section>
 		</>
 	);
-}
+};
 
 export const meta: MetaFunction = () => [
 	{ content: 'Rintaro Itokawa (re-taro) について。', name: 'description' },
@@ -190,3 +190,5 @@ export const meta: MetaFunction = () => [
 	{ content: '@re_taro_', name: 'twitter:site' },
 	{ content: '@re_taro_', name: 'twitter:creator' },
 ];
+
+export default Page;

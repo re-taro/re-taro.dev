@@ -1,13 +1,13 @@
-import type { ReactNode } from 'react';
 import { useLoaderData } from '@remix-run/react';
 import { css } from 'styled-system/css';
-import type { MetaFunction } from '@remix-run/cloudflare';
-import { loader } from './handlers';
 import { Carousel } from './features/Carousel';
+import type { loader } from './handlers';
+import type { MetaFunction } from '@remix-run/cloudflare';
+import type { FC } from 'react';
 import { PageHeading } from '~/components/Heading';
 import { Paragraph } from '~/components/Paragraph';
 
-export default function Page(): ReactNode {
+const Page: FC = () => {
 	const { work } = useLoaderData<typeof loader>();
 
 	return (
@@ -32,7 +32,7 @@ export default function Page(): ReactNode {
 			{work.images && <Carousel images={work.images} />}
 		</>
 	);
-}
+};
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => [
 	{ content: data?.work.description, name: 'description' },
@@ -49,4 +49,6 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => [
 	{ content: '@re_taro_', name: 'twitter:creator' },
 ];
 
-export { loader };
+export { loader } from './handlers';
+
+export default Page;

@@ -8,13 +8,11 @@
  * @type {Record<keyof LighthouseSummary, string>}
  */
 const summaryKeys = {
-	/* eslint-disable perfectionist/sort-objects */
 	'performance': 'Performance',
 	'accessibility': 'Accessibility',
 	'best-practices': 'Best Practices',
 	'seo': 'SEO',
 	'pwa': 'PWA',
-	/* eslint-enable perfectionist/sort-objects */
 };
 
 /**
@@ -37,8 +35,7 @@ function scoreEntry(rawScore) {
 function createURL(url) {
 	try {
 		return new URL(url);
-	} catch (_) {
-		// eslint-disable-next-line unused-imports/no-unused-vars
+	} catch {
 		throw new Error(`Can't create URL for string=${url}`);
 	}
 }
@@ -60,7 +57,7 @@ function createMarkdownTableRow({ reportUrl, summary, url }) {
 function createMarkdownTableHeader() {
 	return [
 		['| URL', ...Object.values(summaryKeys), 'Report |'].join(' | '),
-		['|---', ...Array(Object.keys(summaryKeys).length).fill('---'), '---|'].join('|'),
+		['|---', ...Array.from({ length: Object.keys(summaryKeys).length }).fill('---'), '---|'].join('|'),
 	];
 }
 

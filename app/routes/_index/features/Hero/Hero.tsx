@@ -1,7 +1,9 @@
+/* eslint-disable jsx-a11y/mouse-events-have-key-events */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import { Link } from '@remix-run/react';
-import type { ReactNode } from 'react';
 import { Suspense, useRef, useState } from 'react';
 import { css } from 'styled-system/css';
+import type { ReactNode } from 'react';
 import { PageHeading } from '~/components/Heading';
 import { useScramble } from '~/hooks/useScramble';
 
@@ -15,6 +17,7 @@ function HeroText(): ReactNode {
 	const { ref: headingRef } = useScramble({
 		onAnimationEnd: () => {
 			clearInterval(loopRef.current);
+			// eslint-disable-next-line unicorn/prefer-global-this
 			loopRef.current = window.setTimeout(
 				() => {
 					setIndex((index) => (index < texts.length - 1 ? index + 1 : 0));
@@ -60,7 +63,7 @@ export function Hero(): ReactNode {
 						margin: { base: '[0 3.5rem]', md: '[0 5rem]' },
 						width: { base: '[10rem]', md: '[15rem]' },
 					})}
-					alt="Rintaro Itokawa's profile image"
+					alt="Rintaro Itokawa's profile icon"
 					fetchPriority="high"
 					height={240}
 					loading="eager"

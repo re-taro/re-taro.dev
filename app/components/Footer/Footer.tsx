@@ -1,11 +1,11 @@
-import type { ReactNode } from 'react';
 import { css } from 'styled-system/css';
+import type { FC } from 'react';
 import type { SystemStyleObject } from 'styled-system/types';
 
 interface Props {
 	css?: SystemStyleObject;
 }
-export function Footer({ css: cssStyle }: Props): ReactNode {
+export const Footer: FC<Props> = ({ css: cssStyle }) => {
 	return (
 		<footer
 			className={css(
@@ -24,4 +24,4 @@ export function Footer({ css: cssStyle }: Props): ReactNode {
 			2021 - PRESENT &copy; Rintaro Itokawa
 		</footer>
 	);
-}
+};

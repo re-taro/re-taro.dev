@@ -40,7 +40,6 @@ test.describe('/about', () => {
 			expect(url).toBe(COLLECT_URL);
 		});
 	});
-	test.describe('validation', () => {});
 	test.describe('a11y', () => {
 		test('should not have any automatically detectable accessibility issues', async ({ page }) => {
 			const accessibilityScanResults = await new AxeBuilder({ page }).analyze();

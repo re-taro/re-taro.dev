@@ -1,16 +1,16 @@
-import type { ReactNode } from 'react';
-import { css } from 'styled-system/css';
-import type { MetaFunction } from '@remix-run/cloudflare';
 import { useLoaderData as _useLoaderData } from '@remix-run/react';
+import { css } from 'styled-system/css';
 import { Temporal } from 'temporal-polyfill';
 import { Timeline } from './features/Timeline';
-import { loader } from './handlers';
 import type { Props as TimelineItemProps } from './features/TimelineItem/TimelineItem';
+import type { loader } from './handlers';
+import type { MetaFunction } from '@remix-run/cloudflare';
+import type { FC } from 'react';
 import { PageHeading } from '~/components/Heading';
 import { Paragraph } from '~/components/Paragraph';
 import { Section } from '~/components/SectioningContent';
 
-export default function Page(): ReactNode {
+const Page: FC = () => {
 	const { timelines } = useLoaderData();
 
 	return (
@@ -24,7 +24,7 @@ export default function Page(): ReactNode {
 			</Section>
 		</>
 	);
-}
+};
 
 function useLoaderData() {
 	const { timelines } = _useLoaderData<typeof loader>();
@@ -53,4 +53,6 @@ export const meta: MetaFunction = () => [
 	{ content: '@re_taro_', name: 'twitter:creator' },
 ];
 
-export { loader };
+export { loader } from './handlers';
+
+export default Page;

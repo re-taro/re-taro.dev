@@ -1,6 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/react';
-
 import { SocialLink } from './SocialLink';
+import type { Meta, StoryObj } from '@storybook/react';
 import Github from '~icons/simple-icons/github';
 
 type T = typeof SocialLink;
@@ -11,7 +10,6 @@ const meta: Meta = {
 		layout: 'centered',
 	},
 	tags: ['autodocs'],
-	title: 'SocialLink',
 } satisfies Meta<T>;
 
 type Story = StoryObj<T>;

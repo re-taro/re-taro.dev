@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react';
-
+/* eslint-disable ts/explicit-module-boundary-types */
 import { Heading, PageHeading } from './Heading';
+import type { Meta, StoryObj } from '@storybook/react';
 import { Section } from '~/components/SectioningContent';
 
 type T = typeof Heading;
@@ -11,7 +11,6 @@ const meta: Meta = {
 		layout: 'centered',
 	},
 	tags: ['autodocs'],
-	title: 'Heading',
 } satisfies Meta<T>;
 
 type Story = StoryObj<T>;

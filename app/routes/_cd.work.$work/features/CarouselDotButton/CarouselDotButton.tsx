@@ -1,12 +1,12 @@
-import type { ComponentPropsWithoutRef, ReactNode } from 'react';
 import { css, cx } from 'styled-system/css';
+import type { ComponentPropsWithoutRef, FC } from 'react';
 
 type Props = Pick<ComponentPropsWithoutRef<'button'>, 'onClick'> & {
 	index: number;
 	isSelected: boolean;
 };
 
-export function CarouselDotButton({ index, isSelected, onClick }: Props): ReactNode {
+export const CarouselDotButton: FC<Props> = ({ index, isSelected, onClick }) => {
 	return (
 		<button
 			className={cx(
@@ -47,4 +47,4 @@ export function CarouselDotButton({ index, isSelected, onClick }: Props): ReactN
 			type="button"
 		/>
 	);
-}
+};

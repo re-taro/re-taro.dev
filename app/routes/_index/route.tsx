@@ -1,7 +1,8 @@
 import { css } from 'styled-system/css';
 import { Hero } from './features/Hero';
+import type { FC } from 'react';
 
-export default function Page() {
+const Page: FC = () => {
 	return (
 		<section
 			className={css({
@@ -13,4 +14,6 @@ export default function Page() {
 			<Hero />
 		</section>
 	);
-}
+};
+
+export default Page;

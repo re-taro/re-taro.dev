@@ -1,7 +1,7 @@
 import { Link } from '@remix-run/react';
+import { css } from 'styled-system/css';
 import type { Work } from 'content-collections';
 import type { ReactNode } from 'react';
-import { css } from 'styled-system/css';
 import { Heading } from '~/components/Heading';
 import { Paragraph } from '~/components/Paragraph';
 import { Article } from '~/components/SectioningContent';

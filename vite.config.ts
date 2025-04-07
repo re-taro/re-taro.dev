@@ -1,14 +1,13 @@
+import contentCollections from '@content-collections/remix-vite';
 import { cloudflareDevProxyVitePlugin as cloudflare, vitePlugin as remix } from '@remix-run/dev';
+import browserslistToEsbuild from 'browserslist-to-esbuild';
+import { remixDevTools } from 'remix-development-tools';
 import { visualizer } from 'rollup-plugin-visualizer';
+import icons from 'unplugin-icons/vite';
 import { defineConfig } from 'vite';
 import typecript from 'vite-tsconfig-paths';
-import { remixDevTools } from 'remix-development-tools';
-import browserslistToEsbuild from 'browserslist-to-esbuild';
-import icons from 'unplugin-icons/vite';
-import contentCollections from '@content-collections/remix-vite';
 import { getLoadContext } from './app/load-context';
 
-// eslint-disable-next-line node/prefer-global/process
 const isStorybook = process.argv[1]?.includes('storybook');
 
 export default defineConfig(({ mode }) => ({
@@ -24,7 +23,7 @@ export default defineConfig(({ mode }) => ({
 						if (sub1 !== '.pnpm') return sub1.toString();
 
 						const name2 = basic.split('/')[1];
-						return name2.split('@')[name2[0] === '@' ? 1 : 0].toString();
+						return name2.split('@')[name2.startsWith('@') ? 1 : 0].toString();
 					}
 				},
 			},

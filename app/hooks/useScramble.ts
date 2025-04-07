@@ -1,18 +1,20 @@
+/* eslint-disable no-plusplus */
+/* eslint-disable no-param-reassign */
 import { useEffect, useRef } from 'react';
+import type { MutableRefObject } from 'react';
 
-function getRandomInt(min: number, max: number) {
+const getRandomInt = (min: number, max: number) => {
 	return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+};
 
-function getRandomChar(range: RangeOrCharCodes) {
+const getRandomChar = (range: RangeOrCharCodes) => {
 	let rand = 0;
-	if (range.length === 2) rand = getRandomInt(range[0], range[1]);
-	else rand = range[getRandomInt(0, range.length - 1)];
+	rand = range.length === 2 ? getRandomInt(range[0], range[1]) : range[getRandomInt(0, range.length - 1)];
 
-	return String.fromCharCode(rand);
-}
+	return String.fromCodePoint(rand);
+};
 
-type RangeOrCharCodes = Array<number> & {
+type RangeOrCharCodes = number[] & {
 	0: number;
 	1: number;
 };
@@ -35,7 +37,7 @@ interface UseScrambleProps {
 	tick?: number;
 }
 
-export function useScramble({
+export const useScramble = ({
 	chance = 1,
 	ignore = [' '],
 	onAnimationEnd,
@@ -51,8 +53,10 @@ export function useScramble({
 	step = 1,
 	text = '',
 	tick = 1,
-}: UseScrambleProps) {
+	// eslint-disable-next-line ts/no-explicit-any
+}: UseScrambleProps): { ref: MutableRefObject<any>; replay: () => void } => {
 	const prefersReducedMotion =
+		// eslint-disable-next-line unicorn/prefer-global-this
 		typeof window !== 'undefined' ? window.matchMedia('(prefers-reduced-motion: reduce)').matches : false;
 
 	if (prefersReducedMotion) {
@@ -62,6 +66,7 @@ export function useScramble({
 	}
 
 	// text node ref
+	// eslint-disable-next-line ts/no-explicit-any
 	const nodeRef = useRef<any>(null);
 
 	// animation frame request
@@ -78,12 +83,12 @@ export function useScramble({
 	const scrambleIndexRef = useRef<number>(0);
 
 	// scramble controller
-	const controlRef = useRef<Array<number | string | null>>([]);
+	const controlRef = useRef<(number | string | null)[]>([]);
 
 	// overdrive control index
 	const overdriveRef = useRef<number>(0);
 
-	const setIfNotIgnored = (value: number | number | string | null, replace: number | string | null) =>
+	const setIfNotIgnored = (value: number | string | null, replace: number | string | null) =>
 		ignore.includes(`${value}`) ? value : replace;
 
 	// pick random character ahead in the string, and add them to the randomizer
@@ -92,7 +97,7 @@ export function useScramble({
 
 		for (let i = 0; i < seed; i++) {
 			const index = getRandomInt(scrambleIndexRef.current, controlRef.current.length);
-			if (typeof controlRef.current[index] !== 'number' && typeof controlRef.current[index] !== 'undefined') {
+			if (typeof controlRef.current[index] !== 'number' && controlRef.current[index] != null) {
 				controlRef.current[index] = setIfNotIgnored(
 					controlRef.current[index],
 					getRandomInt(0, 10) >= (1 - chance) * 10 ? scramble || seed : 0,
@@ -138,7 +143,7 @@ export function useScramble({
 			if (overdriveRef.current < max) {
 				controlRef.current[overdriveRef.current] = setIfNotIgnored(
 					text[overdriveRef.current],
-					String.fromCharCode(typeof overdrive === 'boolean' ? 95 : overdrive),
+					String.fromCodePoint(typeof overdrive === 'boolean' ? 95 : overdrive),
 				);
 				overdriveRef.current++;
 			}
@@ -154,6 +159,7 @@ export function useScramble({
 	/**
 	 * Redraw text on every animation frame
 	 */
+	// eslint-disable-next-line complexity
 	const draw = () => {
 		if (!nodeRef.current) return;
 
@@ -166,7 +172,7 @@ export function useScramble({
 				/**
 				 * A positive integer value, get a random character
 				 */
-				case typeof controlValue === 'number' && controlValue > 0:
+				case typeof controlValue === 'number' && controlValue > 0: {
 					result += getRandomChar(range);
 
 					if (i <= scrambleIndexRef.current) {
@@ -174,35 +180,41 @@ export function useScramble({
 						controlRef.current[i] = (controlRef.current[i] as number) - 1;
 					}
 					break;
+				}
 
 				/**
 				 * A string from the previous text
 				 */
-				case typeof controlValue === 'string' && (i >= text.length || i >= scrambleIndexRef.current):
+				case typeof controlValue === 'string' && (i >= text.length || i >= scrambleIndexRef.current): {
 					result += controlValue;
 					break;
+				}
 
 				/**
 				 * Before scramble index, and equal to the string
 				 */
-				case controlValue === text[i] && i < scrambleIndexRef.current:
+				case controlValue === text[i] && i < scrambleIndexRef.current: {
 					result += text[i];
 					break;
+				}
 
 				/**
 				 * Scramble has finished
 				 */
-				case controlValue === 0 && i < text.length:
+				case controlValue === 0 && i < text.length: {
 					result += text[i];
 					controlRef.current[i] = text[i];
 					break;
+				}
 
-				default:
-					result += '';
+				default: {
+					result = String(result);
+				}
 			}
 		}
 
 		// set text
+		// eslint-disable-next-line ts/no-unsafe-member-access
 		nodeRef.current.innerHTML = result;
 
 		if (typeof onAnimationFrame === 'function') onAnimationFrame(result);
@@ -228,7 +240,6 @@ export function useScramble({
 	 *
 	 * If speed is 0, stop the animation
 	 */
-	// eslint-disable-next-line react-hooks/exhaustive-deps
 	const animate = (time: number) => {
 		if (!speed) return;
 
@@ -256,7 +267,7 @@ export function useScramble({
 		stepRef.current = 0;
 		scrambleIndexRef.current = 0;
 		overdriveRef.current = 0;
-		if (!overflow) controlRef.current = Array.from({ length: text?.length });
+		if (!overflow) controlRef.current = Array.from({ length: text.length });
 	};
 
 	/**
@@ -276,7 +287,6 @@ export function useScramble({
 	 */
 	useEffect(() => {
 		reset();
-		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [text]);
 
 	/**
@@ -295,15 +305,15 @@ export function useScramble({
 
 	useEffect(() => {
 		if (!playOnMount) {
-			controlRef.current = text.split('');
+			// eslint-disable-next-line ts/no-misused-spread
+			controlRef.current = [...text];
 			stepRef.current = text.length;
 			scrambleIndexRef.current = text.length;
 			overdriveRef.current = text.length;
 			draw();
 			cancelAnimationFrame(rafRef.current);
 		}
-		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	return { ref: nodeRef, replay: play };
-}
+};

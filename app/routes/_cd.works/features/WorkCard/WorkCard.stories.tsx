@@ -1,7 +1,7 @@
-import type { Meta, StoryObj } from '@storybook/react';
 import { createRemixStub } from '@remix-run/testing';
 import { css } from 'styled-system/css';
 import { WorkCard } from './WorkCard';
+import type { Meta, StoryObj } from '@storybook/react';
 
 type T = typeof WorkCard;
 
@@ -33,7 +33,6 @@ const meta: Meta = {
 		layout: 'centered',
 	},
 	tags: ['autodocs'],
-	title: 'WorkCard',
 } satisfies Meta<T>;
 
 type Story = StoryObj<T>;

@@ -12,7 +12,9 @@ export async function waitForImageToLoad(imageLocator: Locator): Promise<void> {
 
 					return element[prop as keyof typeof element];
 				}, 'naturalWidth')
-			).jsonValue(),
+			)
+				// eslint-disable-next-line unicorn/no-await-expression-member
+				.jsonValue(),
 		).toBeGreaterThan(0);
 	}).toPass();
 }

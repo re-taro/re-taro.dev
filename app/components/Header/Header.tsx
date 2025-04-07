@@ -1,14 +1,14 @@
 import { Link } from '@remix-run/react';
-import type { ReactElement, ReactNode } from 'react';
 import { css } from 'styled-system/css';
+import type { FC, ReactElement, ReactNode } from 'react';
 import type { SystemStyleObject } from 'styled-system/types';
+import { useScramble } from '~/hooks/useScramble';
 import ViewTimeline from '~icons/circum/view-timeline';
+import FaSolidBlog from '~icons/fa-solid/blog';
 import AccountCircleLine from '~icons/ri/account-circle-line';
+import GithubLine from '~icons/ri/github-line';
 import LightbulbLine from '~icons/ri/lightbulb-line';
 import TwitterXLine from '~icons/ri/twitter-x-line';
-import GithubLine from '~icons/ri/github-line';
-import FaSolidBlog from '~icons/fa-solid/blog';
-import { useScramble } from '~/hooks/useScramble';
 
 function ListItem({ icon, text, to }: { icon: ReactElement; text: string; to: string }): ReactNode {
 	return (
@@ -53,7 +53,7 @@ interface Props {
 	css?: SystemStyleObject;
 }
 
-export function Header({ css: cssStyle }: Props): ReactNode {
+export const Header: FC<Props> = ({ css: cssStyle }) => {
 	const { ref, replay } = useScramble({ scramble: 8, text: 're-taro' });
 
 	return (
@@ -169,4 +169,4 @@ export function Header({ css: cssStyle }: Props): ReactNode {
 			</nav>
 		</header>
 	);
-}
+};

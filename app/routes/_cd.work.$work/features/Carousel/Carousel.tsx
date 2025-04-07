@@ -1,11 +1,11 @@
-import useEmblaCarousel from 'embla-carousel-react';
-import type { ReactNode } from 'react';
-import { useCallback, useEffect, useRef } from 'react';
 import Autoplay from 'embla-carousel-autoplay';
-import type { EmblaCarouselType, EmblaEventType } from 'embla-carousel';
-import type { Work } from 'content-collections';
+import useEmblaCarousel from 'embla-carousel-react';
+import { useCallback, useEffect, useRef } from 'react';
 import { css } from 'styled-system/css';
 import { CarouselDotButton, useDotButton } from '../CarouselDotButton';
+import type { Work } from 'content-collections';
+import type { EmblaCarouselType, EmblaEventType } from 'embla-carousel';
+import type { FC } from 'react';
 
 const TWEEN_FACTOR_BASE = 0.84;
 const SLIDE_SPACING = '1rem';
@@ -15,7 +15,7 @@ interface Props {
 	images: Exclude<Work['images'], undefined>;
 }
 
-export function Carousel({ images }: Props): ReactNode {
+export const Carousel: FC<Props> = ({ images }) => {
 	const [emblaRef, emblaApi] = useEmblaCarousel(
 		{
 			loop: true,
@@ -34,15 +34,15 @@ export function Carousel({ images }: Props): ReactNode {
 		const slidesInView = emblaApi.slidesInView();
 		const isScrollEvent = eventName === 'scroll';
 
-		emblaApi.scrollSnapList().forEach((scrollSnap, snapIndex) => {
+		for (const [snapIndex, scrollSnap] of emblaApi.scrollSnapList().entries()) {
 			let diffToTarget = scrollSnap - scrollProgress;
 			const slidesInSnap = engine.slideRegistry[snapIndex];
 
-			slidesInSnap.forEach((slideIndex) => {
-				if (isScrollEvent && !slidesInView.includes(slideIndex)) return;
+			for (const slideIndex of slidesInSnap) {
+				if (isScrollEvent && !slidesInView.includes(slideIndex)) continue;
 
 				if (engine.options.loop) {
-					engine.slideLooper.loopPoints.forEach((loopItem) => {
+					for (const loopItem of engine.slideLooper.loopPoints) {
 						const target = loopItem.target();
 
 						if (slideIndex === loopItem.index && target !== 0) {
@@ -55,14 +55,14 @@ export function Carousel({ images }: Props): ReactNode {
 								diffToTarget = scrollSnap + (1 - scrollProgress);
 							}
 						}
-					});
+					}
 				}
 
 				const tweenValue = 1 - Math.abs(diffToTarget * tweenFactor.current);
 				const opacity = numberWithinRange(tweenValue, 0, 1).toString();
 				emblaApi.slideNodes()[slideIndex].style.opacity = opacity;
-			});
-		});
+			}
+		}
 	}, []);
 
 	useEffect(() => {
@@ -152,14 +152,16 @@ export function Carousel({ images }: Props): ReactNode {
 						index={idx}
 						isSelected={idx === selectedIndex}
 						key={snap}
-						onClick={() => onDotButtonClick(idx)}
+						onClick={() => {
+							onDotButtonClick(idx);
+						}}
 					/>
 				))}
 			</div>
 		</section>
 	);
-}
+};
 
-function numberWithinRange(number: number, min: number, max: number): number {
+const numberWithinRange = (number: number, min: number, max: number): number => {
 	return Math.min(Math.max(number, min), max);
-}
+};

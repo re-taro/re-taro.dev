@@ -1,6 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/react';
-
 import { CarouselDotButton } from './CarouselDotButton';
+import type { Meta, StoryObj } from '@storybook/react';
 
 type T = typeof CarouselDotButton;
 

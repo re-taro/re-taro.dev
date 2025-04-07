@@ -1,8 +1,9 @@
-import type { ReactNode } from 'react';
-import { loader } from './handlers';
+import type { FC } from 'react';
 
-export default function Page(): ReactNode {
+const Page: FC = () => {
 	return null;
-}
+};
 
-export { loader };
+export { loader } from './handlers';
+
+export default Page;

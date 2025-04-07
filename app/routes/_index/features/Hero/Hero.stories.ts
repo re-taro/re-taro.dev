@@ -1,7 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react';
 import { createRemixStub } from '@remix-run/testing';
-
 import { Hero } from './Hero';
+import type { Meta, StoryObj } from '@storybook/react';
 
 type T = typeof Hero;
 

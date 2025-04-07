@@ -1,6 +1,5 @@
-import type { StoryObj } from '@storybook/react';
-
 import { Article, Aside, Nav, Section, SectioningFragment } from './SectioningContent';
+import type { StoryObj } from '@storybook/react';
 import { Heading, PageHeading } from '~/components/Heading';
 
 type T = typeof Section;
@@ -12,7 +11,6 @@ const meta = {
 	},
 	subcomponents: { Article, Aside, Nav },
 	tags: ['autodocs'],
-	title: 'SectioningContent',
 };
 
 type Story = StoryObj<T>;

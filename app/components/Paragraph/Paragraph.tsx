@@ -1,8 +1,6 @@
-/* eslint-disable perfectionist/sort-objects */
-
 import { css, cva } from 'styled-system/css';
+import type { FC, HTMLAttributes, ReactNode } from 'react';
 import type { SystemStyleObject } from 'styled-system/types';
-import type { HTMLAttributes, ReactNode } from 'react';
 
 interface BaseProps {
 	children: ReactNode;
@@ -60,7 +58,7 @@ const text = cva({
 	},
 });
 
-export function Paragraph({
+export const Paragraph: FC<BaseProps & ElementProps> = ({
 	css: cssStyle,
 	emphasis = false,
 	leading = 'normal',
@@ -68,6 +66,6 @@ export function Paragraph({
 	weight = 'normal',
 	as: Component = emphasis ? 'em' : 'span',
 	...props
-}: BaseProps & ElementProps): ReactNode {
+}: BaseProps & ElementProps) => {
 	return <Component {...props} className={css(text.raw({ emphasis, leading, type, weight }), cssStyle)} />;
-}
+};

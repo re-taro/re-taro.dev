@@ -1,6 +1,6 @@
 import { Link, Outlet, useLocation } from '@remix-run/react';
-import type { ReactNode } from 'react';
 import { css } from 'styled-system/css';
+import type { ReactNode } from 'react';
 
 export default function WithCdLayout(): ReactNode {
 	const { pathname } = useLocation();

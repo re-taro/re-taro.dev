@@ -1,7 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react';
-
 import { Temporal } from 'temporal-polyfill';
 import { Timeline } from './Timeline';
+import type { Meta, StoryObj } from '@storybook/react';
 
 type T = typeof Timeline;
 

@@ -1,14 +1,18 @@
 import { useLoaderData } from '@remix-run/react';
-import type { ReactNode } from 'react';
 import { css } from 'styled-system/css';
-import type { MetaFunction } from '@remix-run/cloudflare';
-import { loader } from './handlers';
 import { WorkCard } from './features/WorkCard';
+import type { MetaFunction } from '@remix-run/cloudflare';
+import type { Work } from 'content-collections';
+import type { ReactNode } from 'react';
 import { PageHeading } from '~/components/Heading';
 import { Paragraph } from '~/components/Paragraph';
 
+interface LoaderData {
+	works: Work[];
+}
+
 export default function Page(): ReactNode {
-	const { works } = useLoaderData<typeof loader>();
+	const { works } = useLoaderData<LoaderData>();
 
 	return (
 		<>
@@ -47,4 +51,4 @@ export const meta: MetaFunction = () => [
 	{ content: '@re_taro_', name: 'twitter:creator' },
 ];
 
-export { loader };
+export { loader } from './handlers';

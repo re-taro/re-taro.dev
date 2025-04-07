@@ -1,6 +1,6 @@
+import { ListItem } from './ListItem';
 import type { Meta, StoryObj } from '@storybook/react';
 import type { ReactNode } from 'react';
-import { ListItem } from './ListItem';
 
 type T = typeof ListItem;
 
@@ -21,7 +21,6 @@ const meta: Meta = {
 		layout: 'centered',
 	},
 	tags: ['autodocs'],
-	title: 'ListItem',
 } satisfies Meta<T>;
 
 type Story = StoryObj<T>;

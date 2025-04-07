@@ -1,6 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/react';
-
 import { Paragraph } from './Paragraph';
+import type { Meta, StoryObj } from '@storybook/react';
 
 type T = typeof Paragraph;
 

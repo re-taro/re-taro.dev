@@ -1,11 +1,11 @@
-import type { PropsWithChildren, ReactNode } from 'react';
 import { css } from 'styled-system/css';
+import type { PropsWithChildren, FC } from 'react';
 
 type Props = PropsWithChildren<{
 	name: string;
 }>;
 
-export function ListItem({ children, name }: Props): ReactNode {
+export const ListItem: FC<Props> = ({ children, name }) => {
 	return (
 		<li
 			className={css({
@@ -45,4 +45,4 @@ export function ListItem({ children, name }: Props): ReactNode {
 			</ul>
 		</li>
 	);
-}
+};

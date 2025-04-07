@@ -1,8 +1,8 @@
 import { Links, Meta, Outlet, Scripts, ScrollRestoration, isRouteErrorResponse, useRouteError } from '@remix-run/react';
-import type { ReactNode } from 'react';
-import type { MetaFunction } from '@remix-run/cloudflare';
 import { css } from 'styled-system/css';
 import styles from './index.css?url';
+import type { MetaFunction } from '@remix-run/cloudflare';
+import type { FC, ReactNode } from 'react';
 import { Footer } from '~/components/Footer';
 import { Header } from '~/components/Header';
 
@@ -10,7 +10,7 @@ interface Props {
 	children: ReactNode;
 }
 
-export function Layout({ children }: Props): ReactNode {
+export const Layout: FC<Props> = ({ children }) => {
 	return (
 		<html lang="ja-JP">
 			<head>
@@ -38,11 +38,11 @@ export function Layout({ children }: Props): ReactNode {
 			</body>
 		</html>
 	);
-}
+};
 
-function App(): ReactNode {
+const App: FC = () => {
 	return <Outlet />;
-}
+};
 
 export const meta: MetaFunction = () => [
 	{ content: 'Rintaro Itokawa (re-taro) のポートフォリオです。', name: 'description' },
@@ -59,9 +59,10 @@ export const meta: MetaFunction = () => [
 	{ content: '@re_taro_', name: 'twitter:creator' },
 ];
 
-export function ErrorBoundary() {
+export const ErrorBoundary: FC = () => {
 	const error = useRouteError();
-	if (!(typeof window !== 'undefined' && window.document && window.document.createElement)) {
+	// eslint-disable-next-line ts/no-unnecessary-condition, ts/no-deprecated
+	if (!(typeof globalThis !== 'undefined' && globalThis.document.createElement)) {
 		console.error(error);
 	}
 
@@ -131,6 +132,6 @@ export function ErrorBoundary() {
 			</div>
 		</main>
 	);
-}
+};
 
 export default App;

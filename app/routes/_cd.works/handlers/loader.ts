@@ -1,8 +1,8 @@
-import { json } from '@remix-run/cloudflare';
-import type { LoaderFunctionArgs } from '@remix-run/cloudflare';
 import { Temporal } from 'temporal-polyfill';
+import type { LoaderFunctionArgs } from '@remix-run/cloudflare';
+import type { Work } from 'content-collections';
 
-export async function loader({ request }: LoaderFunctionArgs) {
+export const loader = async ({ request }: LoaderFunctionArgs): Promise<{ works: Work[] }> => {
 	const url = new URL(request.url);
 	const { allWorks } = await import('content-collections');
 	const works = allWorks
@@ -19,5 +19,5 @@ export async function loader({ request }: LoaderFunctionArgs) {
 			};
 		});
 
-	return json({ works });
-}
+	return { works };
+};

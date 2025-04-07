@@ -1,6 +1,6 @@
-import type { ComponentPropsWithoutRef, ForwardedRef, HTMLAttributes, ReactNode } from 'react';
 import { forwardRef, useContext, useMemo } from 'react';
 import { css, cva } from 'styled-system/css';
+import type { ComponentPropsWithoutRef, FC, ForwardedRef, HTMLAttributes, ReactNode } from 'react';
 import type { SystemStyleObject } from 'styled-system/types';
 import { LevelContext } from '~/components/SectioningContent';
 
@@ -38,7 +38,7 @@ type ElementProps = Omit<
 
 type HeadingBaseElementProps = Omit<HTMLAttributes<HTMLHeadingElement>, keyof HeadingBaseProps | 'className'>;
 
-function generateTagProps(level: number, tag?: HeadingTagTypes) {
+const generateTagProps = (level: number, tag?: HeadingTagTypes) => {
 	let role;
 	let ariaLevel;
 
@@ -54,7 +54,7 @@ function generateTagProps(level: number, tag?: HeadingTagTypes) {
 		'as': tag ?? ((level <= 6 ? `h${level}` : 'span') as HeadingTagTypes | 'span'),
 		role,
 	};
-}
+};
 
 const base = cva({
 	base: {
@@ -133,7 +133,7 @@ const base = cva({
 	},
 });
 
-function HeadingBase({
+const HeadingBase: FC<HeadingBaseElementProps & HeadingBaseProps> = ({
 	as: Component = 'span',
 	color = 'white',
 	css: cssProps,
@@ -142,7 +142,7 @@ function HeadingBase({
 	size = 'm',
 	weight = 'normal',
 	...props
-}: HeadingBaseElementProps & HeadingBaseProps): ReactNode {
+}) => {
 	return (
 		<Component
 			{...props}
@@ -150,7 +150,7 @@ function HeadingBase({
 			ref={headingRef}
 		/>
 	);
-}
+};
 
 const MAPPER: Record<HeadingTypes, HeadingBaseProps> = {
 	block: { color: 'white', size: 's', weight: 'normal' },
@@ -159,6 +159,7 @@ const MAPPER: Record<HeadingTypes, HeadingBaseProps> = {
 };
 
 export const Heading = forwardRef<HTMLHeadingElement, ElementProps & Props>(
+	// eslint-disable-next-line ts/no-deprecated
 	({ bold = false, css: cssProps, prefix = false, tag, type = 'section', ...props }, ref) => {
 		const level = useContext(LevelContext) as 1 | 2 | 3 | 4 | 5 | 6;
 		const tagProps = useMemo(() => generateTagProps(level, tag), [level, tag]);
@@ -179,6 +180,7 @@ Heading.displayName = 'Heading';
 
 export const PageHeading = forwardRef<HTMLHeadingElement, Omit<ElementProps & Props, 'tag'>>(
 	({ type = 'screen', ...props }, ref) => {
+		// eslint-disable-next-line ts/no-deprecated
 		return <Heading {...props} ref={ref} tag="h1" type={type} />;
 	},
 );

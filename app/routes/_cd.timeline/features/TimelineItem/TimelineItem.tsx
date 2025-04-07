@@ -1,5 +1,5 @@
-import type { ReactNode } from 'react';
 import { css, cx } from 'styled-system/css';
+import type { FC } from 'react';
 import type { Temporal } from 'temporal-polyfill';
 import { Paragraph } from '~/components/Paragraph';
 
@@ -9,7 +9,7 @@ export interface Props {
 	slug?: string;
 }
 
-export function TimelineItem({ date, slug, title }: Props): ReactNode {
+export const TimelineItem: FC<Props> = ({ date, slug, title }) => {
 	return (
 		<li
 			className={cx(
@@ -74,4 +74,4 @@ export function TimelineItem({ date, slug, title }: Props): ReactNode {
 			{slug && <Paragraph as="p">{slug}</Paragraph>}
 		</li>
 	);
-}
+};
