@@ -7,7 +7,7 @@ test.describe('/', () => {
 	});
 	test.describe('rendering', () => {
 		test('should render hero icon', async ({ page }) => {
-			const heroIcon = page.getByRole('img', { name: "Rintaro Itokawa's profile image" });
+			const heroIcon = page.getByRole('img', { name: "Rintaro Itokawa's profile icon" });
 
 			await expect(heroIcon).toBeInViewport({ ratio: 0.5 });
 		});
