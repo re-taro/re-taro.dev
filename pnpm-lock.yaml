@@ -76,8 +76,8 @@ importers:
         specifier: 1.51.1
         version: 1.51.1
       '@re-taro/configs':
-        specifier: 1.3.0
-        version: 1.3.0(f2d82dd47d431c3a1b4d3d1641d58765)
+        specifier: 1.3.1
+        version: 1.3.1(f2d82dd47d431c3a1b4d3d1641d58765)
       '@remix-run/dev':
         specifier: 2.16.4
         version: 2.16.4(@remix-run/react@2.16.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3))(@types/node@22.14.0)(lightningcss@1.25.1)(terser@5.39.0)(typescript@5.8.3)(vite@6.2.5(@types/node@22.14.0)(lightningcss@1.25.1)(terser@5.39.0)(yaml@2.5.0))(wrangler@4.8.0(@cloudflare/workers-types@4.20250406.0))(yaml@2.5.0)
@@ -2458,8 +2458,8 @@ packages:
   '@radix-ui/rect@1.0.1':
     resolution: {integrity: sha512-fyrgCaedtvMg9NK3en0pnOYJdtfwxUcNolezkNPUsoX57X8oQk+NkqcvzHXD2uKNij6GXmWU9NDru2IWjrO4BQ==}
 
-  '@re-taro/configs@1.3.0':
-    resolution: {integrity: sha512-Da1mhNs+JAx1Qzpjjw3miC/I4WLZ0mBr++9HW591hcxU9BRtPRxaBjSK1/dA41YFzfn/kclFa6r8dbQE1Dd+jA==}
+  '@re-taro/configs@1.3.1':
+    resolution: {integrity: sha512-rDA88pP0JAgfpic4DT+nY58jMZZ29BgtNsLgSMA0Wz9DXV6iW0CKcdkdMk8F+scNdujVA4T0LAq1BTUXRYpNbA==}
     engines: {node: '>=23.9.0'}
     peerDependencies:
       '@eslint/css': ^0.1.0 || ^0.2.0 || ^0.3.0 || ^0.4.0 || ^0.5.0 || ^0.6.0
@@ -2486,7 +2486,7 @@ packages:
       globals: ^14.0.0 || ^15.0.0 || ^16.0.0
       prettier: ^3.0.0
       prettier-plugin-jsdoc: ^1.0.0
-      prettier-plugin-pkg: ^0.18.0
+      prettier-plugin-pkg: ^0.18.0 || ^0.19.0
       prettier-plugin-sort-json: ^3.0.0 || ^4.0.0
       typescript-eslint: ^8.0.0
     peerDependenciesMeta:
@@ -11624,7 +11624,7 @@ snapshots:
     dependencies:
       '@babel/runtime': 7.23.5
 
-  '@re-taro/configs@1.3.0(f2d82dd47d431c3a1b4d3d1641d58765)':
+  '@re-taro/configs@1.3.1(f2d82dd47d431c3a1b4d3d1641d58765)':
     dependencies:
       '@eslint/css': 0.6.0
       '@eslint/js': 9.24.0
