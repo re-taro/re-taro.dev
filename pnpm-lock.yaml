@@ -169,8 +169,8 @@ importers:
         specifier: 9.24.0
         version: 9.24.0
       eslint-plugin-format:
-        specifier: 0.1.3
-        version: 0.1.3(eslint@9.24.0)
+        specifier: 1.0.1
+        version: 1.0.1(eslint@9.24.0)
       jsdom:
         specifier: 26.0.0
         version: 26.0.0
@@ -4801,8 +4801,8 @@ packages:
     peerDependencies:
       eslint: '>=8'
 
-  eslint-plugin-format@0.1.3:
-    resolution: {integrity: sha512-vTmshuv1iMfmcM1HADnyhae5MBBGlJZBZyZ+ybtXCEzRe3nRhUvLX+6rAvsEfcdK6a2pqpLs/F530dXKvfQqYQ==}
+  eslint-plugin-format@1.0.1:
+    resolution: {integrity: sha512-Tdns+CDjS+m7QrM85wwRi2yLae88XiWVdIOXjp9mDII0pmTBQlczPCmjpKnjiUIY3yPZNLqb5Ms/A/JXcBF2Dw==}
     peerDependencies:
       eslint: ^8.40.0 || ^9.0.0
 
@@ -14403,7 +14403,7 @@ snapshots:
       eslint: 9.24.0
       eslint-compat-utils: 0.5.1(eslint@9.24.0)
 
-  eslint-plugin-format@0.1.3(eslint@9.24.0):
+  eslint-plugin-format@1.0.1(eslint@9.24.0):
     dependencies:
       '@dprint/formatter': 0.3.0
       '@dprint/markdown': 0.17.8
