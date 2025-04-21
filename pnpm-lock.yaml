@@ -10,10 +10,10 @@ importers:
     dependencies:
       '@remix-run/cloudflare':
         specifier: 2.16.5
-        version: 2.16.5(@cloudflare/workers-types@4.20250418.0)(typescript@5.8.3)
+        version: 2.16.5(@cloudflare/workers-types@4.20250421.0)(typescript@5.8.3)
       '@remix-run/cloudflare-pages':
         specifier: 2.16.5
-        version: 2.16.5(@cloudflare/workers-types@4.20250418.0)(typescript@5.8.3)
+        version: 2.16.5(@cloudflare/workers-types@4.20250421.0)(typescript@5.8.3)
       '@remix-run/react':
         specifier: 2.16.5
         version: 2.16.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3)
@@ -46,8 +46,8 @@ importers:
         specifier: 2.29.2
         version: 2.29.2
       '@cloudflare/workers-types':
-        specifier: 4.20250418.0
-        version: 4.20250418.0
+        specifier: 4.20250421.0
+        version: 4.20250421.0
       '@content-collections/core':
         specifier: 0.8.2
         version: 0.8.2(typescript@5.8.3)
@@ -80,7 +80,7 @@ importers:
         version: 1.3.2(9318a59b16b1d5911814c8de75b0f7b7)
       '@remix-run/dev':
         specifier: 2.16.5
-        version: 2.16.5(@remix-run/react@2.16.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3))(@types/node@22.14.1)(lightningcss@1.25.1)(terser@5.39.0)(typescript@5.8.3)(vite@6.3.2(@types/node@22.14.1)(lightningcss@1.25.1)(terser@5.39.0)(yaml@2.5.0))(wrangler@4.12.0(@cloudflare/workers-types@4.20250418.0))(yaml@2.5.0)
+        version: 2.16.5(@remix-run/react@2.16.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3))(@types/node@22.14.1)(lightningcss@1.25.1)(terser@5.39.0)(typescript@5.8.3)(vite@6.3.2(@types/node@22.14.1)(lightningcss@1.25.1)(terser@5.39.0)(yaml@2.5.0))(wrangler@4.12.0(@cloudflare/workers-types@4.20250421.0))(yaml@2.5.0)
       '@remix-run/node':
         specifier: 2.16.5
         version: 2.16.5(typescript@5.8.3)
@@ -227,7 +227,7 @@ importers:
         version: 8.0.3
       wrangler:
         specifier: 4.12.0
-        version: 4.12.0(@cloudflare/workers-types@4.20250418.0)
+        version: 4.12.0(@cloudflare/workers-types@4.20250421.0)
 
 packages:
 
@@ -685,8 +685,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@cloudflare/workers-types@4.20250418.0':
-    resolution: {integrity: sha512-cPnHbEAryOX1FwEjjMXXCLudkxXUlfy7Hf55lqTPpYRSUA76NGLFfkhUF7+KkRrFg2u6pNpXTj24Gv5pMEHlqg==}
+  '@cloudflare/workers-types@4.20250421.0':
+    resolution: {integrity: sha512-GYSmQxF9ZE2kkmjCSiYTFdcXUHPeBrz9XvKhqGLTKT8ITYxN5kXy9OYlpkhtVWWUE+XNq7qm5uSKwluaOBKoAw==}
 
   '@content-collections/core@0.8.2':
     resolution: {integrity: sha512-62yVC3ne47YJ1KeCw5nk0H/G/xGBagcoWyMpVyTaCnDJhoIoTvmqBrsc+78Zk8s2Ssnb0Eo1Q4w3ZHwgL88pjg==}
@@ -1656,10 +1656,6 @@ packages:
     resolution: {integrity: sha512-gFHJ+xBOo4G3WRlR1e/3G8A6/KZAH6zcE/hkLRCZTi/B9avAG365QhFA8uOGzTMqgTghpn7/fSnscW++dpMSAw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@eslint/core@0.12.0':
-    resolution: {integrity: sha512-cmrR6pytBuSMTaBweKoGMwu3EiHiEC+DoyupPmlZ0HxBJBtIxwe+j/E4XPIKNx+Q74c8lXKPwYawBf5glsTkHg==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-
   '@eslint/core@0.13.0':
     resolution: {integrity: sha512-yfkgDw1KR66rkT5A8ci4irzDysN7FRpq3ttJolR88OqQikAWqwA8j5VZyas+vjyBNFIJ7MfybJ9plMILI2UrCw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -1686,10 +1682,6 @@ packages:
 
   '@eslint/object-schema@2.1.6':
     resolution: {integrity: sha512-RBMg5FRL0I0gs51M/guSAj5/e14VQ4tpZnQNWwuDT66P14I43ItmPfIZRhO9fUVIPOAQXU47atlywZ/czoqFPA==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-
-  '@eslint/plugin-kit@0.2.7':
-    resolution: {integrity: sha512-JubJ5B2pJ4k4yGxaNLdbjrnk9d/iDz6/q8wOilpIowd6PJPgaxCuHBnBszq7Ce2TyMrywm5r4PnKm6V3iiZF+g==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@eslint/plugin-kit@0.2.8':
@@ -10046,7 +10038,7 @@ snapshots:
   '@cloudflare/workerd-windows-64@1.20250416.0':
     optional: true
 
-  '@cloudflare/workers-types@4.20250418.0': {}
+  '@cloudflare/workers-types@4.20250421.0': {}
 
   '@content-collections/core@0.8.2(typescript@5.8.3)':
     dependencies:
@@ -10612,10 +10604,6 @@ snapshots:
     dependencies:
       '@types/json-schema': 7.0.15
 
-  '@eslint/core@0.12.0':
-    dependencies:
-      '@types/json-schema': 7.0.15
-
   '@eslint/core@0.13.0':
     dependencies:
       '@types/json-schema': 7.0.15
@@ -10629,7 +10617,7 @@ snapshots:
     dependencies:
       '@eslint/core': 0.10.0
       '@eslint/css-tree': 3.3.3
-      '@eslint/plugin-kit': 0.2.7
+      '@eslint/plugin-kit': 0.2.8
 
   '@eslint/eslintrc@3.3.1':
     dependencies:
@@ -10650,7 +10638,7 @@ snapshots:
   '@eslint/markdown@6.3.0':
     dependencies:
       '@eslint/core': 0.10.0
-      '@eslint/plugin-kit': 0.2.7
+      '@eslint/plugin-kit': 0.2.8
       mdast-util-from-markdown: 2.0.2
       mdast-util-gfm: 3.0.0
       micromark-extension-gfm: 3.0.0
@@ -10658,11 +10646,6 @@ snapshots:
       - supports-color
 
   '@eslint/object-schema@2.1.6': {}
-
-  '@eslint/plugin-kit@0.2.7':
-    dependencies:
-      '@eslint/core': 0.12.0
-      levn: 0.4.1
 
   '@eslint/plugin-kit@0.2.8':
     dependencies:
@@ -11718,22 +11701,22 @@ snapshots:
       eslint: 9.25.0
       prettier: 3.5.3
 
-  '@remix-run/cloudflare-pages@2.16.5(@cloudflare/workers-types@4.20250418.0)(typescript@5.8.3)':
+  '@remix-run/cloudflare-pages@2.16.5(@cloudflare/workers-types@4.20250421.0)(typescript@5.8.3)':
     dependencies:
-      '@cloudflare/workers-types': 4.20250418.0
-      '@remix-run/cloudflare': 2.16.5(@cloudflare/workers-types@4.20250418.0)(typescript@5.8.3)
+      '@cloudflare/workers-types': 4.20250421.0
+      '@remix-run/cloudflare': 2.16.5(@cloudflare/workers-types@4.20250421.0)(typescript@5.8.3)
     optionalDependencies:
       typescript: 5.8.3
 
-  '@remix-run/cloudflare@2.16.5(@cloudflare/workers-types@4.20250418.0)(typescript@5.8.3)':
+  '@remix-run/cloudflare@2.16.5(@cloudflare/workers-types@4.20250421.0)(typescript@5.8.3)':
     dependencies:
       '@cloudflare/kv-asset-handler': 0.1.3
-      '@cloudflare/workers-types': 4.20250418.0
+      '@cloudflare/workers-types': 4.20250421.0
       '@remix-run/server-runtime': 2.16.5(typescript@5.8.3)
     optionalDependencies:
       typescript: 5.8.3
 
-  '@remix-run/dev@2.16.5(@remix-run/react@2.16.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3))(@types/node@22.14.1)(lightningcss@1.25.1)(terser@5.39.0)(typescript@5.8.3)(vite@6.3.2(@types/node@22.14.1)(lightningcss@1.25.1)(terser@5.39.0)(yaml@2.5.0))(wrangler@4.12.0(@cloudflare/workers-types@4.20250418.0))(yaml@2.5.0)':
+  '@remix-run/dev@2.16.5(@remix-run/react@2.16.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.8.3))(@types/node@22.14.1)(lightningcss@1.25.1)(terser@5.39.0)(typescript@5.8.3)(vite@6.3.2(@types/node@22.14.1)(lightningcss@1.25.1)(terser@5.39.0)(yaml@2.5.0))(wrangler@4.12.0(@cloudflare/workers-types@4.20250421.0))(yaml@2.5.0)':
     dependencies:
       '@babel/core': 7.26.0
       '@babel/generator': 7.26.2
@@ -11795,7 +11778,7 @@ snapshots:
     optionalDependencies:
       typescript: 5.8.3
       vite: 6.3.2(@types/node@22.14.1)(lightningcss@1.25.1)(terser@5.39.0)(yaml@2.5.0)
-      wrangler: 4.12.0(@cloudflare/workers-types@4.20250418.0)
+      wrangler: 4.12.0(@cloudflare/workers-types@4.20250421.0)
     transitivePeerDependencies:
       - '@types/node'
       - bluebird
@@ -20015,7 +19998,7 @@ snapshots:
       '@cloudflare/workerd-linux-arm64': 1.20250416.0
       '@cloudflare/workerd-windows-64': 1.20250416.0
 
-  wrangler@4.12.0(@cloudflare/workers-types@4.20250418.0):
+  wrangler@4.12.0(@cloudflare/workers-types@4.20250421.0):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.4.0
       '@cloudflare/unenv-preset': 2.3.1(unenv@2.0.0-rc.15)(workerd@1.20250416.0)
@@ -20026,7 +20009,7 @@ snapshots:
       unenv: 2.0.0-rc.15
       workerd: 1.20250416.0
     optionalDependencies:
-      '@cloudflare/workers-types': 4.20250418.0
+      '@cloudflare/workers-types': 4.20250421.0
       fsevents: 2.3.3
       sharp: 0.33.5
     transitivePeerDependencies:
