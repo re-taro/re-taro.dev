@@ -37,8 +37,8 @@
 		"embla-carousel-autoplay": "8.6.0",
 		"embla-carousel-react": "8.6.0",
 		"isbot": "5.1.27",
-		"react": "18.3.1",
-		"react-dom": "18.3.1",
+		"react": "19.1.0",
+		"react-dom": "19.1.0",
 		"temporal-polyfill": "0.3.0"
 	},
 	"devDependencies": {
@@ -78,8 +78,8 @@
 		"@testing-library/react": "16.3.0",
 		"@testing-library/user-event": "14.6.1",
 		"@types/node": "22.15.2",
-		"@types/react": "18.3.20",
-		"@types/react-dom": "18.3.6",
+		"@types/react": "19.1.2",
+		"@types/react-dom": "19.1.2",
 		"@vitejs/plugin-react-swc": "3.9.0",
 		"axe-playwright": "2.1.0",
 		"browserslist-to-esbuild": "2.1.1",

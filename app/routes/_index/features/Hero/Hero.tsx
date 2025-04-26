@@ -10,7 +10,7 @@ import { useScramble } from '~/hooks/useScramble';
 function HeroText(): ReactNode {
 	const [index, setIndex] = useState(0);
 
-	const loopRef = useRef<number>();
+	const loopRef = useRef<number>(0);
 
 	const texts = ['Rintaro Itokawa', '狂創', 're-taro'];
 

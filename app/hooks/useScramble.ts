@@ -1,7 +1,7 @@
 /* eslint-disable no-plusplus */
 /* eslint-disable no-param-reassign */
 import { useEffect, useRef } from 'react';
-import type { MutableRefObject } from 'react';
+import type { RefObject } from 'react';
 
 const getRandomInt = (min: number, max: number) => {
 	return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -54,7 +54,7 @@ export const useScramble = ({
 	text = '',
 	tick = 1,
 	// eslint-disable-next-line ts/no-explicit-any
-}: UseScrambleProps): { ref: MutableRefObject<any>; replay: () => void } => {
+}: UseScrambleProps): { ref: RefObject<any>; replay: () => void } => {
 	const prefersReducedMotion =
 		// eslint-disable-next-line unicorn/prefer-global-this
 		typeof window !== 'undefined' ? window.matchMedia('(prefers-reduced-motion: reduce)').matches : false;
