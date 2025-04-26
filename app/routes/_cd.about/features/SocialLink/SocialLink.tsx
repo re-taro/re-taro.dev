@@ -1,10 +1,10 @@
 import { css } from 'styled-system/css';
-import type { FC, ReactElement, SVGProps } from 'react';
+import type { FC, ForwardRefExoticComponent, SVGProps } from 'react';
 
 interface Props {
 	children: string;
 	href: string;
-	icon: (props: SVGProps<SVGSVGElement>) => ReactElement;
+	icon: ForwardRefExoticComponent<SVGProps<SVGSVGElement>>;
 }
 
 export const SocialLink: FC<Props> = ({ children, href, icon: Icon }) => {
