@@ -10,7 +10,7 @@
 	"author": "Rintaro Itokawa <me@re-taro.dev> (https://re-taro.dev)",
 	"license": "MIT",
 	"private": true,
-	"packageManager": "pnpm@10.9.0",
+	"packageManager": "pnpm@10.10.0",
 	"scripts": {
 		"analyze": "remix vite:build --mode analyze && serve build/client",
 		"build": "remix vite:build",
