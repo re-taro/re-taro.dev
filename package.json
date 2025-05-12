@@ -36,7 +36,7 @@
 		"@remix-run/react": "2.16.6",
 		"embla-carousel-autoplay": "8.6.0",
 		"embla-carousel-react": "8.6.0",
-		"isbot": "5.1.27",
+		"isbot": "5.1.28",
 		"react": "19.1.0",
 		"react-dom": "19.1.0",
 		"temporal-polyfill": "0.3.0"
