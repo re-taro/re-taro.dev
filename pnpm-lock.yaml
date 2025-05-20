@@ -9,14 +9,14 @@ importers:
   .:
     dependencies:
       '@remix-run/cloudflare':
-        specifier: 2.16.6
-        version: 2.16.6(@cloudflare/workers-types@4.20250519.0)(typescript@5.8.3)
+        specifier: 2.16.7
+        version: 2.16.7(@cloudflare/workers-types@4.20250519.0)(typescript@5.8.3)
       '@remix-run/cloudflare-pages':
-        specifier: 2.16.6
-        version: 2.16.6(@cloudflare/workers-types@4.20250519.0)(typescript@5.8.3)
+        specifier: 2.16.7
+        version: 2.16.7(@cloudflare/workers-types@4.20250519.0)(typescript@5.8.3)
       '@remix-run/react':
-        specifier: 2.16.6
-        version: 2.16.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)
+        specifier: 2.16.7
+        version: 2.16.7(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)
       embla-carousel-autoplay:
         specifier: 8.6.0
         version: 8.6.0(embla-carousel@8.6.0)
@@ -79,14 +79,14 @@ importers:
         specifier: 1.3.7
         version: 1.3.7(b2d729a8bb418dfaafec753325a43a04)
       '@remix-run/dev':
-        specifier: 2.16.6
-        version: 2.16.6(@remix-run/react@2.16.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3))(@types/node@22.15.19)(lightningcss@1.25.1)(terser@5.39.2)(typescript@5.8.3)(vite@6.3.5(@types/node@22.15.19)(lightningcss@1.25.1)(terser@5.39.2)(yaml@2.5.0))(wrangler@4.15.2(@cloudflare/workers-types@4.20250519.0))(yaml@2.5.0)
+        specifier: 2.16.7
+        version: 2.16.7(@remix-run/react@2.16.7(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3))(@types/node@22.15.19)(lightningcss@1.25.1)(terser@5.39.2)(typescript@5.8.3)(vite@6.3.5(@types/node@22.15.19)(lightningcss@1.25.1)(terser@5.39.2)(yaml@2.5.0))(wrangler@4.15.2(@cloudflare/workers-types@4.20250519.0))(yaml@2.5.0)
       '@remix-run/node':
-        specifier: 2.16.6
-        version: 2.16.6(typescript@5.8.3)
+        specifier: 2.16.7
+        version: 2.16.7(typescript@5.8.3)
       '@remix-run/testing':
-        specifier: 2.16.6
-        version: 2.16.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)
+        specifier: 2.16.7
+        version: 2.16.7(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)
       '@storybook/addon-a11y':
         specifier: 8.6.14
         version: 8.6.14(storybook@8.6.14(prettier@3.5.3))
@@ -188,7 +188,7 @@ importers:
         version: 3.5.3
       remix-development-tools:
         specifier: 4.7.7
-        version: 4.7.7(@remix-run/react@2.16.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3))(@types/react-dom@19.1.5(@types/react@19.1.4))(@types/react@19.1.4)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@6.3.5(@types/node@22.15.19)(lightningcss@1.25.1)(terser@5.39.2)(yaml@2.5.0))
+        version: 4.7.7(@remix-run/react@2.16.7(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3))(@types/react-dom@19.1.5(@types/react@19.1.4))(@types/react@19.1.4)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@6.3.5(@types/node@22.15.19)(lightningcss@1.25.1)(terser@5.39.2)(yaml@2.5.0))
       rollup-plugin-visualizer:
         specifier: 5.14.0
         version: 5.14.0(rollup@4.39.0)
@@ -435,11 +435,6 @@ packages:
     resolution: {integrity: sha512-acGdbYSfp2WheJoJm/EBBBLh/ID8KDc64ISZ9DYtBmC8/Q204PZJLHyzeB5qMzJ5trcOkybd78M4x2KWsUq++A==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/parser@7.26.2':
-    resolution: {integrity: sha512-DWMCZH9WA4Maitz2q21SRKHo9QXZxkDsbNZoVD62gusNtNBBqDg9i7uOhASfTfIGNzW+O+r7+jAlM8dwphcJKQ==}
-    engines: {node: '>=6.0.0'}
-    hasBin: true
-
   '@babel/parser@7.27.0':
     resolution: {integrity: sha512-iaepho73/2Pz7w2eMS0Q5f83+0RKI7i4xmiYeBmDzfRVbQtTOG7Ts0S4HzJVsTMGI9keU8rNfuZr8DKfSt7Yyg==}
     engines: {node: '>=6.0.0'}
@@ -568,10 +563,6 @@ packages:
 
   '@babel/template@7.27.0':
     resolution: {integrity: sha512-2ncevenBqXI6qRMukPlXwHKHchC7RyMuu4xv5JBXRfOGVcTy1mXCD12qrp7Jsoxll1EV3+9sE4GugBVRjT2jFA==}
-    engines: {node: '>=6.9.0'}
-
-  '@babel/traverse@7.25.9':
-    resolution: {integrity: sha512-ZCuvfwOwlz/bawvAuvcj8rrithP2/N55Tzz342AkTvq4qaWbGfmCk/tKhNaV2cthijKrPAA8SRJV5WWe7IBMJw==}
     engines: {node: '>=6.9.0'}
 
   '@babel/traverse@7.27.0':
@@ -2389,8 +2380,8 @@ packages:
       prettier:
         optional: true
 
-  '@remix-run/cloudflare-pages@2.16.6':
-    resolution: {integrity: sha512-aE5YVV6JFXR7iUr3AhHMOah3BrRPpmwnxlKp0r28HGKKdte98jvdJeiAaEIUmi9dQDu965lp78kz2+Z6hckPhQ==}
+  '@remix-run/cloudflare-pages@2.16.7':
+    resolution: {integrity: sha512-K3I3hUvAnHACaYxggsbgx+HxMo/AW8WHjUvH+u7EQdd0aiFoXRliXVC9KIKUSXPBM7m0h1mLCDnWrpjpWP661w==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       '@cloudflare/workers-types': ^4.0.0
@@ -2399,8 +2390,8 @@ packages:
       typescript:
         optional: true
 
-  '@remix-run/cloudflare@2.16.6':
-    resolution: {integrity: sha512-kuTybRErdMRXk6rnkeq2CE4beqsdfIGblHSJq18S9y6+oX95XgW02I4Dtj3ijIlsQtPZeHlWqULBWV8Y0g/Asg==}
+  '@remix-run/cloudflare@2.16.7':
+    resolution: {integrity: sha512-z0G/2Rel8WtAS4r2k0zPXLB0OSdPwKn7vHwQKYxilXmqdi1KRm+4KWpQr/6xxNaZ0BAKWVG79qCQtAfOBp2dEQ==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       '@cloudflare/workers-types': ^4.0.0
@@ -2409,13 +2400,13 @@ packages:
       typescript:
         optional: true
 
-  '@remix-run/dev@2.16.6':
-    resolution: {integrity: sha512-vddzv6IY+4KFDNhTj7yvMi5BmBpEVSe6meq9Z7/yM5mjv03F5Ywsci41Sdri2RU5Nitplrj2o9iXOtQOnTBS3g==}
+  '@remix-run/dev@2.16.7':
+    resolution: {integrity: sha512-TOY1g0LXKA2fHZUg/+7UdY/znCv9tnF49xdCP0EYh+X9Iaiz/w2I74CYaUTh9dXesVWEwWpfUn3+GISKtbdyPw==}
     engines: {node: '>=18.0.0'}
     hasBin: true
     peerDependencies:
-      '@remix-run/react': ^2.16.6
-      '@remix-run/serve': ^2.16.6
+      '@remix-run/react': ^2.16.7
+      '@remix-run/serve': ^2.16.7
       typescript: ^5.1.0
       vite: ^5.1.0 || ^6.0.0
       wrangler: ^3.28.2
@@ -2429,8 +2420,8 @@ packages:
       wrangler:
         optional: true
 
-  '@remix-run/node@2.16.6':
-    resolution: {integrity: sha512-agIR9duqTWAeYMUj2myuLCNdedMEhLUCKOfOb7IwC/o4cp0D2I6hXOQfJKQHevnui1dPUlxWhsz/rc69wQF0BA==}
+  '@remix-run/node@2.16.7':
+    resolution: {integrity: sha512-7NSK9WM8te9sqvrKkJi9OQEO/ga/Idyr1aBMY5KMMaZmb7DH/qjaIfI/4nEHZ127dPS1hzlS+Vev+qAT8XyjvA==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       typescript: ^5.1.0
@@ -2438,8 +2429,8 @@ packages:
       typescript:
         optional: true
 
-  '@remix-run/react@2.16.6':
-    resolution: {integrity: sha512-9wrv1E6316ptN20U3wPLm3tRhUyv0AUh1OBxq/dGwEJOMp922aQw2HSYwzYBl00blrVnQVLz1hNfVLIUzBEFzw==}
+  '@remix-run/react@2.16.7':
+    resolution: {integrity: sha512-xEukrPCE/S0J09ekSwKU+UHyFdjDRmtfzeeIwboELSbAXpgzYMOW2jal6H6RonVkGg/8Zp1MjqIcqM80+dvQPQ==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       react: ^18.0.0
@@ -2453,8 +2444,8 @@ packages:
     resolution: {integrity: sha512-O3rHJzAQKamUz1fvE0Qaw0xSFqsA/yafi2iqeE0pvdFtCO1viYx8QL6f3Ln/aCCTLxs68SLf0KPM9eSeM8yBnA==}
     engines: {node: '>=14.0.0'}
 
-  '@remix-run/server-runtime@2.16.6':
-    resolution: {integrity: sha512-EAD21CDrrTvaC2FznMDcVza12DgUUdGkR1kSM75ZrIy9sJaWKpiTqBitKoIjw1K89IPCM7xZTAEvpDxIWitULg==}
+  '@remix-run/server-runtime@2.16.7':
+    resolution: {integrity: sha512-3aZZG8KBUQTenscOnV68AEwStRgx/rVvD8tkxwm92Zx7QMO/UZhhuNcZE9bvD5zTpp2sLwjwCTUK1eEJgTpKfg==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       typescript: ^5.1.0
@@ -2462,8 +2453,8 @@ packages:
       typescript:
         optional: true
 
-  '@remix-run/testing@2.16.6':
-    resolution: {integrity: sha512-IB3tFbIKhwrywaERm2UXSuteDQLHw1x41s9savz7JL4BLHTXsaIW4FBt31+Z1otFDq4niePmNb/32gd2bBHZOg==}
+  '@remix-run/testing@2.16.7':
+    resolution: {integrity: sha512-P0whGOX9NfxOzAqjLxHoK8u3fDr5YpxajdE7DQ/H0q99n9ebJ9wj1kxgeBzurt6Jpyqgk5y6ZvF8WR0o23kTFw==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       react: ^18.0.0
@@ -8787,11 +8778,6 @@ packages:
     engines: {node: '>=v14.16.0'}
     hasBin: true
 
-  vite-node@3.0.0-beta.2:
-    resolution: {integrity: sha512-ofTf6cfRdL30Wbl9n/BX81EyIR5s4PReLmSurrxQ+koLaWUNOEo8E0lCM53OJkb8vpa2URM2nSrxZsIFyvY1rg==}
-    engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
-    hasBin: true
-
   vite-node@3.1.4:
     resolution: {integrity: sha512-6enNwYnpyDo4hEgytbmc6mYWHXDHYEn0D1/rw4Q+tnHUGtKTJsn8T1YkX6Q18wI5LCrS8CTYlBaiCqxOy2kvUA==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
@@ -9365,14 +9351,14 @@ snapshots:
     dependencies:
       '@ampproject/remapping': 2.2.1
       '@babel/code-frame': 7.23.5
-      '@babel/generator': 7.26.2
+      '@babel/generator': 7.27.0
       '@babel/helper-compilation-targets': 7.23.6
       '@babel/helper-module-transforms': 7.23.3(@babel/core@7.23.9)
       '@babel/helpers': 7.23.9
-      '@babel/parser': 7.26.2
+      '@babel/parser': 7.27.0
       '@babel/template': 7.23.9
-      '@babel/traverse': 7.25.9
-      '@babel/types': 7.26.0
+      '@babel/traverse': 7.27.0
+      '@babel/types': 7.27.0
       convert-source-map: 2.0.0
       debug: 4.3.4
       gensync: 1.0.0-beta.2
@@ -9385,14 +9371,14 @@ snapshots:
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@babel/code-frame': 7.26.2
-      '@babel/generator': 7.26.2
+      '@babel/generator': 7.27.0
       '@babel/helper-compilation-targets': 7.25.9
       '@babel/helper-module-transforms': 7.26.0(@babel/core@7.26.0)
       '@babel/helpers': 7.26.0
-      '@babel/parser': 7.26.2
+      '@babel/parser': 7.27.0
       '@babel/template': 7.25.9
-      '@babel/traverse': 7.25.9
-      '@babel/types': 7.26.0
+      '@babel/traverse': 7.27.0
+      '@babel/types': 7.27.0
       convert-source-map: 2.0.0
       debug: 4.4.0
       gensync: 1.0.0-beta.2
@@ -9423,8 +9409,8 @@ snapshots:
 
   '@babel/generator@7.26.2':
     dependencies:
-      '@babel/parser': 7.26.2
-      '@babel/types': 7.26.0
+      '@babel/parser': 7.27.0
+      '@babel/types': 7.27.0
       '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
       jsesc: 3.0.2
@@ -9514,7 +9500,7 @@ snapshots:
       '@babel/core': 7.26.0
       '@babel/helper-module-imports': 7.25.9
       '@babel/helper-validator-identifier': 7.25.9
-      '@babel/traverse': 7.25.9
+      '@babel/traverse': 7.27.0
     transitivePeerDependencies:
       - supports-color
 
@@ -9523,7 +9509,7 @@ snapshots:
       '@babel/core': 7.26.10
       '@babel/helper-module-imports': 7.25.9
       '@babel/helper-validator-identifier': 7.25.9
-      '@babel/traverse': 7.25.9
+      '@babel/traverse': 7.27.0
     transitivePeerDependencies:
       - supports-color
 
@@ -9564,15 +9550,15 @@ snapshots:
 
   '@babel/helpers@7.23.9':
     dependencies:
-      '@babel/template': 7.25.9
-      '@babel/traverse': 7.25.9
-      '@babel/types': 7.26.0
+      '@babel/template': 7.27.0
+      '@babel/traverse': 7.27.0
+      '@babel/types': 7.27.0
     transitivePeerDependencies:
       - supports-color
 
   '@babel/helpers@7.26.0':
     dependencies:
-      '@babel/template': 7.25.9
+      '@babel/template': 7.27.0
       '@babel/types': 7.27.0
 
   '@babel/helpers@7.27.0':
@@ -9585,10 +9571,6 @@ snapshots:
       '@babel/helper-validator-identifier': 7.25.9
       chalk: 2.4.2
       js-tokens: 4.0.0
-
-  '@babel/parser@7.26.2':
-    dependencies:
-      '@babel/types': 7.26.0
 
   '@babel/parser@7.27.0':
     dependencies:
@@ -9714,32 +9696,20 @@ snapshots:
   '@babel/template@7.23.9':
     dependencies:
       '@babel/code-frame': 7.26.2
-      '@babel/parser': 7.26.2
-      '@babel/types': 7.26.0
+      '@babel/parser': 7.27.0
+      '@babel/types': 7.27.0
 
   '@babel/template@7.25.9':
     dependencies:
       '@babel/code-frame': 7.26.2
-      '@babel/parser': 7.26.2
-      '@babel/types': 7.26.0
+      '@babel/parser': 7.27.0
+      '@babel/types': 7.27.0
 
   '@babel/template@7.27.0':
     dependencies:
       '@babel/code-frame': 7.26.2
       '@babel/parser': 7.27.0
       '@babel/types': 7.27.0
-
-  '@babel/traverse@7.25.9':
-    dependencies:
-      '@babel/code-frame': 7.26.2
-      '@babel/generator': 7.26.2
-      '@babel/parser': 7.26.2
-      '@babel/template': 7.25.9
-      '@babel/types': 7.26.0
-      debug: 4.4.0
-      globals: 11.12.0
-    transitivePeerDependencies:
-      - supports-color
 
   '@babel/traverse@7.27.0':
     dependencies:
@@ -11597,22 +11567,22 @@ snapshots:
       eslint: 9.27.0
       prettier: 3.5.3
 
-  '@remix-run/cloudflare-pages@2.16.6(@cloudflare/workers-types@4.20250519.0)(typescript@5.8.3)':
+  '@remix-run/cloudflare-pages@2.16.7(@cloudflare/workers-types@4.20250519.0)(typescript@5.8.3)':
     dependencies:
       '@cloudflare/workers-types': 4.20250519.0
-      '@remix-run/cloudflare': 2.16.6(@cloudflare/workers-types@4.20250519.0)(typescript@5.8.3)
+      '@remix-run/cloudflare': 2.16.7(@cloudflare/workers-types@4.20250519.0)(typescript@5.8.3)
     optionalDependencies:
       typescript: 5.8.3
 
-  '@remix-run/cloudflare@2.16.6(@cloudflare/workers-types@4.20250519.0)(typescript@5.8.3)':
+  '@remix-run/cloudflare@2.16.7(@cloudflare/workers-types@4.20250519.0)(typescript@5.8.3)':
     dependencies:
       '@cloudflare/kv-asset-handler': 0.1.3
       '@cloudflare/workers-types': 4.20250519.0
-      '@remix-run/server-runtime': 2.16.6(typescript@5.8.3)
+      '@remix-run/server-runtime': 2.16.7(typescript@5.8.3)
     optionalDependencies:
       typescript: 5.8.3
 
-  '@remix-run/dev@2.16.6(@remix-run/react@2.16.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3))(@types/node@22.15.19)(lightningcss@1.25.1)(terser@5.39.2)(typescript@5.8.3)(vite@6.3.5(@types/node@22.15.19)(lightningcss@1.25.1)(terser@5.39.2)(yaml@2.5.0))(wrangler@4.15.2(@cloudflare/workers-types@4.20250519.0))(yaml@2.5.0)':
+  '@remix-run/dev@2.16.7(@remix-run/react@2.16.7(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3))(@types/node@22.15.19)(lightningcss@1.25.1)(terser@5.39.2)(typescript@5.8.3)(vite@6.3.5(@types/node@22.15.19)(lightningcss@1.25.1)(terser@5.39.2)(yaml@2.5.0))(wrangler@4.15.2(@cloudflare/workers-types@4.20250519.0))(yaml@2.5.0)':
     dependencies:
       '@babel/core': 7.26.10
       '@babel/generator': 7.27.0
@@ -11624,10 +11594,10 @@ snapshots:
       '@babel/types': 7.27.0
       '@mdx-js/mdx': 2.3.0
       '@npmcli/package-json': 4.0.1
-      '@remix-run/node': 2.16.6(typescript@5.8.3)
-      '@remix-run/react': 2.16.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)
+      '@remix-run/node': 2.16.7(typescript@5.8.3)
+      '@remix-run/react': 2.16.7(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)
       '@remix-run/router': 1.23.0
-      '@remix-run/server-runtime': 2.16.6(typescript@5.8.3)
+      '@remix-run/server-runtime': 2.16.7(typescript@5.8.3)
       '@types/mdx': 2.0.7
       '@vanilla-extract/integration': 6.2.1(@types/node@22.15.19)(lightningcss@1.25.1)(terser@5.39.2)
       arg: 5.0.2
@@ -11669,7 +11639,7 @@ snapshots:
       tar-fs: 2.1.1
       tsconfig-paths: 4.2.0
       valibot: 0.41.0(typescript@5.8.3)
-      vite-node: 3.0.0-beta.2(@types/node@22.15.19)(lightningcss@1.25.1)(terser@5.39.2)(yaml@2.5.0)
+      vite-node: 3.1.4(@types/node@22.15.19)(lightningcss@1.25.1)(terser@5.39.2)(yaml@2.5.0)
       ws: 7.5.10
     optionalDependencies:
       typescript: 5.8.3
@@ -11693,9 +11663,9 @@ snapshots:
       - utf-8-validate
       - yaml
 
-  '@remix-run/node@2.16.6(typescript@5.8.3)':
+  '@remix-run/node@2.16.7(typescript@5.8.3)':
     dependencies:
-      '@remix-run/server-runtime': 2.16.6(typescript@5.8.3)
+      '@remix-run/server-runtime': 2.16.7(typescript@5.8.3)
       '@remix-run/web-fetch': 4.4.2
       '@web3-storage/multipart-parser': 1.0.0
       cookie-signature: 1.2.1
@@ -11705,10 +11675,10 @@ snapshots:
     optionalDependencies:
       typescript: 5.8.3
 
-  '@remix-run/react@2.16.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)':
+  '@remix-run/react@2.16.7(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)':
     dependencies:
       '@remix-run/router': 1.23.0
-      '@remix-run/server-runtime': 2.16.6(typescript@5.8.3)
+      '@remix-run/server-runtime': 2.16.7(typescript@5.8.3)
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
       react-router: 6.30.0(react@19.1.0)
@@ -11719,7 +11689,7 @@ snapshots:
 
   '@remix-run/router@1.23.0': {}
 
-  '@remix-run/server-runtime@2.16.6(typescript@5.8.3)':
+  '@remix-run/server-runtime@2.16.7(typescript@5.8.3)':
     dependencies:
       '@remix-run/router': 1.23.0
       '@types/cookie': 0.6.0
@@ -11731,10 +11701,10 @@ snapshots:
     optionalDependencies:
       typescript: 5.8.3
 
-  '@remix-run/testing@2.16.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)':
+  '@remix-run/testing@2.16.7(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)':
     dependencies:
-      '@remix-run/node': 2.16.6(typescript@5.8.3)
-      '@remix-run/react': 2.16.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)
+      '@remix-run/node': 2.16.7(typescript@5.8.3)
+      '@remix-run/react': 2.16.7(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)
       '@remix-run/router': 1.23.0
       react: 19.1.0
       react-router-dom: 6.30.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -12211,7 +12181,7 @@ snapshots:
 
   '@svgr/hast-util-to-babel-ast@8.0.0':
     dependencies:
-      '@babel/types': 7.26.0
+      '@babel/types': 7.27.0
       entities: 4.5.0
 
   '@svgr/plugin-jsx@8.1.0(@svgr/core@8.1.0(typescript@5.8.3))':
@@ -18206,11 +18176,11 @@ snapshots:
       mdast-util-to-markdown: 2.1.0
       unified: 11.0.5
 
-  remix-development-tools@4.7.7(@remix-run/react@2.16.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3))(@types/react-dom@19.1.5(@types/react@19.1.4))(@types/react@19.1.4)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@6.3.5(@types/node@22.15.19)(lightningcss@1.25.1)(terser@5.39.2)(yaml@2.5.0)):
+  remix-development-tools@4.7.7(@remix-run/react@2.16.7(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3))(@types/react-dom@19.1.5(@types/react@19.1.4))(@types/react@19.1.4)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vite@6.3.5(@types/node@22.15.19)(lightningcss@1.25.1)(terser@5.39.2)(yaml@2.5.0)):
     dependencies:
       '@radix-ui/react-accordion': 1.1.2(@types/react-dom@19.1.5(@types/react@19.1.4))(@types/react@19.1.4)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@radix-ui/react-select': 1.2.2(@types/react-dom@19.1.5(@types/react@19.1.4))(@types/react@19.1.4)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
-      '@remix-run/react': 2.16.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)
+      '@remix-run/react': 2.16.7(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)
       beautify: 0.0.8
       chalk: 5.3.0
       clsx: 2.1.1
@@ -19472,27 +19442,6 @@ snapshots:
       - sugarss
       - supports-color
       - terser
-
-  vite-node@3.0.0-beta.2(@types/node@22.15.19)(lightningcss@1.25.1)(terser@5.39.2)(yaml@2.5.0):
-    dependencies:
-      cac: 6.7.14
-      debug: 4.4.0
-      es-module-lexer: 1.7.0
-      pathe: 1.1.2
-      vite: 6.3.5(@types/node@22.15.19)(lightningcss@1.25.1)(terser@5.39.2)(yaml@2.5.0)
-    transitivePeerDependencies:
-      - '@types/node'
-      - jiti
-      - less
-      - lightningcss
-      - sass
-      - sass-embedded
-      - stylus
-      - sugarss
-      - supports-color
-      - terser
-      - tsx
-      - yaml
 
   vite-node@3.1.4(@types/node@22.15.19)(lightningcss@1.25.1)(terser@5.39.2)(yaml@2.5.0):
     dependencies:
