@@ -80,7 +80,7 @@
 		"@types/node": "22.15.21",
 		"@types/react": "19.1.4",
 		"@types/react-dom": "19.1.5",
-		"@vitejs/plugin-react-swc": "3.9.0",
+		"@vitejs/plugin-react-swc": "3.10.0",
 		"axe-playwright": "2.1.0",
 		"browserslist-to-esbuild": "2.1.1",
 		"concurrently": "9.1.2",
