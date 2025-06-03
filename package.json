@@ -42,7 +42,7 @@
 		"temporal-polyfill": "0.3.0"
 	},
 	"devDependencies": {
-		"@axe-core/playwright": "4.10.1",
+		"@axe-core/playwright": "4.10.2",
 		"@changesets/changelog-github": "0.5.1",
 		"@changesets/cli": "2.29.4",
 		"@cloudflare/workers-types": "4.20250603.0",
