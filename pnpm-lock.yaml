@@ -52,8 +52,8 @@ importers:
         specifier: 0.8.2
         version: 0.8.2(typescript@5.8.3)
       '@content-collections/remix-vite':
-        specifier: 0.2.0
-        version: 0.2.0(@content-collections/core@0.8.2(typescript@5.8.3))(vite@6.3.5(@types/node@22.15.31)(lightningcss@1.25.1)(terser@5.42.0)(yaml@2.5.0))
+        specifier: 0.2.1
+        version: 0.2.1(@content-collections/core@0.8.2(typescript@5.8.3))(vite@6.3.5(@types/node@22.15.31)(lightningcss@1.25.1)(terser@5.42.0)(yaml@2.5.0))
       '@iconify-json/circum':
         specifier: 1.2.2
         version: 1.2.2
@@ -707,11 +707,11 @@ packages:
     peerDependencies:
       typescript: ^5.0.2
 
-  '@content-collections/remix-vite@0.2.0':
-    resolution: {integrity: sha512-9gZmP10SD/3Xfrsnypg9hzE9ysh1XKcw0DGwNobB4KhZrfjUEAVpJXZNG4Z70hIbnwF20BB78gW2DBBHpdKQ7Q==}
+  '@content-collections/remix-vite@0.2.1':
+    resolution: {integrity: sha512-rWczOJcMC68UEnwh6wDl1FxdCj3kYerkpfGwJSGQ4pTiVT2nThxloDKW0XvwyQaa7PTGWE1xz02nHriPzcnvdw==}
     peerDependencies:
       '@content-collections/core': ^0.x
-      vite: ^5
+      vite: ^5 || ^6
 
   '@cspotcode/source-map-support@0.8.1':
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
@@ -4768,10 +4768,6 @@ packages:
   eslint-visitor-keys@3.4.3:
     resolution: {integrity: sha512-wpc+LXeiyiisxPlEkUzU6svyS1frIO3Mgxj1fdy7Pm8Ygzguax2N3Fa/D/ag1WqbOprdI+uY6wMUl8/a2G+iag==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-
-  eslint-visitor-keys@4.2.0:
-    resolution: {integrity: sha512-UyLnSehNt62FFhSwjZlHmeokpRK59rcz29j+F1/aDgbkbRTk7wIc9XzdoasMUbRNKDM0qQt/+BJ4BrpFeABemw==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   eslint-visitor-keys@4.2.1:
     resolution: {integrity: sha512-Uhdk5sfqcee/9H/rCOJikYz67o0a2Tw2hGRPOG2Y1R2dg7brRe1uG0yaNQDHu+TO/uQPF/5eCapvYSmHUjt7JQ==}
@@ -10010,7 +10006,7 @@ snapshots:
       yaml: 2.5.0
       zod: 3.23.8
 
-  '@content-collections/remix-vite@0.2.0(@content-collections/core@0.8.2(typescript@5.8.3))(vite@6.3.5(@types/node@22.15.31)(lightningcss@1.25.1)(terser@5.42.0)(yaml@2.5.0))':
+  '@content-collections/remix-vite@0.2.1(@content-collections/core@0.8.2(typescript@5.8.3))(vite@6.3.5(@types/node@22.15.31)(lightningcss@1.25.1)(terser@5.42.0)(yaml@2.5.0))':
     dependencies:
       '@content-collections/core': 0.8.2(typescript@5.8.3)
       vite: 6.3.5(@types/node@22.15.31)(lightningcss@1.25.1)(terser@5.42.0)(yaml@2.5.0)
@@ -12632,7 +12628,7 @@ snapshots:
   '@typescript-eslint/visitor-keys@8.29.0':
     dependencies:
       '@typescript-eslint/types': 8.29.0
-      eslint-visitor-keys: 4.2.0
+      eslint-visitor-keys: 4.2.1
 
   '@ungap/structured-clone@1.2.0': {}
 
@@ -14531,8 +14527,6 @@ snapshots:
       estraverse: 5.3.0
 
   eslint-visitor-keys@3.4.3: {}
-
-  eslint-visitor-keys@4.2.0: {}
 
   eslint-visitor-keys@4.2.1: {}
 
