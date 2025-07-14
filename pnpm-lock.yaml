@@ -76,8 +76,8 @@ importers:
         specifier: 1.54.1
         version: 1.54.1
       '@re-taro/configs':
-        specifier: 1.3.7
-        version: 1.3.7(4917a0023f943d1925d3be9e7267e621)
+        specifier: 1.3.8
+        version: 1.3.8(4917a0023f943d1925d3be9e7267e621)
       '@remix-run/dev':
         specifier: 2.16.8
         version: 2.16.8(@remix-run/react@2.16.8(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3))(@types/node@22.15.34)(lightningcss@1.25.1)(terser@5.43.1)(typescript@5.8.3)(vite@6.3.5(@types/node@22.15.34)(lightningcss@1.25.1)(terser@5.43.1)(yaml@2.5.0))(wrangler@4.22.0(@cloudflare/workers-types@4.20250628.0))(yaml@2.5.0)
@@ -2341,11 +2341,11 @@ packages:
   '@radix-ui/rect@1.0.1':
     resolution: {integrity: sha512-fyrgCaedtvMg9NK3en0pnOYJdtfwxUcNolezkNPUsoX57X8oQk+NkqcvzHXD2uKNij6GXmWU9NDru2IWjrO4BQ==}
 
-  '@re-taro/configs@1.3.7':
-    resolution: {integrity: sha512-331x7/cu46/UYLXpMJUgJmwkE38enrhtmYnZTNgWfqfDmyblsBU6NN0L1gNIbza22wcTQmhNx+73I/Q8vUuQzQ==}
+  '@re-taro/configs@1.3.8':
+    resolution: {integrity: sha512-AwXb5fj9tiUkm5xO34H/4dqLnNPGlS3kmHUQUEa1XKxEsxdYlu33BB7DGleqP/kUqGhCsP9GIq+gdefAncl6vA==}
     engines: {node: '>=23.9.0'}
     peerDependencies:
-      '@eslint/css': ^0.1.0 || ^0.2.0 || ^0.3.0 || ^0.4.0 || ^0.5.0 || ^0.6.0
+      '@eslint/css': ^0.1.0 || ^0.2.0 || ^0.3.0 || ^0.4.0 || ^0.5.0 || ^0.6.0 || ^0.9.0
       '@eslint/js': ^9.0.0
       '@eslint/markdown': ^4.0.0 || ^5.0.0 || ^6.0.0
       '@typescript-eslint/type-utils': ^8.0.0
@@ -2363,13 +2363,13 @@ packages:
       eslint-plugin-react: ^7.35.0 || ^7.36.0 || ^7.37.0
       eslint-plugin-react-hooks: ^5.0.0
       eslint-plugin-regexp: ^2.3.0 || ^2.4.0 || ^2.5.0 || ^2.6.0 || ^2.7.0
-      eslint-plugin-storybook: ^0.10.0 || ^0.11.0 || ^0.12.0
+      eslint-plugin-storybook: ^0.10.0 || ^0.11.0 || ^0.12.0 || ^9.0.0
       eslint-plugin-unicorn: ^57.0.0 || ^58.0.0 || ^59.0.0
       eslint-plugin-unused-imports: ^4.0.0
       globals: ^14.0.0 || ^15.0.0 || ^16.0.0
       prettier: ^3.0.0
       prettier-plugin-jsdoc: ^1.0.0
-      prettier-plugin-pkg: ^0.18.0 || ^0.19.0
+      prettier-plugin-pkg: ^0.18.0 || ^0.19.0 || ^0.20.0 || ^0.21.0
       prettier-plugin-sort-json: ^3.0.0 || ^4.0.0
       typescript-eslint: ^8.0.0
     peerDependenciesMeta:
@@ -11583,7 +11583,7 @@ snapshots:
     dependencies:
       '@babel/runtime': 7.23.5
 
-  '@re-taro/configs@1.3.7(4917a0023f943d1925d3be9e7267e621)':
+  '@re-taro/configs@1.3.8(4917a0023f943d1925d3be9e7267e621)':
     dependencies:
       '@eslint/css': 0.6.0
       '@eslint/js': 9.30.0
