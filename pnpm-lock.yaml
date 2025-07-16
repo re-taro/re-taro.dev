@@ -76,8 +76,8 @@ importers:
         specifier: 1.54.1
         version: 1.54.1
       '@re-taro/configs':
-        specifier: 1.3.8
-        version: 1.3.8(dd82c73c47b1567e42c23abf4dc1d21f)
+        specifier: 1.3.9
+        version: 1.3.9(dd82c73c47b1567e42c23abf4dc1d21f)
       '@remix-run/dev':
         specifier: 2.16.8
         version: 2.16.8(@remix-run/react@2.16.8(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3))(@types/node@22.16.4)(lightningcss@1.25.1)(terser@5.43.1)(typescript@5.8.3)(vite@6.3.5(@types/node@22.16.4)(lightningcss@1.25.1)(terser@5.43.1)(yaml@2.5.0))(wrangler@4.24.3(@cloudflare/workers-types@4.20250715.0))(yaml@2.5.0)
@@ -2354,8 +2354,8 @@ packages:
   '@radix-ui/rect@1.0.1':
     resolution: {integrity: sha512-fyrgCaedtvMg9NK3en0pnOYJdtfwxUcNolezkNPUsoX57X8oQk+NkqcvzHXD2uKNij6GXmWU9NDru2IWjrO4BQ==}
 
-  '@re-taro/configs@1.3.8':
-    resolution: {integrity: sha512-AwXb5fj9tiUkm5xO34H/4dqLnNPGlS3kmHUQUEa1XKxEsxdYlu33BB7DGleqP/kUqGhCsP9GIq+gdefAncl6vA==}
+  '@re-taro/configs@1.3.9':
+    resolution: {integrity: sha512-kEP90wMnV3E6veLJqEL0ch7qlIMJZIHVkP5MTS7hfIwvq+BUU3NbuctyDwYxIiNJcL8tBmwD5dpgv0+eiCpZcQ==}
     engines: {node: '>=23.9.0'}
     peerDependencies:
       '@eslint/css': ^0.1.0 || ^0.2.0 || ^0.3.0 || ^0.4.0 || ^0.5.0 || ^0.6.0 || ^0.9.0
@@ -11614,7 +11614,7 @@ snapshots:
     dependencies:
       '@babel/runtime': 7.23.5
 
-  '@re-taro/configs@1.3.8(dd82c73c47b1567e42c23abf4dc1d21f)':
+  '@re-taro/configs@1.3.9(dd82c73c47b1567e42c23abf4dc1d21f)':
     dependencies:
       '@eslint/css': 0.6.0
       '@eslint/js': 9.31.0
