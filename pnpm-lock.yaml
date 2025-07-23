@@ -220,8 +220,8 @@ importers:
         specifier: 3.2.4
         version: 3.2.4(@types/debug@4.1.12)(@types/node@22.16.5)(jsdom@26.1.0)(lightningcss@1.25.1)(terser@5.43.1)(yaml@2.5.0)
       wait-on:
-        specifier: 8.0.3
-        version: 8.0.3
+        specifier: 8.0.4
+        version: 8.0.4
       wrangler:
         specifier: 4.25.1
         version: 4.25.1(@cloudflare/workers-types@4.20250723.0)
@@ -3618,6 +3618,9 @@ packages:
     peerDependencies:
       playwright: '>1.0.0'
 
+  axios@1.11.0:
+    resolution: {integrity: sha512-1Lx3WLFQWm3ooKDYZD1eXmoGO9fxYQjrycfHFC8P0sCfQVXyROp0p9PFWBehewBOdCwHc+f/b8I0fMto5eSfwA==}
+
   axios@1.8.4:
     resolution: {integrity: sha512-eBSYY4Y68NNlHbHBMdeDmKNtDgXWhQsJcGqzO3iLUM0GraQFSS9cVgPX5I9b3lbdFKyYoAEGAZF1DwhTaljNAw==}
 
@@ -5055,6 +5058,10 @@ packages:
 
   form-data@4.0.0:
     resolution: {integrity: sha512-ETEklSGi5t0QMZuiXoA/Q6vcnxcLQP5vdugSpuAyi6SVGi2clPPp+xgEhuMaHC+zGgn31Kd235W35f7Hykkaww==}
+    engines: {node: '>= 6'}
+
+  form-data@4.0.4:
+    resolution: {integrity: sha512-KrGhL9Q4zjj0kiUt5OO4Mr/A/jlI2jDYs5eHBpYHPcBEVSiipAvn2Ko2HnPe20rmcuuvMHNdZFp+4IlGTMF0Ow==}
     engines: {node: '>= 6'}
 
   format@0.2.2:
@@ -8998,8 +9005,8 @@ packages:
     engines: {node: '>=12.0.0'}
     hasBin: true
 
-  wait-on@8.0.3:
-    resolution: {integrity: sha512-nQFqAFzZDeRxsu7S3C7LbuxslHhk+gnJZHyethuGKAn2IVleIbTB9I3vJSQiSR+DifUqmdzfPMoMPJfLqMF2vw==}
+  wait-on@8.0.4:
+    resolution: {integrity: sha512-8f9LugAGo4PSc0aLbpKVCVtzayd36sSCp4WLpVngkYq6PK87H79zt77/tlCU6eKCLqR46iFvcl0PU5f+DmtkwA==}
     engines: {node: '>=12.0.0'}
     hasBin: true
 
@@ -13156,6 +13163,14 @@ snapshots:
       picocolors: 1.1.1
       playwright: 1.54.1
 
+  axios@1.11.0:
+    dependencies:
+      follow-redirects: 1.15.6
+      form-data: 4.0.4
+      proxy-from-env: 1.1.0
+    transitivePeerDependencies:
+      - debug
+
   axios@1.8.4:
     dependencies:
       follow-redirects: 1.15.6
@@ -14891,6 +14906,14 @@ snapshots:
     dependencies:
       asynckit: 0.4.0
       combined-stream: 1.0.8
+      mime-types: 2.1.35
+
+  form-data@4.0.4:
+    dependencies:
+      asynckit: 0.4.0
+      combined-stream: 1.0.8
+      es-set-tostringtag: 2.1.0
+      hasown: 2.0.2
       mime-types: 2.1.35
 
   format@0.2.2: {}
@@ -19679,9 +19702,9 @@ snapshots:
     transitivePeerDependencies:
       - debug
 
-  wait-on@8.0.3:
+  wait-on@8.0.4:
     dependencies:
-      axios: 1.8.4
+      axios: 1.11.0
       joi: 17.13.3
       lodash: 4.17.21
       minimist: 1.2.8
