@@ -83,7 +83,7 @@
 		"@vitejs/plugin-react-swc": "3.11.0",
 		"axe-playwright": "2.1.0",
 		"browserslist-to-esbuild": "2.1.1",
-		"concurrently": "9.2.0",
+		"concurrently": "9.2.1",
 		"embla-carousel": "8.6.0",
 		"eslint": "9.32.0",
 		"jsdom": "26.1.0",
