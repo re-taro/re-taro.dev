@@ -58,8 +58,8 @@ importers:
         specifier: 1.2.2
         version: 1.2.2
       '@iconify-json/fa-solid':
-        specifier: 1.2.1
-        version: 1.2.1
+        specifier: 1.2.2
+        version: 1.2.2
       '@iconify-json/ri':
         specifier: 1.2.5
         version: 1.2.5
@@ -1469,8 +1469,8 @@ packages:
   '@iconify-json/circum@1.2.2':
     resolution: {integrity: sha512-lIC4xg4p62SValfSiUnrcuLKYf2rpgDydlGu9V3PwO7rVfNB4P1gMgt/Hqs7M0ttDEBC6hSxxMlXDfQGNXmVqA==}
 
-  '@iconify-json/fa-solid@1.2.1':
-    resolution: {integrity: sha512-eEcnCb6yjRJ0bZrQQZOvO9P5PYCGujz2V8PpiIxBSlm6xqoVLNtOfUyPr6xZD4zWeW7H3cmWi2ZXSzqxQ5e4lw==}
+  '@iconify-json/fa-solid@1.2.2':
+    resolution: {integrity: sha512-V8TDk62dGswAwbWwoSTnaoiTVEfQyjLCq4/TPmI29evFb9GwPyU0OGX4+BdQMGsDDzk8ByR81RjR618FtELSaw==}
 
   '@iconify-json/ri@1.2.5':
     resolution: {integrity: sha512-kWGimOXMZrlYusjBKKXYOWcKhbOHusFsmrmRGmjS7rH0BpML5A9/fy8KHZqFOwZfC4M6amObQYbh8BqO5cMC3w==}
@@ -10368,7 +10368,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/fa-solid@1.2.1':
+  '@iconify-json/fa-solid@1.2.2':
     dependencies:
       '@iconify/types': 2.0.0
 
