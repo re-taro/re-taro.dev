@@ -93,7 +93,7 @@
 		"postcss-load-config": "6.0.1",
 		"prettier": "3.5.3",
 		"remix-development-tools": "4.7.7",
-		"rollup-plugin-visualizer": "5.14.0",
+		"rollup-plugin-visualizer": "6.0.5",
 		"serve": "14.2.5",
 		"sirv-cli": "3.0.1",
 		"storybook": "8.6.14",
