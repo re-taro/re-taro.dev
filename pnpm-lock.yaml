@@ -24,8 +24,8 @@ importers:
         specifier: 8.6.0
         version: 8.6.0(react@19.1.1)
       isbot:
-        specifier: 5.1.29
-        version: 5.1.29
+        specifier: 5.1.31
+        version: 5.1.31
       react:
         specifier: 19.1.1
         version: 19.1.1
@@ -5587,8 +5587,8 @@ packages:
     resolution: {integrity: sha512-I+NmIfBHUl+r2wcDd6JwE9yWje/PIVY/R5/CmV8dXLZd5K+L9X2klAOwfAHNnondLXkbHyTAleQAWonpTJBTtw==}
     engines: {node: '>= 18.0.0'}
 
-  isbot@5.1.29:
-    resolution: {integrity: sha512-DelDWWoa3mBoyWTq3wjp+GIWx/yZdN7zLUE7NFhKjAiJ+uJVRkbLlwykdduCE4sPUUy8mlTYTmdhBUYu91F+sw==}
+  isbot@5.1.31:
+    resolution: {integrity: sha512-DPgQshehErHAqSCKDb3rNW03pa2wS/v5evvUqtxt6TTnHRqAG8FdzcSSJs9656pK6Y+NT7K9R4acEYXLHYfpUQ==}
     engines: {node: '>=18'}
 
   isexe@2.0.0:
@@ -15292,7 +15292,7 @@ snapshots:
 
   isbinaryfile@5.0.6: {}
 
-  isbot@5.1.29: {}
+  isbot@5.1.31: {}
 
   isexe@2.0.0: {}
 
