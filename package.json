@@ -103,7 +103,7 @@
 		"vite": "6.4.1",
 		"vite-tsconfig-paths": "5.1.4",
 		"vitest": "3.2.4",
-		"wait-on": "8.0.4",
+		"wait-on": "8.0.5",
 		"wrangler": "4.29.0"
 	},
 	"sideEffects": false,
