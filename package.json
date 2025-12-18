@@ -96,7 +96,7 @@
 		"rollup-plugin-visualizer": "6.0.5",
 		"serve": "14.2.5",
 		"sirv-cli": "3.0.1",
-		"storybook": "8.6.14",
+		"storybook": "8.6.15",
 		"terser": "5.43.1",
 		"typescript": "5.9.3",
 		"unplugin-icons": "22.2.0",
