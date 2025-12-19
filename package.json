@@ -87,7 +87,7 @@
 		"embla-carousel": "8.6.0",
 		"eslint": "9.32.0",
 		"jsdom": "26.1.0",
-		"playwright": "1.54.2",
+		"playwright": "1.55.1",
 		"plop": "4.0.4",
 		"postcss": "8.5.6",
 		"postcss-load-config": "6.0.1",
