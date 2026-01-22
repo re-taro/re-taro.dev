@@ -46,7 +46,7 @@
 		"@changesets/changelog-github": "0.5.1",
 		"@changesets/cli": "2.29.8",
 		"@cloudflare/workers-types": "4.20250809.0",
-		"@content-collections/core": "0.8.2",
+		"@content-collections/core": "0.13.1",
 		"@content-collections/remix-vite": "0.2.0",
 		"@iconify-json/circum": "1.2.2",
 		"@iconify-json/fa-solid": "1.2.2",
