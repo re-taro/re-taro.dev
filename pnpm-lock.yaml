@@ -52,8 +52,8 @@ importers:
         specifier: 0.8.2
         version: 0.8.2(typescript@5.9.3)
       '@content-collections/remix-vite':
-        specifier: 0.2.0
-        version: 0.2.0(@content-collections/core@0.8.2(typescript@5.9.3))(vite@6.4.1(@types/node@22.17.1)(lightningcss@1.25.1)(terser@5.43.1)(yaml@2.5.0))
+        specifier: 0.2.2
+        version: 0.2.2(@content-collections/core@0.8.2(typescript@5.9.3))(vite@6.4.1(@types/node@22.17.1)(lightningcss@1.25.1)(terser@5.43.1)(yaml@2.5.0))
       '@iconify-json/circum':
         specifier: 1.2.2
         version: 1.2.2
@@ -707,11 +707,11 @@ packages:
     peerDependencies:
       typescript: ^5.0.2
 
-  '@content-collections/remix-vite@0.2.0':
-    resolution: {integrity: sha512-9gZmP10SD/3Xfrsnypg9hzE9ysh1XKcw0DGwNobB4KhZrfjUEAVpJXZNG4Z70hIbnwF20BB78gW2DBBHpdKQ7Q==}
+  '@content-collections/remix-vite@0.2.2':
+    resolution: {integrity: sha512-kdHJz9CMJHZcGBtJy8zfRd4zp5bSOiaKvj7hlACYLaZK8m1ABmql8giliGbXDCepKqbx1YLb0b86niZg+6aytQ==}
     peerDependencies:
       '@content-collections/core': ^0.x
-      vite: ^5
+      vite: ^5 || ^6 || ^7
 
   '@cspotcode/source-map-support@0.8.1':
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
@@ -10124,7 +10124,7 @@ snapshots:
       yaml: 2.5.0
       zod: 3.23.8
 
-  '@content-collections/remix-vite@0.2.0(@content-collections/core@0.8.2(typescript@5.9.3))(vite@6.4.1(@types/node@22.17.1)(lightningcss@1.25.1)(terser@5.43.1)(yaml@2.5.0))':
+  '@content-collections/remix-vite@0.2.2(@content-collections/core@0.8.2(typescript@5.9.3))(vite@6.4.1(@types/node@22.17.1)(lightningcss@1.25.1)(terser@5.43.1)(yaml@2.5.0))':
     dependencies:
       '@content-collections/core': 0.8.2(typescript@5.9.3)
       vite: 6.4.1(@types/node@22.17.1)(lightningcss@1.25.1)(terser@5.43.1)(yaml@2.5.0)
@@ -12873,7 +12873,7 @@ snapshots:
       fast-glob: 3.3.3
       is-glob: 4.0.3
       minimatch: 9.0.5
-      semver: 7.7.1
+      semver: 7.7.3
       ts-api-utils: 2.1.0(typescript@5.9.3)
       typescript: 5.9.3
     transitivePeerDependencies:
@@ -14570,7 +14570,7 @@ snapshots:
   eslint-compat-utils@0.5.1(eslint@9.32.0):
     dependencies:
       eslint: 9.32.0
-      semver: 7.7.1
+      semver: 7.7.3
 
   eslint-config-flat-gitignore@0.3.0(eslint@9.32.0):
     dependencies:
@@ -14611,7 +14611,7 @@ snapshots:
       get-tsconfig: 4.10.0
       is-glob: 4.0.3
       minimatch: 9.0.5
-      semver: 7.7.1
+      semver: 7.7.3
       stable-hash: 0.0.4
       tslib: 2.7.0
     transitivePeerDependencies:
@@ -14647,7 +14647,7 @@ snapshots:
       globals: 15.15.0
       ignore: 5.3.2
       minimatch: 9.0.5
-      semver: 7.7.1
+      semver: 7.7.3
 
   eslint-plugin-promise@7.2.1(eslint@9.32.0):
     dependencies:
@@ -14718,7 +14718,7 @@ snapshots:
       read-pkg-up: 7.0.1
       regexp-tree: 0.1.27
       regjsparser: 0.10.0
-      semver: 7.7.1
+      semver: 7.7.3
       strip-indent: 3.0.0
 
   eslint-plugin-unused-imports@4.1.4(@typescript-eslint/eslint-plugin@8.29.0(@typescript-eslint/parser@8.29.0(eslint@9.32.0)(typescript@5.9.3))(eslint@9.32.0)(typescript@5.9.3))(eslint@9.32.0):
