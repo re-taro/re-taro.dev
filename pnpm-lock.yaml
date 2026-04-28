@@ -175,8 +175,8 @@ importers:
         specifier: 1.54.2
         version: 1.54.2
       plop:
-        specifier: 4.0.4
-        version: 4.0.4(@types/node@22.17.1)
+        specifier: 4.0.5
+        version: 4.0.5(@types/node@22.17.1)
       postcss:
         specifier: 8.5.10
         version: 8.5.10
@@ -7273,8 +7273,8 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  plop@4.0.4:
-    resolution: {integrity: sha512-YdxtHWcPV8hDsszVPr4VQBVGNdn5ZQmEW+cZakZkuVeQHtENmrtY4AhuyoZW6s7ZjpmrS+llLQrfDgRKNQNsmg==}
+  plop@4.0.5:
+    resolution: {integrity: sha512-pJz6oWC9LyBp5mBrRp8AUV2RNiuGW+t/HOs4zwN+b/3YxoObZOOFvjn1mJMpAeKi2pbXADMFOOVQVTVXEdDHDw==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -17793,12 +17793,11 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.2
 
-  plop@4.0.4(@types/node@22.17.1):
+  plop@4.0.5(@types/node@22.17.1):
     dependencies:
       '@types/liftoff': 4.0.3
       interpret: 3.1.1
       liftoff: 5.0.1
-      minimist: 1.2.8
       nanospinner: 1.2.2
       node-plop: 0.32.3(@types/node@22.17.1)
       picocolors: 1.1.1
