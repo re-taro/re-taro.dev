@@ -190,8 +190,8 @@ importers:
         specifier: 4.7.7
         version: 4.7.7(@remix-run/react@2.17.2(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(typescript@5.9.3))(@types/react-dom@19.1.7(@types/react@19.1.9))(@types/react@19.1.9)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(vite@6.4.3(@types/node@22.17.1)(lightningcss@1.25.1)(terser@5.43.1)(yaml@2.5.0))
       rollup-plugin-visualizer:
-        specifier: 6.0.5
-        version: 6.0.5(rollup@4.39.0)
+        specifier: 6.0.11
+        version: 6.0.11(rollup@4.39.0)
       serve:
         specifier: 14.2.5
         version: 14.2.5
@@ -7884,8 +7884,8 @@ packages:
     deprecated: Rimraf versions prior to v4 are no longer supported
     hasBin: true
 
-  rollup-plugin-visualizer@6.0.5:
-    resolution: {integrity: sha512-9+HlNgKCVbJDs8tVtjQ43US12eqaiHyyiLMdBwQ7vSZPiHMysGNo2E88TAp1si5wx8NAoYriI2A5kuKfIakmJg==}
+  rollup-plugin-visualizer@6.0.11:
+    resolution: {integrity: sha512-TBwVHVY7buHjIKVLqr9scTVFwqZqMXINcCphPwIWKPDCOBIa+jCQfafvbjRJDZgXdq/A996Dy6yGJ/+/NtAXDQ==}
     engines: {node: '>=18'}
     hasBin: true
     peerDependencies:
@@ -18497,7 +18497,7 @@ snapshots:
     dependencies:
       glob: 7.2.3
 
-  rollup-plugin-visualizer@6.0.5(rollup@4.39.0):
+  rollup-plugin-visualizer@6.0.11(rollup@4.39.0):
     dependencies:
       open: 8.4.2
       picomatch: 4.0.3
