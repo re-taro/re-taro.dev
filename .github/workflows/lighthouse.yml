@@ -25,12 +25,12 @@ jobs:
         uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
       - name: Setup GitHub App
         id: bot
-        uses: re-taro/actions/gen-installation-token@5460ab0884cf4c0ea62ec8566d4be117fef01781 # v3.7.9
+        uses: re-taro/actions/gen-installation-token@516042f6936d8181057b4c8e2eb9f24534335374 # v3.7.12
         with:
           app_id: ${{ secrets.APP_ID}}
           private_key: ${{ secrets.PRIVATE_KEY}}
       - name: Setup | Node.js
-        uses: re-taro/actions/setup-node@5460ab0884cf4c0ea62ec8566d4be117fef01781 # v3.7.9
+        uses: re-taro/actions/setup-node@516042f6936d8181057b4c8e2eb9f24534335374 # v3.7.12
         with:
           node-version-file: .tool-versions
       - name: Run | Audit URLs using Lighthouse
